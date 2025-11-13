@@ -1,6 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
 
 const chartCategories = [
   {
@@ -102,6 +104,24 @@ const chartCategories = [
 ];
 
 export default function Charts() {
+  const downloadChart = (imageUrl: string, chartTitle: string) => {
+    const link = document.createElement('a');
+    link.href = imageUrl;
+    link.download = `${chartTitle.replace(/\s+/g, '_')}.png`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const downloadAllCharts = () => {
+    const allCharts = chartCategories.flatMap(cat => cat.charts);
+    allCharts.forEach((chart, index) => {
+      setTimeout(() => {
+        downloadChart(chart.image, chart.titleEn);
+      }, index * 500);
+    });
+  };
+
   return (
     <div className="w-full py-12">
       <div className="container max-w-7xl">
@@ -176,7 +196,7 @@ export default function Charts() {
                     </div>
 
                     {/* Arabic Explanation */}
-                    <div className="p-4 bg-gradient-to-br from-primary/5 to-accent/5 rounded-lg border-r-4 border-r-primary">
+                    <div className="p-4 bg-gradient-to-br from-primary/5 to-accent/5 rounded-lg border-r-4 border-r-primary mb-4">
                       <h3 className="font-semibold text-lg mb-2 flex items-center gap-2">
                         <Badge variant="secondary">الشرح التفصيلي</Badge>
                       </h3>
@@ -184,6 +204,16 @@ export default function Charts() {
                         {chart.arabicExplanation}
                       </p>
                     </div>
+
+                    {/* Download Button */}
+                    <Button 
+                      onClick={() => downloadChart(chart.image, chart.titleEn)}
+                      className="w-full"
+                      variant="outline"
+                    >
+                      <Download className="h-4 w-4 mr-2" />
+                      تحميل الرسم البياني
+                    </Button>
                   </CardContent>
                 </Card>
               ))}
@@ -197,11 +227,15 @@ export default function Charts() {
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
             جميع الرسوم البيانية متاحة بدقة عالية (300 DPI) للاستخدام في التقارير والعروض التقديمية
           </p>
-          <div className="flex flex-wrap gap-3 justify-center">
+          <div className="flex flex-wrap gap-3 justify-center mb-6">
             <Badge variant="outline" className="text-sm py-2 px-4">6 رسوم بيانية</Badge>
             <Badge variant="outline" className="text-sm py-2 px-4">دقة 300 DPI</Badge>
             <Badge variant="outline" className="text-sm py-2 px-4">تنسيق PNG</Badge>
           </div>
+          <Button onClick={downloadAllCharts} size="lg" className="gap-2">
+            <Download className="h-5 w-5" />
+            تحميل جميع الرسوم البيانية
+          </Button>
         </div>
       </div>
     </div>

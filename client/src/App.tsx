@@ -13,6 +13,8 @@ import Overview from "./pages/Overview";
 import Charts from "./pages/Charts";
 import FMIProject from "./pages/FMIProject";
 import StoryPage from "./pages/StoryPage";
+import ResearchLibrary from "./pages/ResearchLibrary";
+import AnalyticsDashboard from "./pages/AnalyticsDashboard";
 import Timeline from "./pages/Timeline";
 import About from "./pages/About";
 
@@ -27,7 +29,9 @@ function Router() {
           <Route path={"/overview"} component={Overview} />
           <Route path={"/charts"} component={Charts} />
           <Route path={"/story"} component={StoryPage} />
-          <Route path={"/timeline"} component={Timeline} />
+           <Route path="/timeline" component={Timeline} />
+          <Route path="/research" component={ResearchLibrary} />
+          <Route path="/analytics" component={AnalyticsDashboard} />
           <Route path={"/dashboard"} component={Timeline} />
           <Route path={"/about"} component={About} />
           <Route path={"/404"} component={NotFound} />

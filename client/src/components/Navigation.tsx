@@ -17,9 +17,10 @@ export default function Navigation() {
   const navItems = [
     { href: "/", label: { ar: "الرئيسية", en: "Home" }, icon: Home },
     { href: "/story", label: { ar: "القصة الكاملة", en: "Full Story" }, icon: FileText },
-    { href: "/dashboard", label: { ar: "لوحة التحكم", en: "Dashboard" }, icon: BarChart3 },
+    { href: "/analytics", label: { ar: "لوحة التحليلات", en: "Analytics" }, icon: BarChart3 },
     { href: "/charts", label: { ar: "الرسوم البيانية", en: "Charts" }, icon: BarChart3 },
     { href: "/timeline", label: { ar: "الخط الزمني", en: "Timeline" }, icon: Calendar },
+    { href: "/research", label: { ar: "مكتبة الأبحاث", en: "Research" }, icon: Building2 },
     { href: "/about", label: { ar: "من نحن", en: "About" }, icon: Info },
   ];
 
