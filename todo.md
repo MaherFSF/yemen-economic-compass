@@ -288,3 +288,161 @@ This platform will become **the definitive reference** for:
 ---
 
 **Status**: 🟢 ON TRACK | **Quality**: 🟢 EXCELLENT | **Completion**: 60%
+
+
+---
+
+## 🆕 NEW FEATURE REQUESTS (من المستخدم)
+
+### Financial Literature Library
+- [ ] Create comprehensive literature repository page
+  - [ ] Display 18+ publications
+  - [ ] Show 13+ institutions
+  - [ ] Track 1,488+ pages of content
+  - [ ] Cover 11 years of data (2015-2025)
+  - [ ] Add search and filtering by institution, year, topic
+  - [ ] Include download links for all publications
+  - [ ] Add publication metadata (author, date, institution, pages)
+  - [ ] Create visual statistics dashboard
+
+### Interactive Financial Calculators
+- [ ] Build Inflation Calculator (حاسبة التضخم)
+  - [ ] Calculate purchasing power loss over time
+  - [ ] Support multiple regions (Aden vs Sana'a)
+  - [ ] Show real vs nominal value comparison
+  - [ ] Include historical inflation data (2015-2025)
+  - [ ] Visual charts showing purchasing power erosion
+  
+- [ ] Build Exchange Rate Calculator (حاسبة سعر الصرف)
+  - [ ] Convert between USD and YER
+  - [ ] Support both Aden and Sana'a rates
+  - [ ] Historical rate lookup by year
+  - [ ] Show parallel market premium
+  - [ ] Visual comparison charts
+
+### Content Enrichment from New Files
+- [ ] Integrate detailed chronology from Pasted_content_80(7).txt
+  - [ ] Add 2015-2025 detailed timeline to Economic Crisis page
+  - [ ] Include actor analysis (IRG, Houthis, Saudi, UAE, STC, Iran)
+  - [ ] Add oil & gas sector details
+  - [ ] Include humanitarian aid flows data
+  - [ ] Add institutional collapse narratives
+  
+- [ ] Integrate Arabic content from Pasted_content_81(8).txt
+  - [ ] Enrich Arabic versions of all pages
+  - [ ] Add detailed Arabic narratives
+  - [ ] Include Arabic citations and sources
+  
+- [ ] Integrate additional content from Pasted_content_100.txt
+  - [ ] Add any unique data points
+  - [ ] Include additional analysis
+  - [ ] Add more citations and references
+
+### Data Export Features
+- [ ] Add PDF export for all major pages
+- [ ] Add Excel/CSV export for data tables
+- [ ] Create custom report generator
+- [ ] Add print-friendly versions
+
+### Additional Enhancements
+- [ ] Add more events to timeline (target: 50+ events from new content)
+- [ ] Expand stakeholder profiles with new details
+- [ ] Add oil & gas production timeline
+- [ ] Create humanitarian aid flow tracker
+- [ ] Add institutional collapse case studies
+
+
+---
+
+## 🔴 COMPREHENSIVE ACCURACY AUDIT & FIX (CRITICAL PRIORITY)
+
+### SEQUENCE 1: Fix Currency Specifications (ALL PAGES)
+- [ ] Landing Page - Add YER-Aden/YER-Sana'a labels
+- [ ] Economic Crisis Page - Specify currency for all rates
+- [ ] Currency War Page - ✅ Already correct
+- [ ] Main Cities Page - Specify which currency each city uses
+- [ ] Events Timeline - Add currency context to economic events
+- [ ] CBY-Aden Tracker - Ensure all amounts specify YER-Aden
+- [ ] CBY-Sana'a Tracker - Ensure all amounts specify YER-Sana'a
+- [ ] Commercial Banks Hub - Specify currency for each bank's assets
+- [ ] Microfinance Observatory - Specify currency (likely YER-Sana'a for most)
+- [ ] International Reports - Add currency context where relevant
+- [ ] Full Story Page - Specify currencies throughout
+- [ ] Analytics Dashboard - Label all currency data
+- [ ] Research Library - Add currency context
+- [ ] About Page - Check for any currency mentions
+
+### SEQUENCE 2: Verify & Correct ALL Monetary Figures
+- [ ] Check all bank assets (millions/billions USD)
+- [ ] Check all microfinance portfolios (USD millions)
+- [ ] Check all exchange rates (verify against source)
+- [ ] Check all GDP figures
+- [ ] Check all aid amounts
+- [ ] Check all oil/gas revenues
+- [ ] Check all salary figures
+- [ ] Add proper units (million, billion, trillion)
+- [ ] Add proper currency labels (USD, YER-Aden, YER-Sana'a)
+
+### SEQUENCE 3: Fix Microfinance Data
+- [ ] Extract exact data from IMG_9312.jpeg reference
+- [ ] Update all program portfolios with correct figures
+- [ ] Update all specialized bank data
+- [ ] Specify currency for each institution
+- [ ] Add proper source citation (SFD June 2025)
+- [ ] Verify FSS, OSS, PAR30 percentages
+- [ ] Verify client numbers
+- [ ] Verify branch counts
+
+### SEQUENCE 4: Add Source Citations
+- [ ] Add sources to all CBY-Aden decisions
+- [ ] Add sources to all CBY-Sana'a decisions
+- [ ] Add sources to all bank data
+- [ ] Add sources to all microfinance data
+- [ ] Add sources to all economic indicators
+- [ ] Add sources to all events
+- [ ] Add sources to all city data
+- [ ] Format: [Institution, Report Title, Date, URL]
+
+### SEQUENCE 5: Verify Bilingual Accuracy
+- [ ] Check all Arabic translations match English
+- [ ] Verify technical term translations
+- [ ] Check currency term consistency
+- [ ] Check institution name translations
+- [ ] Check all numerical data matches in both languages
+
+### SEQUENCE 6: Build Financial Literature Library
+- [x] Create page structure
+- [x] Add 18+ publications with metadata
+- [x] Add 13+ institutions
+- [x] Show 1,488+ pages statistic
+- [x] Add search and filter functionality
+- [x] Add download links
+- [x] Make fully bilingual
+
+### SEQUENCE 7: Build Interactive Calculators
+- [x] Build Inflation Calculator
+  - [x] Support YER-Aden and YER-Sana'a
+  - [x] Historical data 2015-2025
+  - [x] Visual charts
+- [x] Build Exchange Rate Calculator
+  - [x] Support both currencies
+  - [x] Historical lookup
+  - [x] Parallel market premium
+  - [x] Visual comparison
+
+### SEQUENCE 8: Final Testing
+- [ ] Test all navigation links
+- [ ] Test all filters
+- [ ] Test all search functions
+- [ ] Test language toggle on ALL pages
+- [ ] Test mobile responsiveness
+- [ ] Test all external links
+- [ ] Test calculators
+- [ ] Test data export (if implemented)
+
+### SEQUENCE 9: Save Final Checkpoint
+- [ ] Review ACCURACY_AUDIT.md checklist
+- [ ] Verify all items completed
+- [ ] Test entire platform
+- [ ] Save comprehensive checkpoint
+- [ ] Deliver to user

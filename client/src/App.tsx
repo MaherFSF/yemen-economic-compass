@@ -26,6 +26,8 @@ import MicrofinanceObservatory from "./pages/MicrofinanceObservatory";
 import CBYAdenTracker from "./pages/CBYAdenTracker";
 import CBYSanaaTracker from "./pages/CBYSanaaTracker";
 import CommercialBanksHub from "./pages/CommercialBanksHub";
+import FinancialLiterature from "./pages/FinancialLiterature";
+import FinancialCalculators from "./pages/FinancialCalculators";
 
 function Router() {
   return (
@@ -52,6 +54,8 @@ function Router() {
           <Route path={"/cby-aden"} component={CBYAdenTracker} />
           <Route path={"/cby-sanaa"} component={CBYSanaaTracker} />
           <Route path={"/banks"} component={CommercialBanksHub} />
+          <Route path={"/literature"} component={FinancialLiterature} />
+          <Route path={"/calculators"} component={FinancialCalculators} />
           <Route path={"/404"} component={NotFound} />
           <Route component={NotFound} />
         </Switch>

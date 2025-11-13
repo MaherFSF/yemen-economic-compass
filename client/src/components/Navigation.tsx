@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Menu, X, FileText, BarChart3, Info, Home, Building2, Calendar, Globe, Landmark, TrendingUp, FileBarChart, ChevronDown } from "lucide-react";
+import { Menu, X, FileText, BarChart3, Info, Home, Building2, Calendar, Globe, Landmark, TrendingUp, FileBarChart, ChevronDown, BookOpen, Calculator } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Navigation() {
@@ -26,6 +26,8 @@ export default function Navigation() {
     { href: "/microfinance", label: { ar: "التمويل الأصغر", en: "Microfinance" }, icon: TrendingUp },
     { href: "/banks", label: { ar: "البنوك التجارية", en: "Banks" }, icon: Building2 },
     { href: "/reports", label: { ar: "التقارير الدولية", en: "Reports" }, icon: FileBarChart },
+    { href: "/literature", label: { ar: "مكتبة الأدبيات", en: "Literature" }, icon: BookOpen },
+    { href: "/calculators", label: { ar: "الحاسبات", en: "Calculators" }, icon: Calculator },
     { href: "/analytics", label: { ar: "لوحة التحليلات", en: "Analytics" }, icon: BarChart3 },
     { href: "/research", label: { ar: "مكتبة الأبحاث", en: "Research" }, icon: Building2 },
     { href: "/about", label: { ar: "من نحن", en: "About" }, icon: Info },
