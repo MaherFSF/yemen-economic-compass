@@ -249,10 +249,14 @@ export default function About() {
                 <span className="text-2xl font-bold text-primary">MF</span>
               </div>
               <div>
-                <h3 className="font-bold text-xl mb-2">Maher F.S. Farea</h3>
+                <h3 className="font-bold text-xl mb-2">ماهر فيصل سعيد | Maher F.S. Farea</h3>
+                <p className="text-muted-foreground leading-relaxed mb-3">
+                  خبير تنموي وإنساني قاد برامج معقدة في الأمم المتحدة لأكثر من 12 عاماً، يجمع بين التفاوض الميداني، 
+                  وبناء الأنظمة، وتعزيز المساءلة والمرونة المؤسسية.
+                </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  خبير اقتصادي متخصص في الشؤون المالية اليمنية مع خبرة واسعة في تحليل الأنظمة المالية المعقدة 
-                  في بيئات الصراع. يتمتع بشبكة علاقات قوية مع صناع القرار والمؤسسات المالية في جميع أنحاء اليمن.
+                  يصوغ رؤى تنفيذية تستند إلى إنجازات موثّقة—من إعادة هندسة أنظمة رصد وطنية إلى قيادة فرق متعددة 
+                  البلدان وتحويل الأدلة إلى قرارات على مستوى السياسات.
                 </p>
               </div>
             </div>
@@ -266,7 +270,7 @@ export default function About() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Badge variant="outline" className="text-sm py-2 px-4">
-              info@causewayconsultancies.com
+              Ma••••31@gmail.com
             </Badge>
           </div>
         </div>

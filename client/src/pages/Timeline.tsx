@@ -1,185 +1,189 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, TrendingDown, TrendingUp, AlertTriangle, Users, Building2, Coins } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Timeline() {
+  const { language } = useLanguage();
+  const isArabic = language === 'ar';
+
   const timelineEvents = [
     {
       year: "2014",
-      quarter: "Sep",
-      title: "Houthis Seize Sana'a",
-      description: "Houthi forces, backed by Saleh loyalists, take control of the capital, marginalizing Hadi's government",
-      impact: "Political",
+      quarter: { ar: "سبتمبر", en: "Sep" },
+      title: { ar: "الحوثيون يستولون على صنعاء", en: "Houthis Seize Sana'a" },
+      description: { ar: "قوات الحوثي، بدعم من موالي صالح، تسيطر على العاصمة، مهمشة حكومة هادي", en: "Houthi forces, backed by Saleh loyalists, take control of the capital, marginalizing Hadi's government" },
+      impact: { ar: "سياسي", en: "Political" },
       severity: "critical",
       icon: AlertTriangle
     },
     {
       year: "2015",
-      quarter: "Mar",
-      title: "Saudi-Led Coalition Intervention",
-      description: "Operation Decisive Storm launches to restore Hadi's government. Civil war escalates nationwide",
-      impact: "Conflict",
+      quarter: { ar: "مارس", en: "Mar" },
+      title: { ar: "تدخل التحالف بقيادة السعودية", en: "Saudi-Led Coalition Intervention" },
+      description: { ar: "عملية عاصفة الحزم تنطلق لاستعادة حكومة هادي. الحرب الأهلية تتصاعد على مستوى البلاد", en: "Operation Decisive Storm launches to restore Hadi's government. Civil war escalates nationwide" },
+      impact: { ar: "صراع", en: "Conflict" },
       severity: "critical",
       icon: AlertTriangle
     },
     {
       year: "2015",
-      quarter: "Q2-Q4",
-      title: "Economic Collapse Begins",
-      description: "GDP contracts sharply, oil production halts, currency begins depreciation",
-      impact: "Economic",
+      quarter: { ar: "الربع 2-4", en: "Q2-Q4" },
+      title: { ar: "بداية الانهيار الاقتصادي", en: "Economic Collapse Begins" },
+      description: { ar: "انكماش حاد في الناتج المحلي، توقف إنتاج النفط، بداية انخفاض قيمة العملة", en: "GDP contracts sharply, oil production halts, currency begins depreciation" },
+      impact: { ar: "اقتصادي", en: "Economic" },
       severity: "high",
       icon: TrendingDown,
       metrics: { gdp: "-28%", inflation: "+15%" }
     },
     {
       year: "2016",
-      quarter: "Sep",
-      title: "Central Bank Split",
-      description: "CBY headquarters moved from Sana'a to Aden, creating dual monetary authorities",
-      impact: "Financial",
+      quarter: { ar: "سبتمبر", en: "Sep" },
+      title: { ar: "انقسام البنك المركزي", en: "Central Bank Split" },
+      description: { ar: "نقل مقر البنك المركزي من صنعاء إلى عدن، مما أدى إلى وجود سلطتين نقديتين", en: "CBY headquarters moved from Sana'a to Aden, creating dual monetary authorities" },
+      impact: { ar: "مالي", en: "Financial" },
       severity: "critical",
       icon: Building2,
       metrics: { exchange: "530 YER/USD" }
     },
     {
       year: "2017",
-      quarter: "May",
-      title: "Southern Transitional Council Formed",
-      description: "UAE-backed separatist movement established, adding third faction to conflict",
-      impact: "Political",
+      quarter: { ar: "مايو", en: "May" },
+      title: { ar: "تشكيل المجلس الانتقالي الجنوبي", en: "Southern Transitional Council Formed" },
+      description: { ar: "تأسيس حركة انفصالية مدعومة من الإمارات، إضافة فصيل ثالث للصراع", en: "UAE-backed separatist movement established, adding third faction to conflict" },
+      impact: { ar: "سياسي", en: "Political" },
       severity: "high",
       icon: Users
     },
     {
       year: "2018",
-      quarter: "Dec",
-      title: "Stockholm Agreement",
-      description: "Hodeidah ceasefire and prisoner exchange deal. First major diplomatic breakthrough",
-      impact: "Peace Effort",
+      quarter: { ar: "ديسمبر", en: "Dec" },
+      title: { ar: "اتفاق ستوكهولم", en: "Stockholm Agreement" },
+      description: { ar: "وقف إطلاق النار في الحديدة وصفقة تبادل الأسرى. أول اختراق دبلوماسي كبير", en: "Hodeidah ceasefire and prisoner exchange deal. First major diplomatic breakthrough" },
+      impact: { ar: "جهود السلام", en: "Peace Effort" },
       severity: "positive",
       icon: TrendingUp
     },
     {
       year: "2019",
-      quarter: "Nov",
-      title: "Riyadh Agreement",
-      description: "Power-sharing deal between Hadi government and STC (implementation stalled)",
-      impact: "Political",
+      quarter: { ar: "نوفمبر", en: "Nov" },
+      title: { ar: "اتفاق الرياض", en: "Riyadh Agreement" },
+      description: { ar: "صفقة تقاسم السلطة بين حكومة هادي والمجلس الانتقالي (تعثر التنفيذ)", en: "Power-sharing deal between Hadi government and STC (implementation stalled)" },
+      impact: { ar: "سياسي", en: "Political" },
       severity: "moderate",
       icon: Users
     },
     {
       year: "2020",
-      quarter: "Jan",
-      title: "Currency Fragmentation Deepens",
-      description: "Houthi-controlled CBY bans new banknotes printed by Aden, splitting the Yemeni Riyal",
-      impact: "Financial",
+      quarter: { ar: "يناير", en: "Jan" },
+      title: { ar: "تعميق تشظي العملة", en: "Currency Fragmentation Deepens" },
+      description: { ar: "البنك المركزي في صنعاء يحظر الأوراق النقدية الجديدة المطبوعة في عدن، مما أدى إلى انقسام الريال اليمني", en: "Houthi-controlled CBY bans new banknotes printed by Aden, splitting the Yemeni Riyal" },
+      impact: { ar: "مالي", en: "Financial" },
       severity: "critical",
       icon: Coins,
       metrics: { adenRate: "750 YER/USD", sanaaRate: "600 YER/USD (fixed)" }
     },
     {
       year: "2020",
-      quarter: "Apr",
-      title: "COVID-19 Pandemic Hits",
-      description: "Healthcare system collapses, humanitarian crisis worsens, brief ceasefire announced",
-      impact: "Humanitarian",
+      quarter: { ar: "أبريل", en: "Apr" },
+      title: { ar: "جائحة كوفيد-19", en: "COVID-19 Pandemic Hits" },
+      description: { ar: "انهيار النظام الصحي، تفاقم الأزمة الإنسانية، إعلان وقف إطلاق نار قصير", en: "Healthcare system collapses, humanitarian crisis worsens, brief ceasefire announced" },
+      impact: { ar: "إنساني", en: "Humanitarian" },
       severity: "high",
       icon: AlertTriangle
     },
     {
       year: "2021",
-      quarter: "Feb",
-      title: "Biden Ends Offensive Support",
-      description: "US withdraws support for Saudi offensive operations, shifts to diplomatic pressure",
-      impact: "International",
+      quarter: { ar: "فبراير", en: "Feb" },
+      title: { ar: "بايدن ينهي الدعم الهجومي", en: "Biden Ends Offensive Support" },
+      description: { ar: "الولايات المتحدة تسحب دعمها للعمليات الهجومية السعودية، تتحول للضغط الدبلوماسي", en: "US withdraws support for Saudi offensive operations, shifts to diplomatic pressure" },
+      impact: { ar: "دولي", en: "International" },
       severity: "moderate",
       icon: Users
     },
     {
       year: "2022",
-      quarter: "Apr",
-      title: "Presidential Leadership Council Formed",
-      description: "Hadi steps down, replaced by Saudi-backed 8-member council. UN-brokered truce begins",
-      impact: "Political",
+      quarter: { ar: "أبريل", en: "Apr" },
+      title: { ar: "تشكيل مجلس القيادة الرئاسي", en: "Presidential Leadership Council Formed" },
+      description: { ar: "هادي يتنحى، يُستبدل بمجلس من 8 أعضاء مدعوم سعودياً. بداية هدنة بوساطة الأمم المتحدة", en: "Hadi steps down, replaced by Saudi-backed 8-member council. UN-brokered truce begins" },
+      impact: { ar: "سياسي", en: "Political" },
       severity: "positive",
       icon: TrendingUp,
       metrics: { saudiAid: "$2B pledged" }
     },
     {
       year: "2022",
-      quarter: "Oct",
-      title: "Truce Expires",
-      description: "2-month UN truce extensions end, localized fighting resumes",
-      impact: "Conflict",
+      quarter: { ar: "أكتوبر", en: "Oct" },
+      title: { ar: "انتهاء الهدنة", en: "Truce Expires" },
+      description: { ar: "انتهاء تمديدات الهدنة الأممية لمدة شهرين، استئناف القتال المحلي", en: "2-month UN truce extensions end, localized fighting resumes" },
+      impact: { ar: "صراع", en: "Conflict" },
       severity: "high",
       icon: AlertTriangle
     },
     {
       year: "2023",
-      quarter: "Apr",
-      title: "Major Prisoner Exchange",
-      description: "Largest swap since 2020: 887 prisoners released under ICRC auspices",
-      impact: "Humanitarian",
+      quarter: { ar: "أبريل", en: "Apr" },
+      title: { ar: "تبادل كبير للأسرى", en: "Major Prisoner Exchange" },
+      description: { ar: "أكبر عملية تبادل منذ 2020: إطلاق سراح 887 أسيراً تحت إشراف اللجنة الدولية للصليب الأحمر", en: "Largest swap since 2020: 887 prisoners released under ICRC auspices" },
+      impact: { ar: "إنساني", en: "Humanitarian" },
       severity: "positive",
       icon: TrendingUp
     },
     {
       year: "2023",
-      quarter: "Oct",
-      title: "Red Sea Maritime Attacks Begin",
-      description: "Houthi forces launch missile/drone attacks on international shipping",
-      impact: "International",
+      quarter: { ar: "أكتوبر", en: "Oct" },
+      title: { ar: "بداية الهجمات البحرية في البحر الأحمر", en: "Red Sea Maritime Attacks Begin" },
+      description: { ar: "قوات الحوثي تطلق هجمات صاروخية ومسيّرة على الملاحة الدولية", en: "Houthi forces launch missile/drone attacks on international shipping" },
+      impact: { ar: "دولي", en: "International" },
       severity: "critical",
       icon: AlertTriangle
     },
     {
       year: "2024",
-      quarter: "Q1",
-      title: "Exchange Rate Crisis",
-      description: "Aden Riyal depreciates to 1,800 YER/USD, inflation surges",
-      impact: "Economic",
+      quarter: { ar: "الربع 1", en: "Q1" },
+      title: { ar: "أزمة سعر الصرف", en: "Exchange Rate Crisis" },
+      description: { ar: "ريال عدن ينخفض إلى 1,800 ريال/دولار، ارتفاع حاد في التضخم", en: "Aden Riyal depreciates to 1,800 YER/USD, inflation surges" },
+      impact: { ar: "اقتصادي", en: "Economic" },
       severity: "critical",
       icon: TrendingDown,
       metrics: { adenRate: "1,800 YER/USD", inflation: "+35%" }
     },
     {
       year: "2024",
-      quarter: "Q3",
-      title: "CBY-Aden Exchange Controls",
-      description: "Introduction of UNMONEY network and import financing to stabilize currency",
-      impact: "Financial",
+      quarter: { ar: "الربع 3", en: "Q3" },
+      title: { ar: "ضوابط الصرف من البنك المركزي بعدن", en: "CBY-Aden Exchange Controls" },
+      description: { ar: "إطلاق شبكة UNMONEY وتمويل الواردات لاستقرار العملة", en: "Introduction of UNMONEY network and import financing to stabilize currency" },
+      impact: { ar: "مالي", en: "Financial" },
       severity: "positive",
       icon: Coins,
       metrics: { adenRate: "1,630 YER/USD (stabilized)" }
     },
     {
       year: "2025",
-      quarter: "May",
-      title: "Riyal Collapse Deepens",
-      description: "Currency hits 2,560 YER/USD amid oil blockade and revenue crisis",
-      impact: "Economic",
+      quarter: { ar: "مايو", en: "May" },
+      title: { ar: "تعميق انهيار الريال", en: "Riyal Collapse Deepens" },
+      description: { ar: "العملة تصل إلى 2,560 ريال/دولار وسط حصار النفط وأزمة الإيرادات", en: "Currency hits 2,560 YER/USD amid oil blockade and revenue crisis" },
+      impact: { ar: "اقتصادي", en: "Economic" },
       severity: "critical",
       icon: TrendingDown,
       metrics: { adenRate: "2,560 YER/USD", gdpContraction: "-1.5%" }
     },
     {
       year: "2025",
-      quarter: "May",
-      title: "World Bank FMI Project Approved",
-      description: "$20M grant for payment infrastructure and financial inclusion",
-      impact: "Development",
+      quarter: { ar: "مايو", en: "May" },
+      title: { ar: "الموافقة على مشروع البنك الدولي للبنية التحتية المالية", en: "World Bank FMI Project Approved" },
+      description: { ar: "منحة بقيمة 20 مليون دولار للبنية التحتية للمدفوعات والشمول المالي", en: "$20M grant for payment infrastructure and financial inclusion" },
+      impact: { ar: "تنموي", en: "Development" },
       severity: "positive",
       icon: TrendingUp,
       metrics: { funding: "$20M", duration: "2025-2030" }
     },
     {
       year: "2025",
-      quarter: "Nov",
-      title: "Poverty Reaches 76%",
-      description: "Humanitarian crisis deepens, 21.6M people need assistance",
-      impact: "Humanitarian",
+      quarter: { ar: "نوفمبر", en: "Nov" },
+      title: { ar: "الفقر يصل إلى 76%", en: "Poverty Reaches 76%" },
+      description: { ar: "تعميق الأزمة الإنسانية، 21.6 مليون شخص بحاجة للمساعدة", en: "Humanitarian crisis deepens, 21.6M people need assistance" },
+      impact: { ar: "إنساني", en: "Humanitarian" },
       severity: "critical",
       icon: AlertTriangle,
       metrics: { poverty: "76%", needAssistance: "21.6M" }
@@ -197,12 +201,21 @@ export default function Timeline() {
   };
 
   const getSeverityBadge = (severity: string) => {
+    const labels = {
+      critical: { ar: "حرج", en: "Critical" },
+      high: { ar: "تأثير عالٍ", en: "High Impact" },
+      moderate: { ar: "متوسط", en: "Moderate" },
+      positive: { ar: "إيجابي", en: "Positive" }
+    };
+    
+    const label = labels[severity as keyof typeof labels]?.[language] || (isArabic ? "معلومة" : "Info");
+    
     switch (severity) {
-      case "critical": return <Badge variant="destructive">Critical</Badge>;
-      case "high": return <Badge className="bg-orange-500">High Impact</Badge>;
-      case "moderate": return <Badge className="bg-yellow-500">Moderate</Badge>;
-      case "positive": return <Badge className="bg-green-500">Positive</Badge>;
-      default: return <Badge variant="secondary">Info</Badge>;
+      case "critical": return <Badge variant="destructive">{label}</Badge>;
+      case "high": return <Badge className="bg-orange-500">{label}</Badge>;
+      case "moderate": return <Badge className="bg-yellow-500">{label}</Badge>;
+      case "positive": return <Badge className="bg-green-500">{label}</Badge>;
+      default: return <Badge variant="secondary">{label}</Badge>;
     }
   };
 
@@ -216,11 +229,13 @@ export default function Timeline() {
             2014 - 2025
           </Badge>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Yemen Crisis Timeline
+            {isArabic ? "الخط الزمني لأزمة اليمن" : "Yemen Crisis Timeline"}
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A decade of conflict, economic collapse, and humanitarian catastrophe: 
-            tracking the key events that reshaped Yemen's financial and political landscape
+            {isArabic 
+              ? "عقد من الصراع والانهيار الاقتصادي والكارثة الإنسانية: تتبع الأحداث الرئيسية التي أعادت تشكيل المشهد المالي والسياسي لليمن"
+              : "A decade of conflict, economic collapse, and humanitarian catastrophe: tracking the key events that reshaped Yemen's financial and political landscape"
+            }
           </p>
         </div>
 
@@ -269,20 +284,20 @@ export default function Timeline() {
                             <div>
                               <div className="flex items-center gap-2 mb-1">
                                 <span className="font-bold text-lg">{event.year}</span>
-                                <span className="text-sm text-muted-foreground">{event.quarter}</span>
+                                <span className="text-sm text-muted-foreground">{event.quarter[language]}</span>
                               </div>
-                              <CardTitle className="text-base">{event.title}</CardTitle>
+                              <CardTitle className="text-base">{event.title[language]}</CardTitle>
                             </div>
                           </div>
                           {getSeverityBadge(event.severity)}
                         </div>
                         <CardDescription className="mt-2">
-                          <Badge variant="outline" className="text-xs">{event.impact}</Badge>
+                          <Badge variant="outline" className="text-xs">{event.impact[language]}</Badge>
                         </CardDescription>
                       </CardHeader>
                       <CardContent>
                         <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                          {event.description}
+                          {event.description[language]}
                         </p>
                         {event.metrics && (
                           <div className="flex flex-wrap gap-2">
@@ -305,25 +320,35 @@ export default function Timeline() {
         {/* Summary Statistics */}
         <Card className="mt-12 border-2">
           <CardHeader>
-            <CardTitle className="text-2xl">Decade in Numbers (2014-2025)</CardTitle>
+            <CardTitle className="text-2xl">
+              {isArabic ? "العقد بالأرقام (2014-2025)" : "Decade in Numbers (2014-2025)"}
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-red-600">-58%</div>
-                <div className="text-sm text-muted-foreground mt-1">GDP per Capita</div>
+                <div className="text-sm text-muted-foreground mt-1">
+                  {isArabic ? "نصيب الفرد من الناتج المحلي" : "GDP per Capita"}
+                </div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-red-600">76%</div>
-                <div className="text-sm text-muted-foreground mt-1">Poverty Rate</div>
+                <div className="text-sm text-muted-foreground mt-1">
+                  {isArabic ? "معدل الفقر" : "Poverty Rate"}
+                </div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-orange-600">2,560</div>
-                <div className="text-sm text-muted-foreground mt-1">YER/USD (2025)</div>
+                <div className="text-sm text-muted-foreground mt-1">
+                  {isArabic ? "ريال/دولار (2025)" : "YER/USD (2025)"}
+                </div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-red-600">21.6M</div>
-                <div className="text-sm text-muted-foreground mt-1">Need Assistance</div>
+                <div className="text-sm text-muted-foreground mt-1">
+                  {isArabic ? "بحاجة للمساعدة" : "Need Assistance"}
+                </div>
               </div>
             </div>
           </CardContent>
