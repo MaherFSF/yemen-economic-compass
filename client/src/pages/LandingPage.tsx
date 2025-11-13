@@ -16,11 +16,11 @@ export default function LandingPage() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/J6JzzQmtLayd.jpg" 
-            alt="Sanaa Old City"
+            src="/images/haNkczbhEtrC.jpg" 
+            alt="Yemen Landscape"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/65 to-background" />
         </div>
 
         {/* Content */}
@@ -245,11 +245,41 @@ export default function LandingPage() {
               </Link>
             </div>
             <div className="relative">
-              <img 
-                src="/causeway-logo.png" 
-                alt="CauseWay Foundation Structure"
-                className="w-full h-auto rounded-lg shadow-2xl"
-              />
+              <Card className="border-2 p-8">
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4">
+                    <div className="h-16 w-16 bg-primary/10 rounded-full flex items-center justify-center">
+                      <span className="text-3xl font-bold text-primary">C</span>
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold">CauseWay</h3>
+                      <p className="text-muted-foreground">
+                        {isArabic ? "وكالة استشارية متخصصة" : "Specialized Consultancy"}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="text-center p-4 bg-accent/20 rounded-lg">
+                      <div className="text-3xl font-bold text-primary">12+</div>
+                      <div className="text-sm text-muted-foreground mt-1">
+                        {isArabic ? "سنوات خبرة" : "Years Experience"}
+                      </div>
+                    </div>
+                    <div className="text-center p-4 bg-accent/20 rounded-lg">
+                      <div className="text-3xl font-bold text-primary">100%</div>
+                      <div className="text-sm text-muted-foreground mt-1">
+                        {isArabic ? "تركيز على اليمن" : "Yemen Focused"}
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    {isArabic
+                      ? "نجمع بين التفاوض الميداني، وبناء الأنظمة، وتعزيز المساءلة والمرونة المؤسسية"
+                      : "Combining field negotiation, systems building, and institutional accountability"
+                    }
+                  </p>
+                </div>
+              </Card>
             </div>
           </div>
         </div>
