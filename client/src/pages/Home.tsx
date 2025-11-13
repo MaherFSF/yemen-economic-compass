@@ -13,22 +13,22 @@ export default function Home() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(/PDd5RatgbS8f.jpg)',
-            filter: 'brightness(0.4)'
+            backgroundImage: 'url(/Yy1SCKTMhonQ.jpg)',
+            filter: 'brightness(0.35)'
           }}
         ></div>
         
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
         
         {/* Content */}
         <div className="container relative h-full flex items-center">
           <div className="max-w-4xl space-y-6 text-white">
             <div className="inline-block px-4 py-2 bg-primary/90 rounded-full mb-4">
-              <span className="text-sm font-medium">Causeway Consultancies Report 2025</span>
+              <span className="text-sm font-medium">تقرير Causeway Consultancies 2025</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight">
               النظام المالي الموازي في اليمن
             </h1>
             
@@ -71,7 +71,7 @@ export default function Home() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Card className="border-l-4 border-l-red-500 hover:shadow-lg transition-shadow">
+                <Card className="border-r-4 border-r-red-500 hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
                       <div className="h-12 w-12 rounded-lg bg-red-100 flex items-center justify-center">
@@ -97,7 +97,7 @@ export default function Home() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-l-4 border-l-orange-500 hover:shadow-lg transition-shadow">
+                <Card className="border-r-4 border-r-orange-500 hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
                       <div className="h-12 w-12 rounded-lg bg-orange-100 flex items-center justify-center">
@@ -110,20 +110,20 @@ export default function Home() {
                     <div className="space-y-3">
                       <div className="flex justify-between items-center">
                         <span className="text-sm text-muted-foreground">عدن (2014 → 2025)</span>
-                        <span className="font-bold text-lg text-orange-600">215 → 2,800 ريال/دولار</span>
+                        <span className="font-bold text-lg text-orange-600">215 → 2,560 ريال/دولار</span>
                       </div>
                       <div className="flex justify-between items-center">
                         <span className="text-sm text-muted-foreground">صنعاء (استقرار نسبي)</span>
                         <span className="font-bold text-lg">650 ريال/دولار</span>
                       </div>
                       <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
-                        تباعد بنسبة 330% بين سعر الصرف في المنطقتين يعكس السياسات النقدية المتضاربة
+                        تباعد بنسبة 294% بين سعر الصرف في المنطقتين يعكس السياسات النقدية المتضاربة
                       </p>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card className="border-l-4 border-l-blue-500 hover:shadow-lg transition-shadow">
+                <Card className="border-r-4 border-r-blue-500 hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
                       <div className="h-12 w-12 rounded-lg bg-blue-100 flex items-center justify-center">
@@ -149,7 +149,7 @@ export default function Home() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-l-4 border-l-green-500 hover:shadow-lg transition-shadow">
+                <Card className="border-r-4 border-r-green-500 hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
                       <div className="h-12 w-12 rounded-lg bg-green-100 flex items-center justify-center">
@@ -208,7 +208,7 @@ export default function Home() {
                 <div className="text-center mt-6">
                   <Link href="/charts">
                     <Button variant="outline" size="lg" className="gap-2">
-                      عرض جميع الرسوم البيانية (12)
+                      عرض جميع الرسوم البيانية (6)
                       <ArrowLeft className="h-4 w-4" />
                     </Button>
                   </Link>
@@ -238,7 +238,7 @@ export default function Home() {
                   </div>
                   <div>
                     <CardTitle className="text-xl">مشروع البنية التحتية المالية</CardTitle>
-                    <CardDescription>World Bank - $20 Million</CardDescription>
+                    <CardDescription>البنك الدولي - 20 مليون دولار</CardDescription>
                   </div>
                 </div>
               </CardHeader>

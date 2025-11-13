@@ -5,80 +5,97 @@ import { Badge } from "@/components/ui/badge";
 const chartCategories = [
   {
     id: "economic",
-    label: "Economic Indicators",
+    label: "المؤشرات الاقتصادية",
     charts: [
       {
         id: 1,
-        title: "Poverty Rate & Inflation Trends (2014-2025)",
-        description: "Evolution of poverty rates and inflation divergence between Aden and Sana'a",
+        title: "اتجاهات الفقر والتضخم (2014-2025)",
+        titleEn: "Poverty Rate & Inflation Trends (2014-2025)",
+        description: "تطور معدلات الفقر وتباعد التضخم بين عدن وصنعاء",
         image: "/charts/chart_01_poverty_inflation.png",
         insights: [
-          "Poverty rate increased from 54% (2014) to 76% (2025)",
-          "Inflation in Aden reached 35% vs 8% in Sana'a",
-          "Sharp divergence reflects contrasting monetary policies"
-        ]
+          "ارتفع معدل الفقر من 54% (2014) إلى 76% (2025)",
+          "وصل التضخم في عدن إلى 35% مقابل 8% في صنعاء",
+          "التباعد الحاد يعكس السياسات النقدية المتضاربة"
+        ],
+        arabicExplanation: "يوضح هذا الرسم البياني التدهور الاقتصادي الحاد في اليمن على مدى عقد من الزمن. ارتفع معدل الفقر بنسبة 41% ليصل إلى ثلاثة أرباع السكان، بينما يظهر التضخم تبايناً صارخاً بين المنطقتين نتيجة السياسات النقدية المختلفة للبنكين المركزيين المتنافسين."
       },
       {
         id: 2,
-        title: "Exchange Rate Divergence: Aden vs Sana'a (2014-2025)",
-        description: "Dramatic exchange rate split following the Central Bank division in 2016",
+        title: "تباعد سعر الصرف: عدن مقابل صنعاء (2014-2025)",
+        titleEn: "Exchange Rate Divergence: Aden vs Sana'a (2014-2025)",
+        description: "انقسام دراماتيكي في سعر الصرف بعد انقسام البنك المركزي في 2016",
         image: "/charts/chart_02_exchange_rate.png",
         insights: [
-          "Aden: 215 YER/USD (2014) → 2,800 YER/USD (2025)",
-          "Sana'a: Relative stability at 650 YER/USD",
-          "4.3x divergence between the two zones"
-        ]
+          "عدن: 215 ريال/دولار (2014) ← 2,800 ريال/دولار (2025)",
+          "صنعاء: استقرار نسبي عند 650 ريال/دولار",
+          "تباعد بنسبة 4.3 ضعف بين المنطقتين"
+        ],
+        arabicExplanation: "يُظهر الرسم البياني الانهيار الكارثي للريال اليمني في المناطق الخاضعة للحكومة المعترف بها دولياً (عدن)، مقابل الاستقرار النسبي في المناطق الخاضعة لسيطرة الحوثيين (صنعاء). هذا التباعد الاستثنائي يعكس استراتيجيات نقدية متناقضة تماماً."
       }
     ]
   },
   {
     id: "financial",
-    label: "Financial Systems",
+    label: "الأنظمة المالية",
     charts: [
       {
         id: 3,
-        title: "Microfinance Sector Growth (2010-2024)",
-        description: "Exceptional growth in microfinance as alternative to traditional banking",
+        title: "نمو قطاع التمويل الأصغر (2010-2024)",
+        titleEn: "Microfinance Sector Growth (2010-2024)",
+        description: "نمو استثنائي في التمويل الأصغر كبديل للنظام المصرفي التقليدي",
         image: "/charts/chart_03_microfinance_growth.png",
         insights: [
-          "Active borrowers: 25K → 260K (940% growth)",
-          "Active depositors: 30K → 420K (1,300% growth)",
-          "Microfinance filled the gap left by collapsed banking sector"
-        ]
+          "المقترضون النشطون: 25 ألف ← 260 ألف (نمو 940%)",
+          "المودعون النشطون: 30 ألف ← 420 ألف (نمو 1,300%)",
+          "التمويل الأصغر ملأ الفراغ الذي تركه انهيار القطاع المصرفي"
+        ],
+        arabicExplanation: "يوثق هذا الرسم البياني التحول الهيكلي في النظام المالي اليمني، حيث أصبح التمويل الأصغر الملاذ الوحيد للملايين بعد انهيار النظام المصرفي التقليدي. النمو الهائل يعكس الحاجة الماسة للخدمات المالية الأساسية."
       },
       {
         id: 4,
-        title: "Digital Payment Adoption (2019 vs 2024)",
-        description: "Rapid adoption of digital payments across individuals, businesses, and government",
+        title: "اعتماد الدفع الرقمي (2015-2024)",
+        titleEn: "Digital Payment Adoption (2015-2024)",
+        description: "النمو السريع في حجم معاملات الدفع الرقمي",
         image: "/charts/chart_04_digital_payments.png",
         insights: [
-          "Individual adoption: 5% → 20% (+300%)",
-          "Business adoption: 8% → 35% (+338%)",
-          "Government services: 2% → 15% (+650%)"
-        ]
-      },
+          "حجم المعاملات: 500 مليون دولار (2015) ← 3.2 مليار دولار (2024)",
+          "نمو بنسبة 540% في تسع سنوات",
+          "المدفوعات الرقمية أصبحت شريان الحياة للاقتصاد"
+        ],
+        arabicExplanation: "يُظهر الرسم البياني كيف أصبحت المدفوعات الرقمية ضرورة حتمية في ظل انهيار البنية التحتية المصرفية التقليدية. النمو الهائل يعكس التحول القسري نحو البدائل الرقمية لتسهيل المعاملات الاقتصادية الأساسية."
+      }
+    ]
+  },
+  {
+    id: "aid",
+    label: "المساعدات والتمويل",
+    charts: [
       {
         id: 5,
-        title: "International Aid Composition (2024)",
-        description: "Distribution of international aid by sector and top donor countries",
+        title: "تكوين المساعدات الدولية (2015-2024)",
+        titleEn: "International Aid Composition (2015-2024)",
+        description: "توزيع المساعدات الدولية بين الإنسانية والتنموية",
         image: "/charts/chart_05_aid_composition.png",
         insights: [
-          "Humanitarian relief dominates at $2.8B (47% of total)",
-          "Saudi Arabia and UAE are largest donors (60% combined)",
-          "Infrastructure receives only 5% of total aid"
-        ]
+          "المساعدات الإنسانية: 85% من إجمالي المساعدات",
+          "المساعدات التنموية: 15% فقط",
+          "إجمالي المساعدات: 20 مليار دولار (2015-2024)"
+        ],
+        arabicExplanation: "يوضح الرسم البياني الاعتماد الكبير على المساعدات الإنسانية الطارئة على حساب الاستثمارات التنموية طويلة الأجل. هذا الخلل يعكس الأزمة الإنسانية المستمرة ولكنه يعيق أيضاً إمكانية التعافي الاقتصادي المستدام."
       },
       {
         id: 6,
-        title: "Financial Governance Assessment (2024)",
-        description: "Comparative governance metrics for Aden and Sana'a central banks",
-        image: "/charts/chart_06_governance_matrix.png",
+        title: "فجوة تمويل المناخ (2020-2024)",
+        titleEn: "Climate Finance Gap (2020-2024)",
+        description: "الفجوة بين احتياجات التكيف المناخي والتمويل الفعلي",
+        image: "/charts/chart_07_climate_finance.png",
         insights: [
-          "Both CBYs score below 50% on all governance metrics",
-          "Aden CBY stronger on transparency and accountability",
-          "Sana'a CBY shows better stability due to capital controls",
-          "Both far below international standards (80%)"
-        ]
+          "الاحتياج السنوي: 800 مليون دولار",
+          "التمويل الفعلي: 60 مليون دولار",
+          "فجوة تمويلية بنسبة 92.5%"
+        ],
+        arabicExplanation: "يكشف الرسم البياني عن الفجوة الهائلة في تمويل التكيف مع التغير المناخي في اليمن، وهو من أكثر البلدان هشاشة مناخياً. هذا النقص الحاد في التمويل يعرض ملايين اليمنيين لمخاطر متزايدة من الجفاف والفيضانات."
       }
     ]
   }
@@ -89,21 +106,21 @@ export default function Charts() {
     <div className="w-full py-12">
       <div className="container max-w-7xl">
         {/* Header */}
-        <div className="mb-12 text-center">
-          <Badge className="mb-4" variant="outline">
-            Data Visualizations
-          </Badge>
+        <div className="text-center mb-12">
+          <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-4">
+            <span className="text-sm font-medium text-primary">التصورات البيانية</span>
+          </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Interactive Charts & Analysis
+            الرسوم البيانية التفاعلية
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Visual insights into Yemen's parallel financial system through comprehensive data analysis
+            تحليل بصري شامل للنظام المالي اليمني (2014-2025)
           </p>
         </div>
 
-        {/* Charts Tabs */}
+        {/* Tabs */}
         <Tabs defaultValue="economic" className="w-full">
-          <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8">
+          <TabsList className="grid w-full grid-cols-3 mb-8">
             {chartCategories.map((category) => (
               <TabsTrigger key={category.id} value={category.id} className="text-base">
                 {category.label}
@@ -114,41 +131,58 @@ export default function Charts() {
           {chartCategories.map((category) => (
             <TabsContent key={category.id} value={category.id} className="space-y-8">
               {category.charts.map((chart) => (
-                <Card key={chart.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                  <CardHeader>
+                <Card key={chart.id} className="overflow-hidden border-2 hover:shadow-lg transition-shadow">
+                  <CardHeader className="bg-gradient-to-r from-primary/5 to-accent/10">
                     <div className="flex items-start justify-between gap-4">
-                      <div>
+                      <div className="flex-1">
                         <CardTitle className="text-2xl mb-2">{chart.title}</CardTitle>
                         <CardDescription className="text-base">{chart.description}</CardDescription>
                       </div>
-                      <Badge variant="secondary">Chart {chart.id}</Badge>
+                      <Badge variant="outline" className="text-xs">
+                        #{chart.id}
+                      </Badge>
                     </div>
                   </CardHeader>
-                  <CardContent className="space-y-6">
+                  <CardContent className="p-6">
                     {/* Chart Image */}
-                    <div className="rounded-lg overflow-hidden border-2 border-border bg-white">
-                      <img
-                        src={chart.image}
+                    <div className="mb-6 rounded-lg overflow-hidden border-2 border-border">
+                      <img 
+                        src={chart.image} 
                         alt={chart.title}
                         className="w-full h-auto"
-                        loading="lazy"
                       />
                     </div>
 
+                    {/* English Title */}
+                    <div className="mb-4 p-3 bg-accent/20 rounded-lg">
+                      <p className="text-sm font-medium text-muted-foreground">
+                        {chart.titleEn}
+                      </p>
+                    </div>
+
                     {/* Key Insights */}
-                    <div className="bg-accent/30 rounded-lg p-6">
+                    <div className="mb-6">
                       <h3 className="font-semibold text-lg mb-3 flex items-center gap-2">
-                        <span className="h-2 w-2 rounded-full bg-primary"></span>
-                        Key Insights
+                        <Badge variant="default">النقاط الرئيسية</Badge>
                       </h3>
                       <ul className="space-y-2">
                         {chart.insights.map((insight, idx) => (
-                          <li key={idx} className="flex items-start gap-3">
-                            <span className="text-primary font-bold mt-1">•</span>
-                            <span className="text-muted-foreground leading-relaxed">{insight}</span>
+                          <li key={idx} className="flex items-start gap-2">
+                            <span className="text-primary mt-1 font-bold">•</span>
+                            <span className="text-muted-foreground">{insight}</span>
                           </li>
                         ))}
                       </ul>
+                    </div>
+
+                    {/* Arabic Explanation */}
+                    <div className="p-4 bg-gradient-to-br from-primary/5 to-accent/5 rounded-lg border-r-4 border-r-primary">
+                      <h3 className="font-semibold text-lg mb-2 flex items-center gap-2">
+                        <Badge variant="secondary">الشرح التفصيلي</Badge>
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        {chart.arabicExplanation}
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
@@ -157,21 +191,18 @@ export default function Charts() {
           ))}
         </Tabs>
 
-        {/* Methodology Note */}
-        <Card className="mt-12 border-l-4 border-l-primary">
-          <CardHeader>
-            <CardTitle className="text-xl">Data Sources & Methodology</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-muted-foreground leading-relaxed">
-              All charts are based on data from official sources including the Central Bank of Yemen (both branches), 
-              World Bank, IMF, UN agencies, and field research conducted between 2020-2024. Exchange rate data 
-              reflects market rates in respective territories. Microfinance data sourced from Yemen Microfinance 
-              Network annual reports. Governance assessments based on international financial standards and 
-              independent expert evaluations.
-            </p>
-          </CardContent>
-        </Card>
+        {/* Download Section */}
+        <div className="mt-12 text-center p-8 bg-gradient-to-br from-primary/5 to-accent/10 rounded-lg border-2">
+          <h3 className="text-2xl font-bold mb-3">تحميل الرسوم البيانية</h3>
+          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+            جميع الرسوم البيانية متاحة بدقة عالية (300 DPI) للاستخدام في التقارير والعروض التقديمية
+          </p>
+          <div className="flex flex-wrap gap-3 justify-center">
+            <Badge variant="outline" className="text-sm py-2 px-4">6 رسوم بيانية</Badge>
+            <Badge variant="outline" className="text-sm py-2 px-4">دقة 300 DPI</Badge>
+            <Badge variant="outline" className="text-sm py-2 px-4">تنسيق PNG</Badge>
+          </div>
+        </div>
       </div>
     </div>
   );
