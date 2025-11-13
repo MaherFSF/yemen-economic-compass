@@ -25,15 +25,6 @@ export default function LandingPage() {
 
         {/* Content */}
         <div className="container relative z-10 text-center px-4 py-20">
-          {/* Logo */}
-          <div className="mb-8 flex justify-center">
-            <img 
-              src="/causeway-logo.png" 
-              alt="CauseWay Foundation"
-              className="h-32 w-auto"
-            />
-          </div>
-
           {/* Badge */}
           <div className="inline-block mb-6">
             <Badge variant="outline" className="text-base px-6 py-2 bg-white/10 backdrop-blur-sm border-white/30 text-white">
