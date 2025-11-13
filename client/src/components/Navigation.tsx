@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Menu, X, FileText, BarChart3, Info, Home, Building2, Calendar, Globe } from "lucide-react";
+import { Menu, X, FileText, BarChart3, Info, Home, Building2, Calendar, Globe, Landmark, TrendingUp, FileBarChart, ChevronDown } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Navigation() {
@@ -18,9 +18,14 @@ export default function Navigation() {
     { href: "/", label: { ar: "الرئيسية", en: "Home" }, icon: Home },
     { href: "/story", label: { ar: "القصة الكاملة", en: "Full Story" }, icon: FileText },
     { href: "/economic-crisis", label: { ar: "الأزمة الاقتصادية", en: "Economic Crisis" }, icon: BarChart3 },
-    { href: "/currency-war", label: { ar: "حرب العملة", en: "Currency War" }, icon: BarChart3 },
+    { href: "/currency-war", label: { ar: "حرب العملة", en: "Currency War" }, icon: TrendingUp },
     { href: "/cities", label: { ar: "المدن الرئيسية", en: "Main Cities" }, icon: Building2 },
     { href: "/events", label: { ar: "الأحداث", en: "Events" }, icon: Calendar },
+    { href: "/cby-aden", label: { ar: "البنك المركزي - عدن", en: "CBY-Aden" }, icon: Landmark },
+    { href: "/cby-sanaa", label: { ar: "البنك المركزي - صنعاء", en: "CBY-Sana'a" }, icon: Landmark },
+    { href: "/microfinance", label: { ar: "التمويل الأصغر", en: "Microfinance" }, icon: TrendingUp },
+    { href: "/banks", label: { ar: "البنوك التجارية", en: "Banks" }, icon: Building2 },
+    { href: "/reports", label: { ar: "التقارير الدولية", en: "Reports" }, icon: FileBarChart },
     { href: "/analytics", label: { ar: "لوحة التحليلات", en: "Analytics" }, icon: BarChart3 },
     { href: "/research", label: { ar: "مكتبة الأبحاث", en: "Research" }, icon: Building2 },
     { href: "/about", label: { ar: "من نحن", en: "About" }, icon: Info },

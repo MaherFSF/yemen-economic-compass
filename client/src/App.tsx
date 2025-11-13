@@ -21,6 +21,11 @@ import EconomicCrisis from "./pages/EconomicCrisis";
 import CurrencyWar from "./pages/CurrencyWar";
 import EventsTimeline from "./pages/EventsTimeline";
 import MainCities from "./pages/MainCities";
+import InternationalReports from "./pages/InternationalReports";
+import MicrofinanceObservatory from "./pages/MicrofinanceObservatory";
+import CBYAdenTracker from "./pages/CBYAdenTracker";
+import CBYSanaaTracker from "./pages/CBYSanaaTracker";
+import CommercialBanksHub from "./pages/CommercialBanksHub";
 
 function Router() {
   return (
@@ -42,6 +47,11 @@ function Router() {
           <Route path={"/currency-war"} component={CurrencyWar} />
           <Route path={"/events"} component={EventsTimeline} />
           <Route path={"/cities"} component={MainCities} />
+          <Route path={"/reports"} component={InternationalReports} />
+          <Route path={"/microfinance"} component={MicrofinanceObservatory} />
+          <Route path={"/cby-aden"} component={CBYAdenTracker} />
+          <Route path={"/cby-sanaa"} component={CBYSanaaTracker} />
+          <Route path={"/banks"} component={CommercialBanksHub} />
           <Route path={"/404"} component={NotFound} />
           <Route component={NotFound} />
         </Switch>
