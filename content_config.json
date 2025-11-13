@@ -1,0 +1,90 @@
+{
+  "siteTitle": {
+    "en": "Yemen's Shadow Monetary System (2015-2025)",
+    "ar": "النظام المالي الموازي في اليمن (2015-2025)"
+  },
+  "organization": {
+    "name": "CauseWay Foundation",
+    "consultancyArm": "CauseWay Consultancies",
+    "tagline": {
+      "en": "Strategic Economic & Financial Analysis for Yemen",
+      "ar": "تحليل اقتصادي ومالي استراتيجي لليمن"
+    },
+    "author": "Maher F.S. Farea",
+    "description": {
+      "en": "CauseWay Consultancies is a next-generation specialized agency focused exclusively on Yemen's financial and economic landscape. We provide strategic advisory, implementation services, and in-depth analysis to policymakers, researchers, and international organizations.",
+      "ar": "كوزواي للاستشارات هي وكالة متخصصة من الجيل القادم تركز حصرياً على المشهد المالي والاقتصادي اليمني. نقدم الاستشارات الاستراتيجية وخدمات التنفيذ والتحليل المتعمق لصناع السياسات والباحثين والمنظمات الدولية."
+    }
+  },
+  "hero": {
+    "title": {
+      "en": "Ten Years That Rewired How Money Moves",
+      "ar": "عشر سنوات أعادت تشكيل حركة المال"
+    },
+    "subtitle": {
+      "en": "A comprehensive analysis of Yemen's parallel financial systems, currency war, and economic transformation (2015-2025)",
+      "ar": "تحليل شامل للأنظمة المالية الموازية في اليمن، حرب العملة، والتحول الاقتصادي (2015-2025)"
+    }
+  },
+  "keyMetrics": [
+    {
+      "label": {"en": "GDP Contraction", "ar": "انكماش الناتج المحلي"},
+      "value": "~50%",
+      "period": "2015-2025",
+      "trend": "negative"
+    },
+    {
+      "label": {"en": "Poverty Rate", "ar": "معدل الفقر"},
+      "value": "76%",
+      "baseline": "54% (2014)",
+      "trend": "negative"
+    },
+    {
+      "label": {"en": "Exchange Rate (Aden)", "ar": "سعر الصرف (عدن)"},
+      "value": "2,800 YER/USD",
+      "baseline": "215 YER/USD (2014)",
+      "trend": "negative"
+    },
+    {
+      "label": {"en": "Inflation (Aden)", "ar": "التضخم (عدن)"},
+      "value": "35%",
+      "period": "Peak 2025",
+      "trend": "negative"
+    }
+  ],
+  "timeline": {
+    "title": {"en": "Key Events Timeline", "ar": "الخط الزمني للأحداث الرئيسية"},
+    "events": [
+      {
+        "year": 2015,
+        "title": {"en": "War & Blockade", "ar": "الحرب والحصار"},
+        "description": {"en": "Saudi-led coalition intervention; oil/gas production halted; inflation spiked over 100%", "ar": "تدخل التحالف بقيادة السعودية؛ توقف إنتاج النفط والغاز؛ ارتفع التضخم بأكثر من 100%"}
+      },
+      {
+        "year": 2016,
+        "title": {"en": "Central Bank Split", "ar": "انقسام البنك المركزي"},
+        "description": {"en": "CBY headquarters moved from Sana'a to Aden; rial began tumbling", "ar": "نقل مقر البنك المركزي من صنعاء إلى عدن؛ بدأ الريال بالانهيار"}
+      },
+      {
+        "year": 2019,
+        "title": {"en": "Currency War Formalized", "ar": "إضفاء الطابع الرسمي على حرب العملة"},
+        "description": {"en": "Houthis banned Aden-printed notes; introduced e-Rial; two-currency reality cemented", "ar": "حظر الحوثيون الأوراق النقدية المطبوعة في عدن؛ قدموا الريال الإلكتروني؛ ترسيخ واقع عملتين"}
+      },
+      {
+        "year": 2022,
+        "title": {"en": "Oil Blockade Escalation", "ar": "تصعيد حصار النفط"},
+        "description": {"en": "Houthis blockaded IRG oil terminals; conflict migrated to economic warfare", "ar": "حاصر الحوثيون محطات النفط التابعة للحكومة؛ تحول الصراع إلى حرب اقتصادية"}
+      },
+      {
+        "year": 2024,
+        "title": {"en": "Banking Struggle", "ar": "صراع مصرفي"},
+        "description": {"en": "CBY-Aden revoked licenses of Sana'a banks; Houthis retaliated; rial appreciated 40%", "ar": "ألغى البنك المركزي في عدن تراخيص بنوك صنعاء؛ رد الحوثيون بالمثل؛ ارتفع الريال بنسبة 40%"}
+      },
+      {
+        "year": 2025,
+        "title": {"en": "Stabilization & Stalemate", "ar": "الاستقرار والجمود"},
+        "description": {"en": "Southern rial stabilized at ~1,700 YER/USD; Yemen remains divided financially", "ar": "استقر الريال الجنوبي عند ~1,700 ريال/دولار؛ اليمن لا يزال منقسماً مالياً"}
+      }
+    ]
+  }
+}

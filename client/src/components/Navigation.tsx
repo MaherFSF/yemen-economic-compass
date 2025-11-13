@@ -1,20 +1,27 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Menu, X, FileText, BarChart3, Info, Home, Building2, Calendar } from "lucide-react";
-
-const navItems = [
-  { href: "/", label: "الرئيسية", icon: Home },
-  { href: "/overview", label: "نظرة عامة", icon: FileText },
-  { href: "/charts", label: "الرسوم البيانية", icon: BarChart3 },
-  { href: "/fmi-project", label: "مشروع البنية المالية", icon: Building2 },
-  { href: "/timeline", label: "الخط الزمني", icon: Calendar },
-  { href: "/about", label: "من نحن", icon: Info },
-];
+import { Menu, X, FileText, BarChart3, Info, Home, Building2, Calendar, Globe } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Navigation() {
   const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { language, setLanguage } = useLanguage();
+  const isArabic = language === 'ar';
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'ar' ? 'en' : 'ar');
+  };
+
+  const navItems = [
+    { href: "/", label: { ar: "الرئيسية", en: "Home" }, icon: Home },
+    { href: "/story", label: { ar: "القصة الكاملة", en: "Full Story" }, icon: FileText },
+    { href: "/dashboard", label: { ar: "لوحة التحكم", en: "Dashboard" }, icon: BarChart3 },
+    { href: "/charts", label: { ar: "الرسوم البيانية", en: "Charts" }, icon: BarChart3 },
+    { href: "/timeline", label: { ar: "الخط الزمني", en: "Timeline" }, icon: Calendar },
+    { href: "/about", label: { ar: "من نحن", en: "About" }, icon: Info },
+  ];
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -22,12 +29,12 @@ export default function Navigation() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
           <div className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">C</span>
-            </div>
+            <img src="/causeway-logo.png" alt="CauseWay" className="h-10 w-auto" />
             <div className="flex flex-col">
-              <span className="font-bold text-lg leading-tight">Causeway</span>
-              <span className="text-xs text-muted-foreground">Consultancies</span>
+              <span className="font-bold text-lg leading-tight">CauseWay</span>
+              <span className="text-xs text-muted-foreground">
+                {isArabic ? "للاستشارات" : "Consultancies"}
+              </span>
             </div>
           </div>
         </Link>
@@ -45,26 +52,45 @@ export default function Navigation() {
                   size="sm"
                 >
                   <Icon className="h-4 w-4" />
-                  {item.label}
+                  {item.label[language]}
                 </Button>
               </Link>
             );
           })}
+          
+          {/* Language Toggle */}
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={toggleLanguage}
+            className="gap-2 ml-2"
+          >
+            <Globe className="h-4 w-4" />
+            {language === 'ar' ? 'EN' : 'عربي'}
+          </Button>
         </div>
 
         {/* Mobile Menu Button */}
-        <Button
-          variant="ghost"
-          size="icon"
-          className="md:hidden"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? (
-            <X className="h-5 w-5" />
-          ) : (
-            <Menu className="h-5 w-5" />
-          )}
-        </Button>
+        <div className="flex md:hidden items-center gap-2">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={toggleLanguage}
+          >
+            <Globe className="h-4 w-4" />
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? (
+              <X className="h-5 w-5" />
+            ) : (
+              <Menu className="h-5 w-5" />
+            )}
+          </Button>
+        </div>
       </div>
 
       {/* Mobile Navigation */}
@@ -82,7 +108,7 @@ export default function Navigation() {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     <Icon className="h-4 w-4" />
-                    {item.label}
+                    {item.label[language]}
                   </Button>
                 </Link>
               );
