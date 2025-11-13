@@ -31,6 +31,9 @@ import FinancialCalculators from "./pages/FinancialCalculators";
 import DataVisualization from "./pages/DataVisualization";
 import StakeholderHub from "./pages/StakeholderHub";
 import SanctionsTracker from "./pages/SanctionsTracker";
+import ScenarioForecasting from "./pages/ScenarioForecasting";
+import PolicyRecommendations from "./pages/PolicyRecommendations";
+import StatisticalIndicators from "./pages/StatisticalIndicators";
 
 function Router() {
   return (
@@ -62,6 +65,9 @@ function Router() {
           <Route path={"/data-viz"} component={DataVisualization} />
           <Route path={"/stakeholders"} component={StakeholderHub} />
           <Route path={"/sanctions"} component={SanctionsTracker} />
+          <Route path={"/forecasting"} component={ScenarioForecasting} />
+          <Route path={"/policy"} component={PolicyRecommendations} />
+          <Route path={"/indicators"} component={StatisticalIndicators} />
           <Route path={"/404"} component={NotFound} />
           <Route component={NotFound} />
         </Switch>
