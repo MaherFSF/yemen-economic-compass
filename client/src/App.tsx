@@ -17,6 +17,10 @@ import ResearchLibrary from "./pages/ResearchLibrary";
 import AnalyticsDashboard from "./pages/AnalyticsDashboard";
 import Timeline from "./pages/Timeline";
 import About from "./pages/About";
+import EconomicCrisis from "./pages/EconomicCrisis";
+import CurrencyWar from "./pages/CurrencyWar";
+import EventsTimeline from "./pages/EventsTimeline";
+import MainCities from "./pages/MainCities";
 
 function Router() {
   return (
@@ -29,11 +33,15 @@ function Router() {
           <Route path={"/overview"} component={Overview} />
           <Route path={"/charts"} component={Charts} />
           <Route path={"/story"} component={StoryPage} />
-           <Route path="/timeline" component={Timeline} />
+          <Route path="/timeline" component={Timeline} />
           <Route path="/research" component={ResearchLibrary} />
           <Route path="/analytics" component={AnalyticsDashboard} />
           <Route path={"/dashboard"} component={Timeline} />
           <Route path={"/about"} component={About} />
+          <Route path={"/economic-crisis"} component={EconomicCrisis} />
+          <Route path={"/currency-war"} component={CurrencyWar} />
+          <Route path={"/events"} component={EventsTimeline} />
+          <Route path={"/cities"} component={MainCities} />
           <Route path={"/404"} component={NotFound} />
           <Route component={NotFound} />
         </Switch>

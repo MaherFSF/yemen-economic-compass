@@ -17,9 +17,11 @@ export default function Navigation() {
   const navItems = [
     { href: "/", label: { ar: "الرئيسية", en: "Home" }, icon: Home },
     { href: "/story", label: { ar: "القصة الكاملة", en: "Full Story" }, icon: FileText },
+    { href: "/economic-crisis", label: { ar: "الأزمة الاقتصادية", en: "Economic Crisis" }, icon: BarChart3 },
+    { href: "/currency-war", label: { ar: "حرب العملة", en: "Currency War" }, icon: BarChart3 },
+    { href: "/cities", label: { ar: "المدن الرئيسية", en: "Main Cities" }, icon: Building2 },
+    { href: "/events", label: { ar: "الأحداث", en: "Events" }, icon: Calendar },
     { href: "/analytics", label: { ar: "لوحة التحليلات", en: "Analytics" }, icon: BarChart3 },
-    { href: "/charts", label: { ar: "الرسوم البيانية", en: "Charts" }, icon: BarChart3 },
-    { href: "/timeline", label: { ar: "الخط الزمني", en: "Timeline" }, icon: Calendar },
     { href: "/research", label: { ar: "مكتبة الأبحاث", en: "Research" }, icon: Building2 },
     { href: "/about", label: { ar: "من نحن", en: "About" }, icon: Info },
   ];

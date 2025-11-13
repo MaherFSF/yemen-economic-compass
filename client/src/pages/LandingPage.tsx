@@ -211,8 +211,118 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* CauseWay Section */}
+      {/* Deep Dive Sections */}
       <section className="py-20 bg-gradient-to-b from-accent/5 to-background">
+        <div className="container max-w-6xl">
+          <div className="text-center mb-16">
+            <Badge variant="outline" className="mb-4">
+              {isArabic ? "تحليلات معمقة" : "Deep Dive Analysis"}
+            </Badge>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              {isArabic ? "استكشف المواضيع الرئيسية" : "Explore Key Topics"}
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              {isArabic
+                ? "تحليلات شاملة للأزمة الاقتصادية، حرب العملة، المدن الرئيسية، والأحداث الرئيسية"
+                : "Comprehensive analysis of the economic crisis, currency war, major cities, and key events"
+              }
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            <Link href="/economic-crisis">
+              <Card className="border-2 hover:shadow-xl transition-all hover:border-red-500 cursor-pointer h-full">
+                <CardContent className="p-8">
+                  <div className="w-12 h-12 bg-red-500/10 rounded-lg flex items-center justify-center mb-4">
+                    <TrendingDown className="h-6 w-6 text-red-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3">
+                    {isArabic ? "الأزمة الاقتصادية" : "Economic Crisis"}
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    {isArabic
+                      ? "عقد من التشظي النقدي والحرب الاقتصادية: قراءة إستراتيجية في إعادة تشكيل المركز المالي لليمن"
+                      : "A decade of monetary fragmentation and economic warfare: strategic analysis of Yemen's financial restructuring"
+                    }
+                  </p>
+                  <Badge variant="outline" className="text-red-600 border-red-600">
+                    {isArabic ? "قراءة معمقة" : "In-Depth Read"}
+                  </Badge>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link href="/currency-war">
+              <Card className="border-2 hover:shadow-xl transition-all hover:border-purple-500 cursor-pointer h-full">
+                <CardContent className="p-8">
+                  <div className="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-4">
+                    <DollarSign className="h-6 w-6 text-purple-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3">
+                    {isArabic ? "حرب العملة" : "Currency War"}
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    {isArabic
+                      ? "كيف تحول البنك المركزي الواحد إلى نظامين ماليين متنافسين يستخدمان العملة كسلاح"
+                      : "How one central bank became two competing financial systems using currency as a weapon"
+                    }
+                  </p>
+                  <Badge variant="outline" className="text-purple-600 border-purple-600">
+                    {isArabic ? "نظام مزدوج" : "Dual System"}
+                  </Badge>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link href="/cities">
+              <Card className="border-2 hover:shadow-xl transition-all hover:border-teal-500 cursor-pointer h-full">
+                <CardContent className="p-8">
+                  <div className="w-12 h-12 bg-teal-500/10 rounded-lg flex items-center justify-center mb-4">
+                    <Users className="h-6 w-6 text-teal-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3">
+                    {isArabic ? "المدن الرئيسية" : "Main Cities"}
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    {isArabic
+                      ? "تحليل معمق للوضع الاقتصادي والاجتماعي في 6 مدن يمنية رئيسية"
+                      : "In-depth analysis of economic and social conditions in 6 major Yemeni cities"
+                    }
+                  </p>
+                  <Badge variant="outline" className="text-teal-600 border-teal-600">
+                    {isArabic ? "تحليل جغرافي" : "Geographic Analysis"}
+                  </Badge>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link href="/events">
+              <Card className="border-2 hover:shadow-xl transition-all hover:border-blue-500 cursor-pointer h-full">
+                <CardContent className="p-8">
+                  <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-4">
+                    <BarChart3 className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3">
+                    {isArabic ? "الأحداث والتحليلات" : "Events & Analytics"}
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    {isArabic
+                      ? "خط زمني تفاعلي لـ 19 حدثاً رئيسياً مع نظام تصفية متقدم"
+                      : "Interactive timeline of 19 major events with advanced filtering system"
+                    }
+                  </p>
+                  <Badge variant="outline" className="text-blue-600 border-blue-600">
+                    {isArabic ? "تفاعلي" : "Interactive"}
+                  </Badge>
+                </CardContent>
+              </Card>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CauseWay Section */}
+      <section className="py-20 bg-gradient-to-b from-background to-accent/5">
         <div className="container max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>

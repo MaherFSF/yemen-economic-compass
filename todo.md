@@ -1,104 +1,125 @@
-# إعادة بناء موقع CauseWay Foundation - المستوى الاحترافي الاستثنائي
+# CauseWay Financial & Economic Observatory - Complete Rebuild Plan
 
-## المرحلة 1: القراءة والتحليل
-- [x] قراءة Yemenfinancial(10).txt بالكامل
-- [x] قراءة Pasted_content_80.txt (النسخة الإنجليزية)
-- [x] قراءة Pasted_content_81.txt (النسخة العربية)
-- [x] تحليل هيكل CauseWay Foundation من IMG_8870.png
-- [ ] استخراج جميع البيانات والمعلومات الدقيقة
-- [ ] التحقق من المصادر الإقليمية للبيانات
+## Phase 1: Content Analysis & Structure Design
+- [x] Read and extract all content from Yemenfinancial(11).txt
+- [x] Read and extract all content from Pasted_content_80.txt (English narrative)
+- [x] Read and extract all content from Pasted_content_81.txt (Arabic narrative)
+- [x] Study design references from IMG_9283-9299 screenshots
+- [x] Map out complete site structure with all sub-pages
+- [x] Design navigation system for deep content access
 
-## المرحلة 2: تصميم البنية
-- [ ] تصميم صفحة هبوط فريدة ومذهلة
-- [ ] تصميم صفحة السرد القصصي الكامل
-- [ ] تصميم لوحة تحكم تفاعلية للباحثين وصناع السياسات
-- [ ] تصميم نظام ثنائي اللغة (عربي/إنجليزي)
-- [ ] تصميم علامة CauseWay Foundation التجارية الكاملة
-- [ ] اختيار صور أصلية عالية الجودة من مصادر موثوقة
+## Phase 2: Branding & Identity Update
+- [ ] Change main title to "CauseWay Financial & Economic Observatory" via Management Dashboard
+- [ ] Update APP_LOGO in const.ts
+- [ ] Ensure professional think-tank positioning
+- [ ] Update meta tags and page titles
 
-## المرحلة 3: بناء صفحة الهبوط
-- [ ] إنشاء hero section مذهل
-- [ ] إضافة مؤشرات اقتصادية رئيسية
-- [ ] إضافة navigation احترافي
-- [ ] إضافة call-to-action واضح
-- [ ] تحسين تجربة المستخدم
+## Phase 3: Core Pages Rebuild
+- [x] Landing Page: Rich hero section with key metrics + Deep Dive section
+- [x] Economic Crisis Page: Deep dive into financial system collapse (2015-2025 timeline)
+- [x] Currency War Page: Detailed analysis of dual banking system
+- [x] Main Cities Page: 6 cities with detailed statistics and interactive selection
+- [x] Events Timeline Page: Interactive timeline with 19 events and advanced filtering
+- [x] Navigation: Updated with all new pages
+- [ ] Overview Page: Complete narrative from Pasted_content files
+- [ ] Analytics Dashboard: Enhanced data explorer with filters
+- [ ] Timeline Page: Upgrade existing timeline
 
-## المرحلة 4: بناء صفحة السرد القصصي
-- [ ] استخدام النص الكامل من الملفات المرفقة بدقة
-- [ ] تقسيم السرد إلى أقسام منطقية
-- [ ] إضافة صور أصلية لكل قسم
-- [ ] إضافة timeline تفاعلي
-- [ ] إضافة اقتباسات ونقاط رئيسية
+## Phase 4: Sub-Pages & Deep Dives (Next Priority)
+- [ ] Oil & Gas Page: Analysis of petroleum sector collapse
+- [ ] Aid & Donors Page: International assistance flows
+- [ ] Inflation & Living Costs Page: Food, fuel, and daily economics
+- [ ] Institutional Collapse Page: Governance breakdown analysis
+- [ ] Emerging Sectors Page: Digital finance, microfinance, remittances
+- [ ] Stakeholder Pages: IRG/PLC, Houthis, Saudi Arabia, UAE, STC, Iran
+- [ ] City-specific deep-dive sub-pages for each of the 6 cities
 
-## المرحلة 5: بناء لوحة التحكم التفاعلية
-- [ ] إنشاء dashboard للباحثين
-- [ ] إضافة مرشحات تفاعلية للبيانات
-- [ ] إضافة إمكانية تصدير البيانات
-- [ ] إضافة مقارنات بين المناطق
-- [ ] إضافة تحليلات متقدمة
+## Phase 5: Interactive Features (from screenshots)
+- [x] Event Timeline with multi-category filters (military, economic, political, diplomatic, humanitarian)
+- [x] Year selector (2014-2025) for event filtering
+- [x] Severity level filtering (critical, high, medium, low)
+- [x] Search functionality in events
+- [x] City cards with key metrics
+- [ ] Analytics Dashboard enhancements:
+  - [ ] Total events counter with breakdown
+  - [ ] Category breakdown with percentages
+  - [ ] Actor/stakeholder analysis
+  - [ ] Geographic distribution map
+  - [ ] Impact assessment metrics
+- [ ] Advanced search across all content
 
-## المرحلة 6: التصورات التفاعلية
-- [ ] إنشاء رسوم بيانية تفاعلية (interactive charts)
-- [ ] إضافة خرائط تفاعلية
-- [ ] إضافة infographics متحركة
-- [ ] إضافة data visualizations فريدة
+## Phase 6: Data Visualizations
+- [ ] Interactive charts for economic indicators
+- [ ] Exchange rate comparison charts (Sana'a vs Aden)
+- [ ] Inflation trends visualization
+- [ ] Oil production and exports timeline
+- [ ] Aid flows visualization
+- [ ] Stakeholder power map
+- [ ] Geographic control map
 
-## المرحلة 7: المراجعة النهائية
-- [ ] مراجعة من منظور مصمم أول
-- [ ] مراجعة من منظور محلل أبحاث أول
-- [ ] التحقق من دقة جميع البيانات
-- [ ] التحقق من عمل جميع الميزات
-- [ ] اختبار تجربة المستخدم الكاملة
-- [ ] التأكد من responsive design
-- [x] حفظ النسخة النهائية
+## Phase 7: Content Population (In Progress)
+- [x] Create detailed event database (19 major events)
+- [x] Build city data structure (6 cities)
+- [x] Economic Crisis chronology (2015-2025)
+- [x] Currency War narrative
+- [ ] Extract complete stakeholder profiles from Pasted_content_80.txt
+- [ ] Build comprehensive economic data points
+- [ ] Include all citations and sources
+- [ ] Add institutional analysis content
+- [ ] Populate all narratives from uploaded files
 
-## تحديثات جديدة
-- [x] إصلاح الخط الزمني ليكون ثنائي اللغة كاملاً
-- [x] تحديث معلومات ماهر فيصل سعيد في صفحة About
-- [x] إخفاء البريد الإلكتروني (Mahir231@gmail.com)
-- [x] التأكد من عمل النسختين العربية والإنجليزية بشكل كامل
+## Phase 8: Bilingual Implementation
+- [x] All new pages work in Arabic and English
+- [x] Translate all new interface elements
+- [x] Language toggle works on all pages
+- [x] Arabic text rendering verified
+- [x] RTL layout on all new components
 
-## تحسينات الصفحة الرئيسية
-- [x] إزالة صورة CauseWay Foundation diagram
-- [x] تحسين صورة الخلفية للصفحة الرئيسية
-- [x] تحسين تصميم الصفحة الرئيسية ليكون أكثر احترافية
-- [x] حفظ النسخة المحدثة
+## Phase 9: Navigation & UX
+- [x] Comprehensive navigation menu implemented
+- [x] Mobile menu with all pages
+- [ ] Add breadcrumbs for deep pages
+- [ ] Create sidebar navigation for long-form content
+- [ ] Add "Related Content" sections
+- [ ] Implement smooth scrolling and anchor links
+- [ ] Add "Back to Top" functionality
+- [x] Mobile responsiveness for all new pages
 
-## مكتبة الأبحاث والمنشورات
-- [x] إنشاء صفحة مكتبة أبحاث شاملة
-- [x] جمع أقوى المنشورات من مؤسسات موثوقة (18 منشوراً)
-- [x] تصميم نظام تصفية متقدم (حسب المؤسسة، السنة، الموضوع، اللغة)
-- [x] إنشاء تصورات فريدة للمنشورات
-- [x] ضمان التنوع من مختلف الجهات
-- [ ] اختبار شامل لجميع أجزاء الموقع
-- [ ] التأكد من عمل النسختين العربية والإنجليزية بالكامل
-- [x] مراجعة نهائية لتجربة المستخدم
-- [x] حفظ النسخة النهائية الكاملة
+## Phase 10: Testing & Quality Assurance
+- [x] Test interactive filters on Events page
+- [x] Test navigation flow
+- [x] Check mobile responsiveness
+- [x] Test language toggle on all pages
+- [ ] Verify all data accuracy against source files
+- [ ] Test search functionality
+- [ ] Performance optimization
 
-## إصلاحات فنية ووظيفية
-- [x] إصلاح وظيفة تحميل الرسوم البيانية
-- [x] اختبار جميع الروابط والتنقل
-- [x] اختبار النسخة العربية بالكامل
-- [x] اختبار النسخة الإنجليزية بالكامل
-- [ ] اختبار الاستجابة على الأجهزة المحمولة
-- [ ] مراجعة الأداء وسرعة التحميل
+## Phase 11: Final Touches
+- [ ] Add loading states for interactive elements
+- [ ] Implement smooth transitions
+- [ ] Add tooltips for complex data
+- [ ] Ensure accessibility standards
+- [ ] Add print-friendly styles
+- [ ] Optimize images and assets
 
-## لوحة التحليلات التفاعلية
-- [x] إنشاء صفحة لوحة تحليلات تفاعلية
-- [x] أدوات تحليل للباحثين وصناع السياسات
-- [x] رسوم بيانية تفاعلية قابلة للتخصيص
-- [x] إمكانية تصدير البيانات (CSV, JSON)
-- [x] مقارنات بين السنوات والمناطق
-- [x] حاسبات اقتصادية تفاعلية
-- [x] تصورات بيانية فريدة ومبتكرة
+## Phase 12: Deployment
+- [ ] Final comprehensive review
+- [ ] Save checkpoint with complete description
+- [ ] Deliver to user with full documentation
 
-## المراجعة النهائية
-- [x] مراجعة شاملة لجميع الصفحات
-- [x] التأكد من عدم وجود روابط مكسورة
-- [ ] التأكد من جودة جميع الصور
-- [ ] مراجعة النصوص للتأكد من الدقة
-- [x] حفظ النسخة النهائية الكاملة
+---
 
-## تحديث جديد
-- [x] إزالة صورة CauseWay Foundation diagram من الصفحة الرئيسية
-- [x] حفظ النسخة المحدثة
+## Completed in Previous Iterations
+- [x] Initial project setup
+- [x] Basic landing page
+- [x] Story page
+- [x] Charts page
+- [x] Timeline page (basic)
+- [x] Research library
+- [x] Analytics dashboard (basic)
+- [x] About page
+- [x] Footer
+- [x] Language context
+- [x] Theme context
+- [x] Navigation component
+- [x] Remove CauseWay Foundation diagram from landing page
