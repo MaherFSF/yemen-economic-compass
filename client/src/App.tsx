@@ -7,6 +7,8 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import FMIProject from "./pages/FMIProject";
+import Timeline from "./pages/Timeline";
 import Overview from "./pages/Overview";
 import Charts from "./pages/Charts";
 import About from "./pages/About";
@@ -20,6 +22,8 @@ function Router() {
           <Route path={"/"} component={Home} />
           <Route path={"/overview"} component={Overview} />
           <Route path={"/charts"} component={Charts} />
+          <Route path={"/fmi-project"} component={FMIProject} />
+          <Route path={"/timeline"} component={Timeline} />
           <Route path={"/about"} component={About} />
           <Route path={"/404"} component={NotFound} />
           {/* Final fallback route */}

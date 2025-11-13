@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Menu, X, FileText, BarChart3, Info, Home } from "lucide-react";
+import { Menu, X, FileText, BarChart3, Info, Home, Building2, Calendar } from "lucide-react";
 
 const navItems = [
   { href: "/", label: "الرئيسية", icon: Home },
   { href: "/overview", label: "نظرة عامة", icon: FileText },
   { href: "/charts", label: "الرسوم البيانية", icon: BarChart3 },
+  { href: "/fmi-project", label: "مشروع البنية المالية", icon: Building2 },
+  { href: "/timeline", label: "الخط الزمني", icon: Calendar },
   { href: "/about", label: "من نحن", icon: Info },
 ];
 
@@ -40,6 +42,7 @@ export default function Navigation() {
                 <Button
                   variant={isActive ? "default" : "ghost"}
                   className="gap-2"
+                  size="sm"
                 >
                   <Icon className="h-4 w-4" />
                   {item.label}

@@ -1,32 +1,44 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, BarChart3, TrendingDown, Users, DollarSign, AlertTriangle, FileText } from "lucide-react";
+import { ArrowLeft, BarChart3, TrendingDown, Users, DollarSign, AlertTriangle, FileText, Building2, Calendar } from "lucide-react";
 import { Link } from "wouter";
+import EconomicIndicators from "@/components/EconomicIndicators";
 
 export default function Home() {
   return (
     <div className="w-full">
-      {/* Hero Section */}
-      <section className="relative w-full bg-gradient-to-br from-primary/10 via-accent/5 to-background py-20 md:py-32">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgwLDAsMCwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-40"></div>
+      {/* Hero Section with Background Image */}
+      <section className="relative w-full h-[600px] overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url(/PDd5RatgbS8f.jpg)',
+            filter: 'brightness(0.4)'
+          }}
+        ></div>
         
-        <div className="container relative">
-          <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in">
-            <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-4">
-              <span className="text-sm font-medium text-primary">تقرير Causeway Consultancies 2025</span>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
+        
+        {/* Content */}
+        <div className="container relative h-full flex items-center">
+          <div className="max-w-4xl space-y-6 text-white">
+            <div className="inline-block px-4 py-2 bg-primary/90 rounded-full mb-4">
+              <span className="text-sm font-medium">Causeway Consultancies Report 2025</span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
               النظام المالي الموازي في اليمن
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
               تحليل استراتيجي شامل للتحول الهيكلي في النظام المالي اليمني
               <br />
-              <span className="text-lg">(2015-2025)</span>
+              <span className="text-lg text-gray-300">(2015-2025)</span>
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+            <div className="flex flex-col sm:flex-row gap-4 pt-6">
               <Link href="/overview">
                 <Button size="lg" className="gap-2 text-lg px-8">
                   استكشف التقرير
@@ -34,7 +46,7 @@ export default function Home() {
                 </Button>
               </Link>
               <Link href="/charts">
-                <Button size="lg" variant="outline" className="gap-2 text-lg px-8">
+                <Button size="lg" variant="outline" className="gap-2 text-lg px-8 bg-white/10 hover:bg-white/20 text-white border-white/30">
                   <BarChart3 className="h-5 w-5" />
                   الرسوم البيانية
                 </Button>
@@ -44,188 +56,248 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Key Findings Section */}
+      {/* Main Content with Sidebar */}
       <section className="w-full py-16 md:py-24 bg-background">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">النتائج الرئيسية</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              أبرز الاستنتاجات من تحليلنا الشامل للنظام المالي اليمني
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Finding 1 */}
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-destructive/10 flex items-center justify-center mb-4">
-                  <TrendingDown className="h-6 w-6 text-destructive" />
-                </div>
-                <CardTitle className="text-xl">ارتفاع معدل الفقر</CardTitle>
-                <CardDescription>تدهور الأوضاع المعيشية</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  ارتفع معدل الفقر من <span className="font-bold text-foreground">54%</span> في 2014 إلى 
-                  <span className="font-bold text-foreground"> 76%</span> في 2025، مما يعكس التدهور الحاد في الأوضاع المعيشية.
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Main Content */}
+            <div className="lg:col-span-2 space-y-12">
+              {/* Executive Summary */}
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">النتائج الرئيسية</h2>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                  أبرز الاستنتاجات من تحليلنا الشامل للنظام المالي اليمني
                 </p>
-              </CardContent>
-            </Card>
+              </div>
 
-            {/* Finding 2 */}
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <DollarSign className="h-6 w-6 text-primary" />
-                </div>
-                <CardTitle className="text-xl">انهيار العملة</CardTitle>
-                <CardDescription>تباعد سعر الصرف</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  وصل سعر الصرف في عدن إلى <span className="font-bold text-foreground">2,800 ريال/دولار</span> مقابل 
-                  <span className="font-bold text-foreground"> 650 ريال/دولار</span> في صنعاء، مما خلق نظامين عملة منفصلين.
-                </p>
-              </CardContent>
-            </Card>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Card className="border-l-4 border-l-red-500 hover:shadow-lg transition-shadow">
+                  <CardHeader>
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="h-12 w-12 rounded-lg bg-red-100 flex items-center justify-center">
+                        <TrendingDown className="h-6 w-6 text-red-600" />
+                      </div>
+                      <CardTitle className="text-xl">نمو التمويل الأصغر</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-3">
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm text-muted-foreground">المقترضون النشطون</span>
+                        <span className="font-bold text-lg">260,000 ← 25,000</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm text-muted-foreground">المودعون النشطون</span>
+                        <span className="font-bold text-lg">420,000 ← 30,000</span>
+                      </div>
+                      <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
+                        نمو استثنائي بنسبة 940% في قطاع التمويل الأصغر كبديل للنظام المصرفي التقليدي المنهار
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
 
-            {/* Finding 3 */}
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-accent" />
-                </div>
-                <CardTitle className="text-xl">نمو التمويل الأصغر</CardTitle>
-                <CardDescription>بديل للنظام المصرفي</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  نمو عملاء التمويل الأصغر من <span className="font-bold text-foreground">25,000</span> إلى 
-                  <span className="font-bold text-foreground"> 260,000</span> مقترض، كبديل للنظام المصرفي المنهار.
-                </p>
-              </CardContent>
-            </Card>
+                <Card className="border-l-4 border-l-orange-500 hover:shadow-lg transition-shadow">
+                  <CardHeader>
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="h-12 w-12 rounded-lg bg-orange-100 flex items-center justify-center">
+                        <DollarSign className="h-6 w-6 text-orange-600" />
+                      </div>
+                      <CardTitle className="text-xl">انفجار العملة</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-3">
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm text-muted-foreground">عدن (2014 → 2025)</span>
+                        <span className="font-bold text-lg text-orange-600">215 → 2,800 ريال/دولار</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm text-muted-foreground">صنعاء (استقرار نسبي)</span>
+                        <span className="font-bold text-lg">650 ريال/دولار</span>
+                      </div>
+                      <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
+                        تباعد بنسبة 330% بين سعر الصرف في المنطقتين يعكس السياسات النقدية المتضاربة
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
 
-            {/* Finding 4 */}
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-chart-2/10 flex items-center justify-center mb-4">
-                  <BarChart3 className="h-6 w-6 text-chart-2" />
-                </div>
-                <CardTitle className="text-xl">الدفع الرقمي</CardTitle>
-                <CardDescription>قفزة تكنولوجية</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  ارتفع استخدام الدفع الرقمي للشركات من <span className="font-bold text-foreground">8%</span> إلى 
-                  <span className="font-bold text-foreground"> 35%</span> بعد جائحة كوفيد-19.
-                </p>
-              </CardContent>
-            </Card>
+                <Card className="border-l-4 border-l-blue-500 hover:shadow-lg transition-shadow">
+                  <CardHeader>
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="h-12 w-12 rounded-lg bg-blue-100 flex items-center justify-center">
+                        <Users className="h-6 w-6 text-blue-600" />
+                      </div>
+                      <CardTitle className="text-xl">ارتفاع معدل الفقر</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-3">
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm text-muted-foreground">معدل الفقر (2014 → 2025)</span>
+                        <span className="font-bold text-lg text-blue-600">54% → 76%</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm text-muted-foreground">يحتاجون مساعدة</span>
+                        <span className="font-bold text-lg">21.6 مليون</span>
+                      </div>
+                      <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
+                        تدهور اقتصادي حاد أدى إلى أزمة إنسانية غير مسبوقة تؤثر على ثلاثة أرباع السكان
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
 
-            {/* Finding 5 */}
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-warning/10 flex items-center justify-center mb-4">
-                  <AlertTriangle className="h-6 w-6 text-warning" />
-                </div>
-                <CardTitle className="text-xl">فجوة تمويل المناخ</CardTitle>
-                <CardDescription>نقص حاد في التمويل</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  يحتاج اليمن <span className="font-bold text-foreground">50 دولار للفرد</span> لتمويل المناخ، لكن يستلم فقط 
-                  <span className="font-bold text-foreground"> 2 دولار للفرد</span>.
-                </p>
-              </CardContent>
-            </Card>
+                <Card className="border-l-4 border-l-green-500 hover:shadow-lg transition-shadow">
+                  <CardHeader>
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="h-12 w-12 rounded-lg bg-green-100 flex items-center justify-center">
+                        <AlertTriangle className="h-6 w-6 text-green-600" />
+                      </div>
+                      <CardTitle className="text-xl">فجوة تمويل المناخ</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-3">
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm text-muted-foreground">الاحتياج السنوي</span>
+                        <span className="font-bold text-lg">800 مليون دولار</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm text-muted-foreground">التمويل الفعلي</span>
+                        <span className="font-bold text-lg text-green-600">60 مليون دولار</span>
+                      </div>
+                      <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
+                        فجوة تمويلية بنسبة 92.5% تعيق جهود التكيف مع التغير المناخي في بلد شديد الهشاشة
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
 
-            {/* Finding 6 */}
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-chart-4/10 flex items-center justify-center mb-4">
-                  <FileText className="h-6 w-6 text-chart-4" />
+              {/* Interactive Charts Preview */}
+              <div className="mt-12">
+                <h3 className="text-2xl font-bold mb-6 text-center">الرسوم البيانية التفاعلية</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="relative group cursor-pointer">
+                    <Link href="/charts">
+                      <div className="overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
+                        <img 
+                          src="/charts/chart_01_poverty_inflation.png" 
+                          alt="اتجاهات الفقر والتضخم"
+                          className="w-full h-auto group-hover:scale-105 transition-transform"
+                        />
+                      </div>
+                      <p className="text-center mt-2 text-sm font-medium">اتجاهات الفقر والتضخم</p>
+                    </Link>
+                  </div>
+                  <div className="relative group cursor-pointer">
+                    <Link href="/charts">
+                      <div className="overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
+                        <img 
+                          src="/charts/chart_02_exchange_rate.png" 
+                          alt="تباعد سعر الصرف"
+                          className="w-full h-auto group-hover:scale-105 transition-transform"
+                        />
+                      </div>
+                      <p className="text-center mt-2 text-sm font-medium">تباعد سعر الصرف</p>
+                    </Link>
+                  </div>
                 </div>
-                <CardTitle className="text-xl">تحول المساعدات</CardTitle>
-                <CardDescription>من إنسانية إلى تنموية</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  تحولت المساعدات من <span className="font-bold text-foreground">80% إنسانية</span> في 2015 إلى 
-                  <span className="font-bold text-foreground"> 30% تنموية</span> في 2025.
-                </p>
-              </CardContent>
-            </Card>
+                <div className="text-center mt-6">
+                  <Link href="/charts">
+                    <Button variant="outline" size="lg" className="gap-2">
+                      عرض جميع الرسوم البيانية (12)
+                      <ArrowLeft className="h-4 w-4" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Sidebar - Economic Indicators */}
+            <div className="lg:col-span-1">
+              <div className="sticky top-20">
+                <EconomicIndicators />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Data Visualizations Preview */}
-      <section className="w-full py-16 md:py-24 bg-muted/30">
+      {/* Featured Content */}
+      <section className="w-full py-16 bg-gradient-to-br from-primary/5 to-accent/10">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">الرسوم البيانية التفاعلية</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              12 رسماً بيانياً عالي الجودة يوضح التحولات الرئيسية في النظام المالي اليمني
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Chart Preview 1 */}
-            <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                <img 
-                  src="/chart_01_poverty_inflation.png" 
-                  alt="اتجاهات الفقر والتضخم"
-                  className="w-full h-full object-contain p-4"
-                />
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="hover:shadow-xl transition-shadow border-2">
               <CardHeader>
-                <CardTitle className="text-lg">اتجاهات الفقر والتضخم</CardTitle>
-                <CardDescription>تطور المؤشرات الاقتصادية 2014-2025</CardDescription>
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <Building2 className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-xl">مشروع البنية التحتية المالية</CardTitle>
+                    <CardDescription>World Bank - $20 Million</CardDescription>
+                  </div>
+                </div>
               </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  مبادرة تحويلية بقيمة 20 مليون دولار لإعادة بناء البنية التحتية للمدفوعات في اليمن 
+                  وتوسيع الشمول المالي في ظل الانقسام المستمر
+                </p>
+                <Link href="/fmi-project">
+                  <Button className="w-full gap-2">
+                    اقرأ المزيد
+                    <ArrowLeft className="h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
             </Card>
 
-            {/* Chart Preview 2 */}
-            <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="aspect-video bg-gradient-to-br from-accent/10 to-primary/10 flex items-center justify-center">
-                <img 
-                  src="/chart_02_exchange_rate.png" 
-                  alt="تباعد سعر الصرف"
-                  className="w-full h-full object-contain p-4"
-                />
-              </div>
+            <Card className="hover:shadow-xl transition-shadow border-2">
               <CardHeader>
-                <CardTitle className="text-lg">تباعد سعر الصرف</CardTitle>
-                <CardDescription>عدن مقابل صنعاء 2014-2025</CardDescription>
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <Calendar className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-xl">الخط الزمني التفاعلي</CardTitle>
+                    <CardDescription>2014 - 2025</CardDescription>
+                  </div>
+                </div>
               </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  عقد من الصراع والانهيار الاقتصادي والكارثة الإنسانية: تتبع الأحداث الرئيسية 
+                  التي أعادت تشكيل المشهد المالي والسياسي في اليمن
+                </p>
+                <Link href="/timeline">
+                  <Button className="w-full gap-2">
+                    استكشف الخط الزمني
+                    <ArrowLeft className="h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
             </Card>
-          </div>
-
-          <div className="text-center mt-12">
-            <Link href="/charts">
-              <Button size="lg" variant="outline" className="gap-2">
-                عرض جميع الرسوم البيانية (12)
-                <ArrowLeft className="h-5 w-5" />
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="w-full py-16 md:py-24 bg-primary text-primary-foreground">
+      {/* Call to Action */}
+      <section className="w-full py-20 bg-primary text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             اقرأ التقرير الكامل
           </h2>
-          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            تحليل معمق للنظام المالي الموازي في اليمن مع توصيات استراتيجية وسياسات عملية
+          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+            تحليل معمق للنظام المالي الموازي في اليمن، مع توصيات استراتيجية وسياسات عملية
           </p>
           <Link href="/overview">
             <Button size="lg" variant="secondary" className="gap-2 text-lg px-8">
+              <FileText className="h-5 w-5" />
               ابدأ القراءة الآن
-              <ArrowLeft className="h-5 w-5" />
             </Button>
           </Link>
         </div>
