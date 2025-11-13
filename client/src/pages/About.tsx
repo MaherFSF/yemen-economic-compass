@@ -10,15 +10,15 @@ export default function About() {
         <div className="mb-12 text-center">
           <div className="flex items-center justify-center gap-3 mb-6">
             <div className="h-16 w-16 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-3xl">B</span>
+              <span className="text-primary-foreground font-bold text-3xl">C</span>
             </div>
             <div className="text-right">
-              <h1 className="text-4xl font-bold">Benfour</h1>
-              <p className="text-xl text-muted-foreground">Global Think Tank</p>
+              <h1 className="text-4xl font-bold">Causeway Consultancies</h1>
+              <p className="text-xl text-muted-foreground">by Maher F.S. Farea</p>
             </div>
           </div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            مركز أبحاث استراتيجي عالمي متخصص في التحليل الاقتصادي والمالي للمنطقة العربية
+            استشارات متخصصة في التحليل الاقتصادي والمالي والاستراتيجي
           </p>
         </div>
 

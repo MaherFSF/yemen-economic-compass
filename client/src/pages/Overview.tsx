@@ -10,7 +10,7 @@ export default function Overview() {
         {/* Header */}
         <div className="mb-12 text-center">
           <Badge className="mb-4" variant="outline">
-            تقرير Benfour Think Tank - نوفمبر 2025
+            تقرير Causeway Consultancies - نوفمبر 2025
           </Badge>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             النظام المالي الموازي في اليمن

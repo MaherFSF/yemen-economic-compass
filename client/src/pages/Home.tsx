@@ -13,7 +13,7 @@ export default function Home() {
         <div className="container relative">
           <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in">
             <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-4">
-              <span className="text-sm font-medium text-primary">تقرير Benfour Think Tank 2025</span>
+              <span className="text-sm font-medium text-primary">تقرير Causeway Consultancies 2025</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">

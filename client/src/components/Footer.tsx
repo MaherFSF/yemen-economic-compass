@@ -9,15 +9,15 @@ export default function Footer() {
           <div className="space-y-3">
             <div className="flex items-center gap-3">
               <div className="h-10 w-10 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">B</span>
+                <span className="text-primary-foreground font-bold text-xl">C</span>
               </div>
               <div className="flex flex-col">
-                <span className="font-bold text-lg leading-tight">Benfour</span>
-                <span className="text-xs text-muted-foreground">Think Tank</span>
+                <span className="font-bold text-lg leading-tight">Causeway</span>
+                <span className="text-xs text-muted-foreground">Consultancies</span>
               </div>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              مركز أبحاث استراتيجي عالمي متخصص في التحليل الاقتصادي والمالي للمنطقة العربية
+              استشارات متخصصة في التحليل الاقتصادي والمالي والاستراتيجي
             </p>
           </div>
 
@@ -54,14 +54,14 @@ export default function Footer() {
             <div className="text-sm text-muted-foreground space-y-2">
               <p>النظام المالي الموازي في اليمن</p>
               <p className="text-xs">تحليل شامل للفترة 2015-2025</p>
-              <p className="text-xs">© {currentYear} Benfour Think Tank</p>
+              <p className="text-xs">© {currentYear} Causeway Consultancies</p>
             </div>
           </div>
         </div>
 
         <div className="mt-8 pt-6 border-t border-border/40 text-center">
           <p className="text-xs text-muted-foreground">
-            جميع الحقوق محفوظة © {currentYear} Benfour Global Think Tank
+            جميع الحقوق محفوظة © {currentYear} Causeway Consultancies - by Maher F.S. Farea
           </p>
         </div>
       </div>

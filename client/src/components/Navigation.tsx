@@ -21,11 +21,11 @@ export default function Navigation() {
         <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">B</span>
+              <span className="text-primary-foreground font-bold text-xl">C</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-lg leading-tight">Benfour</span>
-              <span className="text-xs text-muted-foreground">Think Tank</span>
+              <span className="font-bold text-lg leading-tight">Causeway</span>
+              <span className="text-xs text-muted-foreground">Consultancies</span>
             </div>
           </div>
         </Link>
