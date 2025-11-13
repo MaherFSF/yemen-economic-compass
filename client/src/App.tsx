@@ -28,6 +28,9 @@ import CBYSanaaTracker from "./pages/CBYSanaaTracker";
 import CommercialBanksHub from "./pages/CommercialBanksHub";
 import FinancialLiterature from "./pages/FinancialLiterature";
 import FinancialCalculators from "./pages/FinancialCalculators";
+import DataVisualization from "./pages/DataVisualization";
+import StakeholderHub from "./pages/StakeholderHub";
+import SanctionsTracker from "./pages/SanctionsTracker";
 
 function Router() {
   return (
@@ -56,6 +59,9 @@ function Router() {
           <Route path={"/banks"} component={CommercialBanksHub} />
           <Route path={"/literature"} component={FinancialLiterature} />
           <Route path={"/calculators"} component={FinancialCalculators} />
+          <Route path={"/data-viz"} component={DataVisualization} />
+          <Route path={"/stakeholders"} component={StakeholderHub} />
+          <Route path={"/sanctions"} component={SanctionsTracker} />
           <Route path={"/404"} component={NotFound} />
           <Route component={NotFound} />
         </Switch>

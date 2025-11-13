@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Menu, X, FileText, BarChart3, Info, Home, Building2, Calendar, Globe, Landmark, TrendingUp, FileBarChart, ChevronDown, BookOpen, Calculator } from "lucide-react";
+import { Menu, X, FileText, BarChart3, Info, Home, Building2, Calendar, Globe, Landmark, TrendingUp, FileBarChart, ChevronDown, BookOpen, Calculator, LineChart, Users, Shield } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Navigation() {
@@ -28,6 +28,9 @@ export default function Navigation() {
     { href: "/reports", label: { ar: "التقارير الدولية", en: "Reports" }, icon: FileBarChart },
     { href: "/literature", label: { ar: "مكتبة الأدبيات", en: "Literature" }, icon: BookOpen },
     { href: "/calculators", label: { ar: "الحاسبات", en: "Calculators" }, icon: Calculator },
+    { href: "/data-viz", label: { ar: "التصورات البيانية", en: "Data Viz" }, icon: LineChart },
+    { href: "/stakeholders", label: { ar: "أصحاب المصلحة", en: "Stakeholders" }, icon: Users },
+    { href: "/sanctions", label: { ar: "العقوبات", en: "Sanctions" }, icon: Shield },
     { href: "/analytics", label: { ar: "لوحة التحليلات", en: "Analytics" }, icon: BarChart3 },
     { href: "/research", label: { ar: "مكتبة الأبحاث", en: "Research" }, icon: Building2 },
     { href: "/about", label: { ar: "من نحن", en: "About" }, icon: Info },
