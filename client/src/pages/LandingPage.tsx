@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, TrendingDown, Users, DollarSign, BarChart3 } from "lucide-react";
+import MasterCompass from "@/components/MasterCompass";
+import NewsTicker from "@/components/NewsTicker";
 import { Link } from "wouter";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -211,8 +213,36 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Deep Dive Sections */}
+      {/* Master Compass Widget */}
+      <section className="py-20 bg-gradient-to-b from-background to-accent/5">
+        <div className="container max-w-7xl">
+          <div className="text-center mb-12">
+            <Badge variant="outline" className="mb-4">
+              {isArabic ? "البوصلة الرئيسية" : "Master Compass"}
+            </Badge>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              {isArabic ? "مؤشرات اقتصادية رئيسية" : "Key Economic Indicators"}
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              {isArabic
+                ? "استكشف 12 مؤشراً اقتصادياً رئيسياً عبر الزمن (2014-2025) لفهم التحول الهيكلي في النظام المالي اليمني"
+                : "Explore 12 key economic indicators over time (2014-2025) to understand the structural transformation of Yemen's financial system"
+              }
+            </p>
+          </div>
+          <MasterCompass />
+        </div>
+      </section>
+
+      {/* News Ticker */}
       <section className="py-20 bg-gradient-to-b from-accent/5 to-background">
+        <div className="container max-w-4xl">
+          <NewsTicker />
+        </div>
+      </section>
+
+      {/* Deep Dive Sections */}
+      <section className="py-20 bg-gradient-to-b from-background to-accent/5">
         <div className="container max-w-6xl">
           <div className="text-center mb-16">
             <Badge variant="outline" className="mb-4">
