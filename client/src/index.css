@@ -43,8 +43,22 @@
 }
 
 :root {
+  /* Yemen Economic Observatory - Brand Colors */
+  /* Based on master specification: teal, blue, green, amber */
+  --brand-teal: oklch(0.55 0.12 180); /* #1D8A8A */
+  --brand-blue: oklch(0.42 0.10 240); /* #1F5C8A */
+  --brand-green: oklch(0.48 0.15 140); /* #2B7A0B */
+  --brand-amber: oklch(0.60 0.15 50); /* #C96A15 */
+  
+  /* Ink colors (neutrals) */
+  --ink-900: oklch(0.15 0.01 240); /* #0B1320 - darkest */
+  --ink-700: oklch(0.35 0.01 240); /* #3C4858 */
+  --ink-500: oklch(0.50 0.01 240); /* #64748B */
+  --ink-300: oklch(0.75 0.01 240); /* #CBD5E1 */
+  --paper: oklch(0.98 0 0); /* #FAFAFA - background */
+  
   /* Yemeni-inspired warm terracotta and ocean blue palette */
-  --primary: oklch(0.55 0.15 35); /* Warm terracotta */
+  --primary: var(--brand-teal); /* Brand teal as primary */
   --primary-foreground: oklch(0.98 0 0);
   --sidebar-primary: oklch(0.50 0.14 35);
   --sidebar-primary-foreground: oklch(0.98 0 0);
@@ -54,8 +68,8 @@
   --chart-4: oklch(0.55 0.12 160);
   --chart-5: oklch(0.65 0.14 280);
   --radius: 0.5rem;
-  --background: oklch(0.99 0.005 40);
-  --foreground: oklch(0.25 0.02 35);
+  --background: var(--paper); /* Soft paper white */
+  --foreground: var(--ink-900); /* Dark ink for text */
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.25 0.02 35);
   --popover: oklch(1 0 0);
@@ -64,7 +78,7 @@
   --secondary-foreground: oklch(0.25 0.02 35);
   --muted: oklch(0.96 0.005 40);
   --muted-foreground: oklch(0.50 0.01 35);
-  --accent: oklch(0.60 0.18 220); /* Ocean blue */
+  --accent: var(--brand-amber); /* Brand amber as accent */
   --accent-foreground: oklch(0.98 0 0);
   --destructive: oklch(0.60 0.22 25);
   --destructive-foreground: oklch(0.98 0 0);
@@ -120,11 +134,31 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Tajawal', 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+    /* Typography: IBM Plex Sans Arabic (UI), Noto Naskh Arabic (longform) for Arabic */
+    /* Inter (UI), Source Serif Pro (headings) for English */
+    font-family: 'IBM Plex Sans Arabic', 'Inter', 'Tajawal', 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
     direction: rtl;
   }
+  
+  /* Yemen flag border: ultra-thin top border (red-white-black, 2px each) on homepage */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(to bottom, 
+      #CE1126 0%, #CE1126 33.33%,  /* Red */
+      #FFFFFF 33.33%, #FFFFFF 66.66%,  /* White */
+      #000000 66.66%, #000000 100%  /* Black */
+    );
+    z-index: 9999;
+    pointer-events: none;
+  }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cairo', 'Tajawal', sans-serif;
+    /* Headings: Source Serif Pro (EN), Noto Naskh Arabic (AR) */
+    font-family: 'Noto Naskh Arabic', 'Source Serif Pro', 'Cairo', 'Tajawal', serif;
     font-weight: 700;
   }
   button:not(:disabled),
