@@ -39,6 +39,7 @@ import SanctionsTracker from "./pages/SanctionsTracker";
 import ScenarioForecasting from "./pages/ScenarioForecasting";
 import PolicyRecommendations from "./pages/PolicyRecommendations";
 import StatisticalIndicators from "./pages/StatisticalIndicators";
+import NewsAggregator from "./pages/NewsAggregator";
 
 function Router() {
   return (
@@ -76,6 +77,7 @@ function Router() {
       <Route path={"/forecasting"} component={ScenarioForecasting} />
       <Route path={"/policy"} component={PolicyRecommendations} />
       <Route path={"/indicators"} component={StatisticalIndicators} />
+      <Route path={"/news"} component={NewsAggregator} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, TrendingDown, Users, DollarSign, BarChart3 } from "lucide-react";
+import { ArrowRight, TrendingDown, Users, DollarSign, BarChart3, Compass } from "lucide-react";
 import MasterCompass from "@/components/MasterCompass";
 import NewsTicker from "@/components/NewsTicker";
+import ScrollytellingTimeline from "@/components/ScrollytellingTimeline";
 import { Link } from "wouter";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { PLATFORM_NAME_AR, PLATFORM_NAME_EN, PLATFORM_SUBTITLE_AR, PLATFORM_SUBTITLE_EN } from "@/const";
 
 export default function LandingPage() {
   const { language } = useLanguage();
@@ -22,43 +24,42 @@ export default function LandingPage() {
             alt="Yemen Landscape"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/65 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-background" />
         </div>
 
         {/* Content */}
         <div className="container relative z-10 text-center px-4 py-20">
+          {/* Logo */}
+          <div className="flex justify-center mb-8">
+            <img 
+              src="/yemen-compass-logo.png" 
+              alt="Yemen Economic Compass Logo"
+              className="h-24 md:h-32 w-auto"
+            />
+          </div>
+
           {/* Badge */}
           <div className="inline-block mb-6">
             <Badge variant="outline" className="text-base px-6 py-2 bg-white/10 backdrop-blur-sm border-white/30 text-white">
-              {isArabic ? "تقرير CauseWay 2025" : "CauseWay Report 2025"}
+              <Compass className="w-4 h-4 mr-2 inline" />
+              {isArabic ? "مبادرة بحثية من CauseWay" : "A CauseWay Research Initiative"}
             </Badge>
           </div>
 
           {/* Main Title */}
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            {isArabic ? (
-              <>
-                النظام المالي الموازي<br />في اليمن
-              </>
-            ) : (
-              <>
-                Yemen's Shadow<br />Monetary System
-              </>
-            )}
+            {isArabic ? PLATFORM_NAME_AR : PLATFORM_NAME_EN}
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-gray-200 mb-4 max-w-4xl mx-auto">
-            {isArabic 
-              ? "عشر سنوات أعادت تشكيل حركة المال (2015-2025)"
-              : "Ten Years That Rewired How Money Moves (2015-2025)"
-            }
+            {isArabic ? PLATFORM_SUBTITLE_AR : PLATFORM_SUBTITLE_EN}
           </p>
 
           <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
             {isArabic
-              ? "تحليل استراتيجي شامل للتحول الهيكلي في النظام المالي اليمني"
-              : "A comprehensive strategic analysis of Yemen's financial system transformation"
+              ? "عشر سنوات أعادت تشكيل كيفية حركة المال في اليمن (2015-2025)"
+              : "Ten Years That Rewired How Money Moves in Yemen (2015-2025)"
             }
           </p>
 
@@ -70,9 +71,14 @@ export default function LandingPage() {
                 <ArrowRight className={`${isArabic ? 'mr-2 rotate-180' : 'ml-2'} h-5 w-5`} />
               </Button>
             </Link>
-            <Link href="/dashboard">
+            <Link href="/compass-dashboard">
               <Button size="lg" variant="outline" className="text-lg px-8 py-6 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20">
-                {isArabic ? "لوحة التحكم التفاعلية" : "Interactive Dashboard"}
+                {isArabic ? "لوحة البوصلة" : "Compass Dashboard"}
+              </Button>
+            </Link>
+            <Link href="/library">
+              <Button size="lg" variant="outline" className="text-lg px-8 py-6 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20">
+                {isArabic ? "مكتبة الأبحاث" : "Research Library"}
               </Button>
             </Link>
           </div>
@@ -82,9 +88,9 @@ export default function LandingPage() {
             <Card className="bg-white/10 backdrop-blur-sm border-white/20">
               <CardContent className="p-6 text-center">
                 <TrendingDown className="h-8 w-8 text-red-400 mx-auto mb-3" />
-                <div className="text-3xl font-bold text-white mb-1">~50%</div>
+                <div className="text-3xl font-bold text-white mb-1">-58%</div>
                 <div className="text-sm text-gray-300">
-                  {isArabic ? "انكماش الناتج المحلي" : "GDP Contraction"}
+                  {isArabic ? "دخل الفرد الحقيقي" : "Real Income Per Capita"}
                 </div>
               </CardContent>
             </Card>
@@ -94,7 +100,7 @@ export default function LandingPage() {
                 <Users className="h-8 w-8 text-orange-400 mx-auto mb-3" />
                 <div className="text-3xl font-bold text-white mb-1">76%</div>
                 <div className="text-sm text-gray-300">
-                  {isArabic ? "معدل الفقر" : "Poverty Rate"}
+                  {isArabic ? "معدل الفقر (2025)" : "Poverty Rate (2025)"}
                 </div>
               </CardContent>
             </Card>
@@ -102,9 +108,9 @@ export default function LandingPage() {
             <Card className="bg-white/10 backdrop-blur-sm border-white/20">
               <CardContent className="p-6 text-center">
                 <DollarSign className="h-8 w-8 text-yellow-400 mx-auto mb-3" />
-                <div className="text-3xl font-bold text-white mb-1">2,800</div>
+                <div className="text-3xl font-bold text-white mb-1">$2.8B</div>
                 <div className="text-sm text-gray-300">
-                  {isArabic ? "ريال/دولار (عدن)" : "YER/USD (Aden)"}
+                  {isArabic ? "تدفقات نقدية سنوية" : "Annual Cash Flows"}
                 </div>
               </CardContent>
             </Card>
@@ -112,9 +118,9 @@ export default function LandingPage() {
             <Card className="bg-white/10 backdrop-blur-sm border-white/20">
               <CardContent className="p-6 text-center">
                 <BarChart3 className="h-8 w-8 text-blue-400 mx-auto mb-3" />
-                <div className="text-3xl font-bold text-white mb-1">35%</div>
+                <div className="text-3xl font-bold text-white mb-1">88%</div>
                 <div className="text-sm text-gray-300">
-                  {isArabic ? "التضخم (ذروة 2025)" : "Inflation (Peak 2025)"}
+                  {isArabic ? "قنوات غير مصرفية" : "Non-Bank Channels"}
                 </div>
               </CardContent>
             </Card>
@@ -129,22 +135,36 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Overview Section */}
+      {/* Executive Summary Section */}
       <section className="py-20 bg-gradient-to-b from-background to-accent/5">
         <div className="container max-w-6xl">
           <div className="text-center mb-16">
             <Badge variant="outline" className="mb-4">
-              {isArabic ? "نظرة عامة" : "Overview"}
+              {isArabic ? "الملخص التنفيذي" : "Executive Summary"}
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              {isArabic ? "التحول الهيكلي" : "Structural Transformation"}
+              {isArabic ? "عقد من التحول المالي" : "A Decade of Financial Transformation"}
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              {isArabic
-                ? "بين 2015 و2025، شهد اليمن تحولاً جذرياً من نظام مالي موحد إلى نظامين متنافسين، مع عواقب إنسانية واقتصادية كارثية."
-                : "Between 2015 and 2025, Yemen witnessed a radical transformation from a unified financial system to two competing systems, with catastrophic humanitarian and economic consequences."
-              }
-            </p>
+            <div className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed space-y-4">
+              <p>
+                {isArabic
+                  ? "من 2015 إلى 2025، شهدت البنية التحتية المالية لليمن تحولاً عميقاً حدث إلى حد كبير دون أن يلاحظه المجتمع الدولي. عندما انقسم البنك المركزي وتجمدت القنوات المصرفية الرسمية، واجه الفاعلون الإنسانيون تحدياً غير مسبوق: كيفية نقل الأموال على نطاق واسع في منطقة صراع مجزأة."
+                  : "From 2015 to 2025, Yemen's financial infrastructure underwent a profound transformation that occurred largely unnoticed by the international community. When the Central Bank split and formal banking channels froze, humanitarian actors faced an unprecedented challenge: how to move money at scale in a fragmented conflict zone."
+                }
+              </p>
+              <p>
+                {isArabic
+                  ? "الحل - توجيه التحويلات النقدية الطارئة عبر الصرافين (الحوالة) ومؤسسات التمويل الأصغر - كان عملياً ومؤثراً في آن واحد. بينما نجح هذا النهج في إيصال المساعدات المنقذة للحياة إلى الملايين، فإنه في الوقت نفسه حفز إعادة هيكلة أساسية للهندسة المالية اليمنية."
+                  : "The solution—routing emergency cash transfers through money exchangers (hawala) and microfinance institutions—was both pragmatic and consequential. While this approach successfully delivered life-saving assistance to millions, it simultaneously catalyzed a fundamental restructuring of Yemen's financial architecture."
+                }
+              </p>
+              <p className="font-semibold text-primary">
+                {isArabic
+                  ? "اليوم، السيولة والمدفوعات والتمويل التجزئة يهيمن عليها الوسطاء غير المصرفيين. البنوك الرسمية تبقى ذات صلة لمعاملات SWIFT والامتثال، لكنها إلى حد كبير تم إزاحتها من أنشطة التسوية اليومية."
+                  : "Today, liquidity, payments, and retail finance are dominated by non-bank intermediaries. Formal banks remain relevant for SWIFT transactions and compliance, but have largely been displaced from everyday settlement activities."
+                }
+              </p>
+            </div>
           </div>
 
           {/* Feature Cards */}
@@ -155,12 +175,12 @@ export default function LandingPage() {
                   <span className="text-2xl">🏦</span>
                 </div>
                 <h3 className="text-2xl font-bold mb-3">
-                  {isArabic ? "بنكان مركزيان" : "Two Central Banks"}
+                  {isArabic ? "بنكان مركزيان" : "Dual Central Banks"}
                 </h3>
                 <p className="text-muted-foreground">
                   {isArabic
-                    ? "انقسام البنك المركزي اليمني في 2016 خلق نظامين نقديين متنافسين في صنعاء وعدن"
-                    : "The 2016 split of Yemen's Central Bank created two competing monetary systems in Sana'a and Aden"
+                    ? "انقسام البنك المركزي اليمني في سبتمبر 2016 أسس نظامين نقديين متنافسين، مع سياسات متباينة وسيطرة على العملة"
+                    : "The September 2016 Central Bank split established two competing monetary systems, with divergent policies and currency control"
                   }
                 </p>
               </CardContent>
@@ -172,12 +192,12 @@ export default function LandingPage() {
                   <span className="text-2xl">💱</span>
                 </div>
                 <h3 className="text-2xl font-bold mb-3">
-                  {isArabic ? "حرب العملة" : "Currency War"}
+                  {isArabic ? "التشرذم النقدي" : "Monetary Fragmentation"}
                 </h3>
                 <p className="text-muted-foreground">
                   {isArabic
-                    ? "تباعد سعر الصرف بنسبة 4.3 ضعف بين المنطقتين، مع انهيار الريال في عدن وثبات نسبي في صنعاء"
-                    : "Exchange rate diverged 4.3x between zones, with rial collapse in Aden and relative stability in Sana'a"
+                    ? "تباعد سعر الصرف من 215 ريال/دولار (2014) إلى 2,800 في عدن مقابل 560 في صنعاء (2025) - تباعد بنسبة 400%"
+                    : "Exchange rate diverged from 215 YER/USD (2014) to 2,800 in Aden vs 560 in Sana'a (2025) - a 400% divergence"
                   }
                 </p>
               </CardContent>
@@ -189,35 +209,26 @@ export default function LandingPage() {
                   <span className="text-2xl">📊</span>
                 </div>
                 <h3 className="text-2xl font-bold mb-3">
-                  {isArabic ? "الأثر الإنساني" : "Humanitarian Impact"}
+                  {isArabic ? "النظام الموازي" : "Parallel System"}
                 </h3>
                 <p className="text-muted-foreground">
                   {isArabic
-                    ? "ارتفع معدل الفقر من 54% إلى 76%، مع انهيار الخدمات العامة واعتماد كامل على المساعدات الخارجية"
-                    : "Poverty rate rose from 54% to 76%, with public services collapsed and total dependence on external aid"
+                    ? "القنوات غير المصرفية تهيمن الآن على 88% من المدفوعات، بينما البنوك الرسمية مقتصرة على 12% ومعاملات SWIFT"
+                    : "Non-bank channels now dominate 88% of payments, while formal banks are relegated to 12% and SWIFT transactions"
                   }
                 </p>
               </CardContent>
             </Card>
           </div>
-
-          {/* CTA */}
-          <div className="text-center">
-            <Link href="/overview">
-              <Button size="lg" variant="outline">
-                {isArabic ? "استكشف التحليل الكامل" : "Explore Full Analysis"}
-                <ArrowRight className={`${isArabic ? 'mr-2 rotate-180' : 'ml-2'} h-5 w-5`} />
-              </Button>
-            </Link>
-          </div>
         </div>
       </section>
 
       {/* Master Compass Widget */}
-      <section className="py-20 bg-gradient-to-b from-background to-accent/5">
+      <section className="py-20 bg-gradient-to-b from-accent/5 to-background">
         <div className="container max-w-7xl">
           <div className="text-center mb-12">
             <Badge variant="outline" className="mb-4">
+              <Compass className="w-4 h-4 mr-2 inline" />
               {isArabic ? "البوصلة الرئيسية" : "Master Compass"}
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -235,14 +246,35 @@ export default function LandingPage() {
       </section>
 
       {/* News Ticker */}
-      <section className="py-20 bg-gradient-to-b from-accent/5 to-background">
-        <div className="container max-w-4xl">
+      <section className="py-12 bg-muted/30">
+        <div className="container max-w-6xl">
           <NewsTicker />
         </div>
       </section>
 
-      {/* Deep Dive Sections */}
+      {/* Scrollytelling Timeline Section */}
       <section className="py-20 bg-gradient-to-b from-background to-accent/5">
+        <div className="container max-w-6xl mb-12">
+          <div className="text-center">
+            <Badge variant="outline" className="mb-4">
+              {isArabic ? "الرحلة التفاعلية" : "Interactive Journey"}
+            </Badge>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              {isArabic ? "عشر سنوات من التحول" : "A Decade of Transformation"}
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              {isArabic
+                ? "تابع الرحلة التفاعلية عبر الأحداث الرئيسية التي أعادت تشكيل النظام المالي اليمني من 2015 إلى 2025"
+                : "Follow the interactive journey through key events that reshaped Yemen's financial system from 2015 to 2025"
+              }
+            </p>
+          </div>
+        </div>
+        <ScrollytellingTimeline />
+      </section>
+
+      {/* Deep Dive Sections */}
+      <section className="py-20 bg-gradient-to-b from-accent/5 to-background">
         <div className="container max-w-6xl">
           <div className="text-center mb-16">
             <Badge variant="outline" className="mb-4">
@@ -253,8 +285,8 @@ export default function LandingPage() {
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               {isArabic
-                ? "تحليلات شاملة للأزمة الاقتصادية، حرب العملة، المدن الرئيسية، والأحداث الرئيسية"
-                : "Comprehensive analysis of the economic crisis, currency war, major cities, and key events"
+                ? "تحليلات شاملة للأزمة الاقتصادية، حرب العملة، الفاعلين الرئيسيين، والبيانات التفاعلية"
+                : "Comprehensive analysis of the economic crisis, currency war, key stakeholders, and interactive data"
               }
             </p>
           </div>
@@ -271,7 +303,7 @@ export default function LandingPage() {
                   </h3>
                   <p className="text-muted-foreground mb-4">
                     {isArabic
-                      ? "عقد من التشظي النقدي والحرب الاقتصادية: قراءة إستراتيجية في إعادة تشكيل المركز المالي لليمن"
+                      ? "عقد من التشظي النقدي والحرب الاقتصادية: قراءة استراتيجية في إعادة تشكيل المركز المالي لليمن"
                       : "A decade of monetary fragmentation and economic warfare: strategic analysis of Yemen's financial restructuring"
                     }
                   </p>
@@ -298,52 +330,97 @@ export default function LandingPage() {
                     }
                   </p>
                   <Badge variant="outline" className="text-purple-600 border-purple-600">
-                    {isArabic ? "نظام مزدوج" : "Dual System"}
+                    {isArabic ? "تحليل شامل" : "Comprehensive Analysis"}
                   </Badge>
                 </CardContent>
               </Card>
             </Link>
 
-            <Link href="/cities">
-              <Card className="border-2 hover:shadow-xl transition-all hover:border-teal-500 cursor-pointer h-full">
-                <CardContent className="p-8">
-                  <div className="w-12 h-12 bg-teal-500/10 rounded-lg flex items-center justify-center mb-4">
-                    <Users className="h-6 w-6 text-teal-600" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-3">
-                    {isArabic ? "المدن الرئيسية" : "Main Cities"}
-                  </h3>
-                  <p className="text-muted-foreground mb-4">
-                    {isArabic
-                      ? "تحليل معمق للوضع الاقتصادي والاجتماعي في 6 مدن يمنية رئيسية"
-                      : "In-depth analysis of economic and social conditions in 6 major Yemeni cities"
-                    }
-                  </p>
-                  <Badge variant="outline" className="text-teal-600 border-teal-600">
-                    {isArabic ? "تحليل جغرافي" : "Geographic Analysis"}
-                  </Badge>
-                </CardContent>
-              </Card>
-            </Link>
-
-            <Link href="/events">
+            <Link href="/stakeholders">
               <Card className="border-2 hover:shadow-xl transition-all hover:border-blue-500 cursor-pointer h-full">
                 <CardContent className="p-8">
                   <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-4">
-                    <BarChart3 className="h-6 w-6 text-blue-600" />
+                    <Users className="h-6 w-6 text-blue-600" />
                   </div>
                   <h3 className="text-2xl font-bold mb-3">
-                    {isArabic ? "الأحداث والتحليلات" : "Events & Analytics"}
+                    {isArabic ? "الفاعلون الرئيسيون" : "Key Stakeholders"}
                   </h3>
                   <p className="text-muted-foreground mb-4">
                     {isArabic
-                      ? "خط زمني تفاعلي لـ 19 حدثاً رئيسياً مع نظام تصفية متقدم"
-                      : "Interactive timeline of 19 major events with advanced filtering system"
+                      ? "تحليل شامل للفاعلين الرئيسيين: الحكومة المعترف بها، الحوثيون، السعودية، الإمارات، والمجلس الانتقالي"
+                      : "Comprehensive profiles of key actors: IRG, Houthis, Saudi Arabia, UAE, and Southern Transitional Council"
                     }
                   </p>
                   <Badge variant="outline" className="text-blue-600 border-blue-600">
-                    {isArabic ? "تفاعلي" : "Interactive"}
+                    {isArabic ? "ملفات تعريفية" : "Actor Profiles"}
                   </Badge>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link href="/data-viz">
+              <Card className="border-2 hover:shadow-xl transition-all hover:border-green-500 cursor-pointer h-full">
+                <CardContent className="p-8">
+                  <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-4">
+                    <BarChart3 className="h-6 w-6 text-green-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3">
+                    {isArabic ? "البيانات التفاعلية" : "Interactive Data"}
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    {isArabic
+                      ? "استكشف الرسوم البيانية التفاعلية لأسعار الصرف، التضخم، الناتج المحلي، وتدفقات الأموال"
+                      : "Explore interactive charts for exchange rates, inflation, GDP, and money flows"
+                    }
+                  </p>
+                  <Badge variant="outline" className="text-green-600 border-green-600">
+                    {isArabic ? "تصورات تفاعلية" : "Interactive Visualizations"}
+                  </Badge>
+                </CardContent>
+              </Card>
+            </Link>
+          </div>
+
+          {/* Additional Links */}
+          <div className="grid md:grid-cols-3 gap-6">
+            <Link href="/library">
+              <Card className="border hover:shadow-lg transition-all cursor-pointer">
+                <CardContent className="p-6 text-center">
+                  <div className="text-3xl mb-3">📚</div>
+                  <h4 className="font-bold mb-2">
+                    {isArabic ? "مكتبة الأبحاث" : "Research Library"}
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    {isArabic ? "46+ منشور من 20+ مؤسسة" : "46+ publications from 20+ institutions"}
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link href="/calculators">
+              <Card className="border hover:shadow-lg transition-all cursor-pointer">
+                <CardContent className="p-6 text-center">
+                  <div className="text-3xl mb-3">🧮</div>
+                  <h4 className="font-bold mb-2">
+                    {isArabic ? "الحاسبات المالية" : "Financial Calculators"}
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    {isArabic ? "حاسبة التضخم وسعر الصرف" : "Inflation & Exchange Rate Calculators"}
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link href="/forecasting">
+              <Card className="border hover:shadow-lg transition-all cursor-pointer">
+                <CardContent className="p-6 text-center">
+                  <div className="text-3xl mb-3">🔮</div>
+                  <h4 className="font-bold mb-2">
+                    {isArabic ? "التوقعات" : "Scenario Forecasting"}
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    {isArabic ? "توقعات اقتصادية 2025-2030" : "Economic Projections 2025-2030"}
+                  </p>
                 </CardContent>
               </Card>
             </Link>
@@ -351,67 +428,30 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* CauseWay Section */}
-      <section className="py-20 bg-gradient-to-b from-background to-accent/5">
-        <div className="container max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <Badge variant="outline" className="mb-4">
-                {isArabic ? "من نحن" : "About Us"}
-              </Badge>
-              <h2 className="text-4xl font-bold mb-6">
-                {isArabic ? "CauseWay Consultancies" : "CauseWay Consultancies"}
-              </h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                {isArabic
-                  ? "وكالة متخصصة من الجيل القادم تركز حصرياً على المشهد المالي والاقتصادي اليمني. نقدم التحليل الاستراتيجي والاستشارات التنفيذية لصناع السياسات والباحثين والمنظمات الدولية."
-                  : "A next-generation specialized agency focused exclusively on Yemen's financial and economic landscape. We provide strategic analysis and implementation advisory to policymakers, researchers, and international organizations."
-                }
-              </p>
-              <Link href="/about">
-                <Button>
-                  {isArabic ? "تعرف على المزيد" : "Learn More"}
-                  <ArrowRight className={`${isArabic ? 'mr-2 rotate-180' : 'ml-2'} h-5 w-5`} />
-                </Button>
-              </Link>
-            </div>
-            <div className="relative">
-              <Card className="border-2 p-8">
-                <div className="space-y-6">
-                  <div className="flex items-center gap-4">
-                    <div className="h-16 w-16 bg-primary/10 rounded-full flex items-center justify-center">
-                      <span className="text-3xl font-bold text-primary">C</span>
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold">CauseWay</h3>
-                      <p className="text-muted-foreground">
-                        {isArabic ? "وكالة استشارية متخصصة" : "Specialized Consultancy"}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="text-center p-4 bg-accent/20 rounded-lg">
-                      <div className="text-3xl font-bold text-primary">12+</div>
-                      <div className="text-sm text-muted-foreground mt-1">
-                        {isArabic ? "سنوات خبرة" : "Years Experience"}
-                      </div>
-                    </div>
-                    <div className="text-center p-4 bg-accent/20 rounded-lg">
-                      <div className="text-3xl font-bold text-primary">100%</div>
-                      <div className="text-sm text-muted-foreground mt-1">
-                        {isArabic ? "تركيز على اليمن" : "Yemen Focused"}
-                      </div>
-                    </div>
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    {isArabic
-                      ? "نجمع بين التفاوض الميداني، وبناء الأنظمة، وتعزيز المساءلة والمرونة المؤسسية"
-                      : "Combining field negotiation, systems building, and institutional accountability"
-                    }
-                  </p>
-                </div>
-              </Card>
-            </div>
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-b from-background to-primary/5">
+        <div className="container max-w-4xl text-center">
+          <h2 className="text-4xl font-bold mb-6">
+            {isArabic ? "ابدأ الاستكشاف" : "Start Exploring"}
+          </h2>
+          <p className="text-xl text-muted-foreground mb-8">
+            {isArabic
+              ? "اكتشف التحليلات الشاملة، البيانات التفاعلية، والأبحاث المعمقة حول النظام المالي اليمني"
+              : "Discover comprehensive analysis, interactive data, and in-depth research on Yemen's financial system"
+            }
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link href="/story">
+              <Button size="lg">
+                {isArabic ? "القصة الكاملة" : "Full Story"}
+                <ArrowRight className={`${isArabic ? 'mr-2 rotate-180' : 'ml-2'} h-5 w-5`} />
+              </Button>
+            </Link>
+            <Link href="/compass-dashboard">
+              <Button size="lg" variant="outline">
+                {isArabic ? "لوحة البوصلة" : "Compass Dashboard"}
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

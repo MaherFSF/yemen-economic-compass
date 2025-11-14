@@ -1422,3 +1422,52 @@ All major features implemented and tested. Platform is now the most comprehensiv
 **AUTONOMOUS EXECUTION MODE: ACTIVE**
 **USER AUTHORIZATION: GRANTED**
 **EXPECTED COMPLETION: 6-7 weeks intensive development**
+
+
+---
+
+## 🚀 URGENT: SCROLLYTELLING TIMELINE INTEGRATION (USER REQUEST - "GO")
+
+### Phase 1: Landing Page Redesign with Timeline
+- [x] Integrate ScrollytellingTimeline component into LandingPage.tsx
+- [x] Update hero section with proper Yemen Economic Compass branding
+- [x] Ensure MasterCompass widget is prominently displayed above timeline
+- [x] Verify NewsTicker component placement
+- [ ] Test timeline scrolling and year activation
+- [ ] Verify progress indicator works correctly
+- [ ] Test event color coding (war=red, policy=blue, humanitarian=orange, economic=purple, international=green)
+- [ ] Test annual summary sections display correctly
+- [ ] Ensure full bilingual support in timeline
+
+### Phase 2: Visual Enhancements
+- [ ] Add authentic Yemen landscape images to hero section
+- [ ] Source or generate event-based images for timeline
+- [ ] Integrate 12 professional charts throughout pages
+- [ ] Add CauseWay logos for proper attribution
+- [ ] Optimize all images for web performance
+
+### Phase 3: Content Population from PDFs
+- [ ] Extract detailed narratives from gamma2.txt
+- [ ] Populate Economic Crisis page with rich content
+- [ ] Populate Currency War page with comprehensive analysis
+- [ ] Enhance Stakeholder pages with detailed profiles
+- [ ] Add more events to timeline (target: 50+ events)
+- [ ] Enrich all existing pages with PDF content
+
+### Phase 4: Build Missing Critical Features
+- [x] Create News Aggregator page (/news) with filtering and search
+- [ ] Build Correlation Dashboard (/correlations)
+- [ ] Implement Translation Tool
+- [ ] Create Infographic Generator
+- [ ] Build Before/After Impact Graphs
+
+### Phase 5: Final Quality Assurance
+- [ ] Test complete user journey for donors
+- [ ] Test complete user journey for researchers
+- [ ] Test complete user journey for policymakers
+- [ ] Test complete user journey for investors
+- [ ] Verify all bilingual content parity
+- [ ] Check mobile responsiveness
+- [ ] Run TypeScript checks
+- [ ] Save final production checkpoint
+
