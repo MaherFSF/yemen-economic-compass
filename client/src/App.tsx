@@ -5,13 +5,11 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
-import Navigation from "./components/Navigation";
+import Header from "./components/Header";
 import Footer from "./components/Footer";
 import LandingPage from "./pages/LandingPage";
-import Home from "./pages/Home";
 import Overview from "./pages/Overview";
 import Charts from "./pages/Charts";
-import FMIProject from "./pages/FMIProject";
 import StoryPage from "./pages/StoryPage";
 import ResearchLibrary from "./pages/ResearchLibrary";
 import AnalyticsDashboard from "./pages/AnalyticsDashboard";
@@ -44,50 +42,43 @@ import StatisticalIndicators from "./pages/StatisticalIndicators";
 
 function Router() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navigation />
-      <main className="flex-1">
-        <Switch>
-          <Route path={"/"} component={LandingPage} />
-          <Route path={"/home"} component={Home} />
-          <Route path={"/overview"} component={Overview} />
-          <Route path={"/charts"} component={Charts} />
-          <Route path={"/story"} component={StoryPage} />
-          <Route path="/timeline" component={Timeline} />
-          <Route path="/research" component={ResearchLibrary} />
-          <Route path="/analytics" component={AnalyticsDashboard} />
-          <Route path={"/dashboard"} component={Timeline} />
-          <Route path={"/about"} component={About} />
-          <Route path={"/economic-crisis"} component={EconomicCrisis} />
-          <Route path={"/currency-war"} component={CurrencyWar} />
-          <Route path={"/events"} component={EventsTimeline} />
-          <Route path={"/cities"} component={MainCities} />
-          <Route path={"/reports"} component={InternationalReports} />
-          <Route path={"/microfinance"} component={MicrofinanceObservatory} />
-          <Route path={"/cby-aden"} component={CBYAdenTracker} />
-          <Route path={"/cby-sanaa"} component={CBYSanaaTracker} />
-          <Route path={"/banks"} component={CommercialBanksHub} />
-          <Route path={"/literature"} component={FinancialLiterature} />
-          <Route path={"/calculators"} component={FinancialCalculators} />
-          <Route path={"/data-viz"} component={DataVisualization} />
-          <Route path={"/stakeholders"} component={StakeholderHub} />
-          <Route path="/sanctions" component={SanctionsTracker} />
-          <Route path="/key-statistics" component={KeyStatistics} />
+    <Switch>
+      <Route path={"/"} component={LandingPage} />
+      <Route path={"/overview"} component={Overview} />
+      <Route path={"/charts"} component={Charts} />
+      <Route path={"/story"} component={StoryPage} />
+      <Route path="/timeline" component={Timeline} />
+      <Route path="/research" component={ResearchLibrary} />
+      <Route path="/analytics" component={AnalyticsDashboard} />
+      <Route path={"/dashboard"} component={Timeline} />
+      <Route path={"/about"} component={About} />
+      <Route path={"/economic-crisis"} component={EconomicCrisis} />
+      <Route path={"/currency-war"} component={CurrencyWar} />
+      <Route path={"/events"} component={EventsTimeline} />
+      <Route path={"/cities"} component={MainCities} />
+      <Route path={"/reports"} component={InternationalReports} />
+      <Route path={"/microfinance"} component={MicrofinanceObservatory} />
+      <Route path={"/cby-aden"} component={CBYAdenTracker} />
+      <Route path={"/cby-sanaa"} component={CBYSanaaTracker} />
+      <Route path={"/banks"} component={CommercialBanksHub} />
+      <Route path={"/literature"} component={FinancialLiterature} />
+      <Route path={"/calculators"} component={FinancialCalculators} />
+      <Route path={"/data-viz"} component={DataVisualization} />
+      <Route path={"/stakeholders"} component={StakeholderHub} />
+      <Route path="/sanctions" component={SanctionsTracker} />
+      <Route path="/key-statistics" component={KeyStatistics} />
       <Route path="/transformation" component={FinancialTransformation} />
       <Route path="/power-map" component={FinancialPowerMap} />
       <Route path="/compass" component={CompassDashboard} />
       <Route path="/advanced-viz" component={AdvancedVisualizations} />
       <Route path="/about-causeway" component={AboutCauseWay} />
       <Route path="/kayan" component={KayanPlatform} />
-          <Route path={"/forecasting"} component={ScenarioForecasting} />
-          <Route path={"/policy"} component={PolicyRecommendations} />
-          <Route path={"/indicators"} component={StatisticalIndicators} />
-          <Route path={"/404"} component={NotFound} />
-          <Route component={NotFound} />
-        </Switch>
-      </main>
-      <Footer />
-    </div>
+      <Route path={"/forecasting"} component={ScenarioForecasting} />
+      <Route path={"/policy"} component={PolicyRecommendations} />
+      <Route path={"/indicators"} component={StatisticalIndicators} />
+      <Route path={"/404"} component={NotFound} />
+      <Route component={NotFound} />
+    </Switch>
   );
 }
 
@@ -98,7 +89,13 @@ function App() {
         <LanguageProvider>
           <TooltipProvider>
             <Toaster />
-            <Router />
+            <div className="flex flex-col min-h-screen">
+              <Header />
+              <main className="flex-1">
+                <Router />
+              </main>
+              <Footer />
+            </div>
           </TooltipProvider>
         </LanguageProvider>
       </ThemeProvider>
