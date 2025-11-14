@@ -35,6 +35,8 @@ import FinancialTransformation from "./pages/FinancialTransformation";
 import FinancialPowerMap from "./pages/FinancialPowerMap";
 import CompassDashboard from "./pages/CompassDashboard";
 import AdvancedVisualizations from "./pages/AdvancedVisualizations";
+import AboutCauseWay from "./pages/AboutCauseWay";
+import KayanPlatform from "./pages/KayanPlatform";
 import SanctionsTracker from "./pages/SanctionsTracker";
 import ScenarioForecasting from "./pages/ScenarioForecasting";
 import PolicyRecommendations from "./pages/PolicyRecommendations";
@@ -75,6 +77,8 @@ function Router() {
       <Route path="/power-map" component={FinancialPowerMap} />
       <Route path="/compass" component={CompassDashboard} />
       <Route path="/advanced-viz" component={AdvancedVisualizations} />
+      <Route path="/about-causeway" component={AboutCauseWay} />
+      <Route path="/kayan" component={KayanPlatform} />
           <Route path={"/forecasting"} component={ScenarioForecasting} />
           <Route path={"/policy"} component={PolicyRecommendations} />
           <Route path={"/indicators"} component={StatisticalIndicators} />
