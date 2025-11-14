@@ -30,6 +30,9 @@ import FinancialLiterature from "./pages/FinancialLiterature";
 import FinancialCalculators from "./pages/FinancialCalculators";
 import DataVisualization from "./pages/DataVisualization";
 import StakeholderHub from "./pages/StakeholderHub";
+import KeyStatistics from "./pages/KeyStatistics";
+import FinancialTransformation from "./pages/FinancialTransformation";
+import FinancialPowerMap from "./pages/FinancialPowerMap";
 import SanctionsTracker from "./pages/SanctionsTracker";
 import ScenarioForecasting from "./pages/ScenarioForecasting";
 import PolicyRecommendations from "./pages/PolicyRecommendations";
@@ -64,7 +67,10 @@ function Router() {
           <Route path={"/calculators"} component={FinancialCalculators} />
           <Route path={"/data-viz"} component={DataVisualization} />
           <Route path={"/stakeholders"} component={StakeholderHub} />
-          <Route path={"/sanctions"} component={SanctionsTracker} />
+          <Route path="/sanctions" component={SanctionsTracker} />
+          <Route path="/key-statistics" component={KeyStatistics} />
+          <Route path="/transformation" component={FinancialTransformation} />
+          <Route path="/power-map" component={FinancialPowerMap} />
           <Route path={"/forecasting"} component={ScenarioForecasting} />
           <Route path={"/policy"} component={PolicyRecommendations} />
           <Route path={"/indicators"} component={StatisticalIndicators} />
