@@ -33,6 +33,8 @@ import StakeholderHub from "./pages/StakeholderHub";
 import KeyStatistics from "./pages/KeyStatistics";
 import FinancialTransformation from "./pages/FinancialTransformation";
 import FinancialPowerMap from "./pages/FinancialPowerMap";
+import CompassDashboard from "./pages/CompassDashboard";
+import AdvancedVisualizations from "./pages/AdvancedVisualizations";
 import SanctionsTracker from "./pages/SanctionsTracker";
 import ScenarioForecasting from "./pages/ScenarioForecasting";
 import PolicyRecommendations from "./pages/PolicyRecommendations";
@@ -69,8 +71,10 @@ function Router() {
           <Route path={"/stakeholders"} component={StakeholderHub} />
           <Route path="/sanctions" component={SanctionsTracker} />
           <Route path="/key-statistics" component={KeyStatistics} />
-          <Route path="/transformation" component={FinancialTransformation} />
-          <Route path="/power-map" component={FinancialPowerMap} />
+      <Route path="/transformation" component={FinancialTransformation} />
+      <Route path="/power-map" component={FinancialPowerMap} />
+      <Route path="/compass" component={CompassDashboard} />
+      <Route path="/advanced-viz" component={AdvancedVisualizations} />
           <Route path={"/forecasting"} component={ScenarioForecasting} />
           <Route path={"/policy"} component={PolicyRecommendations} />
           <Route path={"/indicators"} component={StatisticalIndicators} />
