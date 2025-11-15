@@ -287,9 +287,14 @@ export default function About() {
                 }
               </p>
               <div className="space-y-3">
-                <div className="p-3 bg-accent/10 rounded-lg">
+                <div className="p-3 bg-accent/10 rounded-lg hover:bg-accent/20 transition-colors">
                   <h4 className="font-semibold text-sm mb-1">
-                    {isArabic ? "منصة كَيَان (Kayan Venture Studio)" : "Kayan Venture Studio"}
+                    <a href="https://kayan.manus.space" target="_blank" rel="noopener noreferrer" className="text-[#8B1538] hover:text-[#D4AF37] transition-colors inline-flex items-center gap-1">
+                      {isArabic ? "منصة كَيَان (Kayan Venture Studio)" : "Kayan Venture Studio"}
+                      <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
                   </h4>
                   <p className="text-xs text-muted-foreground">
                     {isArabic 
@@ -448,8 +453,8 @@ export default function About() {
                     </h4>
                     <p className="text-xs text-muted-foreground">
                       {isArabic 
-                        ? "مع CauseWay Ventures & Funding (عبر Kayan) بتمويل مُشروط بالدليل"
-                        : "With CauseWay Ventures & Funding (via Kayan) with evidence-conditional financing"
+                        ? <>مع CauseWay Ventures & Funding (عبر <a href="https://kayan.manus.space" target="_blank" rel="noopener noreferrer" className="text-[#8B1538] hover:text-[#D4AF37] underline">Kayan</a>) بتمويل مُشروط بالدليل</>
+                        : <>With CauseWay Ventures & Funding (via <a href="https://kayan.manus.space" target="_blank" rel="noopener noreferrer" className="text-[#8B1538] hover:text-[#D4AF37] underline">Kayan</a>) with evidence-conditional financing</>
                       }
                     </p>
                   </div>
