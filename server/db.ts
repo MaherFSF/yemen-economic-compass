@@ -154,3 +154,214 @@ export async function getFilesByCategory(category: "report" | "chart" | "documen
 
   return await db.select().from(files).where(eq(files.category, category));
 }
+
+
+/**
+ * Events Management Queries
+ */
+
+import { events, InsertEvent, actors, InsertActor, indicators, InsertIndicator, causations, InsertCausation, recommendations, InsertRecommendation, banks, InsertBank, stakeholders, InsertStakeholder } from "../drizzle/schema";
+
+// Create a new event
+export async function createEvent(event: InsertEvent) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const result = await db.insert(events).values(event);
+  return result;
+}
+
+// Get all events
+export async function getAllEvents() {
+  const db = await getDb();
+  if (!db) {
+    return [];
+  }
+
+  return await db.select().from(events);
+}
+
+// Get event by ID
+export async function getEventById(eventId: number) {
+  const db = await getDb();
+  if (!db) {
+    return undefined;
+  }
+
+  const result = await db.select().from(events).where(eq(events.id, eventId)).limit(1);
+  return result.length > 0 ? result[0] : undefined;
+}
+
+/**
+ * Actors Management Queries
+ */
+
+// Create a new actor
+export async function createActor(actor: InsertActor) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const result = await db.insert(actors).values(actor);
+  return result;
+}
+
+// Get all actors
+export async function getAllActors() {
+  const db = await getDb();
+  if (!db) {
+    return [];
+  }
+
+  return await db.select().from(actors);
+}
+
+// Get actor by ID
+export async function getActorById(actorId: number) {
+  const db = await getDb();
+  if (!db) {
+    return undefined;
+  }
+
+  const result = await db.select().from(actors).where(eq(actors.id, actorId)).limit(1);
+  return result.length > 0 ? result[0] : undefined;
+}
+
+/**
+ * Indicators Management Queries
+ */
+
+// Create a new indicator
+export async function createIndicator(indicator: InsertIndicator) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const result = await db.insert(indicators).values(indicator);
+  return result;
+}
+
+// Get all indicators
+export async function getAllIndicators() {
+  const db = await getDb();
+  if (!db) {
+    return [];
+  }
+
+  return await db.select().from(indicators);
+}
+
+/**
+ * Causations Management Queries
+ */
+
+// Create a new causation
+export async function createCausation(causation: InsertCausation) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const result = await db.insert(causations).values(causation);
+  return result;
+}
+
+// Get all causations
+export async function getAllCausations() {
+  const db = await getDb();
+  if (!db) {
+    return [];
+  }
+
+  return await db.select().from(causations);
+}
+
+/**
+ * Recommendations Management Queries
+ */
+
+// Create a new recommendation
+export async function createRecommendation(recommendation: InsertRecommendation) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const result = await db.insert(recommendations).values(recommendation);
+  return result;
+}
+
+// Get all recommendations
+export async function getAllRecommendations() {
+  const db = await getDb();
+  if (!db) {
+    return [];
+  }
+
+  return await db.select().from(recommendations);
+}
+
+/**
+ * Banks Management Queries
+ */
+
+// Create a new bank
+export async function createBank(bank: InsertBank) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const result = await db.insert(banks).values(bank);
+  return result;
+}
+
+// Get all banks
+export async function getAllBanks() {
+  const db = await getDb();
+  if (!db) {
+    return [];
+  }
+
+  return await db.select().from(banks);
+}
+
+// Get bank by ID
+export async function getBankById(bankId: number) {
+  const db = await getDb();
+  if (!db) {
+    return undefined;
+  }
+
+  const result = await db.select().from(banks).where(eq(banks.id, bankId)).limit(1);
+  return result.length > 0 ? result[0] : undefined;
+}
+
+/**
+ * Stakeholders Management Queries
+ */
+
+// Create a new stakeholder
+export async function createStakeholder(stakeholder: InsertStakeholder) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const result = await db.insert(stakeholders).values(stakeholder);
+  return result;
+}
+
+// Get all stakeholders
+export async function getAllStakeholders() {
+  const db = await getDb();
+  if (!db) {
+    return [];
+  }
+
+  return await db.select().from(stakeholders);
+}

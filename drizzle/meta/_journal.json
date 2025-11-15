@@ -15,6 +15,13 @@
       "when": 1763190634980,
       "tag": "0001_flat_silverclaw",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1763223940771,
+      "tag": "0002_silly_network",
+      "breakpoints": true
     }
   ]
 }
