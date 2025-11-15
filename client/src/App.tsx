@@ -40,8 +40,10 @@ import ScenarioForecasting from "./pages/ScenarioForecasting";
 import PolicyRecommendations from "./pages/PolicyRecommendations";
 import StatisticalIndicators from "./pages/StatisticalIndicators";
 import NewsAggregator from "./pages/NewsAggregator";
+import FileManager from "./pages/FileManager";
 
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={"/"} component={LandingPage} />
@@ -78,6 +80,7 @@ function Router() {
       <Route path={"/policy"} component={PolicyRecommendations} />
       <Route path={"/indicators"} component={StatisticalIndicators} />
       <Route path={"/news"} component={NewsAggregator} />
+      <Route path={"/files"} component={FileManager} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1763190539875,
+      "tag": "0000_familiar_lorna_dane",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1763190634980,
+      "tag": "0001_flat_silverclaw",
+      "breakpoints": true
+    }
+  ]
+}
