@@ -40,8 +40,15 @@ import ScenarioForecasting from "./pages/ScenarioForecasting";
 import PolicyRecommendations from "./pages/PolicyRecommendations";
 import StatisticalIndicators from "./pages/StatisticalIndicators";
 import NewsAggregator from "./pages/NewsAggregator";
+import FileManager from "./pages/FileManager";
+import ExecutiveDashboard from "./pages/ExecutiveDashboard";
+import CBYDashboard from "./pages/CBYDashboard";
+import SaudiArabiaPage from "./pages/SaudiArabiaPage";
+import WorldBankJourney from "./pages/WorldBankJourney";
+import FinancialFlowsNetwork from "./pages/FinancialFlowsNetwork";
 
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={"/"} component={LandingPage} />
@@ -66,6 +73,9 @@ function Router() {
       <Route path={"/calculators"} component={FinancialCalculators} />
       <Route path={"/data-viz"} component={DataVisualization} />
       <Route path={"/stakeholders"} component={StakeholderHub} />
+        <Route path="/stakeholders/saudi-arabia" component={SaudiArabiaPage} />
+          <Route path="/world-bank" component={WorldBankJourney} />
+      <Route path="/financial-flows" component={FinancialFlowsNetwork} />
       <Route path="/sanctions" component={SanctionsTracker} />
       <Route path="/key-statistics" component={KeyStatistics} />
       <Route path="/transformation" component={FinancialTransformation} />
@@ -78,6 +88,9 @@ function Router() {
       <Route path={"/policy"} component={PolicyRecommendations} />
       <Route path={"/indicators"} component={StatisticalIndicators} />
       <Route path={"/news"} component={NewsAggregator} />
+      <Route path={"/files"} component={FileManager} />
+      <Route path={"/executive-dashboard"} component={ExecutiveDashboard} />
+      <Route path={"/cby-dashboard"} component={CBYDashboard} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
