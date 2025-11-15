@@ -41,6 +41,8 @@ import PolicyRecommendations from "./pages/PolicyRecommendations";
 import StatisticalIndicators from "./pages/StatisticalIndicators";
 import NewsAggregator from "./pages/NewsAggregator";
 import FileManager from "./pages/FileManager";
+import ExecutiveDashboard from "./pages/ExecutiveDashboard";
+import CBYDashboard from "./pages/CBYDashboard";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -81,6 +83,8 @@ function Router() {
       <Route path={"/indicators"} component={StatisticalIndicators} />
       <Route path={"/news"} component={NewsAggregator} />
       <Route path={"/files"} component={FileManager} />
+      <Route path={"/executive-dashboard"} component={ExecutiveDashboard} />
+      <Route path={"/cby-dashboard"} component={CBYDashboard} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

@@ -25,6 +25,9 @@ export default function Header() {
       resources: 'الموارد',
       causeway: 'عن كوزواي',
       language: 'English',
+      stakeholderJourneys: 'رحلات أصحاب المصلحة',
+      executiveDashboard: 'لوحة المتابعة التنفيذية',
+      cbyDashboard: 'لوحة البنك المركزي',
       // Data & Analysis submenu
       compass: 'لوحة البوصلة',
       keyStats: 'الإحصاءات الرئيسية',
@@ -63,6 +66,9 @@ export default function Header() {
       resources: 'Resources',
       causeway: 'About CauseWay',
       language: 'العربية',
+      stakeholderJourneys: 'Stakeholder Journeys',
+      executiveDashboard: 'Executive Dashboard',
+      cbyDashboard: 'CBY Dashboard',
       // Data & Analysis submenu
       compass: 'Compass Dashboard',
       keyStats: 'Key Statistics',
@@ -122,6 +128,24 @@ export default function Header() {
               {t.home}
             </span>
           </Link>
+          
+          {/* Stakeholder Journeys Dropdown */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button className="flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors">
+                {t.stakeholderJourneys}
+                <ChevronDown className="h-4 w-4" />
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-56">
+              <Link href="/executive-dashboard">
+                <DropdownMenuItem className="cursor-pointer">{t.executiveDashboard}</DropdownMenuItem>
+              </Link>
+              <Link href="/cby-dashboard">
+                <DropdownMenuItem className="cursor-pointer">{t.cbyDashboard}</DropdownMenuItem>
+              </Link>
+            </DropdownMenuContent>
+          </DropdownMenu>
           
           {/* Data & Analysis Dropdown */}
           <DropdownMenu>

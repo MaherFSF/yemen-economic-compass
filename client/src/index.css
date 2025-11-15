@@ -136,8 +136,11 @@
     @apply bg-background text-foreground;
     /* Typography: IBM Plex Sans Arabic (UI), Noto Naskh Arabic (longform) for Arabic */
     /* Inter (UI), Source Serif Pro (headings) for English */
-    font-family: 'IBM Plex Sans Arabic', 'Inter', 'Tajawal', 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
-    direction: rtl;
+    font-family: 'IBM Plex Sans Arabic', 'Inter', 'Tajawal', 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
   
   /* Yemen flag border: ultra-thin top border (red-white-black, 2px each) on homepage */
@@ -157,9 +160,24 @@
     pointer-events: none;
   }
   h1, h2, h3, h4, h5, h6 {
-    /* Headings: Source Serif Pro (EN), Noto Naskh Arabic (AR) */
-    font-family: 'Noto Naskh Arabic', 'Source Serif Pro', 'Cairo', 'Tajawal', serif;
+    /* Headings: Noto Naskh Arabic (AR), Source Serif 4 (EN) */
+    font-family: 'Noto Naskh Arabic', 'Source Serif 4', 'Cairo', 'Tajawal', 'Georgia', serif;
     font-weight: 700;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+  
+  /* English-specific font override when lang="en" */
+  :root[lang="en"] body {
+    font-family: 'Inter', 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  
+  :root[lang="en"] h1,
+  :root[lang="en"] h2,
+  :root[lang="en"] h3,
+  :root[lang="en"] h4,
+  :root[lang="en"] h5,
+  :root[lang="en"] h6 {
+    font-family: 'Source Serif 4', 'Inter', 'Georgia', serif;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
