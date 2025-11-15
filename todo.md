@@ -246,3 +246,274 @@
 - [ ] Document all changes
 - [ ] Create user guide
 - [ ] Write deployment notes
+
+
+---
+
+## 🌟 WORLD-CLASS STAKEHOLDER MICRO-SITES
+
+### World Bank Dedicated Journey
+- [ ] Create /world-bank-journey page with comprehensive dashboard
+- [ ] Extract all WB project data from YEMENFINANCIALMARKETINFRASTRUCTUREANDINCLUSIONPROJECT2(5).pdf
+- [ ] Add WB project tracker with Financial Market Infrastructure project details
+- [ ] Add disbursement timeline visualization
+- [ ] Add impact metrics dashboard (beneficiaries, sectors, regions)
+- [ ] Add implementing partners section with details
+- [ ] Add policy recommendations aligned with WB mandate
+- [ ] Add literature library filtered to WB-relevant research
+- [ ] Add news feed tracking WB activities in Yemen
+- [ ] Add indicator dashboard showing WB-supported metrics
+- [ ] Add export functionality for WB reports
+- [ ] Add WB project cards with status, budget, timeline
+- [ ] Add project implementation progress tracker
+- [ ] Add risk assessment dashboard for WB projects
+- [ ] Add comparative analysis with WB projects in other fragile states
+- [ ] Add scenario simulator for WB interventions
+- [ ] Add policy impact meter for WB-supported reforms
+
+### Regional Actor Pages (Complete Set)
+- [x] Saudi Arabia - comprehensive page created
+- [ ] UAE - military role, economic support, humanitarian aid, port control, Aden influence
+- [ ] Oman - mediation efforts, economic ties, humanitarian corridor, neutral stance
+- [ ] Iran - Houthi support allegations, sanctions impact, regional strategy
+- [ ] Qatar - humanitarian aid, mediation attempts, reconstruction pledges
+- [ ] Kuwait - humanitarian aid, reconstruction support, diplomatic role
+- [ ] Egypt - military support to coalition, economic ties, regional security
+- [ ] Jordan - refugee impact, economic cooperation, humanitarian support
+
+### Yemeni Actor Pages (Complete Set)
+- [ ] Houthi Movement (Ansar Allah) - control areas, economic policies, revenue sources (ports, taxes, customs)
+- [ ] Internationally Recognized Government (IRG) - economic policies, fiscal challenges, CBY-Aden
+- [ ] Southern Transitional Council (STC) - separatist agenda, economic vision, Aden control
+- [ ] Tribal Actors - economic influence, conflict dynamics, local governance
+- [ ] Islah Party - political role, economic policies
+- [ ] General People's Congress (GPC) - fragmentation, economic influence
+- [ ] Other Political Parties - economic positions
+
+### International Organization Pages (Complete Set)
+- [ ] IMF - programs, Article IV consultations, assessments, recommendations
+- [ ] UN OCHA - humanitarian coordination, funding appeals, FTS data
+- [ ] UNDP - development projects, governance support, recovery planning
+- [ ] WFP - food assistance, cash transfers, logistics
+- [ ] UNICEF - child protection, education, health, nutrition
+- [ ] WHO - health system support, COVID response, disease surveillance
+- [ ] UNHCR - displacement, IDP support, refugee assistance
+- [ ] IOM - migration, displacement tracking matrix
+- [ ] USAID - bilateral aid, implementing partners, sectors
+- [ ] UK FCDO - humanitarian and development aid, conflict resolution
+- [ ] EU - humanitarian aid, development cooperation, Yemen Trust Fund
+- [ ] Germany (GIZ/KfW) - development projects, technical cooperation
+- [ ] Netherlands - humanitarian aid, WASH sector
+- [ ] Sweden - humanitarian and development support
+- [ ] Switzerland - humanitarian aid, mediation, good offices
+
+### Commercial Bank Observatory (15+ Individual Pages)
+- [ ] CAC Bank - history, ownership structure, branches, financial data, audit reports, challenges
+- [ ] Yemen Kuwait Bank - history, performance metrics, regional presence
+- [ ] Tadhamon International Islamic Bank - Islamic banking products, Sharia compliance
+- [ ] Yemen Commercial Bank - state ownership, restructuring efforts
+- [ ] National Bank of Yemen - historical role, current challenges
+- [ ] Cooperative & Agricultural Credit Bank - agricultural finance, rural reach
+- [ ] Saba Islamic Bank - Islamic products, market position
+- [ ] United Bank - ownership, operations, market share
+- [ ] Yemen Bank for Reconstruction & Development - development finance mandate
+- [ ] Al-Kuraimi Islamic Microfinance Bank - microfinance services, Islamic products
+- [ ] Alkuraimi Exchange - remittances, exchange services, network
+- [ ] International Bank of Yemen - international operations, correspondent banking
+- [ ] Arab Bank - regional presence, Yemen operations
+- [ ] Shamil Bank - Islamic banking, market position
+- [ ] Al-Amal Microfinance Bank - microfinance focus, social impact
+
+### Microfinance Institution Pages (10+ pages)
+- [ ] Al-Amal Microfinance Bank - detailed profile, products, outreach
+- [ ] National Microfinance Foundation - programs, geographic reach, impact
+- [ ] Aden Microfinance Foundation - operations, target segments
+- [ ] Azal Microfinance Program - products, performance, sustainability
+- [ ] Small & Micro Enterprise Development Foundation - SME focus, services
+- [ ] Yemen Microfinance Network - industry coordination, advocacy
+- [ ] Other MFIs - comprehensive coverage of all licensed institutions
+
+### Specialized Audience Pages
+- [ ] Researchers & Universities - data access, methodology documentation, API, citations
+- [ ] Journalists (Finance & Economy) - press kit, fact sheets, expert contacts, embargoed releases
+- [ ] Citizens - simplified explanations, personal finance tools, rights information
+- [ ] Private Sector - investment climate analysis, business environment, opportunities
+- [ ] Civil Society - advocacy tools, transparency data, accountability metrics
+
+---
+
+## 🎨 ADVANCED FEATURES & TOOLS
+
+### Translation & Localization
+- [ ] Add language toggle button to EVERY page (not just header)
+- [ ] Implement floating language switcher (bottom-right corner)
+- [ ] Add inline translation tooltips for technical terms
+- [ ] Create comprehensive glossary page with bilingual definitions
+- [ ] Add "Translate this section" buttons for long content
+- [ ] Implement Google Translate API integration for user-generated content
+
+### Context Boxes ("What is this?")
+- [ ] Add info icon tooltips explaining technical terms throughout
+- [ ] Add "Why this matters" expandable sections on key pages
+- [ ] Add methodology explanations for all calculations
+- [ ] Add data source citations with clickable links
+- [ ] Add "Learn more" expandable sections with deeper context
+- [ ] Add "Related topics" suggestions
+
+### Proper CauseWay Branding
+- [ ] Use official CauseWay Foundation logo from IMG_9478(4).jpeg
+- [ ] Add CauseWay Arcadia branding (IMG_9480) to research/training sections
+- [ ] Update About page with proper CauseWay structure
+- [ ] Add CauseWay arms: Lighthouse, Compass/MEO, Fintech, Ventures/Kayan/Ripple, Arcadia, Peace Nexus
+- [ ] Ensure consistent burgundy/gold color scheme
+- [ ] Add proper attribution footer on all pages
+
+### Sanctions Tracking System
+- [ ] Create comprehensive sanctions tracker page
+- [ ] Extract sanctions data from UN reports
+- [ ] Add individual profiles for all sanctioned entities
+- [ ] Add timeline of sanctions imposed/lifted
+- [ ] Add impact analysis of sanctions on economy
+- [ ] Add links to official UN Security Council resolutions
+- [ ] Track asset freezes, travel bans, arms embargoes
+- [ ] Add sanctions compliance information for businesses
+- [ ] Show humanitarian exemptions and procedures
+
+### Authentic Photography Integration
+- [ ] Source high-resolution photos of Sana'a Old City
+- [ ] Add photos of Aden port and city
+- [ ] Include photos of Hodeidah port
+- [ ] Add photos of humanitarian situations (ethical, with consent)
+- [ ] Include photos of economic activities (markets, banks, businesses)
+- [ ] Add photos of key infrastructure (ports, airports, roads)
+- [ ] Ensure all photos are properly attributed with photographer credits
+- [ ] Add photo captions in both Arabic and English
+
+---
+
+## 📚 PDF CONTENT EXTRACTION TASKS
+
+### World Bank Documents
+- [ ] Extract YEMEN FINANCIAL MARKET INFRASTRUCTURE AND INCLUSION PROJECT details from YEMENFINANCIALMARKETINFRASTRUCTUREANDINCLUSIONPROJECT2(5).pdf
+- [ ] Extract project objectives, components, sub-components
+- [ ] Extract implementing partners and their roles
+- [ ] Extract disbursement schedules and timelines
+- [ ] Extract impact metrics and beneficiary targets
+- [ ] Extract policy recommendations from PADHI00396.pdf
+
+### Economic Crisis Analysis
+- [ ] Extract timeline events from YemenEconomicCrisis2015-2025(2).pdf
+- [ ] Extract economic indicators from YemenEconomicCrisis2015-20252(1).pdf
+- [ ] Extract actor analysis from Yemens-Financial-and-Economic-Landscape-2015-2025(5).pdf
+- [ ] Extract crisis analysis from Yemen'sEconomicandFinancialCrisisAWorkingAnalysis.pdf
+
+### Specialized Reports
+- [ ] Extract Climate Finance data from Climate_Finance_in_Yemen_NO33_en.pdf
+- [ ] Extract E-Commerce analysis from RYE_E_Commerce_in_Yemen_NO35_en.pdf
+- [ ] Extract microfinance recommendations from Enhancing_the_Role_of_Microfinance_Banks_for_Sustainable_Impact_in_Yemen_en.pdf
+- [ ] Extract aid impact findings from Impact_Assessment_of_Aid_Interventions_in_Yemen_en.pdf
+- [ ] Extract economic insights from Rethinking_Yemens_Economy_No6.pdf
+
+### Arabic Documents
+- [ ] Extract النظام المالي الموازي content from النظامالماليالموازيفياليمنBenfourThinkTank(1).pdf
+- [ ] Extract platform data from منصةرصداليمنالاقتصاديوالمالي(2).pdf
+- [ ] Extract additional data from منصةرصداليمنالاقتصاديوالمالي3(1).pdf
+- [ ] Extract more data from منصةرصداليمنالاقتصاديوالمالي2(2).pdf
+- [ ] Extract CauseWay platform content from منصهكوزوايالماليهوالاقتصاديه.pdf
+
+### Image Content Extraction
+- [ ] Extract commercial banks structure from IMG_9499.jpeg (15+ banks listed)
+- [ ] Extract key indicators from IMG_9495.jpeg (6 critical metrics with status)
+- [ ] Use CauseWay Foundation logo from IMG_9478(4).jpeg
+- [ ] Use CauseWay Arcadia description from IMG_9480(4).jpeg
+- [ ] Extract navigation structure from النظامالماليالموازيفياليمنBenfourThinkTank.png
+
+---
+
+## 📊 TIMELINE ENRICHMENT (2015-2025)
+
+### 2015 Events
+- [ ] March 26: Operation Decisive Storm begins - add photos, actors, impact
+- [ ] September: CBY relocates to Aden - add details, consequences
+- [ ] December: Humanitarian crisis declared - add UN data
+
+### 2016 Events
+- [ ] September 18: CBY split decree - add full details, actors, impact
+- [ ] Currency printing begins - add volumes, impact on inflation
+- [ ] Peace talks collapse - add timeline, parties involved
+
+### 2017 Events
+- [ ] Cholera outbreak - add WHO data, humanitarian response
+- [ ] Hodeidah battle begins - add military timeline, humanitarian impact
+- [ ] Saudi blockade tightens - add economic impact data
+
+### 2018 Events
+- [ ] December 13: Stockholm Agreement - add full text, implementation status
+- [ ] Currency collapse accelerates - add exchange rate data
+- [ ] Hodeidah ceasefire - add terms, violations
+
+### 2019 Events
+- [ ] Riyadh Agreement signed - add parties, terms, implementation
+- [ ] Economic reforms attempted - add CBY-Aden policies
+- [ ] Humanitarian funding crisis - add OCHA data
+
+### 2020 Events
+- [ ] April 10: COVID-19 first case - add health system response
+- [ ] Oil price collapse - add fiscal impact
+- [ ] Saudi ceasefire offer - add terms, response
+
+### 2021 Events
+- [ ] Marib offensive - add military timeline, displacement data
+- [ ] Hodeidah escalation - add incidents, humanitarian impact
+- [ ] Economic deterioration - add key indicators
+
+### 2022 Events
+- [ ] April: Truce agreement - add terms, monitoring mechanism
+- [ ] October: Truce expiration - add reasons, consequences
+- [ ] Economic stabilization attempts - add policies, results
+
+### 2023 Events
+- [ ] Saudi-Houthi talks - add locations, topics, outcomes
+- [ ] Economic reforms - add CBY policies, banking sector measures
+- [ ] Banking sector challenges - add specific issues
+
+### 2024 Events
+- [ ] Red Sea attacks - add timeline, economic impact, international response
+- [ ] Economic impact assessment - add trade data, shipping costs
+- [ ] International response - add sanctions, military operations
+
+### 2025 Events (Current)
+- [ ] Add current developments as they occur
+- [ ] Add future outlook scenarios
+- [ ] Add expert predictions
+
+---
+
+## 🎯 PRIORITY IMPLEMENTATION ORDER
+
+### IMMEDIATE (Start Now)
+1. Extract all PDF content and organize in structured format
+2. Build World Bank dedicated journey page
+3. Create UAE, Oman, Iran stakeholder pages
+4. Create Houthi, IRG, STC actor pages
+
+### HIGH PRIORITY (Next 24 hours)
+5. Build Commercial Bank Observatory with 15+ bank pages
+6. Create IMF, UN OCHA, UNDP, WFP organization pages
+7. Add language toggle to every page
+8. Implement context boxes throughout
+9. Add proper CauseWay branding
+
+### MEDIUM PRIORITY (Next 48 hours)
+10. Create microfinance institution pages
+11. Build sanctions tracking system
+12. Enrich timeline with 50+ events and photos
+13. Create specialized audience pages
+14. Add advanced export functionality
+
+### LOWER PRIORITY (Next week)
+15. Add authentic photography throughout
+16. Implement advanced visualizations
+17. Build public API for researchers
+18. Optimize performance (<2s load time)
+19. Conduct comprehensive QA testing
