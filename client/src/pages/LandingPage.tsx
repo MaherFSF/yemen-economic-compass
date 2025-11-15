@@ -1,351 +1,291 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ArrowRight, TrendingDown, Users, DollarSign, BarChart3, Compass, FileText, Database, Target } from "lucide-react";
-import MasterCompass from "@/components/MasterCompass";
-import NewsTicker from "@/components/NewsTicker";
-import ScrollytellingTimeline from "@/components/ScrollytellingTimeline";
-import { Link } from "wouter";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { APP_LOGO, PLATFORM_NAME_AR, PLATFORM_NAME_EN } from "@/const";
+import { Link } from 'wouter';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { ArrowRight, TrendingUp, Building2, Users, Database, FileText, BarChart3 } from 'lucide-react';
 
 export default function LandingPage() {
   const { language } = useLanguage();
   const isArabic = language === 'ar';
 
+  const content = {
+    ar: {
+      hero: {
+        title: 'البوصلة الاقتصادية للحرب في اليمن',
+        subtitle: 'منصة تحليلية شاملة لفهم التحولات المالية والاقتصادية في اليمن',
+        stat1: { value: '$2.4B', label: 'المساعدات الإنسانية 2024' },
+        stat2: { value: '8.2M', label: 'المستفيدون من البرامج' },
+        stat3: { value: '1,800', label: 'سعر الصرف الموازي (YER/USD)' },
+        cta: 'استكشف المنصة',
+      },
+      stakeholders: {
+        title: 'اختر رحلتك',
+        subtitle: 'مسارات متخصصة حسب احتياجاتك',
+        donors: {
+          title: 'المانحون والمؤسسات الدولية',
+          desc: 'لوحة تنفيذية لتتبع التأثير والعائد على الاستثمار',
+          link: '/executive-dashboard',
+        },
+        cby: {
+          title: 'البنك المركزي اليمني',
+          desc: 'أدوات السياسة النقدية ومحاكاة السيناريوهات',
+          link: '/cby-dashboard',
+        },
+        researchers: {
+          title: 'الباحثون والمحللون',
+          desc: 'بيانات شاملة ومكتبة بحثية متعمقة',
+          link: '/literature',
+        },
+      },
+      trust: {
+        title: 'مصادر البيانات',
+        updated: 'آخر تحديث: 15 نوفمبر 2024',
+      },
+      quickAccess: {
+        title: 'الوصول السريع',
+        items: [
+          { icon: BarChart3, label: 'لوحة البوصلة', link: '/compass' },
+          { icon: TrendingUp, label: 'الإحصاءات الرئيسية', link: '/key-stats' },
+          { icon: FileText, label: 'التقارير', link: '/reports' },
+          { icon: Database, label: 'البيانات المتقدمة', link: '/advanced-viz' },
+          { icon: Users, label: 'أصحاب المصلحة', link: '/stakeholder-hub' },
+          { icon: Building2, label: 'البنوك التجارية', link: '/banks' },
+        ],
+      },
+    },
+    en: {
+      hero: {
+        title: 'Yemen Economic Compass',
+        subtitle: 'Comprehensive analytical platform for understanding Yemen\'s financial and economic transformations',
+        stat1: { value: '$2.4B', label: 'Humanitarian Aid 2024' },
+        stat2: { value: '8.2M', label: 'Program Beneficiaries' },
+        stat3: { value: '1,800', label: 'Parallel Exchange Rate (YER/USD)' },
+        cta: 'Explore Platform',
+      },
+      stakeholders: {
+        title: 'Choose Your Journey',
+        subtitle: 'Specialized pathways tailored to your needs',
+        donors: {
+          title: 'Donors & International Institutions',
+          desc: 'Executive dashboard for impact tracking and ROI analysis',
+          link: '/executive-dashboard',
+        },
+        cby: {
+          title: 'Central Bank of Yemen',
+          desc: 'Monetary policy tools and scenario simulation',
+          link: '/cby-dashboard',
+        },
+        researchers: {
+          title: 'Researchers & Analysts',
+          desc: 'Comprehensive data and in-depth research library',
+          link: '/literature',
+        },
+      },
+      trust: {
+        title: 'Data Sources',
+        updated: 'Last updated: November 15, 2024',
+      },
+      quickAccess: {
+        title: 'Quick Access',
+        items: [
+          { icon: BarChart3, label: 'Compass Dashboard', link: '/compass' },
+          { icon: TrendingUp, label: 'Key Statistics', link: '/key-stats' },
+          { icon: FileText, label: 'Reports', link: '/reports' },
+          { icon: Database, label: 'Advanced Data', link: '/advanced-viz' },
+          { icon: Users, label: 'Stakeholders', link: '/stakeholder-hub' },
+          { icon: Building2, label: 'Commercial Banks', link: '/banks' },
+        ],
+      },
+    },
+  };
+
+  const t = isArabic ? content.ar : content.en;
+
   return (
-    <div className="w-full">
-      {/* Hero Section - Professional Think Tank Style */}
-      <section className="relative bg-gradient-to-br from-slate-50 via-white to-teal-50/30 dark:from-slate-900 dark:via-slate-800 dark:to-teal-950/20">
-        <div className="container mx-auto px-6 py-24 md:py-32">
-          <div className="max-w-6xl mx-auto">
-            {/* Logo and Badge */}
-            <div className="flex flex-col items-center mb-12">
-              <img 
-                src={APP_LOGO}
-                alt="Yemen Economic Compass Logo"
-                className="h-20 md:h-24 w-auto mb-6"
-              />
-              <Badge variant="outline" className="text-sm px-4 py-1.5 border-teal-600/30 text-teal-700 dark:text-teal-400">
-                <Compass className="w-3.5 h-3.5 mr-2 inline" />
-                {isArabic ? "مبادرة بحثية من CauseWay" : "A CauseWay Research Initiative"}
-              </Badge>
+    <div className="min-h-screen">
+      {/* Hero Section - 5 seconds */}
+      <section 
+        className="relative h-[600px] flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: 'url(/images/sanaa-hero.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        {/* Sophisticated overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#8B1538]/95 via-[#8B1538]/85 to-[#475569]/90"></div>
+        
+        <div className="relative z-10 container mx-auto px-6 text-center text-white">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6" style={{ fontFamily: isArabic ? 'Noto Naskh Arabic, serif' : 'Playfair Display, serif' }}>
+            {t.hero.title}
+          </h1>
+          <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto font-light">
+            {t.hero.subtitle}
+          </p>
+
+          {/* 3 Key Numbers */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <div className="text-4xl font-bold text-[#D4AF37]">{t.hero.stat1.value}</div>
+              <div className="text-sm mt-2 text-white/90">{t.hero.stat1.label}</div>
             </div>
-
-            {/* Main Headline */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-center text-slate-900 dark:text-white mb-8 leading-tight tracking-tight">
-              {isArabic ? PLATFORM_NAME_AR : PLATFORM_NAME_EN}
-            </h1>
-
-            {/* Subtitle */}
-            <p className="text-xl md:text-2xl text-center text-slate-600 dark:text-slate-300 mb-6 max-w-4xl mx-auto font-light leading-relaxed">
-              {isArabic
-                ? "منصة تحليلية شاملة لفهم النظام المالي الموازي في اليمن"
-                : "Comprehensive Analytical Platform for Understanding Yemen's Parallel Financial System"
-              }
-            </p>
-
-            <p className="text-lg text-center text-slate-500 dark:text-slate-400 mb-12 max-w-3xl mx-auto">
-              {isArabic
-                ? "عشر سنوات أعادت تشكيل كيفية حركة المال في اليمن (2015-2025)"
-                : "Ten Years That Rewired How Money Moves in Yemen (2015-2025)"
-              }
-            </p>
-
-            {/* CTA Buttons - Professional Spacing */}
-            <div className="flex flex-wrap gap-4 justify-center mb-20">
-              <Link href="/executive-dashboard">
-                <Button size="lg" className="text-base px-8 py-6 shadow-lg hover:shadow-xl transition-all">
-                  {isArabic ? "لوحة المانحين" : "Executive Dashboard"}
-                  <ArrowRight className={`${isArabic ? 'mr-2 rotate-180' : 'ml-2'} h-5 w-5`} />
-                </Button>
-              </Link>
-              <Link href="/cby-dashboard">
-                <Button size="lg" variant="outline" className="text-base px-8 py-6 border-2">
-                  {isArabic ? "لوحة البنك المركزي" : "CBY Dashboard"}
-                </Button>
-              </Link>
-              <Link href="/literature">
-                <Button size="lg" variant="outline" className="text-base px-8 py-6 border-2">
-                  {isArabic ? "مكتبة الأبحاث" : "Research Library"}
-                </Button>
-              </Link>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <div className="text-4xl font-bold text-[#D4AF37]">{t.hero.stat2.value}</div>
+              <div className="text-sm mt-2 text-white/90">{t.hero.stat2.label}</div>
             </div>
-
-            {/* Key Impact Metrics - Professional Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-              <Card className="border-2 hover:shadow-lg transition-shadow">
-                <CardContent className="p-8 text-center">
-                  <TrendingDown className="h-10 w-10 text-red-600 mx-auto mb-4" />
-                  <div className="text-4xl font-bold text-slate-900 dark:text-white mb-2">-58%</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-400 font-medium">
-                    {isArabic ? "دخل الفرد الحقيقي" : "Real Income Per Capita"}
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 hover:shadow-lg transition-shadow">
-                <CardContent className="p-8 text-center">
-                  <Users className="h-10 w-10 text-orange-600 mx-auto mb-4" />
-                  <div className="text-4xl font-bold text-slate-900 dark:text-white mb-2">21.6M</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-400 font-medium">
-                    {isArabic ? "يحتاجون مساعدات" : "Need Humanitarian Aid"}
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 hover:shadow-lg transition-shadow">
-                <CardContent className="p-8 text-center">
-                  <DollarSign className="h-10 w-10 text-blue-600 mx-auto mb-4" />
-                  <div className="text-4xl font-bold text-slate-900 dark:text-white mb-2">120%</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-400 font-medium">
-                    {isArabic ? "فارق سعر الصرف" : "Exchange Rate Spread"}
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 hover:shadow-lg transition-shadow">
-                <CardContent className="p-8 text-center">
-                  <BarChart3 className="h-10 w-10 text-teal-600 mx-auto mb-4" />
-                  <div className="text-4xl font-bold text-slate-900 dark:text-white mb-2">$2.4B</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-400 font-medium">
-                    {isArabic ? "تمويل إنساني 2024" : "Humanitarian Funding 2024"}
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <div className="text-4xl font-bold text-[#D4AF37]">{t.hero.stat3.value}</div>
+              <div className="text-sm mt-2 text-white/90">{t.hero.stat3.label}</div>
             </div>
           </div>
+
+          {/* Single CTA */}
+          <Link href="/compass">
+            <Button size="lg" className="bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#8B1538] font-semibold text-lg px-8 py-6">
+              {t.hero.cta}
+              <ArrowRight className={`${isArabic ? 'mr-2' : 'ml-2'} h-5 w-5`} />
+            </Button>
+          </Link>
         </div>
       </section>
 
-      {/* Credibility Section - Think Tank Standards */}
-      <section className="bg-white dark:bg-slate-900 py-16 border-y">
+      {/* Value Proposition - 3 Stakeholder Cards - 10 seconds */}
+      <section className="py-20 bg-gradient-to-b from-white to-slate-50">
         <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-6">
-              {isArabic ? "منصة تحليلية موثوقة" : "Trusted Analytical Platform"}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-[#8B1538] mb-4" style={{ fontFamily: isArabic ? 'Noto Naskh Arabic, serif' : 'Playfair Display, serif' }}>
+              {t.stakeholders.title}
             </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-              {isArabic
-                ? "تجمع هذه المنصة بيانات من البنك الدولي، صندوق النقد الدولي، مكتب الأمم المتحدة لتنسيق الشؤون الإنسانية، البنك المركزي اليمني، ومركز صنعاء للدراسات الاستراتيجية لتقديم تحليل شامل للنظام المالي في اليمن."
-                : "This platform integrates data from the World Bank, IMF, UN OCHA, Central Bank of Yemen, and Sana'a Center for Strategic Studies to provide comprehensive analysis of Yemen's financial system."
-              }
-            </p>
-
-            {/* Data Sources Badges */}
-            <div className="flex flex-wrap gap-3 justify-center">
-              {[
-                { label: "World Bank", ar: "البنك الدولي" },
-                { label: "IMF", ar: "صندوق النقد الدولي" },
-                { label: "UN OCHA", ar: "مكتب الأمم المتحدة" },
-                { label: "CBY", ar: "البنك المركزي" },
-                { label: "Sana'a Center", ar: "مركز صنعاء" }
-              ].map((source) => (
-                <Badge key={source.label} variant="outline" className="px-4 py-2 text-sm">
-                  {isArabic ? source.ar : source.label}
-                </Badge>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* News Ticker */}
-      <section className="bg-slate-50 dark:bg-slate-800/50 py-4 border-b">
-        <div className="container mx-auto px-6">
-          <NewsTicker />
-        </div>
-      </section>
-
-      {/* Master Compass Widget */}
-      <section className="bg-white dark:bg-slate-900 py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-                {isArabic ? "البوصلة الاقتصادية الرئيسية" : "Master Economic Compass"}
-              </h2>
-              <p className="text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
-                {isArabic
-                  ? "مؤشرات رئيسية تتبع الصحة الاقتصادية والإنسانية في اليمن"
-                  : "Key indicators tracking Yemen's economic and humanitarian health"
-                }
-              </p>
-            </div>
-            <MasterCompass />
-          </div>
-        </div>
-      </section>
-
-      {/* Scrollytelling Timeline */}
-      <section className="bg-gradient-to-br from-slate-50 via-white to-teal-50/30 dark:from-slate-900 dark:via-slate-800 dark:to-teal-950/20 py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto mb-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-              {isArabic ? "رحلة عشر سنوات" : "A Decade's Journey"}
-            </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
-              {isArabic
-                ? "استكشف الأحداث الرئيسية التي شكلت النظام المالي في اليمن من 2015 إلى 2025"
-                : "Explore the key events that shaped Yemen's financial system from 2015 to 2025"
-              }
+            <p className="text-lg text-slate-600">
+              {t.stakeholders.subtitle}
             </p>
           </div>
-          <ScrollytellingTimeline />
-        </div>
-      </section>
 
-      {/* Executive Summary Section */}
-      <section className="bg-white dark:bg-slate-900 py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-8 text-center">
-              {isArabic ? "الملخص التنفيذي" : "Executive Summary"}
-            </h2>
-            
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
-                {isArabic
-                  ? "منذ عام 2015، أدى الصراع في اليمن إلى تفكك غير مسبوق في النظام المالي الرسمي، مما أدى إلى ظهور نظام مالي موازٍ معقد. انقسم البنك المركزي اليمني بين عدن وصنعاء، وتباعدت أسعار الصرف بنسبة تزيد عن 120٪، وانهارت الوساطة المصرفية التقليدية. ومع ذلك، استمرت حركة الأموال من خلال شبكات غير رسمية، وتحويلات، ومساعدات إنسانية تبلغ 2.4 مليار دولار سنوياً."
-                  : "Since 2015, Yemen's conflict has triggered an unprecedented fragmentation of the formal financial system, giving rise to a complex parallel financial architecture. The Central Bank of Yemen split between Aden and Sana'a, exchange rates diverged by over 120%, and traditional banking intermediation collapsed. Yet money continued to flow through informal networks, remittances, and $2.4 billion in annual humanitarian aid."
-                }
-              </p>
-
-              <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
-                {isArabic
-                  ? "تقدم هذه المنصة تحليلاً شاملاً لهذا النظام المالي الموازي، مدعوماً ببيانات من البنك الدولي، صندوق النقد الدولي، مكتب الأمم المتحدة لتنسيق الشؤون الإنسانية، والبنك المركزي اليمني. نحن نتتبع 12 مؤشراً اقتصادياً رئيسياً، ونوثق 24 حدثاً رئيسياً على مدى عشر سنوات، ونقدم أدوات تفاعلية للمانحين وصانعي السياسات والباحثين."
-                  : "This platform provides comprehensive analysis of this parallel financial system, backed by data from the World Bank, IMF, UN OCHA, and Central Bank of Yemen. We track 12 key economic indicators, document 24 major events over a decade, and provide interactive tools for donors, policymakers, and researchers."
-                }
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stakeholder-Specific Pathways */}
-      <section className="bg-gradient-to-br from-slate-50 via-white to-teal-50/30 dark:from-slate-900 dark:via-slate-800 dark:to-teal-950/20 py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4 text-center">
-              {isArabic ? "مسارات أصحاب المصلحة" : "Stakeholder Pathways"}
-            </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400 mb-12 text-center max-w-3xl mx-auto">
-              {isArabic
-                ? "تجربة مخصصة لكل نوع من أصحاب المصلحة"
-                : "Tailored experience for each stakeholder type"
-              }
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* World Bank / IMF / Donors */}
-              <Card className="border-2 hover:shadow-xl transition-all group">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Donors Card */}
+            <Link href={t.stakeholders.donors.link}>
+              <Card className="h-full hover:shadow-xl transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-[#8B1538] group">
                 <CardContent className="p-8">
-                  <div className="flex items-center justify-center w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full mb-6 mx-auto group-hover:scale-110 transition-transform">
-                    <Target className="h-8 w-8 text-blue-600 dark:text-blue-400" />
+                  <div className="w-16 h-16 rounded-full bg-[#8B1538]/10 flex items-center justify-center mb-6 group-hover:bg-[#8B1538] transition-colors">
+                    <TrendingUp className="h-8 w-8 text-[#8B1538] group-hover:text-white transition-colors" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 text-center">
-                    {isArabic ? "المانحون والمؤسسات الدولية" : "Donors & International Institutions"}
+                  <h3 className="text-2xl font-bold text-[#8B1538] mb-3">
+                    {t.stakeholders.donors.title}
                   </h3>
-                  <p className="text-slate-600 dark:text-slate-400 mb-6 text-center">
-                    {isArabic
-                      ? "تتبع التأثير، محاكاة السيناريوهات، تصدير التقارير"
-                      : "Track impact, simulate scenarios, export reports"
-                    }
+                  <p className="text-slate-600">
+                    {t.stakeholders.donors.desc}
                   </p>
-                  <Link href="/executive-dashboard">
-                    <Button className="w-full">
-                      {isArabic ? "لوحة المانحين" : "Executive Dashboard"}
-                      <ArrowRight className={`${isArabic ? 'mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
-                    </Button>
-                  </Link>
+                  <div className="mt-6 flex items-center text-[#8B1538] font-semibold group-hover:translate-x-2 transition-transform">
+                    {isArabic ? 'ابدأ الآن' : 'Get Started'}
+                    <ArrowRight className={`${isArabic ? 'mr-2' : 'ml-2'} h-4 w-4`} />
+                  </div>
                 </CardContent>
               </Card>
+            </Link>
 
-              {/* Central Bank */}
-              <Card className="border-2 hover:shadow-xl transition-all group">
+            {/* CBY Card */}
+            <Link href={t.stakeholders.cby.link}>
+              <Card className="h-full hover:shadow-xl transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-[#8B1538] group">
                 <CardContent className="p-8">
-                  <div className="flex items-center justify-center w-16 h-16 bg-teal-100 dark:bg-teal-900/30 rounded-full mb-6 mx-auto group-hover:scale-110 transition-transform">
-                    <BarChart3 className="h-8 w-8 text-teal-600 dark:text-teal-400" />
+                  <div className="w-16 h-16 rounded-full bg-[#8B1538]/10 flex items-center justify-center mb-6 group-hover:bg-[#8B1538] transition-colors">
+                    <Building2 className="h-8 w-8 text-[#8B1538] group-hover:text-white transition-colors" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 text-center">
-                    {isArabic ? "البنك المركزي اليمني" : "Central Bank of Yemen"}
+                  <h3 className="text-2xl font-bold text-[#8B1538] mb-3">
+                    {t.stakeholders.cby.title}
                   </h3>
-                  <p className="text-slate-600 dark:text-slate-400 mb-6 text-center">
-                    {isArabic
-                      ? "مراقبة السياسة النقدية، محاكاة السياسات، تتبع الامتثال"
-                      : "Monitor monetary policy, simulate policies, track compliance"
-                    }
+                  <p className="text-slate-600">
+                    {t.stakeholders.cby.desc}
                   </p>
-                  <Link href="/cby-dashboard">
-                    <Button className="w-full">
-                      {isArabic ? "لوحة البنك المركزي" : "CBY Dashboard"}
-                      <ArrowRight className={`${isArabic ? 'mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
-                    </Button>
-                  </Link>
+                  <div className="mt-6 flex items-center text-[#8B1538] font-semibold group-hover:translate-x-2 transition-transform">
+                    {isArabic ? 'ابدأ الآن' : 'Get Started'}
+                    <ArrowRight className={`${isArabic ? 'mr-2' : 'ml-2'} h-4 w-4`} />
+                  </div>
                 </CardContent>
               </Card>
+            </Link>
 
-              {/* Researchers */}
-              <Card className="border-2 hover:shadow-xl transition-all group">
+            {/* Researchers Card */}
+            <Link href={t.stakeholders.researchers.link}>
+              <Card className="h-full hover:shadow-xl transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-[#8B1538] group">
                 <CardContent className="p-8">
-                  <div className="flex items-center justify-center w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full mb-6 mx-auto group-hover:scale-110 transition-transform">
-                    <FileText className="h-8 w-8 text-purple-600 dark:text-purple-400" />
+                  <div className="w-16 h-16 rounded-full bg-[#8B1538]/10 flex items-center justify-center mb-6 group-hover:bg-[#8B1538] transition-colors">
+                    <FileText className="h-8 w-8 text-[#8B1538] group-hover:text-white transition-colors" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 text-center">
-                    {isArabic ? "الباحثون والمحللون" : "Researchers & Analysts"}
+                  <h3 className="text-2xl font-bold text-[#8B1538] mb-3">
+                    {t.stakeholders.researchers.title}
                   </h3>
-                  <p className="text-slate-600 dark:text-slate-400 mb-6 text-center">
-                    {isArabic
-                      ? "الوصول إلى البيانات، المنهجية، المكتبة البحثية"
-                      : "Access data, methodology, research library"
-                    }
+                  <p className="text-slate-600">
+                    {t.stakeholders.researchers.desc}
                   </p>
-                  <Link href="/literature">
-                    <Button className="w-full">
-                      {isArabic ? "مكتبة الأبحاث" : "Research Library"}
-                      <ArrowRight className={`${isArabic ? 'mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
-                    </Button>
-                  </Link>
+                  <div className="mt-6 flex items-center text-[#8B1538] font-semibold group-hover:translate-x-2 transition-transform">
+                    {isArabic ? 'ابدأ الآن' : 'Get Started'}
+                    <ArrowRight className={`${isArabic ? 'mr-2' : 'ml-2'} h-4 w-4`} />
+                  </div>
                 </CardContent>
               </Card>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Signals - 5 seconds */}
+      <section className="py-16 bg-white border-y">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-[#8B1538] mb-2">
+              {t.trust.title}
+            </h3>
+            <p className="text-sm text-slate-500">{t.trust.updated}</p>
+          </div>
+
+          <div className="flex flex-wrap justify-center items-center gap-8 max-w-5xl mx-auto">
+            <div className="flex items-center gap-3 px-6 py-3 bg-slate-50 rounded-lg">
+              <img src="https://logo.clearbit.com/worldbank.org" alt="World Bank" className="h-8 w-8" />
+              <span className="font-semibold text-slate-700">World Bank</span>
+            </div>
+            <div className="flex items-center gap-3 px-6 py-3 bg-slate-50 rounded-lg">
+              <img src="https://logo.clearbit.com/imf.org" alt="IMF" className="h-8 w-8" />
+              <span className="font-semibold text-slate-700">IMF</span>
+            </div>
+            <div className="flex items-center gap-3 px-6 py-3 bg-slate-50 rounded-lg">
+              <img src="https://logo.clearbit.com/unocha.org" alt="OCHA" className="h-8 w-8" />
+              <span className="font-semibold text-slate-700">UN OCHA</span>
+            </div>
+            <div className="flex items-center gap-3 px-6 py-3 bg-slate-50 rounded-lg">
+              <span className="font-semibold text-slate-700">CBY</span>
+            </div>
+            <div className="flex items-center gap-3 px-6 py-3 bg-slate-50 rounded-lg">
+              <span className="font-semibold text-slate-700">Sana'a Center</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Deep Dive Section */}
-      <section className="bg-white dark:bg-slate-900 py-20">
+      {/* Quick Access - 6 Icon Tiles - 5 seconds */}
+      <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
         <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
-              {isArabic ? "استكشف بعمق" : "Deep Dive"}
-            </h2>
+          <h3 className="text-3xl font-bold text-[#8B1538] text-center mb-12" style={{ fontFamily: isArabic ? 'Noto Naskh Arabic, serif' : 'Playfair Display, serif' }}>
+            {t.quickAccess.title}
+          </h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                { title: { ar: "الأزمة الاقتصادية", en: "Economic Crisis" }, link: "/economic-crisis", icon: TrendingDown },
-                { title: { ar: "حرب العملة", en: "Currency War" }, link: "/currency-war", icon: DollarSign },
-                { title: { ar: "أصحاب المصلحة", en: "Stakeholder Hub" }, link: "/stakeholder-hub", icon: Users },
-                { title: { ar: "التصور المتقدم", en: "Advanced Visualization" }, link: "/advanced-viz", icon: BarChart3 },
-                { title: { ar: "الأخبار", en: "News Aggregator" }, link: "/news", icon: FileText },
-                { title: { ar: "إدارة الملفات", en: "File Manager" }, link: "/files", icon: Database }
-              ].map((item) => (
-                <Link key={item.link} href={item.link}>
-                  <Card className="border-2 hover:shadow-lg transition-all cursor-pointer group h-full">
-                    <CardContent className="p-6">
-                      <item.icon className="h-8 w-8 text-teal-600 mb-4 group-hover:scale-110 transition-transform" />
-                      <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-                        {isArabic ? item.title.ar : item.title.en}
-                      </h3>
-                      <div className="flex items-center text-teal-600 dark:text-teal-400 text-sm font-medium">
-                        {isArabic ? "استكشف" : "Explore"}
-                        <ArrowRight className={`${isArabic ? 'mr-1 rotate-180' : 'ml-1'} h-4 w-4`} />
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
+            {t.quickAccess.items.map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <Link key={index} href={item.link}>
+                  <Card className="h-full hover:shadow-lg transition-all duration-300 cursor-pointer hover:scale-105 group">
+                    <CardContent className="p-6 flex flex-col items-center text-center">
+                      <div className="w-12 h-12 rounded-full bg-[#8B1538]/10 flex items-center justify-center mb-4 group-hover:bg-[#8B1538] transition-colors">
+                        <Icon className="h-6 w-6 text-[#8B1538] group-hover:text-white transition-colors" />
                       </div>
+                      <span className="text-sm font-semibold text-slate-700 group-hover:text-[#8B1538]">
+                        {item.label}
+                      </span>
                     </CardContent>
                   </Card>
                 </Link>
-              ))}
-            </div>
+              );
+            })}
           </div>
         </div>
       </section>
