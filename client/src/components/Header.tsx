@@ -1,14 +1,16 @@
 import { useState } from 'react';
 import { Link } from 'wouter';
-import { Menu, X, ChevronDown, FileText, Newspaper } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from './ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { APP_LOGO } from '@/const';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
   DropdownMenuSeparator,
+  DropdownMenuLabel,
 } from './ui/dropdown-menu';
 
 export default function Header() {
@@ -23,10 +25,11 @@ export default function Header() {
       data: 'البيانات والتحليل',
       pages: 'الصفحات',
       resources: 'الموارد',
+      stakeholders: 'أصحاب المصلحة',
       causeway: 'عن كوزواي',
       language: 'English',
-      stakeholderJourneys: 'رحلات أصحاب المصلحة',
-      executiveDashboard: 'لوحة المتابعة التنفيذية',
+      // Stakeholders submenu
+      executiveDashboard: 'لوحة المانحين',
       cbyDashboard: 'لوحة البنك المركزي',
       // Data & Analysis submenu
       compass: 'لوحة البوصلة',
@@ -43,6 +46,7 @@ export default function Header() {
       // Pages submenu
       overview: 'نظرة عامة',
       currencyWar: 'حرب العملة',
+      crisis: 'الأزمة الاقتصادية',
       cities: 'المدن الرئيسية',
       events: 'الأحداث',
       timeline: 'الخط الزمني',
@@ -56,7 +60,7 @@ export default function Header() {
       policy: 'التوصيات السياسية',
       indicators: 'المؤشرات الإحصائية',
       charts: 'الرسوم البيانية',
-      stakeholders: 'أصحاب المصلحة',
+      stakeholdersPage: 'مركز أصحاب المصلحة',
     },
     en: {
       home: 'Home',
@@ -64,9 +68,10 @@ export default function Header() {
       data: 'Data & Analysis',
       pages: 'Pages',
       resources: 'Resources',
+      stakeholders: 'Stakeholders',
       causeway: 'About CauseWay',
       language: 'العربية',
-      stakeholderJourneys: 'Stakeholder Journeys',
+      // Stakeholders submenu
       executiveDashboard: 'Executive Dashboard',
       cbyDashboard: 'CBY Dashboard',
       // Data & Analysis submenu
@@ -84,391 +89,272 @@ export default function Header() {
       // Pages submenu
       overview: 'Overview',
       currencyWar: 'Currency War',
-      cities: 'Main Cities',
+      crisis: 'Economic Crisis',
+      cities: 'Key Cities',
       events: 'Events',
       timeline: 'Timeline',
       banks: 'Commercial Banks',
       microfinance: 'Microfinance',
-      cbyAden: 'CBY-Aden',
-      cbySanaa: 'CBY-Sana\'a',
+      cbyAden: 'CBY - Aden',
+      cbySanaa: 'CBY - Sana\'a',
       reports: 'International Reports',
       sanctions: 'Sanctions',
       forecasting: 'Forecasting',
       policy: 'Policy Recommendations',
       indicators: 'Statistical Indicators',
       charts: 'Charts',
-      stakeholders: 'Stakeholders',
-    },
+      stakeholdersPage: 'Stakeholder Hub',
+    }
   };
-  
-  const t = navigation[language];
-  
+
+  const t = isArabic ? navigation.ar : navigation.en;
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
-        {/* Logo */}
-        <Link href="/">
-          <div className="flex items-center gap-3 cursor-pointer">
-            <img src="/causeway-main.jpeg" alt="CauseWay" className="h-10 w-auto object-contain" />
-            <div className="hidden md:block">
-              <div className="text-sm font-bold leading-tight">
-                {isArabic ? 'منصّة البوصلة الاقتصادية' : 'Yemen Economic Compass'}
-              </div>
-              <div className="text-xs text-muted-foreground">
-                {isArabic ? 'مشروع بحثي من كوزواي' : 'A CauseWay Research Project'}
-              </div>
-            </div>
-          </div>
-        </Link>
-        
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6">
+    <header className="sticky top-0 z-50 w-full border-b bg-white/95 dark:bg-slate-900/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 dark:supports-[backdrop-filter]:bg-slate-900/80">
+      <nav className="container mx-auto px-6 py-4">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
           <Link href="/">
-            <span className="text-sm font-medium hover:text-primary cursor-pointer transition-colors">
-              {t.home}
-            </span>
+            <div className="flex items-center space-x-3 cursor-pointer hover:opacity-80 transition-opacity">
+              <img src={APP_LOGO} alt="Yemen Economic Compass" className="h-10 w-auto" />
+              <span className="hidden md:block text-lg font-semibold text-slate-900 dark:text-white">
+                {isArabic ? 'البوصلة الاقتصادية' : 'Economic Compass'}
+              </span>
+            </div>
           </Link>
-          
-          {/* Stakeholder Journeys Dropdown */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button className="flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors">
-                {t.stakeholderJourneys}
-                <ChevronDown className="h-4 w-4" />
-              </button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-56">
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-1">
+            {/* Home */}
+            <Link href="/">
+              <Button variant="ghost" className="text-sm font-medium">
+                {t.home}
+              </Button>
+            </Link>
+
+            {/* Stakeholders Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="text-sm font-medium">
+                  {t.stakeholders}
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align={isArabic ? "end" : "start"} className="w-64">
+                <DropdownMenuLabel className="text-xs text-muted-foreground uppercase">
+                  {isArabic ? 'لوحات متخصصة' : 'Specialized Dashboards'}
+                </DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <Link href="/executive-dashboard">
+                  <DropdownMenuItem className="cursor-pointer py-3">
+                    <div>
+                      <div className="font-medium">{t.executiveDashboard}</div>
+                      <div className="text-xs text-muted-foreground">
+                        {isArabic ? 'للمانحين والمؤسسات الدولية' : 'For Donors & International Institutions'}
+                      </div>
+                    </div>
+                  </DropdownMenuItem>
+                </Link>
+                <Link href="/cby-dashboard">
+                  <DropdownMenuItem className="cursor-pointer py-3">
+                    <div>
+                      <div className="font-medium">{t.cbyDashboard}</div>
+                      <div className="text-xs text-muted-foreground">
+                        {isArabic ? 'للبنك المركزي اليمني' : 'For Central Bank of Yemen'}
+                      </div>
+                    </div>
+                  </DropdownMenuItem>
+                </Link>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {/* Data & Analysis Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="text-sm font-medium">
+                  {t.data}
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align={isArabic ? "end" : "start"} className="w-56">
+                <Link href="/compass"><DropdownMenuItem className="cursor-pointer">{t.compass}</DropdownMenuItem></Link>
+                <Link href="/key-stats"><DropdownMenuItem className="cursor-pointer">{t.keyStats}</DropdownMenuItem></Link>
+                <Link href="/transformation"><DropdownMenuItem className="cursor-pointer">{t.transformation}</DropdownMenuItem></Link>
+                <DropdownMenuSeparator />
+                <Link href="/power-map"><DropdownMenuItem className="cursor-pointer">{t.powerMap}</DropdownMenuItem></Link>
+                <Link href="/advanced-viz"><DropdownMenuItem className="cursor-pointer">{t.advancedViz}</DropdownMenuItem></Link>
+                <Link href="/calculators"><DropdownMenuItem className="cursor-pointer">{t.calculators}</DropdownMenuItem></Link>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {/* Resources Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="text-sm font-medium">
+                  {t.resources}
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align={isArabic ? "end" : "start"} className="w-56">
+                <Link href="/literature"><DropdownMenuItem className="cursor-pointer">{t.literature}</DropdownMenuItem></Link>
+                <Link href="/research"><DropdownMenuItem className="cursor-pointer">{t.research}</DropdownMenuItem></Link>
+                <Link href="/news"><DropdownMenuItem className="cursor-pointer">{t.news}</DropdownMenuItem></Link>
+                <Link href="/files"><DropdownMenuItem className="cursor-pointer">{t.files}</DropdownMenuItem></Link>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {/* Pages Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="text-sm font-medium">
+                  {t.pages}
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align={isArabic ? "end" : "start"} className="w-56 max-h-[500px] overflow-y-auto">
+                <DropdownMenuLabel className="text-xs text-muted-foreground uppercase">
+                  {isArabic ? 'نظرة عامة' : 'Overview'}
+                </DropdownMenuLabel>
+                <Link href="/overview"><DropdownMenuItem className="cursor-pointer">{t.overview}</DropdownMenuItem></Link>
+                <Link href="/economic-crisis"><DropdownMenuItem className="cursor-pointer">{t.crisis}</DropdownMenuItem></Link>
+                <Link href="/currency-war"><DropdownMenuItem className="cursor-pointer">{t.currencyWar}</DropdownMenuItem></Link>
+                <DropdownMenuSeparator />
+                <DropdownMenuLabel className="text-xs text-muted-foreground uppercase">
+                  {isArabic ? 'الجهات الفاعلة' : 'Actors'}
+                </DropdownMenuLabel>
+                <Link href="/stakeholder-hub"><DropdownMenuItem className="cursor-pointer">{t.stakeholdersPage}</DropdownMenuItem></Link>
+                <Link href="/banks"><DropdownMenuItem className="cursor-pointer">{t.banks}</DropdownMenuItem></Link>
+                <Link href="/microfinance"><DropdownMenuItem className="cursor-pointer">{t.microfinance}</DropdownMenuItem></Link>
+                <Link href="/cby-aden"><DropdownMenuItem className="cursor-pointer">{t.cbyAden}</DropdownMenuItem></Link>
+                <Link href="/cby-sanaa"><DropdownMenuItem className="cursor-pointer">{t.cbySanaa}</DropdownMenuItem></Link>
+                <DropdownMenuSeparator />
+                <DropdownMenuLabel className="text-xs text-muted-foreground uppercase">
+                  {isArabic ? 'السياق' : 'Context'}
+                </DropdownMenuLabel>
+                <Link href="/cities"><DropdownMenuItem className="cursor-pointer">{t.cities}</DropdownMenuItem></Link>
+                <Link href="/events"><DropdownMenuItem className="cursor-pointer">{t.events}</DropdownMenuItem></Link>
+                <Link href="/timeline"><DropdownMenuItem className="cursor-pointer">{t.timeline}</DropdownMenuItem></Link>
+                <DropdownMenuSeparator />
+                <DropdownMenuLabel className="text-xs text-muted-foreground uppercase">
+                  {isArabic ? 'التحليل' : 'Analysis'}
+                </DropdownMenuLabel>
+                <Link href="/reports"><DropdownMenuItem className="cursor-pointer">{t.reports}</DropdownMenuItem></Link>
+                <Link href="/sanctions"><DropdownMenuItem className="cursor-pointer">{t.sanctions}</DropdownMenuItem></Link>
+                <Link href="/forecasting"><DropdownMenuItem className="cursor-pointer">{t.forecasting}</DropdownMenuItem></Link>
+                <Link href="/policy"><DropdownMenuItem className="cursor-pointer">{t.policy}</DropdownMenuItem></Link>
+                <Link href="/indicators"><DropdownMenuItem className="cursor-pointer">{t.indicators}</DropdownMenuItem></Link>
+                <Link href="/charts"><DropdownMenuItem className="cursor-pointer">{t.charts}</DropdownMenuItem></Link>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {/* About */}
+            <Link href="/about">
+              <Button variant="ghost" className="text-sm font-medium">
+                {t.causeway}
+              </Button>
+            </Link>
+
+            {/* Language Toggle */}
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setLanguage(language === 'ar' ? 'en' : 'ar')}
+              className="ml-2 text-sm font-medium"
+            >
+              {t.language}
+            </Button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="lg:hidden flex items-center space-x-2">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setLanguage(language === 'ar' ? 'en' : 'ar')}
+              className="text-sm"
+            >
+              {t.language}
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden mt-4 pb-4 space-y-2 border-t pt-4">
+            <Link href="/">
+              <Button variant="ghost" className="w-full justify-start" onClick={() => setMobileMenuOpen(false)}>
+                {t.home}
+              </Button>
+            </Link>
+            
+            <div className="space-y-1">
+              <div className="px-3 py-2 text-xs font-semibold text-muted-foreground uppercase">
+                {t.stakeholders}
+              </div>
               <Link href="/executive-dashboard">
-                <DropdownMenuItem className="cursor-pointer">{t.executiveDashboard}</DropdownMenuItem>
+                <Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>
+                  {t.executiveDashboard}
+                </Button>
               </Link>
               <Link href="/cby-dashboard">
-                <DropdownMenuItem className="cursor-pointer">{t.cbyDashboard}</DropdownMenuItem>
+                <Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>
+                  {t.cbyDashboard}
+                </Button>
               </Link>
-            </DropdownMenuContent>
-          </DropdownMenu>
-          
-          {/* Data & Analysis Dropdown */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button className="flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors">
+            </div>
+
+            <div className="space-y-1">
+              <div className="px-3 py-2 text-xs font-semibold text-muted-foreground uppercase">
                 {t.data}
-                <ChevronDown className="h-4 w-4" />
-              </button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-56">
-              <Link href="/compass">
-                <DropdownMenuItem className="cursor-pointer">{t.compass}</DropdownMenuItem>
-              </Link>
-              <Link href="/key-statistics">
-                <DropdownMenuItem className="cursor-pointer">{t.keyStats}</DropdownMenuItem>
-              </Link>
-              <Link href="/transformation">
-                <DropdownMenuItem className="cursor-pointer">{t.transformation}</DropdownMenuItem>
-              </Link>
-              <Link href="/power-map">
-                <DropdownMenuItem className="cursor-pointer">{t.powerMap}</DropdownMenuItem>
-              </Link>
-              <Link href="/advanced-viz">
-                <DropdownMenuItem className="cursor-pointer">{t.advancedViz}</DropdownMenuItem>
-              </Link>
-              <Link href="/charts">
-                <DropdownMenuItem className="cursor-pointer">{t.charts}</DropdownMenuItem>
-              </Link>
-              <Link href="/calculators">
-                <DropdownMenuItem className="cursor-pointer">{t.calculators}</DropdownMenuItem>
-              </Link>
-            </DropdownMenuContent>
-          </DropdownMenu>
-          
-          {/* Resources Dropdown */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button className="flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors">
-                {t.resources}
-                <ChevronDown className="h-4 w-4" />
-              </button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-56">
-              <Link href="/research">
-                <DropdownMenuItem className="cursor-pointer">
-                  <FileText className="h-4 w-4 mr-2" />
-                  {t.research}
-                </DropdownMenuItem>
-              </Link>
-              <Link href="/literature">
-                <DropdownMenuItem className="cursor-pointer">
-                  <FileText className="h-4 w-4 mr-2" />
-                  {t.literature}
-                </DropdownMenuItem>
-              </Link>
-              <Link href="/news">
-                <DropdownMenuItem className="cursor-pointer">
-                  <Newspaper className="h-4 w-4 mr-2" />
-                  {t.news}
-                </DropdownMenuItem>
-              </Link>
-              <DropdownMenuSeparator />
-              <Link href="/files">
-                <DropdownMenuItem className="cursor-pointer">
-                  <FileText className="h-4 w-4 mr-2" />
-                  {t.files}
-                </DropdownMenuItem>
-              </Link>
-            </DropdownMenuContent>
-          </DropdownMenu>
-          
-          {/* Pages Dropdown */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button className="flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors">
-                {t.pages}
-                <ChevronDown className="h-4 w-4" />
-              </button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-56 max-h-[500px] overflow-y-auto">
-              <Link href="/overview">
-                <DropdownMenuItem className="cursor-pointer">{t.overview}</DropdownMenuItem>
-              </Link>
-              <Link href="/timeline">
-                <DropdownMenuItem className="cursor-pointer">{t.timeline}</DropdownMenuItem>
-              </Link>
-              <Link href="/currency-war">
-                <DropdownMenuItem className="cursor-pointer">{t.currencyWar}</DropdownMenuItem>
-              </Link>
-              <Link href="/stakeholders">
-                <DropdownMenuItem className="cursor-pointer">{t.stakeholders}</DropdownMenuItem>
-              </Link>
-              <DropdownMenuSeparator />
-              <Link href="/cities">
-                <DropdownMenuItem className="cursor-pointer">{t.cities}</DropdownMenuItem>
-              </Link>
-              <Link href="/events">
-                <DropdownMenuItem className="cursor-pointer">{t.events}</DropdownMenuItem>
-              </Link>
-              <DropdownMenuSeparator />
-              <Link href="/banks">
-                <DropdownMenuItem className="cursor-pointer">{t.banks}</DropdownMenuItem>
-              </Link>
-              <Link href="/microfinance">
-                <DropdownMenuItem className="cursor-pointer">{t.microfinance}</DropdownMenuItem>
-              </Link>
-              <Link href="/cby-aden">
-                <DropdownMenuItem className="cursor-pointer">{t.cbyAden}</DropdownMenuItem>
-              </Link>
-              <Link href="/cby-sanaa">
-                <DropdownMenuItem className="cursor-pointer">{t.cbySanaa}</DropdownMenuItem>
-              </Link>
-              <DropdownMenuSeparator />
-              <Link href="/reports">
-                <DropdownMenuItem className="cursor-pointer">{t.reports}</DropdownMenuItem>
-              </Link>
-              <Link href="/sanctions">
-                <DropdownMenuItem className="cursor-pointer">{t.sanctions}</DropdownMenuItem>
-              </Link>
-              <Link href="/forecasting">
-                <DropdownMenuItem className="cursor-pointer">{t.forecasting}</DropdownMenuItem>
-              </Link>
-              <Link href="/policy">
-                <DropdownMenuItem className="cursor-pointer">{t.policy}</DropdownMenuItem>
-              </Link>
-              <Link href="/indicators">
-                <DropdownMenuItem className="cursor-pointer">{t.indicators}</DropdownMenuItem>
-              </Link>
-            </DropdownMenuContent>
-          </DropdownMenu>
-          
-          <Link href="/about-causeway">
-            <span className="text-sm font-medium hover:text-primary cursor-pointer transition-colors">
-              {t.causeway}
-            </span>
-          </Link>
-          
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => setLanguage(language === 'ar' ? 'en' : 'ar')}
-          >
-            {t.language}
-          </Button>
-        </nav>
-        
-        {/* Mobile Menu Button */}
-        <div className="flex items-center gap-2 md:hidden">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => setLanguage(language === 'ar' ? 'en' : 'ar')}
-          >
-            {t.language}
-          </Button>
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
-        </div>
-      </div>
-      
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden border-t">
-          <nav className="container py-4 space-y-4 max-h-[80vh] overflow-y-auto">
-            <Link href="/">
-              <div className="block py-2 text-sm font-medium hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                {t.home}
               </div>
-            </Link>
-            
-            <div className="space-y-2">
-              <div className="text-sm font-semibold text-muted-foreground">{t.data}</div>
               <Link href="/compass">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>
                   {t.compass}
-                </div>
-              </Link>
-              <Link href="/key-statistics">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                  {t.keyStats}
-                </div>
-              </Link>
-              <Link href="/transformation">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                  {t.transformation}
-                </div>
-              </Link>
-              <Link href="/power-map">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                  {t.powerMap}
-                </div>
+                </Button>
               </Link>
               <Link href="/advanced-viz">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>
                   {t.advancedViz}
-                </div>
-              </Link>
-              <Link href="/charts">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                  {t.charts}
-                </div>
-              </Link>
-              <Link href="/calculators">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                  {t.calculators}
-                </div>
+                </Button>
               </Link>
             </div>
-            
-            <div className="space-y-2">
-              <div className="text-sm font-semibold text-muted-foreground">{t.resources}</div>
-              <Link href="/research">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                  {t.research}
-                </div>
-              </Link>
+
+            <div className="space-y-1">
+              <div className="px-3 py-2 text-xs font-semibold text-muted-foreground uppercase">
+                {t.resources}
+              </div>
               <Link href="/literature">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>
                   {t.literature}
-                </div>
+                </Button>
               </Link>
               <Link href="/news">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>
                   {t.news}
-                </div>
+                </Button>
               </Link>
               <Link href="/files">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>
                   {t.files}
-                </div>
+                </Button>
               </Link>
             </div>
-            
-            <div className="space-y-2">
-              <div className="text-sm font-semibold text-muted-foreground">{t.pages}</div>
-              <Link href="/overview">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                  {t.overview}
-                </div>
-              </Link>
-              <Link href="/timeline">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                  {t.timeline}
-                </div>
-              </Link>
-              <Link href="/currency-war">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                  {t.currencyWar}
-                </div>
-              </Link>
-              <Link href="/stakeholders">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                  {t.stakeholders}
-                </div>
-              </Link>
-              <Link href="/cities">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                  {t.cities}
-                </div>
-              </Link>
-              <Link href="/events">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                  {t.events}
-                </div>
-              </Link>
-              <Link href="/banks">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                  {t.banks}
-                </div>
-              </Link>
-              <Link href="/microfinance">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                  {t.microfinance}
-                </div>
-              </Link>
-              <Link href="/cby-aden">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                  {t.cbyAden}
-                </div>
-              </Link>
-              <Link href="/cby-sanaa">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                  {t.cbySanaa}
-                </div>
-              </Link>
-              <Link href="/reports">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                  {t.reports}
-                </div>
-              </Link>
-              <Link href="/sanctions">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                  {t.sanctions}
-                </div>
-              </Link>
-              <Link href="/forecasting">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                  {t.forecasting}
-                </div>
-              </Link>
-              <Link href="/policy">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                  {t.policy}
-                </div>
-              </Link>
-              <Link href="/indicators">
-                <div className="block py-2 pl-4 text-sm hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                  {t.indicators}
-                </div>
-              </Link>
-            </div>
-            
-            <Link href="/about-causeway">
-              <div className="block py-2 text-sm font-medium hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
+
+            <Link href="/about">
+              <Button variant="ghost" className="w-full justify-start" onClick={() => setMobileMenuOpen(false)}>
                 {t.causeway}
-              </div>
+              </Button>
             </Link>
-          </nav>
-        </div>
-      )}
+          </div>
+        )}
+      </nav>
     </header>
   );
 }
