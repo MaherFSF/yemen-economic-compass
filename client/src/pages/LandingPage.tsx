@@ -71,12 +71,12 @@ export default function LandingPage() {
                 <ArrowRight className={`${isArabic ? 'mr-2 rotate-180' : 'ml-2'} h-5 w-5`} />
               </Button>
             </Link>
-            <Link href="/compass-dashboard">
+            <Link href="/compass">
               <Button size="lg" variant="outline" className="text-lg px-8 py-6 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20">
                 {isArabic ? "لوحة البوصلة" : "Compass Dashboard"}
               </Button>
             </Link>
-            <Link href="/library">
+            <Link href="/literature">
               <Button size="lg" variant="outline" className="text-lg px-8 py-6 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20">
                 {isArabic ? "مكتبة الأبحاث" : "Research Library"}
               </Button>
@@ -358,7 +358,7 @@ export default function LandingPage() {
               </Card>
             </Link>
 
-            <Link href="/data-viz">
+            <Link href="/advanced-viz">
               <Card className="border-2 hover:shadow-xl transition-all hover:border-green-500 cursor-pointer h-full">
                 <CardContent className="p-8">
                   <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-4">
@@ -383,7 +383,7 @@ export default function LandingPage() {
 
           {/* Additional Links */}
           <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/library">
+            <Link href="/literature">
               <Card className="border hover:shadow-lg transition-all cursor-pointer">
                 <CardContent className="p-6 text-center">
                   <div className="text-3xl mb-3">📚</div>
@@ -447,7 +447,7 @@ export default function LandingPage() {
                 <ArrowRight className={`${isArabic ? 'mr-2 rotate-180' : 'ml-2'} h-5 w-5`} />
               </Button>
             </Link>
-            <Link href="/compass-dashboard">
+            <Link href="/compass">
               <Button size="lg" variant="outline">
                 {isArabic ? "لوحة البوصلة" : "Compass Dashboard"}
               </Button>
