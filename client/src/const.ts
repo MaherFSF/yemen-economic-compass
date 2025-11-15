@@ -2,7 +2,7 @@ export { COOKIE_NAME, ONE_YEAR_MS } from "@shared/const";
 
 export const APP_TITLE = import.meta.env.VITE_APP_TITLE || "App";
 
-export const APP_LOGO = "/logo-final.png";
+export const APP_LOGO = "/yemen-compass-logo.png";
 
 // Platform branding
 export const PLATFORM_NAME_AR = "منصّة البوصلة الاقتصادية للحرب في اليمن";
