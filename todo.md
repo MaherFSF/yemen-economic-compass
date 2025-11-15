@@ -1630,3 +1630,51 @@ All major features implemented and tested. Platform is now the most comprehensiv
 - [ ] Verify guided tours work smoothly
 - [ ] Test on multiple devices and browsers
 - [ ] Save final checkpoint
+
+
+---
+
+## 🎯 POLICY INTELLIGENCE ENHANCEMENT (CRITICAL - USER REQUEST)
+
+### Phase 1: Build Policy Impact Meters
+- [x] Executive Dashboard - Add Policy Impact Meter section
+- [x] Show actions taken (cash transfers, infrastructure, reforms)
+- [x] Display measurable outcomes (poverty %, GDP impact, beneficiaries)
+- [x] Visualize positive impacts (green) vs negative consequences (red)
+- [x] Add ROI per dollar invested metric - Shows 1.2x to 4.2x returns
+- [x] CBY Dashboard - Add Monetary Policy Impact Tracker - Built comprehensive simulator
+- [x] Link each policy action to measurable outcomes
+- [x] Show cause-effect relationships with data - Baseline → Current → Target progression
+
+### Phase 2: Create Interactive Scenario Simulators
+- [x] Executive Dashboard - Build Scenario Simulator
+- [x] Add variable sliders (cash transfer amount, funding levels, exchange rate, reserve requirements)
+- [x] Calculate real-time impact on poverty, GDP, humanitarian metrics, inflation, banking liquidity
+- [x] Show methodology and economic model used - Detailed methodology modal with sources
+- [x] CBY Dashboard - Build Policy Scenario Engine
+- [x] Add monetary policy variables (reserve requirements, interest rates, FX interventions, unification)
+- [x] Calculate impact on liquidity, exchange rates, inflation, reserves, confidence
+- [x] Test scenarios (unify exchange rates, increase reserves, capital controls)
+- [x] Display transparent calculations with economic theory - Methodology modal with 6 models
+
+### Phase 3: Add Methodology Documentation
+- [ ] Create methodology modal/section for each dashboard
+- [ ] Document economic models used
+- [ ] Cite academic research and data sources
+- [ ] Explain assumptions and limitations
+- [ ] Add Yemen-specific context and adjustments
+- [ ] Make methodology accessible but rigorous
+
+### Phase 4: Implement Real-Time Impact Tracking
+- [ ] Track policy actions over time
+- [ ] Show before/after metrics for each intervention
+- [ ] Build timeline of actions and outcomes
+- [ ] Add comparative analysis (actual vs projected impact)
+- [ ] Highlight successes and failures transparently
+
+### Phase 5: Final Testing and Delivery
+- [ ] Test all scenario simulators with realistic inputs
+- [ ] Verify economic model calculations
+- [ ] Ensure methodology is clear and credible
+- [ ] Test bilingual functionality
+- [ ] Save final checkpoint

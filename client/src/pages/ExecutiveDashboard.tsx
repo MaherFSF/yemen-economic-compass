@@ -5,9 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   TrendingDown, TrendingUp, AlertTriangle, CheckCircle2, Download,
-  DollarSign, Users, Building2, BarChart3, FileText, Globe, Target
+  DollarSign, Users, Building2, BarChart3, FileText, Globe, Target, Play
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import PolicyImpactMeter from "@/components/PolicyImpactMeter";
+import ScenarioSimulator from "@/components/ScenarioSimulator";
 
 export default function ExecutiveDashboard() {
   const { language } = useLanguage();
@@ -34,6 +36,14 @@ export default function ExecutiveDashboard() {
     impact: {
       ar: "الأثر",
       en: "Impact"
+    },
+    policyImpact: {
+      ar: "أثر السياسات",
+      en: "Policy Impact"
+    },
+    scenarios: {
+      ar: "السيناريوهات",
+      en: "Scenarios"
     },
     risks: {
       ar: "المخاطر",
@@ -287,7 +297,7 @@ export default function ExecutiveDashboard() {
 
         {/* Tabs */}
         <Tabs defaultValue="projects" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-3 lg:w-auto">
+          <TabsList className="grid w-full grid-cols-5 lg:w-auto">
             <TabsTrigger value="projects">
               <Building2 className="h-4 w-4 mr-2" />
               {isArabic ? t.projects.ar : t.projects.en}
@@ -295,6 +305,14 @@ export default function ExecutiveDashboard() {
             <TabsTrigger value="impact">
               <Target className="h-4 w-4 mr-2" />
               {isArabic ? t.impact.ar : t.impact.en}
+            </TabsTrigger>
+            <TabsTrigger value="policy-impact">
+              <Target className="h-4 w-4 mr-2" />
+              {isArabic ? t.policyImpact.ar : t.policyImpact.en}
+            </TabsTrigger>
+            <TabsTrigger value="scenarios">
+              <Play className="h-4 w-4 mr-2" />
+              {isArabic ? t.scenarios.ar : t.scenarios.en}
             </TabsTrigger>
             <TabsTrigger value="risks">
               <AlertTriangle className="h-4 w-4 mr-2" />
@@ -413,6 +431,16 @@ export default function ExecutiveDashboard() {
                 ))}
               </CardContent>
             </Card>
+          </TabsContent>
+
+          {/* Policy Impact Tab */}
+          <TabsContent value="policy-impact" className="space-y-4">
+            <PolicyImpactMeter />
+          </TabsContent>
+
+          {/* Scenarios Tab */}
+          <TabsContent value="scenarios" className="space-y-4">
+            <ScenarioSimulator />
           </TabsContent>
 
           {/* Risks Tab */}

@@ -8,6 +8,7 @@ import {
   BarChart3, Activity, Shield, FileText, Download, RefreshCw
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import MonetaryPolicySimulator from "@/components/MonetaryPolicySimulator";
 
 export default function CBYDashboard() {
   const { language } = useLanguage();
@@ -38,6 +39,10 @@ export default function CBYDashboard() {
     compliance: {
       ar: "الامتثال",
       en: "Compliance"
+    },
+    scenarios: {
+      ar: "محاكاة السياسات",
+      en: "Policy Scenarios"
     },
     refresh: {
       ar: "تحديث البيانات",
@@ -289,7 +294,7 @@ export default function CBYDashboard() {
 
         {/* Tabs */}
         <Tabs defaultValue="monetary" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-4">
+          <TabsList className="grid w-full grid-cols-5 lg:w-auto">
             <TabsTrigger value="monetary">
               <DollarSign className="h-4 w-4 mr-2" />
               {isArabic ? t.monetary.ar : t.monetary.en}
@@ -301,6 +306,10 @@ export default function CBYDashboard() {
             <TabsTrigger value="reserves">
               <Shield className="h-4 w-4 mr-2" />
               {isArabic ? t.reserves.ar : t.reserves.en}
+            </TabsTrigger>
+            <TabsTrigger value="scenarios">
+              <Activity className="h-4 w-4 mr-2" />
+              {isArabic ? t.scenarios.ar : t.scenarios.en}
             </TabsTrigger>
             <TabsTrigger value="compliance">
               <FileText className="h-4 w-4 mr-2" />
@@ -598,6 +607,11 @@ export default function CBYDashboard() {
                 </div>
               </CardContent>
             </Card>
+          </TabsContent>
+
+          {/* Scenarios Tab */}
+          <TabsContent value="scenarios" className="space-y-4">
+            <MonetaryPolicySimulator />
           </TabsContent>
         </Tabs>
       </div>
