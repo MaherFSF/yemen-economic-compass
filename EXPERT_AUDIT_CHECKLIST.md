@@ -414,3 +414,76 @@
 - [ ] Journalists would trust
 - [ ] Citizens would understand
 - [ ] Experts would be amazed
+
+
+---
+
+## 📸 IMAGE CONTENT EXTRACTION (50+ Images)
+
+### Timeline Events Extraction
+- [ ] Extract events from IMG_9435.jpeg
+- [ ] Extract events from IMG_9433.jpeg
+- [ ] Extract events from IMG_9431.jpeg
+- [ ] Extract events from IMG_9427.jpeg
+- [ ] Extract events from IMG_9425.jpeg
+- [ ] Extract events from IMG_9423.jpeg
+- [ ] Extract events from IMG_9421.jpeg
+- [ ] Extract events from IMG_9402.jpeg
+- [ ] Extract events from IMG_9404.jpeg
+- [ ] Integrate all extracted events into ScrollytellingTimeline
+- [ ] Add detailed narratives for each event
+- [ ] Add actor involvement for each event
+- [ ] Add economic impacts for each event
+
+### Banking Data Extraction
+- [ ] Extract banking data from IMG_9362.jpeg
+- [ ] Extract banking data from IMG_9377.jpeg
+- [ ] Extract banking data from IMG_9375.jpeg
+- [ ] Extract banking data from IMG_9379.jpeg
+- [ ] Extract banking metrics from IMG_9398.jpeg
+- [ ] Extract banking analysis from IMG_9391.jpeg
+- [ ] Extract banking data from IMG_9389.jpeg
+- [ ] Create individual bank pages from extracted data
+- [ ] Build Banking Observatory hub page
+
+### Stakeholder Analysis Extraction
+- [ ] Extract actor profiles from IMG_9406.jpeg
+- [ ] Extract actor analysis from IMG_9387.jpeg
+- [ ] Extract stakeholder data from IMG_9385.jpeg
+- [ ] Extract stakeholder data from IMG_9383.jpeg
+- [ ] Extract stakeholder data from IMG_9381.jpeg
+- [ ] Extract actor profiles from IMG_9379(1).jpeg
+- [ ] Extract actor profiles from IMG_9377(1).jpeg
+- [ ] Extract actor analysis from IMG_9375(1).jpeg
+- [ ] Extract actor data from IMG_9373.jpeg
+- [ ] Extract actor data from IMG_9371.jpeg
+- [ ] Extract actor data from IMG_9369.jpeg
+- [ ] Create stakeholder pages from extracted profiles
+
+### Economic Indicators Extraction
+- [ ] Extract indicators from IMG_9366.jpeg
+- [ ] Extract indicators from IMG_9364.jpeg
+- [ ] Extract indicators from IMG_9362(1).jpeg
+- [ ] Extract indicators from IMG_9360.jpeg
+- [ ] Extract indicators from IMG_9358.jpeg
+- [ ] Extract indicators from IMG_9356.jpeg
+- [ ] Extract indicators from IMG_9354.jpeg
+- [ ] Extract indicators from IMG_9352.jpeg
+- [ ] Extract indicators from IMG_9348.jpeg
+- [ ] Extract data from IMG_9293(1).jpeg
+- [ ] Extract data from IMG_9289(1).jpeg
+- [ ] Integrate indicators into dashboards
+
+### UI/UX Design Pattern Extraction
+- [ ] Analyze design from IMG_9191(7).png
+- [ ] Analyze design from IMG_9194(7).png
+- [ ] Analyze design from IMG_9193(7).png
+- [ ] Analyze design from IMG_9197(7).png
+- [ ] Analyze design from IMG_9196(7).png
+- [ ] Analyze design from IMG_9199(7).png
+- [ ] Analyze design from IMG_9207(7).png
+- [ ] Analyze design from IMG_9216(6).png
+- [ ] Analyze design from IMG_9203(7).png
+- [ ] Analyze design from IMG_9202(7).png
+- [ ] Analyze design from IMG_9217(7).png
+- [ ] Implement design patterns across platform

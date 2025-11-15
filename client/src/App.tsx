@@ -45,6 +45,7 @@ import ExecutiveDashboard from "./pages/ExecutiveDashboard";
 import CBYDashboard from "./pages/CBYDashboard";
 import SaudiArabiaPage from "./pages/SaudiArabiaPage";
 import WorldBankJourney from "./pages/WorldBankJourney";
+import FinancialFlowsNetwork from "./pages/FinancialFlowsNetwork";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -73,7 +74,8 @@ function Router() {
       <Route path={"/data-viz"} component={DataVisualization} />
       <Route path={"/stakeholders"} component={StakeholderHub} />
         <Route path="/stakeholders/saudi-arabia" component={SaudiArabiaPage} />
-      <Route path="/world-bank-journey" component={WorldBankJourney} />
+          <Route path="/world-bank" component={WorldBankJourney} />
+      <Route path="/financial-flows" component={FinancialFlowsNetwork} />
       <Route path="/sanctions" component={SanctionsTracker} />
       <Route path="/key-statistics" component={KeyStatistics} />
       <Route path="/transformation" component={FinancialTransformation} />
