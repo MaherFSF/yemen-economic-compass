@@ -517,3 +517,64 @@
 17. Build public API for researchers
 18. Optimize performance (<2s load time)
 19. Conduct comprehensive QA testing
+
+
+---
+
+## 🚨 URGENT TRANSFORMATION TASKS (World-Class Standards) - PRIORITY 1
+
+### Landing Page Redesign
+- [x] Remove UN agency logos from landing page (looks poor/unprofessional)
+- [x] Create compelling hero section with contextual Yemen photo
+- [x] Implement new tagline: "watches Yemen's economy, learns from 10+ years of real data, turns it into clear, actionable insight"
+- [x] Add "Who it's for" section (4 stakeholder groups)
+- [x] Add "What it delivers" section (6 core features with numbered cards)
+- [x] Redesign with teal/blue color scheme for English version
+
+### Stakeholder Microsites (100+) - CRITICAL MISSING
+- [x] Build Hayel Saeed Anam Group comprehensive page (HIGHEST PRIORITY)
+- [ ] Create microsite template for all stakeholders
+- [ ] Extract complete stakeholder list from PDF (pages 30-92)
+- [ ] Build pages for all major actors with role/risks/options structure
+
+### English Design System (Separate from Arabic)
+- [x] Create separate color scheme for English (teal #4FD1C5 + blue #3B82F6)
+- [ ] Implement different fonts for English version (modern sans-serif)
+- [ ] Ensure visual distinction from Arabic burgundy/gold theme
+- [ ] Apply World Bank/IMF aesthetic standards to English version
+
+### Navigation & Organization
+- [ ] Reorganize navigation with clear hierarchy
+- [ ] Fix Arabic/English language switching functionality
+- [ ] Ensure all pages accessible from main navigation
+- [ ] Create stakeholder directory/index page
+- [ ] Reorganize menu structure based on user journeys
+
+### Mobile Optimization
+- [ ] Test all pages on mobile devices (iPhone/Android)
+- [ ] Fix responsive layouts for all components
+- [ ] Ensure touch-friendly interactions (44px minimum)
+- [ ] Optimize images for mobile bandwidth
+- [ ] Test ScrollytellingTimeline on mobile
+
+### Visual Assets & Photos
+- [ ] Generate contextual Yemen economic photos (markets, ports, banking)
+- [ ] Add professional imagery throughout site
+- [ ] Remove generic stock photos
+- [ ] Ensure all images are high-quality (1920x1080 minimum)
+- [ ] Add hero images to all major pages
+
+### Content Completeness from PDF
+- [ ] Extract all content from remaining 62 pages of PDF
+- [ ] Ensure methodological rigor in all narratives
+- [ ] Add source citations throughout (inline + footnotes)
+- [ ] Verify data accuracy against original sources
+- [ ] Add confidence scores to all statistics
+
+### Functionality Testing
+- [ ] Test all calculators and tools work correctly
+- [ ] Ensure all links work (no 404s)
+- [ ] Verify database connections stable
+- [ ] Test file uploads and downloads
+- [ ] Verify all filters function properly
+- [ ] Test scenario simulators with edge cases

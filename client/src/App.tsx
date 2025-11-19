@@ -8,6 +8,7 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import LandingPage from "./pages/LandingPage";
+import NewLandingPage from "./pages/NewLandingPage";
 import Overview from "./pages/Overview";
 import Charts from "./pages/Charts";
 import StoryPage from "./pages/StoryPage";
@@ -46,12 +47,14 @@ import CBYDashboard from "./pages/CBYDashboard";
 import SaudiArabiaPage from "./pages/SaudiArabiaPage";
 import WorldBankJourney from "./pages/WorldBankJourney";
 import FinancialFlowsNetwork from "./pages/FinancialFlowsNetwork";
+import HayelSaeedAnamGroup from "./pages/stakeholders/HayelSaeedAnamGroup";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
-      <Route path={"/"} component={LandingPage} />
+      <Route path={"/"} component={NewLandingPage} />
+      <Route path={"/old-landing"} component={LandingPage} />
       <Route path={"/overview"} component={Overview} />
       <Route path={"/charts"} component={Charts} />
       <Route path={"/story"} component={StoryPage} />
@@ -74,6 +77,7 @@ function Router() {
       <Route path={"/data-viz"} component={DataVisualization} />
       <Route path={"/stakeholders"} component={StakeholderHub} />
         <Route path="/stakeholders/saudi-arabia" component={SaudiArabiaPage} />
+        <Route path="/stakeholders/hayel-saeed-anam" component={HayelSaeedAnamGroup} />
           <Route path="/world-bank" component={WorldBankJourney} />
       <Route path="/financial-flows" component={FinancialFlowsNetwork} />
       <Route path="/sanctions" component={SanctionsTracker} />
