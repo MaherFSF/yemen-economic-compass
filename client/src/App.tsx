@@ -48,8 +48,6 @@ import SaudiArabiaPage from "./pages/SaudiArabiaPage";
 import WorldBankJourney from "./pages/WorldBankJourney";
 import FinancialFlowsNetwork from "./pages/FinancialFlowsNetwork";
 import HayelSaeedAnamGroup from "./pages/stakeholders/HayelSaeedAnamGroup";
-import CBYAdenPage from "./pages/stakeholders/CBYAdenPage";
-import CBYSanaaPage from "./pages/stakeholders/CBYSanaaPage";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -80,8 +78,6 @@ function Router() {
       <Route path={"/stakeholders"} component={StakeholderHub} />
         <Route path="/stakeholders/saudi-arabia" component={SaudiArabiaPage} />
         <Route path="/stakeholders/hayel-saeed-anam" component={HayelSaeedAnamGroup} />
-        <Route path="/stakeholders/cby-aden" component={CBYAdenPage} />
-        <Route path="/stakeholders/cby-sanaa" component={CBYSanaaPage} />
           <Route path="/world-bank" component={WorldBankJourney} />
       <Route path="/financial-flows" component={FinancialFlowsNetwork} />
       <Route path="/sanctions" component={SanctionsTracker} />
