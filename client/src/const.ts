@@ -2,14 +2,7 @@ export { COOKIE_NAME, ONE_YEAR_MS } from "@shared/const";
 
 export const APP_TITLE = import.meta.env.VITE_APP_TITLE || "App";
 
-export const APP_LOGO = "/logo-final.png";
-
-// Platform branding
-export const PLATFORM_NAME_AR = "منصّة البوصلة الاقتصادية للحرب في اليمن";
-export const PLATFORM_NAME_EN = "Yemen Economic Compass";
-export const PLATFORM_SUBTITLE_AR = "مشروع بحثي من كوزواي";
-export const PLATFORM_SUBTITLE_EN = "A CauseWay Research Project";
-export const PLATFORM_ATTRIBUTION = "Part of CauseWay Consultancies - Financial Intelligence Division";
+export const APP_LOGO = "/logo-bilingual.png";
 
 // Generate login URL at runtime so redirect URI reflects the current origin.
 export const getLoginUrl = () => {

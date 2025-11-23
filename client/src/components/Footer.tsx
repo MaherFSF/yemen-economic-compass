@@ -1,195 +1,68 @@
-import { Link } from 'wouter';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { PLATFORM_NAME_AR, PLATFORM_NAME_EN } from '@/const';
-
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const { language } = useLanguage();
-  const isArabic = language === 'ar';
-  
+
   return (
-    <footer className="w-full border-t bg-muted/30">
-      <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="w-full border-t border-border/40 bg-muted/30 mt-auto">
+      <div className="container py-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About Section */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-bold">
-              {isArabic ? PLATFORM_NAME_AR : PLATFORM_NAME_EN}
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              {isArabic
-                ? "منصة بحثية شاملة لتحليل النظام المالي والاقتصادي في اليمن (2015-2025)"
-                : "Comprehensive research platform analyzing Yemen's financial and economic system (2015-2025)"
-              }
-            </p>
-            <div className="text-xs text-muted-foreground">
-              {isArabic
-                ? "مشروع بحثي من كوزواي للاستشارات"
-                : "A research project by CauseWay Consultancies"
-              }
+          <div className="space-y-3">
+            <div className="flex items-center gap-3">
+              <div className="h-10 w-10 rounded-lg bg-primary flex items-center justify-center">
+                <span className="text-primary-foreground font-bold text-xl">C</span>
+              </div>
+              <div className="flex flex-col">
+                <span className="font-bold text-lg leading-tight">Causeway</span>
+                <span className="text-xs text-muted-foreground">Consultancies</span>
+              </div>
             </div>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              استشارات متخصصة في التحليل الاقتصادي والمالي والاستراتيجي
+            </p>
           </div>
-          
-          {/* Quick Links - Data & Analysis */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-bold">
-              {isArabic ? "البيانات والتحليل" : "Data & Analysis"}
-            </h3>
-            <ul className="space-y-2 text-sm">
+
+          {/* Quick Links */}
+          <div className="space-y-3">
+            <h3 className="font-semibold text-sm">روابط سريعة</h3>
+            <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link href="/compass">
-                  <span className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    {isArabic ? "لوحة البوصلة" : "Compass Dashboard"}
-                  </span>
-                </Link>
+                <a href="/" className="hover:text-primary transition-colors">
+                  الرئيسية
+                </a>
               </li>
               <li>
-                <Link href="/key-statistics">
-                  <span className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    {isArabic ? "الإحصاءات الرئيسية" : "Key Statistics"}
-                  </span>
-                </Link>
+                <a href="/overview" className="hover:text-primary transition-colors">
+                  نظرة عامة
+                </a>
               </li>
               <li>
-                <Link href="/transformation">
-                  <span className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    {isArabic ? "التحول المالي" : "Financial Transformation"}
-                  </span>
-                </Link>
+                <a href="/charts" className="hover:text-primary transition-colors">
+                  الرسوم البيانية
+                </a>
               </li>
               <li>
-                <Link href="/power-map">
-                  <span className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    {isArabic ? "خريطة القوى" : "Power Map"}
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/advanced-viz">
-                  <span className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    {isArabic ? "رسوم بيانية متقدمة" : "Advanced Visualizations"}
-                  </span>
-                </Link>
-              </li>
-            </ul>
-          </div>
-          
-          {/* Resources */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-bold">
-              {isArabic ? "الموارد" : "Resources"}
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/research">
-                  <span className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    {isArabic ? "الأبحاث" : "Research"}
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/literature">
-                  <span className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    {isArabic ? "المكتبة البحثية" : "Research Library"}
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/news">
-                  <span className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    {isArabic ? "الأخبار" : "News"}
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/timeline">
-                  <span className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    {isArabic ? "الخط الزمني" : "Timeline"}
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/stakeholders">
-                  <span className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    {isArabic ? "أصحاب المصلحة" : "Stakeholders"}
-                  </span>
-                </Link>
-              </li>
-            </ul>
-          </div>
-          
-          {/* About CauseWay */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-bold">
-              {isArabic ? "عن كوزواي" : "About CauseWay"}
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/about-causeway">
-                  <span className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    {isArabic ? "مؤسسة كوزواي" : "CauseWay Foundation"}
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/about-causeway">
-                  <span className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    {isArabic ? "كوزواي أركاديا" : "CauseWay Arcadia"}
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/about-causeway">
-                  <span className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    {isArabic ? "كوزواي للاستشارات" : "CauseWay Consultancies"}
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/about-causeway">
-                  <span className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    {isArabic ? "كوزواي للمشاريع" : "CauseWay Projects"}
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <a href="https://kayan.manus.space" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1">
-                  {isArabic ? "منصة كيان" : "Kayan Platform"}
-                  <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
+                <a href="/about" className="hover:text-primary transition-colors">
+                  من نحن
                 </a>
               </li>
             </ul>
-            
-            {/* CauseWay Logos */}
-            <div className="mt-4 space-y-3">
-              <Link href="/about-causeway">
-                <div className="cursor-pointer hover:opacity-80 transition-opacity">
-                  <img 
-                    src="/causeway-main.jpeg" 
-                    alt="CauseWay" 
-                    className="h-12 w-auto object-contain"
-                  />
-                </div>
-              </Link>
+          </div>
+
+          {/* Contact Info */}
+          <div className="space-y-3">
+            <h3 className="font-semibold text-sm">التقرير</h3>
+            <div className="text-sm text-muted-foreground space-y-2">
+              <p>النظام المالي الموازي في اليمن</p>
+              <p className="text-xs">تحليل شامل للفترة 2015-2025</p>
+              <p className="text-xs">© {currentYear} Causeway Consultancies</p>
             </div>
           </div>
         </div>
-        
-        {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-            <div>
-              © {currentYear} CauseWay Foundation. {isArabic ? "جميع الحقوق محفوظة" : "All rights reserved"}.
-            </div>
-            <div className="flex items-center gap-4">
-              <span>{isArabic ? PLATFORM_NAME_AR : PLATFORM_NAME_EN}</span>
-            </div>
-            <div className="text-xs">
-              by Maher F.S. Farea
-            </div>
-          </div>
+
+        <div className="mt-8 pt-6 border-t border-border/40 text-center">
+          <p className="text-xs text-muted-foreground">
+            جميع الحقوق محفوظة © {currentYear} Causeway Consultancies - by Maher F.S. Farea
+          </p>
         </div>
       </div>
     </footer>
