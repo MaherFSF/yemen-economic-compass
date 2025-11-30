@@ -768,3 +768,172 @@
 8. **Implement intelligent recommendation engine**
 9. **Extract data from 45+ uploaded images systematically**
 10. **Build scenario simulation engine**
+
+
+---
+
+## 🚀 ULTIMATE COMPREHENSIVE VERSION - GOOGLE DRIVE REQUIREMENTS
+
+### Homepage Data Sources Update
+- [x] Remove all logos from data sources section on homepage
+- [x] Replace with actual text-based data source names
+- [x] Add World Bank as primary source
+- [x] Add UNICEF Transparency Portal
+- [x] Add all UN agencies (OCHA, UNDP, WFP, WHO, UNHCR, IOM, FAO, ILO)
+- [x] Add CBY-Aden directives and regulations
+- [x] Add CBY-Sana'a directives and regulations
+- [ ] Add IMF reports and data
+- [ ] Add all academic and think tank sources
+
+### Dedicated Compass Pages (NEW STRUCTURE)
+- [ ] Create /compass/companies page - ALL companies relevant to Yemen economy
+- [x] Create /compass/banks page - ALL 55+ banks with filtering
+- [x] Create /compass/microfinance page - ALL 35+ MFIs with filtering
+- [x] Create /compass/countries page - ALL countries relevant to Yemen economy
+
+### Individual Bank Pages (55+ pages to create)
+- [ ] /banks/cac-bank - Complete profile, branches, financial data
+- [ ] /banks/yemen-kuwait-bank - Complete profile
+- [ ] /banks/tadhamon - Complete profile
+- [ ] /banks/yemen-commercial-bank - Complete profile
+- [ ] /banks/national-bank-yemen - Complete profile
+- [ ] /banks/cooperative-agricultural - Complete profile
+- [ ] /banks/saba-islamic - Complete profile
+- [ ] /banks/united-bank - Complete profile
+- [ ] /banks/reconstruction-development - Complete profile
+- [ ] /banks/alkuraimi-islamic - Complete profile
+- [ ] /banks/alkuraimi-exchange - Complete profile
+- [ ] /banks/international-bank-yemen - Complete profile
+- [ ] /banks/arab-bank - Complete profile
+- [ ] /banks/shamil-bank - Complete profile
+- [ ] /banks/alamal-microfinance - Complete profile
+- [ ] ... (40+ more bank pages to create)
+
+### Individual MFI Pages (35+ pages to create)
+- [ ] /microfinance/alamal - Complete profile, products, outreach
+- [ ] /microfinance/national-foundation - Complete profile
+- [ ] /microfinance/aden-foundation - Complete profile
+- [ ] /microfinance/azal-program - Complete profile
+- [ ] /microfinance/sme-development - Complete profile
+- [ ] /microfinance/yemen-network - Industry coordination page
+- [ ] ... (29+ more MFI pages to create)
+
+### Individual Country Pages (NEW)
+- [ ] /countries/saudi-arabia - Complete economic relationship analysis
+- [ ] /countries/uae - Complete economic relationship analysis
+- [ ] /countries/usa - Aid, sanctions, policy analysis
+- [ ] /countries/uk - Aid, policy, diplomatic role
+- [ ] /countries/oman - Mediation, economic ties
+- [ ] /countries/qatar - Humanitarian aid, reconstruction
+- [ ] /countries/kuwait - Aid and reconstruction
+- [ ] /countries/iran - Alleged support, sanctions impact
+- [ ] /countries/egypt - Military and economic support
+- [ ] /countries/jordan - Refugee impact, cooperation
+- [ ] /countries/germany - Development cooperation
+- [ ] /countries/netherlands - Humanitarian aid
+- [ ] /countries/sweden - Development support
+- [ ] /countries/switzerland - Mediation, humanitarian aid
+
+### Individual Company Pages (NEW)
+- [ ] /companies/hayel-saeed-anam - Complete business profile
+- [ ] /companies/yemen-lng - Energy sector analysis
+- [ ] /companies/safer-oil - Oil infrastructure, risks
+- [ ] /companies/yemen-mobile - Telecom sector
+- [ ] /companies/yemen-airways - Aviation sector
+- [ ] ... (Add all major companies)
+
+### Internal Actors Pages (COMPREHENSIVE)
+- [ ] /actors/houthi-movement - Economic policies, revenue sources
+- [ ] /actors/irg - Fiscal policies, challenges
+- [ ] /actors/stc - Economic governance in south
+- [ ] /actors/islah-party - Economic positions
+- [ ] /actors/gpc - Economic influence
+- [ ] /actors/tribal-leaders - Economic role
+- [ ] /actors/business-community - Private sector analysis
+- [ ] /actors/civil-society - Economic advocacy
+- [ ] /actors/labor-unions - Worker rights, economic impact
+- [ ] /actors/women-groups - Economic empowerment
+- [ ] /actors/youth-groups - Economic participation
+
+### New Content Sections
+- [ ] Create /investment section with Investment Magazine content
+- [ ] Create /climate-finance section with Holm Akhder content
+- [ ] Create /youth-economy section with Alshabab/Shabab House content
+- [ ] Add dedicated pages for each content type
+
+### Timeline Extension (2011-2025)
+- [ ] Extend timeline start date from 2014 to 2011
+- [ ] Add pre-war events (2011-2014): Arab Spring, Hadi transition, National Dialogue
+- [ ] Add 2011 events: Saleh protests, GCC Initiative
+- [ ] Add 2012 events: Hadi election, transitional government
+- [ ] Add 2013 events: National Dialogue Conference
+- [ ] Add 2014 events: Houthi advance, Sana'a takeover
+- [ ] Ensure ALL indicators available at each timeline point
+
+### Intelligence & Machine Learning Features
+- [ ] Design ML algorithm for pattern recognition in economic data
+- [ ] Create predictive models for key indicators
+- [ ] Implement anomaly detection for economic shocks
+- [ ] Build recommendation engine for policy interventions
+- [ ] Create "intelligent agent" system that learns from new data
+- [ ] Implement auto-tagging system for new content
+- [ ] Build similarity detection for events and patterns
+- [ ] Create automated insight generation
+
+### API Integration System
+- [ ] World Bank API - GDP, poverty, development indicators
+- [ ] IMF API - fiscal data, Article IV reports
+- [ ] UN OCHA FTS API - humanitarian funding data
+- [ ] UNICEF Transparency Portal API - child-focused data
+- [ ] WFP API - food security data
+- [ ] WHO API - health indicators
+- [ ] UNHCR API - displacement data
+- [ ] IOM DTM API - migration data
+- [ ] Exchange rate APIs - parallel market rates
+- [ ] Create manual update system for non-API sources
+- [ ] Build API aggregation dashboard
+- [ ] Implement data validation and quality checks
+- [ ] Add API health monitoring
+
+### Private Dashboards (Role-Based Access)
+- [ ] CBY Governor Dashboard - monetary policy tools, real-time data
+- [ ] World Bank Dashboard - project tracking, disbursements
+- [ ] IMF Dashboard - fiscal monitoring, program tracking
+- [ ] Commercial Bank Dashboards - individual bank analytics
+- [ ] MFI Dashboards - microfinance sector analytics
+- [ ] Donor Dashboards - aid tracking, impact metrics
+- [ ] Yemen Microfinance Network Dashboard - sector overview
+- [ ] Government Official Dashboards - policy tools
+- [ ] Researcher Dashboard - data access, API keys
+- [ ] Journalist Dashboard - press materials, fact sheets
+
+### Intelligent Agents (AI-Powered)
+- [ ] CBY Governor Agent - policy recommendations, scenario analysis
+- [ ] World Bank Agent - project insights, risk assessment
+- [ ] Donor Agent - impact analysis, funding optimization
+- [ ] Bank Manager Agent - performance benchmarking
+- [ ] Researcher Agent - literature discovery, data analysis
+- [ ] Journalist Agent - story ideas, fact-checking
+- [ ] Citizen Agent - personal finance guidance
+- [ ] Investor Agent - opportunity identification
+
+### Subscription & Premium Features
+- [ ] Create /subscribe page with tier structure
+- [ ] Free tier - basic access, limited data export
+- [ ] Professional tier - full data access, API access, advanced analytics
+- [ ] Enterprise tier - custom dashboards, dedicated support, white-label
+- [ ] Implement paywall for premium content
+- [ ] Add subscription management dashboard
+- [ ] Create billing integration
+- [ ] Add usage analytics for subscribers
+
+### Advanced Analytics Features
+- [ ] Implement cohort analysis for economic indicators
+- [ ] Add correlation analysis tools
+- [ ] Create custom report builder
+- [ ] Add data comparison tools (Yemen vs regional)
+- [ ] Implement forecasting models
+- [ ] Add scenario planning tools
+- [ ] Create impact assessment calculators
+- [ ] Add ROI calculators for interventions
+

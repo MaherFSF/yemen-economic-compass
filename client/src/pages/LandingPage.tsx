@@ -238,24 +238,74 @@ export default function LandingPage() {
             <p className="text-sm text-slate-500">{t.trust.updated}</p>
           </div>
 
-          <div className="flex flex-wrap justify-center items-center gap-8 max-w-5xl mx-auto">
-            <div className="flex items-center gap-3 px-6 py-3 bg-slate-50 rounded-lg">
-              <img src="https://logo.clearbit.com/worldbank.org" alt="World Bank" className="h-8 w-8" />
-              <span className="font-semibold text-slate-700">World Bank</span>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {/* International Financial Institutions */}
+              <div className="px-4 py-3 bg-slate-50 rounded-lg text-center hover:bg-slate-100 transition-colors">
+                <span className="font-semibold text-slate-700 text-sm">World Bank</span>
+              </div>
+              <div className="px-4 py-3 bg-slate-50 rounded-lg text-center hover:bg-slate-100 transition-colors">
+                <span className="font-semibold text-slate-700 text-sm">IMF</span>
+              </div>
+              
+              {/* UN Agencies */}
+              <div className="px-4 py-3 bg-slate-50 rounded-lg text-center hover:bg-slate-100 transition-colors">
+                <span className="font-semibold text-slate-700 text-sm">UN OCHA</span>
+              </div>
+              <div className="px-4 py-3 bg-slate-50 rounded-lg text-center hover:bg-slate-100 transition-colors">
+                <span className="font-semibold text-slate-700 text-sm">UNDP</span>
+              </div>
+              <div className="px-4 py-3 bg-slate-50 rounded-lg text-center hover:bg-slate-100 transition-colors">
+                <span className="font-semibold text-slate-700 text-sm">WFP</span>
+              </div>
+              <div className="px-4 py-3 bg-slate-50 rounded-lg text-center hover:bg-slate-100 transition-colors">
+                <span className="font-semibold text-slate-700 text-sm">UNICEF</span>
+              </div>
+              <div className="px-4 py-3 bg-slate-50 rounded-lg text-center hover:bg-slate-100 transition-colors">
+                <span className="font-semibold text-slate-700 text-sm">WHO</span>
+              </div>
+              <div className="px-4 py-3 bg-slate-50 rounded-lg text-center hover:bg-slate-100 transition-colors">
+                <span className="font-semibold text-slate-700 text-sm">UNHCR</span>
+              </div>
+              <div className="px-4 py-3 bg-slate-50 rounded-lg text-center hover:bg-slate-100 transition-colors">
+                <span className="font-semibold text-slate-700 text-sm">IOM</span>
+              </div>
+              <div className="px-4 py-3 bg-slate-50 rounded-lg text-center hover:bg-slate-100 transition-colors">
+                <span className="font-semibold text-slate-700 text-sm">FAO</span>
+              </div>
+              <div className="px-4 py-3 bg-slate-50 rounded-lg text-center hover:bg-slate-100 transition-colors">
+                <span className="font-semibold text-slate-700 text-sm">ILO</span>
+              </div>
+              
+              {/* Central Banks */}
+              <div className="px-4 py-3 bg-slate-50 rounded-lg text-center hover:bg-slate-100 transition-colors">
+                <span className="font-semibold text-slate-700 text-sm">CBY-Aden</span>
+              </div>
+              <div className="px-4 py-3 bg-slate-50 rounded-lg text-center hover:bg-slate-100 transition-colors">
+                <span className="font-semibold text-slate-700 text-sm">CBY-Sana'a</span>
+              </div>
+              
+              {/* Think Tanks & Research */}
+              <div className="px-4 py-3 bg-slate-50 rounded-lg text-center hover:bg-slate-100 transition-colors">
+                <span className="font-semibold text-slate-700 text-sm">Sana'a Center</span>
+              </div>
+              <div className="px-4 py-3 bg-slate-50 rounded-lg text-center hover:bg-slate-100 transition-colors">
+                <span className="font-semibold text-slate-700 text-sm">Chatham House</span>
+              </div>
+              <div className="px-4 py-3 bg-slate-50 rounded-lg text-center hover:bg-slate-100 transition-colors">
+                <span className="font-semibold text-slate-700 text-sm">CSIS</span>
+              </div>
+              <div className="px-4 py-3 bg-slate-50 rounded-lg text-center hover:bg-slate-100 transition-colors">
+                <span className="font-semibold text-slate-700 text-sm">Brookings</span>
+              </div>
             </div>
-            <div className="flex items-center gap-3 px-6 py-3 bg-slate-50 rounded-lg">
-              <img src="https://logo.clearbit.com/imf.org" alt="IMF" className="h-8 w-8" />
-              <span className="font-semibold text-slate-700">IMF</span>
-            </div>
-            <div className="flex items-center gap-3 px-6 py-3 bg-slate-50 rounded-lg">
-              <img src="https://logo.clearbit.com/unocha.org" alt="OCHA" className="h-8 w-8" />
-              <span className="font-semibold text-slate-700">UN OCHA</span>
-            </div>
-            <div className="flex items-center gap-3 px-6 py-3 bg-slate-50 rounded-lg">
-              <span className="font-semibold text-slate-700">CBY</span>
-            </div>
-            <div className="flex items-center gap-3 px-6 py-3 bg-slate-50 rounded-lg">
-              <span className="font-semibold text-slate-700">Sana'a Center</span>
+            
+            <div className="mt-6 text-center">
+              <p className="text-sm text-slate-600">
+                {isArabic 
+                  ? "البيانات من التقارير الرسمية، التوجيهات، القوانين، والبوابات الشفافية"
+                  : "Data from official reports, directives, laws, regulations, and transparency portals"}
+              </p>
             </div>
           </div>
         </div>
