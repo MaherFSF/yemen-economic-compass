@@ -46,6 +46,7 @@ import CBYDashboard from "./pages/CBYDashboard";
 import SaudiArabiaPage from "./pages/SaudiArabiaPage";
 import WorldBankJourney from "./pages/WorldBankJourney";
 import FinancialFlowsNetwork from "./pages/FinancialFlowsNetwork";
+import HayelSaeedAnam from "./pages/stakeholders/HayelSaeedAnam";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -74,6 +75,7 @@ function Router() {
       <Route path={"/data-viz"} component={DataVisualization} />
       <Route path={"/stakeholders"} component={StakeholderHub} />
         <Route path="/stakeholders/saudi-arabia" component={SaudiArabiaPage} />
+        <Route path="/stakeholders/hayel-saeed-anam" component={HayelSaeedAnam} />
           <Route path="/world-bank" component={WorldBankJourney} />
       <Route path="/financial-flows" component={FinancialFlowsNetwork} />
       <Route path="/sanctions" component={SanctionsTracker} />
