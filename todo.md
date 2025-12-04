@@ -338,3 +338,107 @@
 - [ ] Test mobile responsiveness - verify all pages work on mobile
 
 **GOAL: Every single page must be fully functional and tested in browser before delivery**
+
+
+---
+
+## 🚀 COMPLETE PLATFORM REBUILD - FINAL REQUIREMENTS
+
+### PROCESS ALL 70+ NEW FILES
+- [ ] Process Sitemap-and-Architecture(3).pdf
+- [ ] Process Yemen-Economic-Compass(2)(4).pdf
+- [ ] Process Yemens-Fragmented-Financial-Landscape-Comprehensive-Overview(1)(5).pdf
+- [ ] Process 5(2).pdf, 2(2).pdf
+- [ ] Process Final1-Dec-YemenEconomic&FinancialPlatform.pdf
+- [ ] Process Mustuse(1)(1).pdf, Mustuse(2)(1).pdf, Mustuse(3).pdf
+- [ ] Process FinancialandEconomicEvolutionofYemen(2010–November2025).docx
+- [ ] Process AllversioninManus(1).txt
+- [ ] Process Pasted_content_27.txt, Pasted_content_28.txt
+- [ ] Process all 10 new images (IMG_9959-9967, PHOTO files)
+- [ ] Process MIcrofinancebanksdata(1).jpeg
+- [ ] Process Bestever(3).xlsx
+- [ ] Process all 5 PowerPoint presentations
+
+### AI-POWERED NATURAL LANGUAGE QUERY SYSTEM
+- [ ] Implement vector database (Pinecone/Weaviate/local)
+- [ ] Create document embeddings for all content
+- [ ] Build query processor with context awareness
+- [ ] Add citation linking to source documents
+- [ ] Support bilingual queries (EN/AR)
+- [ ] Test query: "What caused the 2018 currency collapse?"
+- [ ] Test query: "Compare remittance flows in 2015 vs 2023"
+- [ ] Test query: "Which donors funded education projects most?"
+- [ ] Test query: "What's the correlation between oil production and GDP?"
+
+### REAL-TIME EXCHANGE RATE MONITORING
+- [ ] Build live exchange rate dashboard
+- [ ] Track CBY Aden official rate (real-time API)
+- [ ] Track CBY Sana'a parallel rate
+- [ ] Track black market estimates
+- [ ] Calculate spread analysis
+- [ ] Show historical comparison charts (2015-2025)
+- [ ] Integrate auction results
+- [ ] Detect arbitrage opportunities
+- [ ] Add real-time alerts for significant changes
+
+### SCENARIO SIMULATION ENGINE
+- [ ] Build Monte Carlo simulation framework
+- [ ] Add economic parameters (GDP, inflation, exchange rate, etc.)
+- [ ] Add humanitarian parameters (food insecurity, poverty, etc.)
+- [ ] Add financial parameters (remittances, aid flows, banking liquidity)
+- [ ] Create scenario builder UI
+- [ ] Implement forecasting models (1-year, 3-year, 5-year)
+- [ ] Add sensitivity analysis tools
+- [ ] Generate probability distributions
+- [ ] Create interactive result visualizations
+- [ ] Export simulation reports (PDF, Excel)
+
+### COMPLETE TIMELINE (2010-2025) - EVERY EVENT
+- [ ] 2010 events (Arab Spring precursors, economic baseline)
+- [ ] 2011 events (Arab Spring, protests, transition)
+- [ ] 2012 events (Hadi presidency, National Dialogue)
+- [ ] 2013 events (economic reforms, security challenges)
+- [ ] 2014 events (Houthi takeover, economic decline begins)
+- [ ] 2015 events (Operation Decisive Storm, CBY crisis, humanitarian emergency)
+- [ ] 2016 events (CBY split, currency divergence, banking fragmentation)
+- [ ] 2017 events (cholera outbreak, famine warnings, aid scale-up)
+- [ ] 2018 events (currency collapse, Hodeidah battle, Stockholm Agreement)
+- [ ] 2019 events (Riyadh Agreement, economic stabilization attempts)
+- [ ] 2020 events (COVID-19, oil price collapse, humanitarian crisis deepens)
+- [ ] 2021 events (Biden policy shift, peace initiatives, economic stagnation)
+- [ ] 2022 events (Truce, partial recovery, remittance growth)
+- [ ] 2023 events (Saudi-Houthi talks, economic fragmentation continues)
+- [ ] 2024 events (Regional tensions, aid funding crisis, banking challenges)
+- [ ] 2025 events (current situation, latest developments through November)
+
+### LAWS & REGULATIONS DATABASE
+- [ ] Banking laws and amendments
+- [ ] Central bank regulations
+- [ ] Microfinance regulations
+- [ ] Money exchange regulations
+- [ ] Anti-money laundering laws
+- [ ] Investment laws
+- [ ] Trade regulations
+- [ ] Tax laws
+- [ ] All amendments and updates
+
+### COMPLETE SITE REDESIGN
+- [ ] Redesign homepage with AI query interface prominent
+- [ ] Redesign navigation to include all new features
+- [ ] Update sitemap to reflect ALL pages and databases
+- [ ] Apply modern design system consistently
+- [ ] Add interactive elements throughout
+- [ ] Ensure mobile perfection
+- [ ] Optimize performance (< 2s load time)
+
+### QUALITY STANDARDS
+- [ ] Exceed World Bank visualization quality
+- [ ] Professional economist-level analysis in all narratives
+- [ ] Every claim backed by credible sources
+- [ ] Comprehensive coverage - nothing missing
+- [ ] User-friendly interface for all skill levels
+- [ ] Fast and responsive on all devices
+- [ ] Accessible (WCAG 2.1 AA compliance)
+- [ ] Bilingual (EN/AR) with complete parity
+
+**DEADLINE: Build EVERYTHING listed above. No excuses. No shortcuts. World-class quality.**
