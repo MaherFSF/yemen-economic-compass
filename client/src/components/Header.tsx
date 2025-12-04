@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'wouter';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Moon, Sun } from 'lucide-react';
 import { Button } from './ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useTheme } from '@/contexts/ThemeContext';
+import GlobalSearch from './GlobalSearch';
 import { APP_LOGO } from '@/const';
 import {
   DropdownMenu,
@@ -16,6 +18,7 @@ import {
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { language, setLanguage } = useLanguage();
+  const { theme, toggleTheme, switchable } = useTheme();
   const isArabic = language === 'ar';
   
   const navigation = {
@@ -253,6 +256,23 @@ export default function Header() {
                 {t.causeway}
               </Button>
             </Link>
+
+            {/* Global Search */}
+            <div className="ml-4">
+              <GlobalSearch />
+            </div>
+
+            {/* Theme Toggle */}
+            {switchable && toggleTheme && (
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={toggleTheme}
+                className="ml-2"
+              >
+                {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              </Button>
+            )}
 
             {/* Language Toggle */}
             <Button

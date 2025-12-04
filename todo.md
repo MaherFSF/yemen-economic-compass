@@ -196,9 +196,9 @@
 - [ ] Add PDF viewer for reports
 
 ### Advanced Features
-- [ ] Implement global search functionality
-- [ ] Add dark mode toggle with smooth transitions
-- [ ] Create advanced filtering system
+- [x] Implement global search functionality
+- [x] Add dark mode toggle with smooth transitions
+- [x] Create advanced filtering system
 - [ ] Add data export in multiple formats
 - [ ] Implement user preferences and bookmarks
 - [ ] Add print-friendly layouts
