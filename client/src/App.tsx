@@ -48,6 +48,7 @@ import SaudiArabiaPage from "./pages/SaudiArabiaPage";
 import WorldBankJourney from "./pages/WorldBankJourney";
 import FinancialFlowsNetwork from "./pages/FinancialFlowsNetwork";
 import HayelSaeedAnam from "./pages/stakeholders/HayelSaeedAnam";
+import YearExplorer from "./pages/YearExplorer";
 import YouthEconomy from "./pages/YouthEconomy";
 import Investment from "./pages/Investment";
 import ClimateFinance from "./pages/ClimateFinance";
@@ -103,8 +104,8 @@ function Router() {
       <Route path={"/investment"} component={Investment} />
       <Route path={"/climate-finance"} component={ClimateFinance} />
       <Route path={"/sitemap"} component={Sitemap} />
-      <Route path={"/banks-database"} component={BanksDatabase} />
-      <Route path={"/404"} component={NotFound} />
+          <Route path="/banks-database" component={BanksDatabase} />
+          <Route path="/year-explorer" component={YearExplorer} />     <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
   );
