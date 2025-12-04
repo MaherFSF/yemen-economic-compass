@@ -7,7 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import LandingPage from "./pages/LandingPage";
+import Home from "./pages/Home";
 import Overview from "./pages/Overview";
 import Charts from "./pages/Charts";
 import StoryPage from "./pages/StoryPage";
@@ -50,12 +50,13 @@ import HayelSaeedAnam from "./pages/stakeholders/HayelSaeedAnam";
 import YouthEconomy from "./pages/YouthEconomy";
 import Investment from "./pages/Investment";
 import ClimateFinance from "./pages/ClimateFinance";
+import Sitemap from "./pages/Sitemap";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
-      <Route path={"/"} component={LandingPage} />
+      <Route path={"/"} component={Home} />
       <Route path={"/overview"} component={Overview} />
       <Route path={"/charts"} component={Charts} />
       <Route path={"/story"} component={StoryPage} />
@@ -99,6 +100,7 @@ function Router() {
       <Route path={"/youth-economy"} component={YouthEconomy} />
       <Route path={"/investment"} component={Investment} />
       <Route path={"/climate-finance"} component={ClimateFinance} />
+      <Route path={"/sitemap"} component={Sitemap} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
