@@ -1,0 +1,782 @@
+Yemen Economic Compass – Final Site Map & Developer Guide
+
+Objective Review of Existing Concepts
+
+The existing mock‑ups and documents (e.g., the mobile screenshot of the “بوابة البوصلة – المؤشرات الرئيسية” page, the master narrative and numerous reports) demonstrate a strong emphasis on real‑time data, clarity and bilingual presentation.  The key indicator cards displayed in the screenshot encapsulate statistics such as real GDP (vs 2014), inflation in different regions, exchange rates (Aden vs. Sana’a), government revenue, oil production, humanitarian funding, reserves, monetary supply, wages and sanctions intensity.  The cards use color‑coding (green/yellow/red) to convey status and severity.  Below the indicators, a text panel explains the data sources and methodology, while the footer contains navigation links, partner logos and contact information.
+
+However, earlier drafts of the site map lacked depth in certain areas.  In particular, some actor categories were missing, the hierarchical relationships between pages were not explicit, and the plan for data ingestion and APIs remained generic.  The latest guidance and datasets (e.g., the Primary Datasets & API Endpoints document) provide much richer detail on required data sources, while the Yemen Economic Compass Master Dataset enumerates events, publications, stakeholders and banks that should be surfaced.  Incorporating these elements into a comprehensive blueprint will help developers build a cohesive, extensible platform.
+
+High‑Level Site Map
+
+The following tree diagram summarises the final architecture.  Each level represents a page or module.  Pages marked with “→” have further sub‑pages that are described below.
+	1.	Home / Landing
+	•	Introduces the platform with bilingual messaging and a timeline slider; displays quick stats on GDP, inflation, exchange rates and funding.
+	2.	Dashboard Suite →
+	•	Compass Dashboard – Shows the 12 core indicators with interactive charts.
+	•	Economic Crisis Explorer – Provides narrative and charts on GDP decline, poverty, inflation divergence and macro trends.
+	•	Currency War Module – Visualises dual currency zones, official vs. parallel rates and auction results.
+	•	Cities Observatory – City‑level dashboards for Aden, Sana’a, Taiz, Hodeidah, Marib and Mukalla.
+	•	Events & Shocks Timeline – Chronological narrative of 100+ events (2011‑2025) with severity ratings and links to affected indicators and actors.
+	•	Investment & Climate Finance – Highlights climate‑finance initiatives, investment opportunities and case studies.
+	•	Youth & Social Initiatives – Showcases programmes by Shabab House and the microfinance network.
+	3.	Actor Hub →
+	•	Regional Actors – Country‑level profiles for Saudi Arabia, UAE, Oman, Iran, Qatar, Kuwait, Egypt and Jordan, including geopolitical influence, aid flows and remittances.
+	•	Yemeni Political Actors – Profiles for the Houthi Movement, IRG, STC, tribal confederations, Presidents Hadi & Rashad Al‑Alimi and Abdul‑Malik Al‑Houthi.
+	•	International Organizations – Pages for the World Bank, IMF, UN OCHA, UNDP, WFP, UNICEF, WHO, USAID, EU, UK FCDO, German GIZ, UN Panel of Experts and US Treasury.
+	•	Commercial Banks – Microsites for CAC Bank, Tadhamon Islamic Bank, Yemen Kuwait Bank and others (15+ in total).
+	•	Microfinance Institutions – Pages for Al‑Amal Microfinance Bank, Alkuraimi Islamic Microfinance, Aden Microfinance Foundation and others.
+	•	Business Groups – Comprehensive profiles for the Hayel Saeed Anam group and other conglomerates (Bin Mahfouz, Al‑Khayr, Shaher), including subsidiaries, revenues, employment, aid work and controversies.
+	•	Money Exchangers – Microsites for major exchange companies and the Money Exchangers Union, highlighting remittance and trade finance roles.
+	•	Sanctions Entities – Lists of individuals and organisations under UN, US, EU and UK sanctions, with reasons, dates and implementation status.
+	4.	Indicators →
+	•	Overview page listing all economic indicators with definitions, units and data sources.
+	•	Individual pages for each indicator (GDP, CPI, FX rates, food basket, oil output, humanitarian funding, government revenue, reserves, money supply, wages, sanctions intensity, banking stress, etc.).
+	5.	Regulations & Standards →
+	•	Pages for laws such as the Central Bank Law, AML/CTF, tax code, VAT, customs, natural resources, consumer protection, competition, electronic payments and e‑money.
+	•	Profiles for national entities (CBY Aden/Sana’a, Ministry of Finance, Central Statistics Organisation, Supreme Audit Institution, Anti‑Corruption Commission, Customs Authority, Tax Authority, major ports and airports).
+	6.	Academy & Learning Hub →
+	•	Catalog of free and paid courses, certification programmes, financial literacy resources, economic analysis tutorials and policy analysis frameworks.  Each course has an overview, curriculum and registration option.
+	•	Case studies and success stories from the Yemeni private sector and global examples.
+	7.	Intelligent Analysis System →
+	•	Event Impact Analysis – Quantifies each event’s effect on economy, finance and stability; tracks causation chains and severity.
+	•	Stakeholder Intelligence – Maps actions, interests and networks of each actor; evaluates influence and capacity.
+	•	Scenario Simulation – Allows users to adjust variables (e.g., funding, FX, oil output) and forecast impacts; includes Monte Carlo simulations.
+	•	Recommendation Engine – Produces evidence‑based policy briefs tailored to different stakeholders (CBY, donors, businesses, NGOs, regional actors).
+	•	Learning System – Continuously updates models based on new data and outcomes to improve forecasting and recommendations.
+	8.	Methodology Framework →
+	•	Explanation of the CauseWay methodology: evidence‑based analysis, context‑sensitive understanding, stakeholder‑centric approach, impact‑focused recommendations and adaptive learning.
+	•	Quality standards: data validation, peer review, methodology transparency, continuous updates, stakeholder feedback integration and Do‑No‑Harm principles.
+	9.	Technical Architecture & APIs →
+	•	Database schema: actors, actor_metrics, indicators, events, sanctions, recommendations, documents and news.  Each record includes provenance and confidence metadata.
+	•	API integrations: World Bank WDI, IMF SDMX services, OCHA FTS, WFP VAM/HDX, JODI oil data, UN sanctions lists, US Treasury OFAC, EU consolidated sanctions list, ACLED, UNVIM and others.
+	•	Front‑end stack: Next.js with TailwindCSS and ECharts; bilingual support via next‑i18next; responsive mobile design inspired by the indicator cards from the screenshot.
+	•	Back‑end stack: Node.js with Fastify or NestJS; REST/tRPC API; background workers for ingestion; PostgreSQL with Prisma or Drizzle; vector search (pgvector or Qdrant); graph database (Neo4j); object storage for documents; CI/CD on AWS or GCP.
+	•	Infrastructure: IaC via Terraform; WAF/CDN; secret management; observability (metrics, logs, traces) and daily backups.
+	10.	Calculators & Simulators →
+	•	FX calculator, inflation calculator, monetary policy simulator, GDP growth calculator, ROI calculator and risk assessment tools.  Each tool should explain the formula, inputs, outputs and limitations, and cross‑reference the underlying data sources.
+	11.	Transparency & Accountability →
+	•	Disbursement tracker for donor funding (by plan, sector and geography).
+	•	Impact metrics for interventions and programmes, with ROI calculations and methodology notes.
+	•	Policy implementation tracker and accountability scorecards for each actor.
+	•	Visualisations such as Sankey diagrams to display fund flows from donors to projects to beneficiaries.
+	12.	Sanctions Analysis →
+	•	Timeline of sanction imposition by UN, US, EU and UK; analysis of economic impact on trade, finance and humanitarian operations.
+	•	Monitoring of enforcement and humanitarian exemptions; recommendations for sanctions reform.
+	13.	Report Library & Data Catalogue →
+	•	Repository of PDFs, presentations and literature (e.g., Yemen economic crisis reports, master narrative, panel of experts reports).  Documents are tagged by topic, year, institution and can be previewed or downloaded.
+	14.	About & Contact →
+	•	Information about the project team, partners, funders and how to contribute or provide feedback.
+
+Data Ingestion and API Plan
+
+The Primary Datasets & API Endpoints document serves as a blueprint for data integration.  Key feeds include:
+	•	Conflict and Event Data – Use ACLED for geocoded conflict events (requires a token); Yemen Data Project for airstrikes; UNVIM for port clearance reports; ReliefWeb/OCHA for access constraints; UN Panel of Experts reports for sanctions and finance networks.  When possible, fetch data via official APIs; otherwise schedule scrapes with human verification.
+	•	Humanitarian & Population Data – Ingest funding flows from OCHA FTS via its API; IDP movements from IOM DTM (CKAN API); refugees and asylum data from UNHCR; food prices and minimum food basket from WFP VAM (HDX API); FEWS NET and WHO health reports via scraping.
+	•	Economic Data – Pull macro‑economic series (GDP, poverty, external balance) from World Bank WDI using the country/indicator API; monetary and financial series (reserves, M2, CPI) from IMF SDMX services; oil production and exports from EIA/JODI (CSV downloads); exchange rate quotes from CBY bulletins and trusted market monitors.  Maintain both official and observed series and triangulate where necessary.
+	•	Regulations & Standards – Harvest official documents (laws, circulars, budgets) from CBY Aden and Sana’a, MoF, tax and customs authorities, and the Central Statistics Organisation.  Use ReliefWeb and UNDOCs as fallback archives.
+	•	Report Collections – Backfill 2011–2025 documents (HRPs, HNOs, sanction reports, economic updates, sector reports) via ReliefWeb, UNDOCs and agency portals.
+
+Each dataset is stored with provenance (source and URL) and confidence scores, and the ingestion scripts record the vintage of the data (what was known at what time).  The ETL jobs should use checksums to ensure file integrity and support incremental updates.  For example, the ETL script for the OCHA FTS API should handle pagination and deduplicate flows; the script for the World Bank API should iterate over all indicators and use per_page=200 to fetch historical data.
+
+Developer Instructions
+	1.	Review the Excel Site Structure – The site_structure.xlsx file (attached) enumerates every page, its parent, description, data source, API status, expected visualisations and access level.  Use it as a hierarchical blueprint for routing and permissions.
+	2.	Set Up the Data Model – Implement the database schema (actors, actor_metrics, indicators, events, sanctions, recommendations, documents, news).  Include soft‑delete, audit columns and provenance metadata.  Use Prisma or Drizzle for migrations.
+	3.	Ingest the Master Dataset – Populate actors, events and literature tables from Yemen_Economic_Compass_MASTER_DATASET.xlsx.  This file includes 77 events, 52 publications, a timeline, key metrics and a list of banks & MFIs.  Map the actors to the categories defined in the Actors sheet of the site structure.
+	4.	Configure API Connectors – Implement modules to fetch data from the World Bank, IMF, OCHA FTS, WFP VAM/HDX, JODI/EIA, UN sanctions lists, OFAC/EU sanctions, ACLED, UNVIM and other sources.  Adhere to rate limits and ensure authentication where required.  Schedule regular jobs (daily, weekly or monthly) depending on data frequency.
+	5.	Develop Front‑End Components – Create reusable components for indicator cards, tables, charts, timelines, Sankey diagrams, calculators and network graphs.  Follow the design cues from the indicator page screenshot: color‑coded cards, clear labels and bilingual toggles.  Ensure RTL support for Arabic.
+	6.	Implement the AI Layer – Build a retrieval‑augmented generation (RAG) pipeline: embed documents and metadata in a vector store, construct a knowledge graph connecting actors, indicators and events, and integrate a large language model tuned to the Yemen corpus.  Provide an API for the chat assistant, scenario simulator and recommendation engine.  The AI should cite sources in responses and adapt its weightings as new data arrives.
+	7.	Role‑Based Access Control – Define user roles (public, donor/partner, government/regulator, financial institution, researcher/media, administrator) and assign permissions to pages and datasets.  Implement registration, login, password reset and subscription management.
+	8.	Quality Assurance – Use unit and integration tests to validate ETL pipelines, API endpoints, and UI components.  Set up monitoring for data freshness, ETL failures, API errors, and AI response quality.  Use analytics to track user engagement and inform iterative improvements.
+	9.	Documentation & Onboarding – Document the API endpoints, data schema, ingestion scripts, front‑end components and deployment processes.  Provide onboarding guides for administrators, content managers and data analysts.
+
+Methodology, Citation & Standards Addendum
+
+The user has requested additional features to ensure methodological transparency, rigorous sourcing and compliance with international standards.  These should be incorporated into the final build:
+
+Methodology Documentation
+	•	Create a dedicated Methodology page accessible from the main navigation.  This page must explain all analytic approaches used (e.g., econometric models, conflict event aggregation, scenario simulations) in clear language.  Include pop‑ups or tooltips throughout the site (via “What is this?” icons) that reveal methodology summaries when users hover over technical terms.
+	•	Document the economic models powering the simulators.  For instance, describe the assumptions behind the FX simulator (e.g., liquidity supply, remittance flows) and the macro‑model linking oil revenues to GDP and poverty.
+	•	Include data dictionaries for each dataset (see the DataDictionary sheet in the enhanced Excel file) and a Glossary page listing technical terms with bilingual definitions.
+	•	Provide an Assumptions & Limitations section describing data gaps, proxy indicators and model constraints.
+
+Source Attribution
+	•	Add footnote anchors for every statistic and chart.  Each footnote should hyperlink to the original source (e.g., World Bank API, IMF reports, UN documents) and show the date fetched.
+	•	Include inline citations within analysis texts (e.g., “according to the World Bank”) and a Sources section at the bottom of each page enumerating all references.
+	•	Display a Last Updated timestamp and data vintage (the date when the data point was known) on every indicator and chart.
+
+Adherence to International Standards
+	•	IMF / World Bank – Use IMF country codes and classifications, adopt World Bank poverty line definitions ($2.15/day), implement fiscal indicators (debt/GDP, deficit/GDP), Doing Business metrics, balance‑of‑payments standards and governance indicators.
+	•	OECD DAC – Apply DAC sector codes for aid tracking, DAC5 reporting standards, aid effectiveness principles and deflators for real‑term calculations; use the OECD Creditor Reporting System codes.
+	•	IATI Transparency – Implement IATI activity identifiers, organisation codes, data quality standards, budget classifications and result indicators; provide an IATI XML export of aid data.
+	•	Academic Citation – Allow users to export citations in APA, Chicago, Harvard and BibTeX formats; integrate with reference managers such as Zotero or Mendeley; include an “Export citation” button for each report.
+
+Advanced Visualisation & Filters
+	•	Support Sankey diagrams to display fund flows from donors to projects and beneficiaries.
+	•	Create network graphs to visualise relationships between actors (donors, banks, political factions) and show influence networks.
+	•	Implement heat maps for geographic analysis (e.g., humanitarian aid by governorate) and time‑series animations for indicators.
+	•	Provide comparative charts to benchmark Yemen against regional peers and allow drill‑down into governorate or sector levels.
+	•	Add multi‑select filters and date range pickers to all dashboards; implement advanced search with Boolean operators, saved queries and filter presets; and let users export filtered data to CSV/Excel.
+
+Data Export & API Enhancements
+	•	Offer CSV and Excel exports for all datasets; implement PDF report generation; allow charts to be saved as PNG/SVG; build a public API for researchers with proper documentation, rate limiting and API key management.
+
+Performance & Accessibility
+	•	Optimise performance: lazy‑load images, split code bundles, compress images (WebP), implement service workers for offline access, use skeleton loaders and aim for sub‑2 second load times on 3G connections.
+	•	Ensure bilingual parity on every page; verify all links, images and downloads work in both languages.
+
+World Bank Dedicated Journey
+
+Develop a specialised /world-bank-journey page showcasing the Yemen Financial Market Infrastructure and Inclusion Project.  This should include:
+	•	Project tracker: status, budget, timeline, implementing partners and disbursement milestones.
+	•	Impact metrics: beneficiaries reached, sectors targeted and geographic distribution.
+	•	A literature library filtered to World Bank‑related research and news feed tracking World Bank activities in Yemen.
+	•	Dashboards of WB‑supported indicators (e.g., financial inclusion metrics), exportable reports and project cards summarising each initiative.
+	•	Risk assessment dashboards, comparative analysis with World Bank projects in other fragile states and scenario simulators tailored to WB interventions.
+	•	A policy recommendations section aligned with the World Bank mandate.
+
+This addendum supplements the core developer guide and ensures that the final platform not only delivers comprehensive content but does so according to strict methodological, ethical and performance standards.
+
+3.1 Home / Landing Page
+
+The landing page introduces visitors to the purpose and scope of the Compass.  It summarises the key trends (GDP collapse, inflation divergence, dual currency systems, humanitarian funding gaps) with headlines and mini‑charts.  A timeline slider (2011–2025) highlights major turning points such as the 2016 central bank split and the currency ban .  Calls to action invite users to explore dashboards, register for an account or consult the AI analyst.
+
+3.2 Dashboard Suite
+
+The dashboard suite is a collection of interactive tools for visualising macro‑economic trends and crises.  Each module offers filters, time sliders and bilingual labels.
+	1.	Compass Dashboard – Displays the 12 core indicators (FX rates in Aden and Sana’a, CPI North and South, GDP growth, minimum food basket price, oil output, humanitarian funding commitments, sanctions intensity, banking stress, remittances, foreign reserves and poverty).  Users can switch between line charts, bar charts and map overlays, and view data by region or actor.
+	2.	Economic Crisis Explorer – Narrative pages explaining macro‑economic deterioration: GDP per capita has fallen by ~58% since 2015 and poverty has risen to ~76%.  Charts illustrate real income decline, inflation divergence and foreign reserves depletion.
+	3.	Currency War Module – Visualises the dual currency system born after the CBY split.  It shows official vs. parallel exchange rates (e.g., 215 YER/USD in 2014 diverging to over 2 800 YER/USD by 2025) and maps where old vs. new notes circulate.
+	4.	Cities Observatory – Offers city‑level dashboards (Aden, Sana’a, Hodeida, Marib, Taiz, etc.).  Each city page aggregates local prices, salaries, business activity, infrastructure damage and humanitarian needs.
+	5.	Events & Shocks Timeline – A dynamic chronicle of macro‑events from 2011 onwards: CBY relocation, port blockades, introduction of import credit facility (e.g., Saudi deposit of $2 billion), SDR allocations, currency bans, fuel crises and major humanitarian appeals.  Users can click an event to see severity ratings, before/after indicator changes and related actors.
+	6.	Investment & Climate Finance – Dedicated pages for green investment and climate adaptation.  Drawing inspiration from “Investment Magazine” and “Holm Akhder”, this section highlights renewable‑energy projects, climate‑finance flows, ESG opportunities and policy guidance.  It includes mapping of donors and investors, funding needs and case studies.
+	7.	Youth & Social Initiatives (“Al Shabab”) – Showcases programmes by the Shabab House and microfinance networks to support youth entrepreneurship, training, job creation and community resilience.  This module provides success stories, funding opportunities and calls for collaboration.
+
+3.3 Actor Hub (Stakeholder Microsites)
+
+The Compass will host more than 100 actor‑specific microsites, each with bilingual profiles, metrics and cross‑linkages.  Data from the Bestever .xlsx workbook informs the structure below.
+	•	Commercial Banks – Pages for each bank (CAC Bank, Tadhamon, Yemen Kuwait Bank, Islamic Bank of Yemen, etc.).  Each includes ownership, regional footprint, deposit base, branch network, humanitarian partner status, sanctions compliance and noteworthy events.  The notes from the workbook point out, for example, that CAC Aden manages government salary payments, Tadhamon is key for import letters of credit, and some banks relocated headquarters to Aden after the CBY split.
+	•	Microfinance Institutions & Banks (MFIs/MFBs) – Profiles for MFIs (e.g., Al‑Amal, Aden Foundation, National Microfinance Foundation) and new microfinance banks (Al‑Kuraimi, Al‑Busairi, Al‑Qasimi).  Each page details licensing status, deposit accounts, micro‑lending products, technology adoption, opportunities and risks (e.g., rapid licensing outpacing regulatory capacity as highlighted in the microfinance slides).  Integration with the Yemen Microfinance Network (YMN) enables institutions to self‑update metrics and share success stories.
+	•	Money Exchangers (Hawala) – Microsites for major exchangers such as Al Kuraimi, Al Swaid, Al Omgy, Al Akwa, Al Jamal and Al Raqi.  Pages list their network size, areas of operation, roles in remittance processing, aid distribution, trade finance and compliance (AML/KYC).  Notes from the slides emphasise that exchangers now process the bulk of remittances and domestic transactions, eclipsing banks.
+	•	International Donors & IFIs – Profiles for the World Bank, IMF, OCHA, WFP, UNDP, USAID, Saudi Arabia, UAE and others.  Each page summarises funding commitments, programmes, policy positions, support for reforms and evaluation notes (e.g., IMF Article IV reports, FTS flows).  Users can track aid flows by sector and region.
+	•	Regulatory & Government Entities – Pages for CBY Aden, CBY Sana’a, Ministries of Finance, SFD, SFD Microfinance Unit, taxation authorities.  Provide budgets, policy circulars, reserve data, currency issuance, tax laws and analyses of dual monetary zones.
+	•	Military & Political Actors – Microsites for the internationally recognised government (IRG), Houthi de‑facto authorities, Southern Transitional Council (STC), Saudi‑led coalition and security forces.  Pages discuss their political control, economic governance, sanctions status, and impact on finance (e.g., currency bans, blockade decisions).  Use the sanctions sheet from the workbook to track UNSC 2140 designations and OFAC penalties.
+	•	Business Groups – Profiles for conglomerates like the Hayel Saeed Anam (HSA) group, Bin Mahfouz group and others.  Each page summarises their holdings (food imports, manufacturing, telecoms, banking), employment impact, philanthropic activities and controversies (e.g., HSA received 48% of Saudi letter‑of‑credit subsidies but claims to have cut food prices; such context comes from the slide on business groups).
+	•	Knowledge & Civil Society – Pages for Sana’a Center, ACAPS, Chatham House, ODI, IGC and other think‑tanks.  Each summarises their research focus and major publications.
+	•	Sanctions & Cross‑Sector Portals – Lists of individuals and entities under international sanctions, with details of designations and compliance requirements; plus links to cross‑sector portals like the WFP and OCHA data hubs.
+
+Each actor microsite includes: a summary overview, time‑series graphs of relevant metrics, key events affecting the actor, relationships to other actors (via the knowledge graph), and a list of publications or regulations.  Authorized users (e.g., banks or donors) can edit certain fields.
+
+3.4 Indicators & Data Pages
+
+Separate pages describe each tracked indicator: definition, formula, frequency, data sources, and significance.  For example, the Inflation (CPI) – Aden page defines CPI, explains the difference between Aden and Sana’a inflation, lists data sources (CBY reports, WFP food basket data) and provides interactive charts with region and timeframe filters.  Each indicator page links to events and actors influencing it (e.g., CBY policy decisions, currency bans) and lists limitations or caveats (e.g., parallel market distortions).
+
+3.5 Data Sources & References
+
+A data catalogue page enumerates all data sources.  Each entry specifies the provider, description, metrics available, API endpoints or download links, update frequency and notes on use.  For instance, OCHA FTS provides humanitarian funding flows by sector and donor; the World Bank API yields GDP and poverty data; the CBY Aden FX Auction API returns daily auctions results; IMF IFS provides reserves and monetary aggregates.  This transparency helps users understand provenance and fosters trust.
+
+3.6 Knowledge Graph & Memory
+
+At the core of the AI system is a knowledge graph that connects actors, indicators, events and sources.  The graph is stored in a graph database (e.g., Neo4j) and includes nodes for each actor, indicator and event, with edges representing relationships (e.g., “funds”, “regulates”, “imports”, “sanctioned by”).  Time‑stamped edges allow users to trace how relationships evolve.  A memory layer stores documents and transcripts with embeddings for semantic search.
+
+An interactive visualization lets users explore this graph: clicking on an actor reveals connected events and indicators; filters allow users to view only humanitarian flows or sanctions networks.  The graph also powers the AI analyst, enabling contextual retrieval.
+
+3.7 AI Analyst, Scenario Simulators & Recommendation Engine
+	1.	AI Chat Assistant – A bilingual conversational interface that uses retrieval‑augmented generation (RAG).  When a user asks a question, the system retrieves relevant documents and data from the knowledge graph and summarises them in natural language while citing sources.  The assistant can answer simple queries (“What caused the rial to depreciate in 2025?”) and complex ones (“How would cancelling fuel subsidies affect inflation and poverty?”).  It uses open‑source large language models fine‑tuned on Yemen’s corpus, with safeguards to avoid hallucination.  Every answer includes citations to underlying documents and indicates confidence.
+	2.	Scenario Simulators & Model Tools – These modules allow users to explore “what‑if” scenarios.  Users can adjust assumptions (e.g., humanitarian funding levels, exchange‑rate paths, oil prices, remittance inflows) and see simulated effects on indicators.  Under the hood, the platform uses simplified macroeconomic models and machine‑learning regressions, trained on historical data, to approximate relationships.  For example, a user can ask: What happens to poverty and inflation if remittances drop by 20%?  The simulator draws on the knowledge graph to highlight related actors and events.
+	3.	Recommendation Engine – Based on the simulation outputs and past interventions, the engine suggests policy options.  For instance, if high inflation persists, it may recommend unifying auctions across currency zones or introducing targeted cash transfers, citing previous experiences and research findings.  The engine is customisable per user type: donors receive recommendations on funding allocations; central bank officials receive monetary policy scenarios; MFIs receive guidance on sustainable lending practices.
+
+3.8 Resources & Library
+
+This repository contains documents, reports, regulations and literature relevant to the Yemeni economy.  It includes PDFs, presentations (e.g., the “Yemen’s Economic Crisis” report, the “Master Narrative”, “Yemen’s Fragmented Financial Landscape” slides and other uploaded files), laws, policy briefs, and articles.  Users can search by keyword, date, organisation or sector.  Each document is stored with metadata and tags, and the AI assistant uses this library to cite information in answers.
+
+3.9 User Management & Subscription
+
+The platform supports multiple user roles with Role‑Based Access Control (RBAC):
+	•	Public Users – Anonymous visitors can view aggregated dashboards, read narrative pages and access most actor profiles.  They can create an account to save favourite charts or subscribe to newsletters.
+	•	Donor & Partner Accounts – International donors, UN agencies and NGO partners gain access to detailed funding dashboards, micro‑level data, report downloads and scenario simulators.  They can upload project data and get analytics on impact.
+	•	Government & Regulators – Officials from CBY Aden, CBY Sana’a, ministries and oversight bodies have rights to review sensitive datasets (e.g., bank balance sheets, licensing status) and update events or actor profiles.  They can receive AI‑generated briefs tailored to their mandates (e.g., a governor can ask, “What are the implications of issuing new rials this quarter?”).
+	•	Financial Institutions & Businesses – Banks, MFIs, exchangers and business groups can update their own pages, submit financial statements, track compliance and compare themselves to peers.  The system can alert them to regulatory changes or market shifts.
+	•	Researchers & Media – Academics and journalists can access full datasets, download CSVs, and query the knowledge graph via an API.  They can also request custom analyses.
+	•	Site Owner / Administrator – Has full control to manage users, moderate content, approve changes, configure data pipelines and oversee security.  The admin dashboard shows system health, data ingestion status and AI training metrics.
+
+Subscription plans can include a free tier (public data), a professional tier (expanded dashboards, scenario tools, document library) and an enterprise tier (custom analytics, dedicated support and API access).
+
+3.10 Development API and Data Ingestion
+
+To ensure continuous updates, the platform offers a RESTful API.  Developers can call endpoints to retrieve time‑series data, actor profiles, event lists and document metadata.  The API also supports bulk data uploads for authorised entities (e.g., CBY reports).  Documentation includes sample requests and response schemas.
+
+Data ingestion occurs via connectors to external APIs (World Bank, IMF, OCHA FTS, WFP) and manual uploads for local data.  ETL scripts validate and normalise data, compute indicators and store them in the relational database.  A data provenance framework logs source, timestamp and user.  Cron jobs schedule updates, and triggers propagate changes to dashboards and the AI memory so that new data automatically appears in charts and answers.
+
+4. AI & Data Processing Architecture
+
+The Intelligence Engine follows a four‑layer approach: collect, analyse, reason and explain.
+	1.	Collection Layer – Scrapes and fetches data from whitelisted sources (CBY reports, WFP price monitors, FTS funding flows, etc.) and ingests them into the database.  Manual entry forms allow the platform team to input qualitative insights and event descriptions.  The system assigns a confidence score to each data point based on source reliability and recency.
+	2.	Analysis Layer – Transforms raw data into structured metrics and indicators, calculates trends and anomalies and stores them in actor_metrics and indicators.  Natural‑language processing extracts facts from reports and tags them with entities and time periods.  Data quality checks flag inconsistencies.
+	3.	Reasoning Layer – The knowledge graph connects actors, indicators and events to enable reasoning about cause and effect.  When new data is ingested (e.g., a spike in FX rate), the graph identifies related events (e.g., a currency ban) and actors (CBY, exchangers), updating connections and recalculating influence weights.  Machine‑learning models (e.g., embedding models for text, and econometric models for forecasting) power the scenario simulators and recommendation engine.
+	4.	Explanation Layer – The AI analyst interprets the underlying analysis and reasoning to answer user questions in natural language, with footnotes and citations.  It includes an English–Arabic translation layer to support bilingual responses.
+
+5. Implementation Strategy
+
+Technology Stack – Use Next.js or another React framework for the front‑end; Fastify/Express for the API layer; PostgreSQL for relational storage; Neo4j or an equivalent graph database for the knowledge graph; and a vector database (e.g., Pinecone or pgvector) for storing document embeddings.  Host the application on a scalable cloud platform (AWS, Azure or DigitalOcean).  Employ CI/CD pipelines and containerization (Docker) for deployment.  Implement bilingual UI with right‑to‑left support for Arabic.
+
+Security & Compliance – Implement authentication (OAuth2/JWT), RBAC, and encryption of data at rest and in transit.  Ensure compliance with GDPR and Yemeni data regulations.  Provide audit logs and user activity tracking.
+
+Performance & Scalability – Use caching (Redis) for frequently accessed data, asynchronous tasks for heavy computations, and database replication.  Optimise queries with indices and partitions.
+
+Monitoring & Maintenance – Set up monitoring tools (Prometheus/Grafana) to track uptime, API latency, data ingestion health and AI performance.  Create internal dashboards for administrators to review data pipelines, flagged errors and content moderation queues.
+
+Design Inspiration – The platform should adopt clean, modern design principles inspired by leading economic dashboards (e.g., World Bank DataBank, IMF DataMapper) but with localised branding.  Colour schemes should differentiate between the two monetary zones (e.g., green for Aden, blue for Sana’a) and highlight key metrics.  Responsive design ensures accessibility on mobile devices, as seen in the mobile filter UI from the uploaded image.
+
+6. Next Steps
+	1.	Validate the Site‑Map – Review this enhanced site‑map with stakeholders and refine the hierarchy.  Agree on the list of actors to feature first (banks, MFIs, exchangers, donors) and prioritise indicators.
+	2.	Gather & Clean Data – Use the workbook and uploaded PDFs to populate initial actor profiles and indicator series.  Confirm access to external APIs and start building ingestion scripts.  Engage with CBY, YMN and donors to obtain up‑to‑date data from 2011–2025.
+	3.	Prototype Dashboards – Develop wireframes for each dashboard module.  Use sample data to test interactivity, filtering and bilingual display.  Iterate based on user feedback.
+	4.	Build the Knowledge Graph – Model relationships between actors, indicators and events.  Import documents into the vector database and build semantic search.
+	5.	Develop the AI Analyst – Fine‑tune language models on the curated corpus.  Integrate retrieval pipelines and test the scenario simulator.  Ensure the assistant cites sources appropriately.
+	6.	Implement RBAC & User Flows – Define user roles and create registration, login, subscription and password‑reset flows.  Set up admin dashboards for content and user management.
+	7.	Pilot & Iterate – Release a closed beta to a small group of donors, regulators and researchers.  Collect feedback on usability, data accuracy and AI responses.  Adjust dashboards, data models and AI prompts accordingly.
+
+1. Global Principles for Roles & Permissions
+	1.	Strict neutrality & do‑no‑harm
+	•	The platform never takes sides between Yemeni or regional actors.
+	•	All pages are factual, sourced, and carefully worded, especially when describing conflict parties, sanctions, or sensitive incidents.
+	2.	One data brain, many “lenses”
+	•	All roles read from the same validated datasets (events, indicators, actors, banks, sanctions, aid, laws).
+	•	The difference between roles is:
+	•	which parts are highlighted,
+	•	what tools they can use (simulators, custom queries, uploads),
+	•	what they can export or annotate.
+	3.	Role‑based access (RBAC)
+	•	Implement roles as groups in the auth system (e.g. AWS Cognito user groups + IAM roles).
+	•	Each protected API (API Gateway + Lambda / RDS) checks:
+	•	role (what can this user do?),
+	•	actor_type (e.g. “commercial bank”, “UN agency”),
+	•	tier (Public / Standard / Professional / Partner / Owner).
+	4.	English first, Arabic in parallel
+	•	All roles and screens are fully available in English.
+	•	Every role’s journey will later have mirrored Arabic content; language toggle is always visible.
+	5.	Per‑role “Compass Agent”
+	•	Each major persona gets a dedicated AI assistant embedded in their workspace.
+	•	Same core knowledge base; different:
+	•	pre‑set focus (macroeconomy, sanctions, banking, humanitarian, etc.),
+	•	default questions,
+	•	level of technical language vs. plain explanations,
+	•	safeguards (e.g. no operationally sensitive suggestions).
+
+⸻
+
+2. Access Tiers (Cross‑Cutting)
+
+Think of these as “permission levels”; personas below sit inside them.
+	1.	Tier 0 – Public Visitor (no login)
+	•	Read‑only access to: Home, Full Story timeline, selected indicators, actor pages, city dashboards, methodology overview, glossary.
+	2.	Tier 1 – Registered User (free account)
+	•	All public content + ability to:
+	•	save views & bookmarks,
+	•	subscribe to alerts,
+	•	basic data export (CSV, PNG charts),
+	•	use Citizen & Student agents (simple Q&A, explanations).
+	3.	Tier 2 – Professional Subscriber
+	•	Adds:
+	•	full indicator downloads,
+	•	access to scenario simulator (standard models only),
+	•	Sankey, network and advanced visualizations,
+	•	upload of small private datasets into a personal workspace,
+	•	Researcher / Journalist / Analyst agents.
+	4.	Tier 3 – Partner Organization Workspace
+	•	For:
+	•	Yemeni institutions (CBY branches, ministries),
+	•	international organizations (UN agencies, IFIs),
+	•	commercial banks, MFIs, large business groups.
+	•	Adds:
+	•	private, role‑specific dashboards,
+	•	secure APIs and S3 “dropboxes” for periodic data sharing,
+	•	co‑branded views (e.g. “World Bank Journey”),
+	•	organization‑level settings & user management.
+	5.	Tier 4 – Platform Owner / Core Team
+	•	Full control:
+	•	create/edit content & taxonomies,
+	•	approve events and data,
+	•	manage models, methodology, glossaries,
+	•	manage all roles, workspaces and API keys.
+
+⸻
+
+3. Persona Catalogue & Dedicated Agents
+
+Below are the key personas the platform is explicitly designed for. For each, I specify:
+	•	Who
+	•	Main needs
+	•	Key capabilities
+	•	Dedicated Agent behaviour
+
+⸻
+
+3.1 Citizens & General Public
+
+Persona: Yemeni citizens, diaspora, interested global public.
+
+Needs
+	•	Simple, trustworthy explanation of what is happening to Yemen’s economy and why.
+	•	Ability to see impact on:
+	•	prices,
+	•	food basket,
+	•	currency,
+	•	jobs and services.
+
+Capabilities
+	•	Access: Home dashboard, Full Story timeline (2011–2025), Cities & Regions, “Explainers” section, Citizen‑view of Events.
+	•	Tools:
+	•	interactive timeline (events vs. indicators),
+	•	city‑level cost of living tracker,
+	•	“What does this mean?” info boxes on all charts,
+	•	simplified “Who’s who” of actors with neutral, concise descriptions.
+	•	Exports: simple charts and PDFs with non‑technical commentary.
+
+Citizen Compass Agent
+	•	Language: very plain English; avoids jargon; always offers a one‑sentence summary first.
+	•	Functions:
+	•	explain any chart or term (“What is inflation?”, “Why are there two exchange rates?”),
+	•	answer “what happened in year X and how did it affect people?”,
+	•	suggest relevant pages and graphics for social sharing.
+	•	Guardrails:
+	•	always neutral, avoids political judgements,
+	•	never speculates about individuals’ motives; only uses sourced information.
+
+⸻
+
+3.2 Students & Academic Researchers
+
+Persona: Yemeni university students, global researchers, PhD candidates.
+
+Needs
+	•	Deep data access,
+	•	clear methodology,
+	•	reliable citations and exportable references.  
+
+Capabilities
+	•	Access:
+	•	complete indicator library,
+	•	full event catalog,
+	•	actor & institution profiles,
+	•	laws and regulation library,
+	•	Methodology & Quality Standards section,
+	•	“Literature Hub” with curated studies 2010–2025.
+	•	Tools:
+	•	advanced search by year, governorate, indicator, actor,
+	•	time‑series visualizations with event overlays,
+	•	export data as CSV/Excel,
+	•	export citations in APA / Chicago / Harvard, plus BibTeX.
+	•	Documentation:
+	•	data dictionaries for each dataset,
+	•	glossary of technical terms,
+	•	“assumptions & limitations” per model and dataset (in the Methodology area).
+
+Researcher Agent
+	•	Language: technical but clear; can switch between “academic” and “plain” modes.
+	•	Functions:
+	•	generate reading lists by topic (e.g. “banking sector in Yemen since 2010”),
+	•	draft pseudo‑code / equations for models used on the platform,
+	•	generate properly formatted references (APA, Chicago, Harvard, BibTeX),
+	•	explain how to replicate platform indicators using raw data.
+
+⸻
+
+3.3 Economic & Financial Journalists
+
+Persona: Local and international media focusing on economy, finance, humanitarian and sanctions issues.
+
+Needs
+	•	Fast, accurate snapshots and context,
+	•	reliable statistics with sources,
+	•	timelines of specific actors/events.
+
+Capabilities
+	•	Access:
+	•	“Media Briefing” dashboard with latest key indicators,
+	•	pre‑built fact sheets (“Ten years of the currency war”, “Banking sector at a glance”, etc.),
+	•	Crisis explainer kits (exchange rate, oil exports, sanctions, humanitarian funding).
+	•	Tools:
+	•	search events by keyword, actor, theme,
+	•	one‑click “fact box” generation for articles (top 5 figures + citations),
+	•	embargoed previews for forthcoming analyses (optional).
+	•	Exports:
+	•	bullet‑point summaries,
+	•	charts in PNG/SVG,
+	•	fact sheets in PDF.
+
+Journalist Agent
+	•	Language: concise, headline‑friendly.
+	•	Functions:
+	•	help craft neutral, fact‑checked paragraphs,
+	•	provide “what we know / what we don’t know” disclaimers,
+	•	automatically attach sources and “last updated” time to any figure mentioned.
+
+⸻
+
+3.4 Yemeni Policymakers (Non‑Central Bank)
+
+Persona: Officials in the internationally recognized government and in de facto authorities working on finance, planning, energy, social affairs, local governance.
+
+Needs
+	•	Evidence‑based view of:
+	•	macro trends,
+	•	poverty and labour,
+	•	sector performance (fuel, food, banking),
+	•	impact of policies and shocks,
+	•	what worked in similar countries.
+
+Capabilities
+	•	Access:
+	•	Policy Dashboards: macro, fiscal, social, and sectoral.
+	•	Year‑by‑year comparison of outcomes (2011–2025).
+	•	Event impact views: “what happened to prices/exchange‑rate before and after this decision?”
+	•	Tools:
+	•	scenario simulator with pre‑defined policy levers (subsidies, oil exports scenarios, salary payments, aid flows).
+	•	“Policy option cards” that outline possible interventions and comparative experience (fragile states).
+	•	downloadable monitoring frameworks (KPIs, target bands).
+	•	Collaboration:
+	•	secure workspaces where ministries can store their own series (kept private unless explicitly shared).
+
+Policy‑Maker Agent
+	•	Language: professional policy brief style.
+	•	Functions:
+	•	summarize trends and risks for a given sector,
+	•	generate 1–2 page policy notes with:
+	•	diagnosis,
+	•	options,
+	•	trade‑offs,
+	•	implementation risks,
+	•	indicators to watch.
+	•	Always neutral and anchored in evidence; where data is uncertain, it states that clearly.
+
+⸻
+
+3.5 Central Bank & Monetary Authorities (Aden‑based and Sana’a‑based)
+
+Persona: Teams in both rival central banking authorities – treated symmetrically and neutrally.
+
+Needs
+	•	Deep insight into:
+	•	currency dynamics,
+	•	liquidity and banking stress,
+	•	remittances and aid flows,
+	•	informal finance footprint,
+	•	sanctions and correspondent‑banking risk.
+
+Capabilities
+	•	Access:
+	•	Central Bank Workspace pages:
+	•	detailed “Currency War” analytics (dual exchange rates, spreads, arbitrage),
+	•	Core Banking Stress Index (CBSI),
+	•	indicators of deposit flight, cash vs non‑cash usage,
+	•	time‑line of all central bank decisions & their measured impacts (e.g. auctions, reserve requirement changes).
+	•	Banking sector observatory with per‑bank profiles (capital, liquidity proxies, branch distribution, ownership, sanctions status).
+	•	Tools:
+	•	stress test simulator (how shocks in exchange rate, oil exports, or aid affect banking stress and FX needs),
+	•	mapping of formal vs informal payment channels by governorate,
+	•	early‑warning dashboards (rapid exchange rate moves, liquidity tightening, sanctions announcements).
+	•	Collaboration:
+	•	central‑bank‑only data sharing pipelines (e.g. secure uploads of supervisory data),
+	•	ability to tag events as “verified official decision” (after internal review) – platform still shows them neutrally.
+
+Monetary Policy Agent
+	•	Language: highly technical macro/financial tone.
+	•	Functions:
+	•	run quick scenario “sketches” (not official policy advice) – e.g. “impact of raising reserve requirements by 2 points in current context”,
+	•	explain model assumptions and limitations for each projection,
+	•	compare Yemen’s metrics to peer fragile states and historical IMF/WB benchmarks (neutral, evidence‑based).
+
+⸻
+
+3.6 Commercial Banks & Microfinance Institutions
+
+Persona: Executives, risk officers, compliance teams of commercial banks and MFIs active in Yemen (and those under establishment).
+
+Needs
+	•	Understand systemic risk,
+	•	see their own bank in context,
+	•	monitor sanctions and regulatory changes,
+	•	benchmark profitability and outreach vs sector.
+
+Capabilities
+	•	Access:
+	•	Bank Profile Pages (open to all) with neutral, sourced descriptions and key history.
+	•	Private Bank Workspace (partner tier) for each participating bank:
+	•	confidential KPI trend boards (deposits, loan portfolio, NPL proxies, regional exposure),
+	•	comparison to sector averages and peer groups,
+	•	risk heat maps (governorates, sectors, counterparties).
+	•	Tools:
+	•	sanctions tracker focused on financial sector and correspondent banking risk,
+	•	stress tests under different exchange rate and liquidity conditions,
+	•	“inclusion radar” for banks engaged in financial inclusion.
+	•	Exports:
+	•	periodic PDFs for boards and regulators (no depositor identities, no sensitive transaction‑level data).
+
+Banking & Microfinance Agent
+	•	Language: professional banking / risk management style.
+	•	Functions:
+	•	explain prudential indicators (CAR, liquidity ratios, NPL approximations),
+	•	summarize regulatory changes relevant for that bank,
+	•	generate neutral “state of the sector” briefs,
+	•	for MFIs: explain portfolio‑at‑risk, social performance metrics, and link to poverty and governorate data.
+
+⸻
+
+3.7 Money Exchangers & Remittance Networks
+
+Persona: Key exchange companies and their union; remittance operators, hawala networks.
+
+Needs
+	•	View of flows (remittances, aid linked contracts),
+	•	understanding of regulatory expectations,
+	•	insight into regional rate spreads and compliance red flags.
+
+Capabilities
+	•	Access:
+	•	“Informal Finance & Remittances” dashboard with:
+	•	estimated remittance volumes,
+	•	exchange spread across cities,
+	•	usage of informal vs formal channels by governorate.
+	•	Regulatory corner: official guidance, AML/CFT requirements, sanctions compliance summaries.
+	•	Tools:
+	•	price‑spread explorer (difference between formal FX rate, hawala, and street),
+	•	alerts for major regulatory changes affecting money exchangers,
+	•	simple internal KYC/AML training microsite.
+
+Remittance Agent
+	•	Language: operational / compliance focused.
+	•	Functions:
+	•	explain AML/CFT standards in accessible language,
+	•	show how sanctions lists affect typical corridors,
+	•	suggest documentation and internal controls consistent with international practice (without giving legal advice).
+
+⸻
+
+3.8 International Financial Institutions (World Bank, IMF, regional development banks)
+
+Persona: Economists, country teams, project managers in World Bank, IMF, Islamic Development Bank, etc.
+
+Needs
+	•	Deep macro/fiscal data,
+	•	project‑level performance,
+	•	comparative fragile‑state analysis,
+	•	tools to design and evaluate interventions.
+
+Capabilities
+	•	World Bank Journey Page (public view) plus partner workspace:
+	•	full mapping of WB and other IFI projects since 2010 (budgets, sectors, locations, disbursements),
+	•	disbursement timelines,
+	•	outcomes and impact indicators,
+	•	comparison with similar operations in other fragile states.
+	•	Tools:
+	•	scenario simulator geared to IFI perspectives (macro‑fiscal projections, poverty impact),
+	•	“policy impact meter” linking reforms to observed changes in indicators and conflict risks,
+	•	IFI‑specific export templates (e.g. to feed into country economic updates).
+	•	Integration:
+	•	APIs and bulk export endpoints for pulling cleaned Yemen data into IFI internal models.
+
+IFI Agent
+	•	Language: formal, data‑rich economic analysis.
+	•	Functions:
+	•	generate briefing notes (e.g. “macroeconomic risks for operation X”),
+	•	highlight data gaps and reliability issues,
+	•	cross‑reference Yemen indicators with international standards (IMF GFS, BoP; World Bank WDI and governance indicators).
+
+⸻
+
+3.9 UN & Humanitarian Agencies
+
+Persona: UN OCHA, WFP, UNDP, UNICEF, WHO, UNHCR, IOM, major INGOs and cluster coordinators.
+
+Needs
+	•	Link between humanitarian operations and economic/financial context.
+	•	Donor funding flows, FTS data, sector outcomes, price shocks.
+
+Capabilities
+	•	Access:
+	•	“Humanitarian & Economy” dashboard:
+	•	FTS flows by donor, sector and year,
+	•	food basket prices and minimum expenditure basket,
+	•	employment and wage proxies,
+	•	event overlays for port closures, fuel blockades, currency shocks.
+	•	Tools:
+	•	design and evaluate cash programmes with better understanding of local price environments,
+	•	see overlap of aid footprints with economic vulnerabilities and conflict intensity,
+	•	track transparency metrics (e.g. IATI compliance, DAC sector codes).
+	•	Exports:
+	•	cluster‑ready briefing packs,
+	•	data subsets for specific humanitarian reports.
+
+Humanitarian Agent
+	•	Language: humanitarian analysis style (needs, coverage, gaps, risks).
+	•	Functions:
+	•	build concise “situation overviews” by governorate,
+	•	translate macro/financial changes into operational implications for programming (always neutral, non‑political),
+	•	help ensure that indicators and datasets used align with OECD‑DAC and IATI standards.
+
+⸻
+
+3.10 Donors & Sanctions / Compliance Community
+
+Persona: bilateral donors (GCC, US, EU members), sanctions committees, compliance officers in international banks.
+
+Needs
+	•	Clear map of:
+	•	who the main actors are,
+	•	where funds flow,
+	•	which entities are sanctioned,
+	•	where humanitarian exemptions apply,
+	•	what return and risk look like across interventions.
+
+Capabilities
+	•	Access:
+	•	Sanctions Tracker:
+	•	consolidated view of sanctioned individuals/entities (UN, US, EU, UK),
+	•	timeline of designations and de‑designations,
+	•	links to official documents,
+	•	high‑level economic impact views (not operational details).
+	•	Donor Disbursement & Accountability dashboards:
+	•	flows per donor, sector, channel, and year,
+	•	Sankey diagrams of funds from donor → channel → activity → governorate,
+	•	accountability scorecards and transparency metrics (IATI, DAC codes).
+	•	Tools:
+	•	“risk lens” overlays, showing where sanctions, conflict intensity, and financial exclusion intersect,
+	•	filters for exemption‑eligible flows (e.g. humanitarian and basic services),
+	•	compliance‑friendly export views.
+
+Sanctions & Donor Agent
+	•	Language: legal / compliance aware; cautious.
+	•	Functions:
+	•	summarize sanctions history for an actor,
+	•	highlight potential unintended impacts on humanitarian and financial stability,
+	•	link to primary legal texts and official advisories (no legal advice; always recommends consulting official channels).
+
+⸻
+
+3.11 Regional Actors (GCC & Neighbours)
+
+Persona: Institutions in Saudi Arabia, UAE, Oman, Qatar, Kuwait, Egypt, Jordan and others with policy or aid portfolios relating to Yemen.
+
+Needs
+	•	Regional view:
+	•	economic spillovers,
+	•	remittances,
+	•	cross‑border trade and migration,
+	•	impacts of their policies on Yemen’s economy and stability.
+
+Capabilities
+	•	Access:
+	•	Regional Actor pages (one per state) with:
+	•	neutral description of role in Yemen’s economy and humanitarian response,
+	•	funding and investment flows,
+	•	remittance corridors,
+	•	major policy initiatives and timelines.
+	•	Comparative charts: Yemen vs. region on trade, remittances, aid presence.
+	•	Tools:
+	•	scenario views on “what if” regional policy shifts (e.g. remittance regulations, fuel support),
+	•	tailored indicators like cross‑border fuel flows, port usage, labour migration.
+
+Regional Actor Agent
+	•	Language: diplomatic and analytical.
+	•	Functions:
+	•	prepare neutral, data‑driven briefs on Yemen–[Country] economic ties,
+	•	show how shifts in policy could affect economic and humanitarian indicators,
+	•	keep focus on stability and people’s welfare rather than political narratives.
+
+⸻
+
+3.12 Civil Society & Accountability Organizations
+
+Persona: Yemeni NGOs, global transparency and accountability initiatives, anti‑corruption watchdogs.
+
+Needs
+	•	Access to budgets, flows, and outcomes,
+	•	tools to analyse whether resources reached people,
+	•	strong source transparency and methodological clarity.
+
+Capabilities
+	•	Access:
+	•	“Transparency & Accountability Hub”:
+	•	donor disbursement tracker,
+	•	public finance indicators,
+	•	scorecards for policy implementation status,
+	•	law and regulation library.
+	•	Tools:
+	•	Sankey diagrams of funds,
+	•	ROI calculators for interventions (with clear method and caveats),
+	•	download‑ready data for advocacy reports.
+	•	Documentation:
+	•	explicit do‑no‑harm guidelines on how to interpret and use the data.
+
+Accountability Agent
+	•	Language: advocacy‑friendly but strictly evidence‑based.
+	•	Functions:
+	•	help construct narratives that are data‑driven and fair,
+	•	always attach methodological notes, caveats, and source details,
+	•	warn when data is incomplete or uncertain.
+
+⸻
+
+3.13 Platform Owner, Analysts & Technical Team
+
+Persona: CauseWay platform owners, economists, data engineers, developers.
+
+Needs
+	•	Full control; ability to audit everything,
+	•	tools to manage content, data, roles, and models.
+
+Capabilities
+	•	Access:
+	•	Owner Dashboard:
+	•	platform health metrics (performance, uptime, API calls),
+	•	content coverage summary (datasets, years, actors),
+	•	QA / validation panels (data quality flags).
+	•	Tools:
+	•	data ingestion pipelines (manual uploads and automated APIs),
+	•	dataset versioning & roll‑back,
+	•	role and permissions management,
+	•	model and simulator configuration screens (equations, parameters, calibration notes),
+	•	multi‑language content management.
+	•	Audit:
+	•	full logs of changes, exports, and API usage,
+	•	tools to review and approve proposed events or corrections from partners.
+
+Owner / Analyst Agent
+	•	Language: developer + economist hybrid.
+	•	Functions:
+	•	summarize regressions, model diagnostics, and validation results,
+	•	suggest data quality checks,
+	•	generate internal documentation drafts (release notes, changelogs, QA reports).
+
+⸻
+
+4. Mapping Roles to Capabilities (Summary View)
+
+For the developer, an implementation‑oriented summary:
+	•	Capabilities to implement as feature flags / scopes
+	•	view_public_pages
+	•	view_advanced_indicators
+	•	view_events_full
+	•	view_actor_private_workspace
+	•	run_scenario_simulator
+	•	download_raw_data
+	•	manage_content
+	•	manage_roles
+	•	manage_models
+	•	access_owner_dashboard
+	•	use_public_agent
+	•	use_professional_agent
+	•	use_partner_agent
+	•	use_owner_agent
+	•	Roles map to scopes, e.g.
+	•	role_public → view_public_pages, use_public_agent
+	•	role_student → public + view_advanced_indicators, download_raw_data
+	•	role_journalist → public + view_events_full, download_raw_data, use_professional_agent
+	•	role_central_bank → professional + run_scenario_simulator, view_actor_private_workspace, download_raw_data, use_partner_agent
+	•	role_bank_partner, role_un_partner, role_donor_partner → similar logic with tailored dashboards.
+	•	role_owner → all scopes.
+
+Authentication + authorization should be wired through AWS (e.g. Cognito groups → IAM roles → API Gateway / Lambda permission checks).
+
+⸻

@@ -1,0 +1,392 @@
+[
+  {
+    "id": 1,
+    "name_en": "Yemen Bank for Reconstruction and Development",
+    "name_ar": "بنك اليمن للإنشاء والتعمير",
+    "type": "Commercial",
+    "ownership": "Public",
+    "country": "Yemen",
+    "year_established": 1962.0,
+    "notes": NaN
+  },
+  {
+    "id": 2,
+    "name_en": "National Bank of Yemen",
+    "name_ar": "البنك الأهلي اليمني",
+    "type": "Commercial",
+    "ownership": "Public",
+    "country": "Yemen",
+    "year_established": 1969.0,
+    "notes": NaN
+  },
+  {
+    "id": 3,
+    "name_en": "United Bank Limited",
+    "name_ar": "بنك يونايتد ليميتد",
+    "type": "Commercial",
+    "ownership": "Private",
+    "country": "Pakistan",
+    "year_established": 1971.0,
+    "notes": NaN
+  },
+  {
+    "id": 4,
+    "name_en": "Arab Bank – Yemen",
+    "name_ar": "البنك العربي - اليمن",
+    "type": "Commercial",
+    "ownership": "Private",
+    "country": "Jordan",
+    "year_established": 1972.0,
+    "notes": NaN
+  },
+  {
+    "id": 5,
+    "name_en": "Yemen and Kuwait Bank",
+    "name_ar": "بنك اليمن والكويت",
+    "type": "Commercial",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": 1979.0,
+    "notes": NaN
+  },
+  {
+    "id": 6,
+    "name_en": "Yemen International Bank",
+    "name_ar": "بنك اليمن الدولي",
+    "type": "Commercial",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": 1980.0,
+    "notes": NaN
+  },
+  {
+    "id": 7,
+    "name_en": "Cooperative and Agriculture Credit Bank",
+    "name_ar": "البنك الزراعي للتسليف",
+    "type": "Commercial",
+    "ownership": "Public",
+    "country": "Yemen",
+    "year_established": 1982.0,
+    "notes": NaN
+  },
+  {
+    "id": 8,
+    "name_en": "Rafidain Bank",
+    "name_ar": "بنك الرافدين",
+    "type": "Commercial",
+    "ownership": "Public",
+    "country": "Iraq",
+    "year_established": 1982.0,
+    "notes": NaN
+  },
+  {
+    "id": 9,
+    "name_en": "Yemen Commercial Bank",
+    "name_ar": "بنك اليمن التجاري",
+    "type": "Commercial",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": 1993.0,
+    "notes": NaN
+  },
+  {
+    "id": 10,
+    "name_en": "Yemeni Islamic Bank for Finance and Investment",
+    "name_ar": "البنك اليمني الإسلامي للتمويل والاستثمار",
+    "type": "Islamic",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": 1995.0,
+    "notes": NaN
+  },
+  {
+    "id": 11,
+    "name_en": "Al-Tadhamon Islamic Bank",
+    "name_ar": "بنك التضامن الإسلامي",
+    "type": "Islamic",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": 1996.0,
+    "notes": NaN
+  },
+  {
+    "id": 12,
+    "name_en": "Saba Islamic Bank",
+    "name_ar": "بنك سبأ الإسلامي",
+    "type": "Islamic",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": 1997.0,
+    "notes": NaN
+  },
+  {
+    "id": 13,
+    "name_en": "Yemen Gulf Bank",
+    "name_ar": "بنك اليمن والخليج",
+    "type": "Commercial",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": 2001.0,
+    "notes": NaN
+  },
+  {
+    "id": 14,
+    "name_en": "Shamil Bank of Yemen and Bahrain",
+    "name_ar": "مصرف اليمن والبحرين الشامل",
+    "type": "Islamic",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": 2002.0,
+    "notes": NaN
+  },
+  {
+    "id": 15,
+    "name_en": "Qatar National Bank",
+    "name_ar": "بنك قطر الوطني",
+    "type": "Commercial",
+    "ownership": "Public",
+    "country": "Qatar",
+    "year_established": 2007.0,
+    "notes": NaN
+  },
+  {
+    "id": 16,
+    "name_en": "Al-Amal Bank for Microfinance",
+    "name_ar": "بنك الأمل للتمويل الأصغر",
+    "type": "Microfinance",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": 2008.0,
+    "notes": NaN
+  },
+  {
+    "id": 17,
+    "name_en": "Al-Kuraimi Islamic Bank",
+    "name_ar": "بنك الكريمي الإسلامي",
+    "type": "Islamic",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": 2010.0,
+    "notes": NaN
+  },
+  {
+    "id": 18,
+    "name_en": "Al-Kuraimi Islamic Microfinance Bank",
+    "name_ar": "بنك الكريمي للتمويل الأصغر",
+    "type": "Microfinance",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": 2010.0,
+    "notes": NaN
+  },
+  {
+    "id": 19,
+    "name_en": "Al-Qutaibi Islamic Microfinance Bank",
+    "name_ar": "بنك القطيبي الإسلامي للتمويل الأصغر",
+    "type": "Microfinance",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": 2021.0,
+    "notes": NaN
+  },
+  {
+    "id": 20,
+    "name_en": "Hadramout Commercial Bank",
+    "name_ar": "بنك حضرموت التجاري",
+    "type": "Commercial",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": 2022.0,
+    "notes": NaN
+  },
+  {
+    "id": 21,
+    "name_en": "Aden Bank for Microfinance",
+    "name_ar": "بنك عدن للتمويل الأصغر",
+    "type": "Microfinance",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": 2022.0,
+    "notes": NaN
+  },
+  {
+    "id": 22,
+    "name_en": "Al-Busairi Bank for Microfinance",
+    "name_ar": "بنك البسيري للتمويل الأصغر",
+    "type": "Microfinance",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": 2022.0,
+    "notes": NaN
+  },
+  {
+    "id": 23,
+    "name_en": "Al-Inma Bank for Islamic Microfinance",
+    "name_ar": "بنك الإنماء للتمويل الأصغر",
+    "type": "Microfinance",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": 2022.0,
+    "notes": NaN
+  },
+  {
+    "id": 24,
+    "name_en": "Bin Dowal Islamic Microfinance Bank",
+    "name_ar": "بنك بن دول للتمويل الأصغر",
+    "type": "Microfinance",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": 2022.0,
+    "notes": NaN
+  },
+  {
+    "id": 25,
+    "name_en": "Shamoul Bank for Islamic Microfinance",
+    "name_ar": "بنك الشمول للتمويل الأصغر",
+    "type": "Microfinance",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": 2023.0,
+    "notes": NaN
+  },
+  {
+    "id": 26,
+    "name_en": "Sharq Yemen Bank for Islamic Microfinance",
+    "name_ar": "بنك الشرق اليمني للتمويل الأصغر",
+    "type": "Microfinance",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": 2023.0,
+    "notes": NaN
+  },
+  {
+    "id": 27,
+    "name_en": "First Aden Islamic Bank",
+    "name_ar": "بنك عدن الأول الإسلامي",
+    "type": "Commercial",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": 2024.0,
+    "notes": NaN
+  },
+  {
+    "id": 28,
+    "name_en": "Al-Qasemi Islamic Microfinance Bank",
+    "name_ar": "بنك القاسمي للتمويل الأصغر",
+    "type": "Microfinance",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": 2024.0,
+    "notes": NaN
+  },
+  {
+    "id": 29,
+    "name_en": "Tamkeen Bank for Microfinance",
+    "name_ar": "بنك تمكين للتمويل الأصغر",
+    "type": "Microfinance",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": 2024.0,
+    "notes": NaN
+  },
+  {
+    "id": 30,
+    "name_en": "Bank Al-Bilad",
+    "name_ar": "بنك البلاد",
+    "type": "Microfinance",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": NaN,
+    "notes": "Under establishment"
+  },
+  {
+    "id": 31,
+    "name_en": "Afaq Bank for Microfinance",
+    "name_ar": "بنك آفاق للتمويل الأصغر",
+    "type": "Microfinance",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": NaN,
+    "notes": "Under establishment"
+  },
+  {
+    "id": 32,
+    "name_en": "Ajyal Bank for Microfinance",
+    "name_ar": "بنك أجيال للتمويل الأصغر",
+    "type": "Microfinance",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": NaN,
+    "notes": "Under establishment"
+  },
+  {
+    "id": 33,
+    "name_en": "Al-Numan Bank",
+    "name_ar": "بنك النعمان",
+    "type": "Microfinance",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": NaN,
+    "notes": "Under establishment"
+  },
+  {
+    "id": 34,
+    "name_en": "Bank Al-Ittihad for Microfinance",
+    "name_ar": "بنك الاتحاد للتمويل الأصغر",
+    "type": "Microfinance",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": NaN,
+    "notes": "Under establishment"
+  },
+  {
+    "id": 35,
+    "name_en": "Salam Capital Bank for Microfinance",
+    "name_ar": "السلام كابيتال بنك للتمويل الأصغر",
+    "type": "Microfinance",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": NaN,
+    "notes": "Under establishment"
+  },
+  {
+    "id": 36,
+    "name_en": "Inclusion Bank for Microfinance",
+    "name_ar": "بنك الشمول للتمويل الأصغر",
+    "type": "Microfinance",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": NaN,
+    "notes": "Under establishment"
+  },
+  {
+    "id": 37,
+    "name_en": "Mina Bank",
+    "name_ar": "بنك مينا",
+    "type": "Microfinance",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": NaN,
+    "notes": "Status unknown"
+  },
+  {
+    "id": 38,
+    "name_en": "Amjad Bank for Microfinance",
+    "name_ar": "بنك الأمجاد للتمويل الأصغر",
+    "type": "Microfinance",
+    "ownership": "Private",
+    "country": "Yemen",
+    "year_established": NaN,
+    "notes": NaN
+  },
+  {
+    "id": 39,
+    "name_en": "Housing Bank",
+    "name_ar": "بنك الإسكان",
+    "type": "Commercial",
+    "ownership": "Public/Private",
+    "country": "Yemen",
+    "year_established": NaN,
+    "notes": NaN
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "economic_indicators": {
+    "years_of_data": 15,
+    "data_points": 1200,
+    "stakeholders": 50,
+    "reports": 45,
+    "food_insecure": "17M",
+    "exchange_rate": "1800 YER/USD",
+    "humanitarian_aid": "$2.4B",
+    "poverty_rate": "80%"
+  },
+  "banking_sector": {
+    "commercial_banks": 17,
+    "microfinance_banks": 8,
+    "branches": 450,
+    "depositors": "2.5M"
+  },
+  "financial_flows": {
+    "remittances": "$3.8B",
+    "aid_flows": "$2.4B",
+    "trade_deficit": "$5.2B"
+  }
+}

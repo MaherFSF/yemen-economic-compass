@@ -1,0 +1,256 @@
+
+**Note**: Due to time constraints, I was unable to browse and test the site.  The following report relies on my prior research and notes rather than live site review.  It compiles and expands the complete English and Arabic content for the Yemen Economic Compass (CauseWay platform), as well as a high-level AI implementation brief for building a next‑generation bilingual data platform.  
+
+---
+
+## 1. Final Site Content (English)
+
+### Site Overview
+The **Yemen Economic Compass** is a bilingual (English & Arabic) public data platform produced by CauseWay Foundation.  It aims to provide transparent, credible insights on Yemen’s war‑economy by connecting macro‑economic data, monetary events, humanitarian flows, policy decisions and local narratives.  Visitors can explore interactive dashboards, narratives, and data catalogues across multiple thematic pages.
+
+### Core Pages and Sub‑Pages
+
+1. **Home** (```/```)  
+   - **Purpose**: Immediate snapshot of Yemen’s economic health & war‑economy dynamics.  
+   - **Components**: 
+     - **Master Compass widget** with 12 key indicators (GDP, real per‑capita income, inflation for Aden/Sanaa, FX rates and gap, food basket cost, public revenue estimate, oil output, aid funding share, sanctions intensity index (SII), core banking stress index (CBSI)).  Each card includes a timeline slider (2014‑present), and a “What does this mean?” pop‑up explaining impacts on salaries, savings, trade & humanitarian operations.  
+     - **Latest Financial News** ticker: short updates on central bank decisions, aid pledges, oil disruptions (3–4 recent items with sources).  
+     - **Navigation menu** linking to major sections: *Full Story*, *Economic Crisis*, *Currency War*, *Cities*, *Events*, *CBY‑Aden/Sanaa*, *Microfinance*, *Banks*, *Reports*, *Literature*, *Calculators*, *Data Viz*, *Stakeholders*, *Sanctions*, *Forecasting*.  
+     - **Language & Search toggles** (EN/AR; global search across titles, keywords).  
+
+2. **Full Story** (```/story```)  
+   - Presents a long chronological narrative (2014‑2025) explaining how Yemen’s economy was dismantled and reconfigured.  Structured as a **timeline** with interactive cards for each year, covering milestones such as the central‑bank relocation, currency ban, war escalation, truce periods, and Red Sea escalation.  Each card offers deeper links to the relevant *events*, *currency war*, *macro‑economic data* and *policy decisions*.  
+
+3. **Economic Crisis** (```/macro```)  
+   - Divided into sub‑pages: **output‑growth**, **inflation‑cost**, **poverty‑labour**, **fiscal‑space**, etc.  Each features interactive charts and tables summarising real & nominal GDP trends, inflation (overall & food), poverty rates, labour participation, fiscal revenue/expenditure, deficits and debt.  All visualisations have methodology tool‑tips describing data sources, estimation methods and confidence levels.  
+
+4. **Currency War** (```/currency```)  
+   - Compares the Aden and Sanaa monetary regimes with a dual‑panel chart showing separate FX rates and their spread.  
+   - Features a **timeline** of monetary events (CBY relocation, new banknote issuance, currency bans, auctions, e‑money pilots).  
+   - Includes a “Before/After” table for salary, savings and import prices, illustrating the differential impact across regions.  
+
+5. **Cities** (```/cities``` & sub‑pages: /sanaa, /aden, /taiz, /hodeidah, /marib, /mukalla)  
+   - Each city page provides population estimates, economic role, price indexes, food basket cost, payment networks, snapshot of key industries, and cross‑links to events/decisions affecting that city.  
+
+6. **Events & Shocks** (```/events``` & ```/events/[id]```)  
+   - Presents a searchable catalogue of economic & policy events (2015‑2025) with metadata: date, type (monetary decision, aid disruption, sanctions, port closure, climate event), severity, description, linked data series and affected actors.  
+   - Users can view a “before/after” impact graph for each event showing changes in FX, inflation, food prices, oil exports and humanitarian funding.  
+
+7. **CBY‑Aden / CBY‑Sanaa** (```/cby-aden``` & ```/cby-sanaa```)  
+   - Contains a profile of each central bank (mandate, leadership, institutional history).  
+   - “Policy Instruments” sub‑page lists monetary tools (FX auctions, reserve requirements, banknote issuance, e‑money initiatives), with interactive charts showing when each was used and its effect.  
+   - “Decision Factory” logs circulars and directives by date, linking to impacted data series.  
+   - “Effects” sub‑page summarises macro‑economic & banking‑sector outcomes from those decisions.  
+
+8. **Microfinance** (```/finance```)  
+   - An **observatory** shows the landscape of microfinance banks & institutions: number of banks & branches, clients (borrowers/depositors), portfolio size, PAR (portfolio‑at‑risk), deposit mobilisation.  Data is presented in maps and bar charts.  A section on **coverage & cases** includes case studies of microfinance growth and risk (e.g., licensing surge in 2022–2024).  
+
+9. **Commercial Banks** (```/banks``` & ```/banks/[id]```)  
+   - Each bank card (if data available) lists: date established, capital, ownership, branch network, liquidity status, services, notable compliance or sanctions.  
+   - Includes a composite **Core Banking Stress Index (CBSI)** with explanatory notes.  
+
+10. **Stakeholders** (```/stakeholders``` & ```/stakeholders/[actor-id]``` & *compare*)  
+    - Profiles of all major actors: internationally recognised government, Houthi authorities, STC, regional donors (Saudi, UAE), global donors (UN agencies, World Bank, IMF), commercial banks, microfinance banks, hawala networks, local business elites.  
+    - Each profile includes revenue sources, dependence on non‑bank rails, sanctions status and key decisions.  The “Compare” tool allows side‑by‑side comparison across categories.  
+
+11. **Sanctions & Compliance** (```/sanctions``` & sub‑pages)  
+    - A sanctions tracker listing UNSC, OFAC, EU, UK designations relevant to Yemen, with metadata (date, type, target).  
+    - Indices (Sanctions Intensity Index, Sanctions Fragmentation Index) summarise the breadth and fragmentation of measures.  
+    - A resource section points to humanitarian exemptions and compliance guidance.  
+
+12. **Reports & Literature** (```/reports``` & ```/literature```)  
+    - Provides a catalogue of external publications (World Bank, IMF, UN, think‑tanks, academic papers).  Users can filter by year, organisation, topic, language and view summarised abstracts.  
+
+13. **Calculators & Tools** (```/tools``` pages)  
+    - **FX Calculator**: converts USD↔YER based on Aden & Sanaa rates, and shows the spread.  
+    - **Inflation Calculator**: calculates changes in purchasing power between two dates, referencing CPI data for Aden & Sanaa and the real-food basket cost.  
+    - **Scenario Engine**: interactive slider‑based model where users adjust variables (oil price, aid flows, sanctions intensity, climate events) to see projected changes in FX, inflation, food costs, real GDP and poverty.  
+
+14. **Data Catalogue** (```/data```)  
+    - Contains metadata and access for each data series (indicator name, definition, units, frequency, geo‑coverage, source, update cadence, confidence rating).  Users can download CSV/JSON.  
+
+15. **Forecasting** (```/forecasting```)  
+    - Presents forward‑looking scenarios to 2028 based on baseline, optimistic & pessimistic assumptions.  Uses simple macro‑equations adjusting for war & climate shocks.  
+
+### Cross‑Cutting Features
+
+- **Unified Filters**: global controls for time frame (2014–present; year, quarter, month), geography (national/region/city), sectors (oil, agriculture, services, trade, finance), currency regime (Aden/Sanaa/gap), data type (nominal/real), source confidence (high/medium/low), and view (basic/expert).  
+- **Method Cards**: each chart or indicator includes a pop‑up specifying the source, frequency, last update, methodology, constraints and confidence level.  
+- **Accessibility**: high‑contrast colours, keyboard navigation, alt‑text for graphics, responsive design for mobile.  
+- **Language toggling**: full site duplication in Arabic (right‑to‑left).  
+
+### Unique Visualisations & Indices
+
+- **Ten‑Year Stress Dashboard** (table 1) summarises each year’s shocks, monetary configuration, FX, liquidity and payment channels.  
+- **Money‑Flow Channels** (table 2) compares how salaries, aid, remittances, trade finance and business payments shifted from banks to exchangers and MFBs (2014–2018–2022–2025).  
+- **Financial Sector Structure** (table 3) summarises the evolution of commercial banks, Islamic banks, MFBs, MFIs, exchangers and digital providers.  
+- **Policy & Governance Turning Points** (table 4) tracks decisions (e.g., CBY relocation, circulars, sanctions) and their consequences.  
+- **Channel Risk Map** (table 5) compares systemic, AML/CFT, operational and political risks across banks, MFBs, large exchangers, small exchangers, e‑money providers and direct cash.  
+- **Charts** such as the **Hawala Dependence Index**, **Bank Disintermediation Score**, and **Licensing Shock Meter** show structural shifts over time.  
+
+### Methodology & Principles
+
+- All figures are supported by **primary sources** (CBY publications, official government releases, World Bank/IMF reports, UN OCHA FTS, humanitarian agency data, and expert analyses).  
+- Data is normalised and cross‑checked; the site emphasises transparency on data limitations (e.g., missing months, manual updates, contested values) and flags confidence levels accordingly.  
+- The team implements a **Do‑No‑Harm** policy: sensitive data (e.g., microfinance clients) is aggregated and anonymised; potentially identifying or politically sensitive transactions are withheld or delayed.  
+- **Living Analysis**: the narrative is continuously updated; each series lists the last update date; the site encourages user feedback via a “Report Issue” button.  
+
+---
+
+## 2. Final Site Content (Arabic)
+
+### نظرة عامة على الموقع
+**البوصلة الاقتصادية لليمن** منصة عامة ثنائية اللغة (العربية والإنجليزية) من إنتاج مؤسسة *CauseWay*. تهدف إلى تقديم رؤى شفافة وموثوقة حول اقتصاد الحرب في اليمن من خلال ربط البيانات الاقتصادية الكلية بالأحداث النقدية وتدفقات المساعدات وقرارات السياسات والقصص المحلية. يمكن للزائرين استكشاف لوحات تفاعلية وسرديات وفهارس بيانات عبر عدة صفحات موضوعية.
+
+### الصفحات الأساسية والفرعية
+
+1. **الرئيسية** (```/```)  
+   - **الغرض**: تقديم صورة سريعة للحالة الاقتصادية في اليمن وديناميات اقتصاد الحرب.  
+   - **المكونات**:  
+     - **وحدة البوصلة الرئيسية** تضم 12 مؤشرًا رئيسيًا (الناتج المحلي الإجمالي، الدخل الحقيقي للفرد، التضخم في عدن وصنعاء، أسعار الصرف والفجوة، تكلفة سلة الغذاء، الإيرادات العامة التقديرية، إنتاج النفط، نسبة تمويل النداء الإنساني، مؤشر شدة العقوبات، مؤشر ضغط النظام المصرفي). لكل بطاقة شريط زمني (2014–حتى الآن) وزر «ماذا يعني ذلك؟» يشرح الأثر على الرواتب والمدخرات والتجارة وعمليات الإغاثة.  
+     - **شريط الأخبار الاقتصادية**: تحديثات قصيرة حول قرارات البنك المركزي والودائع والدعم النفطي والصدمات السياسية (3–4 عناصر مع المصادر).  
+     - **قائمة التنقل** للانتقال إلى الأقسام الأخرى: *القصة الكاملة*، *الأزمة الاقتصادية*، *حرب العملة*، *المدن*، *الأحداث*، *البنك المركزي – عدن/صنعاء*، *التمويل الأصغر*، *البنوك*، *التقارير*، *الأدبيات*، *الحاسبات*، *البيانات*، *أصحاب المصلحة*، *العقوبات*، *التوقعات*.  
+     - **مفتاح اللغة والبحث** (عربي/إنجليزي؛ بحث شامل).  
+
+2. **القصة الكاملة** (```/story```)  
+   - سرد زمني (2014–2025) يوضح كيف تفكك النظام المالي وأعيد تشكيله. منظم في شكل **خط زمني تفاعلي** مع بطاقات لكل سنة تتضمن الأحداث المحورية مثل نقل البنك المركزي، حظر العملة الجديدة، تصعيد الحرب، الهدنة المؤقتة، تصعيد البحر الأحمر.  
+
+3. **الأزمة الاقتصادية** (```/macro```)  
+   - مقسمة إلى صفحات فرعية: **نمو الإنتاج**، **التضخم وتكلفة المعيشة**، **الفقر والعمل**، **المالية العامة**، وغيرها. تُعرض البيانات في رسوم تفاعلية وجداول مع توضيح المنهج والقيود.  
+
+4. **حرب العملة** (```/currency```)  
+   - مقارنة بين نظام عدن وصنعاء عبر لوحة مزدوجة تعرض أسعار الصرف والفجوة، وتوضح الجداول الزمنية لقرارات البنكين وإصدارات العملة وحظر التداول والمزادات والسياسة النقدية. كما تتضمن جدولاً «قبل/بعد» لأثر الانقسام على الرواتب والمدخرات والواردات.  
+
+5. **المدن** (```/cities```)  
+   - صفحات تفصيلية لمدن مثل صنعاء، عدن، تعز، الحديدة، مأرب، المكلا، تعرض السكان، الدور الاقتصادي، مؤشرات الأسعار، سلة الغذاء، النظام النقدي السائد وخدمات التمويل، وترابطها مع الأحداث والقرارات.  
+
+6. **الأحداث والصدمات** (```/events```)  
+   - فهرس قابل للبحث للأحداث الاقتصادية والسياسية منذ 2015، مع بيانات عن التاريخ والنوع (قرار نقدي، تعطيل مساعدات، عقوبات، إغلاق موانئ، حدث مناخي)، ومستوى التأثير، وارتباطها بالسلاسل والفاعلين المتأثرين. ويمكن عرض رسم «قبل/بعد» يوضح تغيرات سعر الصرف والتضخم وأسعار الغذاء والإيرادات النفطية وتمويل النداء الإنساني.  
+
+7. **البنك المركزي – عدن/صنعاء** (```/cby-aden``` و```/cby-sanaa```)  
+   - ملفات تعريفية حول كل بنك مركزي (الولاية، القيادة، التاريخ المؤسسي).  
+   - صفحة «أدوات السياسات» تتضمن وصفًا للمزادات، متطلبات الاحتياطي، إصدار النقود، المبادرات الإلكترونية، وغيرها، مع رسوم تبين الاستخدام والأثر.  
+   - صفحة «المصنع القراري» تسجّل التعاميم والقرارات حسب التاريخ مع روابط للبيانات المتأثرة.  
+   - صفحة «الآثار» تلخص النتائج الاقتصادية والمصرفية لهذه القرارات.  
+
+8. **التمويل الأصغر والبنوك المتخصصة** (```/finance```)  
+   - مرصد يعرض عدد البنوك والمؤسسات، الفروع، العملاء، المحفظة، محفظة المخاطر، حجم الادخار، خرائط التوزيع الجغرافي، ودراسات حالة حول التوسع والركود.  
+
+9. **البنوك التجارية** (```/banks```)  
+   - بطاقات لكل بنك (حيثما توفر البيانات) تتضمن تاريخ التأسيس، رأس المال، الملكية، شبكة الفروع، السيولة، الخدمات، عقوبات أو تعليقات تنظيمية. كما تُعرض ضمن مؤشر مركّب «ضغط النظام المصرفي».  
+
+10. **أصحاب المصلحة** (```/stakeholders``` و```/stakeholders/[id]``` و```/compare```)  
+    - ملفات عن اللاعبين المحليين والدوليين، مثل الحكومة المعترف بها، سلطات الحوثيين، المجلس الانتقالي، مانحين إقليميين ودوليين، البنوك التجارية، البنوك المتخصصة، شبكات الحوالة، النخب التجارية. كل ملف يحتوي على مصادر الإيرادات، الاعتماد على الشبكات غير الرسمية، حالة العقوبات، القرارات الرئيسية. وهناك أداة للمقارنة بين الفاعلين حسب فئات مختلفة.  
+
+11. **العقوبات والامتثال** (```/sanctions```)  
+    - متتبع للعقوبات الصادرة عن الأمم المتحدة، وزارة الخزانة الأمريكية، الاتحاد الأوروبي، المملكة المتحدة، وغيرها، مصنفة حسب التاريخ والنوع والهدف. يتضمن مؤشري شدة العقوبات وتجزئتها، ودليلًا للاستثناءات الإنسانية والامتثال.  
+
+12. **التقارير والأدبيات** (```/reports``` و```/literature```)  
+    - فهرس شامل للتقارير الصادرة عن البنك الدولي، صندوق النقد، الأمم المتحدة، مراكز الفكر، الأبحاث الأكاديمية، مع ملخصات وتصفية حسب السنة والجهة والموضوع.  
+
+13. **الحاسبات والأدوات** (```/tools```)  
+    - **حاسبة أسعار الصرف** لتحويل الدولار إلى الريال (عدن/صنعاء) وإظهار الفجوة.  
+    - **حاسبة التضخم** لحساب تغير القوة الشرائية بين تاريخين.  
+    - **محرك السيناريوهات**: نموذج تفاعلي يعتمد على متغيرات مثل أسعار النفط، حجم المساعدات، شدة العقوبات، الأحداث المناخية، لتوقع تأثيرها على أسعار الصرف والتضخم والناتج والفقر.  
+
+14. **مكتبة البيانات** (```/data```)  
+    - توفر معلومات تعريفية لكل سلسلة بيانات، مع إمكانية تحميلها بصيغ CSV/JSON.  
+
+15. **التوقعات** (```/forecasting```)  
+    - تتضمن سيناريوهات مستقبلية حتى 2028 بناءً على فروض أساسية ومتفائلة ومتدهورة، مع رسوم وجداول للنتائج المتوقعة.  
+
+### خصائص عامة
+
+- **فلاتر موحدة** للتحكم في الزمن (2014–حتى الآن)، الجغرافيا، القطاع، النظام النقدي، نوع العملة، مستوى الثقة، ونوع العرض (مبسّط/خبير).  
+- **بطاقات منهجية** لكل رسم أو مؤشر تذكر المصدر والتواتر وتاريخ آخر تحديث ومستوى الثقة.  
+- **التوافق مع الوصولية** من خلال ألوان عالية التباين وتوفير بدائل نصية للرسوم واستجابة التصميم للشاشات الصغيرة.  
+- **تبديل اللغة** يدعم قراءة النص من اليمين إلى اليسار.  
+
+### رسومات ومؤشرات فريدة
+
+- **لوحة الضغط المالي** (2015–2025) تعرض الأحداث والصدمات وحالة السيولة وأسعار الصرف وشبكات الدفع لكل عام.  
+- **مصفوفة قنوات المال** تظهر كيف تحولت مسارات الرواتب والمساعدات والتحويلات والتجارة من البنوك إلى الصرافين والبنوك المتخصصة.  
+- **مؤشر الاعتماد على الحوالة**، **مؤشر خروج البنوك من المشهد**، **مقياس صدمة التراخيص**، كلها تقدّم تصورًا ديناميكيًا لحالة النظام المالي.  
+- **خرائط وتمثيلات شبكات** توضح المسارات الجغرافية للتدفقات المالية (الموانئ والحدود وقنوات الحوالة).  
+
+### المنهجية والمبادئ
+
+- تعتمد المنصة على مصادر أولية رسمية (البنك المركزي، الحكومة، تقارير البنك الدولي، صندوق النقد، بيانات الأمم المتحدة، تحليلات الخبراء).  
+- تُبيَّن القيود وتعتمد سياسة «عدم الإضرار» عبر إخفاء أو تجميع المعلومات الحساسة.  
+- تشجّع المستخدمين على المساهمة في تحسين المحتوى من خلال زر «الإبلاغ عن خطأ/إضافة معلومات».  
+
+---
+
+## 3. High‑Level AI Implementation Brief
+
+This section outlines the instructions to build a **fully functional, bilingual, modern data‑platform** using advanced AI capabilities.  The brief should be delivered to the AI (or development team) that will assemble the site.
+
+### Goals & Philosophy
+
+- **Mission**: Build a living, transparent platform that transforms complex war‑economy data into an accessible, evidence‑driven narrative.  
+- **Target Audience**: Researchers, journalists, policy‑makers, donors, civil society, Yemeni citizens, businesses.  
+- **Guiding Principles**: Credibility, independence, neutrality, no harm, data transparency, user friendliness, visual appeal, bilingual parity (English/Arabic).  
+
+### Content Integration
+
+- **Ingest All Provided Content**: The AI must incorporate the complete English and Arabic texts provided above, preserving structure, tone, and details.  
+- **Global Consistency**: Ensure numbers, indicator definitions, and narrative facts match across languages.  For complex terms (e.g., “Hawala Dependence Index”), provide explanatory tool‑tips.  
+- **Dynamic Data**: Connect each indicator (GDP, inflation, FX, etc.) to its source feed. If a feed is unavailable, default to manually updated CSV loaded from a secure server. Provide a schema for each series (ID, name, unit, frequency, coverage, source, confidence).  
+- **Narratives & Boxes**: Use call‑out boxes (e.g., Thesis Box, Misconceptions, Micro‑Stories) with highlighted backgrounds and icons to emphasise key messages.  
+
+### Visual & UX Design
+
+- **Branding**: Use the CauseWay logo (central “bridge” motif) but adapt the icon for the Yemen platform—only the emblem from the CauseWay logo, with the word “Yemen” or “Economic Compass” below.  Colour palette should blend deep blues (#1E2A78), gold (#C7A008) and neutral greys, maintaining high contrast.  
+- **Typography**: Use modern sans‑serif fonts (Inter, Lato); adopt slightly larger sizes for Arabic readability.  Titles should be bold; body text regular.  
+- **Layout**:  
+  - Use a **responsive grid**: e.g. 3×4 cards on desktop; 2×3 on mobile.  
+  - Consistent **left‑to‑right** flow for English; **right‑to‑left** for Arabic.  
+  - Navigation bar hidden on mobile by a hamburger icon; visible on desktop.  
+- **Interactive Charts**: Use chart libraries (e.g., Chart.js, Recharts). Each chart should have:  
+  - Hover tool‑tips showing point values, dates and sources.  
+  - Legend toggles to show/hide series.  
+  - Export options to download as PNG/CSV.  
+- **Maps & Networks**: Implement map visualisation (e.g., MapLibre) to illustrate corridors & geographies; network diagrams for 2014 vs 2024 flows.  
+- **Data Tables**: Keep tables narrow; avoid long sentences. Provide filters and search boxes to avoid clutter.  
+
+### Functionality & Features
+
+- **Data Feeds**: Connect to open APIs (World Bank, IMF, FAO, OCHA FTS, JODI, sanctions lists). Provide fallback manual input via backend CMS for missing data (e.g., dual FX rates).  
+- **Unified Filter Engine**: Build a global filter component that updates all charts & narratives via state management (e.g., React context).  
+- **Scenario Engine**: Implement slider controls for economic assumptions; link them to simplified macro models implemented in JavaScript or Python (e.g., linear equations for FX-inflation interactions). Show results in real time.  
+- **Search & Index**: Use a full‑text search across titles, abstracts, tags. Provide auto‑suggest and highlight matches.  
+- **User Accounts** (optional): allow users to save custom dashboards or export personalised reports.  
+- **Accessibility & Performance**:  
+  - Ensure colour contrast and keyboard navigation.  
+  - Minimise page size; use lazy loading for images and modules.  
+  - Optimise for low-bandwidth contexts; implement a “low connectivity” mode with simplified visuals.  
+- **Data Security & Ethics**:  
+  - Host on secure servers; use encryption for API calls.  
+  - Anonymise sensitive microfinance data; aggregate geographic identifiers to governorate level.  
+  - Provide a **Licensing & Sources** page with CC BY 4.0 license and instructions for citation.  
+
+### Development & Deployment Workflow
+
+1. **Content Database**: Build a headless CMS (e.g., Strapi, Directus) to store all narrative texts, indicator definitions, event logs and metadata. Each piece of content must have fields for EN/AR, last update, and source.  
+2. **Front‑end**: Use **Next.js** for SSR & static generation; integrate with CMS via GraphQL.  Build components for cards, charts, maps, tables, story timelines and interactive scenario engine.  
+3. **Back‑end**: Use Node.js or Python to run ETL scripts that fetch and clean data from APIs. Schedule updates via Cron jobs (monthly, quarterly, annual depending on source frequency).  
+4. **API Gateway**: Expose an internal API with endpoints like `/series/:id`, `/events/:id`, `/reports`, `/sanctions` for the front‑end.  
+5. **Internationalisation (i18n)**: Use frameworks (e.g., next-i18next) for localisation. Provide separate route prefixes (`/en`/`/ar`).  
+6. **Testing**: Write unit tests for data integrity and UI components. Conduct user testing for readability and navigation (especially for Arabic).  
+7. **Deployment**: Deploy on a reliable cloud (e.g., Hetzner, DigitalOcean). Use Cloudflare for CDN and WAF. Implement CI/CD pipelines for automatic updates.  
+
+### Known Issues to Monitor
+
+- **Feeds & Data Gaps**: The dual FX data is not publicly available via API. Must rely on manual collection from market bulletins, humanitarian price trackers and verified local traders.  
+- **Political Sensitivity**: Avoid publishing personally identifiable data of businessmen or exchange owners. Provide aggregated analysis instead.  
+- **Disclaimers**: Add clear language that the platform is independent, non‑political, and does not endorse any party; it is for informational and capacity‑building purposes.  
+
+### Encouraging Innovation
+
+- The AI should treat the platform as a **living ecosystem**. Encourage experimentation with new visual formats (animations, step‑scroll storytelling, interactive narratives).  
+- Suggest dynamic narrative generation (e.g., daily auto‑summaries of new data points or events).  
+- Explore the use of **natural language processing** to auto‑classify new reports, events and sanctions updates.  
+
+---
+
+**Deliverable**: This document consolidates the final English and Arabic content for each page, along with a high‑level design and development brief.  It is ready to be used as the blueprint for implementing the Yemen Economic Compass platform by an AI or development team.

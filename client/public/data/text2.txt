@@ -1,0 +1,2631 @@
+# Yemen Economic Compass - Comprehensive Platform Requirements
+
+## Overview
+Build world-class, intelligent platform tracking Yemen's financial and economic landscape with 100+ stakeholder pages, real-time API integrations, national regulations, and adaptive learning system.
+
+---
+
+## Core Components
+
+### 1. Stakeholder Pages (100+)
+
+#### Regional Actors
+- [ ] Saudi Arabia (detailed)
+- [ ] UAE (detailed)
+- [ ] Oman
+- [ ] Iran
+- [ ] Qatar
+- [ ] Kuwait
+- [ ] Egypt
+- [ ] Jordan
+
+#### Yemeni Political Actors
+- [ ] Houthi Movement (Ansar Allah)
+- [ ] Internationally Recognized Government (IRG)
+- [ ] Southern Transitional Council (STC)
+- [ ] Tribal Confederations
+- [ ] President Hadi
+- [ ] President Rashad Al-Alimi
+- [ ] Abdul-Malik Al-Houthi
+
+#### International Organizations
+- [ ] World Bank (detailed - already started)
+- [ ] IMF
+- [ ] UN OCHA
+- [ ] UNDP
+- [ ] WFP
+- [ ] UNICEF
+- [ ] WHO
+- [ ] USAID
+- [ ] EU
+- [ ] UK FCDO
+- [ ] German GIZ
+- [ ] UN Panel of Experts
+- [ ] US Treasury (الخزينة الأمريكية)
+
+#### Commercial Banks (15+)
+- [ ] CAC Bank (Cooperative & Agricultural Credit Bank) - already started
+- [ ] Tadhamon Islamic Bank - already started
+- [ ] Yemen Kuwait Bank
+- [ ] International Bank of Yemen
+- [ ] National Bank of Yemen
+- [ ] Yemen Bank for Reconstruction & Development
+- [ ] Saba Islamic Bank
+- [ ] United Bank
+- [ ] Yemeni Credit Bank
+- [ ] Arab Bank
+- [ ] Yemen Commercial Bank
+- [ ] Wadi Hadramout Bank
+- [ ] Finance & Development Bank
+- [ ] Shamil Bank
+- [ ] Yemen Islamic Bank
+
+#### Microfinance Institutions (10+)
+- [ ] Al-Amal Microfinance Bank
+- [ ] Alkuraimi Islamic Microfinance
+- [ ] Aden Microfinance Foundation
+- [ ] National Microfinance Foundation
+- [ ] Azal Microfinance Program
+- [ ] Yemen Microfinance Network (umbrella organization)
+- [ ] Social Fund for Development (SFD)
+- [ ] Small & Micro Enterprise Promotion Service (SMEPS)
+
+#### Major Business Groups
+- [ ] **Hayel Saeed Anam Group** (priority - comprehensive analysis)
+  - All subsidiaries and companies
+  - Tadhamon Bank ownership
+  - Workforce tracking
+  - Audit reports
+  - Public reports
+  - Economic contributions
+  - Stability and peace contributions
+  - Youth empowerment
+  - Aid and humanitarian work
+  - UN reports (including contested ones)
+  - Expert analysis
+  - Unique visualizations
+  - Impact analysis over 10 years
+- [ ] Bin Mahfouz Group
+- [ ] Al-Khayr Group
+- [ ] Shaher Group
+
+#### Money Exchangers
+- [ ] Key money exchange companies
+- [ ] Money Exchangers Union
+
+#### Sanctions Entities
+- [ ] All individuals/entities under US Treasury sanctions
+- [ ] All individuals/entities under UN sanctions
+- [ ] All individuals/entities under EU sanctions
+
+---
+
+## 2. Economic Indicators Dashboard
+
+### Indicators to Track
+
+| Code | Arabic | English | Unit | Frequency | Source | API |
+|------|--------|---------|------|-----------|--------|-----|
+| GDP_CUR | الناتج المحلي (اسمي) | GDP (current US$) | Billion $ | Annual | World Bank WDI | ✅ |
+| CPI_IRG | تضخم (مناطق الحكومة) | CPI (IRG) | % | Monthly | WFP/WB | ✅ |
+| CPI_SANA | تضخم (مناطق صنعاء) | CPI (Sanaa) | % | Monthly | Humanitarian reports | Manual |
+| FX_ADEN | سعر صرف عدن | FX Aden (USD/YER) | YER/USD | Weekly | Monitoring | Manual |
+| FX_SANA | سعر صرف صنعاء | FX Sanaa (USD/YER) | YER/USD | Monthly | Monitoring | Manual |
+| FBF | سلة غذاء دنيا | Min Food Basket | YER/family/month | Monthly | WFP VAM/HDX | ✅ |
+| REV | إيرادات عامة | Govt Revenue | % of GDP | Annual | IMF/WB | Manual |
+| OIL_OUT | إنتاج نفط | Oil Output | K barrels/day | Annual | JODI/EIA | ✅ |
+| FTS | تمويل النداء | FTS Funding | % | Monthly | OCHA FTS | ✅ |
+| CBY_AD | قرارات بنك عدن | CBY-Aden Decisions | Text | Ongoing | Official sites | Manual |
+| CBY_SA | قرارات بنك صنعاء | CBY-Sanaa Decisions | Text | Ongoing | Bulletins | Manual |
+| SII | شدّة العقوبات | Sanctions Intensity | Index 0-100 | Quarterly | UNSC/OFAC/EU | Manual |
+| CBSI | ضغط المصارف | Core Banking Stress | Index 0-100 | Quarterly | Estimated | Manual |
+
+### API Endpoints to Integrate
+
+```
+World Bank WDI:
+https://api.worldbank.org/v2/country/YEM/indicator/NY.GDP.MKTP.CD?format=json
+
+OCHA FTS:
+https://api.hpc.tools/v2/public/fts/flow?countryISO3=YEM
+
+IMF Data:
+http://dataservices.imf.org/REST/SDMX_JSON.svc/CompactData/IFS/...
+
+WFP VAM:
+https://data.humdata.org/dataset/wfp-food-prices-for-yemen
+
+JODI Oil Data:
+https://www.jodidata.org/oil/database/data-downloads.aspx
+```
+
+---
+
+## 3. National Regulations & Standards Section
+
+### Laws and Regulations (قوانين/لوائح)
+- [ ] Central Bank and Banking Law
+- [ ] Anti-Money Laundering (AML) Law
+- [ ] Counter-Terrorism Financing (CTF) Law
+- [ ] Customs Law
+- [ ] Income Tax Law
+- [ ] Value Added Tax (VAT) Law
+- [ ] Natural Resources Law (Oil/Gas)
+- [ ] Consumer Protection Law
+- [ ] Competition Law
+- [ ] Electronic Payments Regulation
+- [ ] E-Money Regulation
+
+### National Entities (هيئات ومؤسسات)
+- [ ] Central Bank of Yemen - Aden (official links)
+- [ ] Ministry of Finance
+- [ ] Central Statistical Organization
+- [ ] Supreme Audit Institution
+- [ ] Anti-Corruption Commission
+- [ ] Customs Authority
+- [ ] Tax Authority
+- [ ] Major Ports (Aden, Hodeidah, Mukalla)
+- [ ] Major Airports
+
+### Display Format
+- Legal card with summary
+- Official links
+- Last update date
+- Sensitivity level
+- Do No Harm policy (no operational details that endanger individuals)
+
+---
+
+## 4. Academy & Learning Hub
+
+### Features
+- [ ] Free training opportunities
+- [ ] Paid professional courses
+- [ ] Global standards and certifications
+- [ ] Stakeholder-specific learning paths
+- [ ] Financial literacy resources
+- [ ] Economic analysis tutorials
+- [ ] Policy analysis frameworks
+- [ ] Best practices library
+- [ ] Case studies
+- [ ] Unique success stories
+
+### Target Audiences
+- Policymakers
+- Researchers
+- Journalists
+- Students
+- Business owners
+- NGO staff
+- UN agency staff
+- Donors
+
+---
+
+## 5. Intelligent Analysis System
+
+### Core Capabilities
+
+#### Event Impact Analysis
+- Track every event over 10 years
+- Quantify impacts on economy, finance, stability
+- Identify causation chains
+- Assess severity and urgency
+
+#### Stakeholder Intelligence
+- Track actions and decisions
+- Assess interests and motivations
+- Map relationships and networks
+- Evaluate influence and capacity
+- Generate stakeholder-specific insights
+
+#### Scenario Simulation
+- Play with variables to visualize alternative outcomes
+- "What if" analysis for major events
+- Forecast impacts of policy changes
+- Test intervention strategies
+
+#### Recommendation Engine
+- Evidence-based policy recommendations
+- Stakeholder-specific advice
+- Implementation roadmaps
+- Risk assessments
+- Success metrics
+
+#### Learning System
+- Continuously update with new data
+- Adapt analysis based on outcomes
+- Improve forecasting accuracy
+- Refine recommendation quality
+
+---
+
+## 6. Methodology Framework
+
+### CauseWay Methodology
+- Evidence-based analysis
+- Context-sensitive understanding
+- Stakeholder-centric approach
+- Impact-focused recommendations
+- Transparent methodology
+- Adaptive learning
+
+### Quality Standards
+- Data validation from multiple sources
+- Expert peer review
+- Methodology transparency
+- Continuous updates
+- Stakeholder feedback integration
+- Do No Harm principles
+
+---
+
+## 7. Technical Architecture
+
+### Database Schema
+- Events (with causations)
+- Actors (with profiles)
+- Indicators (with time series)
+- Recommendations (with evidence)
+- Banks (with metrics)
+- Regulations (with documents)
+- Sanctions (with tracking)
+- News (with sources)
+
+### API Integrations
+- World Bank WDI
+- IMF Data Services
+- OCHA FTS
+- WFP VAM/HDX
+- JODI Oil Data
+- UN Sanctions Lists
+- US Treasury OFAC
+- EU Sanctions
+
+### Frontend Features
+- Interactive dashboards
+- Advanced filtering
+- Real-time updates
+- Export functionality (PDF, Excel, CSV)
+- Bilingual (Arabic/English)
+- Mobile responsive
+- Accessible design
+
+---
+
+## 8. Priority Implementation Order
+
+### Phase 1: Foundation (Weeks 1-2)
+1. Database schema expansion
+2. API integration framework
+3. Core stakeholder pages (top 10)
+4. Indicator dashboard with live data
+
+### Phase 2: Content Expansion (Weeks 3-4)
+5. Hayel Saeed Anam comprehensive page
+6. All commercial bank pages
+7. All MFI pages
+8. Major political actors
+
+### Phase 3: Intelligence (Weeks 5-6)
+9. Event impact analysis engine
+10. Scenario simulation tools
+11. Recommendation generator
+12. Learning system
+
+### Phase 4: Specialized Sections (Weeks 7-8)
+13. Regulations and standards section
+14. Academy and learning hub
+15. Sanctions tracking
+16. UN agency pages
+
+### Phase 5: Polish & Launch (Week 9-10)
+17. Quality assurance
+18. Performance optimization
+19. User testing
+20. Documentation
+
+---
+
+## 9. Success Metrics
+
+### Content Completeness
+- 100+ stakeholder pages
+- 50+ economic indicators with time series
+- 100+ timeline events
+- 50+ regulations and laws
+- 20+ learning resources
+
+### Technical Performance
+- <2s page load time
+- <500ms API response time
+- 99.9% uptime
+- Mobile responsive
+- Accessibility compliant
+
+### Analytical Depth
+- Causation mapping for major events
+- Impact quantification
+- Evidence-based recommendations
+- Scenario forecasts
+- Stakeholder intelligence
+
+### User Experience
+- Intuitive navigation
+- Clear methodology
+- Transparent sources
+- Actionable insights
+- Bilingual parity
+
+---
+
+## Next Steps
+
+1. Confirm priority order
+2. Start with database schema
+3. Integrate first APIs
+4. Build core pages
+5. Implement intelligence engine
+6. Iterate and improve
+
+## 🔍 PHASE 1: AUDIT CONTENT ACCURACY AND COMPLETENESS
+
+### Timeline Events Validation (2015-2025)
+- [ ] Verify all 24 major events have accurate dates from source documents
+- [x] Cross-reference Operation Decisive Storm date (March 26, 2015) - VERIFIED: Multiple sources confirm March 26, 2015
+- [x] Verify Central Bank split date (September 18, 2016) - VERIFIED: Multiple sources confirm September 18, 2016 decree by President Hadi
+- [ ] Validate Hodeidah Battle timeline (June-December 2018)
+- [ ] Check Stockholm Agreement date (December 13, 2018)
+- [ ] Verify COVID-19 first case date (April 10, 2020)
+- [ ] Validate all 2021-2025 events with sources
+- [ ] Ensure all actors mentioned are accurate (Houthis, Saudi Coalition, IRG, STC, etc.)
+- [ ] Add source citations for each event
+
+### Statistics Validation
+- [ ] Verify $2.4B humanitarian aid figure (source: OCHA FTS 2024)
+- [ ] Validate 8.2M beneficiaries number (source: World Bank/UN reports)
+- [ ] Check 1,800 YER/USD parallel rate accuracy (source: CBY/market data)
+- [ ] Verify all GDP figures in dashboards
+- [ ] Validate inflation rates with IMF data
+- [ ] Check poverty statistics (80% figure) with World Bank
+- [ ] Verify food insecurity numbers (17M) with WFP
+- [ ] Validate all banking sector statistics
+
+### Reports Accessibility
+- [ ] Ensure all 5+ PDF reports are uploaded to file manager
+- [ ] Verify gamma2.txt content is properly integrated
+- [ ] Check all referenced reports are downloadable
+- [ ] Add direct links to external reports (World Bank, IMF, Sana'a Center)
+- [ ] Create report summaries for each document
+- [ ] Add publication dates and authors
+
+## 📊 PHASE 2: VALIDATE ALL FUNCTIONALITY AND FILTERS
+
+### Filter Functionality
+- [ ] Test year filters on Timeline page (2015-2025)
+- [ ] Verify category filters on News Aggregator (all 5 categories)
+- [ ] Test relevance filters (high/medium/low)
+- [ ] Validate search functionality across all pages
+- [ ] Check stakeholder filters on Stakeholder Hub
+- [ ] Test bank filters on Commercial Banks page
+- [ ] Verify event type filters on Timeline
+- [ ] Ensure no filter options are unused or broken
+
+### API Integrations
+- [ ] Test World Bank API connection
+- [ ] Verify IMF API integration
+- [ ] Check OCHA FTS API for humanitarian data
+- [ ] Validate exchange rate data feeds
+- [ ] Test any other external APIs
+- [ ] Add error handling for API failures
+- [ ] Implement caching for API responses
+
+### Calculators & Simulators
+- [ ] Validate economic models in Scenario Simulator
+- [ ] Check formulas in Financial Calculators
+- [ ] Verify Monetary Policy Simulator calculations
+- [ ] Test all slider ranges and impacts
+- [ ] Ensure methodology modals explain calculations
+- [ ] Add academic citations for models used
+
+### Charts & Visualizations
+- [ ] Verify all data in MasterCompass widget
+- [ ] Check ScrollytellingTimeline data accuracy
+- [ ] Validate charts in Executive Dashboard
+- [ ] Test CBY Dashboard visualizations
+- [ ] Ensure all charts have proper labels and legends
+- [ ] Add data source attributions to all charts
+
+## 🎯 PHASE 3: ENRICH STAKEHOLDER RECOMMENDATIONS
+
+### Evidence-Based Policy Recommendations
+- [ ] Add specific recommendations for World Bank/IMF
+- [ ] Create actionable policy briefs for CBY-Aden
+- [ ] Develop recommendations for donors (USAID, EU, UK, Saudi, UAE)
+- [ ] Add policy options for Yemeni government (IRG)
+- [ ] Include recommendations for humanitarian actors (UN, NGOs)
+- [ ] Provide analysis for private sector actors
+- [ ] Add recommendations for regional actors (GCC, Arab League)
+
+### Transparency & Accountability
+- [ ] Add disbursement tracking for all donors
+- [ ] Create impact metrics for each intervention
+- [ ] Show ROI calculations with methodology
+- [ ] Track policy implementation status
+- [ ] Add accountability scorecards
+- [ ] Include transparency indicators (IATI compliance)
+- [ ] Show fund flows with Sankey diagrams
+
+### Actor Deep Dives
+- [ ] Expand Houthi economic analysis (taxation, port revenues, remittances)
+- [ ] Detail Saudi Coalition economic impact
+- [ ] Analyze IRG fiscal policy and challenges
+- [ ] Profile STC economic governance in south
+- [ ] Detail CBY-Aden vs CBY-Sana'a policies
+- [ ] Analyze commercial banks' role and challenges
+- [ ] Profile major donors with disbursement history
+
+### Sanctions Analysis
+- [ ] List all sanctioned entities (UN, US, EU, UK)
+- [ ] Analyze economic impact of sanctions
+- [ ] Track sanctions implementation and enforcement
+- [ ] Show humanitarian exemptions and gaps
+- [ ] Add timeline of sanctions imposition
+- [ ] Include recommendations for sanctions reform
+
+## 📚 PHASE 4: MAKE ALL REPORTS ACCESSIBLE
+
+### Report Library Enhancement
+- [ ] Upload all PDF reports to file manager
+- [ ] Create downloadable report cards for each document
+- [ ] Add executive summaries for long reports
+- [ ] Implement citation system (APA/Chicago style)
+- [ ] Add "Cite this" buttons with formatted citations
+- [ ] Create bibliography page with all sources
+- [ ] Add DOI links where available
+
+### Methodology Documentation
+- [ ] Write methodology page explaining all analysis approaches
+- [ ] Document economic models used in simulators
+- [ ] Explain data collection and validation processes
+- [ ] Add data dictionaries for all datasets
+- [ ] Create glossary of technical terms
+- [ ] Include assumptions and limitations sections
+- [ ] Add peer review and validation information
+
+### Source Attribution
+- [ ] Add footnotes to all statistics
+- [ ] Include inline citations in all analysis
+- [ ] Create "Sources" section at bottom of each page
+- [ ] Link to original source documents
+- [ ] Add "Last updated" timestamps
+- [ ] Include data vintage information
+
+## 🌐 PHASE 5: IMPLEMENT GLOBAL STANDARDS
+
+### IMF/World Bank Standards
+- [ ] Use IMF country codes and classifications
+- [ ] Follow World Bank poverty definitions ($2.15/day)
+- [ ] Implement IMF fiscal indicators (debt/GDP, deficit/GDP)
+- [ ] Use World Bank Doing Business indicators
+- [ ] Follow IMF balance of payments standards
+- [ ] Implement World Bank governance indicators
+
+### OECD DAC Standards
+- [ ] Use OECD DAC sector codes for aid tracking
+- [ ] Implement DAC5 reporting standards
+- [ ] Follow OECD aid effectiveness principles
+- [ ] Use DAC deflators for real-term calculations
+- [ ] Implement OECD creditor reporting system codes
+
+### IATI Transparency Standards
+- [ ] Implement IATI activity identifiers
+- [ ] Use IATI organization codes
+- [ ] Follow IATI data quality standards
+- [ ] Add IATI XML export functionality
+- [ ] Implement IATI budget classifications
+- [ ] Use IATI result indicators
+
+### Academic Citation Standards
+- [ ] Implement APA 7th edition citations
+- [ ] Add Chicago Manual of Style option
+- [ ] Include Harvard referencing style
+- [ ] Add BibTeX export for researchers
+- [ ] Implement Zotero/Mendeley integration
+- [ ] Add "Export citation" buttons
+
+## 🚀 PHASE 6: ADVANCED FEATURES
+
+### Enhanced Visualizations
+- [ ] Add interactive Sankey diagrams for fund flows
+- [ ] Create network graphs for actor relationships
+- [ ] Implement heat maps for geographic analysis
+- [ ] Add time-series animations for key indicators
+- [ ] Create comparative charts (Yemen vs region)
+- [ ] Add drill-down capabilities in all charts
+
+### Advanced Filters & Search
+- [ ] Implement multi-select filters
+- [ ] Add date range pickers for all timelines
+- [ ] Create advanced search with Boolean operators
+- [ ] Add saved search functionality
+- [ ] Implement filter presets for common queries
+- [ ] Add export filtered results to CSV/Excel
+
+### Data Export & API
+- [ ] Add CSV export for all datasets
+- [ ] Implement Excel export with formatting
+- [ ] Create PDF report generation
+- [ ] Add chart export as PNG/SVG
+- [ ] Build public API for researchers
+- [ ] Add API documentation page
+- [ ] Implement rate limiting and API keys
+
+### Performance Optimization
+- [ ] Implement lazy loading for all images
+- [ ] Add code splitting for faster load times
+- [ ] Optimize all images (WebP format)
+- [ ] Implement service worker for offline access
+- [ ] Add loading skeletons for all components
+- [ ] Optimize bundle size (<500KB)
+- [ ] Achieve <2s load time on 3G
+
+## ✅ PHASE 7: FINAL QUALITY ASSURANCE
+
+### Content Review
+- [ ] Review all English content for accuracy
+- [ ] Review all Arabic content for accuracy
+- [ ] Ensure bilingual parity across all pages
+- [ ] Check all links are working
+- [ ] Verify all images load correctly
+- [ ] Test all downloads work
+
+### Functionality Testing
+- [ ] Test all filters on all pages
+- [ ] Verify all APIs are working
+- [ ] Test all calculators and simulators
+- [ ] Check all forms submit correctly
+- [ ] Test file upload/download
+- [ ] Verify authentication works
+
+### Cross-Browser Testing
+- [ ] Test on Chrome
+- [ ] Test on Firefox
+- [ ] Test on Safari
+- [ ] Test on Edge
+- [ ] Test on mobile browsers
+
+### Accessibility Testing
+- [ ] Check keyboard navigation
+- [ ] Verify screen reader compatibility
+- [ ] Test color contrast ratios
+- [ ] Ensure ARIA labels are correct
+- [ ] Test with accessibility tools
+
+### Performance Testing
+- [ ] Run Lighthouse audit (target: 90+ score)
+- [ ] Test load time on slow connections
+- [ ] Check bundle size
+- [ ] Verify lazy loading works
+- [ ] Test with throttled CPU
+
+### Final Checkpoint
+- [ ] Save comprehensive checkpoint
+- [ ] Document all changes
+- [ ] Create user guide
+- [ ] Write deployment notes
+
+
+---
+
+## 🌟 WORLD-CLASS STAKEHOLDER MICRO-SITES
+
+### World Bank Dedicated Journey
+- [ ] Create /world-bank-journey page with comprehensive dashboard
+- [ ] Extract all WB project data from YEMENFINANCIALMARKETINFRASTRUCTUREANDINCLUSIONPROJECT2(5).pdf
+- [ ] Add WB project tracker with Financial Market Infrastructure project details
+- [ ] Add disbursement timeline visualization
+- [ ] Add impact metrics dashboard (beneficiaries, sectors, regions)
+- [ ] Add implementing partners section with details
+- [ ] Add policy recommendations aligned with WB mandate
+- [ ] Add literature library filtered to WB-relevant research
+- [ ] Add news feed tracking WB activities in Yemen
+- [ ] Add indicator dashboard showing WB-supported metrics
+- [ ] Add export functionality for WB reports
+- [ ] Add WB project cards with status, budget, timeline
+- [ ] Add project implementation progress tracker
+- [ ] Add risk assessment dashboard for WB projects
+- [ ] Add comparative analysis with WB projects in other fragile states
+- [ ] Add scenario simulator for WB interventions
+- [ ] Add policy impact meter for WB-supported reforms
+
+### Regional Actor Pages (Complete Set)
+- [x] Saudi Arabia - comprehensive page created
+- [ ] UAE - military role, economic support, humanitarian aid, port control, Aden influence
+- [ ] Oman - mediation efforts, economic ties, humanitarian corridor, neutral stance
+- [ ] Iran - Houthi support allegations, sanctions impact, regional strategy
+- [ ] Qatar - humanitarian aid, mediation attempts, reconstruction pledges
+- [ ] Kuwait - humanitarian aid, reconstruction support, diplomatic role
+- [ ] Egypt - military support to coalition, economic ties, regional security
+- [ ] Jordan - refugee impact, economic cooperation, humanitarian support
+
+### Yemeni Actor Pages (Complete Set)
+- [ ] Houthi Movement (Ansar Allah) - control areas, economic policies, revenue sources (ports, taxes, customs)
+- [ ] Internationally Recognized Government (IRG) - economic policies, fiscal challenges, CBY-Aden
+- [ ] Southern Transitional Council (STC) - separatist agenda, economic vision, Aden control
+- [ ] Tribal Actors - economic influence, conflict dynamics, local governance
+- [ ] Islah Party - political role, economic policies
+- [ ] General People's Congress (GPC) - fragmentation, economic influence
+- [ ] Other Political Parties - economic positions
+
+### International Organization Pages (Complete Set)
+- [ ] IMF - programs, Article IV consultations, assessments, recommendations
+- [ ] UN OCHA - humanitarian coordination, funding appeals, FTS data
+- [ ] UNDP - development projects, governance support, recovery planning
+- [ ] WFP - food assistance, cash transfers, logistics
+- [ ] UNICEF - child protection, education, health, nutrition
+- [ ] WHO - health system support, COVID response, disease surveillance
+- [ ] UNHCR - displacement, IDP support, refugee assistance
+- [ ] IOM - migration, displacement tracking matrix
+- [ ] USAID - bilateral aid, implementing partners, sectors
+- [ ] UK FCDO - humanitarian and development aid, conflict resolution
+- [ ] EU - humanitarian aid, development cooperation, Yemen Trust Fund
+- [ ] Germany (GIZ/KfW) - development projects, technical cooperation
+- [ ] Netherlands - humanitarian aid, WASH sector
+- [ ] Sweden - humanitarian and development support
+- [ ] Switzerland - humanitarian aid, mediation, good offices
+
+### Commercial Bank Observatory (15+ Individual Pages)
+- [ ] CAC Bank - history, ownership structure, branches, financial data, audit reports, challenges
+- [ ] Yemen Kuwait Bank - history, performance metrics, regional presence
+- [ ] Tadhamon International Islamic Bank - Islamic banking products, Sharia compliance
+- [ ] Yemen Commercial Bank - state ownership, restructuring efforts
+- [ ] National Bank of Yemen - historical role, current challenges
+- [ ] Cooperative & Agricultural Credit Bank - agricultural finance, rural reach
+- [ ] Saba Islamic Bank - Islamic products, market position
+- [ ] United Bank - ownership, operations, market share
+- [ ] Yemen Bank for Reconstruction & Development - development finance mandate
+- [ ] Al-Kuraimi Islamic Microfinance Bank - microfinance services, Islamic products
+- [ ] Alkuraimi Exchange - remittances, exchange services, network
+- [ ] International Bank of Yemen - international operations, correspondent banking
+- [ ] Arab Bank - regional presence, Yemen operations
+- [ ] Shamil Bank - Islamic banking, market position
+- [ ] Al-Amal Microfinance Bank - microfinance focus, social impact
+
+### Microfinance Institution Pages (10+ pages)
+- [ ] Al-Amal Microfinance Bank - detailed profile, products, outreach
+- [ ] National Microfinance Foundation - programs, geographic reach, impact
+- [ ] Aden Microfinance Foundation - operations, target segments
+- [ ] Azal Microfinance Program - products, performance, sustainability
+- [ ] Small & Micro Enterprise Development Foundation - SME focus, services
+- [ ] Yemen Microfinance Network - industry coordination, advocacy
+- [ ] Other MFIs - comprehensive coverage of all licensed institutions
+
+### Specialized Audience Pages
+- [ ] Researchers & Universities - data access, methodology documentation, API, citations
+- [ ] Journalists (Finance & Economy) - press kit, fact sheets, expert contacts, embargoed releases
+- [ ] Citizens - simplified explanations, personal finance tools, rights information
+- [ ] Private Sector - investment climate analysis, business environment, opportunities
+- [ ] Civil Society - advocacy tools, transparency data, accountability metrics
+
+---
+
+## 🎨 ADVANCED FEATURES & TOOLS
+
+### Translation & Localization
+- [ ] Add language toggle button to EVERY page (not just header)
+- [ ] Implement floating language switcher (bottom-right corner)
+- [ ] Add inline translation tooltips for technical terms
+- [ ] Create comprehensive glossary page with bilingual definitions
+- [ ] Add "Translate this section" buttons for long content
+- [ ] Implement Google Translate API integration for user-generated content
+
+### Context Boxes ("What is this?")
+- [ ] Add info icon tooltips explaining technical terms throughout
+- [ ] Add "Why this matters" expandable sections on key pages
+- [ ] Add methodology explanations for all calculations
+- [ ] Add data source citations with clickable links
+- [ ] Add "Learn more" expandable sections with deeper context
+- [ ] Add "Related topics" suggestions
+
+### Proper CauseWay Branding
+- [ ] Use official CauseWay Foundation logo from IMG_9478(4).jpeg
+- [ ] Add CauseWay Arcadia branding (IMG_9480) to research/training sections
+- [ ] Update About page with proper CauseWay structure
+- [ ] Add CauseWay arms: Lighthouse, Compass/MEO, Fintech, Ventures/Kayan/Ripple, Arcadia, Peace Nexus
+- [ ] Ensure consistent burgundy/gold color scheme
+- [ ] Add proper attribution footer on all pages
+
+### Sanctions Tracking System
+- [ ] Create comprehensive sanctions tracker page
+- [ ] Extract sanctions data from UN reports
+- [ ] 
+(Content truncated due to size limit. Use page ranges or line ranges to read remaining content)
+
+## 🔍 PHASE 1: AUDIT CONTENT ACCURACY AND COMPLETENESS
+
+### Timeline Events Validation (2015-2025)
+- [ ] Verify all 24 major events have accurate dates from source documents
+- [x] Cross-reference Operation Decisive Storm date (March 26, 2015) - VERIFIED: Multiple sources confirm March 26, 2015
+- [x] Verify Central Bank split date (September 18, 2016) - VERIFIED: Multiple sources confirm September 18, 2016 decree by President Hadi
+- [ ] Validate Hodeidah Battle timeline (June-December 2018)
+- [ ] Check Stockholm Agreement date (December 13, 2018)
+- [ ] Verify COVID-19 first case date (April 10, 2020)
+- [ ] Validate all 2021-2025 events with sources
+- [ ] Ensure all actors mentioned are accurate (Houthis, Saudi Coalition, IRG, STC, etc.)
+- [ ] Add source citations for each event
+
+### Statistics Validation
+- [ ] Verify $2.4B humanitarian aid figure (source: OCHA FTS 2024)
+- [ ] Validate 8.2M beneficiaries number (source: World Bank/UN reports)
+- [ ] Check 1,800 YER/USD parallel rate accuracy (source: CBY/market data)
+- [ ] Verify all GDP figures in dashboards
+- [ ] Validate inflation rates with IMF data
+- [ ] Check poverty statistics (80% figure) with World Bank
+- [ ] Verify food insecurity numbers (17M) with WFP
+- [ ] Validate all banking sector statistics
+
+### Reports Accessibility
+- [ ] Ensure all 5+ PDF reports are uploaded to file manager
+- [ ] Verify gamma2.txt content is properly integrated
+- [ ] Check all referenced reports are downloadable
+- [ ] Add direct links to external reports (World Bank, IMF, Sana'a Center)
+- [ ] Create report summaries for each document
+- [ ] Add publication dates and authors
+
+## 📊 PHASE 2: VALIDATE ALL FUNCTIONALITY AND FILTERS
+
+### Filter Functionality
+- [ ] Test year filters on Timeline page (2015-2025)
+- [ ] Verify category filters on News Aggregator (all 5 categories)
+- [ ] Test relevance filters (high/medium/low)
+- [ ] Validate search functionality across all pages
+- [ ] Check stakeholder filters on Stakeholder Hub
+- [ ] Test bank filters on Commercial Banks page
+- [ ] Verify event type filters on Timeline
+- [ ] Ensure no filter options are unused or broken
+
+### API Integrations
+- [ ] Test World Bank API connection
+- [ ] Verify IMF API integration
+- [ ] Check OCHA FTS API for humanitarian data
+- [ ] Validate exchange rate data feeds
+- [ ] Test any other external APIs
+- [ ] Add error handling for API failures
+- [ ] Implement caching for API responses
+
+### Calculators & Simulators
+- [ ] Validate economic models in Scenario Simulator
+- [ ] Check formulas in Financial Calculators
+- [ ] Verify Monetary Policy Simulator calculations
+- [ ] Test all slider ranges and impacts
+- [ ] Ensure methodology modals explain calculations
+- [ ] Add academic citations for models used
+
+### Charts & Visualizations
+- [ ] Verify all data in MasterCompass widget
+- [ ] Check ScrollytellingTimeline data accuracy
+- [ ] Validate charts in Executive Dashboard
+- [ ] Test CBY Dashboard visualizations
+- [ ] Ensure all charts have proper labels and legends
+- [ ] Add data source attributions to all charts
+
+## 🎯 PHASE 3: ENRICH STAKEHOLDER RECOMMENDATIONS
+
+### Evidence-Based Policy Recommendations
+- [ ] Add specific recommendations for World Bank/IMF
+- [ ] Create actionable policy briefs for CBY-Aden
+- [ ] Develop recommendations for donors (USAID, EU, UK, Saudi, UAE)
+- [ ] Add policy options for Yemeni government (IRG)
+- [ ] Include recommendations for humanitarian actors (UN, NGOs)
+- [ ] Provide analysis for private sector actors
+- [ ] Add recommendations for regional actors (GCC, Arab League)
+
+### Transparency & Accountability
+- [ ] Add disbursement tracking for all donors
+- [ ] Create impact metrics for each intervention
+- [ ] Show ROI calculations with methodology
+- [ ] Track policy implementation status
+- [ ] Add accountability scorecards
+- [ ] Include transparency indicators (IATI compliance)
+- [ ] Show fund flows with Sankey diagrams
+
+### Actor Deep Dives
+- [ ] Expand Houthi economic analysis (taxation, port revenues, remittances)
+- [ ] Detail Saudi Coalition economic impact
+- [ ] Analyze IRG fiscal policy and challenges
+- [ ] Profile STC economic governance in south
+- [ ] Detail CBY-Aden vs CBY-Sana'a policies
+- [ ] Analyze commercial banks' role and challenges
+- [ ] Profile major donors with disbursement history
+
+### Sanctions Analysis
+
+# Yemen Economic Compass - Comprehensive Audit of All Versions
+
+## Executive Summary
+This document audits ALL work completed across 40+ checkpoints from initial bootstrap to current state. It catalogs every feature, component, page, calculator, intelligence system, and data structure built throughout the project's evolution.
+
+---
+
+## Version History & Features Built
+
+### Phase 1: Initial Arabic Website (d4213612 - dc30777e)
+**Checkpoints:** d995fb3, d4213612, dc30777e, ee9d5fc, 8f89f1c
+
+**Features Built:**
+- 4 main pages (Home, Overview, Charts, About)
+- 12 interactive charts (Arabic)
+- Causeway Consultancies branding
+- Arabic-first design
+- Yemen-inspired color palette
+- Responsive layout
+
+**Files Created:**
+- `client/src/pages/Home.tsx`
+- `client/src/pages/Overview.tsx`
+- `client/src/pages/Charts.tsx`
+- `client/src/pages/About.tsx`
+- `client/src/components/EconomicIndicators.tsx`
+
+---
+
+### Phase 2: Bilingual Enhancement (f4bc7a46 - 573e96ef)
+**Checkpoints:** f4bc7a46, 5185c784, 573e96ef
+
+**Features Built:**
+- Complete bilingual system (Arabic/English)
+- Language toggle functionality
+- CauseWay Foundation branding
+- Storytelling page with timeline
+- Authentic photos integration
+- Maher F.S. Farea bio
+
+**Files Created:**
+- `client/src/contexts/LanguageContext.tsx`
+- `client/src/pages/Storytelling.tsx`
+- `client/src/components/LanguageToggle.tsx`
+
+---
+
+### Phase 3: Professional Landing & Analytics (7682e423 - a9070f08)
+**Checkpoints:** 7682e423, a9070f08, 337f79fa
+
+**Features Built:**
+- Professional landing page with Yemen landscape
+- Interactive Analytics Dashboard
+- Data explorer with filters
+- Financial calculators
+- Research Library (18 publications)
+- Chart download functionality (individual & bulk)
+- Export to PDF/Excel/CSV
+
+**Files Created:**
+- `client/src/pages/AnalyticsDashboard.tsx`
+- `client/src/pages/ResearchLibrary.tsx`
+- `client/src/components/DataExplorer.tsx`
+- `client/src/components/ChartExporter.tsx`
+
+---
+
+### Phase 4: Content Expansion (2e148c4c)
+**Checkpoint:** 2e148c4c
+
+**Features Built:**
+- Economic Crisis page (timeline 2015-2025)
+- Currency War page (dual banking analysis)
+- Main Cities page (6 cities with statistics)
+- Events Timeline page (19 events, advanced filtering)
+- Deep Dive Analysis section
+
+**Files Created:**
+- `client/src/pages/EconomicCrisis.tsx`
+- `client/src/pages/CurrencyWar.tsx`
+- `client/src/pages/Cities.tsx`
+- `client/src/pages/EventsTimeline.tsx`
+
+**Pages Total:** 14
+
+---
+
+### Phase 5: Financial Intelligence Hub (450418da)
+**Checkpoint:** 450418da
+
+**Features Built:**
+- International Reports Repository (6 major reports)
+- Microfinance Observatory (8 programs, 5 banks)
+- CBY-Aden Decision Tracker (8 decisions)
+- CBY-Sana'a Decision Tracker (8 decisions)
+- Commercial Banks Intelligence Hub (10 banks)
+
+**Files Created:**
+- `client/src/pages/InternationalReports.tsx`
+- `client/src/pages/MicrofinanceObservatory.tsx`
+- `client/src/pages/CbyAdenTracker.tsx`
+- `client/src/pages/CbySanaaTracker.tsx`
+- `client/src/pages/CommercialBanks.tsx`
+
+**Pages Total:** 19
+
+---
+
+### Phase 6: Literature & Calculators (d26ce2de)
+**Checkpoint:** d26ce2de
+
+**Features Built:**
+- Financial Literature Library (18 publications)
+- Interactive Financial Calculators
+  - Inflation Calculator (2014-2025 data)
+  - Exchange Rate Calculator (Aden/Sana'a)
+- CurrencyBadge helper component
+
+**Files Created:**
+- `client/src/pages/FinancialLiterature.tsx`
+- `client/src/pages/FinancialCalculators.tsx`
+- `client/src/components/CurrencyBadge.tsx`
+- `client/src/components/InflationCalculator.tsx`
+- `client/src/components/ExchangeRateCalculator.tsx`
+
+**Pages Total:** 21
+
+---
+
+### Phase 7: Massive Literature Expansion (3f192293)
+**Checkpoint:** 3f192293
+
+**Features Built:**
+- 18 new publications added
+- CBY-Aden Annual Reports (2020, 2023)
+- CBY Monthly Monetary Developments (May 2025)
+- CBY Quarterly Bulletin (Q2 2021)
+- CBY Unified 2015 Pre-Split Report
+- FAO, ODI, UNHCR, ACLED reports
+- DevChampions studies
+- 8 Sana'a Center studies (2016-2023)
+
+**Total Publications:** 46+ from 20+ institutions
+
+---
+
+### Phase 8: Advanced Visualizations & Intelligence (a0370ee0)
+**Checkpoint:** a0370ee0
+
+**Features Built:**
+- Interactive Data Visualizations Dashboard (4 charts)
+  - Exchange Rate Evolution (2014-2025)
+  - Inflation Trends with cumulative calculations
+  - GDP Trajectory (nominal vs real)
+  - Oil Production & Revenue
+- Stakeholder Intelligence Hub (5 actors)
+  - IRG/PLC profile
+  - Houthis/Ansar Allah profile
+  - Saudi Arabia profile
+  - UAE profile
+  - STC profile
+- Comprehensive Sanctions Tracker (10 sanctions)
+
+**Files Created:**
+- `client/src/pages/DataVisualizations.tsx`
+- `client/src/pages/StakeholderHub.tsx`
+- `client/src/pages/SanctionsTracker.tsx`
+- `client/src/components/ExchangeRateChart.tsx`
+- `client/src/components/InflationChart.tsx`
+- `client/src/components/GDPChart.tsx`
+- `client/src/components/OilChart.tsx`
+
+**Pages Total:** 24
+
+---
+
+### Phase 9: Major Platform Transformation (ec36b893)
+**Checkpoint:** ec36b893
+
+**Features Built:**
+- Scenario Forecasting Engine
+  - 5 adjustable variables
+  - 3 scenarios (optimistic/baseline/pessimistic)
+  - Real-time GDP/reserves/poverty calculations
+  - CSV export
+- Policy Recommendations Dashboard
+  - 5 comprehensive recommendations
+  - Implementation roadmaps
+  - Stakeholder identification
+  - Impact analysis
+  - Risk assessment
+- Statistical Indicators Library
+  - 12 leading economic indicators
+  - 4 composite indices
+  - Trend analysis
+
+**New Branding:**
+- "Yemen Economic Intelligence & Foresight Platform"
+- Bilingual professional logos (3 versions)
+- Updated APP_LOGO
+
+**Files Created:**
+- `client/src/pages/ScenarioForecasting.tsx`
+- `client/src/pages/PolicyRecommendations.tsx`
+- `client/src/pages/StatisticalIndicators.tsx`
+- `client/src/components/ScenarioEngine.tsx`
+- `client/src/components/PolicyCard.tsx`
+- `client/src/components/IndicatorCard.tsx`
+
+**Pages Total:** 27
+
+---
+
+### Phase 10: Production Ready (8d378d37)
+**Checkpoint:** 8d378d37
+
+**Status:**
+- ✅ All calculators verified
+- ✅ CauseWay Foundation branding (Established 2025)
+- ✅ Professional bilingual logos
+- ✅ Data accuracy verified
+- ✅ Full bilingual parity
+- ✅ No TypeScript errors
+- ✅ Production-ready
+
+**Platform Capabilities:**
+- Economic Intelligence & Analysis
+- Scenario Forecasting (2025-2030)
+- Policy Recommendations
+- Statistical Indicators Library
+- Stakeholder Intelligence Hub
+- Sanctions Tracking
+- Financial Literature Repository
+- Interactive Calculators
+- Data Visualizations
+- Central Bank Decision Tracking
+- Microfinance Observatory
+- Commercial Banks Intelligence
+
+---
+
+### Phase 11: Key Statistics & Transformation (c8d691e6)
+**Checkpoint:** c8d691e6
+
+**Features Built:**
+- Key Statistics Dashboard (59 quantitative claims)
+- Exchange Rate Calculator Update (2025 data)
+- Financial System Transformation Timeline (4 phases)
+- Financial Power Map (8 actors, scatter plot)
+
+**Files Created:**
+- `client/src/pages/KeyStatistics.tsx`
+- `client/src/pages/FinancialTransformation.tsx`
+- `client/src/pages/PowerMap.tsx`
+
+**Pages Total:** 30
+
+---
+
+### Phase 12: Data Architecture & Design System (efa6a31e)
+**Checkpoint:** efa6a31e
+
+**Features Built:**
+- Comprehensive data architecture (5 feeds)
+  - FX rates feed
+  - Inflation feed
+  - GDP feed
+  - Poverty feed
+  - Events feed
+- Zod validation
+- TypeScript type safety
+- 30+ helper functions
+- Yemen brand colors (teal, blue, green, amber)
+- Yemen flag border
+- Updated typography (IBM Plex Sans Arabic, Noto Naskh Arabic, Inter, Source Serif Pro)
+- Apache ECharts installed
+
+**Files Created:**
+- `client/src/lib/data/fx-rates.ts`
+- `client/src/lib/data/inflation.ts`
+- `client/src/lib/data/gdp.ts`
+- `client/src/lib/data/poverty.ts`
+- `client/src/lib/data/events.ts`
+- `client/src/lib/data/types.ts`
+- `client/src/lib/data/helpers.ts`
+
+---
+
+### Phase 13: Compass Dashboard & Advanced Visualizations (7cda1409)
+**Checkpoint:** 7cda1409
+
+**Features Built:**
+- Compass Dashboard (12 key indicators)
+  - GDP, inflation, FX rates, poverty, oil, revenue
+  - Sanctions, banking stress
+  - Real-time data from feeds
+  - Color-coded severity levels
+- Advanced Visualizations (3 ECharts)
+  - FX Timeline (dual-axis, Aden/Sana'a + gap%)
+  - Sankey diagram (money flows)
+  - Shock decomposition (stacked bar, 6 factors)
+- EChartsWrapper component
+
+**Files Created:**
+- `client/src/pages/CompassDashboard.tsx`
+- `client/src/pages/AdvancedVisualizations.tsx`
+- `client/src/components/EChartsWrapper.tsx`
+
+**Pages Total:** 32
+
+---
+
+### Phase 14: CauseWay Organizational Structure (699d53cd)
+**Checkpoint:** 699d53cd
+
+**Features Built:**
+- About CauseWay page (Foundation, Arcadia, Consultancies, Ventures)
+- Kayan Platform page (features, process, benefits, sectors)
+- CauseWay logos integration
+- Updated platform branding
+
+**Files Created:**
+- `client/src/pages/AboutCauseWay.tsx`
+- `client/src/pages/KayanPlatform.tsx`
+
+**Pages Total:** 34
+
+---
+
+### Phase 15: Navigation & Visibility Fixes (8386d2d4)
+**Checkpoint:** 8386d2d4
+
+**Features Built:**
+- Comprehensive Header navigation with dropdown menus
+- Updated Footer with CauseWay logos
+- LanguageProvider integration
+- All pages accessible through navigation
+
+**Files Updated:**
+- `client/src/components/Header.tsx`
+- `client/src/components/Footer.tsx`
+- `client/src/App.tsx`
+
+---
+
+### Phase 16: Master Compass & News Ticker (aa11309f)
+**Checkpoint:** aa11309f
+
+**Features Built:**
+- Master Compass widget (12 indicators, timeline slider 2014-2025)
+- Auto-scrolling News Ticker component
+- Full bilingual support
+- Integration with data feeds
+
+**Files Created:**
+- `client/src/components/MasterCompass.tsx`
+- `client/src/components/NewsTicker.tsx`
+
+---
+
+### Phase 17: ScrollytellingTimeline (684100af)
+**Checkpoint:** 684100af
+
+**Features Built:**
+- Custom Yemen Economic Compass logo
+- Interactive ScrollytellingTimeline component
+  - 10-year journey (2015-2025)
+  - Annual summaries
+  - Event-based visuals
+  - Unique color coding
+  - Actor impact tracking
+
+**Files Created:**
+- `client/src/components/ScrollytellingTimeline.tsx`
+- `public/yemen-compass-logo.svg`
+
+---
+
+### Phase 18: Landing Page Redesign & News Aggregator (50832ca4)
+**Checkpoint:** 50832ca4
+
+**Features Built:**
+- Redesigned landing page with ScrollytellingTimeline
+- 24 major events (2015-2025)
+- 11 annual summaries
+- News Aggregator page (12 curated items)
+- Advanced filtering (category/relevance/search)
+- Real-time statistics
+
+**Files Updated:**
+- `client/src/pages/LandingPage.tsx`
+- `client/src/pages/NewsAggregator.tsx`
+
+---
+
+### Phase 19: Full-Stack Conversion (0ad4688a)
+**Checkpoint:** 0ad4688a
+
+**Features Built:**
+- Express server
+- MySQL database
+- Manus OAuth authentication
+- S3 storage integration
+- File storage system
+  - Database schema (files table)
+  - tRPC API endpoints
+  - FileUpload component (drag-and-drop)
+  - FileManager dashboard
+  - Search/filter/download/delete
+
+**Files Created:**
+- `server/_core/index.ts`
+- `server/_core/trpc.ts`
+- `server/_core/oauth.ts`
+- `server/storage.ts`
+- `server/routers.ts`
+- `drizzle/schema.ts`
+- `client/src/pages/FileManager.tsx`
+- `client/src/components/FileUpload.tsx`
+
+---
+
+### Phase 20: Navigation Fixes & Audit (edcf7bbd)
+**Checkpoint:** edcf7bbd
+
+**Features Built:**
+- Fixed Header with LanguageContext
+- Resources menu (Research/Literature/News/Files)
+- Fixed broken navigation links
+- Updated Footer with bilingual support
+- Verified all 38 pages routed
+
+---
+
+### Phase 21: Stakeholder Dashboards (92edd86d)
+**Checkpoint:** 92edd86d
+
+**Features Built:**
+- Fixed Arabic font rendering
+- Language preference persistence
+- Professional new logo (compass with data visualization)
+- Executive Dashboard (World Bank/IMF/Donors)
+  - KPI cards
+  - Project monitoring
+  - Impact metrics
+  - Risk assessment
+- CBY-Aden Dashboard
+  - Exchange rate monitoring
+  - Monetary policy tracker
+  - Banking sector health
+  - Foreign reserves
+  - Regulatory compliance
+
+**Files Created:**
+- `client/src/pages/ExecutiveDashboard.tsx`
+- `client/src/pages/CbyAdenDashboard.tsx`
+
+---
+
+### Phase 22: Policy Intelligence (b25fe1ac)
+**Checkpoint:** b25fe1ac
+
+**Features Built:**
+- PolicyImpactMeter (4 interventions, ROI 2.8x-4.2x)
+- ScenarioSimulator (Executive Dashboard)
+- MonetaryPolicySimulator (CBY Dashboard)
+- Methodology modals with economic models
+
+**Files Created:**
+- `client/src/components/PolicyImpactMeter.tsx`
+- `client/src/components/ScenarioSimulator.tsx`
+- `client/src/components/MonetaryPolicySimulator.tsx`
+
+---
+
+### Phase 23: Think Tank Standards (5fd21cfb)
+**Checkpoint:** 5fd21cfb
+
+**Features Built:**
+- Professional transparent logo
+- Clean gradient hero
+- Credibility signals (World Bank/IMF/OCHA/CBY/Sana'a Center badges)
+- Stakeholder pathways section
+- Executive summary
+- Hierarchical dropdown menus
+- Mobile-optimized navigation
+
+---
+
+### Phase 24: Geographic Logo & Thematic Design (19c98975)
+**Checkpoint:** 19c98975
+
+**Features Built:**
+- Exceptional logo (Yemen's geographic shape + gold financial network)
+- Thematic color system (burgundy #8B1538 + gold #D4AF37)
+- Playfair Display font
+- Concise hero-focused landing page
+- High-resolution Sana'a background
+- Comprehensive audit with 150+ validation tasks
+
+---
+
+### Phase 25: About Page Redesign (82029f5d)
+**Checkpoint:** 82029f5d
+
+**Features Built:**
+- Complete About page redesign
+- CauseWay Foundation content
+  - Mission statement
+  - Values
+  - Strategic structure (5 arms)
+  - Governance framework
+  - Visitor pathways
+- Burgundy/gold gradient design
+
+**Files Updated:**
+- `client/src/pages/About.tsx`
+
+---
+
+### Phase 26: External Links (ca60d923)
+**Checkpoint:** ca60d923
+
+**Features Built:**
+- External links to Kayan platform (https://kayan.manus.space)
+- Links in About page, visitor pathways, Footer
+- Proper security attributes
+
+---
+
+### Phase 27: Saudi Arabia Stakeholder Page (6e51af19)
+**Checkpoint:** 6e51af19
+
+**Features Built:**
+- Saudi Arabia stakeholder page
+  - Key metrics ($18.3B aid, 12.4M beneficiaries)
+  - 5 comprehensive tabs
+  - Timeline 2015-2024
+  - Military role analysis
+  - Economic impact
+  - Humanitarian aid
+  - Future outlook
+
+**Files Created:**
+- `client/src/pages/SaudiArabia.tsx`
+
+---
+
+### Phase 28: World Bank Journey Page (e6e8a3de)
+**Checkpoint:** e6e8a3de
+
+**Features Built:**
+- World Bank Journey page
+  - $50M Financial Market Infrastructure project
+  - 4 components
+  - Implementing partners
+  - Timeline 2019-2024
+  - Impact metrics
+  - 8 policy recommendations
+  - Literature library
+  - News feed
+  - Indicator dashboard
+
+**Files Created:**
+- `client/src/pages/WorldBankJourney.tsx`
+
+---
+
+### Phase 29: CAC Bank Page (a59fcd0c)
+**Checkpoint:** a59fcd0c
+
+**Features Built:**
+- CAC Bank comprehensive page
+  - Overview
+  - Financial data (10B YER capital, 58 branches)
+  - 10-year timeline (1982-2024)
+  - 6 challenges
+  - 6 recommendations
+- Expert audit framework (300+ validation items)
+
+**Files Created:**
+- `client/src/pages/CacBank.tsx`
+
+---
+
+### Phase 30: Financial Flows Network (d223ca43)
+**Checkpoint:** d223ca43
+
+**Features Built:**
+- Interactive Financial Flows Network visualization
+  - 14 nodes (CBY Sana'a/Aden, banks, remittances, etc.)
+  - $20B+ flows
+  - Node descriptions
+  - 5 key insights
+  - Transparent methodology
+
+**Files Created:**
+- `client/src/pages/FinancialFlowsNetwork.tsx`
+
+---
+
+### Phase 31: Tadhamon Islamic Bank (cd6b6d92)
+**Checkpoint:** cd6b6d92
+
+**Features Built:**
+- Tadhamon Islamic Bank page
+  - $900M assets, 42 branches
+  - Financial metrics
+  - 10-year timeline (1995-2024)
+  - 6 challenges
+  - 6 recommendations
+
+**Files Created:**
+- `client/src/pages/TadhamonBank.tsx`
+
+---
+
+### Phase 32: Database Infrastructure (b3d871db) - CURRENT
+**Checkpoint:** b3d871db
+
+**Features Built:**
+- Robust backend database (7 new tables)
+  - events
+  - actors
+  - indicators
+  - causations
+  - recommendations
+  - banks
+  - stakeholders
+- Comprehensive query helpers
+- Foundation for intelligent analysis system
+
+**Files Created:**
+- `drizzle/schema.ts` (expanded)
+- `server/db-helpers.ts`
+
+---
+
+## Complete Feature Inventory
+
+### Pages (38+)
+1. Landing Page
+2. About
+3. Storytelling
+4. Economic Crisis
+5. Currency War
+6. Main Cities
+7. Events Timeline
+8. International Reports
+9. Microfinance Observatory
+10. CBY-Aden Tracker
+11. CBY-Sana'a Tracker
+12. Commercial Banks
+13. Financial Literature
+14. Financial Calculators
+15. Data Visualizations
+16. Stakeholder
+(Content truncated due to size limit. Use page ranges or line ranges to read remaining content)
+
+Yemen Economic Compass - Comprehensive Audit & Enrichment TODO
+
+## 🔍 PHASE 1: AUDIT CONTENT ACCURACY AND COMPLETENESS
+
+### Timeline Events Validation (2015-2025)
+- [ ] Verify all 24 major events have accurate dates from source documents
+- [x] Cross-reference Operation Decisive Storm date (March 26, 2015) - VERIFIED: Multiple sources confirm March 26, 2015
+- [x] Verify Central Bank split date (September 18, 2016) - VERIFIED: Multiple sources confirm September 18, 2016 decree by President Hadi
+- [ ] Validate Hodeidah Battle timeline (June-December 2018)
+- [ ] Check Stockholm Agreement date (December 13, 2018)
+- [ ] Verify COVID-19 first case date (April 10, 2020)
+- [ ] Validate all 2021-2025 events with sources
+- [ ] Ensure all actors mentioned are accurate (Houthis, Saudi Coalition, IRG, STC, etc.)
+- [ ] Add source citations for each event
+
+### Statistics Validation
+- [ ] Verify $2.4B humanitarian aid figure (source: OCHA FTS 2024)
+- [ ] Validate 8.2M beneficiaries number (source: World Bank/UN reports)
+- [ ] Check 1,800 YER/USD parallel rate accuracy (source: CBY/market data)
+- [ ] Verify all GDP figures in dashboards
+- [ ] Validate inflation rates with IMF data
+- [ ] Check poverty statistics (80% figure) with World Bank
+- [ ] Verify food insecurity numbers (17M) with WFP
+- [ ] Validate all banking sector statistics
+
+### Reports Accessibility
+- [ ] Ensure all 5+ PDF reports are uploaded to file manager
+- [ ] Verify gamma2.txt content is properly integrated
+- [ ] Check all referenced reports are downloadable
+- [ ] Add direct links to external reports (World Bank, IMF, Sana'a Center)
+- [ ] Create report summaries for each document
+- [ ] Add publication dates and authors
+
+## 📊 PHASE 2: VALIDATE ALL FUNCTIONALITY AND FILTERS
+
+### Filter Functionality
+- [ ] Test year filters on Timeline page (2015-2025)
+- [ ] Verify category filters on News Aggregator (all 5 categories)
+- [ ] Test relevance filters (high/medium/low)
+- [ ] Validate search functionality across all pages
+- [ ] Check stakeholder filters on Stakeholder Hub
+- [ ] Test bank filters on Commercial Banks page
+- [ ] Verify event type filters on Timeline
+- [ ] Ensure no filter options are unused or broken
+
+### API Integrations
+- [ ] Test World Bank API connection
+- [ ] Verify IMF API integration
+- [ ] Check OCHA FTS API for humanitarian data
+- [ ] Validate exchange rate data feeds
+- [ ] Test any other external APIs
+- [ ] Add error handling for API failures
+- [ ] Implement caching for API responses
+
+### Calculators & Simulators
+- [ ] Validate economic models in Scenario Simulator
+- [ ] Check formulas in Financial Calculators
+- [ ] Verify Monetary Policy Simulator calculations
+- [ ] Test all slider ranges and impacts
+- [ ] Ensure methodology modals explain calculations
+- [ ] Add academic citations for models used
+
+### Charts & Visualizations
+- [ ] Verify all data in MasterCompass widget
+- [ ] Check ScrollytellingTimeline data accuracy
+- [ ] Validate charts in Executive Dashboard
+- [ ] Test CBY Dashboard visualizations
+- [ ] Ensure all charts have proper labels and legends
+- [ ] Add data source attributions to all charts
+
+## 🎯 PHASE 3: ENRICH STAKEHOLDER RECOMMENDATIONS
+
+### Evidence-Based Policy Recommendations
+- [ ] Add specific recommendations for World Bank/IMF
+- [ ] Create actionable policy briefs for CBY-Aden
+- [ ] Develop recommendations for donors (USAID, EU, UK, Saudi, UAE)
+- [ ] Add policy options for Yemeni government (IRG)
+- [ ] Include recommendations for humanitarian actors (UN, NGOs)
+- [ ] Provide analysis for private sector actors
+- [ ] Add recommendations for regional actors (GCC, Arab League)
+
+### Transparency & Accountability
+- [ ] Add disbursement tracking for all donors
+- [ ] Create impact metrics for each intervention
+- [ ] Show ROI calculations with methodology
+- [ ] Track policy implementation status
+- [ ] Add accountability scorecards
+- [ ] Include transparency indicators (IATI compliance)
+- [ ] Show fund flows with Sankey diagrams
+
+### Actor Deep Dives
+- [ ] Expand Houthi economic analysis (taxation, port revenues, remittances)
+- [ ] Detail Saudi Coalition economic impact
+- [ ] Analyze IRG fiscal policy and challenges
+- [ ] Profile STC economic governance in south
+- [ ] Detail CBY-Aden vs CBY-Sana'a policies
+- [ ] Analyze commercial banks' role and challenges
+- [ ] Profile major donors with disbursement history
+
+### Sanctions Analysis
+- [ ] List all sanctioned entities (UN, US, EU, UK)
+- [ ] Analyze economic impact of sanctions
+- [ ] Track sanctions implementation and enforcement
+- [ ] Show humanitarian exemptions and gaps
+- [ ] Add timeline of sanctions imposition
+- [ ] Include recommendations for sanctions reform
+
+## 📚 PHASE 4: MAKE ALL REPORTS ACCESSIBLE
+
+### Report Library Enhancement
+- [ ] Upload all PDF reports to file manager
+- [ ] Create downloadable report cards for each document
+- [ ] Add executive summaries for long reports
+- [ ] Implement citation system (APA/Chicago style)
+- [ ] Add "Cite this" buttons with formatted citations
+- [ ] Create bibliography page with all sources
+- [ ] Add DOI links where available
+
+### Methodology Documentation
+- [ ] Write methodology page explaining all analysis approaches
+- [ ] Document economic models used in simulators
+- [ ] Explain data collection and validation processes
+- [ ] Add data dictionaries for all datasets
+- [ ] Create glossary of technical terms
+- [ ] Include assumptions and limitations sections
+- [ ] Add peer review and validation information
+
+### Source Attribution
+- [ ] Add footnotes to all statistics
+- [ ] Include inline citations in all analysis
+- [ ] Create "Sources" section at bottom of each page
+- [ ] Link to original source documents
+- [ ] Add "Last updated" timestamps
+- [ ] Include data vintage information
+
+## 🌐 PHASE 5: IMPLEMENT GLOBAL STANDARDS
+
+### IMF/World Bank Standards
+- [ ] Use IMF country codes and classifications
+- [ ] Follow World Bank poverty definitions ($2.15/day)
+- [ ] Implement IMF fiscal indicators (debt/GDP, deficit/GDP)
+- [ ] Use World Bank Doing Business indicators
+- [ ] Follow IMF balance of payments standards
+- [ ] Implement World Bank governance indicators
+
+### OECD DAC Standards
+- [ ] Use OECD DAC sector codes for aid tracking
+- [ ] Implement DAC5 reporting standards
+- [ ] Follow OECD aid effectiveness principles
+- [ ] Use DAC deflators for real-term calculations
+- [ ] Implement OECD creditor reporting system codes
+
+### IATI Transparency Standards
+- [ ] Implement IATI activity identifiers
+- [ ] Use IATI organization codes
+- [ ] Follow IATI data quality standards
+- [ ] Add IATI XML export functionality
+- [ ] Implement IATI budget classifications
+- [ ] Use IATI result indicators
+
+### Academic Citation Standards
+- [ ] Implement APA 7th edition citations
+- [ ] Add Chicago Manual of Style option
+- [ ] Include Harvard referencing style
+- [ ] Add BibTeX export for researchers
+- [ ] Implement Zotero/Mendeley integration
+- [ ] Add "Export citation" buttons
+
+## 🚀 PHASE 6: ADVANCED FEATURES
+
+### Enhanced Visualizations
+- [ ] Add interactive Sankey diagrams for fund flows
+- [ ] Create network graphs for actor relationships
+- [ ] Implement heat maps for geographic analysis
+- [ ] Add time-series animations for key indicators
+- [ ] Create comparative charts (Yemen vs region)
+- [ ] Add drill-down capabilities in all charts
+
+### Advanced Filters & Search
+- [ ] Implement multi-select filters
+- [ ] Add date range pickers for all timelines
+- [ ] Create advanced search with Boolean operators
+- [ ] Add saved search functionality
+- [ ] Implement filter presets for common queries
+- [ ] Add export filtered results to CSV/Excel
+
+### Data Export & API
+- [ ] Add CSV export for all datasets
+- [ ] Implement Excel export with formatting
+- [ ] Create PDF report generation
+- [ ] Add chart export as PNG/SVG
+- [ ] Build public API for researchers
+- [ ] Add API documentation page
+- [ ] Implement rate limiting and API keys
+
+### Performance Optimization
+- [ ] Implement lazy loading for all images
+- [ ] Add code splitting for faster load times
+- [ ] Optimize all images (WebP format)
+- [ ] Implement service worker for offline access
+- [ ] Add loading skeletons for all components
+- [ ] Optimize bundle size (<500KB)
+- [ ] Achieve <2s load time on 3G
+
+## ✅ PHASE 7: FINAL QUALITY ASSURANCE
+
+### Content Review
+- [ ] Review all English content for accuracy
+- [ ] Review all Arabic content for accuracy
+- [ ] Ensure bilingual parity across all pages
+- [ ] Check all links are working
+- [ ] Verify all images load correctly
+- [ ] Test all downloads work
+
+### Functionality Testing
+- [ ] Test all filters on all pages
+- [ ] Verify all APIs are working
+- [ ] Test all calculators and simulators
+- [ ] Check all forms submit correctly
+- [ ] Test file upload/download
+- [ ] Verify authentication works
+
+### Cross-Browser Testing
+- [ ] Test on Chrome
+- [ ] Test on Firefox
+- [ ] Test on Safari
+- [ ] Test on Edge
+- [ ] Test on mobile browsers
+
+### Accessibility Testing
+- [ ] Check keyboard navigation
+- [ ] Verify screen reader compatibility
+- [ ] Test color contrast ratios
+- [ ] Ensure ARIA labels are correct
+- [ ] Test with accessibility tools
+
+### Performance Testing
+- [ ] Run Lighthouse audit (target: 90+ score)
+- [ ] Test load time on slow connections
+- [ ] Check bundle size
+- [ ] Verify lazy loading works
+- [ ] Test with throttled CPU
+
+### Final Checkpoint
+- [ ] Save comprehensive checkpoint
+- [ ] Document all changes
+- [ ] Create user guide
+- [ ] Write deployment notes
+
+
+---
+
+## 🌟 WORLD-CLASS STAKEHOLDER MICRO-SITES
+
+### World Bank Dedicated Journey
+- [ ] Create /world-bank-journey page with comprehensive dashboard
+- [ ] Extract all WB project data from YEMENFINANCIALMARKETINFRASTRUCTUREANDINCLUSIONPROJECT2(5).pdf
+- [ ] Add WB project tracker with Financial Market Infrastructure project details
+- [ ] Add disbursement timeline visualization
+- [ ] Add impact metrics dashboard (beneficiaries, sectors, regions)
+- [ ] Add implementing partners section with details
+- [ ] Add policy recommendations aligned with WB mandate
+- [ ] Add literature library filtered to WB-relevant research
+- [ ] Add news feed tracking WB activities in Yemen
+- [ ] Add indicator dashboard showing WB-supported metrics
+- [ ] Add export functionality for WB reports
+- [ ] Add WB project cards with status, budget, timeline
+- [ ] Add project implementation progress tracker
+- [ ] Add risk assessment dashboard for WB projects
+- [ ] Add comparative analysis with WB projects in other fragile states
+- [ ] Add scenario simulator for WB interventions
+- [ ] Add policy impact meter for WB-supported reforms
+
+### Regional Actor Pages (Complete Set)
+- [x] Saudi Arabia - comprehensive page created
+- [ ] UAE - military role, economic support, humanitarian aid, port control, Aden influence
+- [ ] Oman - mediation efforts, economic ties, humanitarian corridor, neutral stance
+- [ ] Iran - Houthi support allegations, sanctions impact, regional strategy
+- [ ] Qatar - humanitarian aid, mediation attempts, reconstruction pledges
+- [ ] Kuwait - humanitarian aid, reconstruction support, diplomatic role
+- [ ] Egypt - military support to coalition, economic ties, regional security
+- [ ] Jordan - refugee impact, economic cooperation, humanitarian support
+
+### Yemeni Actor Pages (Complete Set)
+- [ ] Houthi Movement (Ansar Allah) - control areas, economic policies, revenue sources (ports, taxes, customs)
+- [ ] Internationally Recognized Government (IRG) - economic policies, fiscal challenges, CBY-Aden
+- [ ] Southern Transitional Council (STC) - separatist agenda, economic vision, Aden control
+- [ ] Tribal Actors - economic influence, conflict dynamics, local governance
+- [ ] Islah Party - political role, economic policies
+- [ ] General People's Congress (GPC) - fragmentation, economic influence
+- [ ] Other Political Parties - economic positions
+
+### International Organization Pages (Complete Set)
+- [ ] IMF - programs, Article IV consultations, assessments, recommendations
+- [ ] UN OCHA - humanitarian coordination, funding appeals, FTS data
+- [ ] UNDP - development projects, governance support, recovery planning
+- [ ] WFP - food assistance, cash transfers, logistics
+- [ ] UNICEF - child protection, education, health, nutrition
+- [ ] WHO - health system support, COVID response, disease surveillance
+- [ ] UNHCR - displacement, IDP support, refugee assistance
+- [ ] IOM - migration, displacement tracking matrix
+- [ ] USAID - bilateral aid, implementing partners, sectors
+- [ ] UK FCDO - humanitarian and development aid, conflict resolution
+- [ ] EU - humanitarian aid, development cooperation, Yemen Trust Fund
+- [ ] Germany (GIZ/KfW) - development projects, technical cooperation
+- [ ] Netherlands - humanitarian aid, WASH sector
+- [ ] Sweden - humanitarian and development support
+- [ ] Switzerland - humanitarian aid, mediation, good offices
+
+### Commercial Bank Observatory (15+ Individual Pages)
+- [ ] CAC Bank - history, ownership structure, branches, financial data, audit reports, challenges
+- [ ] Yemen Kuwait Bank - history, performance metrics, regional presence
+- [ ] Tadhamon International Islamic Bank - Islamic banking products, Sharia compliance
+- [ ] Yemen Commercial Bank - state ownership, restructuring efforts
+- [ ] National Bank of Yemen - historical role, current challenges
+- [ ] Cooperative & Agricultural Credit Bank - agricultural finance, rural reach
+- [ ] Saba Islamic Bank - Islamic products, market position
+- [ ] United Bank - ownership, operations, market share
+- [ ] Yemen Bank for Reconstruction & Development - development finance mandate
+- [ ] Al-Kuraimi Islamic Microfinance Bank - microfinance services, Islamic products
+- [ ] Alkuraimi Exchange - remittances, exchange services, network
+- [ ] International Bank of Yemen - international operations, correspondent banking
+- [ ] Arab Bank - regional presence, Yemen operations
+- [ ] Shamil Bank - Islamic banking, market position
+- [ ] Al-Amal Microfinance Bank - microfinance focus, social impact
+
+### Microfinance Institution Pages (10+ pages)
+- [ ] Al-Amal Microfinance Bank - detailed profile, products, outreach
+- [ ] National Microfinance Foundation - programs, geographic reach, impact
+- [ ] Aden Microfinance Foundation - operations, target segments
+- [ ] Azal Microfinance Program - products, performance, sustainability
+- [ ] Small & Micro Enterprise Development Foundation - SME focus, services
+- [ ] Yemen Microfinance Network - industry coordination, advocacy
+- [ ] Other MFIs - comprehensive coverage of all licensed institutions
+
+### Specialized Audience Pages
+- [ ] Researchers & Universities - data access, methodology documentation, API, citations
+- [ ] Journalists (Finance & Economy) - press kit, fact sheets, expert contacts, embargoed releases
+- [ ] Citizens - simplified explanations, personal finance tools, rights information
+- [ ] Private Sector - investment climate analysis, business environment, opportunities
+- [ ] Civil Society - advocacy tools, transparency data, accountability metrics
+
+---
+
+## 🎨 ADVANCED FEATURES & TOOLS
+
+### Translation & Localization
+- [ ] Add language toggle button to EVERY page (not just header)
+- [ ] Implement floating language switcher (bottom-right corner)
+- [ ] Add inline translation tooltips for technical terms
+- [ ] Create comprehensive glossary page with bilingual definitions
+- [ ] Add "Translate this section" buttons for long content
+- [ ] Implement Google Translate API integration for user-generated content
+
+### Context Boxes ("What is this?")
+- [ ] Add info icon tooltips explaining technical terms throughout
+- [ ] Add "Why this matters" expandable sections on key pages
+- [ ] Add methodology explanations for all calculations
+- [ ] Add data source citations with clickable links
+- [ ] Add "Learn more" expandable sections with deeper context
+- [ ] Add "Related topics" suggestions
+
+### Proper CauseWay Branding
+- [ ] Use official CauseWay Foundation logo from IMG_9478(4).jpeg
+- [ ] Add CauseWay Arcadia branding (IMG_9480) to research/training sections
+- [ ] Update About page with proper CauseWay structure
+- [ ] Add CauseWay arms: Lighthouse, Compass/MEO, Fintech, Ventures/Kayan/Ripple, Arcadia, Peace Nexus
+- [ ] Ensure consistent burgundy/gold color scheme
+- [ ] Add proper attribution footer on all pages
+
+### Sanctions Tracking System
+- [ ] Create comprehensive sanctions tracker page
+- [ ] Extract sanctions data from UN reports
+- [ ] 
+(Content truncated due to size limit. Use page ranges or line ranges to read remaining content)
+
+ubuntu@sandbox:~ $ cd /home/ubuntu/yemen-financial-report && git log --oneline --all | head -50
+[previous content truncated]...h 5 feeds (FX rates, Inflation, GDP, Poverty, Events) covering 2010-2025. Added Zod validation, TypeScript type safety, and 30+ helper functions. Enhanced design system with Yemen brand colors (teal, blue, green, amber), Yemen flag border, and updated typography (IBM Plex Sans Arabic, Noto Naskh Arabic, Inter, Source Serif Pro). Installed Apache ECharts for advanced visualizations. All data feeds include full metadata, source attribution, and confidence levels. Ready for integration into existing pages and creation of new advanced dashboards.
+c8d691e Checkpoint: Major platform expansion - Phase 2 & 4 progress:
+8d378d3 Checkpoint: 🚀 PRODUCTION-READY: Yemen Economic Intelligence & Foresight Platform
+ec36b89 Checkpoint: 🚀 MAJOR PLATFORM TRANSFORMATION COMPLETE
+a0370ee Checkpoint: Major platform expansion with 3 groundbreaking pages:
+3f19229 Checkpoint: Massive expansion of Financial Literature Library: Added 18 new publications including official CBY reports (CBY-Aden Annual Reports 2020 & 2023, Monthly Monetary Developments May 2025, Quarterly Bulletin Q2 2021, CBY Unified 2015 Pre-Split Report) plus comprehensive coverage from FAO, ODI, UNHCR, ACLED, DevChampions, and 8 additional Sana'a Center studies (2016-2023) covering remittances, digital payments, taxation, ports, salaries, and CBY split analysis. Library now contains 46+ publications from 20+ institutions covering all years (2015-2025) and all thematic areas with fully functional advanced filtering system.
+d26ce2d Checkpoint: Major expansion: Added Financial Literature Library (18 publications, 13 institutions, 1,488+ pages) and Interactive Financial Calculators (Inflation & Exchange Rate calculators with historical data 2014-2025). Created CurrencyBadge helper component for consistent currency labeling. Platform now has 16 comprehensive pages with advanced filtering, bilingual support, and real data from official sources.
+450418d Checkpoint: Major expansion: Added 8 comprehensive financial intelligence pages
+2e148c4 Checkpoint: Major Content Expansion - Phase 1 Complete
+337f79f Checkpoint: Final version: Removed CauseWay Foundation diagram from landing page hero section. The site now displays clean professional hero with Yemen landscape background, badge, headline, description, and CTA buttons - no logo image. All 7 pages fully functional in both Arabic and English. Complete bilingual website ready for production.
+a9070f0 Checkpoint: Major update with complete analytics dashboard, research library, and fixed chart downloads. Site now includes: - Interactive Analytics Dashboard with data explorer, calculators, and export functionality - Comprehensive Research Library with 18 publications from credible institutions - Fixed chart download functionality (individual and bulk download) - Bilingual timeline (Arabic/English) - Updated Maher F.S. Farea bio - Beautiful landing page with Yemen landscape - All 7 pages fully functional in both Arabic and English - Ready for production deployment
+7682e42 Checkpoint: Improved landing page design: removed CauseWay Foundation diagram image, replaced with professional card design showing key metrics, updated hero background to better Yemen landscape image with improved gradient overlay
+5185c78 Checkpoint: Final version with bilingual timeline (AR/EN), updated Maher F.S. Farea bio, masked email, CauseWay Foundation branding, stunning landing page, and comprehensive storytelling page
+573e96e Checkpoint: Major update: Created exceptional landing page with CauseWay branding, bilingual system (AR/EN), storytelling page with timeline and authentic photos, updated navigation with language toggle. All content from provided files integrated.
+f4bc7a4 Checkpoint: النسخة النهائية: موقع عربي بالكامل مع صور خلفية محسّنة، شروحات عربية واضحة تحت كل رسم بياني، وهوية Causeway المتخصصة في الاقتصاد اليمني
+8f89f1c Checkpoint: Yemen Financial Report - Complete Premium Edition: 6 pages (Home with hero image & economic indicators sidebar, Overview, Charts, FMI Project $20M, Interactive Timeline 2014-2025, About), 6 professional English charts, authentic images from UNESCO/BBC/World Bank, dynamic economic indicators panel, comprehensive stakeholder analysis, fully responsive Arabic website - Causeway Consultancies by Maher F.S. Farea
+ee9d5fc Checkpoint: Yemen Financial Report - Final Version: Professional English charts (6 high-quality visualizations), updated Causeway Consultancies services page inspired by NexusBridge, complete Arabic website with 4 main pages, all branding updated to Causeway Consultancies by Maher F.S. Farea
+dc30777 Checkpoint: موقع تقرير النظام المالي الموازي في اليمن - النسخة النهائية مع Causeway Consultancies by Maher F.S. Farea - موقع احترافي كامل بتصميم عربي مع 4 صفحات رئيسية و12 رسماً بيانياً
+d421361 Checkpoint: موقع تقرير النظام المالي الموازي في اليمن - نسخة كاملة واحترافية مع 4 صفحات رئيسية (الرئيسية، نظرة عامة، الرسوم البيانية، من نحن) بتصميم عربي احترافي وألوان مستوحاة من اليمن
+d995fb3 Initial project bootstrap
+ubuntu@sandbox:~/yemen-financial-report $
+
+# Yemen Economic Compass - Comprehensive Audit of All Versions
+
+## Executive Summary
+This document audits ALL work completed across 40+ checkpoints from initial bootstrap to current state. It catalogs every feature, component, page, calculator, intelligence system, and data structure built throughout the project's evolution.
+
+---
+
+## Version History & Features Built
+
+### Phase 1: Initial Arabic Website (d4213612 - dc30777e)
+**Checkpoints:** d995fb3, d4213612, dc30777e, ee9d5fc, 8f89f1c
+
+**Features Built:**
+- 4 main pages (Home, Overview, Charts, About)
+- 12 interactive charts (Arabic)
+- Causeway Consultancies branding
+- Arabic-first design
+- Yemen-inspired color palette
+- Responsive layout
+
+**Files Created:**
+- `client/src/pages/Home.tsx`
+- `client/src/pages/Overview.tsx`
+- `client/src/pages/Charts.tsx`
+- `client/src/pages/About.tsx`
+- `client/src/components/EconomicIndicators.tsx`
+
+---
+
+### Phase 2: Bilingual Enhancement (f4bc7a46 - 573e96ef)
+**Checkpoints:** f4bc7a46, 5185c784, 573e96ef
+
+**Features Built:**
+- Complete bilingual system (Arabic/English)
+- Language toggle functionality
+- CauseWay Foundation branding
+- Storytelling page with timeline
+- Authentic photos integration
+- Maher F.S. Farea bio
+
+**Files Created:**
+- `client/src/contexts/LanguageContext.tsx`
+- `client/src/pages/Storytelling.tsx`
+- `client/src/components/LanguageToggle.tsx`
+
+---
+
+### Phase 3: Professional Landing & Analytics (7682e423 - a9070f08)
+**Checkpoints:** 7682e423, a9070f08, 337f79fa
+
+**Features Built:**
+- Professional landing page with Yemen landscape
+- Interactive Analytics Dashboard
+- Data explorer with filters
+- Financial calculators
+- Research Library (18 publications)
+- Chart download functionality (individual & bulk)
+- Export to PDF/Excel/CSV
+
+**Files Created:**
+- `client/src/pages/AnalyticsDashboard.tsx`
+- `client/src/pages/ResearchLibrary.tsx`
+- `client/src/components/DataExplorer.tsx`
+- `client/src/components/ChartExporter.tsx`
+
+---
+
+### Phase 4: Content Expansion (2e148c4c)
+**Checkpoint:** 2e148c4c
+
+**Features Built:**
+- Economic Crisis page (timeline 2015-2025)
+- Currency War page (dual banking analysis)
+- Main Cities page (6 cities with statistics)
+- Events Timeline page (19 events, advanced filtering)
+- Deep Dive Analysis section
+
+**Files Created:**
+- `client/src/pages/EconomicCrisis.tsx`
+- `client/src/pages/CurrencyWar.tsx`
+- `client/src/pages/Cities.tsx`
+- `client/src/pages/EventsTimeline.tsx`
+
+**Pages Total:** 14
+
+---
+
+### Phase 5: Financial Intelligence Hub (450418da)
+**Checkpoint:** 450418da
+
+**Features Built:**
+- International Reports Repository (6 major reports)
+- Microfinance Observatory (8 programs, 5 banks)
+- CBY-Aden Decision Tracker (8 decisions)
+- CBY-Sana'a Decision Tracker (8 decisions)
+- Commercial Banks Intelligence Hub (10 banks)
+
+**Files Created:**
+- `client/src/pages/InternationalReports.tsx`
+- `client/src/pages/MicrofinanceObservatory.tsx`
+- `client/src/pages/CbyAdenTracker.tsx`
+- `client/src/pages/CbySanaaTracker.tsx`
+- `client/src/pages/CommercialBanks.tsx`
+
+**Pages Total:** 19
+
+---
+
+### Phase 6: Literature & Calculators (d26ce2de)
+**Checkpoint:** d26ce2de
+
+**Features Built:**
+- Financial Literature Library (18 publications)
+- Interactive Financial Calculators
+  - Inflation Calculator (2014-2025 data)
+  - Exchange Rate Calculator (Aden/Sana'a)
+- CurrencyBadge helper component
+
+**Files Created:**
+- `client/src/pages/FinancialLiterature.tsx`
+- `client/src/pages/FinancialCalculators.tsx`
+- `client/src/components/CurrencyBadge.tsx`
+- `client/src/components/InflationCalculator.tsx`
+- `client/src/components/ExchangeRateCalculator.tsx`
+
+**Pages Total:** 21
+
+---
+
+### Phase 7: Massive Literature Expansion (3f192293)
+**Checkpoint:** 3f192293
+
+**Features Built:**
+- 18 new publications added
+- CBY-Aden Annual Reports (2020, 2023)
+- CBY Monthly Monetary Developments (May 2025)
+- CBY Quarterly Bulletin (Q2 2021)
+- CBY Unified 2015 Pre-Split Report
+- FAO, ODI, UNHCR, ACLED reports
+- DevChampions studies
+- 8 Sana'a Center studies (2016-2023)
+
+**Total Publications:** 46+ from 20+ institutions
+
+---
+
+### Phase 8: Advanced Visualizations & Intelligence (a0370ee0)
+**Checkpoint:** a0370ee0
+
+**Features Built:**
+- Interactive Data Visualizations Dashboard (4 charts)
+  - Exchange Rate Evolution (2014-2025)
+  - Inflation Trends with cumulative calculations
+  - GDP Trajectory (nominal vs real)
+  - Oil Production & Revenue
+- Stakeholder Intelligence Hub (5 actors)
+  - IRG/PLC profile
+  - Houthis/Ansar Allah profile
+  - Saudi Arabia profile
+  - UAE profile
+  - STC profile
+- Comprehensive Sanctions Tracker (10 sanctions)
+
+**Files Created:**
+- `client/src/pages/DataVisualizations.tsx`
+- `client/src/pages/StakeholderHub.tsx`
+- `client/src/pages/SanctionsTracker.tsx`
+- `client/src/components/ExchangeRateChart.tsx`
+- `client/src/components/InflationChart.tsx`
+- `client/src/components/GDPChart.tsx`
+- `client/src/components/OilChart.tsx`
+
+**Pages Total:** 24
+
+---
+
+### Phase 9: Major Platform Transformation (ec36b893)
+**Checkpoint:** ec36b893
+
+**Features Built:**
+- Scenario Forecasting Engine
+  - 5 adjustable variables
+  - 3 scenarios (optimistic/baseline/pessimistic)
+  - Real-time GDP/reserves/poverty calculations
+  - CSV export
+- Policy Recommendations Dashboard
+  - 5 comprehensive recommendations
+  - Implementation roadmaps
+  - Stakeholder identification
+  - Impact analysis
+  - Risk assessment
+- Statistical Indicators Library
+  - 12 leading economic indicators
+  - 4 composite indices
+  - Trend analysis
+
+**New Branding:**
+- "Yemen Economic Intelligence & Foresight Platform"
+- Bilingual professional logos (3 versions)
+- Updated APP_LOGO
+
+**Files Created:**
+- `client/src/pages/ScenarioForecasting.tsx`
+- `client/src/pages/PolicyRecommendations.tsx`
+- `client/src/pages/StatisticalIndicators.tsx`
+- `client/src/components/ScenarioEngine.tsx`
+- `client/src/components/PolicyCard.tsx`
+- `client/src/components/IndicatorCard.tsx`
+
+**Pages Total:** 27
+
+---
+
+### Phase 10: Production Ready (8d378d37)
+**Checkpoint:** 8d378d37
+
+**Status:**
+- ✅ All calculators verified
+- ✅ CauseWay Foundation branding (Established 2025)
+- ✅ Professional bilingual logos
+- ✅ Data accuracy verified
+- ✅ Full bilingual parity
+- ✅ No TypeScript errors
+- ✅ Production-ready
+
+**Platform Capabilities:**
+- Economic Intelligence & Analysis
+- Scenario Forecasting (2025-2030)
+- Policy Recommendations
+- Statistical Indicators Library
+- Stakeholder Intelligence Hub
+- Sanctions Tracking
+- Financial Literature Repository
+- Interactive Calculators
+- Data Visualizations
+- Central Bank Decision Tracking
+- Microfinance Observatory
+- Commercial Banks Intelligence
+
+---
+
+### Phase 11: Key Statistics & Transformation (c8d691e6)
+**Checkpoint:** c8d691e6
+
+**Features Built:**
+- Key Statistics Dashboard (59 quantitative claims)
+- Exchange Rate Calculator Update (2025 data)
+- Financial System Transformation Timeline (4 phases)
+- Financial Power Map (8 actors, scatter plot)
+
+**Files Created:**
+- `client/src/pages/KeyStatistics.tsx`
+- `client/src/pages/FinancialTransformation.tsx`
+- `client/src/pages/PowerMap.tsx`
+
+**Pages Total:** 30
+
+---
+
+### Phase 12: Data Architecture & Design System (efa6a31e)
+**Checkpoint:** efa6a31e
+
+**Features Built:**
+- Comprehensive data architecture (5 feeds)
+  - FX rates feed
+  - Inflation feed
+  - GDP feed
+  - Poverty feed
+  - Events feed
+- Zod validation
+- TypeScript type safety
+- 30+ helper functions
+- Yemen brand colors (teal, blue, green, amber)
+- Yemen flag border
+- Updated typography (IBM Plex Sans Arabic, Noto Naskh Arabic, Inter, Source Serif Pro)
+- Apache ECharts installed
+
+**Files Created:**
+- `client/src/lib/data/fx-rates.ts`
+- `client/src/lib/data/inflation.ts`
+- `client/src/lib/data/gdp.ts`
+- `client/src/lib/data/poverty.ts`
+- `client/src/lib/data/events.ts`
+- `client/src/lib/data/types.ts`
+- `client/src/lib/data/helpers.ts`
+
+---
+
+### Phase 13: Compass Dashboard & Advanced Visualizations (7cda1409)
+**Checkpoint:** 7cda1409
+
+**Features Built:**
+- Compass Dashboard (12 key indicators)
+  - GDP, inflation, FX rates, poverty, oil, revenue
+  - Sanctions, banking stress
+  - Real-time data from feeds
+  - Color-coded severity levels
+- Advanced Visualizations (3 ECharts)
+  - FX Timeline (dual-axis, Aden/Sana'a + gap%)
+  - Sankey diagram (money flows)
+  - Shock decomposition (stacked bar, 6 factors)
+- EChartsWrapper component
+
+**Files Created:**
+- `client/src/pages/CompassDashboard.tsx`
+- `client/src/pages/AdvancedVisualizations.tsx`
+- `client/src/components/EChartsWrapper.tsx`
+
+**Pages Total:** 32
+
+---
+
+### Phase 14: CauseWay Organizational Structure (699d53cd)
+**Checkpoint:** 699d53cd
+
+**Features Built:**
+- About CauseWay page (Foundation, Arcadia, Consultancies, Ventures)
+- Kayan Platform page (features, process, benefits, sectors)
+- CauseWay logos integration
+- Updated platform branding
+
+**Files Created:**
+- `client/src/pages/AboutCauseWay.tsx`
+- `client/src/pages/KayanPlatform.tsx`
+
+**Pages Total:** 34
+
+---
+
+### Phase 15: Navigation & Visibility Fixes (8386d2d4)
+**Checkpoint:** 8386d2d4
+
+**Features Built:**
+- Comprehensive Header navigation with dropdown menus
+- Updated Footer with CauseWay logos
+- LanguageProvider integration
+- All pages accessible through navigation
+
+**Files Updated:**
+- `client/src/components/Header.tsx`
+- `client/src/components/Footer.tsx`
+- `client/src/App.tsx`
+
+---
+
+### Phase 16: Master Compass & News Ticker (aa11309f)
+**Checkpoint:** aa11309f
+
+**Features Built:**
+- Master Compass widget (12 indicators, timeline slider 2014-2025)
+- Auto-scrolling News Ticker component
+- Full bilingual support
+- Integration with data feeds
+
+**Files Created:**
+- `client/src/components/MasterCompass.tsx`
+- `client/src/components/NewsTicker.tsx`
+
+---
+
+### Phase 17: ScrollytellingTimeline (684100af)
+**Checkpoint:** 684100af
+
+**Features Built:**
+- Custom Yemen Economic Compass logo
+- Interactive ScrollytellingTimeline component
+  - 10-year journey (2015-2025)
+  - Annual summaries
+  - Event-based visuals
+  - Unique color coding
+  - Actor impact tracking
+
+**Files Created:**
+- `client/src/components/ScrollytellingTimeline.tsx`
+- `public/yemen-compass-logo.svg`
+
+---
+
+### Phase 18: Landing Page Redesign & News Aggregator (50832ca4)
+**Checkpoint:** 50832ca4
+
+**Features Built:**
+- Redesigned landing page with ScrollytellingTimeline
+- 24 major events (2015-2025)
+- 11 annual summaries
+- News Aggregator page (12 curated items)
+- Advanced filtering (category/relevance/search)
+- Real-time statistics
+
+**Files Updated:**
+- `client/src/pages/LandingPage.tsx`
+- `client/src/pages/NewsAggregator.tsx`
+
+---
+
+### Phase 19: Full-Stack Conversion (0ad4688a)
+**Checkpoint:** 0ad4688a
+
+**Features Built:**
+- Express server
+- MySQL database
+- Manus OAuth authentication
+- S3 storage integration
+- File storage system
+  - Database schema (files table)
+  - tRPC API endpoints
+  - FileUpload component (drag-and-drop)
+  - FileManager dashboard
+  - Search/filter/download/delete
+
+**Files Created:**
+- `server/_core/index.ts`
+- `server/_core/trpc.ts`
+- `server/_core/oauth.ts`
+- `server/storage.ts`
+- `server/routers.ts`
+- `drizzle/schema.ts`
+- `client/src/pages/FileManager.tsx`
+- `client/src/components/FileUpload.tsx`
+
+---
+
+### Phase 20: Navigation Fixes & Audit (edcf7bbd)
+**Checkpoint:** edcf7bbd
+
+**Features Built:**
+- Fixed Header with LanguageContext
+- Resources menu (Research/Literature/News/Files)
+- Fixed broken navigation links
+- Updated Footer with bilingual support
+- Verified all 38 pages routed
+
+---
+
+### Phase 21: Stakeholder Dashboards (92edd86d)
+**Checkpoint:** 92edd86d
+
+**Features Built:**
+- Fixed Arabic font rendering
+- Language preference persistence
+- Professional new logo (compass with data visualization)
+- Executive Dashboard (World Bank/IMF/Donors)
+  - KPI cards
+  - Project monitoring
+  - Impact metrics
+  - Risk assessment
+- CBY-Aden Dashboard
+  - Exchange rate monitoring
+  - Monetary policy tracker
+  - Banking sector health
+  - Foreign reserves
+  - Regulatory compliance
+
+**Files Created:**
+- `client/src/pages/ExecutiveDashboard.tsx`
+- `client/src/pages/CbyAdenDashboard.tsx`
+
+---
+
+### Phase 22: Policy Intelligence (b25fe1ac)
+**Checkpoint:** b25fe1ac
+
+**Features Built:**
+- PolicyImpactMeter (4 interventions, ROI 2.8x-4.2x)
+- ScenarioSimulator (Executive Dashboard)
+- MonetaryPolicySimulator (CBY Dashboard)
+- Methodology modals with economic models
+
+**Files Created:**
+- `client/src/components/PolicyImpactMeter.tsx`
+- `client/src/components/ScenarioSimulator.tsx`
+- `client/src/components/MonetaryPolicySimulator.tsx`
+
+---
+
+### Phase 23: Think Tank Standards (5fd21cfb)
+**Checkpoint:** 5fd21cfb
+
+**Features Built:**
+- Professional transparent logo
+- Clean gradient hero
+- Credibility signals (World Bank/IMF/OCHA/CBY/Sana'a Center badges)
+- Stakeholder pathways section
+- Executive summary
+- Hierarchical dropdown menus
+- Mobile-optimized navigation
+
+---
+
+### Phase 24: Geographic Logo & Thematic Design (19c98975)
+**Checkpoint:** 19c98975
+
+**Features Built:**
+- Exceptional logo (Yemen's geographic shape + gold financial network)
+- Thematic color system (burgundy #8B1538 + gold #D4AF37)
+- Playfair Display font
+- Concise hero-focused landing page
+- High-resolution Sana'a background
+- Comprehensive audit with 150+ validation tasks
+
+---
+
+### Phase 25: About Page Redesign (82029f5d)
+**Checkpoint:** 82029f5d
+
+**Features Built:**
+- Complete About page redesign
+- CauseWay Foundation content
+  - Mission statement
+  - Values
+  - Strategic structure (5 arms)
+  - Governance framework
+  - Visitor pathways
+- Burgundy/gold gradient design
+
+**Files Updated:**
+- `client/src/pages/About.tsx`
+
+---
+
+### Phase 26: External Links (ca60d923)
+**Checkpoint:** ca60d923
+
+**Features Built:**
+- External links to Kayan platform (https://kayan.manus.space)
+- Links in About page, visitor pathways, Footer
+- Proper security attributes
+
+---
+
+### Phase 27: Saudi Arabia Stakeholder Page (6e51af19)
+**Checkpoint:** 6e51af19
+
+**Features Built:**
+- Saudi Arabia stakeholder page
+  - Key metrics ($18.3B aid, 12.4M beneficiaries)
+  - 5 comprehensive tabs
+  - Timeline 2015-2024
+  - Military role analysis
+  - Economic impact
+  - Humanitarian aid
+  - Future outlook
+
+**Files Created:**
+- `client/src/pages/SaudiArabia.tsx`
+
+---
+
+### Phase 28: World Bank Journey Page (e6e8a3de)
+**Checkpoint:** e6e8a3de
+
+**Features Built:**
+- World Bank Journey page
+  - $50M Financial Market Infrastructure project
+  - 4 components
+  - Implementing partners
+  - Timeline 2019-2024
+  - Impact metrics
+  - 8 policy recommendations
+  - Literature library
+  - News feed
+  - Indicator dashboard
+
+**Files Created:**
+- `client/src/pages/WorldBankJourney.tsx`
+
+---
+
+### Phase 29: CAC Bank Page (a59fcd0c)
+**Checkpoint:** a59fcd0c
+
+**Features Built:**
+- CAC Bank comprehensive page
+  - Overview
+  - Financial data (10B YER capital, 58 branches)
+  - 10-year timeline (1982-2024)
+  - 6 challenges
+  - 6 recommendations
+- Expert audit framework (300+ validation items)
+
+**Files Created:**
+- `client/src/pages/CacBank.tsx`
+
+---
+
+### Phase 30: Financial Flows Network (d223ca43)
+**Checkpoint:** d223ca43
+
+**Features Built:**
+- Interactive Financial Flows Network visualization
+  - 14 nodes (CBY Sana'a/Aden, banks, remittances, etc.)
+  - $20B+ flows
+  - Node descriptions
+  - 5 key insights
+  - Transparent methodology
+
+**Files Created:**
+- `client/src/pages/FinancialFlowsNetwork.tsx`
+
+---
+
+### Phase 31: Tadhamon Islamic Bank (cd6b6d92)
+**Checkpoint:** cd6b6d92
+
+**Features Built:**
+- Tadhamon Islamic Bank page
+  - $900M assets, 42 branches
+  - Financial metrics
+  - 10-year timeline (1995-2024)
+  - 6 challenges
+  - 6 recommendations
+
+**l
+---
+
+### Phase 32: Database Infrastructure (b3d871db) - CURRENT
+**
+
+**Features Built:**
+- Robust backend database (7 new tables)
+  - events
+  - actors
+  - indicators
+  - causations
+  - recommendations
+  - banks
+  - stakeholders
+- Comprehensive query helpers
+- Foundation for intelligent analysis system
+
+**Files Created:**
+- `drizzle/schema.ts` (expanded)
+- `server/db-helpers.ts`
+
+---
+
+## Complete Feature Inventory
+
+###
+1. Landing Page
+2. About
+3. Storytelling
+4. Economic Crisis
+5. Currency War
+6. Main Cities
+7. Events Timeline
+8. International Reports
+9. Microfinance Observatory
+10. CBY-Aden Tracker
+11. CBY-Sana'a Tracker
+12. Commercial Banks
+microfiannce 
+Money exchangers
+world bank 
+13. Financial Literature
+14. Financial Calculators
+15. Data Visualizations
+16. Stakeholder
+(Content truncated due to size limit. Use page ranges or line ranges to read remaining content)
+
+
+ubuntu@sandbox:~/yemen-archive $ cd /home/ubuntu/yemen-financial-report && find client/src/pages -name "*.tsx" | sort
+client/src/pages/About.tsx
+client/src/pages/AboutCauseWay.tsx
+client/src/pages/AdvancedVisualizations.tsx
+client/src/pages/AnalyticsDashboard.tsx
+client/src/pages/CBYAdenTracker.tsx
+client/src/pages/CBYDashboard.tsx
+client/src/pages/CBYSanaaTracker.tsx
+client/src/pages/Charts.tsx
+client/src/pages/CommercialBanksHub.tsx
+client/src/pages/CompassDashboard.tsx
+client/src/pages/ComponentShowcase.tsx
+client/src/pages/CurrencyWar.tsx
+client/src/pages/DataVisualization.tsx
+client/src/pages/EconomicCrisis.tsx
+client/src/pages/EventsTimeline.tsx
+client/src/pages/ExecutiveDashboard.tsx
+client/src/pages/FMIProject.tsx
+client/src/pages/FileManager.tsx
+client/src/pages/FinancialCalculators.tsx
+client/src/pages/FinancialFlowsNetwork.tsx
+client/src/pages/FinancialLiterature.tsx
+client/src/pages/FinancialPowerMap.tsx
+client/src/pages/FinancialTransformation.tsx
+client/src/pages/Home.tsx
+client/src/pages/InternationalReports.tsx
+client/src/pages/KayanPlatform.tsx
+client/src/pages/KeyStatistics.tsx
+client/src/pages/LandingPage.tsx
+client/src/pages/MainCities.tsx
+client/src/pages/MicrofinanceObservatory.tsx
+client/src/pages/NewsAggregator.tsx
+client/src/pages/NotFound.tsx
+client/src/pages/Overview.tsx
+client/src/pages/PolicyRecommendations.tsx
+client/src/pages/ResearchLibrary.tsx
+client/src/pages/SanctionsTracker.tsx
+client/src/pages/SaudiArabiaPage.tsx
+client/src/pages/ScenarioForecasting.tsx
+client/src/pages/StakeholderHub.tsx
+client/src/pages/StatisticalIndicators.tsx
+client/src/pages/StoryPage.tsx
+client/src/pages/Timeline.tsx
+client/src/pages/WorldBankJourney.tsx
+client/src/pages/banks/CACBank.tsx
+client/src/pages/banks/TadhamonBank.tsx
+ubuntu@sandbox:~/yemen-financial-report $
+
+ubuntu@sandbox:~/yemen-financial-report $ cd /home/ubuntu/yemen-financial-report && find client/src/components -name "*.tsx" | grep -v "ui/" | sort
+client/src/components/AIChatBox.tsx
+client/src/components/CurrencyBadge.tsx
+client/src/components/DashboardLayout.tsx
+client/src/components/DashboardLayoutSkeleton.tsx
+client/src/components/EChartsWrapper.tsx
+client/src/components/EconomicIndicators.tsx
+client/src/components/ErrorBoundary.tsx
+client/src/components/FileUpload.tsx
+client/src/components/Footer.tsx
+client/src/components/Header.tsx
+client/src/components/ManusDialog.tsx
+client/src/components/Map.tsx
+client/src/components/MasterCompass.tsx
+client/src/components/MonetaryPolicySimulator.tsx
+client/src/components/Navigation.tsx
+client/src/components/NewsTicker.tsx
+client/src/components/PolicyImpactMeter.tsx
+client/src/components/ScenarioSimulator.tsx
+client/src/components/ScrollytellingTimeline.tsx
+ubuntu@sandbox:~/yemen-financial-report $
