@@ -17,8 +17,8 @@ export default function TadhamonBank() {
       overview: "Overview",
       financials: "Financial Data",
       history: "History & Milestones",
-      challenges: "Challenges & Risks",
-      recommendations: "Recommendations",
+      challengesTab: "Challenges & Risks",
+      recommendationsTab: "Recommendations",
       
       keyMetrics: "Key Metrics",
       assets: "Total Assets",
@@ -146,8 +146,8 @@ export default function TadhamonBank() {
       overview: "نظرة عامة",
       financials: "البيانات المالية",
       history: "التاريخ والمعالم",
-      challenges: "التحديات والمخاطر",
-      recommendations: "التوصيات",
+      challengesTab: "التحديات والمخاطر",
+      recommendationsTab: "التوصيات",
       
       keyMetrics: "المؤشرات الرئيسية",
       assets: "إجمالي الأصول",
@@ -346,8 +346,8 @@ export default function TadhamonBank() {
             <TabsTrigger value="overview">{t.overview}</TabsTrigger>
             <TabsTrigger value="financials">{t.financials}</TabsTrigger>
             <TabsTrigger value="history">{t.history}</TabsTrigger>
-            <TabsTrigger value="challenges">{t.challenges}</TabsTrigger>
-            <TabsTrigger value="recommendations">{t.recommendations}</TabsTrigger>
+            <TabsTrigger value="challenges">{t.challengesTab}</TabsTrigger>
+            <TabsTrigger value="recommendations">{t.recommendationsTab}</TabsTrigger>
           </TabsList>
 
           <TabsContent value="overview" className="space-y-6">

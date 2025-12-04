@@ -52,6 +52,7 @@ import YouthEconomy from "./pages/YouthEconomy";
 import Investment from "./pages/Investment";
 import ClimateFinance from "./pages/ClimateFinance";
 import Sitemap from "./pages/Sitemap";
+import BanksDatabase from "./pages/BanksDatabase";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -102,6 +103,7 @@ function Router() {
       <Route path={"/investment"} component={Investment} />
       <Route path={"/climate-finance"} component={ClimateFinance} />
       <Route path={"/sitemap"} component={Sitemap} />
+      <Route path={"/banks-database"} component={BanksDatabase} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

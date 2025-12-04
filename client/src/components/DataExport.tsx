@@ -17,7 +17,7 @@ interface DataExportProps {
   title?: string;
 }
 
-export default function DataExport({ data, filename, title }: DataExportProps) {
+export function DataExport({ data, filename, title }: DataExportProps) {
   const { language } = useLanguage();
   const isArabic = language === 'ar';
 

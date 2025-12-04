@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import DataExport from "@/components/DataExport";
+import { DataExport } from "@/components/DataExport";
 import { Search, TrendingDown, TrendingUp, AlertTriangle, DollarSign, Users, Building2, Percent, Calendar, Download, ExternalLink } from "lucide-react";
 
 interface KeyIndicator {
