@@ -47,6 +47,9 @@ import SaudiArabiaPage from "./pages/SaudiArabiaPage";
 import WorldBankJourney from "./pages/WorldBankJourney";
 import FinancialFlowsNetwork from "./pages/FinancialFlowsNetwork";
 import HayelSaeedAnam from "./pages/stakeholders/HayelSaeedAnam";
+import YouthEconomy from "./pages/YouthEconomy";
+import Investment from "./pages/Investment";
+import ClimateFinance from "./pages/ClimateFinance";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -93,6 +96,9 @@ function Router() {
       <Route path={"/files"} component={FileManager} />
       <Route path={"/executive-dashboard"} component={ExecutiveDashboard} />
       <Route path={"/cby-dashboard"} component={CBYDashboard} />
+      <Route path={"/youth-economy"} component={YouthEconomy} />
+      <Route path={"/investment"} component={Investment} />
+      <Route path={"/climate-finance"} component={ClimateFinance} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
