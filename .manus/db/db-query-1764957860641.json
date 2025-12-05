@@ -1,0 +1,16 @@
+{
+  "query": "SELECT COUNT(*) as total, \n  SUM(CASE WHEN category = 'monetary' THEN 1 ELSE 0 END) as monetary,\n  SUM(CASE WHEN category = 'economic' THEN 1 ELSE 0 END) as economic,\n  SUM(CASE WHEN category = 'humanitarian' THEN 1 ELSE 0 END) as humanitarian\nFROM indicators;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SELECT COUNT(*) as total, \n  SUM(CASE WHEN category = 'monetary' THEN 1 ELSE 0 END) as monetary,\n  SUM(CASE WHEN category = 'economic' THEN 1 ELSE 0 END) as economic,\n  SUM(CASE WHEN category = 'humanitarian' THEN 1 ELSE 0 END) as humanitarian\nFROM indicators;",
+  "rows": [
+    {
+      "total": "223",
+      "monetary": "36",
+      "economic": "45",
+      "humanitarian": "35"
+    }
+  ],
+  "messages": [],
+  "stdout": "total\tmonetary\teconomic\thumanitarian\n223\t36\t45\t35\n",
+  "stderr": "",
+  "execution_time_ms": 50
+}

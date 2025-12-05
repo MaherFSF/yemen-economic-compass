@@ -1,0 +1,21 @@
+{
+  "query": "SELECT \n  COUNT(*) as total_events,\n  COUNT(DISTINCT YEAR(STR_TO_DATE(date, '%Y-%m-%d'))) as years_covered,\n  MIN(date) as earliest_event,\n  MAX(date) as latest_event,\n  COUNT(CASE WHEN category = 'economic' THEN 1 END) as economic,\n  COUNT(CASE WHEN category = 'war' THEN 1 END) as war,\n  COUNT(CASE WHEN category = 'policy' THEN 1 END) as policy,\n  COUNT(CASE WHEN category = 'humanitarian' THEN 1 END) as humanitarian,\n  COUNT(CASE WHEN severity = 'critical' THEN 1 END) as critical_severity\nFROM events;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SELECT \n  COUNT(*) as total_events,\n  COUNT(DISTINCT YEAR(STR_TO_DATE(date, '%Y-%m-%d'))) as years_covered,\n  MIN(date) as earliest_event,\n  MAX(date) as latest_event,\n  COUNT(CASE WHEN category = 'economic' THEN 1 END) as economic,\n  COUNT(CASE WHEN category = 'war' THEN 1 END) as war,\n  COUNT(CASE WHEN category = 'policy' THEN 1 END) as policy,\n  COUNT(CASE WHEN category = 'humanitarian' THEN 1 END) as humanitarian,\n  COUNT(CASE WHEN severity = 'critical' THEN 1 END) as critical_severity\nFROM events;",
+  "rows": [
+    {
+      "total_events": "62",
+      "years_covered": "15",
+      "earliest_event": "2010-01-01",
+      "latest_event": "2025-02-15",
+      "economic": "24",
+      "war": "14",
+      "policy": "12",
+      "humanitarian": "10",
+      "critical_severity": "38"
+    }
+  ],
+  "messages": [],
+  "stdout": "total_events\tyears_covered\tearliest_event\tlatest_event\teconomic\twar\tpolicy\thumanitarian\tcritical_severity\n62\t15\t2010-01-01\t2025-02-15\t24\t14\t12\t10\t38\n",
+  "stderr": "",
+  "execution_time_ms": 58
+}

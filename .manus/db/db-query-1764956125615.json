@@ -1,0 +1,306 @@
+{
+  "query": "SELECT id, titleEn, titleAr, date, category, severity FROM events ORDER BY date;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SELECT id, titleEn, titleAr, date, category, severity FROM events ORDER BY date;",
+  "rows": [
+    {
+      "id": "1",
+      "titleEn": "Yemeni Revolution Begins",
+      "titleAr": "بداية الثورة اليمنية",
+      "date": "2011-02-11",
+      "category": "policy",
+      "severity": "high"
+    },
+    {
+      "id": "30001",
+      "titleEn": "Arab Spring Protests Begin in Yemen",
+      "titleAr": "بداية احتجاجات الربيع العربي في اليمن",
+      "date": "2011-02-11",
+      "category": "policy",
+      "severity": "high"
+    },
+    {
+      "id": "2",
+      "titleEn": "Houthi Takeover of Sana'a",
+      "titleAr": "استيلاء الحوثيين على صنعاء",
+      "date": "2014-09-21",
+      "category": "war",
+      "severity": "critical"
+    },
+    {
+      "id": "60001",
+      "titleEn": "Houthis Take Control of Sanaa",
+      "titleAr": "سيطرة الحوثيين على صنعاء",
+      "date": "2014-09-21",
+      "category": "war",
+      "severity": "critical"
+    },
+    {
+      "id": "3",
+      "titleEn": "Operation Decisive Storm",
+      "titleAr": "عملية عاصفة الحزم",
+      "date": "2015-03-26",
+      "category": "war",
+      "severity": "critical"
+    },
+    {
+      "id": "60002",
+      "titleEn": "Operation Decisive Storm Begins",
+      "titleAr": "بداية عملية عاصفة الحزم",
+      "date": "2015-03-26",
+      "category": "war",
+      "severity": "critical"
+    },
+    {
+      "id": "30002",
+      "titleEn": "Operation Decisive Storm Begins",
+      "titleAr": "بداية عملية عاصفة الحزم",
+      "date": "2015-03-26",
+      "category": "war",
+      "severity": "critical"
+    },
+    {
+      "id": "60003",
+      "titleEn": "Yemen Oil Exports Halt",
+      "titleAr": "توقف صادرات النفط اليمنية",
+      "date": "2015-07-14",
+      "category": "economic",
+      "severity": "critical"
+    },
+    {
+      "id": "30003",
+      "titleEn": "Central Bank Split - Relocation to Aden",
+      "titleAr": "انقسام البنك المركزي - النقل إلى عدن",
+      "date": "2016-09-18",
+      "category": "economic",
+      "severity": "critical"
+    },
+    {
+      "id": "60004",
+      "titleEn": "Central Bank Split - CBY Moves to Aden",
+      "titleAr": "انقسام البنك المركزي - انتقال البنك المركزي إلى عدن",
+      "date": "2016-09-18",
+      "category": "economic",
+      "severity": "critical"
+    },
+    {
+      "id": "4",
+      "titleEn": "Central Bank Split",
+      "titleAr": "انقسام البنك المركزي",
+      "date": "2016-09-18",
+      "category": "economic",
+      "severity": "critical"
+    },
+    {
+      "id": "60005",
+      "titleEn": "Exchange Rate Divergence Begins",
+      "titleAr": "بداية تباعد سعر الصرف",
+      "date": "2016-12-01",
+      "category": "economic",
+      "severity": "high"
+    },
+    {
+      "id": "60006",
+      "titleEn": "Cholera Outbreak Declared",
+      "titleAr": "إعلان تفشي الكوليرا",
+      "date": "2017-04-27",
+      "category": "humanitarian",
+      "severity": "critical"
+    },
+    {
+      "id": "5",
+      "titleEn": "Cholera Outbreak",
+      "titleAr": "تفشي الكوليرا",
+      "date": "2017-04-27",
+      "category": "humanitarian",
+      "severity": "critical"
+    },
+    {
+      "id": "6",
+      "titleEn": "Currency Collapse",
+      "titleAr": "انهيار العملة",
+      "date": "2018-09-01",
+      "category": "economic",
+      "severity": "critical"
+    },
+    {
+      "id": "60007",
+      "titleEn": "Riyal Collapses to 900 YER/USD",
+      "titleAr": "انهيار الريال إلى 900 ريال/دولار",
+      "date": "2018-09-01",
+      "category": "economic",
+      "severity": "critical"
+    },
+    {
+      "id": "60008",
+      "titleEn": "Saudi Arabia Deposits $2B in CBY-Aden",
+      "titleAr": "السعودية تودع 2 مليار دولار في البنك المركزي بعدن",
+      "date": "2018-10-15",
+      "category": "economic",
+      "severity": "high"
+    },
+    {
+      "id": "30004",
+      "titleEn": "Stockholm Agreement",
+      "titleAr": "اتفاق ستوكهولم",
+      "date": "2018-12-13",
+      "category": "policy",
+      "severity": "medium"
+    },
+    {
+      "id": "7",
+      "titleEn": "Stockholm Agreement",
+      "titleAr": "اتفاق ستوكهولم",
+      "date": "2018-12-13",
+      "category": "policy",
+      "severity": "high"
+    },
+    {
+      "id": "60009",
+      "titleEn": "IMF Approves $26.3M Emergency Assistance",
+      "titleAr": "صندوق النقد الدولي يوافق على مساعدة طارئة بقيمة 26.3 مليون دولار",
+      "date": "2020-04-07",
+      "category": "economic",
+      "severity": "medium"
+    },
+    {
+      "id": "30005",
+      "titleEn": "First COVID-19 Case Confirmed",
+      "titleAr": "تأكيد أول حالة إصابة بكوفيد-19",
+      "date": "2020-04-10",
+      "category": "humanitarian",
+      "severity": "high"
+    },
+    {
+      "id": "8",
+      "titleEn": "COVID-19 First Case",
+      "titleAr": "أول حالة كوفيد-19",
+      "date": "2020-04-10",
+      "category": "humanitarian",
+      "severity": "high"
+    },
+    {
+      "id": "60010",
+      "titleEn": "Inflation Peaks at 45%",
+      "titleAr": "التضخم يصل إلى ذروته عند 45٪",
+      "date": "2021-02-01",
+      "category": "economic",
+      "severity": "critical"
+    },
+    {
+      "id": "60011",
+      "titleEn": "Saudi Arabia Deposits Additional $1B",
+      "titleAr": "السعودية تودع مليار دولار إضافي",
+      "date": "2021-03-15",
+      "category": "economic",
+      "severity": "high"
+    },
+    {
+      "id": "60012",
+      "titleEn": "UN-Brokered Truce Begins",
+      "titleAr": "بداية الهدنة التي توسطت فيها الأمم المتحدة",
+      "date": "2022-04-02",
+      "category": "international",
+      "severity": "high"
+    },
+    {
+      "id": "9",
+      "titleEn": "Nationwide Truce",
+      "titleAr": "الهدنة على مستوى البلاد",
+      "date": "2022-04-02",
+      "category": "policy",
+      "severity": "high"
+    },
+    {
+      "id": "30006",
+      "titleEn": "Oil Export Halt - Houthi Attacks",
+      "titleAr": "وقف صادرات النفط - هجمات الحوثيين",
+      "date": "2022-10-02",
+      "category": "economic",
+      "severity": "critical"
+    },
+    {
+      "id": "60013",
+      "titleEn": "Truce Expires Without Renewal",
+      "titleAr": "انتهاء الهدنة دون تجديد",
+      "date": "2022-10-02",
+      "category": "international",
+      "severity": "high"
+    },
+    {
+      "id": "60014",
+      "titleEn": "IMF Staff Visit - Article IV Consultation",
+      "titleAr": "زيارة موظفي صندوق النقد الدولي - مشاورات المادة الرابعة",
+      "date": "2022-10-15",
+      "category": "economic",
+      "severity": "medium"
+    },
+    {
+      "id": "10",
+      "titleEn": "Saudi-Houthi Talks",
+      "titleAr": "محادثات سعودية-حوثية",
+      "date": "2023-04-09",
+      "category": "policy",
+      "severity": "high"
+    },
+    {
+      "id": "11",
+      "titleEn": "Humanitarian Funding Crisis",
+      "titleAr": "أزمة التمويل الإنساني",
+      "date": "2024-01-01",
+      "category": "humanitarian",
+      "severity": "critical"
+    },
+    {
+      "id": "60015",
+      "titleEn": "Houthis Begin Red Sea Attacks",
+      "titleAr": "الحوثيون يبدأون هجمات البحر الأحمر",
+      "date": "2024-01-11",
+      "category": "war",
+      "severity": "critical"
+    },
+    {
+      "id": "30007",
+      "titleEn": "IMF Staff Visit - Reform Framework",
+      "titleAr": "زيارة موظفي صندوق النقد الدولي - إطار الإصلاح",
+      "date": "2024-05-02",
+      "category": "policy",
+      "severity": "medium"
+    },
+    {
+      "id": "60016",
+      "titleEn": "IMF Latest Staff Visit",
+      "titleAr": "أحدث زيارة لموظفي صندوق النقد الدولي",
+      "date": "2024-05-15",
+      "category": "economic",
+      "severity": "medium"
+    },
+    {
+      "id": "60017",
+      "titleEn": "Exchange Rate Reaches 1,800 YER/USD in Aden",
+      "titleAr": "سعر الصرف يصل إلى 1,800 ريال/دولار في عدن",
+      "date": "2024-10-01",
+      "category": "economic",
+      "severity": "critical"
+    },
+    {
+      "id": "12",
+      "titleEn": "Rial Depreciation Continues",
+      "titleAr": "استمرار انخفاض الريال",
+      "date": "2025-01-01",
+      "category": "economic",
+      "severity": "critical"
+    },
+    {
+      "id": "30008",
+      "titleEn": "2025 Humanitarian Response Plan Launched",
+      "titleAr": "إطلاق خطة الاستجابة الإنسانية 2025",
+      "date": "2025-01-15",
+      "category": "humanitarian",
+      "severity": "high"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitleEn\ttitleAr\tdate\tcategory\tseverity\n1\tYemeni Revolution Begins\tبداية الثورة اليمنية\t2011-02-11\tpolicy\thigh\n30001\tArab Spring Protests Begin in Yemen\tبداية احتجاجات الربيع العربي في اليمن\t2011-02-11\tpolicy\thigh\n2\tHouthi Takeover of Sana'a\tاستيلاء الحوثيين على صنعاء\t2014-09-21\twar\tcritical\n60001\tHouthis Take Control of Sanaa\tسيطرة الحوثيين على صنعاء\t2014-09-21\twar\tcritical\n3\tOperation Decisive Storm\tعملية عاصفة الحزم\t2015-03-26\twar\tcritical\n60002\tOperation Decisive Storm Begins\tبداية عملية عاصفة الحزم\t2015-03-26\twar\tcritical\n30002\tOperation Decisive Storm Begins\tبداية عملية عاصفة الحزم\t2015-03-26\twar\tcritical\n60003\tYemen Oil Exports Halt\tتوقف صادرات النفط اليمنية\t2015-07-14\teconomic\tcritical\n30003\tCentral Bank Split - Relocation to Aden\tانقسام البنك المركزي - النقل إلى عدن\t2016-09-18\teconomic\tcritical\n60004\tCentral Bank Split - CBY Moves to Aden\tانقسام البنك المركزي - انتقال البنك المركزي إلى عدن\t2016-09-18\teconomic\tcritical\n4\tCentral Bank Split\tانقسام البنك المركزي\t2016-09-18\teconomic\tcritical\n60005\tExchange Rate Divergence Begins\tبداية تباعد سعر الصرف\t2016-12-01\teconomic\thigh\n60006\tCholera Outbreak Declared\tإعلان تفشي الكوليرا\t2017-04-27\thumanitarian\tcritical\n5\tCholera Outbreak\tتفشي الكوليرا\t2017-04-27\thumanitarian\tcritical\n6\tCurrency Collapse\tانهيار العملة\t2018-09-01\teconomic\tcritical\n60007\tRiyal Collapses to 900 YER/USD\tانهيار الريال إلى 900 ريال/دولار\t2018-09-01\teconomic\tcritical\n60008\tSaudi Arabia Deposits $2B in CBY-Aden\tالسعودية تودع 2 مليار دولار في البنك المركزي بعدن\t2018-10-15\teconomic\thigh\n30004\tStockholm Agreement\tاتفاق ستوكهولم\t2018-12-13\tpolicy\tmedium\n7\tStockholm Agreement\tاتفاق ستوكهولم\t2018-12-13\tpolicy\thigh\n60009\tIMF Approves $26.3M Emergency Assistance\tصندوق النقد الدولي يوافق على مساعدة طارئة بقيمة 26.3 مليون دولار\t2020-04-07\teconomic\tmedium\n30005\tFirst COVID-19 Case Confirmed\tتأكيد أول حالة إصابة بكوفيد-19\t2020-04-10\thumanitarian\thigh\n8\tCOVID-19 First Case\tأول حالة كوفيد-19\t2020-04-10\thumanitarian\thigh\n60010\tInflation Peaks at 45%\tالتضخم يصل إلى ذروته عند 45٪\t2021-02-01\teconomic\tcritical\n60011\tSaudi Arabia Deposits Additional $1B\tالسعودية تودع مليار دولار إضافي\t2021-03-15\teconomic\thigh\n60012\tUN-Brokered Truce Begins\tبداية الهدنة التي توسطت فيها الأمم المتحدة\t2022-04-02\tinternational\thigh\n9\tNationwide Truce\tالهدنة على مستوى البلاد\t2022-04-02\tpolicy\thigh\n30006\tOil Export Halt - Houthi Attacks\tوقف صادرات النفط - هجمات الحوثيين\t2022-10-02\teconomic\tcritical\n60013\tTruce Expires Without Renewal\tانتهاء الهدنة دون تجديد\t2022-10-02\tinternational\thigh\n60014\tIMF Staff Visit - Article IV Consultation\tزيارة موظفي صندوق النقد الدولي - مشاورات المادة الرابعة\t2022-10-15\teconomic\tmedium\n10\tSaudi-Houthi Talks\tمحادثات سعودية-حوثية\t2023-04-09\tpolicy\thigh\n11\tHumanitarian Funding Crisis\tأزمة التمويل الإنساني\t2024-01-01\thumanitarian\tcritical\n60015\tHouthis Begin Red Sea Attacks\tالحوثيون يبدأون هجمات البحر الأحمر\t2024-01-11\twar\tcritical\n30007\tIMF Staff Visit - Reform Framework\tزيارة موظفي صندوق النقد الدولي - إطار الإصلاح\t2024-05-02\tpolicy\tmedium\n60016\tIMF Latest Staff Visit\tأحدث زيارة لموظفي صندوق النقد الدولي\t2024-05-15\teconomic\tmedium\n60017\tExchange Rate Reaches 1,800 YER/USD in Aden\tسعر الصرف يصل إلى 1,800 ريال/دولار في عدن\t2024-10-01\teconomic\tcritical\n12\tRial Depreciation Continues\tاستمرار انخفاض الريال\t2025-01-01\teconomic\tcritical\n30008\t2025 Humanitarian Response Plan Launched\tإطلاق خطة الاستجابة الإنسانية 2025\t2025-01-15\thumanitarian\thigh\n",
+  "stderr": "",
+  "execution_time_ms": 49
+}

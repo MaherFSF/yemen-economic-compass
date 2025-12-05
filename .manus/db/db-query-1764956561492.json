@@ -1,0 +1,85 @@
+{
+  "query": "SELECT \n  YEAR(STR_TO_DATE(date, '%Y-%m-%d')) as year,\n  COUNT(*) as event_count,\n  GROUP_CONCAT(CONCAT(titleEn, ' (', category, ')') SEPARATOR ' | ') as events\nFROM events\nGROUP BY YEAR(STR_TO_DATE(date, '%Y-%m-%d'))\nORDER BY year;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SELECT \n  YEAR(STR_TO_DATE(date, '%Y-%m-%d')) as year,\n  COUNT(*) as event_count,\n  GROUP_CONCAT(CONCAT(titleEn, ' (', category, ')') SEPARATOR ' | ') as events\nFROM events\nGROUP BY YEAR(STR_TO_DATE(date, '%Y-%m-%d'))\nORDER BY year;",
+  "rows": [
+    {
+      "year": "2010",
+      "event_count": "1",
+      "events": "Economic Baseline Year (economic)"
+    },
+    {
+      "year": "2011",
+      "event_count": "4",
+      "events": "Yemeni Revolution Begins (policy) | Arab Spring Protests Begin in Yemen (policy) | Arab Spring Protests Begin (war) | President Saleh Signs GCC Initiative (policy)"
+    },
+    {
+      "year": "2012",
+      "event_count": "1",
+      "events": "Hadi Becomes President (policy)"
+    },
+    {
+      "year": "2014",
+      "event_count": "3",
+      "events": "Houthi Takeover of Sana'a (war) | Houthis Take Control of Sanaa (war) | Houthis Seize Sana'a (war)"
+    },
+    {
+      "year": "2015",
+      "event_count": "5",
+      "events": "Operation Decisive Storm (war) | Operation Decisive Storm Begins (war) | Operation Decisive Storm Begins (war) | Yemen Oil Exports Halt (economic) | Operation Decisive Storm Begins (war)"
+    },
+    {
+      "year": "2016",
+      "event_count": "8",
+      "events": "Central Bank Split (economic) | Central Bank Split - Relocation to Aden (economic) | Central Bank Split - CBY Moves to Aden (economic) | Exchange Rate Divergence Begins (economic) | Humanitarian Crisis Declared (humanitarian) | Central Bank Relocated to Aden (economic) | Houthis Reject CBY Move (economic) | Exchange Rate Begins Diverging (economic)"
+    },
+    {
+      "year": "2017",
+      "event_count": "4",
+      "events": "Cholera Outbreak (humanitarian) | Cholera Outbreak Declared (humanitarian) | Cholera Epidemic Peaks (humanitarian) | Saleh Killed (war)"
+    },
+    {
+      "year": "2018",
+      "event_count": "8",
+      "events": "Currency Collapse (economic) | Stockholm Agreement (policy) | Stockholm Agreement (policy) | Riyal Collapses to 900 YER/USD (economic) | Saudi Arabia Deposits $2B in CBY-Aden (economic) | Battle for Hodeidah Begins (war) | Aden Currency Collapse (economic) | Stockholm Agreement (policy)"
+    },
+    {
+      "year": "2019",
+      "event_count": "2",
+      "events": "STC Seizes Aden (war) | CBY-Sana'a Bans New Currency (economic)"
+    },
+    {
+      "year": "2020",
+      "event_count": "5",
+      "events": "COVID-19 First Case (humanitarian) | First COVID-19 Case Confirmed (humanitarian) | IMF Approves $26.3M Emergency Assistance (economic) | WHO Declares COVID-19 Pandemic (humanitarian) | Oil Prices Collapse (economic)"
+    },
+    {
+      "year": "2021",
+      "event_count": "3",
+      "events": "Inflation Peaks at 45% (economic) | Saudi Arabia Deposits Additional $1B (economic) | Marib Offensive Intensifies (war)"
+    },
+    {
+      "year": "2022",
+      "event_count": "7",
+      "events": "Nationwide Truce (policy) | Oil Export Halt - Houthi Attacks (economic) | UN-Brokered Truce Begins (international) | Truce Expires Without Renewal (international) | IMF Staff Visit - Article IV Consultation (economic) | UN-Brokered Truce Begins (policy) | Truce Expires Without Renewal (policy)"
+    },
+    {
+      "year": "2023",
+      "event_count": "1",
+      "events": "Saudi-Houthi Talks (policy)"
+    },
+    {
+      "year": "2024",
+      "event_count": "6",
+      "events": "Humanitarian Funding Crisis (humanitarian) | IMF Staff Visit - Reform Framework (policy) | Houthis Begin Red Sea Attacks (war) | IMF Latest Staff Visit (economic) | Exchange Rate Reaches 1,800 YER/USD in Aden (economic) | Houthis Attack Red Sea Shipping (war)"
+    },
+    {
+      "year": "2025",
+      "event_count": "4",
+      "events": "Rial Depreciation Continues (economic) | 2025 Humanitarian Response Plan Launched (humanitarian) | Exchange Rate Gap Peaks (economic) | Poverty Rate Reaches 80% (humanitarian)"
+    }
+  ],
+  "messages": [],
+  "stdout": "year\tevent_count\tevents\n2010\t1\tEconomic Baseline Year (economic)\n2011\t4\tYemeni Revolution Begins (policy) | Arab Spring Protests Begin in Yemen (policy) | Arab Spring Protests Begin (war) | President Saleh Signs GCC Initiative (policy)\n2012\t1\tHadi Becomes President (policy)\n2014\t3\tHouthi Takeover of Sana'a (war) | Houthis Take Control of Sanaa (war) | Houthis Seize Sana'a (war)\n2015\t5\tOperation Decisive Storm (war) | Operation Decisive Storm Begins (war) | Operation Decisive Storm Begins (war) | Yemen Oil Exports Halt (economic) | Operation Decisive Storm Begins (war)\n2016\t8\tCentral Bank Split (economic) | Central Bank Split - Relocation to Aden (economic) | Central Bank Split - CBY Moves to Aden (economic) | Exchange Rate Divergence Begins (economic) | Humanitarian Crisis Declared (humanitarian) | Central Bank Relocated to Aden (economic) | Houthis Reject CBY Move (economic) | Exchange Rate Begins Diverging (economic)\n2017\t4\tCholera Outbreak (humanitarian) | Cholera Outbreak Declared (humanitarian) | Cholera Epidemic Peaks (humanitarian) | Saleh Killed (war)\n2018\t8\tCurrency Collapse (economic) | Stockholm Agreement (policy) | Stockholm Agreement (policy) | Riyal Collapses to 900 YER/USD (economic) | Saudi Arabia Deposits $2B in CBY-Aden (economic) | Battle for Hodeidah Begins (war) | Aden Currency Collapse (economic) | Stockholm Agreement (policy)\n2019\t2\tSTC Seizes Aden (war) | CBY-Sana'a Bans New Currency (economic)\n2020\t5\tCOVID-19 First Case (humanitarian) | First COVID-19 Case Confirmed (humanitarian) | IMF Approves $26.3M Emergency Assistance (economic) | WHO Declares COVID-19 Pandemic (humanitarian) | Oil Prices Collapse (economic)\n2021\t3\tInflation Peaks at 45% (economic) | Saudi Arabia Deposits Additional $1B (economic) | Marib Offensive Intensifies (war)\n2022\t7\tNationwide Truce (policy) | Oil Export Halt - Houthi Attacks (economic) | UN-Brokered Truce Begins (international) | Truce Expires Without Renewal (international) | IMF Staff Visit - Article IV Consultation (economic) | UN-Brokered Truce Begins (policy) | Truce Expires Without Renewal (policy)\n2023\t1\tSaudi-Houthi Talks (policy)\n2024\t6\tHumanitarian Funding Crisis (humanitarian) | IMF Staff Visit - Reform Framework (policy) | Houthis Begin Red Sea Attacks (war) | IMF Latest Staff Visit (economic) | Exchange Rate Reaches 1,800 YER/USD in Aden (economic) | Houthis Attack Red Sea Shipping (war)\n2025\t4\tRial Depreciation Continues (economic) | 2025 Humanitarian Response Plan Launched (humanitarian) | Exchange Rate Gap Peaks (economic) | Poverty Rate Reaches 80% (humanitarian)\n",
+  "stderr": "",
+  "execution_time_ms": 53
+}

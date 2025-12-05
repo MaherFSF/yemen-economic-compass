@@ -1,0 +1,90 @@
+{
+  "query": "SELECT nameEn, category, value, unit, date, source FROM indicators ORDER BY date DESC LIMIT 10;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SELECT nameEn, category, value, unit, date, source FROM indicators ORDER BY date DESC LIMIT 10;",
+  "rows": [
+    {
+      "nameEn": "Inflation Rate",
+      "category": "Prices",
+      "value": "30.0",
+      "unit": "Percent",
+      "date": "2025-12-31",
+      "source": "IMF Projection"
+    },
+    {
+      "nameEn": "Population",
+      "category": "Demographics",
+      "value": "31.9",
+      "unit": "Million",
+      "date": "2025-12-31",
+      "source": "UN Population Division"
+    },
+    {
+      "nameEn": "Real GDP",
+      "category": "Economic Output",
+      "value": "18.2",
+      "unit": "USD Billions",
+      "date": "2025-12-31",
+      "source": "World Bank Projection"
+    },
+    {
+      "nameEn": "Exchange Rate (Sanaa)",
+      "category": "Currency",
+      "value": "560",
+      "unit": "YER/USD",
+      "date": "2025-01-31",
+      "source": "CBY-Sanaa"
+    },
+    {
+      "nameEn": "Exchange Rate (Aden)",
+      "category": "Currency",
+      "value": "1800",
+      "unit": "YER/USD",
+      "date": "2025-01-31",
+      "source": "CBY-Aden"
+    },
+    {
+      "nameEn": "Poverty Headcount",
+      "category": "Social",
+      "value": "80.0",
+      "unit": "Percent",
+      "date": "2024-12-31",
+      "source": "World Bank Estimate"
+    },
+    {
+      "nameEn": "Real GDP",
+      "category": "Economic Output",
+      "value": "17.9",
+      "unit": "USD Billions",
+      "date": "2024-12-31",
+      "source": "World Bank Estimate"
+    },
+    {
+      "nameEn": "Inflation Rate",
+      "category": "Prices",
+      "value": "32.0",
+      "unit": "Percent",
+      "date": "2024-12-31",
+      "source": "IMF Estimate"
+    },
+    {
+      "nameEn": "Exchange Rate (Aden)",
+      "category": "Currency",
+      "value": "1650",
+      "unit": "YER/USD",
+      "date": "2024-12-31",
+      "source": "CBY-Aden"
+    },
+    {
+      "nameEn": "Exchange Rate (Sanaa)",
+      "category": "Currency",
+      "value": "520",
+      "unit": "YER/USD",
+      "date": "2024-12-31",
+      "source": "CBY-Sanaa"
+    }
+  ],
+  "messages": [],
+  "stdout": "nameEn\tcategory\tvalue\tunit\tdate\tsource\nInflation Rate\tPrices\t30.0\tPercent\t2025-12-31\tIMF Projection\nPopulation\tDemographics\t31.9\tMillion\t2025-12-31\tUN Population Division\nReal GDP\tEconomic Output\t18.2\tUSD Billions\t2025-12-31\tWorld Bank Projection\nExchange Rate (Sanaa)\tCurrency\t560\tYER/USD\t2025-01-31\tCBY-Sanaa\nExchange Rate (Aden)\tCurrency\t1800\tYER/USD\t2025-01-31\tCBY-Aden\nPoverty Headcount\tSocial\t80.0\tPercent\t2024-12-31\tWorld Bank Estimate\nReal GDP\tEconomic Output\t17.9\tUSD Billions\t2024-12-31\tWorld Bank Estimate\nInflation Rate\tPrices\t32.0\tPercent\t2024-12-31\tIMF Estimate\nExchange Rate (Aden)\tCurrency\t1650\tYER/USD\t2024-12-31\tCBY-Aden\nExchange Rate (Sanaa)\tCurrency\t520\tYER/USD\t2024-12-31\tCBY-Sanaa\n",
+  "stderr": "",
+  "execution_time_ms": 102
+}

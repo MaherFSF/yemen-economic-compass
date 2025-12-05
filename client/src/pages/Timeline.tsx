@@ -1,223 +1,104 @@
+import { useState, useMemo } from "react";
+import { trpc } from "@/lib/trpc";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, TrendingDown, TrendingUp, AlertTriangle, Users, Building2, Coins } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { 
+  Calendar, 
+  TrendingDown, 
+  TrendingUp, 
+  AlertTriangle, 
+  Users, 
+  Globe, 
+  Search, 
+  Filter, 
+  Loader2 
+} from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+
+const categoryIcons = {
+  war: AlertTriangle,
+  economic: TrendingDown,
+  policy: Users,
+  humanitarian: TrendingUp,
+  international: Globe,
+};
+
+const categoryColors = {
+  war: "border-red-500 bg-red-50 dark:bg-red-950",
+  economic: "border-blue-500 bg-blue-50 dark:bg-blue-950",
+  policy: "border-purple-500 bg-purple-50 dark:bg-purple-950",
+  humanitarian: "border-orange-500 bg-orange-50 dark:bg-orange-950",
+  international: "border-green-500 bg-green-50 dark:bg-green-950",
+};
+
+const severityColors = {
+  low: "bg-gray-100 dark:bg-gray-800",
+  medium: "bg-yellow-100 dark:bg-yellow-900",
+  high: "bg-orange-100 dark:bg-orange-900",
+  critical: "bg-red-100 dark:bg-red-900",
+};
 
 export default function Timeline() {
   const { language } = useLanguage();
   const isArabic = language === 'ar';
+  
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [selectedYear, setSelectedYear] = useState<string>("all");
 
-  const timelineEvents = [
-    {
-      year: "2014",
-      quarter: { ar: "سبتمبر", en: "Sep" },
-      title: { ar: "الحوثيون يستولون على صنعاء", en: "Houthis Seize Sana'a" },
-      description: { ar: "قوات الحوثي، بدعم من موالي صالح، تسيطر على العاصمة، مهمشة حكومة هادي", en: "Houthi forces, backed by Saleh loyalists, take control of the capital, marginalizing Hadi's government" },
-      impact: { ar: "سياسي", en: "Political" },
-      severity: "critical",
-      icon: AlertTriangle
-    },
-    {
-      year: "2015",
-      quarter: { ar: "مارس", en: "Mar" },
-      title: { ar: "تدخل التحالف بقيادة السعودية", en: "Saudi-Led Coalition Intervention" },
-      description: { ar: "عملية عاصفة الحزم تنطلق لاستعادة حكومة هادي. الحرب الأهلية تتصاعد على مستوى البلاد", en: "Operation Decisive Storm launches to restore Hadi's government. Civil war escalates nationwide" },
-      impact: { ar: "صراع", en: "Conflict" },
-      severity: "critical",
-      icon: AlertTriangle
-    },
-    {
-      year: "2015",
-      quarter: { ar: "الربع 2-4", en: "Q2-Q4" },
-      title: { ar: "بداية الانهيار الاقتصادي", en: "Economic Collapse Begins" },
-      description: { ar: "انكماش حاد في الناتج المحلي، توقف إنتاج النفط، بداية انخفاض قيمة العملة", en: "GDP contracts sharply, oil production halts, currency begins depreciation" },
-      impact: { ar: "اقتصادي", en: "Economic" },
-      severity: "high",
-      icon: TrendingDown,
-      metrics: { gdp: "-28%", inflation: "+15%" }
-    },
-    {
-      year: "2016",
-      quarter: { ar: "سبتمبر", en: "Sep" },
-      title: { ar: "انقسام البنك المركزي", en: "Central Bank Split" },
-      description: { ar: "نقل مقر البنك المركزي من صنعاء إلى عدن، مما أدى إلى وجود سلطتين نقديتين", en: "CBY headquarters moved from Sana'a to Aden, creating dual monetary authorities" },
-      impact: { ar: "مالي", en: "Financial" },
-      severity: "critical",
-      icon: Building2,
-      metrics: { exchange: "530 YER/USD" }
-    },
-    {
-      year: "2017",
-      quarter: { ar: "مايو", en: "May" },
-      title: { ar: "تشكيل المجلس الانتقالي الجنوبي", en: "Southern Transitional Council Formed" },
-      description: { ar: "تأسيس حركة انفصالية مدعومة من الإمارات، إضافة فصيل ثالث للصراع", en: "UAE-backed separatist movement established, adding third faction to conflict" },
-      impact: { ar: "سياسي", en: "Political" },
-      severity: "high",
-      icon: Users
-    },
-    {
-      year: "2018",
-      quarter: { ar: "ديسمبر", en: "Dec" },
-      title: { ar: "اتفاق ستوكهولم", en: "Stockholm Agreement" },
-      description: { ar: "وقف إطلاق النار في الحديدة وصفقة تبادل الأسرى. أول اختراق دبلوماسي كبير", en: "Hodeidah ceasefire and prisoner exchange deal. First major diplomatic breakthrough" },
-      impact: { ar: "جهود السلام", en: "Peace Effort" },
-      severity: "positive",
-      icon: TrendingUp
-    },
-    {
-      year: "2019",
-      quarter: { ar: "نوفمبر", en: "Nov" },
-      title: { ar: "اتفاق الرياض", en: "Riyadh Agreement" },
-      description: { ar: "صفقة تقاسم السلطة بين حكومة هادي والمجلس الانتقالي (تعثر التنفيذ)", en: "Power-sharing deal between Hadi government and STC (implementation stalled)" },
-      impact: { ar: "سياسي", en: "Political" },
-      severity: "moderate",
-      icon: Users
-    },
-    {
-      year: "2020",
-      quarter: { ar: "يناير", en: "Jan" },
-      title: { ar: "تعميق تشظي العملة", en: "Currency Fragmentation Deepens" },
-      description: { ar: "البنك المركزي في صنعاء يحظر الأوراق النقدية الجديدة المطبوعة في عدن، مما أدى إلى انقسام الريال اليمني", en: "Houthi-controlled CBY bans new banknotes printed by Aden, splitting the Yemeni Riyal" },
-      impact: { ar: "مالي", en: "Financial" },
-      severity: "critical",
-      icon: Coins,
-      metrics: { adenRate: "750 YER/USD", sanaaRate: "600 YER/USD (fixed)" }
-    },
-    {
-      year: "2020",
-      quarter: { ar: "أبريل", en: "Apr" },
-      title: { ar: "جائحة كوفيد-19", en: "COVID-19 Pandemic Hits" },
-      description: { ar: "انهيار النظام الصحي، تفاقم الأزمة الإنسانية، إعلان وقف إطلاق نار قصير", en: "Healthcare system collapses, humanitarian crisis worsens, brief ceasefire announced" },
-      impact: { ar: "إنساني", en: "Humanitarian" },
-      severity: "high",
-      icon: AlertTriangle
-    },
-    {
-      year: "2021",
-      quarter: { ar: "فبراير", en: "Feb" },
-      title: { ar: "بايدن ينهي الدعم الهجومي", en: "Biden Ends Offensive Support" },
-      description: { ar: "الولايات المتحدة تسحب دعمها للعمليات الهجومية السعودية، تتحول للضغط الدبلوماسي", en: "US withdraws support for Saudi offensive operations, shifts to diplomatic pressure" },
-      impact: { ar: "دولي", en: "International" },
-      severity: "moderate",
-      icon: Users
-    },
-    {
-      year: "2022",
-      quarter: { ar: "أبريل", en: "Apr" },
-      title: { ar: "تشكيل مجلس القيادة الرئاسي", en: "Presidential Leadership Council Formed" },
-      description: { ar: "هادي يتنحى، يُستبدل بمجلس من 8 أعضاء مدعوم سعودياً. بداية هدنة بوساطة الأمم المتحدة", en: "Hadi steps down, replaced by Saudi-backed 8-member council. UN-brokered truce begins" },
-      impact: { ar: "سياسي", en: "Political" },
-      severity: "positive",
-      icon: TrendingUp,
-      metrics: { saudiAid: "$2B pledged" }
-    },
-    {
-      year: "2022",
-      quarter: { ar: "أكتوبر", en: "Oct" },
-      title: { ar: "انتهاء الهدنة", en: "Truce Expires" },
-      description: { ar: "انتهاء تمديدات الهدنة الأممية لمدة شهرين، استئناف القتال المحلي", en: "2-month UN truce extensions end, localized fighting resumes" },
-      impact: { ar: "صراع", en: "Conflict" },
-      severity: "high",
-      icon: AlertTriangle
-    },
-    {
-      year: "2023",
-      quarter: { ar: "أبريل", en: "Apr" },
-      title: { ar: "تبادل كبير للأسرى", en: "Major Prisoner Exchange" },
-      description: { ar: "أكبر عملية تبادل منذ 2020: إطلاق سراح 887 أسيراً تحت إشراف اللجنة الدولية للصليب الأحمر", en: "Largest swap since 2020: 887 prisoners released under ICRC auspices" },
-      impact: { ar: "إنساني", en: "Humanitarian" },
-      severity: "positive",
-      icon: TrendingUp
-    },
-    {
-      year: "2023",
-      quarter: { ar: "أكتوبر", en: "Oct" },
-      title: { ar: "بداية الهجمات البحرية في البحر الأحمر", en: "Red Sea Maritime Attacks Begin" },
-      description: { ar: "قوات الحوثي تطلق هجمات صاروخية ومسيّرة على الملاحة الدولية", en: "Houthi forces launch missile/drone attacks on international shipping" },
-      impact: { ar: "دولي", en: "International" },
-      severity: "critical",
-      icon: AlertTriangle
-    },
-    {
-      year: "2024",
-      quarter: { ar: "الربع 1", en: "Q1" },
-      title: { ar: "أزمة سعر الصرف", en: "Exchange Rate Crisis" },
-      description: { ar: "ريال عدن ينخفض إلى 1,800 ريال/دولار، ارتفاع حاد في التضخم", en: "Aden Riyal depreciates to 1,800 YER/USD, inflation surges" },
-      impact: { ar: "اقتصادي", en: "Economic" },
-      severity: "critical",
-      icon: TrendingDown,
-      metrics: { adenRate: "1,800 YER/USD", inflation: "+35%" }
-    },
-    {
-      year: "2024",
-      quarter: { ar: "الربع 3", en: "Q3" },
-      title: { ar: "ضوابط الصرف من البنك المركزي بعدن", en: "CBY-Aden Exchange Controls" },
-      description: { ar: "إطلاق شبكة UNMONEY وتمويل الواردات لاستقرار العملة", en: "Introduction of UNMONEY network and import financing to stabilize currency" },
-      impact: { ar: "مالي", en: "Financial" },
-      severity: "positive",
-      icon: Coins,
-      metrics: { adenRate: "1,630 YER/USD (stabilized)" }
-    },
-    {
-      year: "2025",
-      quarter: { ar: "مايو", en: "May" },
-      title: { ar: "تعميق انهيار الريال", en: "Riyal Collapse Deepens" },
-      description: { ar: "العملة تصل إلى 2,560 ريال/دولار وسط حصار النفط وأزمة الإيرادات", en: "Currency hits 2,560 YER/USD amid oil blockade and revenue crisis" },
-      impact: { ar: "اقتصادي", en: "Economic" },
-      severity: "critical",
-      icon: TrendingDown,
-      metrics: { adenRate: "2,560 YER/USD", gdpContraction: "-1.5%" }
-    },
-    {
-      year: "2025",
-      quarter: { ar: "مايو", en: "May" },
-      title: { ar: "الموافقة على مشروع البنك الدولي للبنية التحتية المالية", en: "World Bank FMI Project Approved" },
-      description: { ar: "منحة بقيمة 20 مليون دولار للبنية التحتية للمدفوعات والشمول المالي", en: "$20M grant for payment infrastructure and financial inclusion" },
-      impact: { ar: "تنموي", en: "Development" },
-      severity: "positive",
-      icon: TrendingUp,
-      metrics: { funding: "$20M", duration: "2025-2030" }
-    },
-    {
-      year: "2025",
-      quarter: { ar: "نوفمبر", en: "Nov" },
-      title: { ar: "الفقر يصل إلى 76%", en: "Poverty Reaches 76%" },
-      description: { ar: "تعميق الأزمة الإنسانية، 21.6 مليون شخص بحاجة للمساعدة", en: "Humanitarian crisis deepens, 21.6M people need assistance" },
-      impact: { ar: "إنساني", en: "Humanitarian" },
-      severity: "critical",
-      icon: AlertTriangle,
-      metrics: { poverty: "76%", needAssistance: "21.6M" }
-    }
-  ];
+  const { data: events, isLoading } = trpc.events.list.useQuery();
+  const { data: causations } = trpc.causations.list.useQuery();
 
-  const getSeverityColor = (severity: string) => {
-    switch (severity) {
-      case "critical": return "border-red-500 bg-red-50";
-      case "high": return "border-orange-500 bg-orange-50";
-      case "moderate": return "border-yellow-500 bg-yellow-50";
-      case "positive": return "border-green-500 bg-green-50";
-      default: return "border-gray-500 bg-gray-50";
-    }
+  // Extract unique years from events
+  const years = useMemo(() => {
+    if (!events) return [];
+    const yearSet = new Set(events.map(e => new Date(e.date).getFullYear()));
+    return Array.from(yearSet).sort((a, b) => b - a);
+  }, [events]);
+
+  // Filter events
+  const filteredEvents = useMemo(() => {
+    if (!events) return [];
+    
+    return events.filter(event => {
+      const matchesSearch = searchQuery === "" || 
+        event.titleEn.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        event.titleAr.includes(searchQuery) ||
+        event.descriptionEn.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        event.descriptionAr.includes(searchQuery);
+      
+      const matchesCategory = selectedCategory === "all" || event.category === selectedCategory;
+      
+      const eventYear = new Date(event.date).getFullYear().toString();
+      const matchesYear = selectedYear === "all" || eventYear === selectedYear;
+      
+      return matchesSearch && matchesCategory && matchesYear;
+    }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  }, [events, searchQuery, selectedCategory, selectedYear]);
+
+  // Get causations for an event
+  const getEventCausations = (eventId: number) => {
+    if (!causations) return { causes: [], effects: [] };
+    
+    const causes = causations.filter(c => c.effectEventId === eventId);
+    const effects = causations.filter(c => c.causeEventId === eventId);
+    
+    return { causes, effects };
   };
 
-  const getSeverityBadge = (severity: string) => {
-    const labels = {
-      critical: { ar: "حرج", en: "Critical" },
-      high: { ar: "تأثير عالٍ", en: "High Impact" },
-      moderate: { ar: "متوسط", en: "Moderate" },
-      positive: { ar: "إيجابي", en: "Positive" }
-    };
-    
-    const label = labels[severity as keyof typeof labels]?.[language] || (isArabic ? "معلومة" : "Info");
-    
-    switch (severity) {
-      case "critical": return <Badge variant="destructive">{label}</Badge>;
-      case "high": return <Badge className="bg-orange-500">{label}</Badge>;
-      case "moderate": return <Badge className="bg-yellow-500">{label}</Badge>;
-      case "positive": return <Badge className="bg-green-500">{label}</Badge>;
-      default: return <Badge variant="secondary">{label}</Badge>;
-    }
-  };
+  if (isLoading) {
+    return (
+      <div className="w-full py-12">
+        <div className="container max-w-6xl flex items-center justify-center min-h-[400px]">
+          <Loader2 className="w-8 h-8 animate-spin text-primary" />
+        </div>
+      </div>
+    );
+  }
+
+  const categories = ["all", "war", "economic", "policy", "humanitarian", "international"];
 
   return (
     <div className="w-full py-12">
@@ -226,18 +107,138 @@ export default function Timeline() {
         <div className="mb-12 text-center">
           <Badge className="mb-4" variant="outline">
             <Calendar className="h-4 w-4 mr-2" />
-            2014 - 2025
+            2010 - 2025
           </Badge>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            {isArabic ? "الخط الزمني لأزمة اليمن" : "Yemen Crisis Timeline"}
+            {isArabic ? "الخط الزمني الشامل" : "Comprehensive Timeline"}
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             {isArabic 
-              ? "عقد من الصراع والانهيار الاقتصادي والكارثة الإنسانية: تتبع الأحداث الرئيسية التي أعادت تشكيل المشهد المالي والسياسي لليمن"
-              : "A decade of conflict, economic collapse, and humanitarian catastrophe: tracking the key events that reshaped Yemen's financial and political landscape"
+              ? `${events?.length || 0} حدث رئيسي عبر 16 عاماً من التحولات الاقتصادية والسياسية`
+              : `${events?.length || 0} major events across 16 years of economic and political transformation`
             }
           </p>
         </div>
+
+        {/* Statistics */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm text-muted-foreground">
+                {isArabic ? "إجمالي الأحداث" : "Total Events"}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="text-3xl font-bold">{events?.length || 0}</div>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm text-muted-foreground">
+                {isArabic ? "السنوات" : "Years"}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="text-3xl font-bold">{years.length}</div>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm text-muted-foreground">
+                {isArabic ? "العلاقات السببية" : "Causations"}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="text-3xl font-bold">{causations?.length || 0}</div>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm text-muted-foreground">
+                {isArabic ? "حرجة" : "Critical"}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="text-3xl font-bold">
+                {events?.filter(e => e.severity === "critical").length || 0}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Filters */}
+        <Card className="mb-8">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Filter className="w-5 h-5" />
+              {isArabic ? "تصفية" : "Filters"}
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            {/* Search */}
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+              <Input
+                placeholder={isArabic ? "بحث..." : "Search..."}
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-10"
+              />
+            </div>
+
+            {/* Category */}
+            <div className="space-y-2">
+              <label className="text-sm font-medium">
+                {isArabic ? "الفئة" : "Category"}
+              </label>
+              <div className="flex flex-wrap gap-2">
+                {categories.map(cat => (
+                  <Button
+                    key={cat}
+                    variant={selectedCategory === cat ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => setSelectedCategory(cat)}
+                  >
+                    {isArabic 
+                      ? cat === "all" ? "الكل" : 
+                        cat === "war" ? "حرب" :
+                        cat === "economic" ? "اقتصادي" :
+                        cat === "policy" ? "سياسة" :
+                        cat === "humanitarian" ? "إنساني" :
+                        "دولي"
+                      : cat.charAt(0).toUpperCase() + cat.slice(1)}
+                  </Button>
+                ))}
+              </div>
+            </div>
+
+            {/* Year */}
+            <div className="space-y-2">
+              <label className="text-sm font-medium">
+                {isArabic ? "السنة" : "Year"}
+              </label>
+              <div className="flex flex-wrap gap-2">
+                <Button
+                  variant={selectedYear === "all" ? "default" : "outline"}
+                  size="sm"
+                  onClick={() => setSelectedYear("all")}
+                >
+                  {isArabic ? "الكل" : "All"}
+                </Button>
+                {years.map(year => (
+                  <Button
+                    key={year}
+                    variant={selectedYear === year.toString() ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => setSelectedYear(year.toString())}
+                  >
+                    {year}
+                  </Button>
+                ))}
+              </div>
+            </div>
+          </CardContent>
+        </Card>
 
         {/* Timeline */}
         <div className="relative">
@@ -246,108 +247,144 @@ export default function Timeline() {
 
           {/* Events */}
           <div className="space-y-8">
-            {timelineEvents.map((event, idx) => {
-              const Icon = event.icon;
-              const isEven = idx % 2 === 0;
-              
-              return (
-                <div key={idx} className={`relative flex items-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-                  {/* Timeline dot */}
-                  <div className="absolute right-0 md:left-1/2 transform md:-translate-x-1/2 -translate-y-0">
-                    <div className={`h-4 w-4 rounded-full border-4 ${
-                      event.severity === 'critical' ? 'bg-red-500 border-red-200' :
-                      event.severity === 'high' ? 'bg-orange-500 border-orange-200' :
-                      event.severity === 'positive' ? 'bg-green-500 border-green-200' :
-                      'bg-yellow-500 border-yellow-200'
-                    }`}></div>
-                  </div>
+            {filteredEvents.length === 0 ? (
+              <Card>
+                <CardContent className="py-12 text-center text-muted-foreground">
+                  {isArabic ? "لا توجد أحداث" : "No events found"}
+                </CardContent>
+              </Card>
+            ) : (
+              filteredEvents.map((event, idx) => {
+                const Icon = categoryIcons[event.category as keyof typeof categoryIcons] || AlertTriangle;
+                const { causes, effects } = getEventCausations(event.id);
+                const isEven = idx % 2 === 0;
+                const eventDate = new Date(event.date);
+                
+                return (
+                  <div key={event.id} className={`relative flex items-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                    {/* Dot */}
+                    <div className="absolute right-0 md:left-1/2 transform md:-translate-x-1/2">
+                      <div className={`h-4 w-4 rounded-full border-4 ${
+                        event.severity === 'critical' ? 'bg-red-500 border-red-200' :
+                        event.severity === 'high' ? 'bg-orange-500 border-orange-200' :
+                        event.severity === 'medium' ? 'bg-yellow-500 border-yellow-200' :
+                        'bg-gray-500 border-gray-200'
+                      }`}></div>
+                    </div>
 
-                  {/* Content */}
-                  <div className={`w-full md:w-[calc(50%-2rem)] ${isEven ? 'md:pr-8 pr-12' : 'md:pl-8 pr-12'}`}>
-                    <Card className={`border-l-4 ${getSeverityColor(event.severity)} hover:shadow-lg transition-shadow`}>
-                      <CardHeader>
-                        <div className="flex items-start justify-between gap-4">
-                          <div className="flex items-center gap-3">
-                            <div className={`h-10 w-10 rounded-lg flex items-center justify-center ${
-                              event.severity === 'critical' ? 'bg-red-100' :
-                              event.severity === 'high' ? 'bg-orange-100' :
-                              event.severity === 'positive' ? 'bg-green-100' :
-                              'bg-yellow-100'
-                            }`}>
-                              <Icon className={`h-5 w-5 ${
-                                event.severity === 'critical' ? 'text-red-600' :
-                                event.severity === 'high' ? 'text-orange-600' :
-                                event.severity === 'positive' ? 'text-green-600' :
-                                'text-yellow-600'
-                              }`} />
-                            </div>
-                            <div>
-                              <div className="flex items-center gap-2 mb-1">
-                                <span className="font-bold text-lg">{event.year}</span>
-                                <span className="text-sm text-muted-foreground">{event.quarter[language]}</span>
+                    {/* Card */}
+                    <div className={`w-full md:w-[calc(50%-2rem)] ${isEven ? 'md:pr-8 pr-12' : 'md:pl-8 pr-12'}`}>
+                      <Card className={`border-l-4 ${categoryColors[event.category as keyof typeof categoryColors]} hover:shadow-lg transition-shadow`}>
+                        <CardHeader>
+                          <div className="flex items-start justify-between gap-4">
+                            <div className="flex items-center gap-3">
+                              <div className={`h-10 w-10 rounded-lg flex items-center justify-center ${severityColors[event.severity as keyof typeof severityColors]}`}>
+                                <Icon className="h-5 w-5" />
                               </div>
-                              <CardTitle className="text-base">{event.title[language]}</CardTitle>
+                              <div>
+                                <div className="flex items-center gap-2 mb-1">
+                                  <span className="font-bold text-lg">{eventDate.getFullYear()}</span>
+                                  <span className="text-sm text-muted-foreground">
+                                    {eventDate.toLocaleDateString(isArabic ? "ar-YE" : "en-US", { month: "short", day: "numeric" })}
+                                  </span>
+                                </div>
+                                <CardTitle className="text-base">
+                                  {isArabic ? event.titleAr : event.titleEn}
+                                </CardTitle>
+                              </div>
                             </div>
+                            <Badge variant={event.severity === "critical" ? "destructive" : "secondary"}>
+                              {isArabic 
+                                ? event.severity === "critical" ? "حرج" :
+                                  event.severity === "high" ? "عالي" :
+                                  event.severity === "medium" ? "متوسط" :
+                                  "منخفض"
+                                : event.severity}
+                            </Badge>
                           </div>
-                          {getSeverityBadge(event.severity)}
-                        </div>
-                        <CardDescription className="mt-2">
-                          <Badge variant="outline" className="text-xs">{event.impact[language]}</Badge>
-                        </CardDescription>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                          {event.description[language]}
-                        </p>
-                        {event.metrics && (
-                          <div className="flex flex-wrap gap-2">
-                            {Object.entries(event.metrics).map(([key, value]) => (
-                              <Badge key={key} variant="secondary" className="text-xs">
-                                {key}: {value}
-                              </Badge>
-                            ))}
-                          </div>
-                        )}
-                      </CardContent>
-                    </Card>
+                          <CardDescription className="mt-2">
+                            <Badge variant="outline" className="text-xs">
+                              {isArabic 
+                                ? event.category === "war" ? "حرب" :
+                                  event.category === "economic" ? "اقتصادي" :
+                                  event.category === "policy" ? "سياسة" :
+                                  event.category === "humanitarian" ? "إنساني" :
+                                  "دولي"
+                                : event.category}
+                            </Badge>
+                          </CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                          <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                            {isArabic ? event.descriptionAr : event.descriptionEn}
+                          </p>
+                          
+                          {/* Causations */}
+                          {(causes.length > 0 || effects.length > 0) && (
+                            <div className="pt-3 border-t space-y-2">
+                              {causes.length > 0 && (
+                                <div className="text-xs">
+                                  <span className="font-semibold text-blue-600">
+                                    {isArabic ? "تسبب فيه:" : "Caused by:"}
+                                  </span>
+                                  <span className="text-muted-foreground ml-1">
+                                    {causes.length} {isArabic ? "حدث" : "event(s)"}
+                                  </span>
+                                </div>
+                              )}
+                              {effects.length > 0 && (
+                                <div className="text-xs">
+                                  <span className="font-semibold text-orange-600">
+                                    {isArabic ? "أدى إلى:" : "Led to:"}
+                                  </span>
+                                  <span className="text-muted-foreground ml-1">
+                                    {effects.length} {isArabic ? "حدث" : "event(s)"}
+                                  </span>
+                                </div>
+                              )}
+                            </div>
+                          )}
+                        </CardContent>
+                      </Card>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })
+            )}
           </div>
         </div>
 
-        {/* Summary Statistics */}
+        {/* Summary */}
         <Card className="mt-12 border-2">
           <CardHeader>
             <CardTitle className="text-2xl">
-              {isArabic ? "العقد بالأرقام (2014-2025)" : "Decade in Numbers (2014-2025)"}
+              {isArabic ? "16 عاماً بالأرقام" : "16 Years in Numbers"}
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-red-600">-58%</div>
+                <div className="text-3xl font-bold text-red-600">80%</div>
                 <div className="text-sm text-muted-foreground mt-1">
-                  {isArabic ? "نصيب الفرد من الناتج المحلي" : "GDP per Capita"}
+                  {isArabic ? "الفقر" : "Poverty"}
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-red-600">76%</div>
+                <div className="text-3xl font-bold text-orange-600">240%</div>
                 <div className="text-sm text-muted-foreground mt-1">
-                  {isArabic ? "معدل الفقر" : "Poverty Rate"}
+                  {isArabic ? "فجوة الصرف" : "FX Gap"}
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-600">2,560</div>
+                <div className="text-3xl font-bold text-blue-600">17M</div>
                 <div className="text-sm text-muted-foreground mt-1">
-                  {isArabic ? "ريال/دولار (2025)" : "YER/USD (2025)"}
+                  {isArabic ? "جوعى" : "Food Insecure"}
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-red-600">21.6M</div>
+                <div className="text-3xl font-bold text-purple-600">{events?.length || 0}</div>
                 <div className="text-sm text-muted-foreground mt-1">
-                  {isArabic ? "بحاجة للمساعدة" : "Need Assistance"}
+                  {isArabic ? "الأحداث" : "Events"}
                 </div>
               </div>
             </div>

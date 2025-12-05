@@ -1,0 +1,130 @@
+{
+  "query": "SELECT nameEn, category, unit, COUNT(*) as dataPoints, MIN(date) as earliest, MAX(date) as latest \nFROM indicators \nGROUP BY nameEn, category, unit \nORDER BY dataPoints DESC \nLIMIT 15;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SELECT nameEn, category, unit, COUNT(*) as dataPoints, MIN(date) as earliest, MAX(date) as latest \nFROM indicators \nGROUP BY nameEn, category, unit \nORDER BY dataPoints DESC \nLIMIT 15;",
+  "rows": [
+    {
+      "nameEn": "Inflation Rate",
+      "category": "Prices",
+      "unit": "Percent",
+      "dataPoints": "16",
+      "earliest": "2010-12-31",
+      "latest": "2025-12-31"
+    },
+    {
+      "nameEn": "Real GDP",
+      "category": "Economic Output",
+      "unit": "USD Billions",
+      "dataPoints": "16",
+      "earliest": "2010-12-31",
+      "latest": "2025-12-31"
+    },
+    {
+      "nameEn": "Oil Production",
+      "category": "Natural Resources",
+      "unit": "Thousand bbl/day",
+      "dataPoints": "15",
+      "earliest": "2010-12-31",
+      "latest": "2024-12-31"
+    },
+    {
+      "nameEn": "Exchange Rate (Aden)",
+      "category": "Currency",
+      "unit": "YER/USD",
+      "dataPoints": "12",
+      "earliest": "2014-12-31",
+      "latest": "2025-01-31"
+    },
+    {
+      "nameEn": "Exchange Rate (Sanaa)",
+      "category": "Currency",
+      "unit": "YER/USD",
+      "dataPoints": "12",
+      "earliest": "2014-12-31",
+      "latest": "2025-01-31"
+    },
+    {
+      "nameEn": "Humanitarian Aid",
+      "category": "External Flows",
+      "unit": "USD Billions",
+      "dataPoints": "11",
+      "earliest": "2014-12-31",
+      "latest": "2024-12-31"
+    },
+    {
+      "nameEn": "Population",
+      "category": "Demographics",
+      "unit": "Million",
+      "dataPoints": "9",
+      "earliest": "2010-12-31",
+      "latest": "2025-12-31"
+    },
+    {
+      "nameEn": "Remittances",
+      "category": "External Flows",
+      "unit": "USD Billions",
+      "dataPoints": "9",
+      "earliest": "2010-12-31",
+      "latest": "2024-12-31"
+    },
+    {
+      "nameEn": "Food Insecurity",
+      "category": "Humanitarian",
+      "unit": "Million People",
+      "dataPoints": "8",
+      "earliest": "2015-12-31",
+      "latest": "2024-12-31"
+    },
+    {
+      "nameEn": "Poverty Headcount",
+      "category": "Social",
+      "unit": "Percent",
+      "dataPoints": "7",
+      "earliest": "2010-12-31",
+      "latest": "2024-12-31"
+    },
+    {
+      "nameEn": "Unknown",
+      "category": "Economic",
+      "unit": "%",
+      "dataPoints": "3",
+      "earliest": "2024-01-01",
+      "latest": "2024-01-01"
+    },
+    {
+      "nameEn": "Unknown",
+      "category": "Economic",
+      "unit": "YER/USD",
+      "dataPoints": "2",
+      "earliest": "2024-01-01",
+      "latest": "2024-01-01"
+    },
+    {
+      "nameEn": "Unknown",
+      "category": "Economic",
+      "unit": "Index 0-100",
+      "dataPoints": "2",
+      "earliest": "2024-01-01",
+      "latest": "2024-01-01"
+    },
+    {
+      "nameEn": "Unknown",
+      "category": "Economic",
+      "unit": "Text",
+      "dataPoints": "2",
+      "earliest": "2024-01-01",
+      "latest": "2024-01-01"
+    },
+    {
+      "nameEn": "Unknown",
+      "category": "Economic",
+      "unit": "Billion $",
+      "dataPoints": "1",
+      "earliest": "2024-01-01",
+      "latest": "2024-01-01"
+    }
+  ],
+  "messages": [],
+  "stdout": "nameEn\tcategory\tunit\tdataPoints\tearliest\tlatest\nInflation Rate\tPrices\tPercent\t16\t2010-12-31\t2025-12-31\nReal GDP\tEconomic Output\tUSD Billions\t16\t2010-12-31\t2025-12-31\nOil Production\tNatural Resources\tThousand bbl/day\t15\t2010-12-31\t2024-12-31\nExchange Rate (Aden)\tCurrency\tYER/USD\t12\t2014-12-31\t2025-01-31\nExchange Rate (Sanaa)\tCurrency\tYER/USD\t12\t2014-12-31\t2025-01-31\nHumanitarian Aid\tExternal Flows\tUSD Billions\t11\t2014-12-31\t2024-12-31\nPopulation\tDemographics\tMillion\t9\t2010-12-31\t2025-12-31\nRemittances\tExternal Flows\tUSD Billions\t9\t2010-12-31\t2024-12-31\nFood Insecurity\tHumanitarian\tMillion People\t8\t2015-12-31\t2024-12-31\nPoverty Headcount\tSocial\tPercent\t7\t2010-12-31\t2024-12-31\nUnknown\tEconomic\t%\t3\t2024-01-01\t2024-01-01\nUnknown\tEconomic\tYER/USD\t2\t2024-01-01\t2024-01-01\nUnknown\tEconomic\tIndex 0-100\t2\t2024-01-01\t2024-01-01\nUnknown\tEconomic\tText\t2\t2024-01-01\t2024-01-01\nUnknown\tEconomic\tBillion $\t1\t2024-01-01\t2024-01-01\n",
+  "stderr": "",
+  "execution_time_ms": 52
+}

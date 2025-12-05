@@ -1,0 +1,150 @@
+{
+  "query": "SELECT id, nameEn, nameAr, category, unit FROM indicators LIMIT 20;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SELECT id, nameEn, nameAr, category, unit FROM indicators LIMIT 20;",
+  "rows": [
+    {
+      "id": "1",
+      "nameEn": "Unknown",
+      "nameAr": "غير معروف",
+      "category": "Economic",
+      "unit": "Billion $"
+    },
+    {
+      "id": "2",
+      "nameEn": "Unknown",
+      "nameAr": "غير معروف",
+      "category": "Economic",
+      "unit": "%"
+    },
+    {
+      "id": "3",
+      "nameEn": "Unknown",
+      "nameAr": "غير معروف",
+      "category": "Economic",
+      "unit": "%"
+    },
+    {
+      "id": "4",
+      "nameEn": "Unknown",
+      "nameAr": "غير معروف",
+      "category": "Economic",
+      "unit": "YER/USD"
+    },
+    {
+      "id": "5",
+      "nameEn": "Unknown",
+      "nameAr": "غير معروف",
+      "category": "Economic",
+      "unit": "YER/USD"
+    },
+    {
+      "id": "6",
+      "nameEn": "Unknown",
+      "nameAr": "غير معروف",
+      "category": "Economic",
+      "unit": "YER/family/month"
+    },
+    {
+      "id": "7",
+      "nameEn": "Unknown",
+      "nameAr": "غير معروف",
+      "category": "Economic",
+      "unit": "% of GDP"
+    },
+    {
+      "id": "8",
+      "nameEn": "Unknown",
+      "nameAr": "غير معروف",
+      "category": "Economic",
+      "unit": "K barrels/day"
+    },
+    {
+      "id": "9",
+      "nameEn": "Unknown",
+      "nameAr": "غير معروف",
+      "category": "Economic",
+      "unit": "%"
+    },
+    {
+      "id": "10",
+      "nameEn": "Unknown",
+      "nameAr": "غير معروف",
+      "category": "Economic",
+      "unit": "Text"
+    },
+    {
+      "id": "11",
+      "nameEn": "Unknown",
+      "nameAr": "غير معروف",
+      "category": "Economic",
+      "unit": "Text"
+    },
+    {
+      "id": "12",
+      "nameEn": "Unknown",
+      "nameAr": "غير معروف",
+      "category": "Economic",
+      "unit": "Index 0-100"
+    },
+    {
+      "id": "13",
+      "nameEn": "Unknown",
+      "nameAr": "غير معروف",
+      "category": "Economic",
+      "unit": "Index 0-100"
+    },
+    {
+      "id": "90001",
+      "nameEn": "Real GDP",
+      "nameAr": "الناتج المحلي الإجمالي الحقيقي",
+      "category": "Economic Output",
+      "unit": "USD Billions"
+    },
+    {
+      "id": "90002",
+      "nameEn": "Real GDP",
+      "nameAr": "الناتج المحلي الإجمالي الحقيقي",
+      "category": "Economic Output",
+      "unit": "USD Billions"
+    },
+    {
+      "id": "90003",
+      "nameEn": "Real GDP",
+      "nameAr": "الناتج المحلي الإجمالي الحقيقي",
+      "category": "Economic Output",
+      "unit": "USD Billions"
+    },
+    {
+      "id": "90004",
+      "nameEn": "Real GDP",
+      "nameAr": "الناتج المحلي الإجمالي الحقيقي",
+      "category": "Economic Output",
+      "unit": "USD Billions"
+    },
+    {
+      "id": "90005",
+      "nameEn": "Real GDP",
+      "nameAr": "الناتج المحلي الإجمالي الحقيقي",
+      "category": "Economic Output",
+      "unit": "USD Billions"
+    },
+    {
+      "id": "90006",
+      "nameEn": "Real GDP",
+      "nameAr": "الناتج المحلي الإجمالي الحقيقي",
+      "category": "Economic Output",
+      "unit": "USD Billions"
+    },
+    {
+      "id": "90007",
+      "nameEn": "Real GDP",
+      "nameAr": "الناتج المحلي الإجمالي الحقيقي",
+      "category": "Economic Output",
+      "unit": "USD Billions"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tnameEn\tnameAr\tcategory\tunit\n1\tUnknown\tغير معروف\tEconomic\tBillion $\n2\tUnknown\tغير معروف\tEconomic\t%\n3\tUnknown\tغير معروف\tEconomic\t%\n4\tUnknown\tغير معروف\tEconomic\tYER/USD\n5\tUnknown\tغير معروف\tEconomic\tYER/USD\n6\tUnknown\tغير معروف\tEconomic\tYER/family/month\n7\tUnknown\tغير معروف\tEconomic\t% of GDP\n8\tUnknown\tغير معروف\tEconomic\tK barrels/day\n9\tUnknown\tغير معروف\tEconomic\t%\n10\tUnknown\tغير معروف\tEconomic\tText\n11\tUnknown\tغير معروف\tEconomic\tText\n12\tUnknown\tغير معروف\tEconomic\tIndex 0-100\n13\tUnknown\tغير معروف\tEconomic\tIndex 0-100\n90001\tReal GDP\tالناتج المحلي الإجمالي الحقيقي\tEconomic Output\tUSD Billions\n90002\tReal GDP\tالناتج المحلي الإجمالي الحقيقي\tEconomic Output\tUSD Billions\n90003\tReal GDP\tالناتج المحلي الإجمالي الحقيقي\tEconomic Output\tUSD Billions\n90004\tReal GDP\tالناتج المحلي الإجمالي الحقيقي\tEconomic Output\tUSD Billions\n90005\tReal GDP\tالناتج المحلي الإجمالي الحقيقي\tEconomic Output\tUSD Billions\n90006\tReal GDP\tالناتج المحلي الإجمالي الحقيقي\tEconomic Output\tUSD Billions\n90007\tReal GDP\tالناتج المحلي الإجمالي الحقيقي\tEconomic Output\tUSD Billions\n",
+  "stderr": "",
+  "execution_time_ms": 931
+}
