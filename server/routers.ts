@@ -135,6 +135,39 @@ export const appRouter = router({
       return await db.getAllIndicators();
     }),
   }),
+
+  // Events router
+  events: router({
+    list: publicProcedure.query(async () => {
+      return await db.getAllEvents();
+    }),
+    getById: publicProcedure
+      .input(z.object({ id: z.number() }))
+      .query(async ({ input }) => {
+        return await db.getEventById(input.id);
+      }),
+  }),
+
+  // Causations router
+  causations: router({
+    list: publicProcedure.query(async () => {
+      return await db.getAllCausations();
+    }),
+  }),
+
+  // Recommendations router
+  recommendations: router({
+    list: publicProcedure.query(async () => {
+      return await db.getAllRecommendations();
+    }),
+  }),
+
+  // Stakeholders router
+  stakeholders: router({
+    list: publicProcedure.query(async () => {
+      return await db.getAllStakeholders();
+    }),
+  }),
 });
 
 export type AppRouter = typeof appRouter;

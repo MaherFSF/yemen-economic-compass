@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { trpc } from "@/lib/trpc";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -27,7 +28,11 @@ interface Event {
   location: string;
 }
 
-const events: Event[] = [
+// Fetch events from database
+const { data: dbEvents, isLoading: eventsLoading } = trpc.events.list.useQuery();
+
+// Hardcoded events for fallback
+const hardcodedEvents: Event[] = [
   {
     id: 1,
     date: "2014-09-21",
@@ -262,6 +267,20 @@ export default function EventsTimeline() {
   const { language } = useLanguage();
   const isArabic = language === "ar";
 
+  // Use database events if available, otherwise use hardcoded
+  const events = dbEvents?.map((e: any) => ({
+    id: e.id,
+    date: e.date,
+    year: parseInt(e.date.split('-')[0]),
+    title_ar: e.titleAr,
+    title_en: e.titleEn,
+    description_ar: e.descriptionAr,
+    description_en: e.descriptionEn,
+    category: e.category,
+    severity: e.severity,
+    location: 'Yemen'
+  })) || hardcodedEvents;
+
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedYear, setSelectedYear] = useState<string>("all");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
@@ -282,11 +301,11 @@ export default function EventsTimeline() {
 
   // Get category stats
   const categoryStats = {
-    military: events.filter(e => e.category === "military").length,
-    economic: events.filter(e => e.category === "economic").length,
-    political: events.filter(e => e.category === "political").length,
-    diplomatic: events.filter(e => e.category === "diplomatic").length,
-    humanitarian: events.filter(e => e.category === "humanitarian").length,
+    military: events.filter((e: Event) => e.category === "military").length,
+    economic: events.filter((e: Event) => e.category === "economic").length,
+    political: events.filter((e: Event) => e.category === "political").length,
+    diplomatic: events.filter((e: Event) => e.category === "diplomatic").length,
+    humanitarian: events.filter((e: Event) => e.category === "humanitarian").length,
   };
 
   const getCategoryColor = (category: string) => {
