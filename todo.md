@@ -831,3 +831,17 @@
 
 ### Stakeholder Pages Created
 - [x] 5.4.1.2 IMF comprehensive page with missions, recommendations, projections, reports, contacts
+
+
+## 🔧 URGENT: Navigation Menu Update (User Request)
+
+### Navigation Structure Issues
+- [x] Update main navigation menu to reflect complete 115-section sitemap
+- [x] Add all stakeholder pages to navigation (IMF, World Bank, Saudi, UAE, UN agencies, banks, donors, businesses)
+- [ ] Add all historical context sections to navigation
+- [ ] Add all indicator pages to navigation
+- [ ] Add all monetary dynamics sections to navigation
+- [ ] Add all events, sanctions, aid sections to navigation
+- [ ] Add all data methods and tools sections to navigation
+- [ ] Update App.tsx routing for all new pages
+- [ ] Test all navigation links
