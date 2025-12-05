@@ -1,0 +1,47 @@
+[
+  {
+    "Section": "Vision",
+    "English": "Yemen Economic Compass is a bilingual public-facing intelligence platform that monitors Yemen’s conflict, economy, and humanitarian situation over a decade and turns scattered information into clear, connected, and actionable insight. It brings together economic indicators, conflict events, humanitarian needs, stakeholders, and reports in one place.",
+    "Arabic": "يعتبر بوصلة الاقتصاد اليمني منصة معلومات ثنائية اللغة تراقب الصراع والاقتصاد والوضع الإنساني في اليمن على مدى عقد من الزمن، وتحوّل المعلومات المبعثرة إلى رؤى واضحة ومترابطة وقابلة للتنفيذ. يجمع المنصة المؤشرات الاقتصادية، وأحداث الصراع، والاحتياجات الإنسانية، والجهات الفاعلة، والتقارير في مكان واحد."
+  },
+  {
+    "Section": "Mission",
+    "English": "To provide a living economic and conflict dashboard for Yemen that is neutral, evidence-based, and fully cited. The platform explains what has happened, what is changing now, and what may happen next. It is designed for policy-makers, donors, humanitarian actors, financial institutions, researchers, journalists, and the public.",
+    "Arabic": "تتمثل المهمة في توفير لوحة معلومات حية عن الاقتصاد والصراع في اليمن تكون محايدة وقائمة على الأدلة ومصادرها كاملة. تشرح المنصة ما حدث، وما الذي يتغير الآن، وما قد يحدث لاحقًا. وهي مصممة لصانعي السياسات والمانحين والعاملين الإنسانيين والمؤسسات المالية والباحثين والصحفيين والجمهور."
+  },
+  {
+    "Section": "2011–2013",
+    "English": "Uprising, transition, and fragility. The Arab Spring protests end President Saleh’s long rule. A National Dialogue seeks a new federal state but falters, while service delivery collapses and economic fragility grows.",
+    "Arabic": "الانتفاضة والمرحلة الانتقالية والهشاشة. أنهت احتجاجات الربيع العربي حكم الرئيس صالح الطويل. سعى مؤتمر الحوار الوطني إلى إقامة دولة اتحادية جديدة لكنه تعثر، في حين انهارت الخدمات وتزايدت الهشاشة الاقتصادية."
+  },
+  {
+    "Section": "2014–2015",
+    "English": "State collapse and war outbreak. Houthi-Saleh forces seize Sana’a and the Saudi-led coalition intervenes in 2015. Oil exports halt, reserves plummet, the rial depreciates, and a humanitarian emergency is declared as over 80% of the population needs aid.",
+    "Arabic": "انهيار الدولة واندلاع الحرب. سيطرت قوات الحوثي-صالح على صنعاء وتدخل التحالف بقيادة السعودية في 2015. توقفت صادرات النفط، وتراجعت الاحتياطيات، وانخفض سعر الريال، وأُعلنت حالة طوارئ إنسانية حيث أصبح أكثر من 80٪ من السكان بحاجة إلى المساعدة."
+  },
+  {
+    "Section": "2016–2018",
+    "English": "Central bank split and currency war. The internationally recognized government relocates the Central Bank to Aden, creating two rival monetary authorities. New notes issued in the south and banned in the north lead to dual exchange rates. A fragile Stockholm Agreement in 2018 eases fighting around Hudaydah.",
+    "Arabic": "انقسام البنك المركزي وحرب العملة. نقلت الحكومة المعترف بها دولياً البنك المركزي إلى عدن، مما خلق سلطتين نقديتين متنافستين. أدت إصدارات النقود الجديدة في الجنوب وحظرها في الشمال إلى وجود سعرين للصرف. كما خفف اتفاق ستوكهولم الهش في عام 2018 القتال حول الحديدة."
+  },
+  {
+    "Section": "2019–2021",
+    "English": "Dual systems and deepening crisis. By 2019 two currencies circulate. Liquidity shortages and sanctions push payments through exchangers and hawala networks. Yemen faces the world’s worst humanitarian crisis. The COVID-19 pandemic compounds economic woes and remittance inflows drop.",
+    "Arabic": "أنظمة مزدوجة وأزمة متفاقمة. بحلول 2019، كانت عملتان متداولتان. دفعت نقص السيولة والعقوبات المدفوعات عبر الصرافين وشبكات الحوالة. يواجه اليمن أسوأ أزمة إنسانية في العالم. وعمق جائحة كوفيد-19 الأزمات الاقتصادية وانخفضت تحويلات المغتربين."
+  },
+  {
+    "Section": "2022–2025",
+    "English": "Truce, ongoing fragmentation, and recovery scenarios. A UN-mediated truce in 2022 reduces large-scale fighting and a Presidential Leadership Council forms. Oil blockades and revenue wars persist. Scenarios range from fragile peace to renewed escalation, with humanitarian needs remaining massive.",
+    "Arabic": "هدنة، واستمرار التجزئة، وسيناريوهات التعافي. خفضت هدنة بوساطة الأمم المتحدة في 2022 القتال واسع النطاق وتشكّل مجلس القيادة الرئاسي. تستمر حصار النفط وحروب الإيرادات. تتراوح السيناريوهات بين سلام هش وتصعيد جديد، بينما تبقى الاحتياجات الإنسانية ضخمة."
+  },
+  {
+    "Section": "Site Architecture",
+    "English": "The site is organized into core sections: Home Dashboard, Full Story timeline, Macro Indicators, Currency & Dual Systems, Cities Observatory, Events Catalog, Stakeholder Hub, Banks Observatory, Microfinance & Inclusion, Money Exchangers, Sanctions & Compliance, Aid & Projects, Data Catalogue, Reports Library, Ask the Compass AI, Scenarios & Tools, Methods & Glossary, and About.",
+    "Arabic": "يُنظم الموقع في أقسام رئيسية: لوحة التحكم الرئيسية، قصة كاملة عبر الزمن، المؤشرات الاقتصادية، العملة والأنظمة المزدوجة، رصد المدن، دليل الأحداث، مركز الجهات الفاعلة، مرصد البنوك، التمويل الأصغر والشمول المالي، الصرافة والحوالات، العقوبات والامتثال، المساعدات والمشاريع، كتالوج البيانات، مكتبة التقارير، أداة اسأل البوصلة، السيناريوهات والأدوات، المنهجية والمعجم، ومن نحن."
+  },
+  {
+    "Section": "Intelligence Engine",
+    "English": "Behind the scenes, an intelligence engine scores data quality, encodes impact chains, runs scenarios, and produces recommendations. All outputs are bilingual, cited, and based on a closed corpus of vetted sources.",
+    "Arabic": "في الخلفية، يقوم محرك تحليلي بتسجيل جودة البيانات، وترميز سلاسل التأثير، وتشغيل السيناريوهات، وإنتاج التوصيات. جميع المخرجات ثنائية اللغة وموثقة وتعتمد على مجموعة مغلقة من المصادر الموثوقة."
+  }
+]

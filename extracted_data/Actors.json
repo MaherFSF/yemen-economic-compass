@@ -1,0 +1,436 @@
+[
+  {
+    "Category": "Regional Actors",
+    "Actor_Name": "Saudi Arabia",
+    "Description": "Country-level actor influencing Yemen’s economy",
+    "Data_Source": "News, reports",
+    "Comments": "Detailed page to include geopolitical influence, aid, trade, remittances"
+  },
+  {
+    "Category": "Regional Actors",
+    "Actor_Name": "UAE",
+    "Description": "Country-level actor influencing Yemen’s economy",
+    "Data_Source": "News, reports",
+    "Comments": "Detailed page to include geopolitical influence, aid, trade, remittances"
+  },
+  {
+    "Category": "Regional Actors",
+    "Actor_Name": "Oman",
+    "Description": "Country-level actor influencing Yemen’s economy",
+    "Data_Source": "News, reports",
+    "Comments": "Detailed page to include geopolitical influence, aid, trade, remittances"
+  },
+  {
+    "Category": "Regional Actors",
+    "Actor_Name": "Iran",
+    "Description": "Country-level actor influencing Yemen’s economy",
+    "Data_Source": "News, reports",
+    "Comments": "Detailed page to include geopolitical influence, aid, trade, remittances"
+  },
+  {
+    "Category": "Regional Actors",
+    "Actor_Name": "Qatar",
+    "Description": "Country-level actor influencing Yemen’s economy",
+    "Data_Source": "News, reports",
+    "Comments": "Detailed page to include geopolitical influence, aid, trade, remittances"
+  },
+  {
+    "Category": "Regional Actors",
+    "Actor_Name": "Kuwait",
+    "Description": "Country-level actor influencing Yemen’s economy",
+    "Data_Source": "News, reports",
+    "Comments": "Detailed page to include geopolitical influence, aid, trade, remittances"
+  },
+  {
+    "Category": "Regional Actors",
+    "Actor_Name": "Egypt",
+    "Description": "Country-level actor influencing Yemen’s economy",
+    "Data_Source": "News, reports",
+    "Comments": "Detailed page to include geopolitical influence, aid, trade, remittances"
+  },
+  {
+    "Category": "Regional Actors",
+    "Actor_Name": "Jordan",
+    "Description": "Country-level actor influencing Yemen’s economy",
+    "Data_Source": "News, reports",
+    "Comments": "Detailed page to include geopolitical influence, aid, trade, remittances"
+  },
+  {
+    "Category": "Yemeni Political Actors",
+    "Actor_Name": "Houthi Movement (Ansar Allah)",
+    "Description": "Political faction or leader in Yemen",
+    "Data_Source": "News, UN reports",
+    "Comments": "Include timeline of actions and economic policies"
+  },
+  {
+    "Category": "Yemeni Political Actors",
+    "Actor_Name": "Internationally Recognized Government (IRG)",
+    "Description": "Political faction or leader in Yemen",
+    "Data_Source": "News, UN reports",
+    "Comments": "Include timeline of actions and economic policies"
+  },
+  {
+    "Category": "Yemeni Political Actors",
+    "Actor_Name": "Southern Transitional Council (STC)",
+    "Description": "Political faction or leader in Yemen",
+    "Data_Source": "News, UN reports",
+    "Comments": "Include timeline of actions and economic policies"
+  },
+  {
+    "Category": "Yemeni Political Actors",
+    "Actor_Name": "Tribal Confederations",
+    "Description": "Political faction or leader in Yemen",
+    "Data_Source": "News, UN reports",
+    "Comments": "Include timeline of actions and economic policies"
+  },
+  {
+    "Category": "Yemeni Political Actors",
+    "Actor_Name": "President Hadi",
+    "Description": "Political faction or leader in Yemen",
+    "Data_Source": "News, UN reports",
+    "Comments": "Include timeline of actions and economic policies"
+  },
+  {
+    "Category": "Yemeni Political Actors",
+    "Actor_Name": "President Rashad Al-Alimi",
+    "Description": "Political faction or leader in Yemen",
+    "Data_Source": "News, UN reports",
+    "Comments": "Include timeline of actions and economic policies"
+  },
+  {
+    "Category": "Yemeni Political Actors",
+    "Actor_Name": "Abdul-Malik Al-Houthi",
+    "Description": "Political faction or leader in Yemen",
+    "Data_Source": "News, UN reports",
+    "Comments": "Include timeline of actions and economic policies"
+  },
+  {
+    "Category": "International Organizations",
+    "Actor_Name": "World Bank",
+    "Description": "Multilateral or bilateral organization involved in Yemen",
+    "Data_Source": "Official websites",
+    "Comments": "Funding, programmes, policy positions, evaluation notes"
+  },
+  {
+    "Category": "International Organizations",
+    "Actor_Name": "IMF",
+    "Description": "Multilateral or bilateral organization involved in Yemen",
+    "Data_Source": "Official websites",
+    "Comments": "Funding, programmes, policy positions, evaluation notes"
+  },
+  {
+    "Category": "International Organizations",
+    "Actor_Name": "UN OCHA",
+    "Description": "Multilateral or bilateral organization involved in Yemen",
+    "Data_Source": "Official websites",
+    "Comments": "Funding, programmes, policy positions, evaluation notes"
+  },
+  {
+    "Category": "International Organizations",
+    "Actor_Name": "UNDP",
+    "Description": "Multilateral or bilateral organization involved in Yemen",
+    "Data_Source": "Official websites",
+    "Comments": "Funding, programmes, policy positions, evaluation notes"
+  },
+  {
+    "Category": "International Organizations",
+    "Actor_Name": "WFP",
+    "Description": "Multilateral or bilateral organization involved in Yemen",
+    "Data_Source": "Official websites",
+    "Comments": "Funding, programmes, policy positions, evaluation notes"
+  },
+  {
+    "Category": "International Organizations",
+    "Actor_Name": "UNICEF",
+    "Description": "Multilateral or bilateral organization involved in Yemen",
+    "Data_Source": "Official websites",
+    "Comments": "Funding, programmes, policy positions, evaluation notes"
+  },
+  {
+    "Category": "International Organizations",
+    "Actor_Name": "WHO",
+    "Description": "Multilateral or bilateral organization involved in Yemen",
+    "Data_Source": "Official websites",
+    "Comments": "Funding, programmes, policy positions, evaluation notes"
+  },
+  {
+    "Category": "International Organizations",
+    "Actor_Name": "USAID",
+    "Description": "Multilateral or bilateral organization involved in Yemen",
+    "Data_Source": "Official websites",
+    "Comments": "Funding, programmes, policy positions, evaluation notes"
+  },
+  {
+    "Category": "International Organizations",
+    "Actor_Name": "EU",
+    "Description": "Multilateral or bilateral organization involved in Yemen",
+    "Data_Source": "Official websites",
+    "Comments": "Funding, programmes, policy positions, evaluation notes"
+  },
+  {
+    "Category": "International Organizations",
+    "Actor_Name": "UK FCDO",
+    "Description": "Multilateral or bilateral organization involved in Yemen",
+    "Data_Source": "Official websites",
+    "Comments": "Funding, programmes, policy positions, evaluation notes"
+  },
+  {
+    "Category": "International Organizations",
+    "Actor_Name": "German GIZ",
+    "Description": "Multilateral or bilateral organization involved in Yemen",
+    "Data_Source": "Official websites",
+    "Comments": "Funding, programmes, policy positions, evaluation notes"
+  },
+  {
+    "Category": "International Organizations",
+    "Actor_Name": "UN Panel of Experts",
+    "Description": "Multilateral or bilateral organization involved in Yemen",
+    "Data_Source": "Official websites",
+    "Comments": "Funding, programmes, policy positions, evaluation notes"
+  },
+  {
+    "Category": "International Organizations",
+    "Actor_Name": "US Treasury (الخزينة الأمريكية)",
+    "Description": "Multilateral or bilateral organization involved in Yemen",
+    "Data_Source": "Official websites",
+    "Comments": "Funding, programmes, policy positions, evaluation notes"
+  },
+  {
+    "Category": "Commercial Banks",
+    "Actor_Name": "CAC Bank",
+    "Description": "Commercial bank operating in Yemen",
+    "Data_Source": "Bestever.xlsx, Master Dataset",
+    "Comments": "Include ownership, deposits, branch network, sanctions status"
+  },
+  {
+    "Category": "Commercial Banks",
+    "Actor_Name": "Tadhamon Islamic Bank",
+    "Description": "Commercial bank operating in Yemen",
+    "Data_Source": "Bestever.xlsx, Master Dataset",
+    "Comments": "Include ownership, deposits, branch network, sanctions status"
+  },
+  {
+    "Category": "Commercial Banks",
+    "Actor_Name": "Yemen Kuwait Bank",
+    "Description": "Commercial bank operating in Yemen",
+    "Data_Source": "Bestever.xlsx, Master Dataset",
+    "Comments": "Include ownership, deposits, branch network, sanctions status"
+  },
+  {
+    "Category": "Commercial Banks",
+    "Actor_Name": "International Bank of Yemen",
+    "Description": "Commercial bank operating in Yemen",
+    "Data_Source": "Bestever.xlsx, Master Dataset",
+    "Comments": "Include ownership, deposits, branch network, sanctions status"
+  },
+  {
+    "Category": "Commercial Banks",
+    "Actor_Name": "National Bank of Yemen",
+    "Description": "Commercial bank operating in Yemen",
+    "Data_Source": "Bestever.xlsx, Master Dataset",
+    "Comments": "Include ownership, deposits, branch network, sanctions status"
+  },
+  {
+    "Category": "Commercial Banks",
+    "Actor_Name": "Yemen Bank for Reconstruction & Development",
+    "Description": "Commercial bank operating in Yemen",
+    "Data_Source": "Bestever.xlsx, Master Dataset",
+    "Comments": "Include ownership, deposits, branch network, sanctions status"
+  },
+  {
+    "Category": "Commercial Banks",
+    "Actor_Name": "Saba Islamic Bank",
+    "Description": "Commercial bank operating in Yemen",
+    "Data_Source": "Bestever.xlsx, Master Dataset",
+    "Comments": "Include ownership, deposits, branch network, sanctions status"
+  },
+  {
+    "Category": "Commercial Banks",
+    "Actor_Name": "United Bank",
+    "Description": "Commercial bank operating in Yemen",
+    "Data_Source": "Bestever.xlsx, Master Dataset",
+    "Comments": "Include ownership, deposits, branch network, sanctions status"
+  },
+  {
+    "Category": "Commercial Banks",
+    "Actor_Name": "Yemeni Credit Bank",
+    "Description": "Commercial bank operating in Yemen",
+    "Data_Source": "Bestever.xlsx, Master Dataset",
+    "Comments": "Include ownership, deposits, branch network, sanctions status"
+  },
+  {
+    "Category": "Commercial Banks",
+    "Actor_Name": "Arab Bank",
+    "Description": "Commercial bank operating in Yemen",
+    "Data_Source": "Bestever.xlsx, Master Dataset",
+    "Comments": "Include ownership, deposits, branch network, sanctions status"
+  },
+  {
+    "Category": "Commercial Banks",
+    "Actor_Name": "Yemen Commercial Bank",
+    "Description": "Commercial bank operating in Yemen",
+    "Data_Source": "Bestever.xlsx, Master Dataset",
+    "Comments": "Include ownership, deposits, branch network, sanctions status"
+  },
+  {
+    "Category": "Commercial Banks",
+    "Actor_Name": "Wadi Hadramout Bank",
+    "Description": "Commercial bank operating in Yemen",
+    "Data_Source": "Bestever.xlsx, Master Dataset",
+    "Comments": "Include ownership, deposits, branch network, sanctions status"
+  },
+  {
+    "Category": "Commercial Banks",
+    "Actor_Name": "Finance & Development Bank",
+    "Description": "Commercial bank operating in Yemen",
+    "Data_Source": "Bestever.xlsx, Master Dataset",
+    "Comments": "Include ownership, deposits, branch network, sanctions status"
+  },
+  {
+    "Category": "Commercial Banks",
+    "Actor_Name": "Shamil Bank",
+    "Description": "Commercial bank operating in Yemen",
+    "Data_Source": "Bestever.xlsx, Master Dataset",
+    "Comments": "Include ownership, deposits, branch network, sanctions status"
+  },
+  {
+    "Category": "Commercial Banks",
+    "Actor_Name": "Yemen Islamic Bank",
+    "Description": "Commercial bank operating in Yemen",
+    "Data_Source": "Bestever.xlsx, Master Dataset",
+    "Comments": "Include ownership, deposits, branch network, sanctions status"
+  },
+  {
+    "Category": "Microfinance Institutions",
+    "Actor_Name": "Al-Amal Microfinance Bank",
+    "Description": "Microfinance bank or institution",
+    "Data_Source": "Bestever.xlsx, Master Dataset",
+    "Comments": "Include depositors, borrowers, licensing, challenges"
+  },
+  {
+    "Category": "Microfinance Institutions",
+    "Actor_Name": "Alkuraimi Islamic Microfinance",
+    "Description": "Microfinance bank or institution",
+    "Data_Source": "Bestever.xlsx, Master Dataset",
+    "Comments": "Include depositors, borrowers, licensing, challenges"
+  },
+  {
+    "Category": "Microfinance Institutions",
+    "Actor_Name": "Aden Microfinance Foundation",
+    "Description": "Microfinance bank or institution",
+    "Data_Source": "Bestever.xlsx, Master Dataset",
+    "Comments": "Include depositors, borrowers, licensing, challenges"
+  },
+  {
+    "Category": "Microfinance Institutions",
+    "Actor_Name": "National Microfinance Foundation",
+    "Description": "Microfinance bank or institution",
+    "Data_Source": "Bestever.xlsx, Master Dataset",
+    "Comments": "Include depositors, borrowers, licensing, challenges"
+  },
+  {
+    "Category": "Microfinance Institutions",
+    "Actor_Name": "Azal Microfinance Program",
+    "Description": "Microfinance bank or institution",
+    "Data_Source": "Bestever.xlsx, Master Dataset",
+    "Comments": "Include depositors, borrowers, licensing, challenges"
+  },
+  {
+    "Category": "Microfinance Institutions",
+    "Actor_Name": "Yemen Microfinance Network",
+    "Description": "Microfinance bank or institution",
+    "Data_Source": "Bestever.xlsx, Master Dataset",
+    "Comments": "Include depositors, borrowers, licensing, challenges"
+  },
+  {
+    "Category": "Business Groups",
+    "Actor_Name": "Hayel Saeed Anam Group",
+    "Description": "Conglomerate or business group",
+    "Data_Source": "Reports, slides",
+    "Comments": "Include subsidiaries, revenue, workforce, philanthropic work, controversies"
+  },
+  {
+    "Category": "Business Groups",
+    "Actor_Name": "Bin Mahfouz Group",
+    "Description": "Conglomerate or business group",
+    "Data_Source": "Reports, slides",
+    "Comments": "Include subsidiaries, revenue, workforce, philanthropic work, controversies"
+  },
+  {
+    "Category": "Business Groups",
+    "Actor_Name": "Al-Khayr Group",
+    "Description": "Conglomerate or business group",
+    "Data_Source": "Reports, slides",
+    "Comments": "Include subsidiaries, revenue, workforce, philanthropic work, controversies"
+  },
+  {
+    "Category": "Business Groups",
+    "Actor_Name": "Shaher Group",
+    "Description": "Conglomerate or business group",
+    "Data_Source": "Reports, slides",
+    "Comments": "Include subsidiaries, revenue, workforce, philanthropic work, controversies"
+  },
+  {
+    "Category": "Money Exchangers",
+    "Actor_Name": "Al-Kuraimi Exchange",
+    "Description": "Money exchanger/hawala network",
+    "Data_Source": "Bestever.xlsx",
+    "Comments": "Include network size, services, compliance, involvement in auctions"
+  },
+  {
+    "Category": "Money Exchangers",
+    "Actor_Name": "Al Swaid Exchange",
+    "Description": "Money exchanger/hawala network",
+    "Data_Source": "Bestever.xlsx",
+    "Comments": "Include network size, services, compliance, involvement in auctions"
+  },
+  {
+    "Category": "Money Exchangers",
+    "Actor_Name": "Al Omgy Exchange",
+    "Description": "Money exchanger/hawala network",
+    "Data_Source": "Bestever.xlsx",
+    "Comments": "Include network size, services, compliance, involvement in auctions"
+  },
+  {
+    "Category": "Money Exchangers",
+    "Actor_Name": "Al Akwa Exchange",
+    "Description": "Money exchanger/hawala network",
+    "Data_Source": "Bestever.xlsx",
+    "Comments": "Include network size, services, compliance, involvement in auctions"
+  },
+  {
+    "Category": "Money Exchangers",
+    "Actor_Name": "Al Jamal Exchange",
+    "Description": "Money exchanger/hawala network",
+    "Data_Source": "Bestever.xlsx",
+    "Comments": "Include network size, services, compliance, involvement in auctions"
+  },
+  {
+    "Category": "Money Exchangers",
+    "Actor_Name": "Others",
+    "Description": "Money exchanger/hawala network",
+    "Data_Source": "Bestever.xlsx",
+    "Comments": "Include network size, services, compliance, involvement in auctions"
+  },
+  {
+    "Category": "Sanctions Entities",
+    "Actor_Name": "UN Sanctioned Entities",
+    "Description": "Entities subject to international sanctions",
+    "Data_Source": "UN, US Treasury, EU lists",
+    "Comments": "Include reason for sanction, date, restrictions, humanitarian exemptions"
+  },
+  {
+    "Category": "Sanctions Entities",
+    "Actor_Name": "US Treasury Sanctioned Entities",
+    "Description": "Entities subject to international sanctions",
+    "Data_Source": "UN, US Treasury, EU lists",
+    "Comments": "Include reason for sanction, date, restrictions, humanitarian exemptions"
+  },
+  {
+    "Category": "Sanctions Entities",
+    "Actor_Name": "EU Sanctioned Entities",
+    "Description": "Entities subject to international sanctions",
+    "Data_Source": "UN, US Treasury, EU lists",
+    "Comments": "Include reason for sanction, date, restrictions, humanitarian exemptions"
+  }
+]

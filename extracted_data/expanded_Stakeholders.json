@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name_en": "World Bank",
+    "category": "International Financial Institution",
+    "role": "Donor and advisor; provides funding and technical assistance",
+    "key_metrics": "Loans, grants, technical support"
+  },
+  {
+    "id": 2,
+    "name_en": "International Monetary Fund (IMF)",
+    "category": "International Financial Institution",
+    "role": "Macro-economic policy advice and financial assistance",
+    "key_metrics": "Article IV consultation outcomes"
+  },
+  {
+    "id": 3,
+    "name_en": "UN OCHA",
+    "category": "UN Agency",
+    "role": "Humanitarian coordination and funding management",
+    "key_metrics": "Humanitarian funding flows"
+  },
+  {
+    "id": 4,
+    "name_en": "Central Bank of Yemen (Aden)",
+    "category": "Central Bank",
+    "role": "Monetary policy for IRG-controlled areas",
+    "key_metrics": "Reserves, auctions, exchange rate"
+  },
+  {
+    "id": 5,
+    "name_en": "Central Bank of Yemen (Sana’a)",
+    "category": "Central Bank",
+    "role": "Monetary policy for de-facto authorities areas",
+    "key_metrics": "Reserves, exchange rate"
+  },
+  {
+    "id": 6,
+    "name_en": "Hayel Saeed Anam Group",
+    "category": "Conglomerate",
+    "role": "Largest food importer and industrial group; contributes to humanitarian supply chains",
+    "key_metrics": "Number of employees, imports volume"
+  },
+  {
+    "id": 7,
+    "name_en": "Al-Omgy Exchange Company",
+    "category": "Money Exchanger",
+    "role": "Major remittance and currency exchange network",
+    "key_metrics": "Remittance volumes"
+  },
+  {
+    "id": 8,
+    "name_en": "Al-Tadhamon Islamic Bank",
+    "category": "Bank",
+    "role": "Large Islamic bank; part of HSA group",
+    "key_metrics": "Deposits, loan portfolio"
+  },
+  {
+    "id": 9,
+    "name_en": "Al-Amal Microfinance Bank",
+    "category": "Microfinance Bank",
+    "role": "First microfinance bank in Yemen",
+    "key_metrics": "Active borrowers, depositors"
+  },
+  {
+    "id": 10,
+    "name_en": "Social Fund for Development (SFD)",
+    "category": "National Institution",
+    "role": "Provides microfinance programs and development projects",
+    "key_metrics": "Loan portfolio, clients"
+  }
+]

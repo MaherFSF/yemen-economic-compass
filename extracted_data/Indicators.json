@@ -1,0 +1,119 @@
+[
+  {
+    "Code": "GDP_CUR",
+    "Arabic": "الناتج المحلي (اسمي)",
+    "English": "GDP (current US$)",
+    "Unit": "Billion $",
+    "Frequency": "Annual",
+    "Source": "World Bank WDI",
+    "API": "API"
+  },
+  {
+    "Code": "CPI_IRG",
+    "Arabic": "تضخم (مناطق الحكومة)",
+    "English": "CPI (IRG)",
+    "Unit": "%",
+    "Frequency": "Monthly",
+    "Source": "WFP/WB",
+    "API": "API"
+  },
+  {
+    "Code": "CPI_SANA",
+    "Arabic": "تضخم (مناطق صنعاء)",
+    "English": "CPI (Sanaa)",
+    "Unit": "%",
+    "Frequency": "Monthly",
+    "Source": "Humanitarian reports",
+    "API": "Manual"
+  },
+  {
+    "Code": "FX_ADEN",
+    "Arabic": "سعر صرف عدن",
+    "English": "FX Aden (USD/YER)",
+    "Unit": "YER/USD",
+    "Frequency": "Weekly",
+    "Source": "Monitoring",
+    "API": "Manual"
+  },
+  {
+    "Code": "FX_SANA",
+    "Arabic": "سعر صرف صنعاء",
+    "English": "FX Sanaa (USD/YER)",
+    "Unit": "YER/USD",
+    "Frequency": "Monthly",
+    "Source": "Monitoring",
+    "API": "Manual"
+  },
+  {
+    "Code": "FBF",
+    "Arabic": "سلة غذاء دنيا",
+    "English": "Min Food Basket",
+    "Unit": "YER/family/month",
+    "Frequency": "Monthly",
+    "Source": "WFP VAM/HDX",
+    "API": "API"
+  },
+  {
+    "Code": "REV",
+    "Arabic": "إيرادات عامة",
+    "English": "Govt Revenue",
+    "Unit": "% of GDP",
+    "Frequency": "Annual",
+    "Source": "IMF/WB",
+    "API": "Manual"
+  },
+  {
+    "Code": "OIL_OUT",
+    "Arabic": "إنتاج نفط",
+    "English": "Oil Output",
+    "Unit": "K barrels/day",
+    "Frequency": "Annual",
+    "Source": "JODI/EIA",
+    "API": "API"
+  },
+  {
+    "Code": "FTS",
+    "Arabic": "تمويل النداء",
+    "English": "FTS Funding",
+    "Unit": "%",
+    "Frequency": "Monthly",
+    "Source": "OCHA FTS",
+    "API": "API"
+  },
+  {
+    "Code": "CBY_AD",
+    "Arabic": "قرارات بنك عدن",
+    "English": "CBY-Aden Decisions",
+    "Unit": "Text",
+    "Frequency": "Ongoing",
+    "Source": "Official sites",
+    "API": "Manual"
+  },
+  {
+    "Code": "CBY_SA",
+    "Arabic": "قرارات بنك صنعاء",
+    "English": "CBY-Sanaa Decisions",
+    "Unit": "Text",
+    "Frequency": "Ongoing",
+    "Source": "Bulletins",
+    "API": "Manual"
+  },
+  {
+    "Code": "SII",
+    "Arabic": "شدّة العقوبات",
+    "English": "Sanctions Intensity",
+    "Unit": "Index 0-100",
+    "Frequency": "Quarterly",
+    "Source": "UNSC/OFAC/EU",
+    "API": "Manual"
+  },
+  {
+    "Code": "CBSI",
+    "Arabic": "ضغط المصارف",
+    "English": "Core Banking Stress",
+    "Unit": "Index 0-100",
+    "Frequency": "Quarterly",
+    "Source": "Estimated",
+    "API": "Manual"
+  }
+]

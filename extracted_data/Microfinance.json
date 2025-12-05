@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "name_en": "National Microfinance Institution",
+    "name_ar": "المؤسسة الوطنية للتمويل الأصغر",
+    "type": "Institution",
+    "status": "Operational",
+    "region": null,
+    "notes": "Largest national microfinance institution."
+  },
+  {
+    "id": 2,
+    "name_en": "Union Microfinance Program",
+    "name_ar": "برنامج الاتحاد للتمويل الأصغر",
+    "type": "Program",
+    "status": "Operational",
+    "region": null,
+    "notes": "Union-run microfinance program."
+  },
+  {
+    "id": 3,
+    "name_en": "Azal Microfinance Program",
+    "name_ar": "برنامج أزال للتمويل الأصغر",
+    "type": "Program",
+    "status": "Operational",
+    "region": null,
+    "notes": "Azal microfinance program."
+  },
+  {
+    "id": 4,
+    "name_en": "Hadramout Microfinance Program",
+    "name_ar": "برنامج حضرموت للتمويل الأصغر",
+    "type": "Program",
+    "status": "Operational",
+    "region": null,
+    "notes": "Hadramout microfinance program."
+  },
+  {
+    "id": 5,
+    "name_en": "Thamar Micro and Small Finance Foundation",
+    "name_ar": "مؤسسة ثمار للتمويل الصغير و الأصغر",
+    "type": "Foundation",
+    "status": "Operational",
+    "region": null,
+    "notes": "Thamar micro and small finance foundation."
+  },
+  {
+    "id": 6,
+    "name_en": "Tawasol Microfinance Foundation",
+    "name_ar": "مؤسسة تواصل للتمويل الأصغر",
+    "type": "Foundation",
+    "status": "Operational",
+    "region": null,
+    "notes": "Tawasol microfinance foundation."
+  },
+  {
+    "id": 7,
+    "name_en": "Nama Development & Microfinance Foundation",
+    "name_ar": "مؤسسة نماء للتنمية و التمويل الأصغر",
+    "type": "Foundation",
+    "status": "Operational",
+    "region": null,
+    "notes": "Nama development and microfinance foundation."
+  },
+  {
+    "id": 8,
+    "name_en": "Tadhamon Microfinance Program",
+    "name_ar": "برنامج التضامن للتمويل الأصغر",
+    "type": "Program",
+    "status": "Operational",
+    "region": null,
+    "notes": "Part of Al-Tadhamon Group; microfinance."
+  },
+  {
+    "id": 9,
+    "name_en": "Grameen Yemen",
+    "name_ar": "جرامين يمن",
+    "type": "Foundation",
+    "status": "Operational",
+    "region": null,
+    "notes": "Grameen microfinance initiative in Yemen."
+  }
+]

@@ -36,6 +36,8 @@ export default function Header() {
       cbyDashboard: 'لوحة البنك المركزي',
       // Data & Analysis submenu
       compass: 'لوحة البوصلة',
+      whatIfSimulator: 'محاكي ماذا لو',
+      yearExplorer: 'مستكشف السنوات',
       keyStats: 'الإحصاءات الرئيسية',
       transformation: 'التحول المالي',
       powerMap: 'خريطة القوى',
@@ -79,6 +81,8 @@ export default function Header() {
       cbyDashboard: 'CBY Dashboard',
       // Data & Analysis submenu
       compass: 'Compass Dashboard',
+      whatIfSimulator: 'What-If Simulator',
+      yearExplorer: 'Year Explorer',
       keyStats: 'Key Statistics',
       transformation: 'Financial Transformation',
       powerMap: 'Power Map',
@@ -180,6 +184,12 @@ export default function Header() {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align={isArabic ? "end" : "start"} className="w-56">
+                <DropdownMenuLabel className="text-xs text-muted-foreground uppercase">
+                  {isArabic ? 'أدوات تفاعلية' : 'Interactive Tools'}
+                </DropdownMenuLabel>
+                <Link href="/what-if-simulator"><DropdownMenuItem className="cursor-pointer font-semibold text-primary">{t.whatIfSimulator}</DropdownMenuItem></Link>
+                <Link href="/year-explorer"><DropdownMenuItem className="cursor-pointer font-semibold text-primary">{t.yearExplorer}</DropdownMenuItem></Link>
+                <DropdownMenuSeparator />
                 <Link href="/compass"><DropdownMenuItem className="cursor-pointer">{t.compass}</DropdownMenuItem></Link>
                 <Link href="/key-stats"><DropdownMenuItem className="cursor-pointer">{t.keyStats}</DropdownMenuItem></Link>
                 <Link href="/transformation"><DropdownMenuItem className="cursor-pointer">{t.transformation}</DropdownMenuItem></Link>

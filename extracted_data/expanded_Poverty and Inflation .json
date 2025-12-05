@@ -1,0 +1,38 @@
+[
+  {
+    "Year": 2014,
+    "Poverty_rate_percent": 55,
+    "Inflation_Aden_percent": 5,
+    "Inflation_Sanaa_percent": 4
+  },
+  {
+    "Year": 2016,
+    "Poverty_rate_percent": 60,
+    "Inflation_Aden_percent": 12,
+    "Inflation_Sanaa_percent": 6
+  },
+  {
+    "Year": 2018,
+    "Poverty_rate_percent": 65,
+    "Inflation_Aden_percent": 18,
+    "Inflation_Sanaa_percent": 8
+  },
+  {
+    "Year": 2020,
+    "Poverty_rate_percent": 68,
+    "Inflation_Aden_percent": 22,
+    "Inflation_Sanaa_percent": 10
+  },
+  {
+    "Year": 2022,
+    "Poverty_rate_percent": 72,
+    "Inflation_Aden_percent": 15,
+    "Inflation_Sanaa_percent": 5
+  },
+  {
+    "Year": 2024,
+    "Poverty_rate_percent": 74,
+    "Inflation_Aden_percent": 20,
+    "Inflation_Sanaa_percent": 9
+  }
+]

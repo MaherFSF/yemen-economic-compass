@@ -1,0 +1,62 @@
+[
+  {
+    "Year": 2014,
+    "Aden_Rial_per_USD": 215,
+    "Sanaa_Rial_per_USD": 215
+  },
+  {
+    "Year": 2015,
+    "Aden_Rial_per_USD": 245,
+    "Sanaa_Rial_per_USD": 230
+  },
+  {
+    "Year": 2016,
+    "Aden_Rial_per_USD": 300,
+    "Sanaa_Rial_per_USD": 260
+  },
+  {
+    "Year": 2017,
+    "Aden_Rial_per_USD": 375,
+    "Sanaa_Rial_per_USD": 330
+  },
+  {
+    "Year": 2018,
+    "Aden_Rial_per_USD": 480,
+    "Sanaa_Rial_per_USD": 390
+  },
+  {
+    "Year": 2019,
+    "Aden_Rial_per_USD": 550,
+    "Sanaa_Rial_per_USD": 420
+  },
+  {
+    "Year": 2020,
+    "Aden_Rial_per_USD": 620,
+    "Sanaa_Rial_per_USD": 450
+  },
+  {
+    "Year": 2021,
+    "Aden_Rial_per_USD": 740,
+    "Sanaa_Rial_per_USD": 480
+  },
+  {
+    "Year": 2022,
+    "Aden_Rial_per_USD": 900,
+    "Sanaa_Rial_per_USD": 500
+  },
+  {
+    "Year": 2023,
+    "Aden_Rial_per_USD": 1300,
+    "Sanaa_Rial_per_USD": 600
+  },
+  {
+    "Year": 2024,
+    "Aden_Rial_per_USD": 2700,
+    "Sanaa_Rial_per_USD": 650
+  },
+  {
+    "Year": 2025,
+    "Aden_Rial_per_USD": 2800,
+    "Sanaa_Rial_per_USD": 680
+  }
+]
