@@ -843,5 +843,5 @@
 - [ ] Add all monetary dynamics sections to navigation
 - [ ] Add all events, sanctions, aid sections to navigation
 - [ ] Add all data methods and tools sections to navigation
-- [ ] Update App.tsx routing for all new pages
-- [ ] Test all navigation links
+- [x] Update App.tsx routing for all new pages
+- [x] Test all navigation links

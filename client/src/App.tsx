@@ -56,6 +56,22 @@ import Investment from "./pages/Investment";
 import ClimateFinance from "./pages/ClimateFinance";
 import Sitemap from "./pages/Sitemap";
 import BanksDatabase from "./pages/BanksDatabase";
+import IMF from "./pages/IMF";
+import WorldBankDetailed from "./pages/WorldBankDetailed";
+import SaudiArabia from "./pages/SaudiArabia";
+import UAE from "./pages/UAE";
+import UNOCHA from "./pages/UNOCHA";
+import WFP from "./pages/WFP";
+import UNHCR from "./pages/UNHCR";
+import IOM from "./pages/IOM";
+import UNICEF from "./pages/UNICEF";
+import WHO from "./pages/WHO";
+import FAO from "./pages/FAO";
+import UNDP from "./pages/UNDP";
+import GovernmentAden from "./pages/GovernmentAden";
+import GovernmentSanaa from "./pages/GovernmentSanaa";
+import Donors from "./pages/Donors";
+import BilateralDonors from "./pages/BilateralDonors";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -84,6 +100,22 @@ function Router() {
       <Route path={"/data-viz"} component={DataVisualization} />
       <Route path={"/stakeholders"} component={StakeholderHub} />
         <Route path="/stakeholders/saudi-arabia" component={SaudiArabiaPage} />
+      <Route path="/imf" component={IMF} />
+      <Route path="/world-bank" component={WorldBankDetailed} />
+      <Route path="/saudi-arabia" component={SaudiArabia} />
+      <Route path="/uae" component={UAE} />
+      <Route path="/un-ocha" component={UNOCHA} />
+      <Route path="/wfp" component={WFP} />
+      <Route path="/unhcr" component={UNHCR} />
+      <Route path="/iom" component={IOM} />
+      <Route path="/unicef" component={UNICEF} />
+      <Route path="/who" component={WHO} />
+      <Route path="/fao" component={FAO} />
+      <Route path="/undp" component={UNDP} />
+      <Route path="/gov-aden" component={GovernmentAden} />
+      <Route path="/gov-sanaa" component={GovernmentSanaa} />
+      <Route path="/donors" component={Donors} />
+      <Route path="/bilateral-donors" component={BilateralDonors} />
           <Route path="/stakeholders/hayel-saeed-anam" component={HayelSaeedAnam} />
           <Route path="/banking-dashboard" component={BankingDashboard} />
           <Route path="/world-bank" component={WorldBankJourney} />
