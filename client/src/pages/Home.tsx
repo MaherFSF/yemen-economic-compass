@@ -50,7 +50,7 @@ export default function Home() {
     const steps = 80;
     const increment = duration / steps;
     
-    const targets = { years: 15, dataPoints: 1200, stakeholders: 50, reports: 45 };
+    const targets = { years: 16, dataPoints: 12502, stakeholders: 91, reports: 12502 };
     let current = { years: 0, dataPoints: 0, stakeholders: 0, reports: 0 };
     
     const timer = setInterval(() => {
@@ -110,8 +110,8 @@ export default function Home() {
       icon: Database,
       title: isArabic ? "بيانات شاملة" : "Comprehensive Data",
       description: isArabic 
-        ? "15 عامًا من البيانات الاقتصادية والمالية (2010-2025) مع أكثر من 1,200 نقطة بيانات موثقة من مصادر موثوقة"
-        : "15 years of economic and financial data (2010-2025) with 1,200+ documented data points from credible sources",
+        ? "16 عامًا من البيانات الاقتصادية والمالية (2010-2025) مع أكثر من 12,500 نقطة بيانات موثقة من مصادر موثوقة"
+        : "16 years of economic and financial data (2010-2025) with 12,500+ documented data points from credible sources",
       gradient: "from-blue-500 to-cyan-500",
       stats: [`${counters.dataPoints}+`, isArabic ? "نقطة بيانات" : "Data Points"]
     },
@@ -128,8 +128,8 @@ export default function Home() {
       icon: Users,
       title: isArabic ? "تحليل الجهات الفاعلة" : "Stakeholder Analysis",
       description: isArabic 
-        ? "ملفات تعريفية شاملة لأكثر من 50 جهة فاعلة بما في ذلك البنوك والمانحين والحكومات والمنظمات"
-        : "Comprehensive profiles of 50+ stakeholders including banks, donors, governments, and organizations",
+        ? "ملفات تعريفية شاملة لأكثر من 90 جهة فاعلة بما في ذلك البنوك والمانحين والحكومات والمنظمات"
+        : "Comprehensive profiles of 90+ stakeholders including banks, donors, governments, and organizations",
       gradient: "from-orange-500 to-red-500",
       stats: [`${counters.stakeholders}+`, isArabic ? "جهة فاعلة" : "Stakeholders"]
     },
@@ -146,8 +146,8 @@ export default function Home() {
       icon: FileText,
       title: isArabic ? "مكتبة الأبحاث" : "Research Library",
       description: isArabic 
-        ? "أكثر من 45 تقريرًا ودراسة من مؤسسات موثوقة مثل البنك الدولي وصندوق النقد الدولي والأمم المتحدة"
-        : "45+ reports and studies from credible institutions like World Bank, IMF, and UN agencies",
+        ? "أكثر من 12,500 تقرير ودراسة من 30 مؤسسة موثوقة مثل البنك الدولي وصندوق النقد الدولي والأمم المتحدة"
+        : "12,500+ reports and studies from 30 credible institutions like World Bank, IMF, and UN agencies",
       gradient: "from-indigo-500 to-blue-500",
       stats: [`${counters.reports}+`, isArabic ? "تقرير" : "Reports"]
     },
@@ -261,6 +261,9 @@ export default function Home() {
                   ? "منصة تحليلية شاملة لفهم التحولات المالية والاقتصادية في اليمن (2010-2025)"
                   : "A comprehensive analytical platform for understanding Yemen's financial and economic transformations (2010-2025)"
                 }
+              </p>
+              <p className="text-lg md:text-xl text-[#D4AF37] font-semibold mt-4">
+                {isArabic ? "مشروع من كوزواي اليمن - الخدمات المالية والمصرفية" : "CauseWay Yemen - Financial & Banking Services"}
               </p>
             </div>
 
