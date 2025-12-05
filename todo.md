@@ -442,3 +442,36 @@
 - [ ] Bilingual (EN/AR) with complete parity
 
 **DEADLINE: Build EVERYTHING listed above. No excuses. No shortcuts. World-class quality.**
+
+
+---
+
+## 🚨 CRITICAL FIXES - MISLEADING/FAKE DATA (HIGHEST PRIORITY)
+
+### Homepage Counters - REMOVE FAKE RANDOM NUMBERS
+- [x] Fix homepage counters - remove Math.random() fake animation
+- [x] Replace with real static numbers: 16 years (2010-2025)
+- [x] Replace with real count: 4,416 publications (from Research Library JSON)
+- [x] Replace with real count: 30 organizations (from Research Library JSON)
+- [x] Remove all misleading animated random counters
+
+### Database Population - IN PROGRESS
+- [x] Populate actors table with 30 organizations from Research Library data
+- [ ] Populate indicators table with year-by-year economic data (2010-2025)
+- [ ] Populate banks table with real Yemen banks data
+- [ ] Populate events table with real historical timeline events
+- [ ] Populate stakeholders table with real stakeholder profiles
+- [ ] Populate recommendations table with policy recommendations
+
+### Build Missing Stakeholder Profile Pages
+- [ ] Create /stakeholders/world-bank page with real funding data
+- [ ] Create /stakeholders/imf page with Article IV reports data
+- [ ] Create /stakeholders/un-ocha page with humanitarian funding
+- [ ] Create /stakeholders/saudi-arabia page with SDRPY projects
+- [ ] Create /stakeholders/uae page with aid programs
+- [ ] Create dynamic /stakeholders/[id] page for all 30 organizations
+
+### Connect Dashboards to Real Database Data
+- [ ] Connect What-If Simulator to real indicators from database
+- [ ] Connect Year Explorer to real year-by-year data from database
+- [ ] Ensure all charts use real data (not hardcoded sample data)

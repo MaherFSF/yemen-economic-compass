@@ -34,7 +34,13 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const { language } = useLanguage();
   const isArabic = language === "ar";
-  const [counters, setCounters] = useState({ years: 0, dataPoints: 0, stakeholders: 0, reports: 0 });
+  // REAL DATA - No fake animations
+  const counters = {
+    years: 16, // 2010-2025
+    dataPoints: 4416, // Actual publications count from Research Library
+    stakeholders: 30, // Actual organizations count from Research Library
+    reports: 4416 // Same as publications
+  };
   const [scrollY, setScrollY] = useState(0);
 
   // Parallax scroll effect
@@ -42,36 +48,6 @@ export default function Home() {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Animated counter effect
-  useEffect(() => {
-    const duration = 2500;
-    const steps = 80;
-    const increment = duration / steps;
-    
-    const targets = { years: 16, dataPoints: 12502, stakeholders: 91, reports: 12502 };
-    let current = { years: 0, dataPoints: 0, stakeholders: 0, reports: 0 };
-    
-    const timer = setInterval(() => {
-      current = {
-        years: Math.min(current.years + targets.years / steps, targets.years),
-        dataPoints: Math.min(current.dataPoints + targets.dataPoints / steps, targets.dataPoints),
-        stakeholders: Math.min(current.stakeholders + targets.stakeholders / steps, targets.stakeholders),
-        reports: Math.min(current.reports + targets.reports / steps, targets.reports)
-      };
-      
-      setCounters({
-        years: Math.floor(current.years),
-        dataPoints: Math.floor(current.dataPoints),
-        stakeholders: Math.floor(current.stakeholders),
-        reports: Math.floor(current.reports)
-      });
-      
-      if (current.years >= targets.years) clearInterval(timer);
-    }, increment);
-    
-    return () => clearInterval(timer);
   }, []);
 
   const keyMetrics = [
@@ -110,8 +86,8 @@ export default function Home() {
       icon: Database,
       title: isArabic ? "بيانات شاملة" : "Comprehensive Data",
       description: isArabic 
-        ? "16 عامًا من البيانات الاقتصادية والمالية (2010-2025) مع أكثر من 12,500 نقطة بيانات موثقة من مصادر موثوقة"
-        : "16 years of economic and financial data (2010-2025) with 12,500+ documented data points from credible sources",
+        ? "16 عامًا من البيانات الاقتصادية والمالية (2010-2025) مع أكثر من 4,400 نقطة بيانات موثقة من مصادر موثوقة"
+        : "16 years of economic and financial data (2010-2025) with 4,400+ documented data points from credible sources",
       gradient: "from-blue-500 to-cyan-500",
       stats: [`${counters.dataPoints}+`, isArabic ? "نقطة بيانات" : "Data Points"]
     },
@@ -146,8 +122,8 @@ export default function Home() {
       icon: FileText,
       title: isArabic ? "مكتبة الأبحاث" : "Research Library",
       description: isArabic 
-        ? "أكثر من 12,500 تقرير ودراسة من 30 مؤسسة موثوقة مثل البنك الدولي وصندوق النقد الدولي والأمم المتحدة"
-        : "12,500+ reports and studies from 30 credible institutions like World Bank, IMF, and UN agencies",
+        ? "أكثر من 4,400 تقرير ودراسة من 30 مؤسسة موثوقة مثل البنك الدولي وصندوق النقد الدولي والأمم المتحدة"
+        : "4,400+ reports and studies from 30 credible institutions like World Bank, IMF, and UN agencies",
       gradient: "from-indigo-500 to-blue-500",
       stats: [`${counters.reports}+`, isArabic ? "تقرير" : "Reports"]
     },
