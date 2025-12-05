@@ -48,6 +48,7 @@ import SaudiArabiaPage from "./pages/SaudiArabiaPage";
 import WorldBankJourney from "./pages/WorldBankJourney";
 import FinancialFlowsNetwork from "./pages/FinancialFlowsNetwork";
 import HayelSaeedAnam from "./pages/stakeholders/HayelSaeedAnam";
+import BankingDashboard from "./pages/BankingDashboard";
 import YearExplorer from "./pages/YearExplorer";
 import WhatIfSimulator from "./pages/WhatIfSimulator";
 import YouthEconomy from "./pages/YouthEconomy";
@@ -83,7 +84,8 @@ function Router() {
       <Route path={"/data-viz"} component={DataVisualization} />
       <Route path={"/stakeholders"} component={StakeholderHub} />
         <Route path="/stakeholders/saudi-arabia" component={SaudiArabiaPage} />
-        <Route path="/stakeholders/hayel-saeed-anam" component={HayelSaeedAnam} />
+          <Route path="/stakeholders/hayel-saeed-anam" component={HayelSaeedAnam} />
+          <Route path="/banking-dashboard" component={BankingDashboard} />
           <Route path="/world-bank" component={WorldBankJourney} />
       <Route path="/financial-flows" component={FinancialFlowsNetwork} />
       <Route path="/sanctions" component={SanctionsTracker} />

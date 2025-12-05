@@ -472,3 +472,26 @@
 - [ ] Connect What-If Simulator to real indicators from database
 - [ ] Connect Year Explorer to real year-by-year data from database
 - [ ] Ensure all charts use real data (not hardcoded sample data)
+
+
+---
+
+## 🚀 NEW TASKS - Connect Dashboards & Build Banking Dashboard
+
+### Connect Dashboards to Real Database Data
+- [ ] Update What-If Simulator to fetch real indicators from database
+- [ ] Update Year Explorer to display real year-by-year economic data
+- [ ] Add interactive charts showing trends over time
+
+### Add Data Visualization Charts
+- [ ] Create funding trends chart for stakeholder profiles
+- [ ] Add economic impact timeline visualization
+- [ ] Build comparative analysis charts
+
+### Build Banking Sector Dashboard
+- [x] Create dedicated banking dashboard page
+- [x] Display all banks with comparative metrics
+- [x] Add bank health indicators (capital adequacy, NPL ratios)
+- [x] Show crisis indicators and status badges
+- [x] Add filtering by bank type (commercial, Islamic, microfinance)
+- [x] Create API routes for banks, actors, indicators

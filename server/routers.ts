@@ -104,6 +104,37 @@ export const appRouter = router({
         return { success: true };
       }),
   }),
+
+  // Banks router
+  banks: router({
+    list: publicProcedure.query(async () => {
+      return await db.getAllBanks();
+    }),
+    getById: publicProcedure
+      .input(z.object({ id: z.number() }))
+      .query(async ({ input }) => {
+        return await db.getBankById(input.id);
+      }),
+  }),
+
+  // Actors router
+  actors: router({
+    list: publicProcedure.query(async () => {
+      return await db.getAllActors();
+    }),
+    getById: publicProcedure
+      .input(z.object({ id: z.number() }))
+      .query(async ({ input }) => {
+        return await db.getActorById(input.id);
+      }),
+  }),
+
+  // Indicators router
+  indicators: router({
+    list: publicProcedure.query(async () => {
+      return await db.getAllIndicators();
+    }),
+  }),
 });
 
 export type AppRouter = typeof appRouter;
