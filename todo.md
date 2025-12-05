@@ -495,3 +495,43 @@
 - [x] Show crisis indicators and status badges
 - [x] Add filtering by bank type (commercial, Islamic, microfinance)
 - [x] Create API routes for banks, actors, indicators
+
+
+---
+
+## 🚨 CRITICAL REMAINING WORK - Must Complete
+
+### Fix Broken Pages
+- [ ] Fix StakeholderProfile.tsx TypeScript errors (foundedDate, length, map properties)
+- [ ] Make stakeholder profile pages accessible from navigation
+- [ ] Test all stakeholder profile pages in browser
+
+### Populate Empty Database Tables
+- [x] Populate causations table with causal relationships between events and indicators (8 causations)
+- [x] Populate stakeholders table with detailed stakeholder profiles (8 stakeholders)
+- [x] Populate recommendations table with policy recommendations (8 recommendations)
+
+### Build Missing Stakeholder Pages
+- [ ] Create individual World Bank profile page with funding data
+- [ ] Create individual IMF profile page with lending programs
+- [ ] Create individual Saudi Arabia profile page with SDRPY projects
+- [ ] Create individual UAE profile page with humanitarian assistance
+
+### Connect Dashboards to Real Data
+- [ ] Update What-If Simulator to use real indicators from database
+- [ ] Update Year Explorer to display real year-by-year economic data from database
+- [ ] Replace all mock data with database queries
+
+### Add Data Visualizations
+- [ ] Add Chart.js to project dependencies
+- [ ] Create GDP trend line chart (2010-2025)
+- [ ] Create inflation rate chart
+- [ ] Create exchange rate comparison chart (official vs parallel)
+- [ ] Create poverty rate visualization
+- [ ] Add charts to stakeholder profiles showing funding trends
+
+### Build Events Timeline Page
+- [ ] Create interactive timeline visualization
+- [ ] Display all 8 historical events with dates
+- [ ] Show connections between events and economic indicators
+- [ ] Add impact analysis for each event

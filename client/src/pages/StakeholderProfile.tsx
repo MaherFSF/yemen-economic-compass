@@ -1,5 +1,5 @@
 import { useParams } from "wouter";
-import { useQuery } from "@tanstack/react-query";
+import { trpc } from "@/lib/trpc";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -12,14 +12,14 @@ export default function StakeholderProfile() {
   const isArabic = language === "ar";
 
   // Fetch stakeholder data from database
-  const { data: stakeholder, isLoading } = useQuery({
-    queryKey: [`/api/actors/${id}`],
-  });
+  const { data: stakeholder, isLoading } = trpc.actors.getById.useQuery(
+    { id: Number(id) },
+    { enabled: !!id }
+  );
 
-  // Fetch related indicators
-  const { data: indicators } = useQuery({
-    queryKey: [`/api/indicators?actorId=${id}`],
-  });
+  // Fetch all indicators (filter client-side for now)
+  const { data: allIndicators } = trpc.indicators.list.useQuery();
+  const indicators = allIndicators?.filter((ind: any) => ind.actorId === Number(id)) || [];
 
   if (isLoading) {
     return (
@@ -118,7 +118,7 @@ export default function StakeholderProfile() {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">
-                {stakeholder.foundedDate ? new Date(stakeholder.foundedDate).getFullYear() : 'N/A'}
+                {stakeholder?.foundedDate ? new Date(stakeholder.foundedDate).getFullYear() : 'N/A'}
               </div>
             </CardContent>
           </Card>

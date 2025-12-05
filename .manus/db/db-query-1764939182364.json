@@ -1,0 +1,19 @@
+{
+  "query": "SELECT \n  (SELECT COUNT(*) FROM actors) as actors_count,\n  (SELECT COUNT(*) FROM banks) as banks_count,\n  (SELECT COUNT(*) FROM indicators) as indicators_count,\n  (SELECT COUNT(*) FROM events) as events_count,\n  (SELECT COUNT(*) FROM causations) as causations_count,\n  (SELECT COUNT(*) FROM stakeholders) as stakeholders_count,\n  (SELECT COUNT(*) FROM recommendations) as recommendations_count;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SELECT \n  (SELECT COUNT(*) FROM actors) as actors_count,\n  (SELECT COUNT(*) FROM banks) as banks_count,\n  (SELECT COUNT(*) FROM indicators) as indicators_count,\n  (SELECT COUNT(*) FROM events) as events_count,\n  (SELECT COUNT(*) FROM causations) as causations_count,\n  (SELECT COUNT(*) FROM stakeholders) as stakeholders_count,\n  (SELECT COUNT(*) FROM recommendations) as recommendations_count;",
+  "rows": [
+    {
+      "actors_count": "211",
+      "banks_count": "31",
+      "indicators_count": "71",
+      "events_count": "20",
+      "causations_count": "0",
+      "stakeholders_count": "0",
+      "recommendations_count": "0"
+    }
+  ],
+  "messages": [],
+  "stdout": "actors_count\tbanks_count\tindicators_count\tevents_count\tcausations_count\tstakeholders_count\trecommendations_count\n211\t31\t71\t20\t0\t0\t0\n",
+  "stderr": "",
+  "execution_time_ms": 109
+}
