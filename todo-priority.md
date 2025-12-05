@@ -147,3 +147,57 @@
 5. Optimize performance
 6. Save checkpoint after each feature
 7. Get user feedback before proceeding
+
+
+---
+
+## 🔥 COMPREHENSIVE REBUILD TASKS (Dec 2025)
+
+### Phase 1: Massive Data Collection (2010-2025)
+- [ ] Collect ALL Yemeni commercial bank annual reports (16 banks × 15 years)
+- [ ] Collect ALL MFI reports and audits (Al Amal, Al Kuraimi, etc.)
+- [ ] Gather ALL World Bank Yemen documents (200+ reports)
+- [ ] Collect ALL IMF Yemen documents (Article IV, staff reports)
+- [ ] Gather ALL UN agency reports (OCHA, UNDP, WFP, UNHCR, FAO, WHO, IOM)
+- [ ] Collect ALL think tank publications (Sana'a Center, Chatham House, CSIS, etc.)
+- [ ] Gather ALL donor documentation (US, EU, GCC, UK, etc.)
+- [ ] Collect party-to-conflict statements and documents
+- [ ] Gather commercial company reports (Hayel Saeed Anam, etc.)
+
+### Phase 2: Database Population
+- [ ] Build comprehensive banks database (all 16 banks with full details)
+- [ ] Build MFIs database (operational data, branches, clients)
+- [ ] Build stakeholders database (100+ actors with profiles)
+- [ ] Build events database (every major event 2010-2025)
+- [ ] Build year-by-year indicators (GDP, inflation, poverty, etc.)
+- [ ] Build narratives database (comprehensive story for each year)
+- [ ] Build literature database (1,000+ publications with metadata)
+
+### Phase 3: Professional Visualizations
+- [ ] GDP trends chart (2010-2025) with sources
+- [ ] Dual exchange rate visualization
+- [ ] Banking sector health dashboard
+- [ ] Humanitarian aid flows (Sankey diagram)
+- [ ] Poverty and food insecurity trends
+- [ ] Oil production and exports
+- [ ] Remittances flow visualization
+- [ ] Sanctions impact timeline
+- [ ] Microfinance growth charts
+
+### Phase 4: Revolutionary Platform
+- [ ] Redesign homepage with interactive widgets
+- [ ] Build intelligent search across all content
+- [ ] Create knowledge-based analysis system
+- [ ] Implement source citation for every data point
+- [ ] Build methodology documentation pages
+- [ ] Create interactive data exploration tools
+- [ ] Design unique visual identity
+- [ ] Ensure world-class UX
+
+### Phase 5: GitHub & Deployment
+- [ ] Sync all changes to GitHub
+- [ ] Update README with comprehensive documentation
+- [ ] Create deployment guide
+- [ ] Verify all features work in production
+- [ ] Test on multiple devices
+- [ ] Ensure bilingual parity
