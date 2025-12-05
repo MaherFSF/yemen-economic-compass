@@ -78,7 +78,7 @@ function Router() {
       <Route path={"/cby-aden"} component={CBYAdenTracker} />
       <Route path={"/cby-sanaa"} component={CBYSanaaTracker} />
       <Route path={"/banks"} component={CommercialBanksHub} />
-      <Route path={"/literature"} component={FinancialLiterature} />
+      <Route path={"/literature"} component={ResearchLibrary} />
       <Route path={"/calculators"} component={FinancialCalculators} />
       <Route path={"/data-viz"} component={DataVisualization} />
       <Route path={"/stakeholders"} component={StakeholderHub} />

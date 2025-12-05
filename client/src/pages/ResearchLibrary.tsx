@@ -56,12 +56,12 @@ export default function ResearchLibrary() {
 
   // Calculate statistics
   const statistics = useMemo(() => {
-    const totalPublications = publicationsData.reduce((sum, item) => sum + item.output.total_publications, 0);
+    const totalPublications = publicationsData.reduce((sum, item) => sum + (item.output?.total_publications || 0), 0);
     const organizations = publicationsData.length;
     const years = new Set<string>();
     
     publicationsData.forEach(item => {
-      const yearRange = item.output.year_coverage;
+      const yearRange = item.output?.year_coverage || '';
       const matches = yearRange.match(/\d{4}/g);
       if (matches) {
         matches.forEach(year => years.add(year));
@@ -79,20 +79,20 @@ export default function ResearchLibrary() {
 
   // Get unique organizations for filter
   const organizations = useMemo(() => {
-    return Array.from(new Set(publicationsData.map(item => item.output.organization))).sort();
+    return Array.from(new Set(publicationsData.map(item => item.output?.organization || 'Unknown').filter(Boolean))).sort();
   }, [publicationsData]);
 
   // Filter publications
   const filteredPublications = useMemo(() => {
     return publicationsData.filter(item => {
       const matchesSearch = searchQuery === "" || 
-        item.output.organization.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.output.executive_summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.input.toLowerCase().includes(searchQuery.toLowerCase());
+        (item.output?.organization || '').toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (item.output?.executive_summary || '').toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (item.input || '').toLowerCase().includes(searchQuery.toLowerCase());
       
-      const matchesOrg = selectedOrg === "all" || item.output.organization === selectedOrg;
+      const matchesOrg = selectedOrg === "all" || (item.output?.organization || '') === selectedOrg;
       
-      const matchesYear = selectedYear === "all" || item.output.year_coverage.includes(selectedYear);
+      const matchesYear = selectedYear === "all" || (item.output?.year_coverage || '').includes(selectedYear);
 
       return matchesSearch && matchesOrg && matchesYear;
     });
@@ -232,18 +232,20 @@ export default function ResearchLibrary() {
                           <div className="flex items-center gap-2 mb-2">
                             <Badge variant="outline" className="font-semibold">
                               <Building2 className="h-3 w-3 mr-1" />
-                              {item.output.organization}
+                              {item.output?.organization || 'Unknown'}
                             </Badge>
-                            <Badge variant="secondary">
-                              <Calendar className="h-3 w-3 mr-1" />
-                              {item.output.year_coverage}
-                            </Badge>
+                            {item.output?.year_coverage && (
+                              <Badge variant="secondary">
+                                <Calendar className="h-3 w-3 mr-1" />
+                                {item.output.year_coverage}
+                              </Badge>
+                            )}
                             <Badge className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100">
-                              {item.output.total_publications} {isArabic ? "منشور" : "publications"}
+                              {item.output?.total_publications || 0} {isArabic ? "منشور" : "publications"}
                             </Badge>
                           </div>
                           <CardTitle className="text-2xl mb-2">
-                            {item.output.organization} - {isArabic ? "المجموعة الكاملة" : "Complete Collection"}
+                            {item.output?.organization || 'Unknown'} - {isArabic ? "المجموعة الكاملة" : "Complete Collection"}
                           </CardTitle>
                           <CardDescription className="text-sm">
                             {item.input}
@@ -251,11 +253,11 @@ export default function ResearchLibrary() {
                         </div>
                         <div className="flex flex-col gap-2">
                           <Badge className={
-                            item.output.data_quality.includes("Excellent") ? "bg-green-600" :
-                            item.output.data_quality.includes("Good") ? "bg-blue-600" :
+                            (item.output?.data_quality || '').includes("Excellent") ? "bg-green-600" :
+                            (item.output?.data_quality || '').includes("Good") ? "bg-blue-600" :
                             "bg-yellow-600"
                           }>
-                            {item.output.data_quality}
+                            {item.output?.data_quality || 'Unknown'}
                           </Badge>
                         </div>
                       </div>
@@ -268,11 +270,11 @@ export default function ResearchLibrary() {
                             {isArabic ? "الملخص التنفيذي" : "Executive Summary"}
                           </h4>
                           <p className="text-sm text-muted-foreground leading-relaxed">
-                            {item.output.executive_summary.slice(0, 500)}...
+                            {(item.output?.executive_summary || 'No summary available').slice(0, 500)}...
                           </p>
                         </div>
 
-                        {item.output.key_data_points && (
+                        {item.output?.key_data_points && (
                           <div>
                             <h4 className="font-semibold mb-2 flex items-center gap-2">
                               <BarChart3 className="h-4 w-4" />
@@ -284,7 +286,7 @@ export default function ResearchLibrary() {
                           </div>
                         )}
 
-                        {item.output.publication_urls && (
+                        {item.output?.publication_urls && (
                           <div className="flex flex-wrap gap-2">
                             {item.output.publication_urls.split(',').slice(0, 3).map((url, urlIndex) => (
                               <Button
