@@ -535,3 +535,299 @@
 - [ ] Display all 8 historical events with dates
 - [ ] Show connections between events and economic indicators
 - [ ] Add impact analysis for each event
+
+
+---
+
+## 🎯 COMPREHENSIVE SITEMAP IMPLEMENTATION (115 Sections from Pasted_content_41.txt)
+
+### SECTION 1: Introduction & Purpose (8 pages)
+- [ ] 1.1.1 Vision Statement page (EN/AR) - Platform's long-term vision for Yemen economic transparency
+- [ ] 1.1.2 Mission Statement page (EN/AR) - Core mission and objectives
+- [ ] 1.1.3 Neutrality & Do-No-Harm Principles page - Ethical framework and conflict sensitivity
+- [ ] 1.2.1 Target Users page - Policy-makers, donors, NGOs, banks, researchers profiles
+- [ ] 1.2.2 Use Cases page - Monitoring, reporting, scenario planning examples
+- [ ] 1.3.1 Indicator Definitions & Data Quality page - Methodology for each indicator
+- [ ] 1.3.2 Confidence Scoring & Triangulation page - Data validation methodology
+- [ ] 1.3.3 API Registry & Data Ingestion page - Technical documentation for data sources
+
+### SECTION 2: Historical Context & Timeline (8 pages)
+- [ ] 2.1.1 2011-2013: Uprising & Transition page - Arab Spring, Hadi transition, National Dialogue
+- [ ] 2.1.2 2014-2015: State Collapse & War page - Houthi takeover, Operation Decisive Storm
+- [ ] 2.1.3 2016-2018: Central Bank Split & Currency War page - CBY split, currency policies
+- [ ] 2.1.4 2019-2021: Dual Currencies & Crisis page - Currency ban, COVID-19, humanitarian crisis
+- [ ] 2.1.5 2022-2025: Truce & Ongoing Fragmentation page - UN truce, current situation
+- [ ] 2.2.1 Political-Military Actors page - IRG/PLC, Houthis, STC, tribal blocs detailed profiles
+- [ ] 2.2.2 External Military Actors page - Saudi-led Coalition, UAE forces, regional involvement
+- [ ] 2.2.3 Conflict Milestones & Peace Efforts page - All negotiations, agreements, ceasefires
+
+### SECTION 3: Macro & Social Indicators (8 pages)
+- [ ] 3.1.1 GDP (real, nominal) page - Interactive charts 2010-2025, quarterly data
+- [ ] 3.1.2 Sectoral Contributions page - Oil, agriculture, services, manufacturing breakdown
+- [ ] 3.2.1 CPI - Aden & Sana'a page - Inflation comparison charts, monthly data
+- [ ] 3.2.2 Food Basket Cost & Fuel Prices page - WFP data, affordability analysis
+- [ ] 3.3.1 Poverty Headcount & Distribution page - Maps, urban/rural breakdown
+- [ ] 3.3.2 Labour Market Indicators & Remittances page - Unemployment, remittance flows
+- [ ] 3.4.1 Government Revenue & Expenditure page - IRG vs de facto authorities fiscal data
+- [ ] 3.4.2 Public Debt & Financing Needs page - Debt sustainability analysis
+
+### SECTION 4: Monetary & Currency Dynamics (6 pages)
+- [ ] 4.1.1 CBY-Aden page - Policies, FX auctions, new notes issuance, reserves
+- [ ] 4.1.2 CBY-Sana'a page - Policies, old notes ban, e-rial experiments, operations
+- [ ] 4.2.1 Official vs. Parallel Market Rates page - Daily exchange rate tracking
+- [ ] 4.2.2 Currency Gap & Inflation Transmission page - Spread analysis, impact charts
+- [ ] 4.3.1 Bank Deposits & Withdrawals page - Liquidity crisis, banking sector health
+- [ ] 4.3.2 Hawala & Cash-Based Economy page - Informal finance, remittance channels
+
+### SECTION 5: Stakeholder Hub (100+ individual pages)
+
+#### 5.1 Government & Political Actors (10+ pages)
+- [ ] 5.1.1.1 IRG Presidency page - President, powers, decisions, timeline
+- [ ] 5.1.1.2 IRG Cabinet page - Ministers, portfolios, policies
+- [ ] 5.1.1.3 IRG Governors page - Regional governors, control areas
+- [ ] 5.1.2.1 De facto Authorities Political Council page - Leadership, structure
+- [ ] 5.1.2.2 De facto Authorities Committees page - Economic, security, social committees
+- [ ] 5.1.3.1 STC Leadership page - President, council members
+- [ ] 5.1.3.2 STC Local Authorities page - Southern governorates control
+
+#### 5.2 Financial Institutions & Regulators (50+ pages)
+- [ ] 5.2.1.1 CBY-Aden comprehensive page - Full history, board, policies, data
+- [ ] 5.2.1.2 CBY-Sana'a comprehensive page - Full history, operations, sanctions
+- [ ] 5.2.2.1 CAC Bank page (ALREADY CREATED - enhance with more data)
+- [ ] 5.2.2.2 Tadhamon Islamic Bank page (ALREADY CREATED - enhance)
+- [ ] 5.2.2.3 Yemen Kuwait Bank page
+- [ ] 5.2.2.4 Yemen Commercial Bank page
+- [ ] 5.2.2.5 National Bank of Yemen page
+- [ ] 5.2.2.6 Saba Islamic Bank page
+- [ ] 5.2.2.7 United Bank page
+- [ ] 5.2.2.8 Yemen Bank for Reconstruction & Development page
+- [ ] 5.2.2.9 Al-Kuraimi Islamic Microfinance Bank page
+- [ ] 5.2.2.10 International Bank of Yemen page
+- [ ] 5.2.2.11 Arab Bank page
+- [ ] 5.2.2.12 Shamil Bank page
+- [ ] 5.2.2.13 Al-Amal Microfinance Bank page
+- [ ] 5.2.2.14 Yemen & Kuwait Bank for Trade & Investment page
+- [ ] 5.2.2.15 Cooperative & Agricultural Credit Bank page
+- [ ] 5.2.2.16 Real Estate Bank page
+- [ ] 5.2.2.17 Industrial Bank page
+- [ ] 5.2.3.1 Social Fund for Development (SFD) page
+- [ ] 5.2.3.2 Small & Micro Enterprise Promotion Service (SMEPS) page
+- [ ] 5.2.3.3 Aden Microfinance Foundation page
+- [ ] 5.2.3.4 National Microfinance Foundation page
+- [ ] 5.2.3.5 Al-Amal Microfinance Bank page
+- [ ] 5.2.3.6 Tadhamon Islamic Microfinance page
+- [ ] 5.2.4 Money Exchangers & Remittance Houses page - Major exchange companies
+
+#### 5.3 Business & Conglomerates (15+ pages)
+- [ ] 5.3.1.1 Hayel Saeed Anam Group page (ALREADY CREATED - enhance)
+- [ ] 5.3.1.2 Bin Mahfouz Group page
+- [ ] 5.3.1.3 Shaher Group page
+- [ ] 5.3.2.1 Yemen Mobile page - Telecom operations, ownership
+- [ ] 5.3.2.2 TeleYemen page - Telecom operations
+- [ ] 5.3.2.3 Major Fuel Importers page - Companies, volumes, market share
+- [ ] 5.3.2.4 Food Trading Companies page - Import/distribution networks
+- [ ] 5.3.2.5 Cement & Construction Companies page
+
+#### 5.4 International & Regional Actors (30+ pages)
+- [ ] 5.4.1.1 World Bank page (ALREADY CREATED - enhance with all projects)
+- [ ] 5.4.1.2 IMF page - All missions, programs, staff, reports
+- [ ] 5.4.1.3 UN OCHA page - Coordination, HRP, funding
+- [ ] 5.4.1.4 WFP page - Food assistance, beneficiaries, operations
+- [ ] 5.4.1.5 UNHCR page - Refugee/IDP assistance, camps
+- [ ] 5.4.1.6 IOM page - Displacement tracking, assistance
+- [ ] 5.4.1.7 UNICEF page - Child protection, education, health
+- [ ] 5.4.1.8 WHO page - Health system support, disease response
+- [ ] 5.4.1.9 FAO page - Agriculture, food security programs
+- [ ] 5.4.1.10 UNDP page - Governance, livelihoods, resilience
+- [ ] 5.4.1.11 ILO page - Labour programs
+- [ ] 5.4.1.12 UNESCO page - Education, culture
+- [ ] 5.4.2.1 Saudi Arabia page (ALREADY CREATED - enhance)
+- [ ] 5.4.2.2 UAE page - Military, aid, port investments
+- [ ] 5.4.2.3 Qatar page - Aid, mediation efforts
+- [ ] 5.4.2.4 Oman page - Mediation, trade, neutrality
+- [ ] 5.4.2.5 Kuwait page - Aid, Kuwait Fund projects
+- [ ] 5.4.2.6 USA page - USAID, diplomacy, sanctions
+- [ ] 5.4.2.7 UK page - FCDO aid, diplomacy
+- [ ] 5.4.2.8 EU page - Humanitarian aid, development
+- [ ] 5.4.2.9 Germany page - GIZ programs
+- [ ] 5.4.2.10 France page - AFD projects
+- [ ] 5.4.2.11 Japan page - JICA programs
+- [ ] 5.4.3.1 Sana'a Center for Strategic Studies page
+- [ ] 5.4.3.2 DevChampions page
+- [ ] 5.4.3.3 Chatham House page
+- [ ] 5.4.3.4 ACAPS page
+- [ ] 5.4.3.5 FEWS NET page
+
+#### 5.5 Oversight & Legal Bodies (3 pages)
+- [ ] 5.5.1 Anti-Corruption Commission & Supreme Audit page
+- [ ] 5.5.2 Customs & Tax Authorities page
+- [ ] 5.5.3 Statistical & Data Agencies page
+
+### SECTION 6: Events & Shocks (8 pages)
+- [ ] 6.1.1 FX Auctions, Reserve Requirements, Currency Decrees page
+- [ ] 6.1.2 Loan Defaults & Banking Restrictions page
+- [ ] 6.2.1 Major Offensive Operations, Blockades & Ceasefires page
+- [ ] 6.2.2 Attacks on Infrastructure (ports, pipelines, power stations) page
+- [ ] 6.3.1 Floods, Cyclones & Earthquakes page
+- [ ] 6.3.2 Cholera & COVID-19 Outbreaks page
+- [ ] 6.4.1 UN Sanctions Listings & Delistings page
+- [ ] 6.4.2 OFAC/EU/UK Designations & Exemptions page
+
+### SECTION 7: Sanctions & Compliance (3 pages)
+- [ ] 7.1.1 Entity Listings (UN, US, EU, UK) page
+- [ ] 7.1.2 Sanctioned Banks, Companies, and Individuals page
+- [ ] 7.2 Sanctions Intensity Index & Trends page
+- [ ] 7.3 Humanitarian Exemptions & Compliance Guidance page
+
+### SECTION 8: Aid & Projects (6 pages)
+- [ ] 8.1 Funding Flows & Donor Trends page - Sankey diagram, time series
+- [ ] 8.2.1 World Bank Projects page - All FMI, ECRP, health, education projects
+- [ ] 8.2.2 UN Agency Programmes page - All UNDP, UNICEF, WFP, WHO programs
+- [ ] 8.2.3 Regional Fund Initiatives page - Saudi Fund, UAE Red Crescent, Kuwait Fund
+- [ ] 8.3.1 International vs Local Implementers Share page
+- [ ] 8.3.2 Cash Transfer & Livelihood Programmes page
+
+### SECTION 9: Data & Methods (4 pages)
+- [ ] 9.1 Indicator Catalogue page - 50+ series with definitions, units, frequencies
+- [ ] 9.2 Data Sources & API Registry page - All sources, APIs, update frequencies
+- [ ] 9.3 Methodology page - Collection, validation, confidence scoring
+- [ ] 9.4 Glossary & Definitions page - All technical terms
+
+### SECTION 10: Tools & Simulators (4 pages)
+- [x] 10.1 Scenario Simulator (ALREADY CREATED - enhance with more variables)
+- [ ] 10.2 FX & Inflation Calculators page - Purchasing power, real vs nominal
+- [ ] 10.3 Microfinance & Banking Stress Tests page
+- [ ] 10.4 Actor Impact Analyzer page - See how decisions affect indicators
+
+### SECTION 11: Reports & Library (4 pages)
+- [ ] 11.1 Government & Official Reports page - Budgets, CBY bulletins
+- [ ] 11.2 Multilateral & Donor Reports page - World Bank, IMF, UN
+- [ ] 11.3 Think Tank & Academic Research page
+- [ ] 11.4 Media & Investigative Work page
+
+### SECTION 12: About & Governance (3 pages)
+- [ ] 12.1 Platform Origin & Development Partners page
+- [ ] 12.2 Governance Structure & Oversight page
+- [ ] 12.3 Contact & Feedback Channels page
+
+---
+
+## 📊 DATABASE POPULATION FROM 4,416+ PUBLICATIONS
+
+### Extract from World Bank Reports (238 publications)
+- [ ] Extract all project data (names, budgets, timelines, beneficiaries)
+- [ ] Extract all economic indicators mentioned
+- [ ] Extract all stakeholder mentions
+- [ ] Extract all recommendations
+- [ ] Extract all causation relationships
+- [ ] Add source citations for every data point
+
+### Extract from IMF Reports
+- [ ] Extract all mission findings
+- [ ] Extract all economic projections
+- [ ] Extract all policy recommendations
+- [ ] Extract all fiscal data
+- [ ] Extract all monetary data
+
+### Extract from UN Reports (OCHA, WFP, UNHCR, etc.)
+- [ ] Extract all humanitarian data
+- [ ] Extract all funding flows
+- [ ] Extract all beneficiary numbers
+- [ ] Extract all project details
+- [ ] Extract all coordination mechanisms
+
+### Extract from Think Tank Research (Sana'a Center, DevChampions, etc.)
+- [ ] Extract all analysis and insights
+- [ ] Extract all policy recommendations
+- [ ] Extract all stakeholder relationships
+- [ ] Extract all event timelines
+- [ ] Extract all economic data
+
+---
+
+## 🔗 CAUSATION MAPPING SYSTEM
+
+### Build Causation Database (Target: 1000+ relationships)
+- [ ] CBY split (2016) → Exchange rate divergence
+- [ ] Oil export shutdown → Fiscal crisis
+- [ ] Salary non-payment → Poverty increase
+- [ ] Currency ban (2019) → Inflation spike
+- [ ] Port restrictions → Food price increases
+- [ ] Conflict → GDP contraction
+- [ ] Aid flows → Exchange rate stabilization
+- [ ] Remittances → Household consumption
+- [ ] Microfinance growth → Banking gap filling
+- [ ] Sanctions → Banking operations disruption
+- [ ] Fuel shortages → Electricity crisis
+- [ ] Electricity shortages → Water crisis
+- [ ] Water shortages → Health deterioration
+- [ ] Health system collapse → Disease outbreaks
+- [ ] School closures → Education crisis
+
+### Create Causation Visualization Tool
+- [ ] Build interactive network diagram
+- [ ] Show direct and indirect relationships
+- [ ] Add time dimension (how relationships evolved)
+- [ ] Add strength indicators (weak, moderate, strong)
+- [ ] Add confidence levels for each relationship
+- [ ] Allow filtering by sector, time period, actor
+
+---
+
+## 🎯 IMMEDIATE NEXT 20 TASKS (Priority Order)
+
+1. [ ] Read all uploaded files to extract comprehensive data
+2. [ ] Expand indicators database to 100+ time series with monthly/quarterly data
+3. [ ] Create World Bank detailed page with all projects
+4. [ ] Create IMF detailed page with all missions
+5. [ ] Create Saudi Arabia enhanced page with military and aid details
+6. [ ] Create UAE detailed page with investments and operations
+7. [ ] Build all 17 commercial bank pages
+8. [ ] Build all 8 Islamic bank pages
+9. [ ] Build all 6 microfinance institution pages
+10. [ ] Create all UN agency pages (OCHA, WFP, UNHCR, IOM, UNICEF, WHO, FAO, UNDP)
+11. [ ] Expand events database to 500+ events
+12. [ ] Create causation mapping system with 100+ relationships
+13. [ ] Build GDP interactive chart with sectoral breakdown
+14. [ ] Build exchange rate comparison chart (Aden vs Sana'a)
+15. [ ] Build inflation comparison chart
+16. [ ] Build poverty trend chart with maps
+17. [ ] Build aid flows Sankey diagram
+18. [ ] Create sanctions registry with all listings
+19. [ ] Build project portfolio page for World Bank
+20. [ ] Implement primary source citations throughout
+
+---
+
+## ✅ COMPLETION CRITERIA
+
+**Platform is complete when:**
+- [ ] All 115 sitemap sections have dedicated pages
+- [ ] All 100+ stakeholder pages are built with detailed profiles
+- [ ] All 50+ bank/MFI pages are created
+- [ ] All databases have 1000+ entries with source citations
+- [ ] All 4,416 publications are indexed and searchable
+- [ ] All causation relationships are mapped
+- [ ] All interactive tools are functional
+- [ ] All data visualizations are working
+- [ ] All pages are bilingual (EN/AR)
+- [ ] All changes are pushed to GitHub
+- [ ] Everything is tested and verified in browser
+
+
+## ✅ COMPLETED IN THIS SESSION
+
+### Database Population
+- [x] Added 16 years of Real GDP data (2010-2025)
+- [x] Added 24 exchange rate data points (Aden & Sana'a, 2014-2025)
+- [x] Added 16 years of inflation data
+- [x] Added 7 poverty headcount data points
+- [x] Added 8 food insecurity data points
+- [x] Added 9 remittances data points
+- [x] Added 11 humanitarian aid data points
+- [x] Added 15 oil production data points
+- [x] Added 9 population data points
+- [x] Total: 120+ indicator data points populated
+
+### Stakeholder Pages Created
+- [x] 5.4.1.2 IMF comprehensive page with missions, recommendations, projections, reports, contacts
