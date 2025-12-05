@@ -865,3 +865,13 @@
 - [ ] Verify new dropdown navigation shows in preview
 - [ ] Test all stakeholder links work
 - [ ] Confirm changes are visible to user
+
+
+## 🔧 Fix Header.tsx Navigation (ACTUAL ISSUE)
+
+- [x] Update Header.tsx stakeholders dropdown with comprehensive stakeholder list
+- [x] Add International Institutions section (IMF, World Bank, UN agencies)
+- [x] Add Governments section (Saudi, UAE, Aden, Sanaa)
+- [x] Add Banks section
+- [x] Add Donors section
+- [x] Test in browser to verify changes show

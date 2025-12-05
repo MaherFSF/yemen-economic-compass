@@ -32,8 +32,34 @@ export default function Header() {
       causeway: 'عن كوزواي',
       language: 'English',
       // Stakeholders submenu
-      executiveDashboard: 'لوحة المانحين',
-      cbyDashboard: 'لوحة البنك المركزي',
+      intlInstitutions: 'المؤسسات الدولية',
+      governments: 'الحكومات',
+      banksSection: 'البنوك',
+      donorsSection: 'المانحون',
+      // International Institutions
+      imf: 'صندوق النقد الدولي',
+      worldBank: 'البنك الدولي',
+      unOcha: 'مكتب الأمم المتحدة لتنسيق الشؤون الإنسانية',
+      wfp: 'برنامج الأغذية العالمي',
+      unhcr: 'مفوضية الأمم المتحدة لشؤون اللاجئين',
+      iom: 'المنظمة الدولية للهجرة',
+      unicef: 'اليونيسف',
+      who: 'منظمة الصحة العالمية',
+      fao: 'منظمة الأغذية والزراعة',
+      undp: 'برنامج الأمم المتحدة الإنمائي',
+      // Governments
+      saudiArabia: 'المملكة العربية السعودية',
+      uae: 'الإمارات العربية المتحدة',
+      govAden: 'حكومة عدن',
+      govSanaa: 'حكومة صنعاء',
+      // Banks
+      cbyAdenStakeholder: 'البنك المركزي - عدن',
+      cbySanaaStakeholder: 'البنك المركزي - صنعاء',
+      commercialBanks: 'البنوك التجارية',
+      microfinanceInst: 'مؤسسات التمويل الأصغر',
+      // Donors
+      allDonors: 'جميع المانحين',
+      bilateralDonors: 'المانحون الثنائيون',
       // Data & Analysis submenu
       compass: 'لوحة البوصلة',
       whatIfSimulator: 'محاكي ماذا لو',
@@ -77,8 +103,34 @@ export default function Header() {
       causeway: 'About CauseWay',
       language: 'العربية',
       // Stakeholders submenu
-      executiveDashboard: 'Executive Dashboard',
-      cbyDashboard: 'CBY Dashboard',
+      intlInstitutions: 'International Institutions',
+      governments: 'Governments',
+      banksSection: 'Banks',
+      donorsSection: 'Donors',
+      // International Institutions
+      imf: 'IMF',
+      worldBank: 'World Bank',
+      unOcha: 'UN OCHA',
+      wfp: 'WFP',
+      unhcr: 'UNHCR',
+      iom: 'IOM',
+      unicef: 'UNICEF',
+      who: 'WHO',
+      fao: 'FAO',
+      undp: 'UNDP',
+      // Governments
+      saudiArabia: 'Saudi Arabia',
+      uae: 'UAE',
+      govAden: 'Aden Government',
+      govSanaa: 'Sana\'a Government',
+      // Banks
+      cbyAdenStakeholder: 'CBY-Aden',
+      cbySanaaStakeholder: 'CBY-Sana\'a',
+      commercialBanks: 'Commercial Banks',
+      microfinanceInst: 'Microfinance',
+      // Donors
+      allDonors: 'All Donors',
+      bilateralDonors: 'Bilateral Donors',
       // Data & Analysis submenu
       compass: 'Compass Dashboard',
       whatIfSimulator: 'What-If Simulator',
@@ -147,31 +199,46 @@ export default function Header() {
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align={isArabic ? "end" : "start"} className="w-64">
+              <DropdownMenuContent align={isArabic ? "end" : "start"} className="w-72 max-h-[600px] overflow-y-auto">
+                {/* International Institutions */}
                 <DropdownMenuLabel className="text-xs text-muted-foreground uppercase">
-                  {isArabic ? 'لوحات متخصصة' : 'Specialized Dashboards'}
+                  {t.intlInstitutions}
                 </DropdownMenuLabel>
+                <Link href="/imf"><DropdownMenuItem className="cursor-pointer">{t.imf}</DropdownMenuItem></Link>
+                <Link href="/world-bank"><DropdownMenuItem className="cursor-pointer">{t.worldBank}</DropdownMenuItem></Link>
+                <Link href="/un-ocha"><DropdownMenuItem className="cursor-pointer">{t.unOcha}</DropdownMenuItem></Link>
+                <Link href="/wfp"><DropdownMenuItem className="cursor-pointer">{t.wfp}</DropdownMenuItem></Link>
+                <Link href="/unhcr"><DropdownMenuItem className="cursor-pointer">{t.unhcr}</DropdownMenuItem></Link>
+                <Link href="/iom"><DropdownMenuItem className="cursor-pointer">{t.iom}</DropdownMenuItem></Link>
+                <Link href="/unicef"><DropdownMenuItem className="cursor-pointer">{t.unicef}</DropdownMenuItem></Link>
+                <Link href="/who"><DropdownMenuItem className="cursor-pointer">{t.who}</DropdownMenuItem></Link>
+                <Link href="/fao"><DropdownMenuItem className="cursor-pointer">{t.fao}</DropdownMenuItem></Link>
+                <Link href="/undp"><DropdownMenuItem className="cursor-pointer">{t.undp}</DropdownMenuItem></Link>
                 <DropdownMenuSeparator />
-                <Link href="/executive-dashboard">
-                  <DropdownMenuItem className="cursor-pointer py-3">
-                    <div>
-                      <div className="font-medium">{t.executiveDashboard}</div>
-                      <div className="text-xs text-muted-foreground">
-                        {isArabic ? 'للمانحين والمؤسسات الدولية' : 'For Donors & International Institutions'}
-                      </div>
-                    </div>
-                  </DropdownMenuItem>
-                </Link>
-                <Link href="/cby-dashboard">
-                  <DropdownMenuItem className="cursor-pointer py-3">
-                    <div>
-                      <div className="font-medium">{t.cbyDashboard}</div>
-                      <div className="text-xs text-muted-foreground">
-                        {isArabic ? 'للبنك المركزي اليمني' : 'For Central Bank of Yemen'}
-                      </div>
-                    </div>
-                  </DropdownMenuItem>
-                </Link>
+                {/* Governments */}
+                <DropdownMenuLabel className="text-xs text-muted-foreground uppercase">
+                  {t.governments}
+                </DropdownMenuLabel>
+                <Link href="/saudi-arabia"><DropdownMenuItem className="cursor-pointer">{t.saudiArabia}</DropdownMenuItem></Link>
+                <Link href="/uae"><DropdownMenuItem className="cursor-pointer">{t.uae}</DropdownMenuItem></Link>
+                <Link href="/gov-aden"><DropdownMenuItem className="cursor-pointer">{t.govAden}</DropdownMenuItem></Link>
+                <Link href="/gov-sanaa"><DropdownMenuItem className="cursor-pointer">{t.govSanaa}</DropdownMenuItem></Link>
+                <DropdownMenuSeparator />
+                {/* Banks */}
+                <DropdownMenuLabel className="text-xs text-muted-foreground uppercase">
+                  {t.banksSection}
+                </DropdownMenuLabel>
+                <Link href="/cby-aden"><DropdownMenuItem className="cursor-pointer">{t.cbyAdenStakeholder}</DropdownMenuItem></Link>
+                <Link href="/cby-sanaa"><DropdownMenuItem className="cursor-pointer">{t.cbySanaaStakeholder}</DropdownMenuItem></Link>
+                <Link href="/banks"><DropdownMenuItem className="cursor-pointer">{t.commercialBanks}</DropdownMenuItem></Link>
+                <Link href="/microfinance"><DropdownMenuItem className="cursor-pointer">{t.microfinanceInst}</DropdownMenuItem></Link>
+                <DropdownMenuSeparator />
+                {/* Donors */}
+                <DropdownMenuLabel className="text-xs text-muted-foreground uppercase">
+                  {t.donorsSection}
+                </DropdownMenuLabel>
+                <Link href="/donors"><DropdownMenuItem className="cursor-pointer">{t.allDonors}</DropdownMenuItem></Link>
+                <Link href="/bilateral-donors"><DropdownMenuItem className="cursor-pointer">{t.bilateralDonors}</DropdownMenuItem></Link>
               </DropdownMenuContent>
             </DropdownMenu>
 
@@ -328,16 +395,34 @@ export default function Header() {
               <div className="px-3 py-2 text-xs font-semibold text-muted-foreground uppercase">
                 {t.stakeholders}
               </div>
-              <Link href="/executive-dashboard">
-                <Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>
-                  {t.executiveDashboard}
-                </Button>
-              </Link>
-              <Link href="/cby-dashboard">
-                <Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>
-                  {t.cbyDashboard}
-                </Button>
-              </Link>
+              {/* International Institutions */}
+              <div className="px-3 py-1 text-xs font-medium text-muted-foreground">{t.intlInstitutions}</div>
+              <Link href="/imf"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.imf}</Button></Link>
+              <Link href="/world-bank"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.worldBank}</Button></Link>
+              <Link href="/un-ocha"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.unOcha}</Button></Link>
+              <Link href="/wfp"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.wfp}</Button></Link>
+              <Link href="/unhcr"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.unhcr}</Button></Link>
+              <Link href="/iom"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.iom}</Button></Link>
+              <Link href="/unicef"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.unicef}</Button></Link>
+              <Link href="/who"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.who}</Button></Link>
+              <Link href="/fao"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.fao}</Button></Link>
+              <Link href="/undp"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.undp}</Button></Link>
+              {/* Governments */}
+              <div className="px-3 py-1 text-xs font-medium text-muted-foreground mt-2">{t.governments}</div>
+              <Link href="/saudi-arabia"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.saudiArabia}</Button></Link>
+              <Link href="/uae"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.uae}</Button></Link>
+              <Link href="/gov-aden"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.govAden}</Button></Link>
+              <Link href="/gov-sanaa"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.govSanaa}</Button></Link>
+              {/* Banks */}
+              <div className="px-3 py-1 text-xs font-medium text-muted-foreground mt-2">{t.banksSection}</div>
+              <Link href="/cby-aden"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.cbyAdenStakeholder}</Button></Link>
+              <Link href="/cby-sanaa"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.cbySanaaStakeholder}</Button></Link>
+              <Link href="/banks"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.commercialBanks}</Button></Link>
+              <Link href="/microfinance"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.microfinanceInst}</Button></Link>
+              {/* Donors */}
+              <div className="px-3 py-1 text-xs font-medium text-muted-foreground mt-2">{t.donorsSection}</div>
+              <Link href="/donors"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.allDonors}</Button></Link>
+              <Link href="/bilateral-donors"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.bilateralDonors}</Button></Link>
             </div>
 
             <div className="space-y-1">
