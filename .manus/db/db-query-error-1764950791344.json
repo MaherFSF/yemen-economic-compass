@@ -1,0 +1,8 @@
+{
+  "query": "SELECT COUNT(*) as total FROM indicators UNION ALL SELECT COUNT(*) FROM indicators WHERE indicator_name LIKE '%GDP%' UNION ALL SELECT COUNT(*) FROM indicators WHERE indicator_name LIKE '%Exchange Rate%';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SELECT COUNT(*) as total FROM indicators UNION ALL SELECT COUNT(*) FROM indicators WHERE indicator_name LIKE '%GDP%' UNION ALL SELECT COUNT(*) FROM indicators WHERE indicator_name LIKE '%Exchange Rate%';",
+  "returncode": 1,
+  "logs": [
+    "ERROR 1054 (42S22) at line 1: Unknown column 'indicator_name' in 'where clause'"
+  ]
+}

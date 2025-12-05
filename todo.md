@@ -857,3 +857,11 @@
 - [ ] Force restart dev server to clear cache
 - [ ] Verify new navigation shows in browser
 - [ ] Confirm all stakeholder pages are accessible
+
+
+## 🔄 Force Server Restart to Reflect Changes
+
+- [ ] Restart dev server
+- [ ] Verify new dropdown navigation shows in preview
+- [ ] Test all stakeholder links work
+- [ ] Confirm changes are visible to user

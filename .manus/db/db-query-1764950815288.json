@@ -1,0 +1,19 @@
+{
+  "query": "SELECT COUNT(*) as total_records FROM indicators UNION ALL SELECT COUNT(DISTINCT nameEn) as unique_indicators FROM indicators UNION ALL SELECT COUNT(*) as gdp_records FROM indicators WHERE nameEn LIKE '%GDP%';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SELECT COUNT(*) as total_records FROM indicators UNION ALL SELECT COUNT(DISTINCT nameEn) as unique_indicators FROM indicators UNION ALL SELECT COUNT(*) as gdp_records FROM indicators WHERE nameEn LIKE '%GDP%';",
+  "rows": [
+    {
+      "total_records": "11"
+    },
+    {
+      "total_records": "16"
+    },
+    {
+      "total_records": "128"
+    }
+  ],
+  "messages": [],
+  "stdout": "total_records\n11\n16\n128\n",
+  "stderr": "",
+  "execution_time_ms": 52
+}

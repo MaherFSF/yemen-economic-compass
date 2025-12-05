@@ -1,0 +1,40 @@
+{
+  "query": "SELECT nameEn, date, value, source FROM indicators ORDER BY id LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SELECT nameEn, date, value, source FROM indicators ORDER BY id LIMIT 5;",
+  "rows": [
+    {
+      "nameEn": "Unknown",
+      "date": "2024-01-01",
+      "value": "N/A",
+      "source": "World Bank WDI"
+    },
+    {
+      "nameEn": "Unknown",
+      "date": "2024-01-01",
+      "value": "N/A",
+      "source": "WFP/WB"
+    },
+    {
+      "nameEn": "Unknown",
+      "date": "2024-01-01",
+      "value": "N/A",
+      "source": "Humanitarian reports"
+    },
+    {
+      "nameEn": "Unknown",
+      "date": "2024-01-01",
+      "value": "N/A",
+      "source": "Monitoring"
+    },
+    {
+      "nameEn": "Unknown",
+      "date": "2024-01-01",
+      "value": "N/A",
+      "source": "Monitoring"
+    }
+  ],
+  "messages": [],
+  "stdout": "nameEn\tdate\tvalue\tsource\nUnknown\t2024-01-01\tN/A\tWorld Bank WDI\nUnknown\t2024-01-01\tN/A\tWFP/WB\nUnknown\t2024-01-01\tN/A\tHumanitarian reports\nUnknown\t2024-01-01\tN/A\tMonitoring\nUnknown\t2024-01-01\tN/A\tMonitoring\n",
+  "stderr": "",
+  "execution_time_ms": 59
+}

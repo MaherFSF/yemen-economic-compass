@@ -1,0 +1,26 @@
+{
+  "query": "SELECT 'Total Records' as metric, COUNT(*) as count FROM indicators UNION SELECT 'Unique Indicators', COUNT(DISTINCT nameEn) FROM indicators UNION SELECT 'GDP Records', COUNT(*) FROM indicators WHERE nameEn LIKE '%GDP%' UNION SELECT 'Exchange Rate Records', COUNT(*) FROM indicators WHERE nameEn LIKE '%Exchange Rate%';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SELECT 'Total Records' as metric, COUNT(*) as count FROM indicators UNION SELECT 'Unique Indicators', COUNT(DISTINCT nameEn) FROM indicators UNION SELECT 'GDP Records', COUNT(*) FROM indicators WHERE nameEn LIKE '%GDP%' UNION SELECT 'Exchange Rate Records', COUNT(*) FROM indicators WHERE nameEn LIKE '%Exchange Rate%';",
+  "rows": [
+    {
+      "metric": "Unique Indicators",
+      "count": "11"
+    },
+    {
+      "metric": "GDP Records",
+      "count": "16"
+    },
+    {
+      "metric": "Total Records",
+      "count": "128"
+    },
+    {
+      "metric": "Exchange Rate Records",
+      "count": "24"
+    }
+  ],
+  "messages": [],
+  "stdout": "metric\tcount\nUnique Indicators\t11\nGDP Records\t16\nTotal Records\t128\nExchange Rate Records\t24\n",
+  "stderr": "",
+  "execution_time_ms": 56
+}
