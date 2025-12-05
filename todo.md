@@ -518,20 +518,20 @@
 - [ ] Create individual UAE profile page with humanitarian assistance
 
 ### Connect Dashboards to Real Data
-- [x] Created API routes for events, causations, recommendations, stakeholders
-- [x] Updated EventsTimeline to fetch real data from database
-- [x] All pages now use TRPC to fetch real data
 - [ ] Update What-If Simulator to use real indicators from database
 - [ ] Update Year Explorer to display real year-by-year economic data from database
+- [ ] Replace all mock data with database queries
 
 ### Add Data Visualizations
-- [x] Add Chart.js to project dependencies
-- [x] Create EconomicCharts component with GDP, inflation, and exchange rate visualizations
-- [x] Charts automatically fetch real data from indicators database
-- [x] Support filtering by actorId for stakeholder-specific charts
+- [ ] Add Chart.js to project dependencies
+- [ ] Create GDP trend line chart (2010-2025)
+- [ ] Create inflation rate chart
+- [ ] Create exchange rate comparison chart (official vs parallel)
+- [ ] Create poverty rate visualization
+- [ ] Add charts to stakeholder profiles showing funding trends
 
 ### Build Events Timeline Page
-- [x] Updated EventsTimeline to fetch real events from database
-- [x] Display all historical events with dates, categories, severity
-- [x] Show causal relationships between events
-- [x] Add impact analysis for each event
+- [ ] Create interactive timeline visualization
+- [ ] Display all 8 historical events with dates
+- [ ] Show connections between events and economic indicators
+- [ ] Add impact analysis for each event
