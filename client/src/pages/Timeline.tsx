@@ -54,8 +54,8 @@ export default function Timeline() {
   // Extract unique years from events
   const years = useMemo(() => {
     if (!events) return [];
-    const yearSet = new Set(events.map(e => new Date(e.date).getFullYear()));
-    return Array.from(yearSet).sort((a, b) => b - a);
+    const yearSet = new Set(events.map(e => e.date.substring(0, 4)));
+    return Array.from(yearSet).sort();
   }, [events]);
 
   // Filter events
@@ -70,58 +70,51 @@ export default function Timeline() {
         event.descriptionAr.includes(searchQuery);
       
       const matchesCategory = selectedCategory === "all" || event.category === selectedCategory;
-      
-      const eventYear = new Date(event.date).getFullYear().toString();
-      const matchesYear = selectedYear === "all" || eventYear === selectedYear;
+      const matchesYear = selectedYear === "all" || event.date.startsWith(selectedYear);
       
       return matchesSearch && matchesCategory && matchesYear;
-    }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    }).sort((a, b) => b.date.localeCompare(a.date)); // Sort by date descending
   }, [events, searchQuery, selectedCategory, selectedYear]);
 
-  // Get causations for an event
-  const getEventCausations = (eventId: number) => {
-    if (!causations) return { causes: [], effects: [] };
-    
-    const causes = causations.filter(c => c.effectEventId === eventId);
-    const effects = causations.filter(c => c.causeEventId === eventId);
-    
-    return { causes, effects };
-  };
+  // Count events by category
+  const categoryCounts = useMemo(() => {
+    if (!events) return {};
+    return events.reduce((acc, event) => {
+      acc[event.category] = (acc[event.category] || 0) + 1;
+      return acc;
+    }, {} as Record<string, number>);
+  }, [events]);
 
   if (isLoading) {
     return (
-      <div className="w-full py-12">
-        <div className="container max-w-6xl flex items-center justify-center min-h-[400px]">
-          <Loader2 className="w-8 h-8 animate-spin text-primary" />
-        </div>
+      <div className="min-h-screen flex items-center justify-center">
+        <Loader2 className="w-8 h-8 animate-spin text-primary" />
       </div>
     );
   }
 
-  const categories = ["all", "war", "economic", "policy", "humanitarian", "international"];
-
   return (
-    <div className="w-full py-12">
-      <div className="container max-w-6xl">
-        {/* Header */}
-        <div className="mb-12 text-center">
-          <Badge className="mb-4" variant="outline">
-            <Calendar className="h-4 w-4 mr-2" />
-            2010 - 2025
-          </Badge>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            {isArabic ? "الخط الزمني الشامل" : "Comprehensive Timeline"}
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100 dark:from-slate-950 dark:via-blue-950 dark:to-slate-900">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center gap-3 mb-4">
+            <Calendar className="w-10 h-10" />
+            <h1 className="text-4xl font-bold">
+              {isArabic ? "الخط الزمني الشامل" : "Comprehensive Timeline"}
+            </h1>
+          </div>
+          <p className="text-xl text-blue-100 max-w-3xl">
             {isArabic 
-              ? `${events?.length || 0} حدث رئيسي عبر 16 عاماً من التحولات الاقتصادية والسياسية`
-              : `${events?.length || 0} major events across 16 years of economic and political transformation`
-            }
+              ? "73 حدثاً رئيسياً عبر 16 عاماً (2010-2025) مع علاقات السببية والتأثيرات الاقتصادية"
+              : "73 major events across 16 years (2010-2025) with causation relationships and economic impacts"}
           </p>
         </div>
+      </div>
 
-        {/* Statistics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <div className="container mx-auto px-4 py-8">
+        {/* Statistics Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-sm text-muted-foreground">
@@ -135,7 +128,7 @@ export default function Timeline() {
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-sm text-muted-foreground">
-                {isArabic ? "السنوات" : "Years"}
+                {isArabic ? "السنوات المغطاة" : "Years Covered"}
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -145,7 +138,7 @@ export default function Timeline() {
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-sm text-muted-foreground">
-                {isArabic ? "العلاقات السببية" : "Causations"}
+                {isArabic ? "علاقات السببية" : "Causations"}
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -155,11 +148,11 @@ export default function Timeline() {
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-sm text-muted-foreground">
-                {isArabic ? "حرجة" : "Critical"}
+                {isArabic ? "الأحداث الحرجة" : "Critical Events"}
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="text-3xl font-bold">
+              <div className="text-3xl font-bold text-red-600">
                 {events?.filter(e => e.severity === "critical").length || 0}
               </div>
             </CardContent>
@@ -167,229 +160,174 @@ export default function Timeline() {
         </div>
 
         {/* Filters */}
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Filter className="w-5 h-5" />
-              {isArabic ? "تصفية" : "Filters"}
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
+        <div className="bg-white dark:bg-slate-900 rounded-lg shadow-md p-6 mb-8">
+          <div className="flex items-center gap-2 mb-4">
+            <Filter className="w-5 h-5" />
+            <h2 className="text-lg font-semibold">
+              {isArabic ? "تصفية الأحداث" : "Filter Events"}
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Search */}
             <div className="relative">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
               <Input
-                placeholder={isArabic ? "بحث..." : "Search..."}
+                placeholder={isArabic ? "ابحث في الأحداث..." : "Search events..."}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-10"
               />
             </div>
 
-            {/* Category */}
-            <div className="space-y-2">
-              <label className="text-sm font-medium">
-                {isArabic ? "الفئة" : "Category"}
-              </label>
-              <div className="flex flex-wrap gap-2">
-                {categories.map(cat => (
-                  <Button
-                    key={cat}
-                    variant={selectedCategory === cat ? "default" : "outline"}
-                    size="sm"
-                    onClick={() => setSelectedCategory(cat)}
-                  >
-                    {isArabic 
-                      ? cat === "all" ? "الكل" : 
-                        cat === "war" ? "حرب" :
-                        cat === "economic" ? "اقتصادي" :
-                        cat === "policy" ? "سياسة" :
-                        cat === "humanitarian" ? "إنساني" :
-                        "دولي"
-                      : cat.charAt(0).toUpperCase() + cat.slice(1)}
-                  </Button>
-                ))}
-              </div>
-            </div>
+            {/* Category Filter */}
+            <select
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="px-3 py-2 border rounded-md bg-background"
+            >
+              <option value="all">{isArabic ? "جميع الفئات" : "All Categories"}</option>
+              <option value="war">{isArabic ? "حرب" : "War"} ({categoryCounts.war || 0})</option>
+              <option value="economic">{isArabic ? "اقتصادي" : "Economic"} ({categoryCounts.economic || 0})</option>
+              <option value="policy">{isArabic ? "سياسة" : "Policy"} ({categoryCounts.policy || 0})</option>
+              <option value="humanitarian">{isArabic ? "إنساني" : "Humanitarian"} ({categoryCounts.humanitarian || 0})</option>
+              <option value="international">{isArabic ? "دولي" : "International"} ({categoryCounts.international || 0})</option>
+            </select>
 
-            {/* Year */}
-            <div className="space-y-2">
-              <label className="text-sm font-medium">
-                {isArabic ? "السنة" : "Year"}
-              </label>
-              <div className="flex flex-wrap gap-2">
-                <Button
-                  variant={selectedYear === "all" ? "default" : "outline"}
-                  size="sm"
-                  onClick={() => setSelectedYear("all")}
-                >
-                  {isArabic ? "الكل" : "All"}
-                </Button>
-                {years.map(year => (
-                  <Button
-                    key={year}
-                    variant={selectedYear === year.toString() ? "default" : "outline"}
-                    size="sm"
-                    onClick={() => setSelectedYear(year.toString())}
-                  >
-                    {year}
-                  </Button>
-                ))}
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+            {/* Year Filter */}
+            <select
+              value={selectedYear}
+              onChange={(e) => setSelectedYear(e.target.value)}
+              className="px-3 py-2 border rounded-md bg-background"
+            >
+              <option value="all">{isArabic ? "جميع السنوات" : "All Years"}</option>
+              {years.map(year => (
+                <option key={year} value={year}>{year}</option>
+              ))}
+            </select>
+          </div>
 
-        {/* Timeline */}
-        <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute right-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-border transform md:-translate-x-1/2"></div>
-
-          {/* Events */}
-          <div className="space-y-8">
-            {filteredEvents.length === 0 ? (
-              <Card>
-                <CardContent className="py-12 text-center text-muted-foreground">
-                  {isArabic ? "لا توجد أحداث" : "No events found"}
-                </CardContent>
-              </Card>
-            ) : (
-              filteredEvents.map((event, idx) => {
-                const Icon = categoryIcons[event.category as keyof typeof categoryIcons] || AlertTriangle;
-                const { causes, effects } = getEventCausations(event.id);
-                const isEven = idx % 2 === 0;
-                const eventDate = new Date(event.date);
-                
-                return (
-                  <div key={event.id} className={`relative flex items-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-                    {/* Dot */}
-                    <div className="absolute right-0 md:left-1/2 transform md:-translate-x-1/2">
-                      <div className={`h-4 w-4 rounded-full border-4 ${
-                        event.severity === 'critical' ? 'bg-red-500 border-red-200' :
-                        event.severity === 'high' ? 'bg-orange-500 border-orange-200' :
-                        event.severity === 'medium' ? 'bg-yellow-500 border-yellow-200' :
-                        'bg-gray-500 border-gray-200'
-                      }`}></div>
-                    </div>
-
-                    {/* Card */}
-                    <div className={`w-full md:w-[calc(50%-2rem)] ${isEven ? 'md:pr-8 pr-12' : 'md:pl-8 pr-12'}`}>
-                      <Card className={`border-l-4 ${categoryColors[event.category as keyof typeof categoryColors]} hover:shadow-lg transition-shadow`}>
-                        <CardHeader>
-                          <div className="flex items-start justify-between gap-4">
-                            <div className="flex items-center gap-3">
-                              <div className={`h-10 w-10 rounded-lg flex items-center justify-center ${severityColors[event.severity as keyof typeof severityColors]}`}>
-                                <Icon className="h-5 w-5" />
-                              </div>
-                              <div>
-                                <div className="flex items-center gap-2 mb-1">
-                                  <span className="font-bold text-lg">{eventDate.getFullYear()}</span>
-                                  <span className="text-sm text-muted-foreground">
-                                    {eventDate.toLocaleDateString(isArabic ? "ar-YE" : "en-US", { month: "short", day: "numeric" })}
-                                  </span>
-                                </div>
-                                <CardTitle className="text-base">
-                                  {isArabic ? event.titleAr : event.titleEn}
-                                </CardTitle>
-                              </div>
-                            </div>
-                            <Badge variant={event.severity === "critical" ? "destructive" : "secondary"}>
-                              {isArabic 
-                                ? event.severity === "critical" ? "حرج" :
-                                  event.severity === "high" ? "عالي" :
-                                  event.severity === "medium" ? "متوسط" :
-                                  "منخفض"
-                                : event.severity}
-                            </Badge>
-                          </div>
-                          <CardDescription className="mt-2">
-                            <Badge variant="outline" className="text-xs">
-                              {isArabic 
-                                ? event.category === "war" ? "حرب" :
-                                  event.category === "economic" ? "اقتصادي" :
-                                  event.category === "policy" ? "سياسة" :
-                                  event.category === "humanitarian" ? "إنساني" :
-                                  "دولي"
-                                : event.category}
-                            </Badge>
-                          </CardDescription>
-                        </CardHeader>
-                        <CardContent>
-                          <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                            {isArabic ? event.descriptionAr : event.descriptionEn}
-                          </p>
-                          
-                          {/* Causations */}
-                          {(causes.length > 0 || effects.length > 0) && (
-                            <div className="pt-3 border-t space-y-2">
-                              {causes.length > 0 && (
-                                <div className="text-xs">
-                                  <span className="font-semibold text-blue-600">
-                                    {isArabic ? "تسبب فيه:" : "Caused by:"}
-                                  </span>
-                                  <span className="text-muted-foreground ml-1">
-                                    {causes.length} {isArabic ? "حدث" : "event(s)"}
-                                  </span>
-                                </div>
-                              )}
-                              {effects.length > 0 && (
-                                <div className="text-xs">
-                                  <span className="font-semibold text-orange-600">
-                                    {isArabic ? "أدى إلى:" : "Led to:"}
-                                  </span>
-                                  <span className="text-muted-foreground ml-1">
-                                    {effects.length} {isArabic ? "حدث" : "event(s)"}
-                                  </span>
-                                </div>
-                              )}
-                            </div>
-                          )}
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </div>
-                );
-              })
-            )}
+          <div className="mt-4 text-sm text-muted-foreground">
+            {isArabic ? "عرض" : "Showing"} {filteredEvents.length} {isArabic ? "من" : "of"} {events?.length || 0} {isArabic ? "حدث" : "events"}
           </div>
         </div>
 
-        {/* Summary */}
-        <Card className="mt-12 border-2">
-          <CardHeader>
-            <CardTitle className="text-2xl">
-              {isArabic ? "16 عاماً بالأرقام" : "16 Years in Numbers"}
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-red-600">80%</div>
-                <div className="text-sm text-muted-foreground mt-1">
-                  {isArabic ? "الفقر" : "Poverty"}
-                </div>
+        {/* Timeline */}
+        <div className="space-y-6">
+          {filteredEvents.map((event, index) => {
+            const Icon = categoryIcons[event.category as keyof typeof categoryIcons];
+            const colorClass = categoryColors[event.category as keyof typeof categoryColors];
+            const severityClass = severityColors[event.severity as keyof typeof severityColors];
+
+            return (
+              <div key={event.id} className="relative">
+                {/* Timeline Line */}
+                {index < filteredEvents.length - 1 && (
+                  <div className="absolute left-6 top-16 bottom-0 w-0.5 bg-gradient-to-b from-blue-300 to-purple-300 dark:from-blue-700 dark:to-purple-700" />
+                )}
+
+                <Card className={`${colorClass} border-l-4 hover:shadow-lg transition-shadow`}>
+                  <CardHeader>
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex items-start gap-3 flex-1">
+                        <div className="p-2 bg-white dark:bg-slate-800 rounded-lg">
+                          <Icon className="w-6 h-6" />
+                        </div>
+                        <div className="flex-1">
+                          <CardTitle className="text-xl mb-2">
+                            {isArabic ? event.titleAr : event.titleEn}
+                          </CardTitle>
+                          <div className="flex flex-wrap gap-2 mb-2">
+                            <Badge variant="outline" className="gap-1">
+                              <Calendar className="w-3 h-3" />
+                              {new Date(event.date).toLocaleDateString(isArabic ? 'ar' : 'en', {
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric'
+                              })}
+                            </Badge>
+                            <Badge className={severityClass}>
+                              {isArabic 
+                                ? event.severity === "critical" ? "حرج" 
+                                  : event.severity === "high" ? "عالي"
+                                  : event.severity === "medium" ? "متوسط"
+                                  : "منخفض"
+                                : event.severity}
+                            </Badge>
+                            <Badge variant="secondary">
+                              {isArabic 
+                                ? event.category === "war" ? "حرب"
+                                  : event.category === "economic" ? "اقتصادي"
+                                  : event.category === "policy" ? "سياسة"
+                                  : event.category === "humanitarian" ? "إنساني"
+                                  : "دولي"
+                                : event.category}
+                            </Badge>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-base mb-4">
+                      {isArabic ? event.descriptionAr : event.descriptionEn}
+                    </CardDescription>
+
+                    {/* Actors */}
+                    {event.actors && (() => {
+                      try {
+                        const actorsList = JSON.parse(event.actors);
+                        return actorsList && actorsList.length > 0;
+                      } catch {
+                        return false;
+                      }
+                    })() && (
+                      <div className="mb-3">
+                        <div className="flex items-center gap-2 mb-2">
+                          <Users className="w-4 h-4 text-muted-foreground" />
+                          <span className="text-sm font-semibold text-muted-foreground">
+                            {isArabic ? "الجهات الفاعلة:" : "Actors:"}
+                          </span>
+                        </div>
+                        <div className="flex flex-wrap gap-2">
+                          {(() => {
+                            try {
+                              const actorsList = JSON.parse(event.actors!);
+                              return actorsList.map((actor: string, i: number) => (
+                                <Badge key={i} variant="outline">{actor}</Badge>
+                              ));
+                            } catch {
+                              return null;
+                            }
+                          })()}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Source */}
+                    {event.sources && (
+                      <div className="text-xs text-muted-foreground mt-3 pt-3 border-t">
+                        {isArabic ? "المصدر:" : "Source:"} {event.sources}
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-orange-600">240%</div>
-                <div className="text-sm text-muted-foreground mt-1">
-                  {isArabic ? "فجوة الصرف" : "FX Gap"}
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600">17M</div>
-                <div className="text-sm text-muted-foreground mt-1">
-                  {isArabic ? "جوعى" : "Food Insecure"}
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-purple-600">{events?.length || 0}</div>
-                <div className="text-sm text-muted-foreground mt-1">
-                  {isArabic ? "الأحداث" : "Events"}
-                </div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+            );
+          })}
+        </div>
+
+        {filteredEvents.length === 0 && (
+          <div className="text-center py-12">
+            <AlertTriangle className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
+            <h3 className="text-xl font-semibold mb-2">
+              {isArabic ? "لم يتم العثور على أحداث" : "No events found"}
+            </h3>
+            <p className="text-muted-foreground">
+              {isArabic ? "جرب تغيير معايير البحث أو التصفية" : "Try changing your search or filter criteria"}
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );

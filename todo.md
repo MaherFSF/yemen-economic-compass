@@ -875,3 +875,154 @@
 - [x] Add Banks section
 - [x] Add Donors section
 - [x] Test in browser to verify changes show
+
+
+---
+
+## 🎯 COMPREHENSIVE FINALIZATION - ALL 14 PRIORITIES
+
+### PRIORITY 1: Fix Timeline.tsx Error (HIGH)
+- [x] Fix "Card already declared" error in Timeline.tsx
+- [x] Remove duplicate imports
+- [x] Test Timeline page loads without console errors
+- [x] Verify all 73 events display correctly
+
+### PRIORITY 2: Replace Hardcoded Data with Database (HIGH)
+- [x] Update DataVisualization.tsx (704 lines) - replace hardcoded arrays with TRPC queries
+- [x] Audit all 68 pages for hardcoded data (only 2 pages had hardcoded arrays)
+- [x] Replace time-series data with database queries
+- [ ] Update AnalyticsDashboard.tsx - connect to database (if needed)
+- [ ] Update StatisticalIndicators.tsx - connect to database (if needed)
+- [ ] MicrofinanceObservatory.tsx - uses domain-specific report data (can enhance later)
+
+### PRIORITY 3: Populate Top Stakeholder Pages (HIGH)
+- [ ] World Bank page - comprehensive data, projects, funding, reports
+- [ ] IMF page - programs, conditions, publications, Yemen engagement
+- [ ] UNDP page - development projects, funding, impact
+- [ ] Saudi Arabia page - financial support, coalition role, projects
+- [ ] Houthis (Ansar Allah) page - control areas, economic policies, CBY-Sana'a
+
+### PRIORITY 4: Add 15+ More Causation Relationships (HIGH)
+- [ ] Oil Blockade (2015) → Government Revenue Collapse
+- [ ] Port Blockade (2015) → Import Restrictions → Food Crisis
+- [ ] Salary Crisis (2016) → Purchasing Power Collapse
+- [ ] Currency Ban (2019) → Exchange Rate Gap Widening
+- [ ] COVID-19 (2020) → Remittances Decline → Poverty Spike
+- [ ] UN Truce (2022) → Temporary Stabilization
+- [ ] Truce End (Oct 2022) → Renewed Instability
+- [ ] Red Sea Attacks (2024) → Trade Disruption
+- [ ] Houthi Expansion → Banking Fragmentation
+- [ ] Coalition Airstrikes → Infrastructure Destruction
+- [ ] Fuel Crisis → Inflation Acceleration
+- [ ] Banking Liquidity Crisis → Credit Crunch
+- [ ] Donor Fatigue → Aid Decline
+- [ ] Cholera Epidemic → Healthcare Collapse
+- [ ] IDP Crisis → Urban Pressure
+
+### PRIORITY 5: Test Mobile Responsiveness (HIGH)
+- [ ] Test all charts on mobile (Exchange Rate, GDP, Inflation, Humanitarian)
+- [ ] Fix chart overflow issues on small screens
+- [ ] Test ComprehensiveCharts page on mobile
+- [ ] Test Timeline page on mobile
+- [ ] Ensure all tables are responsive
+- [ ] Test navigation menu on mobile
+- [ ] Fix any layout breaking issues
+
+### PRIORITY 6: Add More Indicator Categories (MEDIUM)
+- [ ] Banking indicators (deposits, loans, liquidity, NPLs)
+- [ ] Trade indicators (imports, exports, trade balance)
+- [ ] Remittances data (inflows by country, trends)
+- [ ] Oil production (barrels/day, revenue, exports)
+- [ ] Humanitarian (IDPs, refugees, cholera cases, malnutrition)
+- [ ] Employment (unemployment rate, labor force)
+- [ ] Add 50+ more indicator data points to database
+
+### PRIORITY 7: Build Search Functionality (MEDIUM)
+- [ ] Create global search component
+- [ ] Search across events (title, description, category)
+- [ ] Search across indicators (name, category)
+- [ ] Search across publications (title, author, content)
+- [ ] Search across stakeholders (name, role)
+- [ ] Add search results page with highlighting
+- [ ] Add search autocomplete/suggestions
+
+### PRIORITY 8: Create Methodology Page (MEDIUM)
+- [ ] Explain data collection methods
+- [ ] Document data sources (World Bank, IMF, UN, CBY, etc.)
+- [ ] Describe analysis frameworks
+- [ ] Explain causation methodology
+- [ ] Add limitations and caveats
+- [ ] Include academic references
+- [ ] Add contact for data inquiries
+
+### PRIORITY 9: Add Export Capabilities (MEDIUM)
+- [ ] CSV export for all indicators
+- [ ] Excel export with formatting
+- [ ] PDF export for event timeline
+- [ ] Chart export as PNG/SVG
+- [ ] Add export buttons to all data pages
+- [ ] Test all export formats work correctly
+
+### PRIORITY 10: Populate Remaining Stakeholder Pages (MEDIUM)
+- [ ] UAE page - investments, aid, coalition role
+- [ ] Iran page - support to Houthis, regional influence
+- [ ] UN OCHA page - humanitarian coordination
+- [ ] USAID page - aid programs, projects
+- [ ] EU page - development funding
+- [ ] Oman page - mediation efforts
+- [ ] Qatar page - aid and mediation
+- [ ] STC page - southern separatist movement
+- [ ] IRG page - government forces
+- [ ] All remaining 40+ stakeholder pages
+
+### PRIORITY 11: Create Glossary (LOW)
+- [ ] Define "CBY Split" with context
+- [ ] Define "Parallel Economy"
+- [ ] Define "Exchange Rate Divergence"
+- [ ] Define "Dual Monetary System"
+- [ ] Define "Humanitarian Crisis"
+- [ ] Define "Coalition Intervention"
+- [ ] Add 50+ technical terms with definitions
+- [ ] Link glossary terms throughout site
+
+### PRIORITY 12: Advanced Filtering (LOW)
+- [ ] Filter events by date range (slider)
+- [ ] Filter events by category (checkboxes)
+- [ ] Filter events by stakeholder
+- [ ] Filter events by severity level
+- [ ] Filter indicators by category
+- [ ] Filter indicators by time period
+- [ ] Save filter preferences
+
+### PRIORITY 13: Performance Optimization (LOW)
+- [ ] Lazy load charts (only render when visible)
+- [ ] Implement pagination for large datasets
+- [ ] Add caching for TRPC queries
+- [ ] Optimize image loading
+- [ ] Code splitting for faster initial load
+- [ ] Run Lighthouse audit
+- [ ] Achieve 90+ performance score
+
+### PRIORITY 14: Route Cleanup (LOW)
+- [ ] Audit all 68 page routes
+- [ ] Identify unused/duplicate pages
+- [ ] Remove or consolidate redundant pages
+- [ ] Ensure all routes in App.tsx are valid
+- [ ] Test all navigation links work
+- [ ] Create sitemap of final routes
+
+### BONUS: Ensure All Under-Construction Pages Ready
+- [ ] Audit all pages for "under construction" notices
+- [ ] Complete placeholder content with real data
+- [ ] Remove all "coming soon" messages
+- [ ] Ensure every page has meaningful content
+- [ ] Test every page loads without errors
+- [ ] Verify all pages have proper Arabic translations
+
+---
+
+## 📊 FINALIZATION PROGRESS TRACKER
+- **Total Finalization Tasks**: 80+
+- **Completed**: 0
+- **Current Phase**: 1 - Fix Timeline.tsx Error
+- **Target Completion**: All 14 priorities + under-construction pages

@@ -28,6 +28,7 @@ import CommercialBanksHub from "./pages/CommercialBanksHub";
 import FinancialLiterature from "./pages/FinancialLiterature";
 import FinancialCalculators from "./pages/FinancialCalculators";
 import DataVisualization from "./pages/DataVisualization";
+import ComprehensiveCharts from "./pages/ComprehensiveCharts";
 import StakeholderHub from "./pages/StakeholderHub";
 import KeyStatistics from "./pages/KeyStatistics";
 import FinancialTransformation from "./pages/FinancialTransformation";
@@ -98,6 +99,7 @@ function Router() {
       <Route path={"/literature"} component={ResearchLibrary} />
       <Route path={"/calculators"} component={FinancialCalculators} />
       <Route path={"/data-viz"} component={DataVisualization} />
+      <Route path={"/comprehensive-charts"} component={ComprehensiveCharts} />
       <Route path={"/stakeholders"} component={StakeholderHub} />
         <Route path="/stakeholders/saudi-arabia" component={SaudiArabiaPage} />
       <Route path="/imf" component={IMF} />

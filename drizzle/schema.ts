@@ -1,4 +1,4 @@
-import { int, mysqlEnum, mysqlTable, text, timestamp, varchar } from "drizzle-orm/mysql-core";
+import { bigint, int, mysqlEnum, mysqlTable, text, timestamp, varchar } from "drizzle-orm/mysql-core";
 
 /**
  * Core user table backing auth flow.
@@ -117,6 +117,16 @@ export const actors = mysqlTable("actors", {
   interests: text("interests"),
   /** JSON array of capabilities */
   capabilities: text("capabilities"),
+  /** Website URL */
+  website: text("website"),
+  /** Contact information as JSON */
+  contactInfo: text("contactInfo"),
+  /** Total funding provided (in USD, stored in cents to avoid decimal issues) */
+  fundingProvided: bigint("fundingProvided", { mode: "number" }),
+  /** JSON array of projects */
+  projects: text("projects"),
+  /** Logo URL */
+  logoUrl: text("logoUrl"),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
 });

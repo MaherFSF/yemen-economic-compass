@@ -22,6 +22,13 @@
       "when": 1763223940771,
       "tag": "0002_silly_network",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1765001383918,
+      "tag": "0003_rapid_kat_farrell",
+      "breakpoints": true
     }
   ]
 }
