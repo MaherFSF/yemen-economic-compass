@@ -1,0 +1,130 @@
+{
+  "query": "SELECT c.id, c.causeEventId, c.effectEventId, c.mechanismEn, c.strength, c.confidence FROM causations c LIMIT 15",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SELECT c.id, c.causeEventId, c.effectEventId, c.mechanismEn, c.strength, c.confidence FROM causations c LIMIT 15",
+  "rows": [
+    {
+      "id": "1",
+      "causeEventId": "1",
+      "effectEventId": "2",
+      "mechanismEn": "Arab Spring protests destabilized government, creating conditions for civil war",
+      "strength": "80",
+      "confidence": "90"
+    },
+    {
+      "id": "2",
+      "causeEventId": "2",
+      "effectEventId": "3",
+      "mechanismEn": "War escalation forced CBY relocation to Aden, creating dual banking system",
+      "strength": "95",
+      "confidence": "95"
+    },
+    {
+      "id": "3",
+      "causeEventId": "3",
+      "effectEventId": "4",
+      "mechanismEn": "Dual central banks caused currency fragmentation and exchange rate collapse",
+      "strength": "90",
+      "confidence": "90"
+    },
+    {
+      "id": "4",
+      "causeEventId": "4",
+      "effectEventId": "5",
+      "mechanismEn": "Currency collapse reduced purchasing power, triggering humanitarian crisis",
+      "strength": "85",
+      "confidence": "85"
+    },
+    {
+      "id": "5",
+      "causeEventId": "2",
+      "effectEventId": "7",
+      "mechanismEn": "War disrupted banking operations, leading to sector fragmentation",
+      "strength": "80",
+      "confidence": "85"
+    },
+    {
+      "id": "6",
+      "causeEventId": "5",
+      "effectEventId": "8",
+      "mechanismEn": "COVID-19 pandemic exacerbated existing humanitarian crisis",
+      "strength": "75",
+      "confidence": "80"
+    },
+    {
+      "id": "7",
+      "causeEventId": "6",
+      "effectEventId": "7",
+      "mechanismEn": "Truce provided temporary stability but banking crisis persisted",
+      "strength": "70",
+      "confidence": "75"
+    },
+    {
+      "id": "8",
+      "causeEventId": "7",
+      "effectEventId": "8",
+      "mechanismEn": "Banking crisis reduced access to financial services, worsening poverty",
+      "strength": "85",
+      "confidence": "90"
+    },
+    {
+      "id": "30001",
+      "causeEventId": "90008",
+      "effectEventId": "90010",
+      "mechanismEn": "Dual central bank systems created separate monetary policies, leading to divergent exchange rates as Aden printed new currency while Sana'a controlled old notes",
+      "strength": "95",
+      "confidence": "95"
+    },
+    {
+      "id": "30002",
+      "causeEventId": "90017",
+      "effectEventId": "90024",
+      "mechanismEn": "Currency ban deepened monetary fragmentation, accelerating exchange rate divergence between Aden and Sana'a zones",
+      "strength": "90",
+      "confidence": "85"
+    },
+    {
+      "id": "30003",
+      "causeEventId": "30002",
+      "effectEventId": "90007",
+      "mechanismEn": "Coalition military intervention led to port blockades, airstrikes on infrastructure, and economic collapse, triggering massive humanitarian crisis",
+      "strength": "90",
+      "confidence": "95"
+    },
+    {
+      "id": "30004",
+      "causeEventId": "90019",
+      "effectEventId": "90025",
+      "mechanismEn": "COVID-19 oil price collapse eliminated Yemen's minimal oil revenue, devastating government finances and accelerating poverty crisis",
+      "strength": "80",
+      "confidence": "80"
+    },
+    {
+      "id": "60001",
+      "causeEventId": "120003",
+      "effectEventId": "120005",
+      "mechanismEn": "The 2018 $2B deposit provided critical currency support and stabilized the exchange rate, demonstrating its effectiveness. This success led Saudi Arabia to extend the deposit in 2022 to maintain continued stability.",
+      "strength": "95",
+      "confidence": "100"
+    },
+    {
+      "id": "60002",
+      "causeEventId": "120003",
+      "effectEventId": "120006",
+      "mechanismEn": "The 2018 deposit established Saudi Arabia as the primary bilateral financial supporter of Yemen. This precedent and the demonstrated impact of financial support led to continued and expanded support packages including the $500M in 2024.",
+      "strength": "85",
+      "confidence": "90"
+    },
+    {
+      "id": "60003",
+      "causeEventId": "120001",
+      "effectEventId": "120007",
+      "mechanismEn": "The World Bank 2010 Social Fund project demonstrated the effectiveness of community-driven development and social protection programs. This successful model informed the design of the 2025 Financial Inclusion project, which also focuses on grassroots impact.",
+      "strength": "75",
+      "confidence": "85"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tcauseEventId\teffectEventId\tmechanismEn\tstrength\tconfidence\n1\t1\t2\tArab Spring protests destabilized government, creating conditions for civil war\t80\t90\n2\t2\t3\tWar escalation forced CBY relocation to Aden, creating dual banking system\t95\t95\n3\t3\t4\tDual central banks caused currency fragmentation and exchange rate collapse\t90\t90\n4\t4\t5\tCurrency collapse reduced purchasing power, triggering humanitarian crisis\t85\t85\n5\t2\t7\tWar disrupted banking operations, leading to sector fragmentation\t80\t85\n6\t5\t8\tCOVID-19 pandemic exacerbated existing humanitarian crisis\t75\t80\n7\t6\t7\tTruce provided temporary stability but banking crisis persisted\t70\t75\n8\t7\t8\tBanking crisis reduced access to financial services, worsening poverty\t85\t90\n30001\t90008\t90010\tDual central bank systems created separate monetary policies, leading to divergent exchange rates as Aden printed new currency while Sana'a controlled old notes\t95\t95\n30002\t90017\t90024\tCurrency ban deepened monetary fragmentation, accelerating exchange rate divergence between Aden and Sana'a zones\t90\t85\n30003\t30002\t90007\tCoalition military intervention led to port blockades, airstrikes on infrastructure, and economic collapse, triggering massive humanitarian crisis\t90\t95\n30004\t90019\t90025\tCOVID-19 oil price collapse eliminated Yemen's minimal oil revenue, devastating government finances and accelerating poverty crisis\t80\t80\n60001\t120003\t120005\tThe 2018 $2B deposit provided critical currency support and stabilized the exchange rate, demonstrating its effectiveness. This success led Saudi Arabia to extend the deposit in 2022 to maintain continued stability.\t95\t100\n60002\t120003\t120006\tThe 2018 deposit established Saudi Arabia as the primary bilateral financial supporter of Yemen. This precedent and the demonstrated impact of financial support led to continued and expanded support packages including the $500M in 2024.\t85\t90\n60003\t120001\t120007\tThe World Bank 2010 Social Fund project demonstrated the effectiveness of community-driven development and social protection programs. This successful model informed the design of the 2025 Financial Inclusion project, which also focuses on grassroots impact.\t75\t85\n",
+  "stderr": "",
+  "execution_time_ms": 95
+}

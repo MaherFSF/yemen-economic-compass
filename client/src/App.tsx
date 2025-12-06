@@ -49,6 +49,9 @@ import SaudiArabiaPage from "./pages/SaudiArabiaPage";
 import WorldBankJourney from "./pages/WorldBankJourney";
 import FinancialFlowsNetwork from "./pages/FinancialFlowsNetwork";
 import HayelSaeedAnam from "./pages/stakeholders/HayelSaeedAnam";
+import WorldBankPage from "./pages/stakeholders/WorldBankPage";
+import IMFPage from "./pages/stakeholders/IMFPage";
+import SaudiArabiaPageNew from "./pages/stakeholders/SaudiArabiaPage";
 import BankingDashboard from "./pages/BankingDashboard";
 import YearExplorer from "./pages/YearExplorer";
 import WhatIfSimulator from "./pages/WhatIfSimulator";
@@ -100,8 +103,11 @@ function Router() {
       <Route path={"/calculators"} component={FinancialCalculators} />
       <Route path={"/data-viz"} component={DataVisualization} />
       <Route path={"/comprehensive-charts"} component={ComprehensiveCharts} />
-      <Route path={"/stakeholders"} component={StakeholderHub} />
-        <Route path="/stakeholders/saudi-arabia" component={SaudiArabiaPage} />
+       <Route path="/stakeholders" component={StakeholderHub} />
+      <Route path="/stakeholders/world-bank" component={WorldBankPage} />
+      <Route path="/stakeholders/imf" component={IMFPage} />
+      <Route path="/stakeholders/saudi-arabia-new" component={SaudiArabiaPageNew} />
+      <Route path="/stakeholders/saudi-arabia" component={SaudiArabiaPage} />
       <Route path="/imf" component={IMF} />
       <Route path="/world-bank" component={WorldBankDetailed} />
       <Route path="/saudi-arabia" component={SaudiArabia} />

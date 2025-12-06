@@ -1,0 +1,110 @@
+{
+  "query": "SELECT id, titleEn, date FROM events ORDER BY date, id LIMIT 20",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SELECT id, titleEn, date FROM events ORDER BY date, id LIMIT 20",
+  "rows": [
+    {
+      "id": "90001",
+      "titleEn": "Economic Baseline Year",
+      "date": "2010-01-01"
+    },
+    {
+      "id": "120001",
+      "titleEn": "World Bank Approves $60M for Yemen Social Fund",
+      "date": "2010-03-30"
+    },
+    {
+      "id": "120002",
+      "titleEn": "World Bank Grant for Private Sector Growth",
+      "date": "2010-12-14"
+    },
+    {
+      "id": "90002",
+      "titleEn": "Arab Spring Protests Begin",
+      "date": "2011-01-27"
+    },
+    {
+      "id": "1",
+      "titleEn": "Yemeni Revolution Begins",
+      "date": "2011-02-11"
+    },
+    {
+      "id": "30001",
+      "titleEn": "Arab Spring Protests Begin in Yemen",
+      "date": "2011-02-11"
+    },
+    {
+      "id": "90003",
+      "titleEn": "President Saleh Signs GCC Initiative",
+      "date": "2011-11-23"
+    },
+    {
+      "id": "90004",
+      "titleEn": "Hadi Becomes President",
+      "date": "2012-02-27"
+    },
+    {
+      "id": "90026",
+      "titleEn": "National Dialogue Conference Begins",
+      "date": "2013-01-15"
+    },
+    {
+      "id": "90027",
+      "titleEn": "Houthis Expand from Saada",
+      "date": "2013-09-21"
+    },
+    {
+      "id": "90028",
+      "titleEn": "NDC Concludes",
+      "date": "2014-01-25"
+    },
+    {
+      "id": "90029",
+      "titleEn": "Fuel Subsidy Cuts Announced",
+      "date": "2014-07-08"
+    },
+    {
+      "id": "2",
+      "titleEn": "Houthi Takeover of Sana'a",
+      "date": "2014-09-21"
+    },
+    {
+      "id": "60001",
+      "titleEn": "Houthis Take Control of Sanaa",
+      "date": "2014-09-21"
+    },
+    {
+      "id": "90005",
+      "titleEn": "Houthis Seize Sana'a",
+      "date": "2014-09-21"
+    },
+    {
+      "id": "90030",
+      "titleEn": "Hadi Resigns Under Pressure",
+      "date": "2015-01-22"
+    },
+    {
+      "id": "90031",
+      "titleEn": "Hadi Escapes to Aden",
+      "date": "2015-02-21"
+    },
+    {
+      "id": "90032",
+      "titleEn": "Hadi Flees to Saudi Arabia",
+      "date": "2015-03-25"
+    },
+    {
+      "id": "3",
+      "titleEn": "Operation Decisive Storm",
+      "date": "2015-03-26"
+    },
+    {
+      "id": "30002",
+      "titleEn": "Operation Decisive Storm Begins",
+      "date": "2015-03-26"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitleEn\tdate\n90001\tEconomic Baseline Year\t2010-01-01\n120001\tWorld Bank Approves $60M for Yemen Social Fund\t2010-03-30\n120002\tWorld Bank Grant for Private Sector Growth\t2010-12-14\n90002\tArab Spring Protests Begin\t2011-01-27\n1\tYemeni Revolution Begins\t2011-02-11\n30001\tArab Spring Protests Begin in Yemen\t2011-02-11\n90003\tPresident Saleh Signs GCC Initiative\t2011-11-23\n90004\tHadi Becomes President\t2012-02-27\n90026\tNational Dialogue Conference Begins\t2013-01-15\n90027\tHouthis Expand from Saada\t2013-09-21\n90028\tNDC Concludes\t2014-01-25\n90029\tFuel Subsidy Cuts Announced\t2014-07-08\n2\tHouthi Takeover of Sana'a\t2014-09-21\n60001\tHouthis Take Control of Sanaa\t2014-09-21\n90005\tHouthis Seize Sana'a\t2014-09-21\n90030\tHadi Resigns Under Pressure\t2015-01-22\n90031\tHadi Escapes to Aden\t2015-02-21\n90032\tHadi Flees to Saudi Arabia\t2015-03-25\n3\tOperation Decisive Storm\t2015-03-26\n30002\tOperation Decisive Storm Begins\t2015-03-26\n",
+  "stderr": "",
+  "execution_time_ms": 59
+}
