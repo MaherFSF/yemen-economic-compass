@@ -1,0 +1,27 @@
+{
+  "total_indicators": 0,
+  "categories": {},
+  "key_indicators": [
+    "NY.GDP.MKTP.CD",
+    "NY.GDP.PCAP.CD",
+    "NY.GDP.MKTP.KD.ZG",
+    "FP.CPI.TOTL.ZG",
+    "PA.NUS.FCRF",
+    "SP.POP.TOTL",
+    "SI.POV.DDAY",
+    "SL.UEM.TOTL.ZS",
+    "BX.TRF.PWKR.CD.DT",
+    "NE.EXP.GNFS.CD",
+    "NE.IMP.GNFS.CD",
+    "GC.REV.XGRT.GD.ZS",
+    "GC.XPN.TOTL.GD.ZS",
+    "SH.DYN.MORT",
+    "SE.PRM.NENR",
+    "SH.MED.BEDS.ZS",
+    "EG.ELC.ACCS.ZS",
+    "SH.H2O.SMDW.ZS",
+    "SP.DYN.LE00.IN",
+    "EN.POP.DNST"
+  ],
+  "collection_date": "2025-12-06 17:11:31"
+}

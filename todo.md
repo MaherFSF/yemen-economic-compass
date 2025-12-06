@@ -1,421 +1,426 @@
-# Yemen Economic Compass - TODO
+# Yemen Economic Compass - MASSIVE TRANSFORMATION PLAN
 
-## 🚀 **CURRENT PRIORITY: COMPREHENSIVE PLATFORM COMPLETION** (User Request - Jan 2025)
-
-### Phase 1: Causation Relationships Expansion ✅ COMPLETE
-- [x] Add 20+ comprehensive causation relationships (event-to-indicator) - **27 total**
-- [x] Map CBY split (2016) → exchange rate divergence with quantified impact
-- [x] Map Saudi $2B deposit (2018) → exchange rate stabilization with evidence
-- [x] Map currency ban (Dec 2019) → inflation spike with data
-- [x] Map World Bank FMI project ($20M) → banking sector improvements
-- [x] Map IMF ECF program → fiscal reforms
-- [x] Map coalition intervention (2015) → GDP contraction (-43.2%)
-- [x] Map UN truce (2022) → humanitarian access improvements
-- [x] Map Houthi taxation policies → inflation pressures
-- [x] Map COVID-19 (2020) → remittances decline
-- [x] Map oil blockade → revenue collapse
-- [x] Add bilingual mechanisms and evidence for all causations
-- [x] Ensure all causations have strength and confidence levels
-
-### Phase 2: Stakeholder Detail Pages (IN PROGRESS)
-- [x] Build World Bank stakeholder page with projects, funding, timeline ($475M documented)
-- [x] Build IMF stakeholder page with programs, conditions, reports ($577M)
-- [ ] Build UNDP stakeholder page with projects and impact metrics ($500M)
-- [x] Build Saudi Arabia stakeholder page with aid breakdown ($7.16B)
-- [x] Create StakeholderDetail reusable component with tabs
-- [x] Create Breadcrumb navigation component
-- [x] Add routes to App.tsx for new stakeholder pages
-- [ ] Build Houthis stakeholder page with control areas and policies
-- [ ] Build UAE stakeholder page with investments and aid
-- [ ] Build UN OCHA stakeholder page with humanitarian coordination
-- [ ] Build WFP stakeholder page with food assistance programs
-- [ ] Build UNHCR stakeholder page with refugee support
-- [ ] Build all remaining stakeholder pages from actors database (29 total)
-
-### Phase 3: Global Search Implementation
-- [ ] Create search index for events, indicators, stakeholders, publications
-- [ ] Implement search API endpoint with TRPC
-- [ ] Build SearchBar component with autocomplete
-- [ ] Add filters by date range, category, severity, actor
-- [ ] Implement search results page with highlighting
-- [ ] Add search to header navigation
-- [ ] Test search functionality across all content types
-- [ ] Ensure bilingual search works (Arabic/English)
-
-### Phase 4: Complete All Pages and Subpages
-- [x] Timeline page fully populated with 84 events
-- [x] ComprehensiveCharts page shows causation markers
-- [x] DataVisualization page using database queries
-- [ ] Stakeholder Hub with all actor profiles displayed
-- [ ] Banking Sector pages with all 16 banks
-- [ ] Microfinance Observatory with all MFIs
-- [ ] Economic Crisis page with full narrative
-- [ ] Currency War page with exchange rate analysis
-- [ ] Complete all "under construction" pages
-- [ ] Verify all navigation links work
-- [ ] Ensure all pages have bilingual content
-
-### Phase 5: Database Continuous Updates
-- [x] Events: 84 comprehensive events (2010-2025)
-- [x] Indicators: 215+ data points
-- [x] Causations: 7 relationships
-- [x] Stakeholders: 5 detailed profiles
-- [x] Actors: 29 organizations
-- [ ] Add 20+ more events for complete coverage
-- [ ] Expand indicators to 300+ data points
-- [ ] Add all 30+ organizations from research library
-- [ ] Populate stakeholders table with all profiles
-- [ ] Add recommendations for each stakeholder
-- [ ] Expand banks table with complete financial data
-
-### Phase 6: GitHub Synchronization
-- [ ] Push all database changes to GitHub
-- [ ] Push all new pages and components
-- [ ] Update README with latest features
-- [ ] Commit causation relationships
-- [ ] Commit stakeholder pages
-- [ ] Commit search functionality
-- [ ] Verify repository is up to date
-- [ ] Test deployment from GitHub
+**Goal:** Transform into THE definitive authoritative source for Yemen economy (2010-2025)
 
 ---
 
-## 🎨 PREVIOUS PRIORITY: COMPLETE PLATFORM REDESIGN
+## 🚀 **PHASE 1: DEEP RESEARCH & DATA COLLECTION**
 
-### Visual Identity & Branding
-- [x] Create new modern color palette (Yemen-inspired: desert gold, ocean blue, heritage burgundy)
-- [x] Update typography system with Google Fonts (Playfair Display + Inter for EN, Cairo + Tajawal for AR)
-- [x] Design new hero sections with immersive backgrounds
-- [x] Create comprehensive design tokens in index.css
-- [x] Add gradient overlays and modern visual effects
+### World Bank Sources
+- [ ] Search and download ALL World Bank Yemen reports (2010-2025)
+- [ ] Yemen Economic Monitoring reports (quarterly, 2015-2025)
+- [ ] Yemen Systematic Country Diagnostic
+- [ ] Yemen Public Expenditure Review
+- [ ] Yemen Poverty Assessment
+- [ ] World Bank Yemen project documents (all active/closed projects)
+- [ ] Extract ALL data points from each report
 
-### Homepage Transformation
-- [x] Redesign hero section with full-screen immersive background
-- [x] Create animated statistics counter on homepage
-- [x] Add interactive data preview cards
-- [x] Design modern stakeholder journey section
-- [x] Implement trust signals with institutional badges
-- [x] Add smooth scroll animations
+### IMF Sources
+- [ ] Download ALL IMF Article IV Consultation reports (2010-2025)
+- [ ] IMF Staff Reports on Yemen
+- [ ] IMF Emergency Financing (RCF/RFI) documents
+- [ ] IMF Extended Credit Facility (ECF) documents
+- [ ] Extract macroeconomic data tables from all reports
 
-### Navigation & UX Overhaul
-- [ ] Redesign Header with modern dropdown mega-menu
-- [ ] Create sticky navigation with scroll effects
-- [x] Add breadcrumb navigation system
-- [x] Implement mobile-first responsive design
-- [x] Add smooth page transitions
+### UN Sources
+- [ ] UN OCHA Humanitarian Needs Overview (HNO) 2015-2025
+- [ ] UN OCHA Humanitarian Response Plan (HRP) 2015-2025
+- [ ] UN OCHA Financial Tracking Service (FTS) data
+- [ ] UNDP Yemen Annual Reports 2010-2025
+- [ ] UNICEF Yemen Situation Reports
+- [ ] WFP Yemen Market Watch reports (monthly)
+- [ ] WHO Yemen Health Cluster reports
+- [ ] UNHCR Yemen Operational Updates
+- [ ] IOM Yemen Displacement Tracking Matrix
+- [ ] FAO Yemen Food Security Updates
 
-### Page Layout Transformation
-- [ ] Transform all major pages with new design system
-- [ ] Create reusable modern page templates
-- [ ] Add consistent section layouts with cards
-- [ ] Implement interactive elements and micro-interactions
-- [ ] Add loading animations and skeletons
+### Central Bank of Yemen Sources
+- [ ] CBY-Aden Annual Reports 2016-2024
+- [ ] CBY-Aden Statistical Bulletins (monthly)
+- [ ] CBY-Aden Exchange Rate Bulletins
+- [ ] CBY-Sana'a circulars and announcements
+- [ ] Banking sector statistics from both CBYs
 
----
+### Yemen Government Sources
+- [ ] Ministry of Planning & International Cooperation reports
+- [ ] Ministry of Finance budget documents
+- [ ] Ministry of Oil & Minerals production data
+- [ ] Yemen Central Statistical Organization (CSO) data
+- [ ] Yemen Customs Authority trade data
 
-## ✅ COMPLETED ITEMS (Latest Checkpoint)
+### Saudi Arabia & GCC Sources
+- [ ] Saudi Development and Reconstruction Program for Yemen (SDRPY) reports
+- [ ] Saudi Fund for Development (SFD) Yemen projects
+- [ ] UAE humanitarian aid reports
+- [ ] Kuwait Fund for Arab Economic Development Yemen projects
+- [ ] Islamic Development Bank Yemen portfolio
 
-### Database Population
-- [x] Expanded events from 73 to 84 comprehensive events
-- [x] Added 11 major stakeholder engagement events
-- [x] Increased causations from 4 to 7 relationships
-- [x] Updated 5 key stakeholders with detailed profiles
-- [x] Expanded actors table schema (website, contactInfo, fundingProvided, projects, logoUrl)
-- [x] Documented $7.58B+ total international support
+### Research Centers & Think Tanks
+- [ ] Sana'a Center for Strategic Studies - ALL publications
+- [ ] Yemen Policy Center reports
+- [ ] Chatham House Yemen analysis
+- [ ] Carnegie Middle East Center Yemen reports
+- [ ] International Crisis Group Yemen reports
+- [ ] ACLED Yemen conflict data
+- [ ] Armed Conflict Location & Event Data Project
 
-### Technical Fixes
-- [x] Fixed Timeline.tsx "Card already declared" error
-- [x] Replaced hardcoded data in DataVisualization.tsx with TRPC queries
-- [x] ComprehensiveCharts page fully functional with event markers
-- [x] All 215+ indicator data points now database-driven
+### Academic & Peer-Reviewed Sources
+- [ ] Search Google Scholar for Yemen economy papers (2010-2025)
+- [ ] Journal articles on Yemen conflict economics
+- [ ] PhD dissertations on Yemen economy
+- [ ] University research center publications
 
-### Visualization Improvements
-- [x] Added event markers to all 4 charts
-- [x] Marked 5 critical events on charts
-- [x] Causation relationships visually connected
-
-### Phase 1 - Critical Pages
-- [x] Created Youth Economy page with comprehensive content
-- [x] Created Investment page with FDI analysis
-- [x] Created Climate Finance page with green economy data
-- [x] Added all three pages to App.tsx routing
-- [x] Fixed language context integration
-
----
-
-## 🔍 EXISTING AUDIT TASKS (From Previous Checkpoint)
-
-### Timeline Events Validation (2015-2025)
-- [ ] Verify all 24 major events have accurate dates from source documents
-- [x] Cross-reference Operation Decisive Storm date (March 26, 2015) - VERIFIED
-- [x] Verify Central Bank split date (September 18, 2016) - VERIFIED
-- [ ] Validate Hodeidah Battle timeline (June-December 2018)
-- [ ] Check Stockholm Agreement date (December 13, 2018)
-- [ ] Verify COVID-19 first case date (April 10, 2020)
-- [ ] Validate all 2021-2025 events with sources
-- [ ] Ensure all actors mentioned are accurate
-- [ ] Add source citations for each event
-
-### Statistics Validation
-- [ ] Verify $2.4B humanitarian aid figure (source: OCHA FTS 2024)
-- [ ] Validate 8.2M beneficiaries number (source: World Bank/UN reports)
-- [ ] Check 1,800 YER/USD parallel rate accuracy (source: CBY/market data)
-- [ ] Verify all GDP figures in dashboards
-- [ ] Validate inflation rates with IMF data
-- [ ] Check poverty statistics (80% figure) with World Bank
-- [ ] Verify food insecurity numbers (17M) with WFP
-- [ ] Validate all banking sector statistics
-
-### Reports & Content
-- [ ] Upload all PDF reports to file manager
-- [ ] Verify gamma2.txt content is properly integrated
-- [ ] Check all referenced reports are downloadable
-- [ ] Add direct links to external reports
-- [ ] Create report summaries for each document
-
-### Stakeholder Pages to Create
-- [ ] UAE stakeholder page
-- [ ] Oman stakeholder page
-- [ ] Iran stakeholder page
-- [ ] Qatar stakeholder page
-- [ ] Kuwait stakeholder page
-- [ ] Egypt stakeholder page
-- [ ] Jordan stakeholder page
-- [ ] Houthi Movement page
-- [ ] IRG page
-- [ ] STC page
-- [ ] IMF page
-- [ ] UN OCHA page
-- [ ] UNDP page
-- [ ] WFP page
-- [ ] UNICEF page
-- [ ] WHO page
-- [ ] UNHCR page
-- [ ] USAID page
-- [ ] UK FCDO page
-- [ ] EU page
-
-### Bank Pages to Create (15+ banks)
-- [ ] Yemen Kuwait Bank
-- [ ] Yemen Commercial Bank
-- [ ] National Bank of Yemen
-- [ ] Saba Islamic Bank
-- [ ] United Bank
-- [ ] Yemen Bank for Reconstruction & Development
-- [ ] Al-Kuraimi Islamic Microfinance Bank
-- [ ] International Bank of Yemen
-- [ ] Arab Bank
-- [ ] Shamil Bank
-- [ ] Al-Amal Microfinance Bank
-
-### Advanced Features
-- [ ] Add CSV export for all datasets
-- [ ] Implement Excel export with formatting
-- [ ] Create PDF report generation
-- [ ] Add chart export as PNG/SVG
-- [ ] Build public API for researchers
-- [ ] Implement lazy loading for images
-- [ ] Add code splitting for faster load times
-- [ ] Optimize all images (WebP format)
-- [ ] Add loading skeletons for all components
-
-### Quality Assurance
-- [ ] Review all English content for accuracy
-- [ ] Review all Arabic content for accuracy
-- [ ] Ensure bilingual parity across all pages
-- [ ] Check all links are working
-- [ ] Verify all images load correctly
-- [ ] Test all downloads work
-- [ ] Test all filters on all pages
-- [ ] Verify all APIs are working
-- [ ] Test all calculators and simulators
-- [ ] Run Lighthouse audit (target: 90+ score)
-- [ ] Test on Chrome, Firefox, Safari, Edge
-- [ ] Test on mobile browsers
-- [ ] Check keyboard navigation
-- [ ] Verify screen reader compatibility
-- [ ] Test color contrast ratios
-
+### International Financial Institutions
+- [ ] Asian Development Bank Yemen reports
+- [ ] African Development Bank Yemen analysis
+- [ ] European Investment Bank Yemen projects
+- [ ] OPEC Yemen oil production data
 
 ---
 
-## 🔍 **COMPREHENSIVE EXPERT REVIEW** (Multi-Disciplinary Audit - Jan 2025)
+## 🗄️ **PHASE 2: MASSIVE DATABASE EXPANSION**
 
-### Phase 1: Platform Audit via Browser Review
-- [ ] Review homepage: messaging clarity, value proposition, CTAs
-- [ ] Audit navigation: information architecture, menu structure, breadcrumbs
-- [ ] Test all stakeholder pages: content depth, data accuracy, citations
-- [ ] Review timeline/events pages: chronological accuracy, completeness
-- [ ] Audit charts/visualizations: data accuracy, readability, insights
-- [ ] Test search functionality across all content types
-- [ ] Review mobile responsiveness on all key pages
-- [ ] Check bilingual content consistency (EN/AR)
-- [ ] Verify all internal links and navigation paths
-- [ ] Test performance and load times
+### Indicators Expansion (223 → 5,000+)
+- [ ] Add monthly exchange rate data (Aden & Sana'a, 2010-2025) = 192 points
+- [ ] Add quarterly GDP data (2010-2025) = 64 points
+- [ ] Add monthly inflation data (2010-2025) = 192 points
+- [ ] Add annual poverty rates by governorate (22 governorates × 16 years) = 352 points
+- [ ] Add monthly food prices (10 commodities × 192 months) = 1,920 points
+- [ ] Add quarterly humanitarian indicators (20 indicators × 64 quarters) = 1,280 points
+- [ ] Add annual banking sector data (15 indicators × 16 years) = 240 points
+- [ ] Add monthly oil/gas production (2010-2025) = 192 points
+- [ ] Add annual trade data (imports/exports by category, 2010-2025) = 320 points
+- [ ] Add quarterly remittances data (2010-2025) = 64 points
+- [ ] Add annual employment/unemployment data = 160 points
+- [ ] Add health indicators (life expectancy, mortality, disease outbreaks) = 200 points
+- [ ] Add education indicators (enrollment, literacy, schools) = 150 points
 
-### Phase 2: Database Integrity & Economic Analysis
-- [ ] Verify causation relationships: economic logic, quantification accuracy
-- [ ] Audit event data: dates, descriptions, sources, completeness (2010-2025)
-- [ ] Review indicator data: methodology, sources, time series consistency
-- [ ] Validate exchange rate data against CBY/IMF sources
-- [ ] Check GDP figures against World Bank/IMF official data
-- [ ] Verify inflation calculations and methodology
-- [ ] Audit stakeholder funding figures against official reports
-- [ ] Review remittances data accuracy
-- [ ] Validate oil export/revenue figures
-- [ ] Check humanitarian statistics against UN OCHA data
+**Target: 5,000+ indicators**
 
-### Phase 3: Yemen Context & Conflict Economics Expertise
-- [ ] Assess dual authority representation (Aden vs Sana'a)
-- [ ] Verify Houthi economic policies accuracy
-- [ ] Review Saudi/UAE intervention economic impacts
-- [ ] Audit humanitarian crisis quantification
-- [ ] Check banking sector fragmentation representation
-- [ ] Verify currency divergence mechanics explanation
-- [ ] Review parallel economy documentation
-- [ ] Assess conflict financing mechanisms coverage
-- [ ] Verify sanctions impact analysis
-- [ ] Check diaspora/remittances role accuracy
+### Events Expansion (84 → 500+)
+- [ ] Add ALL 2010 events (Arab Spring preparation, economic situation)
+- [ ] Add ALL 2011 events (Arab Spring, Saleh protests, economic impacts)
+- [ ] Add ALL 2012 events (Transition, Hadi inauguration, economic reforms)
+- [ ] Add ALL 2013 events (National Dialogue, economic policies)
+- [ ] Add ALL 2014 events (Houthi takeover, economic collapse begins)
+- [ ] Add ALL 2015 events (Operation Decisive Storm, humanitarian crisis)
+- [ ] Add ALL 2016 events (Central Bank split, currency divergence)
+- [ ] Add ALL 2017 events (Cholera outbreak, blockade intensifies)
+- [ ] Add ALL 2018 events (Hodeidah battle, Saudi deposits)
+- [ ] Add ALL 2019 events (Currency ban, Riyadh Agreement)
+- [ ] Add ALL 2020 events (COVID-19, oil price collapse, STC declaration)
+- [ ] Add ALL 2021 events (Marib offensive, Biden policy shift)
+- [ ] Add ALL 2022 events (UN Truce, oil exports resume, truce expires)
+- [ ] Add ALL 2023 events (Saudi-Houthi talks, prisoner exchange, banking crisis)
+- [ ] Add ALL 2024 events (Red Sea attacks, economic impacts, peace efforts)
+- [ ] Add ALL 2025 events (current year, ongoing developments)
 
-### Phase 4: Technical Architecture Review
-- [ ] Audit database schema efficiency and normalization
-- [ ] Review API performance and caching strategy
-- [ ] Check TypeScript type safety across codebase
-- [ ] Audit component reusability and DRY principles
-- [ ] Review state management patterns
-- [ ] Check error handling and edge cases
-- [ ] Audit accessibility (WCAG 2.1 AA compliance)
-- [ ] Review SEO optimization
-- [ ] Check security best practices
-- [ ] Audit build performance and bundle size
+**Target: 500+ events (30+ per year average)**
 
-### Phase 5: UX/UI Expert Review
-- [ ] Assess information hierarchy and visual flow
-- [ ] Review color scheme for data visualization accessibility
-- [ ] Audit typography: readability, hierarchy, Arabic font quality
-- [ ] Check interactive elements: feedback, loading states, errors
-- [ ] Review form validation and user guidance
-- [ ] Audit empty states and error messages
-- [ ] Check animation/transition appropriateness
-- [ ] Review mobile-first design implementation
-- [ ] Assess cognitive load on complex pages
-- [ ] Verify consistent design language across platform
+### Actors Expansion (29 → 100+)
+- [ ] Add ALL non-state actors (Houthis, STC, Islah, Salafi groups, AQAP, ISIS)
+- [ ] Add ALL regional actors (Iran, Turkey, Qatar, Oman, Jordan, Egypt)
+- [ ] Add ALL international actors (US, UK, France, Russia, China, EU)
+- [ ] Add ALL UN agencies (15+ agencies active in Yemen)
+- [ ] Add ALL international NGOs (Oxfam, IRC, MSF, CARE, etc.)
+- [ ] Add ALL commercial banks (18 banks operating in Yemen)
+- [ ] Add ALL microfinance institutions (15+ MFIs)
+- [ ] Add ALL private sector actors (Hayel Saeed, Shaher Group, etc.)
+- [ ] Add ALL money exchange companies
+- [ ] Add ALL telecommunications companies
+- [ ] Add ALL oil/gas companies operating in Yemen
 
-### Phase 6: Content & Editorial Review
-- [ ] Audit writing quality: clarity, conciseness, professionalism
-- [ ] Review Arabic translation quality and cultural appropriateness
-- [ ] Check citation format and source credibility
-- [ ] Verify dates format consistency (Gregorian/Hijri)
-- [ ] Audit numbers formatting (thousands separators, decimals)
-- [ ] Review terminology consistency (economic/financial terms)
-- [ ] Check acronym definitions and glossary
-- [ ] Verify proper nouns spelling (Arabic names, places)
-- [ ] Audit metadata: page titles, descriptions, keywords
-- [ ] Review legal disclaimers and data usage policies
+**Target: 100+ actors**
 
-### Phase 7: Critical Improvements Implementation
-- [ ] Fix any broken links or navigation issues
-- [ ] Correct data inaccuracies identified
-- [ ] Implement missing critical features
-- [ ] Enhance visualizations based on findings
-- [ ] Improve performance bottlenecks
-- [ ] Add missing content/pages
-- [ ] Enhance accessibility issues
-- [ ] Optimize mobile experience
-- [ ] Improve search functionality
-- [ ] Add missing stakeholder pages
+### Causations Expansion (27 → 100+)
+- [ ] Map ALL war events to economic indicators
+- [ ] Map ALL policy changes to economic outcomes
+- [ ] Map ALL humanitarian crises to health/food indicators
+- [ ] Map ALL international interventions to aid flows
+- [ ] Map ALL banking policies to financial indicators
+- [ ] Map ALL oil production changes to government revenue
+- [ ] Map ALL currency policies to exchange rates
+- [ ] Map ALL trade restrictions to import/export data
+- [ ] Map ALL natural disasters to displacement/damage
+- [ ] Map ALL peace initiatives to economic improvements
 
+**Target: 100+ causations with quantified impacts**
 
 ---
 
-## 🔥 **EXPERT REVIEW FINDINGS** (Jan 6, 2025)
+## 📚 **PHASE 3: REPORTS & DOCUMENTS UPLOAD**
 
-### 🚨 CRITICAL PRIORITY (Fix Immediately)
-- [ ] **FIX INFLATED METRICS:** Homepage shows 4,416 data points (actual: 223) - 1,880% inflation!
-- [ ] **FIX INFLATED REPORTS:** Homepage shows 4,416 reports (actual: 0, no publications table)
-- [ ] **STANDARDIZE EXCHANGE RATES:** Three different values across pages (1,700 vs 1,800 vs 1,750)
-- [ ] **FIX CONSOLE ERRORS:** Timeline.tsx missing, "decimal is not defined" error
-- [ ] **ADD SOURCE CITATIONS:** All charts lack data source references
-- [ ] **CREATE HOUTHIS PAGE:** Missing critical stakeholder (controls 70% of population)
+### Create Publications/Reports Table
+- [ ] Design database schema for publications
+- [ ] Migrate schema to add publications table
+- [ ] Create file upload system for PDF reports
 
-### ⚠️ HIGH PRIORITY (This Month)
-- [ ] Complete 7 missing stakeholder pages (UNDP, UN OCHA, WFP, UNHCR, UAE, STC, Iran)
-- [ ] Add 5 critical charts (Oil Revenue, Humanitarian Funding Gap, Remittances, Food Insecurity, Banking Fragmentation)
-- [ ] Implement data download (CSV/Excel export for all charts)
-- [ ] Create Methodology page documenting data collection methods
-- [ ] Expand causations from 27 to 50 relationships
-- [ ] Add "last updated" timestamps to all data displays
-- [ ] Fix duplicate stakeholder routes (consolidate /world-bank and /stakeholders/world-bank)
+### Upload World Bank Reports
+- [ ] Upload 50+ World Bank Yemen reports (2010-2025)
+- [ ] Extract metadata (title, date, author, category)
+- [ ] Create searchable index
 
-### 📊 DATABASE IMPROVEMENTS
-- [ ] Expand indicators: 223 → 300+ (add humanitarian, banking, oil/gas indicators)
-- [ ] Expand events: 84 → 120+ (add cholera outbreak, Hodeidah battle, Marib offensive, etc.)
-- [ ] Expand actors: 29 → 45+ (add Houthis, STC, Iran, UAE, Turkey, Qatar, Oman, etc.)
-- [ ] Add data sources table for citation management
-- [ ] Add methodology table for indicator documentation
-- [ ] Add data quality log table
+### Upload IMF Reports
+- [ ] Upload 30+ IMF Yemen reports (2010-2025)
+- [ ] Tag by report type (Article IV, Staff Report, etc.)
 
-### 🎨 UX/UI IMPROVEMENTS
-- [ ] Add chart interactivity (date range selector, zoom/pan, comparison mode)
-- [ ] Create stakeholder comparison matrix
-- [ ] Implement global search with filters
-- [ ] Add empty states and loading skeletons
-- [ ] Improve mobile responsiveness
-- [ ] Add data visualization tooltips with detailed information
+### Upload UN Reports
+- [ ] Upload 100+ UN agency reports
+- [ ] Categorize by agency and year
 
-### 🔧 TECHNICAL IMPROVEMENTS
-- [ ] Implement code splitting (lazy load stakeholder pages)
-- [ ] Add React Query for data caching
-- [ ] Optimize images (convert to WebP, lazy loading)
-- [ ] Fix bundle size (target < 500KB gzipped)
-- [ ] Improve page load time (target < 2 seconds)
-- [ ] Add error boundaries for better error handling
+### Upload Research Center Publications
+- [ ] Upload 50+ Sana'a Center publications
+- [ ] Upload 30+ other think tank reports
 
-### ♿ ACCESSIBILITY
-- [ ] WCAG 2.1 AA compliance audit
-- [ ] Keyboard navigation testing
-- [ ] Screen reader compatibility
-- [ ] Color contrast verification (4.5:1 minimum)
-- [ ] Add ARIA labels to interactive elements
-- [ ] Ensure focus indicators visible
+### Upload Government Documents
+- [ ] Upload CBY annual reports and bulletins
+- [ ] Upload ministry reports and budget documents
 
-### 📱 MOBILE OPTIMIZATION
-- [ ] Test all pages on mobile devices
-- [ ] Fix mega-menu for small screens
-- [ ] Optimize charts for touch interaction
-- [ ] Test Arabic RTL layout on mobile
-- [ ] Ensure tables scroll horizontally
+**Target: 300+ reports uploaded and searchable**
 
 ---
 
-## 📈 **EXPERT REVIEW RATINGS**
+## 🔗 **PHASE 4: CAUSATIONS & FACTS EXPANSION**
 
-**Overall Platform: 6.7/10** (Good foundation, needs critical fixes)
+### Expand Causation Network
+- [ ] 2011 Arab Spring → Political instability → Economic decline
+- [ ] 2012 Power transfer → Temporary stability → Economic recovery attempt
+- [ ] 2014 Houthi takeover → Capital flight → Currency depreciation
+- [ ] 2015 Operation Decisive Storm → Infrastructure damage → GDP collapse (-43.2%)
+- [ ] 2015 War → Port restrictions → Import costs increase (+40%)
+- [ ] 2016 CBY split → Dual exchange rates → Arbitrage opportunities
+- [ ] 2016 Salary crisis → Teacher strikes → Education collapse
+- [ ] 2017 Cholera outbreak → Healthcare system failure → 1.1M cases
+- [ ] 2017 Blockade → Fuel crisis → Transportation costs (+200%)
+- [ ] 2018 Saudi $2B deposit → Currency stabilization → Inflation reduction
+- [ ] 2018 Hodeidah battle → Food import disruption → Famine risk
+- [ ] 2019 Currency ban → Exchange rate divergence (200%)
+- [ ] 2019 Riyadh Agreement → STC-Gov tensions → Aden instability
+- [ ] 2020 COVID-19 → Gulf job losses → Remittances decline (-16%)
+- [ ] 2020 Oil price collapse → Government revenue crisis
+- [ ] 2020 STC self-rule → Dual authority → Economic fragmentation
+- [ ] 2021 Marib offensive → Displacement (45,000) → Humanitarian crisis
+- [ ] 2021 Fuel crisis → Electricity shortages → Business closures
+- [ ] 2022 UN Truce → Humanitarian access (+40%) → Aid delivery
+- [ ] 2022 Oil exports resume → Revenue increase ($1.2B)
+- [ ] 2022 Truce expires → Oil blockade → Revenue collapse
+- [ ] 2023 Banking crisis → Liquidity shortage → Economic paralysis
+- [ ] 2023 Saudi-Houthi talks → Optimism → Investment interest
+- [ ] 2024 Red Sea attacks → Insurance premiums (+300%) → Trade costs
+- [ ] 2024 Currency depreciation → Purchasing power loss (-70%)
+- [ ] ... (continue to 100+ causations)
 
-**Component Ratings:**
-- Technical Architecture: 8/10 ✅
-- Data Integrity: 5/10 🚨 (Critical accuracy issues)
-- Content Depth: 7/10 ⚠️ (Missing key stakeholders)
-- User Experience: 8/10 ✅
-- Yemen Context Accuracy: 6/10 ⚠️ (Missing Houthis, dual authority under-represented)
-- Conflict Economics Coverage: 6/10 ⚠️
+### Populate Facts & Figures
+- [ ] Add 1,000+ economic facts with sources
+- [ ] Add 500+ humanitarian facts
+- [ ] Add 300+ banking sector facts
+- [ ] Add 200+ oil/gas sector facts
+- [ ] Add 500+ conflict impact facts
 
-**Database Health: 7.5/10**
-- Structure: 9/10 ✅
-- Data Quality: 9/10 ✅ (Zero missing values!)
-- Coverage: 7/10 ⚠️
-- Consistency: 5/10 🚨 (Display inconsistencies)
-- Documentation: 3/10 🚨 (No source citations)
-
-**Target Rating: 9.0/10** (After implementing all improvements)
+**Target: 2,500+ documented facts**
 
 ---
 
-## 📚 **EXPERT REVIEW DOCUMENTS**
+## 📅 **PHASE 5: YEAR-BY-YEAR COMPREHENSIVE COVERAGE**
 
-Three comprehensive reports created:
-1. **EXPERT_REVIEW.md** (65 pages) - Complete platform audit from multiple expert perspectives
-2. **DATABASE_INTEGRITY_REPORT.md** (45 pages) - Detailed database analysis and data quality assessment
-3. **IMPROVEMENT_PLAN.md** (50 pages) - Prioritized actionable roadmap with implementation details
+### 2010: Pre-Crisis Baseline
+- [ ] Economic indicators (GDP: $31.3B, Growth: 7.7%)
+- [ ] Oil production: 260,000 bbl/day
+- [ ] Population: 23.6M
+- [ ] Poverty rate: 42%
+- [ ] Exchange rate: 215 YER/USD
+- [ ] Government budget and revenue
+- [ ] Major economic events and policies
 
-**Total Analysis: 160 pages of expert findings and recommendations**
+### 2011: Arab Spring & Political Crisis
+- [ ] Protests begin (January)
+- [ ] Economic impact of unrest
+- [ ] Oil production disruptions
+- [ ] Capital flight
+- [ ] GCC Initiative negotiations
+- [ ] Saleh wounded (June)
+- [ ] Economic indicators (GDP: $33.8B, Growth: -12.7%)
+
+### 2012: Political Transition
+- [ ] Hadi inauguration (February)
+- [ ] National Dialogue Conference
+- [ ] Economic recovery attempts
+- [ ] International aid pledges
+- [ ] Oil production recovery
+- [ ] Economic indicators (GDP: $35.4B, Growth: 2.4%)
+
+### 2013: Fragile Stability
+- [ ] National Dialogue continues
+- [ ] Economic reforms
+- [ ] Fuel subsidy debates
+- [ ] Southern movement tensions
+- [ ] Houthi expansion begins
+- [ ] Economic indicators (GDP: $40.4B, Growth: 4.8%)
+
+### 2014: Crisis Escalation
+- [ ] Houthi takeover of Sana'a (September)
+- [ ] Government collapse
+- [ ] Economic deterioration
+- [ ] Capital flight intensifies
+- [ ] Oil production declines
+- [ ] Economic indicators (GDP: $43.2B, Growth: -0.2%)
+
+### 2015: War & Humanitarian Catastrophe
+- [ ] Operation Decisive Storm (March 26)
+- [ ] Humanitarian crisis begins
+- [ ] GDP collapse (-28%)
+- [ ] Oil exports halt
+- [ ] Currency depreciation
+- [ ] Blockade imposed
+- [ ] Cholera outbreak begins
+- [ ] Economic indicators (GDP: $31.3B, Growth: -28.1%)
+
+### 2016: Fragmentation & Central Bank Split
+- [ ] CBY relocated to Aden (September)
+- [ ] Dual banking system emerges
+- [ ] Exchange rate divergence begins
+- [ ] Salary payment crisis
+- [ ] Humanitarian needs escalate
+- [ ] Economic indicators (GDP: $27.3B, Growth: -9.8%)
+
+### 2017: Blockade & Cholera
+- [ ] Cholera outbreak (1.1M cases)
+- [ ] Saudi blockade intensifies
+- [ ] Famine warnings
+- [ ] Currency collapse accelerates
+- [ ] Banking sector paralysis
+- [ ] Economic indicators (GDP: $22.6B, Growth: -5.9%)
+
+### 2018: Hodeidah & Saudi Deposits
+- [ ] Battle of Hodeidah
+- [ ] Saudi $2B deposit (October)
+- [ ] Currency stabilization
+- [ ] Stockholm Agreement (December)
+- [ ] Humanitarian access improvements
+- [ ] Economic indicators (GDP: $26.9B, Growth: 0.8%)
+
+### 2019: Currency Ban & Riyadh Agreement
+- [ ] Houthi currency ban (December)
+- [ ] Exchange rate divergence (200%)
+- [ ] Riyadh Agreement (November)
+- [ ] STC-Government tensions
+- [ ] Inflation spike (45%)
+- [ ] Economic indicators (GDP: $21.6B, Growth: 2.1%)
+
+### 2020: COVID-19 & Multiple Crises
+- [ ] COVID-19 pandemic
+- [ ] Oil price collapse
+- [ ] Remittances decline (-16%)
+- [ ] STC self-rule declaration (April)
+- [ ] Dual authority crisis
+- [ ] Aden floods
+- [ ] Economic indicators (GDP: $21.6B, Growth: -8.5%)
+
+### 2021: Marib Offensive & Fuel Crisis
+- [ ] Houthi Marib offensive
+- [ ] Displacement (45,000)
+- [ ] Fuel crisis intensifies
+- [ ] Electricity shortages
+- [ ] Biden administration policy shift
+- [ ] Economic indicators (GDP: $21.6B, Growth: -2.0%)
+
+### 2022: UN Truce & Oil Exports
+- [ ] UN Truce (April-October)
+- [ ] Oil exports resume
+- [ ] Revenue increase ($1.2B)
+- [ ] Humanitarian access improves
+- [ ] Truce expires (October)
+- [ ] Oil blockade resumes
+- [ ] Economic indicators (GDP: $21.6B, Growth: 1.5%)
+
+### 2023: Banking Crisis & Peace Talks
+- [ ] Banking liquidity crisis
+- [ ] Currency depreciation
+- [ ] Saudi-Houthi talks (Oman)
+- [ ] Prisoner exchange
+- [ ] Peace optimism
+- [ ] Economic indicators (GDP: $21.6B, Growth: 2.0%)
+
+### 2024: Red Sea Crisis & Economic Pressures
+- [ ] Houthi Red Sea attacks
+- [ ] Insurance premiums spike (+300%)
+- [ ] Trade route disruptions
+- [ ] Currency depreciation (1,800 YER/USD)
+- [ ] Banking sector challenges
+- [ ] Economic indicators (GDP: $21.6B, Growth: 1.0%)
+
+### 2025: Current Situation (Jan-Dec)
+- [ ] Ongoing economic challenges
+- [ ] Peace negotiations status
+- [ ] Current exchange rates
+- [ ] Humanitarian situation
+- [ ] Banking sector updates
+- [ ] Economic indicators (projected)
+
+---
+
+## 🔧 **PHASE 6: FIX ALL ISSUES**
+
+### Critical Fixes
+- [x] Fix homepage inflated metrics (4,416 → actual database counts)
+- [ ] Standardize exchange rates across all pages
+- [ ] Add source citations to ALL charts
+- [ ] Create dynamic stats API endpoint
+- [ ] Fix console errors
+
+### Content Completion
+- [ ] Create Houthis stakeholder page
+- [ ] Create UNDP stakeholder page
+- [ ] Create UN OCHA stakeholder page
+- [ ] Create WFP stakeholder page
+- [ ] Create UNHCR stakeholder page
+- [ ] Create UAE stakeholder page
+- [ ] Create STC stakeholder page
+- [ ] Create Iran stakeholder page
+
+### Charts & Visualizations
+- [ ] Add Oil Export Revenue chart (2010-2025)
+- [ ] Add Humanitarian Funding Gap chart
+- [ ] Add Remittances Flow chart
+- [ ] Add Food Insecurity Trend chart
+- [ ] Add Banking Sector Fragmentation chart
+- [ ] Add source citations to all existing charts
+
+### Control Panel Updates
+- [ ] Add publications management
+- [ ] Add bulk data import tools
+- [ ] Add data verification workflow
+- [ ] Add report upload interface
+- [ ] Add citation management
+
+---
+
+## ✅ **SUCCESS METRICS**
+
+**Data Coverage:**
+- [ ] 5,000+ indicators (from 223)
+- [ ] 500+ events (from 84)
+- [ ] 100+ actors (from 29)
+- [ ] 100+ causations (from 27)
+- [ ] 300+ reports uploaded
+- [ ] 2,500+ documented facts
+
+**Temporal Coverage:**
+- [ ] Complete year-by-year data (2010-2025)
+- [ ] Monthly data for key indicators
+- [ ] Quarterly data for economic metrics
+- [ ] Annual comprehensive summaries
+
+**Source Credibility:**
+- [ ] All data sourced from credible entities
+- [ ] Every fact has citation
+- [ ] All reports authenticated
+- [ ] Methodology documented
+
+**Professional Quality:**
+- [ ] Zero console errors
+- [ ] All claims backed by data
+- [ ] Comprehensive coverage
+- [ ] Expert-level analysis
+
+**Target Platform Rating: 9.5/10** (Definitive authoritative source)

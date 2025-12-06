@@ -1,0 +1,142 @@
+{
+  "NY.GDP.MKTP.CD": {
+    "indicatorCode": "NY.GDP.MKTP.CD",
+    "indicatorName": "GDP (current US$)",
+    "topic": "Economic Policy & Debt: National accounts: US$ at current prices: Aggregate indicators",
+    "shortDescription": "Gross domestic product is the total income earned through the production of goods and services in an economic territory during an accounting period. It can be measured in three different ways: using either the expenditure approach, the income approach, or the production approach. This indicator is expressed in current prices, meaning no adjustment has been made to account for price changes over time. This indicator is expressed in United States dollars.",
+    "longDescription": "Gross domestic product is the total income earned through the production of goods and services in an economic territory during an accounting period. It can be measured in three different ways: using either the expenditure approach, the income approach, or the production approach. This indicator is expressed in current prices, meaning no adjustment has been made to account for price changes over time. This indicator is expressed in United States dollars."
+  },
+  "NY.GDP.PCAP.CD": {
+    "indicatorCode": "NY.GDP.PCAP.CD",
+    "indicatorName": "GDP per capita (current US$)",
+    "topic": "Economic Policy & Debt: National accounts: US$ at current prices: Aggregate indicators",
+    "shortDescription": "Gross domestic product is the total income earned through the production of goods and services in an economic territory during an accounting period. It can be measured in three different ways: using either the expenditure approach, the income approach, or the production approach. The core indicator has been divided by the general population to achieve a per capita estimate.This indicator is expressed in current prices, meaning no adjustment has been made to account for price changes over time. This indicator is expressed in United States dollars.",
+    "longDescription": "Gross domestic product is the total income earned through the production of goods and services in an economic territory during an accounting period. It can be measured in three different ways: using either the expenditure approach, the income approach, or the production approach. The core indicator has been divided by the general population to achieve a per capita estimate.This indicator is expressed in current prices, meaning no adjustment has been made to account for price changes over time. This indicator is expressed in United States dollars."
+  },
+  "NY.GDP.MKTP.KD.ZG": {
+    "indicatorCode": "NY.GDP.MKTP.KD.ZG",
+    "indicatorName": "GDP (annual % growth)",
+    "topic": "Economic Policy & Debt: National accounts: Growth rates",
+    "shortDescription": "Gross domestic product is the total income earned through the production of goods and services in an economic territory during an accounting period. It can be measured in three different ways: using either the expenditure approach, the income approach, or the production approach. This indicator denotes the percentage change over each previous year of the constant price (base year 2015) series in United States dollars.",
+    "longDescription": "Gross domestic product is the total income earned through the production of goods and services in an economic territory during an accounting period. It can be measured in three different ways: using either the expenditure approach, the income approach, or the production approach. This indicator denotes the percentage change over each previous year of the constant price (base year 2015) series in United States dollars."
+  },
+  "FP.CPI.TOTL.ZG": {
+    "indicatorCode": "FP.CPI.TOTL.ZG",
+    "indicatorName": "Inflation, consumer prices (annual % growth)",
+    "topic": "Financial Sector: Exchange rates & prices",
+    "shortDescription": "Inflation as measured by the consumer price index reflects the annual percentage change in the cost to the average consumer of acquiring a basket of goods and services that may be fixed or changed at specified intervals, such as yearly. This indicator denotes the percentage change over each previous year of the constant price (base year 2015) series in United States dollars.",
+    "longDescription": "Inflation as measured by the consumer price index reflects the annual percentage change in the cost to the average consumer of acquiring a basket of goods and services that may be fixed or changed at specified intervals, such as yearly. This indicator denotes the percentage change over each previous year of the constant price (base year 2015) series in United States dollars."
+  },
+  "PA.NUS.FCRF": {
+    "indicatorCode": "PA.NUS.FCRF",
+    "indicatorName": "Official exchange rate (LCU per US$, period average)",
+    "topic": "Financial Sector: Exchange rates & prices",
+    "shortDescription": "Official exchange rate refers to the exchange rate determined by national authorities or to the rate determined in the legally sanctioned exchange market. This indicator represents the ratio of Local Currency Units relative to United States dollars.This indicator is derived as an average over the reference period.",
+    "longDescription": "Official exchange rate refers to the exchange rate determined by national authorities or to the rate determined in the legally sanctioned exchange market. This indicator represents the ratio of Local Currency Units relative to United States dollars.This indicator is derived as an average over the reference period."
+  },
+  "SP.POP.TOTL": {
+    "indicatorCode": "SP.POP.TOTL",
+    "indicatorName": "Population, total",
+    "topic": "Health: Population: Structure",
+    "shortDescription": "Total population is based on the de facto definition of population, which counts all residents regardless of legal status or citizenship. The values shown are midyear estimates.",
+    "longDescription": "Total population is based on the de facto definition of population, which counts all residents regardless of legal status or citizenship. The values shown are midyear estimates."
+  },
+  "SI.POV.DDAY": {
+    "indicatorCode": "SI.POV.DDAY",
+    "indicatorName": "Poverty headcount ratio at $3.00 a day (2021 PPP) (% of population)",
+    "topic": "Poverty: Poverty rates",
+    "shortDescription": "Poverty headcount ratio at $3.00 a day is the percentage of the population living on less than $3.00 a day at 2021 purchasing power adjusted prices. As a result of revisions in PPP exchange rates, poverty rates for individual countries cannot be compared with poverty rates reported in earlier editions.",
+    "longDescription": "Poverty headcount ratio at $3.00 a day is the percentage of the population living on less than $3.00 a day at 2021 purchasing power adjusted prices. As a result of revisions in PPP exchange rates, poverty rates for individual countries cannot be compared with poverty rates reported in earlier editions."
+  },
+  "SL.UEM.TOTL.ZS": {
+    "indicatorCode": "SL.UEM.TOTL.ZS",
+    "indicatorName": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+    "topic": "Social Protection & Labor: Unemployment",
+    "shortDescription": "Unemployment refers to the share of the labor force that is without work but available for and seeking employment.",
+    "longDescription": "Unemployment refers to the share of the labor force that is without work but available for and seeking employment."
+  },
+  "BX.TRF.PWKR.CD.DT": {
+    "indicatorCode": "BX.TRF.PWKR.CD.DT",
+    "indicatorName": "Personal remittances, received (current US$)",
+    "topic": "Economic Policy & Debt: Balance of payments: Current account: Transfers",
+    "shortDescription": "Personal remittances comprise personal transfers and compensation of employees. Personal transfers consist of all current transfers in cash or in kind made or received by resident households to or from nonresident households. Personal transfers thus include all current transfers between resident and nonresident individuals. Compensation of employees refers to the income of border, seasonal, and other short-term workers who are employed in an economy where they are not resident and of residents employed by nonresident entities. Data are the sum of two items defined in the sixth edition of the IMF's Balance of Payments Manual: personal transfers and compensation of employees. Data are in current U.S. dollars.",
+    "longDescription": "Personal remittances comprise personal transfers and compensation of employees. Personal transfers consist of all current transfers in cash or in kind made or received by resident households to or from nonresident households. Personal transfers thus include all current transfers between resident and nonresident individuals. Compensation of employees refers to the income of border, seasonal, and other short-term workers who are employed in an economy where they are not resident and of residents employed by nonresident entities. Data are the sum of two items defined in the sixth edition of the IMF's Balance of Payments Manual: personal transfers and compensation of employees. Data are in current U.S. dollars."
+  },
+  "NE.EXP.GNFS.CD": {
+    "indicatorCode": "NE.EXP.GNFS.CD",
+    "indicatorName": "Exports of goods and services (current US$)",
+    "topic": "Economic Policy & Debt: National accounts: US$ at current prices: Expenditure on GDP",
+    "shortDescription": "Exports of goods includes changes in the economic ownership of goods from residents of the compiling economy to non-residents, irrespective of physical movement of goods across national borders. Exports of services includes services provided by residents to non-residents. This indicator is expressed in current prices, meaning no adjustment has been made to account for price changes over time. This indicator is expressed in United States dollars.",
+    "longDescription": "Exports of goods includes changes in the economic ownership of goods from residents of the compiling economy to non-residents, irrespective of physical movement of goods across national borders. Exports of services includes services provided by residents to non-residents. This indicator is expressed in current prices, meaning no adjustment has been made to account for price changes over time. This indicator is expressed in United States dollars."
+  },
+  "NE.IMP.GNFS.CD": {
+    "indicatorCode": "NE.IMP.GNFS.CD",
+    "indicatorName": "Imports of goods and services (current US$)",
+    "topic": "Economic Policy & Debt: National accounts: US$ at current prices: Expenditure on GDP",
+    "shortDescription": "Imports of goods includes change in the economic ownership of goods from non-residents to\n\n\nresidents of the compiling economy, irrespective of physical movement of goods across national borders. Imports of services includes services provided by non-residents to residents. This indicator is expressed in current prices, meaning no adjustment has been made to account for price changes over time. This indicator is expressed in United States dollars.",
+    "longDescription": "Imports of goods includes change in the economic ownership of goods from non-residents to\n\n\nresidents of the compiling economy, irrespective of physical movement of goods across national borders. Imports of services includes services provided by non-residents to residents. This indicator is expressed in current prices, meaning no adjustment has been made to account for price changes over time. This indicator is expressed in United States dollars."
+  },
+  "GC.REV.XGRT.GD.ZS": {
+    "indicatorCode": "GC.REV.XGRT.GD.ZS",
+    "indicatorName": "Revenue, excluding grants (% of GDP)",
+    "topic": "Public Sector: Government finance: Revenue",
+    "shortDescription": "Revenue is an increase in net worth resulting from a transaction. Grants are excluded from this figure. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+    "longDescription": "Revenue is an increase in net worth resulting from a transaction. Grants are excluded from this figure. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period."
+  },
+  "GC.XPN.TOTL.GD.ZS": {
+    "indicatorCode": "GC.XPN.TOTL.GD.ZS",
+    "indicatorName": "Expense (% of GDP)",
+    "topic": "Public Sector: Government finance: Expense",
+    "shortDescription": "Expense is a decrease in net worth resulting from a transaction. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+    "longDescription": "Expense is a decrease in net worth resulting from a transaction. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period."
+  },
+  "SH.DYN.MORT": {
+    "indicatorCode": "SH.DYN.MORT",
+    "indicatorName": "Mortality rate, under-5 (per 1,000 live births)",
+    "topic": "Health: Mortality",
+    "shortDescription": "Under-five mortality rate is the probability per 1,000 that a newborn baby will die before reaching age five, if subject to age-specific mortality rates of the specified year.",
+    "longDescription": "Under-five mortality rate is the probability per 1,000 that a newborn baby will die before reaching age five, if subject to age-specific mortality rates of the specified year."
+  },
+  "SE.PRM.NENR": {
+    "indicatorCode": "SE.PRM.NENR",
+    "indicatorName": "School enrollment, primary (% net)",
+    "topic": "Education: Participation",
+    "shortDescription": "Net enrollment rate is the ratio of children of official school age who are enrolled in school to the population of the corresponding official school age. Primary education provides children with basic reading, writing, and mathematics skills along with an elementary understanding of such subjects as history, geography, natural science, social science, art, and music.",
+    "longDescription": "Net enrollment rate is the ratio of children of official school age who are enrolled in school to the population of the corresponding official school age. Primary education provides children with basic reading, writing, and mathematics skills along with an elementary understanding of such subjects as history, geography, natural science, social science, art, and music."
+  },
+  "SH.MED.BEDS.ZS": {
+    "indicatorCode": "SH.MED.BEDS.ZS",
+    "indicatorName": "Hospital beds (per 1,000 people)",
+    "topic": "Health: Health systems",
+    "shortDescription": "Hospital beds include inpatient beds available in public, private, general, and specialized hospitals and rehabilitation centers. In most cases beds for both acute and chronic care are included.",
+    "longDescription": "Hospital beds include inpatient beds available in public, private, general, and specialized hospitals and rehabilitation centers. In most cases beds for both acute and chronic care are included."
+  },
+  "EG.ELC.ACCS.ZS": {
+    "indicatorCode": "EG.ELC.ACCS.ZS",
+    "indicatorName": "Access to electricity (% of population)",
+    "topic": "Environment: Energy production & use",
+    "shortDescription": "Access to electricity is the percentage of population with access to electricity. Electrification data are collected from industry, national surveys and international sources.",
+    "longDescription": "Access to electricity is the percentage of population with access to electricity. Electrification data are collected from industry, national surveys and international sources."
+  },
+  "SH.H2O.SMDW.ZS": {
+    "indicatorCode": "SH.H2O.SMDW.ZS",
+    "indicatorName": "People using safely managed drinking water services (% of population)",
+    "topic": "Health: Disease prevention",
+    "shortDescription": "The percentage of people using drinking water from an improved source that is accessible on premises, available when needed and free from faecal and priority chemical contamination. Improved water sources include piped water, boreholes or tubewells, protected dug wells, protected springs, and packaged or delivered water.",
+    "longDescription": "The percentage of people using drinking water from an improved source that is accessible on premises, available when needed and free from faecal and priority chemical contamination. Improved water sources include piped water, boreholes or tubewells, protected dug wells, protected springs, and packaged or delivered water."
+  },
+  "SP.DYN.LE00.IN": {
+    "indicatorCode": "SP.DYN.LE00.IN",
+    "indicatorName": "Life expectancy at birth, total (years)",
+    "topic": "Health: Mortality",
+    "shortDescription": "Life expectancy at birth indicates the number of years a newborn infant would live if prevailing patterns of mortality at the time of its birth were to stay the same throughout its life.",
+    "longDescription": "Life expectancy at birth indicates the number of years a newborn infant would live if prevailing patterns of mortality at the time of its birth were to stay the same throughout its life."
+  },
+  "EN.POP.DNST": {
+    "indicatorCode": "EN.POP.DNST",
+    "indicatorName": "Population density (people per sq. km of land area)",
+    "topic": "Environment: Density & urbanization",
+    "shortDescription": "Population density is midyear population divided by land area in square kilometers. Population is based on the de facto definition of population, which counts all residents regardless of legal status or citizenship--except for refugees not permanently settled in the country of asylum, who are generally considered part of the population of their country of origin. Land area is a country's total area, excluding area under inland water bodies, national claims to continental shelf, and exclusive economic zones. In most cases the definition of inland water bodies includes major rivers and lakes.",
+    "longDescription": "Population density is midyear population divided by land area in square kilometers. Population is based on the de facto definition of population, which counts all residents regardless of legal status or citizenship--except for refugees not permanently settled in the country of asylum, who are generally considered part of the population of their country of origin. Land area is a country's total area, excluding area under inland water bodies, national claims to continental shelf, and exclusive economic zones. In most cases the definition of inland water bodies includes major rivers and lakes."
+  }
+}
