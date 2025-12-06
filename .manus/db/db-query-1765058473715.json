@@ -1,0 +1,26 @@
+{
+  "query": "\nSELECT \n  'events' as table_name, COUNT(*) as count FROM events\nUNION ALL\nSELECT 'indicators', COUNT(*) FROM indicators\nUNION ALL\nSELECT 'actors', COUNT(*) FROM actors\nUNION ALL\nSELECT 'causations', COUNT(*) FROM causations\nORDER BY count DESC;\n",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute \nSELECT \n  'events' as table_name, COUNT(*) as count FROM events\nUNION ALL\nSELECT 'indicators', COUNT(*) FROM indicators\nUNION ALL\nSELECT 'actors', COUNT(*) FROM actors\nUNION ALL\nSELECT 'causations', COUNT(*) FROM causations\nORDER BY count DESC;\n",
+  "rows": [
+    {
+      "table_name": "indicators",
+      "count": "223"
+    },
+    {
+      "table_name": "actors",
+      "count": "218"
+    },
+    {
+      "table_name": "events",
+      "count": "84"
+    },
+    {
+      "table_name": "causations",
+      "count": "27"
+    }
+  ],
+  "messages": [],
+  "stdout": "table_name\tcount\nindicators\t223\nactors\t218\nevents\t84\ncausations\t27\n",
+  "stderr": "",
+  "execution_time_ms": 58
+}

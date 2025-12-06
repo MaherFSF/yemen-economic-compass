@@ -1,0 +1,19 @@
+{
+  "query": "\nSELECT \n  COUNT(*) as total_causations,\n  COUNT(CASE WHEN mechanismEn IS NULL OR mechanismEn = '' THEN 1 END) as missing_mechanism_en,\n  COUNT(CASE WHEN mechanismAr IS NULL OR mechanismAr = '' THEN 1 END) as missing_mechanism_ar,\n  COUNT(CASE WHEN evidence IS NULL OR evidence = '[]' OR evidence = '' THEN 1 END) as missing_evidence,\n  COUNT(CASE WHEN strength IS NULL OR strength = 0 THEN 1 END) as missing_strength,\n  AVG(strength) as avg_strength,\n  AVG(confidence) as avg_confidence\nFROM causations;\n",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute \nSELECT \n  COUNT(*) as total_causations,\n  COUNT(CASE WHEN mechanismEn IS NULL OR mechanismEn = '' THEN 1 END) as missing_mechanism_en,\n  COUNT(CASE WHEN mechanismAr IS NULL OR mechanismAr = '' THEN 1 END) as missing_mechanism_ar,\n  COUNT(CASE WHEN evidence IS NULL OR evidence = '[]' OR evidence = '' THEN 1 END) as missing_evidence,\n  COUNT(CASE WHEN strength IS NULL OR strength = 0 THEN 1 END) as missing_strength,\n  AVG(strength) as avg_strength,\n  AVG(confidence) as avg_confidence\nFROM causations;\n",
+  "rows": [
+    {
+      "total_causations": "27",
+      "missing_mechanism_en": "0",
+      "missing_mechanism_ar": "0",
+      "missing_evidence": "8",
+      "missing_strength": "0",
+      "avg_strength": "84.8889",
+      "avg_confidence": "88.8519"
+    }
+  ],
+  "messages": [],
+  "stdout": "total_causations\tmissing_mechanism_en\tmissing_mechanism_ar\tmissing_evidence\tmissing_strength\tavg_strength\tavg_confidence\n27\t0\t0\t8\t0\t84.8889\t88.8519\n",
+  "stderr": "",
+  "execution_time_ms": 58
+}

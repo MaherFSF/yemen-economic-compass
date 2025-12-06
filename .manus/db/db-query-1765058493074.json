@@ -1,0 +1,115 @@
+{
+  "query": "\nSELECT \n  category,\n  severity,\n  COUNT(*) as event_count,\n  MIN(date) as earliest,\n  MAX(date) as latest\nFROM events\nGROUP BY category, severity\nORDER BY category, severity;\n",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute \nSELECT \n  category,\n  severity,\n  COUNT(*) as event_count,\n  MIN(date) as earliest,\n  MAX(date) as latest\nFROM events\nGROUP BY category, severity\nORDER BY category, severity;\n",
+  "rows": [
+    {
+      "category": "war",
+      "severity": "medium",
+      "event_count": "1",
+      "earliest": "2013-09-21",
+      "latest": "2013-09-21"
+    },
+    {
+      "category": "war",
+      "severity": "high",
+      "event_count": "2",
+      "earliest": "2011-01-27",
+      "latest": "2015-07-14"
+    },
+    {
+      "category": "war",
+      "severity": "critical",
+      "event_count": "13",
+      "earliest": "2014-09-21",
+      "latest": "2024-01-12"
+    },
+    {
+      "category": "policy",
+      "severity": "medium",
+      "event_count": "4",
+      "earliest": "2013-01-15",
+      "latest": "2024-05-02"
+    },
+    {
+      "category": "policy",
+      "severity": "high",
+      "event_count": "10",
+      "earliest": "2011-02-11",
+      "latest": "2023-04-09"
+    },
+    {
+      "category": "policy",
+      "severity": "critical",
+      "event_count": "4",
+      "earliest": "2011-11-23",
+      "latest": "2015-03-25"
+    },
+    {
+      "category": "humanitarian",
+      "severity": "high",
+      "event_count": "4",
+      "earliest": "2020-04-10",
+      "latest": "2025-11-16"
+    },
+    {
+      "category": "humanitarian",
+      "severity": "critical",
+      "event_count": "7",
+      "earliest": "2016-01-02",
+      "latest": "2025-02-15"
+    },
+    {
+      "category": "economic",
+      "severity": "low",
+      "event_count": "1",
+      "earliest": "2010-01-01",
+      "latest": "2010-01-01"
+    },
+    {
+      "category": "economic",
+      "severity": "medium",
+      "event_count": "5",
+      "earliest": "2010-12-14",
+      "latest": "2024-05-15"
+    },
+    {
+      "category": "economic",
+      "severity": "high",
+      "event_count": "7",
+      "earliest": "2014-07-08",
+      "latest": "2025-06-17"
+    },
+    {
+      "category": "economic",
+      "severity": "critical",
+      "event_count": "21",
+      "earliest": "2015-07-14",
+      "latest": "2025-11-17"
+    },
+    {
+      "category": "international",
+      "severity": "medium",
+      "event_count": "1",
+      "earliest": "2010-03-30",
+      "latest": "2010-03-30"
+    },
+    {
+      "category": "international",
+      "severity": "high",
+      "event_count": "3",
+      "earliest": "2022-04-02",
+      "latest": "2023-03-10"
+    },
+    {
+      "category": "international",
+      "severity": "critical",
+      "event_count": "1",
+      "earliest": "2025-10-09",
+      "latest": "2025-10-09"
+    }
+  ],
+  "messages": [],
+  "stdout": "category\tseverity\tevent_count\tearliest\tlatest\nwar\tmedium\t1\t2013-09-21\t2013-09-21\nwar\thigh\t2\t2011-01-27\t2015-07-14\nwar\tcritical\t13\t2014-09-21\t2024-01-12\npolicy\tmedium\t4\t2013-01-15\t2024-05-02\npolicy\thigh\t10\t2011-02-11\t2023-04-09\npolicy\tcritical\t4\t2011-11-23\t2015-03-25\nhumanitarian\thigh\t4\t2020-04-10\t2025-11-16\nhumanitarian\tcritical\t7\t2016-01-02\t2025-02-15\neconomic\tlow\t1\t2010-01-01\t2010-01-01\neconomic\tmedium\t5\t2010-12-14\t2024-05-15\neconomic\thigh\t7\t2014-07-08\t2025-06-17\neconomic\tcritical\t21\t2015-07-14\t2025-11-17\ninternational\tmedium\t1\t2010-03-30\t2010-03-30\ninternational\thigh\t3\t2022-04-02\t2023-03-10\ninternational\tcritical\t1\t2025-10-09\t2025-10-09\n",
+  "stderr": "",
+  "execution_time_ms": 57
+}

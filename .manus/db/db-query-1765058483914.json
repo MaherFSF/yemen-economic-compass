@@ -1,0 +1,90 @@
+{
+  "query": "\nSELECT \n  category,\n  COUNT(*) as total_indicators,\n  COUNT(CASE WHEN value IS NULL OR value = '' THEN 1 END) as missing_values,\n  MIN(date) as earliest_date,\n  MAX(date) as latest_date,\n  COUNT(DISTINCT date) as unique_dates\nFROM indicators\nGROUP BY category\nORDER BY total_indicators DESC;\n",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute \nSELECT \n  category,\n  COUNT(*) as total_indicators,\n  COUNT(CASE WHEN value IS NULL OR value = '' THEN 1 END) as missing_values,\n  MIN(date) as earliest_date,\n  MAX(date) as latest_date,\n  COUNT(DISTINCT date) as unique_dates\nFROM indicators\nGROUP BY category\nORDER BY total_indicators DESC;\n",
+  "rows": [
+    {
+      "category": "Economic",
+      "total_indicators": "45",
+      "missing_values": "0",
+      "earliest_date": "2010-12-31",
+      "latest_date": "2025-12-31",
+      "unique_dates": "17"
+    },
+    {
+      "category": "monetary",
+      "total_indicators": "36",
+      "missing_values": "0",
+      "earliest_date": "2010-12-31",
+      "latest_date": "2025-11-30",
+      "unique_dates": "18"
+    },
+    {
+      "category": "Humanitarian",
+      "total_indicators": "35",
+      "missing_values": "0",
+      "earliest_date": "2010-12-31",
+      "latest_date": "2025-12-31",
+      "unique_dates": "17"
+    },
+    {
+      "category": "Currency",
+      "total_indicators": "24",
+      "missing_values": "0",
+      "earliest_date": "2014-12-31",
+      "latest_date": "2025-01-31",
+      "unique_dates": "12"
+    },
+    {
+      "category": "External Flows",
+      "total_indicators": "20",
+      "missing_values": "0",
+      "earliest_date": "2010-12-31",
+      "latest_date": "2024-12-31",
+      "unique_dates": "13"
+    },
+    {
+      "category": "Economic Output",
+      "total_indicators": "16",
+      "missing_values": "0",
+      "earliest_date": "2010-12-31",
+      "latest_date": "2025-12-31",
+      "unique_dates": "16"
+    },
+    {
+      "category": "Prices",
+      "total_indicators": "16",
+      "missing_values": "0",
+      "earliest_date": "2010-12-31",
+      "latest_date": "2025-12-31",
+      "unique_dates": "16"
+    },
+    {
+      "category": "Natural Resources",
+      "total_indicators": "15",
+      "missing_values": "0",
+      "earliest_date": "2010-12-31",
+      "latest_date": "2024-12-31",
+      "unique_dates": "15"
+    },
+    {
+      "category": "Demographics",
+      "total_indicators": "9",
+      "missing_values": "0",
+      "earliest_date": "2010-12-31",
+      "latest_date": "2025-12-31",
+      "unique_dates": "9"
+    },
+    {
+      "category": "Social",
+      "total_indicators": "7",
+      "missing_values": "0",
+      "earliest_date": "2010-12-31",
+      "latest_date": "2024-12-31",
+      "unique_dates": "7"
+    }
+  ],
+  "messages": [],
+  "stdout": "category\ttotal_indicators\tmissing_values\tearliest_date\tlatest_date\tunique_dates\nEconomic\t45\t0\t2010-12-31\t2025-12-31\t17\nmonetary\t36\t0\t2010-12-31\t2025-11-30\t18\nHumanitarian\t35\t0\t2010-12-31\t2025-12-31\t17\nCurrency\t24\t0\t2014-12-31\t2025-01-31\t12\nExternal Flows\t20\t0\t2010-12-31\t2024-12-31\t13\nEconomic Output\t16\t0\t2010-12-31\t2025-12-31\t16\nPrices\t16\t0\t2010-12-31\t2025-12-31\t16\nNatural Resources\t15\t0\t2010-12-31\t2024-12-31\t15\nDemographics\t9\t0\t2010-12-31\t2025-12-31\t9\nSocial\t7\t0\t2010-12-31\t2024-12-31\t7\n",
+  "stderr": "",
+  "execution_time_ms": 56
+}
