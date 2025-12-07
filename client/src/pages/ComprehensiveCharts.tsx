@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { TrendingDown, TrendingUp, BarChart3, Loader2, AlertCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { ChartFooter } from "@/components/ChartFooter";
 import {
   LineChart,
   Line,
@@ -260,6 +261,13 @@ export default function ComprehensiveCharts() {
                   </ResponsiveContainer>
                 </div>
                 
+                <ChartFooter 
+                  sources={["Central Bank of Yemen (Aden)", "Central Bank of Yemen (Sana'a)", "World Bank", "IMF"]}
+                  lastUpdated="December 2025"
+                  dataPoints={exchangeRateData.length * 2}
+                  methodology="Official exchange rates and parallel market rates"
+                />
+                
                 {/* Key Insights */}
                 <div className="mt-6 grid gap-4 md:grid-cols-3">
                   <Card className="bg-red-50 border-red-200">
@@ -355,6 +363,13 @@ export default function ComprehensiveCharts() {
                   </ResponsiveContainer>
                 </div>
                 
+                <ChartFooter 
+                  sources={["World Bank", "IMF", "Central Bank of Yemen"]}
+                  lastUpdated="December 2025"
+                  dataPoints={gdpData.length}
+                  methodology="Nominal GDP in current US dollars"
+                />
+                
                 <div className="mt-6 p-4 bg-orange-50 border border-orange-200 rounded-lg">
                   <div className="flex items-start gap-3">
                     <AlertCircle className="w-5 h-5 text-orange-600 mt-0.5" />
@@ -408,6 +423,13 @@ export default function ComprehensiveCharts() {
                     </BarChart>
                   </ResponsiveContainer>
                 </div>
+                
+                <ChartFooter 
+                  sources={["World Bank", "IMF", "Central Bank of Yemen", "Trading Economics"]}
+                  lastUpdated="December 2025"
+                  dataPoints={inflationData.length}
+                  methodology="Consumer Price Index (CPI) annual percentage change"
+                />
                 
                 <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
                   <div className="flex items-start gap-3">
@@ -466,6 +488,13 @@ export default function ComprehensiveCharts() {
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
+                
+                <ChartFooter 
+                  sources={["World Bank", "UN OCHA", "WFP", "UNICEF"]}
+                  lastUpdated="December 2025"
+                  dataPoints={povertyData.length + foodInsecurityData.length}
+                  methodology="Poverty headcount ratio and food insecurity estimates"
+                />
                 
                 <div className="mt-6 grid gap-4 md:grid-cols-2">
                   <Card className="bg-red-50 border-red-200">
