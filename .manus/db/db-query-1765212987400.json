@@ -1,0 +1,310 @@
+{
+  "query": "SELECT id, titleEn, date, category FROM events ORDER BY date LIMIT 50",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SELECT id, titleEn, date, category FROM events ORDER BY date LIMIT 50",
+  "rows": [
+    {
+      "id": "90001",
+      "titleEn": "Economic Baseline Year",
+      "date": "2010-01-01",
+      "category": "economic"
+    },
+    {
+      "id": "120001",
+      "titleEn": "World Bank Approves $60M for Yemen Social Fund",
+      "date": "2010-03-30",
+      "category": "international"
+    },
+    {
+      "id": "120002",
+      "titleEn": "World Bank Grant for Private Sector Growth",
+      "date": "2010-12-14",
+      "category": "economic"
+    },
+    {
+      "id": "90002",
+      "titleEn": "Arab Spring Protests Begin",
+      "date": "2011-01-27",
+      "category": "war"
+    },
+    {
+      "id": "1",
+      "titleEn": "Yemeni Revolution Begins",
+      "date": "2011-02-11",
+      "category": "policy"
+    },
+    {
+      "id": "30001",
+      "titleEn": "Arab Spring Protests Begin in Yemen",
+      "date": "2011-02-11",
+      "category": "policy"
+    },
+    {
+      "id": "90003",
+      "titleEn": "President Saleh Signs GCC Initiative",
+      "date": "2011-11-23",
+      "category": "policy"
+    },
+    {
+      "id": "90004",
+      "titleEn": "Hadi Becomes President",
+      "date": "2012-02-27",
+      "category": "policy"
+    },
+    {
+      "id": "90026",
+      "titleEn": "National Dialogue Conference Begins",
+      "date": "2013-01-15",
+      "category": "policy"
+    },
+    {
+      "id": "90027",
+      "titleEn": "Houthis Expand from Saada",
+      "date": "2013-09-21",
+      "category": "war"
+    },
+    {
+      "id": "90028",
+      "titleEn": "NDC Concludes",
+      "date": "2014-01-25",
+      "category": "policy"
+    },
+    {
+      "id": "90029",
+      "titleEn": "Fuel Subsidy Cuts Announced",
+      "date": "2014-07-08",
+      "category": "economic"
+    },
+    {
+      "id": "60001",
+      "titleEn": "Houthis Take Control of Sanaa",
+      "date": "2014-09-21",
+      "category": "war"
+    },
+    {
+      "id": "90005",
+      "titleEn": "Houthis Seize Sana'a",
+      "date": "2014-09-21",
+      "category": "war"
+    },
+    {
+      "id": "2",
+      "titleEn": "Houthi Takeover of Sana'a",
+      "date": "2014-09-21",
+      "category": "war"
+    },
+    {
+      "id": "90030",
+      "titleEn": "Hadi Resigns Under Pressure",
+      "date": "2015-01-22",
+      "category": "policy"
+    },
+    {
+      "id": "90031",
+      "titleEn": "Hadi Escapes to Aden",
+      "date": "2015-02-21",
+      "category": "policy"
+    },
+    {
+      "id": "90032",
+      "titleEn": "Hadi Flees to Saudi Arabia",
+      "date": "2015-03-25",
+      "category": "policy"
+    },
+    {
+      "id": "3",
+      "titleEn": "Operation Decisive Storm",
+      "date": "2015-03-26",
+      "category": "war"
+    },
+    {
+      "id": "30002",
+      "titleEn": "Operation Decisive Storm Begins",
+      "date": "2015-03-26",
+      "category": "war"
+    },
+    {
+      "id": "60002",
+      "titleEn": "Operation Decisive Storm Begins",
+      "date": "2015-03-26",
+      "category": "war"
+    },
+    {
+      "id": "90006",
+      "titleEn": "Operation Decisive Storm Begins",
+      "date": "2015-03-26",
+      "category": "war"
+    },
+    {
+      "id": "60003",
+      "titleEn": "Yemen Oil Exports Halt",
+      "date": "2015-07-14",
+      "category": "economic"
+    },
+    {
+      "id": "90033",
+      "titleEn": "Aden Recaptured",
+      "date": "2015-07-14",
+      "category": "war"
+    },
+    {
+      "id": "90007",
+      "titleEn": "Humanitarian Crisis Declared",
+      "date": "2016-01-02",
+      "category": "humanitarian"
+    },
+    {
+      "id": "60004",
+      "titleEn": "Central Bank Split - CBY Moves to Aden",
+      "date": "2016-09-18",
+      "category": "economic"
+    },
+    {
+      "id": "30003",
+      "titleEn": "Central Bank Split - Relocation to Aden",
+      "date": "2016-09-18",
+      "category": "economic"
+    },
+    {
+      "id": "90008",
+      "titleEn": "Central Bank Relocated to Aden",
+      "date": "2016-09-18",
+      "category": "economic"
+    },
+    {
+      "id": "4",
+      "titleEn": "Central Bank Split",
+      "date": "2016-09-18",
+      "category": "economic"
+    },
+    {
+      "id": "90009",
+      "titleEn": "Houthis Reject CBY Move",
+      "date": "2016-09-19",
+      "category": "economic"
+    },
+    {
+      "id": "90010",
+      "titleEn": "Exchange Rate Begins Diverging",
+      "date": "2016-11-15",
+      "category": "economic"
+    },
+    {
+      "id": "60005",
+      "titleEn": "Exchange Rate Divergence Begins",
+      "date": "2016-12-01",
+      "category": "economic"
+    },
+    {
+      "id": "5",
+      "titleEn": "Cholera Outbreak",
+      "date": "2017-04-27",
+      "category": "humanitarian"
+    },
+    {
+      "id": "60006",
+      "titleEn": "Cholera Outbreak Declared",
+      "date": "2017-04-27",
+      "category": "humanitarian"
+    },
+    {
+      "id": "90011",
+      "titleEn": "Cholera Epidemic Peaks",
+      "date": "2017-10-27",
+      "category": "humanitarian"
+    },
+    {
+      "id": "90012",
+      "titleEn": "Saleh Killed",
+      "date": "2017-12-04",
+      "category": "war"
+    },
+    {
+      "id": "120003",
+      "titleEn": "Saudi Arabia Deposits $2B in Yemen Central Bank",
+      "date": "2018-03-15",
+      "category": "economic"
+    },
+    {
+      "id": "90013",
+      "titleEn": "Battle for Hodeidah Begins",
+      "date": "2018-06-13",
+      "category": "war"
+    },
+    {
+      "id": "90014",
+      "titleEn": "Aden Currency Collapse",
+      "date": "2018-08-23",
+      "category": "economic"
+    },
+    {
+      "id": "6",
+      "titleEn": "Currency Collapse",
+      "date": "2018-09-01",
+      "category": "economic"
+    },
+    {
+      "id": "60007",
+      "titleEn": "Riyal Collapses to 900 YER/USD",
+      "date": "2018-09-01",
+      "category": "economic"
+    },
+    {
+      "id": "120004",
+      "titleEn": "Saudi Arabia Grants $200M to Yemen",
+      "date": "2018-10-03",
+      "category": "economic"
+    },
+    {
+      "id": "60008",
+      "titleEn": "Saudi Arabia Deposits $2B in CBY-Aden",
+      "date": "2018-10-15",
+      "category": "economic"
+    },
+    {
+      "id": "90015",
+      "titleEn": "Stockholm Agreement",
+      "date": "2018-12-13",
+      "category": "policy"
+    },
+    {
+      "id": "30004",
+      "titleEn": "Stockholm Agreement",
+      "date": "2018-12-13",
+      "category": "policy"
+    },
+    {
+      "id": "7",
+      "titleEn": "Stockholm Agreement",
+      "date": "2018-12-13",
+      "category": "policy"
+    },
+    {
+      "id": "90016",
+      "titleEn": "STC Seizes Aden",
+      "date": "2019-08-10",
+      "category": "war"
+    },
+    {
+      "id": "90017",
+      "titleEn": "CBY-Sana'a Bans New Currency",
+      "date": "2019-12-18",
+      "category": "economic"
+    },
+    {
+      "id": "90018",
+      "titleEn": "WHO Declares COVID-19 Pandemic",
+      "date": "2020-03-11",
+      "category": "humanitarian"
+    },
+    {
+      "id": "60009",
+      "titleEn": "IMF Approves $26.3M Emergency Assistance",
+      "date": "2020-04-07",
+      "category": "economic"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitleEn\tdate\tcategory\n90001\tEconomic Baseline Year\t2010-01-01\teconomic\n120001\tWorld Bank Approves $60M for Yemen Social Fund\t2010-03-30\tinternational\n120002\tWorld Bank Grant for Private Sector Growth\t2010-12-14\teconomic\n90002\tArab Spring Protests Begin\t2011-01-27\twar\n1\tYemeni Revolution Begins\t2011-02-11\tpolicy\n30001\tArab Spring Protests Begin in Yemen\t2011-02-11\tpolicy\n90003\tPresident Saleh Signs GCC Initiative\t2011-11-23\tpolicy\n90004\tHadi Becomes President\t2012-02-27\tpolicy\n90026\tNational Dialogue Conference Begins\t2013-01-15\tpolicy\n90027\tHouthis Expand from Saada\t2013-09-21\twar\n90028\tNDC Concludes\t2014-01-25\tpolicy\n90029\tFuel Subsidy Cuts Announced\t2014-07-08\teconomic\n60001\tHouthis Take Control of Sanaa\t2014-09-21\twar\n90005\tHouthis Seize Sana'a\t2014-09-21\twar\n2\tHouthi Takeover of Sana'a\t2014-09-21\twar\n90030\tHadi Resigns Under Pressure\t2015-01-22\tpolicy\n90031\tHadi Escapes to Aden\t2015-02-21\tpolicy\n90032\tHadi Flees to Saudi Arabia\t2015-03-25\tpolicy\n3\tOperation Decisive Storm\t2015-03-26\twar\n30002\tOperation Decisive Storm Begins\t2015-03-26\twar\n60002\tOperation Decisive Storm Begins\t2015-03-26\twar\n90006\tOperation Decisive Storm Begins\t2015-03-26\twar\n60003\tYemen Oil Exports Halt\t2015-07-14\teconomic\n90033\tAden Recaptured\t2015-07-14\twar\n90007\tHumanitarian Crisis Declared\t2016-01-02\thumanitarian\n60004\tCentral Bank Split - CBY Moves to Aden\t2016-09-18\teconomic\n30003\tCentral Bank Split - Relocation to Aden\t2016-09-18\teconomic\n90008\tCentral Bank Relocated to Aden\t2016-09-18\teconomic\n4\tCentral Bank Split\t2016-09-18\teconomic\n90009\tHouthis Reject CBY Move\t2016-09-19\teconomic\n90010\tExchange Rate Begins Diverging\t2016-11-15\teconomic\n60005\tExchange Rate Divergence Begins\t2016-12-01\teconomic\n5\tCholera Outbreak\t2017-04-27\thumanitarian\n60006\tCholera Outbreak Declared\t2017-04-27\thumanitarian\n90011\tCholera Epidemic Peaks\t2017-10-27\thumanitarian\n90012\tSaleh Killed\t2017-12-04\twar\n120003\tSaudi Arabia Deposits $2B in Yemen Central Bank\t2018-03-15\teconomic\n90013\tBattle for Hodeidah Begins\t2018-06-13\twar\n90014\tAden Currency Collapse\t2018-08-23\teconomic\n6\tCurrency Collapse\t2018-09-01\teconomic\n60007\tRiyal Collapses to 900 YER/USD\t2018-09-01\teconomic\n120004\tSaudi Arabia Grants $200M to Yemen\t2018-10-03\teconomic\n60008\tSaudi Arabia Deposits $2B in CBY-Aden\t2018-10-15\teconomic\n90015\tStockholm Agreement\t2018-12-13\tpolicy\n30004\tStockholm Agreement\t2018-12-13\tpolicy\n7\tStockholm Agreement\t2018-12-13\tpolicy\n90016\tSTC Seizes Aden\t2019-08-10\twar\n90017\tCBY-Sana'a Bans New Currency\t2019-12-18\teconomic\n90018\tWHO Declares COVID-19 Pandemic\t2020-03-11\thumanitarian\n60009\tIMF Approves $26.3M Emergency Assistance\t2020-04-07\teconomic\n",
+  "stderr": "",
+  "execution_time_ms": 160
+}

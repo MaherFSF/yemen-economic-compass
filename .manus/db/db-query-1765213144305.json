@@ -1,0 +1,16 @@
+{
+  "query": "SELECT \n  (SELECT COUNT(*) FROM indicators) as indicators_count,\n  (SELECT COUNT(*) FROM banks) as banks_count,\n  (SELECT COUNT(*) FROM actors) as actors_count,\n  (SELECT COUNT(*) FROM events) as events_count",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SELECT \n  (SELECT COUNT(*) FROM indicators) as indicators_count,\n  (SELECT COUNT(*) FROM banks) as banks_count,\n  (SELECT COUNT(*) FROM actors) as actors_count,\n  (SELECT COUNT(*) FROM events) as events_count",
+  "rows": [
+    {
+      "indicators_count": "396",
+      "banks_count": "46",
+      "actors_count": "229",
+      "events_count": "96"
+    }
+  ],
+  "messages": [],
+  "stdout": "indicators_count\tbanks_count\tactors_count\tevents_count\n396\t46\t229\t96\n",
+  "stderr": "",
+  "execution_time_ms": 54
+}

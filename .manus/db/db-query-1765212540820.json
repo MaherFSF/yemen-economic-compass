@@ -1,0 +1,9 @@
+{
+  "query": "-- Reading and executing massive-data-insert.sql\n-- This will be done in batches to avoid timeout",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute -- Reading and executing massive-data-insert.sql\n-- This will be done in batches to avoid timeout",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 250
+}
