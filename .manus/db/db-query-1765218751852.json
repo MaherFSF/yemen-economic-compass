@@ -1,0 +1,13 @@
+{
+  "query": "SELECT COUNT(*) as current_count FROM events",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SELECT COUNT(*) as current_count FROM events",
+  "rows": [
+    {
+      "current_count": "96"
+    }
+  ],
+  "messages": [],
+  "stdout": "current_count\n96\n",
+  "stderr": "",
+  "execution_time_ms": 3681
+}

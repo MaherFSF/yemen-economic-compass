@@ -440,3 +440,55 @@ All parallel research complete. Database expansion ready. Homepage fixed. Expert
 - [x] Fixed MasterCompass years array to include 2010-2025
 - [x] Fixed JSX syntax error in App.tsx
 - [x] Restarted server successfully
+
+
+---
+
+# 🚨 CRITICAL FIXES - USER FEEDBACK DEC 8, 2025
+
+## IMMEDIATE PRIORITY FIXES
+
+### Homepage Fixes
+- [x] Remove "مصادر البيانات الموثوقة" section from homepage
+- [x] Remove "دعم ثنائي اللغة" card from features section
+- [x] Add "Citizens" (المواطنون) to target audience section
+- [ ] Fix English homepage title to "CauseWay Observatory"
+- [ ] Fix footer to match header branding exactly
+
+### Database Expansion
+- [ ] Add 200+ events total (10+ per year for 2010-2025, currently only 96)
+- [ ] Expand causations from 27 to 100+
+- [ ] Verify all 173 indicators are accurate and complete
+
+### File Storage Population
+- [ ] Upload 300+ actual documents to file storage
+- [ ] 50+ Yemen Microfinance Network documents
+- [ ] 50+ CBY Aden directives
+- [ ] 50+ CBY Sana'a directives
+- [ ] 50+ laws and regulations
+- [ ] 50+ research papers
+- [ ] 50+ international reports
+
+### Complete Under-Construction Pages
+- [ ] /wfp - WFP page
+- [ ] /iom - IOM page
+- [ ] /unicef - UNICEF page
+- [ ] /undp - UNDP page
+- [ ] /gov-aden - Government Aden page
+- [ ] /donors - Donors page
+- [ ] /bilateral-donors - Bilateral Donors page
+
+### Fix Arabic Text in Charts
+- [ ] Ensure Arabic text is readable in all charts
+- [ ] Fix font rendering for Arabic labels
+- [ ] Test on mobile devices
+
+### Ensure Dashboards Reflect Database
+- [ ] Timeline shows all 200+ events
+- [ ] All counts match database
+- [ ] Remove any hardcoded data
+
+### Testing & Deployment
+- [ ] Test ALL fixes via browser
+- [ ] Push ALL changes to GitHub
+- [ ] Create comprehensive checkpoint

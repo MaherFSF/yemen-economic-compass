@@ -126,15 +126,6 @@ export default function Home() {
         : "4,400+ reports and studies from 30 credible institutions like World Bank, IMF, and UN agencies",
       gradient: "from-indigo-500 to-blue-500",
       stats: [`${counters.reports}+`, isArabic ? "تقرير" : "Reports"]
-    },
-    {
-      icon: Globe,
-      title: isArabic ? "دعم ثنائي اللغة" : "Bilingual Support",
-      description: isArabic 
-        ? "محتوى كامل باللغتين العربية والإنجليزية لضمان إمكانية الوصول العالمية والشمولية"
-        : "Full content in both Arabic and English to ensure global accessibility and inclusivity",
-      gradient: "from-teal-500 to-cyan-500",
-      stats: ["2", isArabic ? "لغة" : "Languages"]
     }
   ];
 
@@ -178,6 +169,16 @@ export default function Home() {
       examples: isArabic ? "الحكومات، المنظمات غير الحكومية" : "Governments, NGOs, Practitioners",
       link: "/policy",
       color: "bg-orange-50 dark:bg-orange-950 border-orange-200"
+    },
+    {
+      icon: Users,
+      title: isArabic ? "المواطنون" : "Citizens",
+      description: isArabic 
+        ? "فهم الوضع الاقتصادي، متابعة المساعدات، محاسبة المسؤولين"
+        : "Understand economic situation, track aid, hold decision-makers accountable",
+      examples: isArabic ? "المجتمع المدني، الصحفيون، الناشطون" : "Civil Society, Journalists, Activists",
+      link: "/about",
+      color: "bg-red-50 dark:bg-red-950 border-red-200"
     }
   ];
 
@@ -422,48 +423,6 @@ export default function Home() {
                 </Link>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* Data Sources Section */}
-      <section className="py-20 bg-gradient-to-b from-white to-slate-50 dark:from-slate-800 dark:to-slate-900">
-        <div className="container">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 px-4 py-2">
-              <Shield className="h-4 w-4 mr-2" />
-              {isArabic ? "المصداقية" : "Credibility"}
-            </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              {isArabic ? "مصادر البيانات الموثوقة" : "Trusted Data Sources"}
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              {isArabic 
-                ? "جميع البيانات مستمدة من مؤسسات موثوقة ومصادر رسمية"
-                : "All data sourced from credible institutions and official sources"
-              }
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {[
-              { name: "World Bank", logo: "🏦" },
-              { name: "IMF", logo: "💰" },
-              { name: "UN OCHA", logo: "🌍" },
-              { name: "CBY", logo: "🏛️" },
-              { name: "Sana'a Center", logo: "🎓" },
-              { name: "ACAPS", logo: "📊" },
-              { name: "FEWS NET", logo: "🌾" },
-              { name: "WFP", logo: "🍽️" }
-            ].map((source, index) => (
-              <Card 
-                key={index}
-                className="p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary text-center group"
-              >
-                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">{source.logo}</div>
-                <p className="font-semibold text-sm">{source.name}</p>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
