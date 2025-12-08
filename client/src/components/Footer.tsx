@@ -18,8 +18,8 @@ export default function Footer() {
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
               {isArabic
-                ? "منصة بحثية شاملة لتحليل النظام المالي والاقتصادي في اليمن (2015-2025)"
-                : "Comprehensive research platform analyzing Yemen's financial and economic system (2015-2025)"
+                ? "منصة بحثية شاملة لتحليل النظام المالي والاقتصادي في اليمن (2010-2025)"
+                : "Comprehensive research platform analyzing Yemen's financial and economic system (2010-2025)"
               }
             </p>
             <div className="text-xs text-muted-foreground">

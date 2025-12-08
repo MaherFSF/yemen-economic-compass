@@ -76,6 +76,7 @@ import GovernmentAden from "./pages/GovernmentAden";
 import GovernmentSanaa from "./pages/GovernmentSanaa";
 import Donors from "./pages/Donors";
 import BilateralDonors from "./pages/BilateralDonors";
+import DocumentLibrary from "./pages/DocumentLibrary";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -124,6 +125,7 @@ function Router() {
       <Route path="/gov-sanaa" component={GovernmentSanaa} />
       <Route path="/donors" component={Donors} />
       <Route path="/bilateral-donors" component={BilateralDonors} />
+      <Route path="/documents" component={DocumentLibrary} />
           <Route path="/stakeholders/hayel-saeed-anam" component={HayelSaeedAnam} />
           <Route path="/banking-dashboard" component={BankingDashboard} />
           <Route path="/world-bank" component={WorldBankJourney} />
@@ -149,7 +151,8 @@ function Router() {
       <Route path={"/sitemap"} component={Sitemap} />
           <Route path="/banks-database" component={BanksDatabase} />
           <Route path="/year-explorer" component={YearExplorer} />
-          <Route path="/what-if-simulator" component={WhatIfSimulator} />     <Route path={"/404"} component={NotFound} />
+          <Route path="/what-if-simulator" component={WhatIfSimulator} />
+      <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
   );

@@ -273,3 +273,170 @@ All parallel research complete. Database expansion ready. Homepage fixed. Expert
 - [ ] Push to GitHub
 
 **Result: 4/4 major interactive charts now have professional source citations**
+
+
+---
+
+# COMPREHENSIVE PLATFORM TRANSFORMATION - NEW REQUIREMENTS
+
+## Phase 1: Branding & Critical Fixes
+- [ ] Update site name to "مرصد كوزواي المالي والاقتصادي للمساءلة والشفافية / CauseWay Yemen Financial and Economic Observatory for Accountability and Transparency"
+- [ ] Fix ALL date ranges from 2015-2025 to 2010-2025 across entire site
+- [ ] Remove sources section from landing page
+- [ ] Add "Citizens" (المواطنون) as targeted stakeholder group
+- [ ] Fix footer logo and menu inconsistencies with header
+- [ ] Perfect all English and Arabic grammar and translations
+
+## Phase 2: Deep Research & External Data Collection
+- [ ] Scrape Yemen Microfinance Network website library (all documents)
+- [ ] Collect ALL CBY Aden directives, circulars, decisions (2010-2025)
+- [ ] Collect ALL CBY Sana'a directives, circulars, decisions (2010-2025)
+- [ ] Gather complete Yemen laws and regulations database
+- [ ] Research ALL major commercial companies with financial data
+- [ ] Collect academic literature and research papers
+- [ ] Download and store all documents in file storage system
+
+## Phase 3: Revolutionary Design & Branding
+- [ ] Create unique branding identity with custom logo using AI generation
+- [ ] Design innovative navigation system (beyond standard dropdown menus)
+- [ ] Implement mobile-first responsive design (test on actual mobile)
+- [ ] Create stunning visual hierarchy with unique layouts
+- [ ] Design interactive data visualization components
+- [ ] Build custom UI components for exceptional user experience
+
+## Phase 4: Interactive Features & Tools
+- [ ] Build interactive timeline (2010-2025) with year-specific deep-dive pages
+- [ ] Create "What If?" scenario simulation tool (neutralize events/indicators)
+- [ ] Implement indicator neutralization feature with economic impact calculator
+- [ ] Build event impact analyzer showing cascading effects
+- [ ] Create actor influence analyzer with network visualization
+- [ ] Add comparative analysis tools (before/after scenarios)
+
+## Phase 5: Document Library & File Storage
+- [ ] Implement complete file upload and storage system
+- [ ] Create searchable document library with filters
+- [ ] Add CBY Aden directives archive (categorized by type)
+- [ ] Add CBY Sana'a directives archive (categorized by type)
+- [ ] Add laws and regulations section (searchable)
+- [ ] Add research papers library (with abstracts)
+- [ ] Add Yemen Microfinance Network documents (full library)
+
+## Phase 6: Commercial Companies & Enriched Content
+- [ ] Research and add ALL major Yemeni commercial companies
+- [ ] Create detailed company profiles with financial statements
+- [ ] Add company ownership structures and stakeholders
+- [ ] Link companies to economic events and impacts
+- [ ] Enrich stakeholder pages with deep research
+- [ ] Add comprehensive citizens section with impact analysis
+- [ ] Add company financial metrics and performance data
+
+## Phase 7: Mobile & Desktop Testing
+- [ ] Test EVERY page on mobile using browser (verify responsive design)
+- [ ] Test EVERY page on desktop using browser (verify layout)
+- [ ] Verify all interactive features work on mobile
+- [ ] Test scenario simulation on mobile and desktop
+- [ ] Test timeline navigation on mobile and desktop
+- [ ] Verify all data displays correctly on all screen sizes
+- [ ] Fix any mobile-specific issues found
+
+## Phase 8: Quality Assurance & Deployment
+- [ ] Final review of ALL content for accuracy
+- [ ] Verify ALL links work (no 404s)
+- [ ] Check ALL images load properly
+- [ ] Verify responsive design on multiple devices
+- [ ] Test performance and loading speed
+- [ ] Create comprehensive final checkpoint
+- [ ] Commit ALL changes to GitHub with detailed messages
+- [ ] Document all new features in README
+
+---
+
+## CRITICAL REQUIREMENTS CHECKLIST
+
+### Content Accuracy:
+- [ ] ALL pages show 2010-2025 (not 2015-2025)
+- [ ] NO empty pages (all sections have content)
+- [ ] ALL features claimed are actually implemented and tested
+- [ ] Citizens included as stakeholder target group
+
+### Design Excellence:
+- [ ] Unique branding identity throughout
+- [ ] Innovative navigation (not standard menus)
+- [ ] Perfect mobile responsiveness
+- [ ] Consistent header/footer design
+- [ ] Professional visual hierarchy
+
+### Functionality:
+- [ ] Year-specific navigation works (can go to any year 2010-2025)
+- [ ] Scenario simulation works (can neutralize events/indicators)
+- [ ] Document library is searchable and functional
+- [ ] All data is dynamic (not static)
+- [ ] Interactive features tested and working
+
+### Data Completeness:
+- [ ] Yemen Microfinance Network library included
+- [ ] CBY Aden directives complete (2010-2025)
+- [ ] CBY Sana'a directives complete (2010-2025)
+- [ ] Laws and regulations database complete
+- [ ] Commercial companies database complete
+- [ ] Academic literature library complete
+
+### Testing & Verification:
+- [ ] Browser testing completed (mobile + desktop)
+- [ ] All features verified working
+- [ ] Screenshots captured for documentation
+- [ ] Performance tested
+- [ ] All changes committed to GitHub
+
+---
+
+**GOAL: Create the most comprehensive, innovative, and exceptional Yemen economic observatory platform that exists anywhere in the world.**
+
+
+---
+
+## CURRENT SESSION - HIGH-IMPACT FEATURES
+
+### Phase 1: Year Explorer Deep Dive (2010-2025)
+- [ ] Create YearDetail page component with comprehensive layout
+- [ ] Fetch all events for specific year from database
+- [ ] Fetch all indicators for specific year from database
+- [ ] Display key statistics and metrics for the year
+- [ ] Add year-to-year comparison feature
+- [ ] Create interactive timeline navigation
+- [ ] Add export functionality for year data
+
+### Phase 2: "What If?" Scenario Simulator
+- [ ] Create WhatIfSimulator page (already exists, needs enhancement)
+- [ ] Build event selection interface with checkboxes
+- [ ] Build indicator neutralization controls
+- [ ] Implement economic impact calculation engine
+- [ ] Create before/after visualization charts
+- [ ] Add scenario save and export functionality
+- [ ] Integrate with existing database data
+
+### Phase 3: Document Library System
+- [x] Design document upload interface
+- [x] Implement file storage integration
+- [x] Create document categorization system (CBY Aden, CBY Sana'a, Laws, Research)
+- [x] Build advanced search with filters
+- [x] Add document preview functionality
+- [x] Create document metadata management
+- [ ] Implement download tracking
+
+### Phase 4: Commercial Companies Database
+- [ ] Research major Yemeni commercial companies
+- [ ] Create companies database schema
+- [ ] Build company profile pages
+- [ ] Add financial metrics and statements
+- [ ] Link companies to events and economic impacts
+- [ ] Create company search and filtering
+
+### Completed This Session:
+- [x] Updated branding to "مرصد كوزواي المالي والاقتصادي للمساءلة والشفافية"
+- [x] Fixed date ranges in Footer (2010-2025)
+- [x] Fixed date ranges in Homepage subtitle (2010-2025)
+- [x] Fixed date ranges in ScrollytellingTimeline (2010-2025)
+- [x] Fixed MasterCompass years array to include 2010-2025
+- [x] Fixed JSX syntax error in App.tsx
+- [x] Restarted server successfully

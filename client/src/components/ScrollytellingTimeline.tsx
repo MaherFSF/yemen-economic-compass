@@ -698,8 +698,8 @@ export default function ScrollytellingTimeline() {
           </h2>
           <p className="text-xl text-muted-foreground">
             {language === "ar" 
-              ? "2015-2025: كيف أعادت الحرب تشكيل النظام المالي اليمني"
-              : "2015-2025: How War Rewired Yemen's Financial System"}
+              ? "2010-2025: كيف أعادت الحرب تشكيل النظام المالي اليمني"
+              : "2010-2025: How War Rewired Yemen's Financial System"}
           </p>
         </div>
 
