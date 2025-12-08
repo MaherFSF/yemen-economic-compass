@@ -86,7 +86,7 @@ export default function DataVisualization() {
         break;
       case "inflation":
         data = inflationData;
-        filename = "yemen-inflation-2015-2025.csv";
+        filename = "yemen-inflation-2010-2025.csv";
         break;
       case "gdp":
         data = gdpData;
@@ -294,7 +294,7 @@ export default function DataVisualization() {
                 <div className="flex items-start justify-between">
                   <div>
                     <CardTitle className="text-2xl">
-                      {isArabic ? "اتجاهات التضخم (2015-2025)" : "Inflation Trends (2015-2025)"}
+                      {isArabic ? "اتجاهات التضخم (2010-2025)" : "Inflation Trends (2010-2025)"}
                     </CardTitle>
                     <CardDescription className="mt-2">
                       {isArabic
@@ -668,7 +668,7 @@ export default function DataVisualization() {
                     <CardHeader>
                       <CardTitle className="text-lg flex items-center gap-2">
                         <TrendingDown className="w-5 h-5 text-red-600" />
-                        {isArabic ? "الخسائر التراكمية (2015-2025)" : "Cumulative Losses (2015-2025)"}
+                        {isArabic ? "الخسائر التراكمية (2010-2025)" : "Cumulative Losses (2010-2025)"}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>

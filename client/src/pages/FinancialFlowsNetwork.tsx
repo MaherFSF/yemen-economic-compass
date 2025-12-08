@@ -12,7 +12,7 @@ export default function FinancialFlowsNetwork() {
   const content = {
     en: {
       title: "Yemen Financial Flows Network",
-      subtitle: "Domestic & External Financial Flows (2015-2025)",
+      subtitle: "Domestic & External Financial Flows (2010-2025)",
       description: "Interactive network visualization showing how money flows through Yemen's fragmented financial system, including domestic transactions, international aid, remittances, and oil revenues.",
       
       legend: "Network Legend",
@@ -138,7 +138,7 @@ export default function FinancialFlowsNetwork() {
     },
     ar: {
       title: "شبكة التدفقات المالية اليمنية",
-      subtitle: "التدفقات المالية المحلية والخارجية (2015-2025)",
+      subtitle: "التدفقات المالية المحلية والخارجية (2010-2025)",
       description: "تصور تفاعلي للشبكة يوضح كيفية تدفق الأموال عبر النظام المالي اليمني المجزأ، بما في ذلك المعاملات المحلية والمساعدات الدولية والتحويلات وعائدات النفط.",
       
       legend: "مفتاح الشبكة",

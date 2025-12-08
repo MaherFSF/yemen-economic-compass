@@ -69,7 +69,7 @@ export default function SaudiArabiaPage() {
       titleEn: "King Salman Humanitarian Aid Center",
       titleAr: "مركز الملك سلمان للإغاثة",
       amount: "$1,200M+",
-      date: "2015-2025",
+      date: "2010-2025",
       status: "active" as const,
       descriptionEn: "Humanitarian and development projects including health, education, water, shelter, and food security reaching 15M+ beneficiaries",
       descriptionAr: "مشاريع إنسانية وتنموية بما في ذلك الصحة والتعليم والمياه والمأوى والأمن الغذائي تصل إلى 15+ مليون مستفيد"
@@ -104,7 +104,7 @@ export default function SaudiArabiaPage() {
   ];
 
   const keyAchievementsEn = [
-    "Provided $7.16B total support (2015-2025), making Saudi Arabia the largest bilateral donor to Yemen",
+    "Provided $7.16B total support (2010-2025), making Saudi Arabia the largest bilateral donor to Yemen",
     "Stabilized exchange rate through $5B in Central Bank deposits, preventing currency collapse",
     "Enabled government to pay partial salaries to 400K civil servants, covering 35% of budget needs",
     "King Salman Center delivered 1,200+ humanitarian projects reaching 15M beneficiaries",
@@ -115,7 +115,7 @@ export default function SaudiArabiaPage() {
   ];
 
   const keyAchievementsAr = [
-    "قدم 7.16 مليار دولار دعم إجمالي (2015-2025)، مما جعل السعودية أكبر مانح ثنائي لليمن",
+    "قدم 7.16 مليار دولار دعم إجمالي (2010-2025)، مما جعل السعودية أكبر مانح ثنائي لليمن",
     "استقر سعر الصرف من خلال 5 مليارات دولار ودائع البنك المركزي، مما منع انهيار العملة",
     "مكّن الحكومة من دفع رواتب جزئية لـ 400 ألف موظف مدني، بتغطية 35% من احتياجات الميزانية",
     "قدم مركز الملك سلمان 1,200+ مشروع إنساني وصل إلى 15 مليون مستفيد",
@@ -169,7 +169,7 @@ export default function SaudiArabiaPage() {
             website="https://www.ksrelief.org"
             email="info@ksrelief.org"
             location="Riyadh, Saudi Arabia"
-            totalFunding="$7.16B (2015-2025)"
+            totalFunding="$7.16B (2010-2025)"
             projects={projects}
             impactMetrics={impactMetrics}
             keyAchievementsEn={keyAchievementsEn}

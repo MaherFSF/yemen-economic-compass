@@ -30,6 +30,7 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import { useEffect, useState } from "react";
+import { PLATFORM_NAME_AR, PLATFORM_NAME_EN } from "@/const";
 
 export default function Home() {
   const { language } = useLanguage();
@@ -227,8 +228,8 @@ export default function Home() {
                   </>
                 ) : (
                   <>
-                    <span className="block">Yemen Economic</span>
-                    <span className="block text-[#D4AF37] mt-4">Compass</span>
+                    <span className="block text-3xl md:text-4xl lg:text-5xl">CauseWay Yemen Financial and Economic Observatory</span>
+                    <span className="block text-[#D4AF37] mt-4 text-4xl md:text-5xl lg:text-6xl">for Accountability and Transparency</span>
                   </>
                 )}
               </h1>
@@ -240,7 +241,7 @@ export default function Home() {
                 }
               </p>
               <p className="text-lg md:text-xl text-[#D4AF37] font-semibold mt-4">
-                {isArabic ? "مشروع من كوزواي اليمن - الخدمات المالية والمصرفية" : "CauseWay Yemen - Financial & Banking Services"}
+                {isArabic ? "مشروع من كوزواي اليمن - الخدمات المالية والمصرفية" : "A CauseWay Yemen Observatory Project"}
               </p>
             </div>
 

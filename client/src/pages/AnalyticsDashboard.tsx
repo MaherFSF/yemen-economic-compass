@@ -575,7 +575,7 @@ export default function AnalyticsDashboard() {
                     {isArabic ? "معلومات البيانات" : "Data Information"}
                   </h4>
                   <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• {isArabic ? "الفترة الزمنية: 2015-2025" : "Time Period: 2015-2025"}</li>
+                    <li>• {isArabic ? "الفترة الزمنية: 2010-2025" : "Time Period: 2010-2025"}</li>
                     <li>• {isArabic ? "المصادر: البنك الدولي، صندوق النقد الدولي، الأمم المتحدة" : "Sources: World Bank, IMF, UN"}</li>
                     <li>• {isArabic ? "آخر تحديث: 2025" : "Last Updated: 2025"}</li>
                     <li>• {isArabic ? "الترخيص: استخدام حر للأغراض البحثية والتعليمية" : "License: Free use for research and educational purposes"}</li>

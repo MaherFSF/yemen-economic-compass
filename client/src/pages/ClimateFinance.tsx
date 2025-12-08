@@ -30,7 +30,7 @@ export default function ClimateFinance() {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">$245M</div>
-              <p className="text-xs text-muted-foreground mt-1">{isArabic ? "إجمالي 2015-2025" : "Total 2015-2025"}</p>
+              <p className="text-xs text-muted-foreground mt-1">{isArabic ? "إجمالي 2010-2025" : "Total 2010-2025"}</p>
             </CardContent>
           </Card>
 

@@ -16,7 +16,7 @@ export default function Overview() {
             النظام المالي الموازي في اليمن
           </h1>
           <p className="text-xl text-muted-foreground">
-            عشر سنوات أعادت تشكيل حركة الأموال (2015-2025)
+            عشر سنوات أعادت تشكيل حركة الأموال (2010-2025)
           </p>
         </div>
 

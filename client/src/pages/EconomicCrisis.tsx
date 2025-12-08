@@ -17,8 +17,8 @@ export default function EconomicCrisis() {
           </Badge>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             {isArabic 
-              ? "الأزمة الاقتصادية في اليمن (2015-2025)" 
-              : "Yemen's Economic Crisis (2015-2025)"}
+              ? "الأزمة الاقتصادية في اليمن (2010-2025)" 
+              : "Yemen's Economic Crisis (2010-2025)"}
           </h1>
           <p className="text-xl text-white/90 max-w-3xl">
             {isArabic
@@ -135,7 +135,7 @@ export default function EconomicCrisis() {
           <Card className="mb-8">
             <CardHeader>
               <CardTitle className="text-2xl">
-                {isArabic ? "المسار الزمني للانهيار (2015-2025)" : "Timeline of Collapse (2015-2025)"}
+                {isArabic ? "المسار الزمني للانهيار (2010-2025)" : "Timeline of Collapse (2010-2025)"}
               </CardTitle>
             </CardHeader>
             <CardContent dir={isArabic ? "rtl" : "ltr"}>

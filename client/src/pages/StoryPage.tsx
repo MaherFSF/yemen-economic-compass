@@ -98,8 +98,8 @@ export default function StoryPage() {
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               {isArabic
-                ? "قراءة استراتيجية في عقد من التشظّي النقدي والحرب الاقتصادية (2015-2025)"
-                : "A strategic reading of a decade of monetary fragmentation and economic warfare (2015-2025)"
+                ? "قراءة استراتيجية في عقد من التشظّي النقدي والحرب الاقتصادية (2010-2025)"
+                : "A strategic reading of a decade of monetary fragmentation and economic warfare (2010-2025)"
               }
             </p>
           </div>
