@@ -1,0 +1,90 @@
+{
+  "query": "SELECT \n  'users' as table_name, COUNT(*) as row_count FROM users\nUNION ALL SELECT 'files', COUNT(*) FROM files\nUNION ALL SELECT 'events', COUNT(*) FROM events\nUNION ALL SELECT 'actors', COUNT(*) FROM actors\nUNION ALL SELECT 'indicators', COUNT(*) FROM indicators\nUNION ALL SELECT 'causations', COUNT(*) FROM causations\nUNION ALL SELECT 'recommendations', COUNT(*) FROM recommendations\nUNION ALL SELECT 'banks', COUNT(*) FROM banks\nUNION ALL SELECT 'stakeholders', COUNT(*) FROM stakeholders\nUNION ALL SELECT 'yearly_macro_indicators', COUNT(*) FROM yearly_macro_indicators\nUNION ALL SELECT 'yearly_bank_data', COUNT(*) FROM yearly_bank_data\nUNION ALL SELECT 'yearly_aid_data', COUNT(*) FROM yearly_aid_data\nUNION ALL SELECT 'yearly_conflict_data', COUNT(*) FROM yearly_conflict_data\nUNION ALL SELECT 'yearly_remittance_data', COUNT(*) FROM yearly_remittance_data\nUNION ALL SELECT 'source_confidence_scores', COUNT(*) FROM source_confidence_scores\nUNION ALL SELECT 'source_bias_profiles', COUNT(*) FROM source_bias_profiles\nUNION ALL SELECT 'data_conflicts', COUNT(*) FROM data_conflicts\nUNION ALL SELECT 'data_revision_log', COUNT(*) FROM data_revision_log\nUNION ALL SELECT 'actor_actions', COUNT(*) FROM actor_actions\nUNION ALL SELECT 'actor_impact_profiles', COUNT(*) FROM actor_impact_profiles\nORDER BY row_count DESC;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SELECT \n  'users' as table_name, COUNT(*) as row_count FROM users\nUNION ALL SELECT 'files', COUNT(*) FROM files\nUNION ALL SELECT 'events', COUNT(*) FROM events\nUNION ALL SELECT 'actors', COUNT(*) FROM actors\nUNION ALL SELECT 'indicators', COUNT(*) FROM indicators\nUNION ALL SELECT 'causations', COUNT(*) FROM causations\nUNION ALL SELECT 'recommendations', COUNT(*) FROM recommendations\nUNION ALL SELECT 'banks', COUNT(*) FROM banks\nUNION ALL SELECT 'stakeholders', COUNT(*) FROM stakeholders\nUNION ALL SELECT 'yearly_macro_indicators', COUNT(*) FROM yearly_macro_indicators\nUNION ALL SELECT 'yearly_bank_data', COUNT(*) FROM yearly_bank_data\nUNION ALL SELECT 'yearly_aid_data', COUNT(*) FROM yearly_aid_data\nUNION ALL SELECT 'yearly_conflict_data', COUNT(*) FROM yearly_conflict_data\nUNION ALL SELECT 'yearly_remittance_data', COUNT(*) FROM yearly_remittance_data\nUNION ALL SELECT 'source_confidence_scores', COUNT(*) FROM source_confidence_scores\nUNION ALL SELECT 'source_bias_profiles', COUNT(*) FROM source_bias_profiles\nUNION ALL SELECT 'data_conflicts', COUNT(*) FROM data_conflicts\nUNION ALL SELECT 'data_revision_log', COUNT(*) FROM data_revision_log\nUNION ALL SELECT 'actor_actions', COUNT(*) FROM actor_actions\nUNION ALL SELECT 'actor_impact_profiles', COUNT(*) FROM actor_impact_profiles\nORDER BY row_count DESC;",
+  "rows": [
+    {
+      "table_name": "indicators",
+      "row_count": "396"
+    },
+    {
+      "table_name": "events",
+      "row_count": "364"
+    },
+    {
+      "table_name": "actors",
+      "row_count": "229"
+    },
+    {
+      "table_name": "files",
+      "row_count": "27"
+    },
+    {
+      "table_name": "causations",
+      "row_count": "27"
+    },
+    {
+      "table_name": "banks",
+      "row_count": "14"
+    },
+    {
+      "table_name": "recommendations",
+      "row_count": "8"
+    },
+    {
+      "table_name": "stakeholders",
+      "row_count": "8"
+    },
+    {
+      "table_name": "yearly_aid_data",
+      "row_count": "7"
+    },
+    {
+      "table_name": "yearly_bank_data",
+      "row_count": "3"
+    },
+    {
+      "table_name": "yearly_macro_indicators",
+      "row_count": "2"
+    },
+    {
+      "table_name": "users",
+      "row_count": "1"
+    },
+    {
+      "table_name": "yearly_remittance_data",
+      "row_count": "1"
+    },
+    {
+      "table_name": "yearly_conflict_data",
+      "row_count": "1"
+    },
+    {
+      "table_name": "source_bias_profiles",
+      "row_count": "0"
+    },
+    {
+      "table_name": "source_confidence_scores",
+      "row_count": "0"
+    },
+    {
+      "table_name": "data_revision_log",
+      "row_count": "0"
+    },
+    {
+      "table_name": "actor_actions",
+      "row_count": "0"
+    },
+    {
+      "table_name": "data_conflicts",
+      "row_count": "0"
+    },
+    {
+      "table_name": "actor_impact_profiles",
+      "row_count": "0"
+    }
+  ],
+  "messages": [],
+  "stdout": "table_name\trow_count\nindicators\t396\nevents\t364\nactors\t229\nfiles\t27\ncausations\t27\nbanks\t14\nrecommendations\t8\nstakeholders\t8\nyearly_aid_data\t7\nyearly_bank_data\t3\nyearly_macro_indicators\t2\nusers\t1\nyearly_remittance_data\t1\nyearly_conflict_data\t1\nsource_bias_profiles\t0\nsource_confidence_scores\t0\ndata_revision_log\t0\nactor_actions\t0\ndata_conflicts\t0\nactor_impact_profiles\t0\n",
+  "stderr": "",
+  "execution_time_ms": 1182
+}

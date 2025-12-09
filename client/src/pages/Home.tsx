@@ -1,41 +1,49 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { 
-  TrendingDown, TrendingUp, Users, DollarSign, Building2, Globe2,
-  Database, Network, Shield, BarChart3, FileText, Search,
-  ArrowRight, ChevronDown, Sparkles, Target, Zap, Eye
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { APP_LOGO } from "@/const";
+import {
+  TrendingUp,
+  Building2,
+  Users,
+  FileText,
+  Search,
+  ArrowRight,
+  BarChart3,
+  Globe,
+  Shield,
+  AlertTriangle,
+  DollarSign,
+  Calendar,
 } from "lucide-react";
 import { Link } from "wouter";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 /**
- * REVOLUTIONARY LANDING PAGE - WORLD-CLASS DESIGN
- * 
- * Design Philosophy:
- * - Authentic Yemen photos (no AI-generated images)
- * - Unique asymmetric layout (not standard grid)
- * - Yemen flag colors throughout (red #CE1126, green #007A3D, black, white)
- * - Dynamic, interactive, memorable experience
- * - Professional think tank standards (World Bank/IMF level)
+ * World-Class Landing Page for Yemen Economic Compass
+ * Design principles from 20 top global platforms:
+ * - Prominent search (World Bank, IMF, Statista)
+ * - Live metrics in hero (UN OCHA, FRED)
+ * - Card-based organization (16/20 platforms)
+ * - Professional typography (Inter + Open Sans)
+ * - Yemen flag colors with refinement
+ * - Authentic Yemen photography
  */
 
 export default function Home() {
-  const { language } = useLanguage();
-  const isArabic = language === 'ar';
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const [searchQuery, setSearchQuery] = useState("");
 
   return (
-    <div className="min-h-screen">
-      {/* HERO SECTION - SPLIT SCREEN WITH AUTHENTIC PHOTO */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <div className="min-h-screen bg-white">
+      {/* Hero Section - Full-width with authentic Yemen background */}
+      <section
+        className="relative min-h-[600px] flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(rgba(206, 17, 38, 0.85), rgba(0, 122, 61, 0.75)), url('/images/yemen-sanaa-cityscape.jpg')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         {/* Yemen Flag Stripe */}
         <div className="absolute top-0 left-0 right-0 h-2 flex">
           <div className="flex-1 bg-[#CE1126]" />
@@ -43,574 +51,541 @@ export default function Home() {
           <div className="flex-1 bg-black" />
         </div>
 
-        {/* Background Image - Right Side */}
-        <div 
-          className="absolute inset-0 md:left-1/2"
-          style={{
-            backgroundImage: 'url(/images/yemen/sanaa-cityscape.jpg)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            transform: `translateY(${scrollY * 0.5}px)`, // Parallax effect
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 md:from-white/98 md:via-white/80 to-transparent" />
-        </div>
+        <div className="container relative z-10 text-center py-20">
+          {/* CauseWay Logo */}
+          <div className="flex justify-center mb-8">
+            <img
+              src={APP_LOGO}
+              alt="CauseWay Observatory"
+              className="h-32 w-32 object-contain drop-shadow-2xl"
+            />
+          </div>
 
-        {/* Content - Left Side */}
-        <div className="container relative z-10 py-20">
-          <div className="max-w-3xl">
-            {/* CauseWay Logo */}
-            <div className="mb-8">
-              <img 
-                src="/images/causeway-logo-circular.png" 
-                alt="CauseWay Financial & Banking"
-                className="h-24 w-24 object-contain drop-shadow-lg"
+          {/* Main Headline */}
+          <h1 className="text-6xl md:text-7xl font-black text-white mb-4 drop-shadow-lg">
+            <span className="text-[#FFD700]">مرصد كوزواي</span>
+            <br />
+            <span className="text-white">المالي والاقتصادي</span>
+          </h1>
+
+          <p className="text-2xl md:text-3xl text-white/95 mb-8 font-medium drop-shadow-md">
+            للمساءلة والشفافية
+          </p>
+
+          <p className="text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
+            منصة استخبارات مالية شاملة تتتبع النظام المصرفي المزدوج، العقوبات الدولية، المؤشرات الاقتصادية،
+            <br />
+            وتدفقات المساعدات في اليمن (2010-2025)
+          </p>
+
+          {/* Prominent Search Bar - Pattern from World Bank, IMF, Statista */}
+          <div className="max-w-2xl mx-auto mb-12">
+            <div className="relative">
+              <Search className="absolute left-6 top-1/2 -translate-y-1/2 h-6 w-6 text-neutral-400" />
+              <Input
+                type="text"
+                placeholder="ابحث عن البنوك، المؤشرات، الأحداث، أصحاب المصلحة..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full h-16 pl-16 pr-6 text-lg bg-white/95 backdrop-blur-sm border-2 border-white/50 rounded-xl shadow-2xl focus:border-[#007A3D] focus:ring-4 focus:ring-[#007A3D]/20"
+                dir="rtl"
               />
             </div>
-
-            {/* Main Title - Bilingual */}
-            <div className="space-y-4 mb-8">
-              <h1 className="text-5xl md:text-7xl font-black leading-tight">
-                <span className="block text-[#CE1126]" dir="rtl">
-                  مرصد كوزواي
-                </span>
-                <span className="block text-[#007A3D]" dir="rtl">
-                  المالي والاقتصادي
-                </span>
-              </h1>
-              <p className="text-2xl md:text-3xl font-bold text-black" dir="rtl">
-                للمساءلة والشفافية
-              </p>
-              <p className="text-lg text-gray-700 max-w-2xl" dir="rtl">
-                منصة استخبارات مالية شاملة تتتبع النظام المصرفي المزدوج، العقوبات الدولية، 
-                المؤشرات الاقتصادية، وتدفقات المساعدات في اليمن (2010-2025)
-              </p>
+            <div className="flex flex-wrap gap-2 justify-center mt-4">
+              <span className="text-white/80 text-sm">بحث شائع:</span>
+              <Link href="/timeline">
+                <Button variant="ghost" size="sm" className="text-white hover:bg-white/20 h-8 text-sm">
+                  سعر الصرف
+                </Button>
+              </Link>
+              <Link href="/banks">
+                <Button variant="ghost" size="sm" className="text-white hover:bg-white/20 h-8 text-sm">
+                  القطاع المصرفي
+                </Button>
+              </Link>
+              <Link href="/stakeholders/world-bank">
+                <Button variant="ghost" size="sm" className="text-white hover:bg-white/20 h-8 text-sm">
+                  البنك الدولي
+                </Button>
+              </Link>
             </div>
+          </div>
 
-            {/* Key Stats - Horizontal Cards */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-              <Card className="border-t-4 border-t-[#CE1126] bg-white/90 backdrop-blur">
-                <CardContent className="p-4 text-center">
-                  <div className="text-3xl font-black text-[#CE1126]">16</div>
-                  <div className="text-sm text-gray-600" dir="rtl">سنة من البيانات</div>
-                  <div className="text-xs text-gray-500">2010-2025</div>
-                </CardContent>
-              </Card>
-              <Card className="border-t-4 border-t-[#007A3D] bg-white/90 backdrop-blur">
-                <CardContent className="p-4 text-center">
-                  <div className="text-3xl font-black text-[#007A3D]">318</div>
-                  <div className="text-sm text-gray-600" dir="rtl">حدث موثق</div>
-                  <div className="text-xs text-gray-500">مع مصادر</div>
-                </CardContent>
-              </Card>
-              <Card className="border-t-4 border-t-[#CE1126] bg-white/90 backdrop-blur">
-                <CardContent className="p-4 text-center">
-                  <div className="text-3xl font-black text-[#CE1126]">46</div>
-                  <div className="text-sm text-gray-600" dir="rtl">جهة فاعلة</div>
-                  <div className="text-xs text-gray-500">محلية ودولية</div>
-                </CardContent>
-              </Card>
-              <Card className="border-t-4 border-t-[#007A3D] bg-white/90 backdrop-blur">
-                <CardContent className="p-4 text-center">
-                  <div className="text-3xl font-black text-[#007A3D]">1,700+</div>
-                  <div className="text-sm text-gray-600" dir="rtl">نقطة بيانات</div>
-                  <div className="text-xs text-gray-500">مؤشرات اقتصادية</div>
-                </CardContent>
-              </Card>
-            </div>
+          {/* Live 2025 Metrics - Pattern from UN OCHA, FRED */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            <Card className="bg-white/95 backdrop-blur-sm p-6 border-t-4 border-t-[#CE1126] hover:shadow-2xl transition-shadow">
+              <div className="text-4xl font-black text-[#CE1126] mb-2">58%</div>
+              <div className="text-sm text-neutral-600 font-medium">انكماش الناتج المحلي</div>
+              <div className="text-xs text-neutral-500 mt-1">2010-2025</div>
+            </Card>
+            <Card className="bg-white/95 backdrop-blur-sm p-6 border-t-4 border-t-[#007A3D] hover:shadow-2xl transition-shadow">
+              <div className="text-4xl font-black text-[#007A3D] mb-2">195%</div>
+              <div className="text-sm text-neutral-600 font-medium">فجوة سعر الصرف</div>
+              <div className="text-xs text-neutral-500 mt-1">عدن-صنعاء 2025</div>
+            </Card>
+            <Card className="bg-white/95 backdrop-blur-sm p-6 border-t-4 border-t-[#CE1126] hover:shadow-2xl transition-shadow">
+              <div className="text-4xl font-black text-[#CE1126] mb-2">17M</div>
+              <div className="text-sm text-neutral-600 font-medium">انعدام الأمن الغذائي</div>
+              <div className="text-xs text-neutral-500 mt-1">2025</div>
+            </Card>
+            <Card className="bg-white/95 backdrop-blur-sm p-6 border-t-4 border-t-[#007A3D] hover:shadow-2xl transition-shadow">
+              <div className="text-4xl font-black text-[#007A3D] mb-2">$2.4B</div>
+              <div className="text-sm text-neutral-600 font-medium">المساعدات الإنسانية</div>
+              <div className="text-xs text-neutral-500 mt-1">2024</div>
+            </Card>
+          </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4">
-              <Button asChild size="lg" className="bg-[#CE1126] hover:bg-[#CE1126]/90 text-white">
-                <Link href="/timeline-explorer">
-                  <span dir="rtl">استكشف البيانات</span>
-                  <ArrowRight className="mr-2 h-5 w-5" />
-                </Link>
+          {/* Primary CTA */}
+          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/timeline">
+              <Button size="lg" className="bg-[#CE1126] hover:bg-[#A00E1F] text-white h-14 px-8 text-lg font-bold shadow-2xl">
+                استكشف البيانات
+                <ArrowRight className="mr-2 h-5 w-5" />
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-[#007A3D] text-[#007A3D] hover:bg-[#007A3D] hover:text-white">
-                <Link href="/dashboards-hub">
-                  <BarChart3 className="ml-2 h-5 w-5" />
-                  <span dir="rtl">لوحات التحكم</span>
-                </Link>
+            </Link>
+            <Link href="/literature">
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-white/95 hover:bg-white text-[#007A3D] border-2 border-white h-14 px-8 text-lg font-bold shadow-2xl"
+              >
+                تصفح الأبحاث
+                <FileText className="mr-2 h-5 w-5" />
               </Button>
-            </div>
-
-            {/* Scroll Indicator */}
-            <div className="mt-12 flex justify-center md:justify-start">
-              <div className="animate-bounce">
-                <ChevronDown className="h-8 w-8 text-[#CE1126]" />
-              </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* CRISIS INDICATORS - ASYMMETRIC LAYOUT */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
-        {/* Decorative Elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#CE1126]/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#007A3D]/5 rounded-full blur-3xl" />
-
-        <div className="container relative z-10">
-          <div className="text-center mb-16">
-            <Badge className="bg-[#CE1126] text-white mb-4">
-              <Sparkles className="h-4 w-4 mr-2" />
-              <span dir="rtl">مؤشرات حية 2025</span>
-            </Badge>
-            <h2 className="text-4xl md:text-5xl font-black text-[#CE1126] mb-4" dir="rtl">
-              ⚠️ الأزمة الاقتصادية والإنسانية ⚠️
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto" dir="rtl">
-              بيانات حية من 2025 تكشف عمق الأزمة في اليمن
-            </p>
-          </div>
-
-          {/* Asymmetric Grid */}
-          <div className="grid md:grid-cols-3 gap-6">
-            {/* Large Card - Spans 2 columns */}
-            <Card className="md:col-span-2 border-l-8 border-l-[#CE1126] bg-white shadow-xl hover:shadow-2xl transition-shadow">
-              <CardContent className="p-8">
-                <div className="flex items-start justify-between mb-6">
-                  <div>
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="p-3 bg-[#CE1126] rounded-lg">
-                        <TrendingDown className="h-8 w-8 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-5xl font-black text-[#007A3D]">58%</h3>
-                        <p className="text-sm text-gray-500">من خط الأساس 2014</p>
-                      </div>
-                    </div>
-                    <h4 className="text-2xl font-bold text-black mb-2" dir="rtl">
-                      الناتج المحلي الإجمالي
-                    </h4>
-                    <p className="text-gray-600" dir="rtl">
-                      انكماش اقتصادي حاد منذ بداية الحرب في 2015. فقد الاقتصاد اليمني 42% من قيمته.
-                    </p>
-                  </div>
-                  <img 
-                    src="/images/yemen/aden-port-containers.jpg" 
-                    alt="Aden Port"
-                    className="hidden md:block w-48 h-32 object-cover rounded-lg shadow-md"
-                  />
-                </div>
-                <div className="flex gap-2 flex-wrap">
-                  <Badge variant="outline" className="text-[#CE1126] border-[#CE1126]">
-                    <TrendingDown className="h-3 w-3 mr-1" />
-                    -28% في 2015
-                  </Badge>
-                  <Badge variant="outline" className="text-[#CE1126] border-[#CE1126]">
-                    -9.4% في 2016
-                  </Badge>
-                  <Badge variant="outline" className="text-gray-600">
-                    المصدر: البنك الدولي، صندوق النقد
-                  </Badge>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Small Card */}
-            <Card className="border-l-8 border-l-[#007A3D] bg-white shadow-xl hover:shadow-2xl transition-shadow">
-              <CardContent className="p-6">
-                <div className="p-3 bg-[#CE1126] rounded-lg w-fit mb-4">
-                  <DollarSign className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-4xl font-black text-[#007A3D] mb-2">195%</h3>
-                <h4 className="text-lg font-bold text-black mb-2" dir="rtl">
-                  فجوة سعر الصرف
-                </h4>
-                <p className="text-sm text-gray-600 mb-4" dir="rtl">
-                  1,650 ريال/دولار (عدن) مقابل 560 (صنعاء)
-                </p>
-                <p className="text-xs text-gray-500" dir="rtl">
-                  انقسام البنك المركزي خلق نظامين ماليين متوازيين
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Small Card */}
-            <Card className="border-l-8 border-l-[#CE1126] bg-white shadow-xl hover:shadow-2xl transition-shadow">
-              <CardContent className="p-6">
-                <div className="p-3 bg-[#007A3D] rounded-lg w-fit mb-4">
-                  <Users className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-4xl font-black text-[#CE1126] mb-2">17M</h3>
-                <h4 className="text-lg font-bold text-black mb-2" dir="rtl">
-                  يعانون من انعدام الأمن الغذائي
-                </h4>
-                <p className="text-sm text-gray-600 mb-4" dir="rtl">
-                  57% من السكان في أزمة غذائية
-                </p>
-                <p className="text-xs text-gray-500" dir="rtl">
-                  تضاعف العدد منذ 2010 (7.5 مليون)
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Large Card - Spans 2 columns */}
-            <Card className="md:col-span-2 border-l-8 border-l-[#007A3D] bg-white shadow-xl hover:shadow-2xl transition-shadow">
-              <CardContent className="p-8">
-                <div className="flex items-start justify-between mb-6">
-                  <div>
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="p-3 bg-[#007A3D] rounded-lg">
-                        <Globe2 className="h-8 w-8 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-5xl font-black text-[#CE1126]">$2.4B</h3>
-                        <p className="text-sm text-gray-500">المساعدات الإنسانية 2024</p>
-                      </div>
-                    </div>
-                    <h4 className="text-2xl font-bold text-black mb-2" dir="rtl">
-                      فجوة التمويل الإنساني
-                    </h4>
-                    <p className="text-gray-600" dir="rtl">
-                      تمويل 19% فقط من الاحتياجات. الفجوة المستمرة تفاقم الأزمة الإنسانية.
-                    </p>
-                  </div>
-                  <img 
-                    src="/images/yemen/yemen-people-market.jpg" 
-                    alt="Yemen Humanitarian Crisis"
-                    className="hidden md:block w-48 h-32 object-cover rounded-lg shadow-md"
-                  />
-                </div>
-                <div className="flex gap-2 flex-wrap">
-                  <Badge variant="outline" className="text-[#007A3D] border-[#007A3D]">
-                    <Globe2 className="h-3 w-3 mr-1" />
-                    الأمم المتحدة
-                  </Badge>
-                  <Badge variant="outline" className="text-[#007A3D] border-[#007A3D]">
-                    البنك الدولي
-                  </Badge>
-                  <Badge variant="outline" className="text-[#007A3D] border-[#007A3D]">
-                    السعودية: $7.16B
-                  </Badge>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* PLATFORM CAPABILITIES - UNIQUE LAYOUT */}
-      <section className="py-20 bg-white relative">
+      {/* Platform Statistics - Pattern from World Bank, IMF */}
+      <section className="py-16 bg-neutral-50">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black mb-4">
-              <span className="text-[#007A3D]" dir="rtl">قدرات المنصة</span>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-5xl font-black text-[#CE1126] mb-2">16</div>
+              <div className="text-neutral-600 font-medium">سنة من البيانات</div>
+            </div>
+            <div>
+              <div className="text-5xl font-black text-[#007A3D] mb-2">318</div>
+              <div className="text-neutral-600 font-medium">حدث موثق</div>
+            </div>
+            <div>
+              <div className="text-5xl font-black text-[#CE1126] mb-2">46</div>
+              <div className="text-neutral-600 font-medium">صاحب مصلحة</div>
+            </div>
+            <div>
+              <div className="text-5xl font-black text-[#007A3D] mb-2">+1,700</div>
+              <div className="text-neutral-600 font-medium">نقطة بيانات</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Access Cards - Pattern from IMF (3 entry points), Card-based (16/20 platforms) */}
+      <section className="py-20 bg-white">
+        <div className="container">
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-4 text-neutral-900">
+            نقاط الدخول الرئيسية
+          </h2>
+          <p className="text-center text-neutral-600 text-lg mb-12 max-w-2xl mx-auto">
+            ابدأ استكشافك للنظام المالي الموازي في اليمن من خلال أحد المسارات الأربعة
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Timeline Explorer */}
+            <Link href="/timeline">
+              <Card className="p-8 hover:shadow-2xl transition-all duration-300 border-t-4 border-t-[#CE1126] cursor-pointer group h-full">
+                <div className="bg-[#CE1126]/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#CE1126] transition-colors">
+                  <Calendar className="h-8 w-8 text-[#CE1126] group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="text-2xl font-bold mb-3 text-neutral-900">الجدول الزمني</h3>
+                <p className="text-neutral-600 leading-relaxed">
+                  استكشف 318 حدثًا رئيسيًا من 2010-2025: الحرب، السياسات، العقوبات، والأزمات الإنسانية
+                </p>
+                <div className="mt-6 flex items-center text-[#CE1126] font-semibold group-hover:translate-x-2 transition-transform">
+                  <span>استكشف</span>
+                  <ArrowRight className="mr-2 h-5 w-5" />
+                </div>
+              </Card>
+            </Link>
+
+            {/* Banking Sector */}
+            <Link href="/banks">
+              <Card className="p-8 hover:shadow-2xl transition-all duration-300 border-t-4 border-t-[#007A3D] cursor-pointer group h-full">
+                <div className="bg-[#007A3D]/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#007A3D] transition-colors">
+                  <Building2 className="h-8 w-8 text-[#007A3D] group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="text-2xl font-bold mb-3 text-neutral-900">القطاع المصرفي</h3>
+                <p className="text-neutral-600 leading-relaxed">
+                  31 بنكًا تجاريًا وإسلاميًا ومتخصصًا، مع بيانات مالية سنوية وحالة العقوبات
+                </p>
+                <div className="mt-6 flex items-center text-[#007A3D] font-semibold group-hover:translate-x-2 transition-transform">
+                  <span>استكشف</span>
+                  <ArrowRight className="mr-2 h-5 w-5" />
+                </div>
+              </Card>
+            </Link>
+
+            {/* Stakeholders */}
+            <Link href="/stakeholders">
+              <Card className="p-8 hover:shadow-2xl transition-all duration-300 border-t-4 border-t-[#CE1126] cursor-pointer group h-full">
+                <div className="bg-[#CE1126]/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#CE1126] transition-colors">
+                  <Users className="h-8 w-8 text-[#CE1126] group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="text-2xl font-bold mb-3 text-neutral-900">أصحاب المصلحة</h3>
+                <p className="text-neutral-600 leading-relaxed">
+                  46 جهة فاعلة: الحكومات، المنظمات الدولية، الجهات المانحة، والجماعات المسلحة
+                </p>
+                <div className="mt-6 flex items-center text-[#CE1126] font-semibold group-hover:translate-x-2 transition-transform">
+                  <span>استكشف</span>
+                  <ArrowRight className="mr-2 h-5 w-5" />
+                </div>
+              </Card>
+            </Link>
+
+            {/* Research Library */}
+            <Link href="/literature">
+              <Card className="p-8 hover:shadow-2xl transition-all duration-300 border-t-4 border-t-[#007A3D] cursor-pointer group h-full">
+                <div className="bg-[#007A3D]/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#007A3D] transition-colors">
+                  <FileText className="h-8 w-8 text-[#007A3D] group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="text-2xl font-bold mb-3 text-neutral-900">مكتبة الأبحاث</h3>
+                <p className="text-neutral-600 leading-relaxed">
+                  4,416 منشورًا من البنك الدولي، صندوق النقد، مركز صنعاء، وأكثر من 50 مصدرًا
+                </p>
+                <div className="mt-6 flex items-center text-[#007A3D] font-semibold group-hover:translate-x-2 transition-transform">
+                  <span>استكشف</span>
+                  <ArrowRight className="mr-2 h-5 w-5" />
+                </div>
+              </Card>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Crisis Dashboard - Live 2025 Indicators */}
+      <section className="py-20 bg-gradient-to-br from-neutral-50 to-neutral-100">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-black mb-4 text-neutral-900">
+              لوحة الأزمة 2025
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto" dir="rtl">
-              أدوات متقدمة للاستخبارات المالية، التحليل الاقتصادي، وتتبع أصحاب المصلحة
+            <p className="text-neutral-600 text-lg max-w-2xl mx-auto">
+              المؤشرات الاقتصادية الحية والأحداث الحرجة التي تشكل مستقبل اليمن
             </p>
           </div>
 
-          {/* Bento Grid Layout */}
-          <div className="grid md:grid-cols-6 gap-6">
-            {/* Large Feature - 3 columns */}
-            <Link href="/banks-database" className="md:col-span-3 group">
-              <Card className="h-full border-t-4 border-t-[#CE1126] hover:shadow-2xl transition-all hover:-translate-y-1">
-                <CardContent className="p-8">
-                  <div className="flex items-start justify-between mb-6">
-                    <div>
-                      <div className="p-4 bg-gradient-to-br from-[#CE1126] to-[#007A3D] rounded-xl w-fit mb-4">
-                        <Database className="h-8 w-8 text-white" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-[#CE1126] mb-2" dir="rtl">
-                        قاعدة بيانات شاملة
-                      </h3>
-                      <p className="text-gray-600 mb-4" dir="rtl">
-                        318 حدثًا موثقًا، +1,700 مؤشر اقتصادي، 46 جهة فاعلة مع مصادر موثوقة
-                      </p>
-                      <div className="flex items-center text-[#007A3D] group-hover:translate-x-2 transition-transform" dir="rtl">
-                        <span className="font-semibold">استكشف</span>
-                        <ArrowRight className="mr-2 h-5 w-5" />
-                      </div>
-                    </div>
-                    <img 
-                      src="/images/yemen/sanaa-modern-development.jpg" 
-                      alt="Data"
-                      className="hidden md:block w-32 h-32 object-cover rounded-lg"
-                    />
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Exchange Rate Crisis */}
+            <Card className="p-6 border-l-4 border-l-[#CE1126] hover:shadow-xl transition-shadow">
+              <div className="flex items-start justify-between mb-4">
+                <div className="bg-[#CE1126]/10 p-3 rounded-lg">
+                  <TrendingUp className="h-6 w-6 text-[#CE1126]" />
+                </div>
+                <span className="text-xs bg-[#CE1126]/10 text-[#CE1126] px-2 py-1 rounded-full font-semibold">
+                  حرج
+                </span>
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-neutral-900">أزمة سعر الصرف</h3>
+              <div className="text-3xl font-black text-[#CE1126] mb-2">195%</div>
+              <p className="text-neutral-600 text-sm leading-relaxed">
+                فجوة سعر الصرف بين عدن (1,400 ريال/دولار) وصنعاء (530 ريال/دولار) تفاقم الانقسام الاقتصادي
+              </p>
+              <div className="mt-4 text-xs text-neutral-500">
+                آخر تحديث: يناير 2025
+              </div>
+            </Card>
 
-            {/* Medium Feature - 2 columns */}
-            <Link href="/comprehensive-charts" className="md:col-span-2 group">
-              <Card className="h-full border-t-4 border-t-[#007A3D] hover:shadow-2xl transition-all hover:-translate-y-1">
-                <CardContent className="p-6">
-                  <div className="p-3 bg-[#007A3D] rounded-lg w-fit mb-4">
-                    <Network className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-[#007A3D] mb-2" dir="rtl">
-                    تصورات تفاعلية
-                  </h3>
-                  <p className="text-sm text-gray-600 mb-4" dir="rtl">
-                    رسوم بيانية متقدمة للناتج المحلي، التضخم، سعر الصرف، القطاع المصرفي، تدفقات المساعدات
-                  </p>
-                  <div className="flex items-center text-[#CE1126] group-hover:translate-x-2 transition-transform" dir="rtl">
-                    <span className="text-sm font-semibold">استكشف</span>
-                    <ArrowRight className="mr-2 h-4 w-4" />
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
+            {/* OFAC Sanctions */}
+            <Card className="p-6 border-l-4 border-l-[#007A3D] hover:shadow-xl transition-shadow">
+              <div className="flex items-start justify-between mb-4">
+                <div className="bg-[#007A3D]/10 p-3 rounded-lg">
+                  <Shield className="h-6 w-6 text-[#007A3D]" />
+                </div>
+                <span className="text-xs bg-[#007A3D]/10 text-[#007A3D] px-2 py-1 rounded-full font-semibold">
+                  جديد
+                </span>
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-neutral-900">عقوبات OFAC</h3>
+              <div className="text-3xl font-black text-[#007A3D] mb-2">Jan 2025</div>
+              <p className="text-neutral-600 text-sm leading-relaxed">
+                تعيينات جديدة تستهدف شبكة التمويل الحوثية، مما يؤثر على البنوك والشركات اليمنية
+              </p>
+              <div className="mt-4 text-xs text-neutral-500">
+                المصدر: وزارة الخزانة الأمريكية
+              </div>
+            </Card>
 
-            {/* Small Feature - 1 column */}
-            <Link href="/sanctions" className="group">
-              <Card className="h-full border-t-4 border-t-[#CE1126] hover:shadow-2xl transition-all hover:-translate-y-1">
-                <CardContent className="p-6">
-                  <div className="p-3 bg-[#CE1126] rounded-lg w-fit mb-4">
-                    <Shield className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-[#CE1126] mb-2" dir="rtl">
-                    تتبع العقوبات
-                  </h3>
-                  <p className="text-xs text-gray-600 mb-4" dir="rtl">
-                    عقوبات OFAC يناير 2025 على 3 بنوك يمنية، تحليل الأثر، الأساس القانوني
-                  </p>
-                  <div className="flex items-center text-[#007A3D] group-hover:translate-x-2 transition-transform" dir="rtl">
-                    <span className="text-sm font-semibold">عرض</span>
-                    <ArrowRight className="mr-2 h-4 w-4" />
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
+            {/* Humanitarian Crisis */}
+            <Card className="p-6 border-l-4 border-l-[#CE1126] hover:shadow-xl transition-shadow">
+              <div className="flex items-start justify-between mb-4">
+                <div className="bg-[#CE1126]/10 p-3 rounded-lg">
+                  <AlertTriangle className="h-6 w-6 text-[#CE1126]" />
+                </div>
+                <span className="text-xs bg-[#CE1126]/10 text-[#CE1126] px-2 py-1 rounded-full font-semibold">
+                  عاجل
+                </span>
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-neutral-900">الأزمة الإنسانية</h3>
+              <div className="text-3xl font-black text-[#CE1126] mb-2">17.0M</div>
+              <p className="text-neutral-600 text-sm leading-relaxed">
+                يعاني 17 مليون يمني من انعدام الأمن الغذائي، مع تفاقم الوضع في 2025
+              </p>
+              <div className="mt-4 text-xs text-neutral-500">
+                المصدر: مكتب الأمم المتحدة لتنسيق الشؤون الإنسانية
+              </div>
+            </Card>
 
-            {/* Small Feature */}
-            <Link href="/what-if-simulator" className="group">
-              <Card className="h-full border-t-4 border-t-[#007A3D] hover:shadow-2xl transition-all hover:-translate-y-1">
-                <CardContent className="p-6">
-                  <div className="p-3 bg-[#007A3D] rounded-lg w-fit mb-4">
-                    <Target className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-[#007A3D] mb-2" dir="rtl">
-                    محاكي السيناريوهات
-                  </h3>
-                  <p className="text-xs text-gray-600 mb-4" dir="rtl">
-                    نموذج تفاعلي لتوقع تأثير أسعار النفط، التحويلات، المساعدات على الاقتصاد
-                  </p>
-                  <div className="flex items-center text-[#CE1126] group-hover:translate-x-2 transition-transform" dir="rtl">
-                    <span className="text-sm font-semibold">جرب</span>
-                    <ArrowRight className="mr-2 h-4 w-4" />
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
+            {/* Aid Flows */}
+            <Card className="p-6 border-l-4 border-l-[#007A3D] hover:shadow-xl transition-shadow">
+              <div className="flex items-start justify-between mb-4">
+                <div className="bg-[#007A3D]/10 p-3 rounded-lg">
+                  <DollarSign className="h-6 w-6 text-[#007A3D]" />
+                </div>
+                <span className="text-xs bg-[#007A3D]/10 text-[#007A3D] px-2 py-1 rounded-full font-semibold">
+                  2024
+                </span>
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-neutral-900">تدفقات المساعدات</h3>
+              <div className="text-3xl font-black text-[#007A3D] mb-2">$2.4B</div>
+              <p className="text-neutral-600 text-sm leading-relaxed">
+                المساعدات الإنسانية الدولية لعام 2024، مع تراجع التمويل مقارنة بالسنوات السابقة
+              </p>
+              <div className="mt-4 text-xs text-neutral-500">
+                المصدر: FTS - OCHA
+              </div>
+            </Card>
 
-            {/* Medium Feature - 2 columns */}
-            <Link href="/research" className="md:col-span-2 group">
-              <Card className="h-full border-t-4 border-t-[#CE1126] hover:shadow-2xl transition-all hover:-translate-y-1">
-                <CardContent className="p-6">
-                  <div className="p-3 bg-[#CE1126] rounded-lg w-fit mb-4">
-                    <FileText className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-[#CE1126] mb-2" dir="rtl">
-                    مكتبة الأبحاث
-                  </h3>
-                  <p className="text-sm text-gray-600 mb-4" dir="rtl">
-                    4,416 منشورًا من 30 منظمة (البنك الدولي، صندوق النقد، الأمم المتحدة، المركز اليمني)
-                  </p>
-                  <div className="flex items-center text-[#007A3D] group-hover:translate-x-2 transition-transform" dir="rtl">
-                    <span className="text-sm font-semibold">استكشف</span>
-                    <ArrowRight className="mr-2 h-4 w-4" />
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
+            {/* Banking Sector Split */}
+            <Card className="p-6 border-l-4 border-l-[#CE1126] hover:shadow-xl transition-shadow">
+              <div className="flex items-start justify-between mb-4">
+                <div className="bg-[#CE1126]/10 p-3 rounded-lg">
+                  <Building2 className="h-6 w-6 text-[#CE1126]" />
+                </div>
+                <span className="text-xs bg-[#CE1126]/10 text-[#CE1126] px-2 py-1 rounded-full font-semibold">
+                  مستمر
+                </span>
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-neutral-900">انقسام القطاع المصرفي</h3>
+              <div className="text-3xl font-black text-[#CE1126] mb-2">2 CBY</div>
+              <p className="text-neutral-600 text-sm leading-relaxed">
+                بنكان مركزيان متنافسان (عدن وصنعاء) يديران أنظمة مالية موازية منذ 2016
+              </p>
+              <div className="mt-4 text-xs text-neutral-500">
+                آخر تحديث: ديسمبر 2024
+              </div>
+            </Card>
 
-            {/* Large Feature - 3 columns */}
-            <Link href="/stakeholders" className="md:col-span-3 group">
-              <Card className="h-full border-t-4 border-t-[#007A3D] hover:shadow-2xl transition-all hover:-translate-y-1">
-                <CardContent className="p-8">
-                  <div className="flex items-start justify-between mb-6">
-                    <div>
-                      <div className="p-4 bg-gradient-to-br from-[#007A3D] to-[#CE1126] rounded-xl w-fit mb-4">
-                        <Building2 className="h-8 w-8 text-white" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-[#007A3D] mb-2" dir="rtl">
-                        ملفات أصحاب المصلحة
-                      </h3>
-                      <p className="text-gray-600 mb-4" dir="rtl">
-                        تحليل شامل للبنك الدولي، صندوق النقد الدولي، السعودية، الإمارات، الحوثيين، الحكومة
-                      </p>
-                      <div className="flex items-center text-[#CE1126] group-hover:translate-x-2 transition-transform" dir="rtl">
-                        <span className="font-semibold">استكشف</span>
-                        <ArrowRight className="mr-2 h-5 w-5" />
-                      </div>
-                    </div>
-                    <img 
-                      src="/images/yemen/yemen-traditional-architecture.jpg" 
-                      alt="Stakeholders"
-                      className="hidden md:block w-32 h-32 object-cover rounded-lg"
-                    />
-                  </div>
-                </CardContent>
-              </Card>
+            {/* GDP Contraction */}
+            <Card className="p-6 border-l-4 border-l-[#007A3D] hover:shadow-xl transition-shadow">
+              <div className="flex items-start justify-between mb-4">
+                <div className="bg-[#007A3D]/10 p-3 rounded-lg">
+                  <BarChart3 className="h-6 w-6 text-[#007A3D]" />
+                </div>
+                <span className="text-xs bg-[#007A3D]/10 text-[#007A3D] px-2 py-1 rounded-full font-semibold">
+                  تاريخي
+                </span>
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-neutral-900">انكماش الناتج المحلي</h3>
+              <div className="text-3xl font-black text-[#007A3D] mb-2">-58%</div>
+              <p className="text-neutral-600 text-sm leading-relaxed">
+                انكماش تراكمي في الناتج المحلي الإجمالي من 2010 إلى 2025، مما يجعلها واحدة من أسوأ الأزمات الاقتصادية
+              </p>
+              <div className="mt-4 text-xs text-neutral-500">
+                المصدر: البنك الدولي، صندوق النقد الدولي
+              </div>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link href="/timeline">
+              <Button size="lg" variant="outline" className="border-2 border-[#CE1126] text-[#CE1126] hover:bg-[#CE1126] hover:text-white h-12 px-8 font-bold">
+                عرض الجدول الزمني الكامل
+                <ArrowRight className="mr-2 h-5 w-5" />
+              </Button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* DUAL FINANCIAL SYSTEM - VISUAL STORYTELLING */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 to-black text-white relative overflow-hidden">
-        {/* Decorative Elements */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#CE1126]/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#007A3D]/10 rounded-full blur-3xl" />
-
-        <div className="container relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Content */}
+      {/* Dual Financial System Explanation */}
+      <section className="py-20 bg-white">
+        <div className="container">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="bg-[#CE1126] text-white mb-6">
-                <Eye className="h-4 w-4 mr-2" />
-                <span dir="rtl">تحليل عميق</span>
-              </Badge>
-              <h2 className="text-4xl md:text-5xl font-black mb-6" dir="rtl">
-                <span className="text-[#007A3D]">النظام المالي</span>{" "}
-                <span className="text-[#CE1126]">المزدوج</span>
+              <h2 className="text-4xl md:text-5xl font-black mb-6 text-neutral-900">
+                النظام المالي الموازي
               </h2>
-              <p className="text-xl text-gray-300 mb-6" dir="rtl">
-                منذ انقسام البنك المركزي اليمني في سبتمبر 2016، يعمل اليمن بنظامين مصرفيين متوازيين - 
-                واحد في عدن (معترف به دوليًا) وآخر في صنعاء (تحت سيطرة الحوثيين).
+              <p className="text-lg text-neutral-600 leading-relaxed mb-6">
+                منذ سبتمبر 2016، تعمل اليمن بنظامين ماليين متنافسين:
               </p>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start gap-3">
-                  <div className="p-2 bg-[#CE1126] rounded-lg mt-1">
-                    <TrendingDown className="h-5 w-5" />
+              <div className="space-y-4">
+                <div className="flex items-start gap-4 p-4 bg-neutral-50 rounded-lg">
+                  <div className="bg-[#CE1126] text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                    1
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg mb-1" dir="rtl">فجوة 195% في سعر الصرف</h4>
-                    <p className="text-gray-400 text-sm" dir="rtl">
-                      1,650 ريال/دولار (عدن) مقابل 560 (صنعاء) - أكبر فجوة في التاريخ
+                    <h3 className="font-bold text-lg mb-1 text-neutral-900">البنك المركزي اليمني - عدن</h3>
+                    <p className="text-neutral-600">
+                      معترف به دوليًا، يدير احتياطيات النقد الأجنبي، سعر صرف: 1,400 ريال/دولار
                     </p>
                   </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="p-2 bg-[#CE1126] rounded-lg mt-1">
-                    <Globe2 className="h-5 w-5" />
+                </div>
+                <div className="flex items-start gap-4 p-4 bg-neutral-50 rounded-lg">
+                  <div className="bg-[#007A3D] text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                    2
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg mb-1" dir="rtl">انهيار العلاقات المصرفية المراسلة</h4>
-                    <p className="text-gray-400 text-sm" dir="rtl">
-                      البنوك الدولية قطعت العلاقات مع البنوك اليمنية بسبب مخاطر الامتثال
+                    <h3 className="font-bold text-lg mb-1 text-neutral-900">البنك المركزي اليمني - صنعاء</h3>
+                    <p className="text-neutral-600">
+                      تحت سيطرة الحوثيين، يخدم المناطق الشمالية، سعر صرف: 530 ريال/دولار
                     </p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="p-2 bg-[#CE1126] rounded-lg mt-1">
-                    <Shield className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-lg mb-1" dir="rtl">عقوبات OFAC على 3 بنوك (يناير 2025)</h4>
-                    <p className="text-gray-400 text-sm" dir="rtl">
-                      وزارة الخزانة الأمريكية فرضت عقوبات على بنوك يمنية بتهمة تمويل الحوثيين
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="p-2 bg-[#CE1126] rounded-lg mt-1">
-                    <DollarSign className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-lg mb-1" dir="rtl">أزمة سيولة حادة وقيود على السحب</h4>
-                    <p className="text-gray-400 text-sm" dir="rtl">
-                      البنوك تحد من السحوبات النقدية، والمواطنون يعانون من نقص السيولة
-                    </p>
-                  </div>
-                </li>
-              </ul>
-              <Button asChild size="lg" className="bg-[#007A3D] hover:bg-[#007A3D]/90">
-                <Link href="/banking-sector">
-                  <span dir="rtl">تحليل القطاع المصرفي</span>
-                  <ArrowRight className="mr-2 h-5 w-5" />
-                </Link>
-              </Button>
-            </div>
-
-            {/* Visual */}
-            <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10">
-                <img 
-                  src="/images/yemen/sanaa-cityscape.jpg" 
-                  alt="Yemen Dual Financial System"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-[#CE1126]/90 backdrop-blur p-4 rounded-lg">
-                      <div className="text-2xl font-black">عدن</div>
-                      <div className="text-sm">1,650 ريال/دولار</div>
-                      <div className="text-xs text-white/80">معترف به دوليًا</div>
-                    </div>
-                    <div className="bg-[#007A3D]/90 backdrop-blur p-4 rounded-lg">
-                      <div className="text-2xl font-black">صنعاء</div>
-                      <div className="text-sm">560 ريال/دولار</div>
-                      <div className="text-xs text-white/80">سيطرة الحوثيين</div>
-                    </div>
                   </div>
                 </div>
               </div>
+              <div className="mt-8 p-6 bg-amber-50 border-l-4 border-amber-500 rounded-lg">
+                <p className="text-neutral-700 leading-relaxed">
+                  <strong className="text-amber-900">التأثير:</strong> هذا الانقسام يخلق أسواق صرف متعددة، يعطل التجارة،
+                  يفاقم التضخم، ويعقد تسليم المساعدات الإنسانية.
+                </p>
+              </div>
+            </div>
+            <div className="relative">
+              <img
+                src="/images/yemen-context-illustration.png"
+                alt="Yemen Dual Financial System"
+                className="w-full h-auto rounded-2xl shadow-2xl"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* CAUSEWAY BRANDING */}
-      <section className="py-16 bg-white">
+      {/* Platform Capabilities - Bento Grid Pattern */}
+      <section className="py-20 bg-gradient-to-br from-neutral-900 to-neutral-800 text-white">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-black mb-4">
+              قدرات المنصة
+            </h2>
+            <p className="text-neutral-300 text-lg max-w-2xl mx-auto">
+              أدوات وتحليلات متقدمة لفهم الاقتصاد اليمني المعقد
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="bg-white/5 backdrop-blur-sm border-white/10 p-6 hover:bg-white/10 transition-colors">
+              <Globe className="h-10 w-10 text-[#FFD700] mb-4" />
+              <h3 className="text-xl font-bold mb-2">تتبع العقوبات الدولية</h3>
+              <p className="text-neutral-300 text-sm leading-relaxed">
+                قاعدة بيانات شاملة لعقوبات OFAC، الاتحاد الأوروبي، والأمم المتحدة مع تحليل التأثير
+              </p>
+            </Card>
+
+            <Card className="bg-white/5 backdrop-blur-sm border-white/10 p-6 hover:bg-white/10 transition-colors">
+              <BarChart3 className="h-10 w-10 text-[#FFD700] mb-4" />
+              <h3 className="text-xl font-bold mb-2">تصور البيانات التفاعلي</h3>
+              <p className="text-neutral-300 text-sm leading-relaxed">
+                رسوم بيانية ديناميكية، خرائط حرارية، وخرائط شبكية لاستكشاف الاتجاهات والعلاقات
+              </p>
+            </Card>
+
+            <Card className="bg-white/5 backdrop-blur-sm border-white/10 p-6 hover:bg-white/10 transition-colors">
+              <Building2 className="h-10 w-10 text-[#FFD700] mb-4" />
+              <h3 className="text-xl font-bold mb-2">ملفات تعريف البنوك</h3>
+              <p className="text-neutral-300 text-sm leading-relaxed">
+                بيانات مالية تفصيلية، شبكات الفروع، حالة العقوبات لجميع البنوك اليمنية
+              </p>
+            </Card>
+
+            <Card className="bg-white/5 backdrop-blur-sm border-white/10 p-6 hover:bg-white/10 transition-colors">
+              <Users className="h-10 w-10 text-[#FFD700] mb-4" />
+              <h3 className="text-xl font-bold mb-2">تحليل أصحاب المصلحة</h3>
+              <p className="text-neutral-300 text-sm leading-relaxed">
+                تتبع 46 جهة فاعلة: الحكومات، المنظمات الدولية، الجهات المانحة، والجماعات المسلحة
+              </p>
+            </Card>
+
+            <Card className="bg-white/5 backdrop-blur-sm border-white/10 p-6 hover:bg-white/10 transition-colors">
+              <FileText className="h-10 w-10 text-[#FFD700] mb-4" />
+              <h3 className="text-xl font-bold mb-2">مكتبة أبحاث شاملة</h3>
+              <p className="text-neutral-300 text-sm leading-relaxed">
+                4,416 منشورًا من 50+ مصدرًا، قابلة للبحث والتصفية والتنزيل
+              </p>
+            </Card>
+
+            <Card className="bg-white/5 backdrop-blur-sm border-white/10 p-6 hover:bg-white/10 transition-colors">
+              <Shield className="h-10 w-10 text-[#FFD700] mb-4" />
+              <h3 className="text-xl font-bold mb-2">أنظمة الشفافية</h3>
+              <p className="text-neutral-300 text-sm leading-relaxed">
+                كشف تضارب البيانات، سجلات المراجعة، وتقييم ثقة المصدر لجميع البيانات
+              </p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* CauseWay Observatory Branding */}
+      <section className="py-16 bg-neutral-50 border-t border-neutral-200">
         <div className="container">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="flex-1">
-              <img 
-                src="/images/causeway-logo-official.jpeg" 
-                alt="CauseWay Consulting, Services & Development Group"
-                className="h-20 md:h-24 object-contain opacity-80"
+            <div className="flex items-center gap-6">
+              <img
+                src={APP_LOGO}
+                alt="CauseWay Observatory"
+                className="h-20 w-20 object-contain"
               />
+              <div>
+                <h3 className="text-2xl font-bold text-neutral-900 mb-1">
+                  مرصد كوزواي للمساءلة والشفافية
+                </h3>
+                <p className="text-neutral-600">
+                  استخبارات مالية مستقلة لليمن (2010-2025)
+                </p>
+              </div>
             </div>
-            <div className="flex-1 text-center md:text-right">
-              <p className="text-gray-600 text-sm md:text-base" dir="rtl">
-                مبادرة من <strong>مجموعة كوزواي للاستشارات والخدمات والتنمية</strong> - 
-                ملتزمون بالمساءلة العالمية والشفافية والتوقعات القائمة على الأدلة
-              </p>
+            <div className="flex gap-4">
+              <Link href="/about">
+                <Button variant="outline" className="border-neutral-300">
+                  عن المرصد
+                </Button>
+              </Link>
+              <Link href="/methodology">
+                <Button variant="outline" className="border-neutral-300">
+                  المنهجية
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FINAL CTA - GRADIENT */}
-      <section className="py-20 bg-gradient-to-r from-[#CE1126] via-[#007A3D] to-black text-white relative overflow-hidden">
-        {/* Geometric Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px)`
-          }} />
-        </div>
-
-        <div className="container relative z-10 text-center">
-          <h2 className="text-4xl md:text-6xl font-black mb-6" dir="rtl">
-            ابدأ استكشاف البيانات
+      {/* Final CTA */}
+      <section className="py-20 bg-gradient-to-r from-[#CE1126] to-[#007A3D] text-white">
+        <div className="container text-center">
+          <h2 className="text-4xl md:text-5xl font-black mb-6">
+            ابدأ استكشافك الآن
           </h2>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" dir="rtl">
-            الوصول إلى أكثر منصة استخبارات مالية شمولاً حول اليمن، مع 16 عامًا من البيانات الموثقة من مصادر موثوقة
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            الوصول إلى أكثر منصة استخبارات مالية شمولاً لليمن
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Button asChild size="lg" className="bg-white text-[#CE1126] hover:bg-gray-100">
-              <Link href="/timeline-explorer">
-                <Zap className="ml-2 h-5 w-5" />
-                <span dir="rtl">مستكشف الأحداث</span>
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/20">
-              <Link href="/what-if-simulator">
-                <Target className="ml-2 h-5 w-5" />
-                <span dir="rtl">محاكي السيناريوهات</span>
-              </Link>
-            </Button>
-          </div>
-          <div className="mt-12 text-sm text-white/80" dir="rtl">
-            الشفافية • المساءلة • التوقعات القائمة على الأدلة
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/timeline">
+              <Button size="lg" className="bg-white text-[#CE1126] hover:bg-neutral-100 h-14 px-8 text-lg font-bold">
+                استكشف الجدول الزمني
+                <ArrowRight className="mr-2 h-5 w-5" />
+              </Button>
+            </Link>
+            <Link href="/banks">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-white text-white hover:bg-white/10 h-14 px-8 text-lg font-bold"
+              >
+                تصفح البنوك
+                <Building2 className="mr-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

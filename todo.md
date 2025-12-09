@@ -1420,3 +1420,134 @@ All parallel research complete. Database expansion ready. Homepage fixed. Expert
 - [ ] Verify responsive design
 - [ ] Check ALL links
 - [ ] Final comprehensive review
+
+
+---
+
+# MASSIVE WIDE RESEARCH & TRANSFORMATION - USER DIRECTIVE
+
+## Phase 1: Wide Research - Learn from Best Global Platforms
+- [ ] Research World Bank data portal design
+- [ ] Research IMF data visualization standards
+- [ ] Research Brookings Institution layout
+- [ ] Research Council on Foreign Relations design
+- [ ] Research UN OCHA humanitarian data
+- [ ] Research Federal Reserve economic data (FRED)
+- [ ] Research European Central Bank design
+- [ ] Research Financial Times data journalism
+- [ ] Research Bloomberg terminal aesthetics
+- [ ] Research Reuters graphics standards
+- [ ] Research The Economist data visualization
+- [ ] Research Sana'a Center for Strategic Studies
+- [ ] Research Yemen Policy Center design
+- [ ] Research ACLED conflict data platform
+- [ ] Research Our World in Data design
+- [ ] Research Gapminder visualization
+- [ ] Research Observatory of Economic Complexity
+- [ ] Research Trading Economics platform
+- [ ] Research CEIC Data design
+- [ ] Research Statista platform design
+- [ ] Extract design patterns, typography, layouts, interactions
+
+## Phase 2: Comprehensive Audit - Find Everything Missing
+- [ ] Find ALL duplicate pages (UAE appears twice, Saudi Arabia twice, etc.)
+- [ ] Verify ALL database tables and schemas
+- [ ] Check ALL data completeness in every table
+- [ ] Find missing events from 2024-2025
+- [ ] Find missing bank data
+- [ ] Find missing stakeholder profiles
+- [ ] Check all literature references are in database
+- [ ] Verify all charts have data sources
+- [ ] Check all pages are in navigation
+- [ ] Find broken links and missing images
+
+## Phase 3: Design Excellence - Rebuild Landing Page
+- [ ] Apply learnings from 20+ world-class platforms
+- [ ] Choose exceptional typography (beyond Cairo/Inter)
+- [ ] Design unique hero section (not split-screen)
+- [ ] Create memorable visual identity
+- [ ] Implement advanced interactions
+- [ ] Add micro-animations
+- [ ] Design unique navigation system
+- [ ] Ensure mobile-first responsive design
+- [ ] Add accessibility features (WCAG AAA)
+- [ ] Test on all devices and browsers
+
+## Phase 4: Complete Literature & Laws Database
+- [ ] Collect ALL CBY Aden directives (2010-2025)
+- [ ] Collect ALL CBY Sana'a circulars (2016-2025)
+- [ ] Collect ALL Yemen banking laws
+- [ ] Collect ALL financial regulations
+- [ ] Collect ALL government decrees
+- [ ] Collect ALL Ansar Allah (Houthi) official statements
+- [ ] Collect ALL World Bank Yemen reports
+- [ ] Collect ALL IMF Yemen reports
+- [ ] Collect ALL UN Yemen reports
+- [ ] Collect ALL Sana'a Center publications
+- [ ] Collect ALL Yemen Policy Center papers
+- [ ] Collect ALL academic research papers
+- [ ] Collect ALL think tank reports
+- [ ] Organize by category, date, source
+- [ ] Make ALL downloadable (PDF, CSV, Excel)
+- [ ] Add full-text search capability
+
+## Phase 5: Transparency Systems Implementation
+- [ ] Design Data Conflict Detection Panel schema
+- [ ] Build conflict detection algorithm
+- [ ] Create Revision Log database table
+- [ ] Implement revision tracking system
+- [ ] Design Actor Impact Ledger schema
+- [ ] Build impact calculation engine
+- [ ] Seed transparency data for all existing content
+- [ ] Create UI components for transparency display
+- [ ] Add conflict warnings to data displays
+- [ ] Add revision history to all pages
+- [ ] Add actor impact scores to stakeholder profiles
+- [ ] Test transparency systems thoroughly
+
+## Phase 6: Powerful Literature & Official Sites Pages
+- [ ] Build comprehensive literature page with filters
+- [ ] Add search functionality (full-text)
+- [ ] Add download buttons for all documents
+- [ ] Create Government of Yemen official page
+- [ ] Create Ansar Allah (Houthis) official page
+- [ ] Add all official statements and decrees
+- [ ] Link to official government websites
+- [ ] Add document viewer for PDFs
+- [ ] Organize by category, date, relevance
+- [ ] Add citation generator
+
+## Phase 7: Integration & Testing
+- [ ] Integrate transparency into ALL pages
+- [ ] Add conflict detection to ALL charts
+- [ ] Add revision logs to ALL data displays
+- [ ] Add actor impact to ALL stakeholder mentions
+- [ ] Test EVERY page in browser
+- [ ] Test EVERY chart for Arabic rendering
+- [ ] Test EVERY download link
+- [ ] Test EVERY search function
+- [ ] Test transparency systems
+- [ ] Fix ALL bugs found
+
+## Phase 8: Final Verification
+- [ ] Verify NO duplications remain
+- [ ] Verify ALL data is accessible
+- [ ] Verify ALL literature is downloadable
+- [ ] Verify ALL laws and regulations are present
+- [ ] Verify transparency systems work everywhere
+- [ ] Verify design exceeds global standards
+- [ ] Verify mobile responsiveness
+- [ ] Verify accessibility compliance
+- [ ] Create comprehensive documentation
+- [ ] Prepare for deployment
+
+---
+
+**CRITICAL REQUIREMENTS:**
+- Use credits wisely for maximum value
+- Do NOT drop any existing work
+- Act in user's best interest always
+- Think beyond instructions
+- Ensure ALL work is reflected in site
+- Make platform world-class and credible
+- Exceed everything in this era
