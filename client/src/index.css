@@ -43,12 +43,14 @@
 }
 
 :root {
-  /* Yemen Economic Compass - Brand Colors */
-  /* Burgundy (Yemen flag) + Gold (prosperity) + Slate (authority) + Teal (data) */
-  --brand-burgundy: oklch(0.35 0.15 15); /* #8B1538 - Deep burgundy from Yemen flag */
-  --brand-gold: oklch(0.70 0.12 70); /* #D4AF37 - Rich gold for prosperity */
-  --brand-slate: oklch(0.40 0.02 240); /* #475569 - Slate gray for authority */
-  --brand-teal: oklch(0.55 0.12 180); /* #0D9488 - Teal for data/technology */
+  /* Yemen Flag Colors - Official Palette */
+  /* Red (#CE1126) + White (#FFFFFF) + Black (#000000) + Green (#007A3D) */
+  --yemen-red: oklch(0.45 0.20 15); /* #CE1126 - Yemen flag red */
+  --yemen-green: oklch(0.45 0.15 150); /* #007A3D - Yemen flag green/star */
+  --yemen-black: oklch(0.15 0 0); /* #000000 - Yemen flag black */
+  --yemen-white: oklch(0.98 0 0); /* #FFFFFF - Yemen flag white */
+  --yemen-red-light: oklch(0.60 0.18 15); /* Lighter red for hover */
+  --yemen-green-light: oklch(0.55 0.12 150); /* Lighter green for accents */
   
   /* Ink colors (neutrals) */
   --ink-900: oklch(0.15 0.01 240); /* #0B1320 - darkest */
@@ -57,16 +59,16 @@
   --ink-300: oklch(0.75 0.01 240); /* #CBD5E1 */
   --paper: oklch(0.98 0 0); /* #FAFAFA - background */
   
-  /* Yemeni-inspired burgundy and gold palette */
-  --primary: var(--brand-burgundy); /* Brand burgundy as primary */
-  --primary-foreground: oklch(0.98 0 0);
+  /* Yemen flag colors as primary palette */
+  --primary: var(--yemen-red); /* Yemen red as primary */
+  --primary-foreground: var(--yemen-white);
   --sidebar-primary: oklch(0.50 0.14 35);
   --sidebar-primary-foreground: oklch(0.98 0 0);
-  --chart-1: oklch(0.55 0.15 35);
-  --chart-2: oklch(0.60 0.18 220);
-  --chart-3: oklch(0.70 0.15 85);
-  --chart-4: oklch(0.55 0.12 160);
-  --chart-5: oklch(0.65 0.14 280);
+  --chart-1: var(--yemen-red);
+  --chart-2: var(--yemen-green);
+  --chart-3: var(--yemen-black);
+  --chart-4: var(--yemen-red-light);
+  --chart-5: var(--yemen-green-light);
   --radius: 0.5rem;
   --background: var(--paper); /* Soft paper white */
   --foreground: var(--ink-900); /* Dark ink for text */
@@ -78,8 +80,8 @@
   --secondary-foreground: oklch(0.25 0.02 35);
   --muted: oklch(0.96 0.005 40);
   --muted-foreground: oklch(0.50 0.01 35);
-  --accent: var(--brand-amber); /* Brand amber as accent */
-  --accent-foreground: oklch(0.98 0 0);
+  --accent: var(--yemen-green); /* Yemen green as accent */
+  --accent-foreground: var(--yemen-white);
   --destructive: oklch(0.60 0.22 25);
   --destructive-foreground: oklch(0.98 0 0);
   --border: oklch(0.90 0.005 40);

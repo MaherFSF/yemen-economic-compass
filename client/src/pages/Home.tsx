@@ -1,7 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, TrendingDown, Users, DollarSign, AlertTriangle, Database, Network, FileText, BarChart3, Shield, Globe } from "lucide-react";
+import { ArrowRight, Database, Network, Shield, BarChart3, FileText, Globe, TrendingDown, Users, DollarSign, AlertTriangle, Star, Building2, Scale } from "lucide-react";
 import { Link } from "wouter";
 import { useEffect, useState } from "react";
 
@@ -17,10 +17,10 @@ export default function Home() {
   }, []);
 
   const stats = [
-    { value: "16", label: isArabic ? "سنة من البيانات" : "Years of Data", sublabel: "2010-2025" },
-    { value: "318", label: isArabic ? "حدث موثق" : "Events Documented", sublabel: isArabic ? "مع مصادر" : "With Sources" },
-    { value: "46", label: isArabic ? "جهة فاعلة" : "Stakeholders", sublabel: isArabic ? "محلية ودولية" : "Local & International" },
-    { value: "1,700+", label: isArabic ? "نقطة بيانات" : "Data Points", sublabel: isArabic ? "مؤشرات اقتصادية" : "Economic Indicators" },
+    { value: "16", label: isArabic ? "سنة من البيانات" : "Years of Data", sublabel: "2010-2025", icon: BarChart3 },
+    { value: "318", label: isArabic ? "حدث موثق" : "Events Documented", sublabel: isArabic ? "مع مصادر" : "With Sources", icon: FileText },
+    { value: "46", label: isArabic ? "جهة فاعلة" : "Stakeholders", sublabel: isArabic ? "محلية ودولية" : "Local & International", icon: Users },
+    { value: "1,700+", label: isArabic ? "نقطة بيانات" : "Data Points", sublabel: isArabic ? "مؤشرات اقتصادية" : "Economic Indicators", icon: Database },
   ];
 
   const keyIndicators = [
@@ -94,124 +94,123 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section with Parallax Effect */}
-      <section 
-        className="relative min-h-screen flex items-center justify-center overflow-hidden"
-        style={{
-          backgroundImage: 'url(/images/observatory-hero-bg.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
-      >
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#8B1538]/95 via-[#0D9488]/90 to-[#1e40af]/95"></div>
-        
-        {/* Animated Data Particles */}
-        <div className="absolute inset-0 opacity-20">
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-2 h-2 bg-[#D4AF37] rounded-full animate-pulse"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${2 + Math.random() * 3}s`
-              }}
-            ></div>
-          ))}
+    <div className="min-h-screen bg-white">
+      {/* Hero Section - Yemen Flag Inspired */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-gray-50 to-white">
+        {/* Yemen Flag Accent Stripe */}
+        <div className="absolute top-0 left-0 right-0 h-2 flex">
+          <div className="flex-1 bg-[#CE1126]"></div>
+          <div className="flex-1 bg-white"></div>
+          <div className="flex-1 bg-black"></div>
+        </div>
+
+        {/* Geometric Pattern Background */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              linear-gradient(30deg, #CE1126 12%, transparent 12.5%, transparent 87%, #CE1126 87.5%, #CE1126),
+              linear-gradient(150deg, #CE1126 12%, transparent 12.5%, transparent 87%, #CE1126 87.5%, #CE1126),
+              linear-gradient(30deg, #007A3D 12%, transparent 12.5%, transparent 87%, #007A3D 87.5%, #007A3D),
+              linear-gradient(150deg, #007A3D 12%, transparent 12.5%, transparent 87%, #007A3D 87.5%, #007A3D)
+            `,
+            backgroundSize: '80px 140px',
+            backgroundPosition: '0 0, 0 0, 40px 70px, 40px 70px'
+          }}></div>
         </div>
 
         {/* Content */}
-        <div className="container relative z-10 text-center text-white px-4">
-          {/* Logo */}
+        <div className="container relative z-10 text-center px-4 py-20">
+          {/* CauseWay Logo */}
           <div className="mb-8 flex justify-center">
             <img 
-              src="/images/compass-logo-main.png" 
-              alt="Yemen Economic Observatory Logo" 
-              className="w-32 h-32 md:w-40 md:h-40 drop-shadow-2xl animate-pulse"
-              style={{ transform: `translateY(${scrollY * 0.1}px)` }}
+              src="/images/causeway-logo-circular.png" 
+              alt="CauseWay Financial & Banking" 
+              className="w-32 h-32 md:w-40 md:h-40 drop-shadow-2xl"
+              style={{ transform: `translateY(${scrollY * 0.05}px)` }}
             />
           </div>
 
-          {/* Observatory Badge */}
-          <div className="mb-6 flex justify-center">
-            <img 
-              src="/images/causeway-observatory-badge.png" 
-              alt="CauseWay Observatory" 
-              className="w-24 h-24 md:w-32 md:h-32 drop-shadow-xl"
-            />
-          </div>
-
-          {/* Main Title */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          {/* Main Title with Yemen Colors */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">
             {isArabic ? (
               <>
-                <span className="block text-[#D4AF37]">مرصد اليمن الاقتصادي</span>
-                <span className="block text-2xl md:text-4xl mt-4 text-white/90">للمساءلة والشفافية</span>
+                <span className="block text-[#CE1126]">مرصد كوزواي</span>
+                <span className="block text-[#007A3D] mt-2">المالي والاقتصادي</span>
+                <span className="block text-black text-2xl md:text-4xl mt-4 font-bold">للمساءلة والشفافية</span>
               </>
             ) : (
               <>
-                <span className="block text-[#D4AF37]">Yemen Economic Observatory</span>
-                <span className="block text-2xl md:text-4xl mt-4 text-white/90">For Accountability & Transparency</span>
+                <span className="block text-[#CE1126]">CauseWay Yemen</span>
+                <span className="block text-[#007A3D] mt-2">Economic Observatory</span>
+                <span className="block text-black text-2xl md:text-4xl mt-4 font-bold">For Accountability & Transparency</span>
               </>
             )}
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-white/90 leading-relaxed">
+          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-700 leading-relaxed">
             {isArabic 
               ? "منصة استخبارات مالية شاملة تتتبع النظام المصرفي المزدوج، العقوبات الدولية، المؤشرات الاقتصادية، وتدفقات المساعدات في اليمن (2010-2025)"
               : "Comprehensive financial intelligence platform tracking Yemen's dual banking system, international sanctions, economic indicators, and aid flows (2010-2025)"
             }
           </p>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons with Yemen Colors */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link href="/timeline-explorer">
-              <Button size="lg" className="bg-[#D4AF37] hover:bg-[#B8941F] text-[#8B1538] font-bold text-lg px-8 py-6 shadow-2xl">
+              <Button size="lg" className="bg-[#CE1126] hover:bg-[#A00E1E] text-white font-bold text-lg px-8 py-6 shadow-xl">
                 {isArabic ? "استكشف البيانات" : "Explore Data"}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
             <Link href="/dashboards-hub">
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/20 font-bold text-lg px-8 py-6 shadow-2xl">
+              <Button size="lg" variant="outline" className="border-2 border-[#007A3D] text-[#007A3D] hover:bg-[#007A3D] hover:text-white font-bold text-lg px-8 py-6 shadow-xl">
                 {isArabic ? "لوحات التحكم" : "View Dashboards"}
                 <BarChart3 className="ml-2 h-5 w-5" />
               </Button>
             </Link>
           </div>
 
-          {/* Stats Grid */}
+          {/* Stats Grid with Icons */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
-            {stats.map((stat, index) => (
-              <Card key={index} className="bg-white/10 backdrop-blur-md border-white/20 p-6 hover:bg-white/20 transition-all duration-300">
-                <div className="text-4xl md:text-5xl font-bold text-[#D4AF37] mb-2">{stat.value}</div>
-                <div className="text-sm md:text-base font-semibold text-white">{stat.label}</div>
-                <div className="text-xs text-white/70 mt-1">{stat.sublabel}</div>
-              </Card>
-            ))}
+            {stats.map((stat, index) => {
+              const Icon = stat.icon;
+              return (
+                <Card key={index} className="p-6 hover:shadow-xl transition-all duration-300 border-t-4 border-[#CE1126]">
+                  <div className="flex justify-center mb-3">
+                    <div className="w-12 h-12 rounded-full bg-[#007A3D] flex items-center justify-center">
+                      <Icon className="h-6 w-6 text-white" />
+                    </div>
+                  </div>
+                  <div className="text-4xl md:text-5xl font-black text-[#CE1126] mb-2">{stat.value}</div>
+                  <div className="text-sm md:text-base font-semibold text-black">{stat.label}</div>
+                  <div className="text-xs text-gray-600 mt-1">{stat.sublabel}</div>
+                </Card>
+              );
+            })}
           </div>
         </div>
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
+          <div className="w-6 h-10 border-2 border-[#CE1126] rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-[#CE1126] rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
       </section>
 
       {/* Key Economic Indicators Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+      <section className="py-20 bg-gray-50">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-[#8B1538]">
-              {isArabic ? "المؤشرات الاقتصادية الرئيسية" : "Key Economic Indicators"}
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 mb-4">
+              <Star className="h-8 w-8 text-[#007A3D]" />
+              <h2 className="text-3xl md:text-5xl font-black text-[#CE1126]">
+                {isArabic ? "المؤشرات الاقتصادية الرئيسية" : "Key Economic Indicators"}
+              </h2>
+              <Star className="h-8 w-8 text-[#007A3D]" />
+            </div>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
               {isArabic 
                 ? "بيانات حية من 2025 تكشف عمق الأزمة الاقتصادية والإنسانية في اليمن"
                 : "Live 2025 data revealing the depth of Yemen's economic and humanitarian crisis"
@@ -222,26 +221,21 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {keyIndicators.map((indicator, index) => {
               const Icon = indicator.icon;
-              const trendColors = {
-                critical: "from-red-500 to-red-700",
-                warning: "from-orange-500 to-orange-700",
-                normal: "from-blue-500 to-blue-700"
-              };
               
               return (
-                <Card key={index} className="p-6 hover:shadow-2xl transition-all duration-300 border-t-4 border-[#8B1538]">
+                <Card key={index} className="p-6 hover:shadow-2xl transition-all duration-300 border-l-4 border-[#CE1126] bg-white">
                   <div className="flex items-start justify-between mb-4">
-                    <div className={`p-3 rounded-lg bg-gradient-to-br ${trendColors[indicator.trend as keyof typeof trendColors]}`}>
+                    <div className="p-3 rounded-lg bg-[#CE1126]">
                       <Icon className="h-6 w-6 text-white" />
                     </div>
                   </div>
-                  <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-[#8B1538] to-[#D4AF37] bg-clip-text text-transparent">
+                  <div className="text-4xl font-black mb-2 text-[#007A3D]">
                     {indicator.value}
                   </div>
-                  <div className="text-sm font-semibold text-gray-700 mb-2">
+                  <div className="text-sm font-semibold text-black mb-2">
                     {indicator.label}
                   </div>
-                  <div className="text-xs text-gray-500 leading-relaxed">
+                  <div className="text-xs text-gray-600 leading-relaxed">
                     {indicator.description}
                   </div>
                 </Card>
@@ -255,10 +249,14 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-[#8B1538]">
-              {isArabic ? "قدرات المنصة" : "Platform Capabilities"}
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 mb-4">
+              <Building2 className="h-8 w-8 text-[#CE1126]" />
+              <h2 className="text-3xl md:text-5xl font-black text-[#007A3D]">
+                {isArabic ? "قدرات المنصة" : "Platform Capabilities"}
+              </h2>
+              <Building2 className="h-8 w-8 text-[#CE1126]" />
+            </div>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
               {isArabic 
                 ? "أدوات متقدمة للاستخبارات المالية، التحليل الاقتصادي، وتتبع أصحاب المصلحة"
                 : "Advanced tools for financial intelligence, economic analysis, and stakeholder tracking"
@@ -271,15 +269,15 @@ export default function Home() {
               const Icon = feature.icon;
               return (
                 <Link key={index} href={feature.link}>
-                  <Card className="p-6 h-full hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer border-l-4 border-[#0D9488]">
+                  <Card className="p-6 h-full hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer border-t-4 border-[#007A3D] bg-white">
                     <div className="mb-4">
-                      <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#8B1538] to-[#D4AF37] flex items-center justify-center">
-                        <Icon className="h-6 w-6 text-white" />
+                      <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#CE1126] to-[#007A3D] flex items-center justify-center">
+                        <Icon className="h-7 w-7 text-white" />
                       </div>
                     </div>
-                    <h3 className="text-xl font-bold mb-3 text-[#8B1538]">{feature.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-                    <div className="mt-4 flex items-center text-[#0D9488] font-semibold">
+                    <h3 className="text-xl font-bold mb-3 text-[#CE1126]">{feature.title}</h3>
+                    <p className="text-gray-700 leading-relaxed mb-4">{feature.description}</p>
+                    <div className="flex items-center text-[#007A3D] font-semibold">
                       {isArabic ? "استكشف" : "Explore"}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </div>
@@ -291,92 +289,90 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Yemen Context Illustration Section */}
-      <section className="py-20 bg-gradient-to-br from-[#8B1538]/10 to-[#0D9488]/10">
+      {/* Dual Financial System Section */}
+      <section className="py-20 bg-gray-50">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 text-[#8B1538]">
-                {isArabic ? "النظام المالي المزدوج" : "The Dual Financial System"}
-              </h2>
+              <div className="inline-flex items-center gap-2 mb-6">
+                <Scale className="h-8 w-8 text-[#CE1126]" />
+                <h2 className="text-3xl md:text-5xl font-black text-[#007A3D]">
+                  {isArabic ? "النظام المالي المزدوج" : "The Dual Financial System"}
+                </h2>
+              </div>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 {isArabic 
                   ? "منذ انقسام البنك المركزي اليمني في سبتمبر 2016، يعمل اليمن بنظامين مصرفيين متوازيين - واحد في عدن (معترف به دوليًا) وآخر في صنعاء (تحت سيطرة الحوثيين). هذا الانقسام خلق:"
                   : "Since the Central Bank of Yemen split in September 2016, Yemen operates with two parallel banking systems - one in Aden (internationally recognized) and one in Sana'a (Houthi-controlled). This fragmentation has created:"
                 }
               </p>
-              <ul className="space-y-3 text-gray-700">
+              <ul className="space-y-3 text-gray-700 mb-8">
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-[#D4AF37] rounded-full mt-2 mr-3"></div>
+                  <div className="w-2 h-2 bg-[#CE1126] rounded-full mt-2 mr-3"></div>
                   <span>{isArabic ? "فجوة 195% في سعر الصرف بين المنطقتين" : "195% exchange rate gap between the two regions"}</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-[#D4AF37] rounded-full mt-2 mr-3"></div>
+                  <div className="w-2 h-2 bg-[#CE1126] rounded-full mt-2 mr-3"></div>
                   <span>{isArabic ? "انهيار العلاقات المصرفية المراسلة الدولية" : "Collapse of international correspondent banking relationships"}</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-[#D4AF37] rounded-full mt-2 mr-3"></div>
+                  <div className="w-2 h-2 bg-[#CE1126] rounded-full mt-2 mr-3"></div>
                   <span>{isArabic ? "عقوبات OFAC على 3 بنوك يمنية (يناير 2025)" : "OFAC sanctions on 3 Yemeni banks (January 2025)"}</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-[#D4AF37] rounded-full mt-2 mr-3"></div>
+                  <div className="w-2 h-2 bg-[#CE1126] rounded-full mt-2 mr-3"></div>
                   <span>{isArabic ? "أزمة سيولة حادة وقيود على السحب النقدي" : "Severe liquidity crisis and cash withdrawal restrictions"}</span>
                 </li>
               </ul>
               <Link href="/banking-sector">
-                <Button className="mt-8 bg-[#8B1538] hover:bg-[#6B0F28] text-white">
+                <Button className="bg-[#007A3D] hover:bg-[#005A2D] text-white font-bold">
                   {isArabic ? "تحليل القطاع المصرفي" : "Banking Sector Analysis"}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
             </div>
-            <div>
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#CE1126] to-[#007A3D] rounded-lg blur opacity-20"></div>
               <img 
                 src="/images/yemen-context-illustration.png" 
                 alt="Yemen Economic Landscape" 
-                className="w-full rounded-lg shadow-2xl"
+                className="relative w-full rounded-lg shadow-2xl border-4 border-white"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Data Network Visualization Section */}
+      {/* CauseWay Official Branding Section */}
       <section className="py-20 bg-white">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-[#8B1538]">
-              {isArabic ? "شبكة البيانات المترابطة" : "Interconnected Data Network"}
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              {isArabic 
-                ? "تصور شامل لكيفية ترابط القطاع المصرفي، المؤشرات الاقتصادية، تدفقات المساعدات، وعلاقات أصحاب المصلحة"
-                : "Comprehensive visualization of how banking sector, economic indicators, aid flows, and stakeholder relationships interconnect"
-              }
-            </p>
-          </div>
-          <div className="max-w-5xl mx-auto">
-            <img 
-              src="/images/data-network-visual.png" 
-              alt="Data Network Visualization" 
-              className="w-full rounded-lg shadow-2xl"
-            />
-          </div>
-          <div className="text-center mt-8">
-            <Link href="/advanced-visualizations">
-              <Button size="lg" className="bg-[#0D9488] hover:bg-[#0A7A6F] text-white">
-                {isArabic ? "استكشف التصورات المتقدمة" : "Explore Advanced Visualizations"}
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-          </div>
+        <div className="container text-center">
+          <img 
+            src="/images/causeway-logo-official.jpeg" 
+            alt="CauseWay Consulting, Services & Development Group L.L.C." 
+            className="h-16 md:h-20 mx-auto mb-8 opacity-80"
+          />
+          <p className="text-sm text-gray-600 max-w-2xl mx-auto">
+            {isArabic 
+              ? "مبادرة من مجموعة كوزواي للاستشارات والخدمات والتنمية - ملتزمون بالمساءلة العالمية والشفافية والتوقعات القائمة على الأدلة"
+              : "An initiative of CauseWay Consulting, Services & Development Group L.L.C. - Committed to global accountability, transparency, and evidence-based forecasting"
+            }
+          </p>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-[#8B1538] to-[#0D9488] text-white">
-        <div className="container text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+      {/* Final CTA Section with Yemen Flag Colors */}
+      <section className="py-20 bg-gradient-to-br from-[#CE1126] via-[#007A3D] to-black text-white relative overflow-hidden">
+        {/* Geometric Pattern Overlay */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,0.1) 35px, rgba(255,255,255,0.1) 70px)
+            `
+          }}></div>
+        </div>
+
+        <div className="container text-center relative z-10">
+          <h2 className="text-3xl md:text-5xl font-black mb-6">
             {isArabic ? "ابدأ استكشاف البيانات" : "Start Exploring the Data"}
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
@@ -387,7 +383,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/timeline-explorer">
-              <Button size="lg" className="bg-white text-[#8B1538] hover:bg-gray-100 font-bold text-lg px-8 py-6">
+              <Button size="lg" className="bg-white text-[#CE1126] hover:bg-gray-100 font-bold text-lg px-8 py-6">
                 {isArabic ? "مستكشف الأحداث" : "Timeline Explorer"}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -402,20 +398,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer Attribution */}
-      <section className="py-8 bg-gray-900 text-white">
+      {/* Footer */}
+      <section className="py-8 bg-black text-white">
         <div className="container text-center">
           <p className="text-sm opacity-75">
-            {isArabic 
-              ? "مبادرة من مؤسسة كوزواي للمساءلة العالمية"
-              : "A CauseWay Foundation Initiative for Global Accountability"
-            }
-          </p>
-          <p className="text-xs opacity-50 mt-2">
             {isArabic 
               ? "الشفافية • المساءلة • التوقعات القائمة على الأدلة"
               : "Transparency • Accountability • Evidence-Based Forecasting"
             }
+          </p>
+          <p className="text-xs opacity-50 mt-2">
+            © 2025 CauseWay Foundation
           </p>
         </div>
       </section>
