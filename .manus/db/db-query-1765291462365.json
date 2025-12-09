@@ -1,0 +1,70 @@
+{
+  "query": "SELECT id, date, titleEn, category FROM events WHERE date >= '2020-01-01' ORDER BY date DESC LIMIT 10",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SELECT id, date, titleEn, category FROM events WHERE date >= '2020-01-01' ORDER BY date DESC LIMIT 10",
+  "rows": [
+    {
+      "id": "180222",
+      "date": "2025-12-31",
+      "titleEn": "Year-End Report Shows 35% Decline in Foreign Direct Investment",
+      "category": "policy"
+    },
+    {
+      "id": "180221",
+      "date": "2025-12-20",
+      "titleEn": "IRG Announces New Anti-Corruption Task Force with Limited Powers",
+      "category": "policy"
+    },
+    {
+      "id": "180220",
+      "date": "2025-12-15",
+      "titleEn": "Massive Displacement Wave from Taiz Due to Renewed Shelling",
+      "category": "policy"
+    },
+    {
+      "id": "180219",
+      "date": "2025-12-05",
+      "titleEn": "STC Establishes De Facto Border Control Points in Shabwah and Hadramawt",
+      "category": "policy"
+    },
+    {
+      "id": "180218",
+      "date": "2025-11-20",
+      "titleEn": "IMF Report Projects 1.5% GDP Contraction for Yemen in 2025",
+      "category": "policy"
+    },
+    {
+      "id": "120011",
+      "date": "2025-11-17",
+      "titleEn": "World Bank: Economic Hardship Deepens in Yemen",
+      "category": "economic"
+    },
+    {
+      "id": "120010",
+      "date": "2025-11-16",
+      "titleEn": "Saudi Arabia Provides Additional $90M Aid",
+      "category": "humanitarian"
+    },
+    {
+      "id": "180217",
+      "date": "2025-11-05",
+      "titleEn": "Houthi Authorities Launch Mass Arrest Campaign Against Critics in Sana'a",
+      "category": "policy"
+    },
+    {
+      "id": "180216",
+      "date": "2025-10-20",
+      "titleEn": "Major Power Plant in Marib Suffers Sabotage Attack",
+      "category": "policy"
+    },
+    {
+      "id": "120009",
+      "date": "2025-10-09",
+      "titleEn": "IMF Resumes Article IV Consultation After 11 Years",
+      "category": "international"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tdate\ttitleEn\tcategory\n180222\t2025-12-31\tYear-End Report Shows 35% Decline in Foreign Direct Investment\tpolicy\n180221\t2025-12-20\tIRG Announces New Anti-Corruption Task Force with Limited Powers\tpolicy\n180220\t2025-12-15\tMassive Displacement Wave from Taiz Due to Renewed Shelling\tpolicy\n180219\t2025-12-05\tSTC Establishes De Facto Border Control Points in Shabwah and Hadramawt\tpolicy\n180218\t2025-11-20\tIMF Report Projects 1.5% GDP Contraction for Yemen in 2025\tpolicy\n120011\t2025-11-17\tWorld Bank: Economic Hardship Deepens in Yemen\teconomic\n120010\t2025-11-16\tSaudi Arabia Provides Additional $90M Aid\thumanitarian\n180217\t2025-11-05\tHouthi Authorities Launch Mass Arrest Campaign Against Critics in Sana'a\tpolicy\n180216\t2025-10-20\tMajor Power Plant in Marib Suffers Sabotage Attack\tpolicy\n120009\t2025-10-09\tIMF Resumes Article IV Consultation After 11 Years\tinternational\n",
+  "stderr": "",
+  "execution_time_ms": 55
+}

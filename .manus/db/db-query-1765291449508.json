@@ -1,0 +1,35 @@
+{
+  "query": "SELECT COUNT(*) as total, category, COUNT(*) as count FROM events GROUP BY category ORDER BY count DESC LIMIT 10",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SELECT COUNT(*) as total, category, COUNT(*) as count FROM events GROUP BY category ORDER BY count DESC LIMIT 10",
+  "rows": [
+    {
+      "total": "113",
+      "category": "economic",
+      "count": "113"
+    },
+    {
+      "total": "103",
+      "category": "policy",
+      "count": "103"
+    },
+    {
+      "total": "80",
+      "category": "war",
+      "count": "80"
+    },
+    {
+      "total": "48",
+      "category": "humanitarian",
+      "count": "48"
+    },
+    {
+      "total": "20",
+      "category": "international",
+      "count": "20"
+    }
+  ],
+  "messages": [],
+  "stdout": "total\tcategory\tcount\n113\teconomic\t113\n103\tpolicy\t103\n80\twar\t80\n48\thumanitarian\t48\n20\tinternational\t20\n",
+  "stderr": "",
+  "execution_time_ms": 99
+}
