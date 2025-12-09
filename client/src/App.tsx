@@ -94,6 +94,7 @@ function Router() {
       <Route path={"/story"} component={StoryPage} />
       <Route path="/timeline" component={Timeline} />
       <Route path="/research" component={ResearchLibrary} />
+      <Route path="/research-library" component={ResearchLibrary} />
       <Route path="/analytics" component={AnalyticsDashboard} />
       <Route path={"/dashboard"} component={Timeline} />
       <Route path={"/about"} component={About} />

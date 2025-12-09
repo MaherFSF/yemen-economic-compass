@@ -68,12 +68,15 @@ export default function ResearchLibrary() {
       }
     });
 
+    const earliestYear = Math.min(...Array.from(years).map(Number));
+    const latestYear = Math.max(...Array.from(years).map(Number));
+    
     return {
       totalPublications,
       organizations,
-      yearsCovered: years.size,
-      earliestYear: Math.min(...Array.from(years).map(Number)),
-      latestYear: Math.max(...Array.from(years).map(Number))
+      yearsCovered: latestYear - earliestYear + 1, // Full range, not just distinct years
+      earliestYear,
+      latestYear
     };
   }, [publicationsData]);
 
