@@ -630,3 +630,53 @@ All parallel research complete. Database expansion ready. Homepage fixed. Expert
 - [x] Add reset zoom button
 - [x] Add professional tooltips with formatted data
 - [x] Add hover effects and smooth transitions
+
+
+## ADVANCED DASHBOARDS - IN PROGRESS
+
+### Banking System Visualization Dashboard
+- [x] Create BankingSystemChart component
+- [x] Fetch banking data from database (15 banks, CBY Aden/Sana'a)
+- [x] Build dual-axis chart showing:
+  * Total banking assets (Aden vs Sana'a)
+  * Number of operational banks by region
+  * Reserve levels for both CBYs
+  * NPL ratios comparison
+- [x] Add event annotations (CBY split 2016, currency ban 2019)
+- [x] Show institutional breakdown (commercial, Islamic, microfinance)
+- [x] Add parallel banking system visualization
+- [x] Implement zoom/pan and export functionality
+- [x] Create BankingSystemDashboard page with overview cards
+- [x] Add route to App.tsx
+
+### Aid Flows Dashboard
+- [x] Create AidFlowsChart component
+- [x] Collect aid data from database/feeds
+- [x] Build stacked area chart showing:
+  * Total humanitarian aid by year (2010-2025)
+  * Breakdown by donor (World Bank, Saudi, UAE, UN, bilateral)
+  * Sector allocation (food, health, WASH, education, protection)
+  * Regional distribution (north vs south)
+- [x] Add donor comparison bar chart
+- [x] Show funding gaps visualization
+- [x] Add trend analysis and projections
+- [x] Implement interactive legend filtering
+- [x] Create AidFlowsDashboard page with donor profiles
+- [x] Add route to App.tsx
+
+### Interactive Timeline Explorer
+- [x] Create TimelineExplorer component
+- [x] Fetch all 318 events from database
+- [x] Build interactive timeline with:
+  * Horizontal scrollable timeline (2010-2025)
+  * Event markers color-coded by category
+  * Clickable markers showing event details
+  * Filter by category (war, economic, policy, humanitarian)
+  * Search functionality
+  * Zoom to time period
+- [x] Add event detail modal/panel
+- [x] Show causation relationships between events
+- [x] Add "related events" feature
+- [x] Implement year navigation
+- [x] Create TimelineExplorerPage page
+- [x] Add route to App.tsx

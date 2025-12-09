@@ -60,6 +60,9 @@ import Investment from "./pages/Investment";
 import ClimateFinance from "./pages/ClimateFinance";
 import Sitemap from "./pages/Sitemap";
 import BanksDatabase from "./pages/BanksDatabase";
+import BankingSystemDashboard from "./pages/BankingSystemDashboard";
+import AidFlowsDashboard from "./pages/AidFlowsDashboard";
+import TimelineExplorerPage from "./pages/TimelineExplorerPage";
 import IMF from "./pages/IMF";
 import WorldBankDetailed from "./pages/WorldBankDetailed";
 import SaudiArabia from "./pages/SaudiArabia";
@@ -150,6 +153,9 @@ function Router() {
       <Route path={"/climate-finance"} component={ClimateFinance} />
       <Route path={"/sitemap"} component={Sitemap} />
           <Route path="/banks-database" component={BanksDatabase} />
+          <Route path="/banking-system-dashboard" component={BankingSystemDashboard} />
+          <Route path="/aid-flows-dashboard" component={AidFlowsDashboard} />
+          <Route path="/timeline-explorer" component={TimelineExplorerPage} />
           <Route path="/year-explorer" component={YearExplorer} />
           <Route path="/what-if-simulator" component={WhatIfSimulator} />
       <Route path={"/404"} component={NotFound} />

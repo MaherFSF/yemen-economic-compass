@@ -6,7 +6,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 interface ChartContainerProps {
   title: string;
-  titleAr: string;
+  titleAr?: string;
   description?: string;
   descriptionAr?: string;
   children: ReactNode;
@@ -15,6 +15,11 @@ interface ChartContainerProps {
   onReset?: () => void;
   source?: string;
   sourceAr?: string;
+  sources?: string[];
+  lastUpdated?: string;
+  dataPoints?: number;
+  exportData?: any[];
+  exportFilename?: string;
   className?: string;
 }
 
@@ -29,6 +34,11 @@ export default function ChartContainer({
   onReset,
   source,
   sourceAr,
+  sources,
+  lastUpdated,
+  dataPoints,
+  exportData,
+  exportFilename,
   className = ''
 }: ChartContainerProps) {
   const { language } = useLanguage();
