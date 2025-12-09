@@ -60,6 +60,8 @@ import Investment from "./pages/Investment";
 import ClimateFinance from "./pages/ClimateFinance";
 import Sitemap from "./pages/Sitemap";
 import BanksDatabase from "./pages/BanksDatabase";
+import BankingSector from "./pages/BankingSector";
+import BankDetail from "./pages/BankDetail";
 import DashboardsHub from "./pages/DashboardsHub";
 import BankingSystemDashboard from "./pages/BankingSystemDashboard";
 import AidFlowsDashboard from "./pages/AidFlowsDashboard";
@@ -103,7 +105,9 @@ function Router() {
       <Route path={"/microfinance"} component={MicrofinanceObservatory} />
       <Route path={"/cby-aden"} component={CBYAdenTracker} />
       <Route path={"/cby-sanaa"} component={CBYSanaaTracker} />
-      <Route path={"/banks"} component={CommercialBanksHub} />
+      <Route path="/banks" component={CommercialBanksHub} />
+      <Route path="/banking" component={BankingSector} />
+      <Route path="/banking/:id" component={BankDetail} />
       <Route path={"/literature"} component={ResearchLibrary} />
       <Route path={"/calculators"} component={FinancialCalculators} />
       <Route path={"/data-viz"} component={DataVisualization} />

@@ -1,0 +1,110 @@
+{
+  "query": "SELECT nameEn, type, sanctionsStatus FROM banks LIMIT 20",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SELECT nameEn, type, sanctionsStatus FROM banks LIMIT 20",
+  "rows": [
+    {
+      "nameEn": "Cooperative & Agricultural Credit Bank (CAC Bank) – Sana’a",
+      "type": "commercial",
+      "sanctionsStatus": "NULL"
+    },
+    {
+      "nameEn": "CAC Bank – Aden (IRG)",
+      "type": "commercial",
+      "sanctionsStatus": "NULL"
+    },
+    {
+      "nameEn": "Tadhamon International Islamic Bank",
+      "type": "islamic",
+      "sanctionsStatus": "NULL"
+    },
+    {
+      "nameEn": "Yemen Kuwait Bank",
+      "type": "commercial",
+      "sanctionsStatus": "NULL"
+    },
+    {
+      "nameEn": "International Bank of Yemen",
+      "type": "commercial",
+      "sanctionsStatus": "NULL"
+    },
+    {
+      "nameEn": "National Bank of Yemen",
+      "type": "commercial",
+      "sanctionsStatus": "NULL"
+    },
+    {
+      "nameEn": "Yemen Bank for Reconstruction and Development",
+      "type": "commercial",
+      "sanctionsStatus": "NULL"
+    },
+    {
+      "nameEn": "Saba Islamic Bank",
+      "type": "islamic",
+      "sanctionsStatus": "NULL"
+    },
+    {
+      "nameEn": "United Bank Limited – Yemen / United Bank (local license)",
+      "type": "commercial",
+      "sanctionsStatus": "NULL"
+    },
+    {
+      "nameEn": "Yemeni Credit Bank",
+      "type": "commercial",
+      "sanctionsStatus": "NULL"
+    },
+    {
+      "nameEn": "Yemen Commercial Bank",
+      "type": "commercial",
+      "sanctionsStatus": "NULL"
+    },
+    {
+      "nameEn": "Wadi Hadramout Bank",
+      "type": "commercial",
+      "sanctionsStatus": "NULL"
+    },
+    {
+      "nameEn": "Finance & Development Bank",
+      "type": "commercial",
+      "sanctionsStatus": "NULL"
+    },
+    {
+      "nameEn": "Shamil Bank of Yemen & Bahrain",
+      "type": "islamic",
+      "sanctionsStatus": "NULL"
+    },
+    {
+      "nameEn": "Yemen Islamic Bank",
+      "type": "islamic",
+      "sanctionsStatus": "NULL"
+    },
+    {
+      "nameEn": "Bank of Aden / new banks licensed after 2015",
+      "type": "commercial",
+      "sanctionsStatus": "NULL"
+    },
+    {
+      "nameEn": "Yemen Kuwait Bank",
+      "type": "commercial",
+      "sanctionsStatus": "NULL"
+    },
+    {
+      "nameEn": "CAC Bank (Cooperative and Agricultural Credit Bank)",
+      "type": "commercial",
+      "sanctionsStatus": "NULL"
+    },
+    {
+      "nameEn": "National Bank of Yemen",
+      "type": "commercial",
+      "sanctionsStatus": "NULL"
+    },
+    {
+      "nameEn": "Tadhamon International Islamic Bank",
+      "type": "islamic",
+      "sanctionsStatus": "NULL"
+    }
+  ],
+  "messages": [],
+  "stdout": "nameEn\ttype\tsanctionsStatus\nCooperative & Agricultural Credit Bank (CAC Bank) – Sana’a\tcommercial\tNULL\nCAC Bank – Aden (IRG)\tcommercial\tNULL\nTadhamon International Islamic Bank\tislamic\tNULL\nYemen Kuwait Bank\tcommercial\tNULL\nInternational Bank of Yemen\tcommercial\tNULL\nNational Bank of Yemen\tcommercial\tNULL\nYemen Bank for Reconstruction and Development\tcommercial\tNULL\nSaba Islamic Bank\tislamic\tNULL\nUnited Bank Limited – Yemen / United Bank (local license)\tcommercial\tNULL\nYemeni Credit Bank\tcommercial\tNULL\nYemen Commercial Bank\tcommercial\tNULL\nWadi Hadramout Bank\tcommercial\tNULL\nFinance & Development Bank\tcommercial\tNULL\nShamil Bank of Yemen & Bahrain\tislamic\tNULL\nYemen Islamic Bank\tislamic\tNULL\nBank of Aden / new banks licensed after 2015\tcommercial\tNULL\nYemen Kuwait Bank\tcommercial\tNULL\nCAC Bank (Cooperative and Agricultural Credit Bank)\tcommercial\tNULL\nNational Bank of Yemen\tcommercial\tNULL\nTadhamon International Islamic Bank\tislamic\tNULL\n",
+  "stderr": "",
+  "execution_time_ms": 50
+}

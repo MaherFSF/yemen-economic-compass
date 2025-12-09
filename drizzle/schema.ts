@@ -224,6 +224,7 @@ export type InsertRecommendation = typeof recommendations.$inferInsert;
 
 /**
  * Banks table for storing detailed bank profiles and metrics.
+ * Enhanced with comprehensive research data (2010-2025).
  */
 export const banks = mysqlTable("banks", {
   id: int("id").autoincrement().primaryKey(),
@@ -232,17 +233,39 @@ export const banks = mysqlTable("banks", {
   /** Bank name in Arabic */
   nameAr: varchar("nameAr", { length: 255 }).notNull(),
   /** Bank type */
-  type: mysqlEnum("type", ["commercial", "islamic", "microfinance", "specialized"]).notNull(),
+  type: mysqlEnum("type", ["commercial", "islamic", "microfinance", "specialized", "exchange", "development"]).notNull(),
   /** Current status */
   status: mysqlEnum("status", ["stable", "struggling", "critical", "inactive"]).notNull(),
-  /** Total assets (in USD millions) */
+  /** Founding year (YYYY) */
+  foundingYear: varchar("foundingYear", { length: 4 }),
+  /** Ownership structure (e.g., 'State-owned', 'Private', 'Foreign') */
+  ownership: text("ownership"),
+  /** Sanctions status and history */
+  sanctionsStatus: text("sanctionsStatus"),
+  /** Operational status as of 2025 */
+  operationalStatus2025: varchar("operationalStatus2025", { length: 100 }),
+  /** Number of branches pre-war (2014) */
+  branches2014: int("branches2014"),
+  /** Number of branches current (2025) */
+  branches2025: int("branches2025"),
+  /** Total assets (in USD millions) - most recent */
   assets: int("assets"),
+  /** Assets year (e.g., '2019') */
+  assetsYear: varchar("assetsYear", { length: 4 }),
   /** Customer deposits (in USD millions) */
   deposits: int("deposits"),
-  /** Number of branches */
+  /** Number of branches (legacy field, use branches2025) */
   branches: int("branches"),
   /** Established date */
   establishedDate: varchar("establishedDate", { length: 10 }),
+  /** Crisis impact summary (2-3 sentences) */
+  crisisImpact: text("crisisImpact"),
+  /** Compelling narrative (3-4 sentences) */
+  compellingNarrative: text("compellingNarrative"),
+  /** Top 3 sources (comma-separated) */
+  topSources: text("topSources"),
+  /** Data confidence level (High/Medium/Low with reason) */
+  dataConfidence: text("dataConfidence"),
   /** JSON array of challenges */
   challenges: text("challenges"),
   /** JSON object of financial metrics */

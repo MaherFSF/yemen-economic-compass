@@ -1,0 +1,30 @@
+{
+  "query": "SELECT COUNT(*) as total, type, COUNT(*) as count FROM banks GROUP BY type ORDER BY count DESC",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SELECT COUNT(*) as total, type, COUNT(*) as count FROM banks GROUP BY type ORDER BY count DESC",
+  "rows": [
+    {
+      "total": "26",
+      "type": "commercial",
+      "count": "26"
+    },
+    {
+      "total": "13",
+      "type": "islamic",
+      "count": "13"
+    },
+    {
+      "total": "4",
+      "type": "microfinance",
+      "count": "4"
+    },
+    {
+      "total": "3",
+      "type": "specialized",
+      "count": "3"
+    }
+  ],
+  "messages": [],
+  "stdout": "total\ttype\tcount\n26\tcommercial\t26\n13\tislamic\t13\n4\tmicrofinance\t4\n3\tspecialized\t3\n",
+  "stderr": "",
+  "execution_time_ms": 253
+}

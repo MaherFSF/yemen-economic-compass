@@ -108,6 +108,9 @@ export const appRouter = router({
 
   // Banks router
   banks: router({
+    getAll: publicProcedure.query(async () => {
+      return await db.getAllBanks();
+    }),
     list: publicProcedure.query(async () => {
       return await db.getAllBanks();
     }),
