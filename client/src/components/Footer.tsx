@@ -37,37 +37,37 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/compass">
+                <Link href="/dashboards-hub">
                   <span className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    {isArabic ? "لوحة البوصلة" : "Compass Dashboard"}
+                    {isArabic ? "مركز لوحات المعلومات" : "Dashboards Hub"}
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/key-statistics">
+                <Link href="/what-if-simulator">
                   <span className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    {isArabic ? "الإحصاءات الرئيسية" : "Key Statistics"}
+                    {isArabic ? "محاكي السيناريوهات" : "What-If Simulator"}
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/transformation">
+                <Link href="/year-explorer">
                   <span className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    {isArabic ? "التحول المالي" : "Financial Transformation"}
+                    {isArabic ? "مستكشف السنوات" : "Year Explorer"}
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/power-map">
+                <Link href="/banks-database">
                   <span className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    {isArabic ? "خريطة القوى" : "Power Map"}
+                    {isArabic ? "قاعدة بيانات البنوك" : "Banks Database"}
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/advanced-viz">
+                <Link href="/economic-indicators">
                   <span className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    {isArabic ? "رسوم بيانية متقدمة" : "Advanced Visualizations"}
+                    {isArabic ? "المؤشرات الاقتصادية" : "Economic Indicators"}
                   </span>
                 </Link>
               </li>
@@ -81,16 +81,16 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/research">
+                <Link href="/remittances">
                   <span className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    {isArabic ? "الأبحاث" : "Research"}
+                    {isArabic ? "التحويلات المالية" : "Remittances"}
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/literature">
+                <Link href="/humanitarian-aid">
                   <span className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    {isArabic ? "المكتبة البحثية" : "Research Library"}
+                    {isArabic ? "المساعدات الإنسانية" : "Humanitarian Aid"}
                   </span>
                 </Link>
               </li>
@@ -102,9 +102,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/timeline">
+                <Link href="/files">
                   <span className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    {isArabic ? "الخط الزمني" : "Timeline"}
+                    {isArabic ? "إدارة الملفات" : "File Storage"}
                   </span>
                 </Link>
               </li>
@@ -131,27 +131,7 @@ export default function Footer() {
                   </span>
                 </Link>
               </li>
-              <li>
-                <Link href="/about-causeway">
-                  <span className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    {isArabic ? "كوزواي أركاديا" : "CauseWay Arcadia"}
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/about-causeway">
-                  <span className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    {isArabic ? "كوزواي للاستشارات" : "CauseWay Consultancies"}
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/about-causeway">
-                  <span className="text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    {isArabic ? "كوزواي للمشاريع" : "CauseWay Projects"}
-                  </span>
-                </Link>
-              </li>
+
               <li>
                 <a href="https://kayan.manus.space" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1">
                   {isArabic ? "منصة كيان" : "Kayan Platform"}
@@ -162,18 +142,7 @@ export default function Footer() {
               </li>
             </ul>
             
-            {/* CauseWay Logos */}
-            <div className="mt-4 space-y-3">
-              <Link href="/about-causeway">
-                <div className="cursor-pointer hover:opacity-80 transition-opacity">
-                  <img 
-                    src="/causeway-main.jpeg" 
-                    alt="CauseWay" 
-                    className="h-12 w-auto object-contain"
-                  />
-                </div>
-              </Link>
-            </div>
+
           </div>
         </div>
         

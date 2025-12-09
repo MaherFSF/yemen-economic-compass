@@ -258,7 +258,7 @@ export default function Header() {
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align={isArabic ? "end" : "start"} className="w-56">
+              <DropdownMenuContent align={isArabic ? "end" : "start"} className="w-64 max-h-[600px] overflow-y-auto">
                 <DropdownMenuLabel className="text-xs text-muted-foreground uppercase">
                   {isArabic ? 'لوحات المعلومات المتقدمة' : 'Advanced Dashboards'}
                 </DropdownMenuLabel>
@@ -272,11 +272,16 @@ export default function Header() {
                 </DropdownMenuLabel>
                 <Link href="/what-if-simulator"><DropdownMenuItem className="cursor-pointer">{t.whatIfSimulator}</DropdownMenuItem></Link>
                 <Link href="/year-explorer"><DropdownMenuItem className="cursor-pointer">{t.yearExplorer}</DropdownMenuItem></Link>
+                <Link href="/banks-database"><DropdownMenuItem className="cursor-pointer">{isArabic ? 'قاعدة بيانات البنوك' : 'Banks Database'}</DropdownMenuItem></Link>
+                <Link href="/economic-indicators"><DropdownMenuItem className="cursor-pointer">{isArabic ? 'المؤشرات الاقتصادية' : 'Economic Indicators'}</DropdownMenuItem></Link>
+                <Link href="/timeline"><DropdownMenuItem className="cursor-pointer">{isArabic ? 'الجدول الزمني' : 'Timeline'}</DropdownMenuItem></Link>
                 <DropdownMenuSeparator />
+                <DropdownMenuLabel className="text-xs text-muted-foreground uppercase">
+                  {isArabic ? 'لوحات معلومات' : 'Dashboards'}
+                </DropdownMenuLabel>
                 <Link href="/compass"><DropdownMenuItem className="cursor-pointer">{t.compass}</DropdownMenuItem></Link>
                 <Link href="/key-stats"><DropdownMenuItem className="cursor-pointer">{t.keyStats}</DropdownMenuItem></Link>
                 <Link href="/transformation"><DropdownMenuItem className="cursor-pointer">{t.transformation}</DropdownMenuItem></Link>
-                <DropdownMenuSeparator />
                 <Link href="/power-map"><DropdownMenuItem className="cursor-pointer">{t.powerMap}</DropdownMenuItem></Link>
                 <Link href="/advanced-viz"><DropdownMenuItem className="cursor-pointer">{t.advancedViz}</DropdownMenuItem></Link>
                 <Link href="/calculators"><DropdownMenuItem className="cursor-pointer">{t.calculators}</DropdownMenuItem></Link>
@@ -445,16 +450,19 @@ export default function Header() {
               <div className="px-3 py-2 text-xs font-semibold text-muted-foreground uppercase">
                 {t.data}
               </div>
-              <Link href="/compass">
-                <Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>
-                  {t.compass}
-                </Button>
-              </Link>
-              <Link href="/advanced-viz">
-                <Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>
-                  {t.advancedViz}
-                </Button>
-              </Link>
+              {/* Advanced Dashboards */}
+              <div className="px-3 py-1 text-xs font-medium text-muted-foreground">{isArabic ? 'لوحات متقدمة' : 'Advanced Dashboards'}</div>
+              <Link href="/dashboards-hub"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.dashboardsHub}</Button></Link>
+              <Link href="/banking-system-dashboard"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.bankingSystemDashboard}</Button></Link>
+              <Link href="/aid-flows-dashboard"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.aidFlowsDashboard}</Button></Link>
+              <Link href="/timeline-explorer"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.timelineExplorer}</Button></Link>
+              {/* Analysis Tools */}
+              <div className="px-3 py-1 text-xs font-medium text-muted-foreground mt-2">{isArabic ? 'أدوات التحليل' : 'Analysis Tools'}</div>
+              <Link href="/what-if-simulator"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.whatIfSimulator}</Button></Link>
+              <Link href="/year-explorer"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{t.yearExplorer}</Button></Link>
+              <Link href="/banks-database"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{isArabic ? 'قاعدة بيانات البنوك' : 'Banks Database'}</Button></Link>
+              <Link href="/economic-indicators"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{isArabic ? 'المؤشرات الاقتصادية' : 'Economic Indicators'}</Button></Link>
+              <Link href="/timeline"><Button variant="ghost" className="w-full justify-start pl-6" onClick={() => setMobileMenuOpen(false)}>{isArabic ? 'الجدول الزمني' : 'Timeline'}</Button></Link>
             </div>
 
             <div className="space-y-1">

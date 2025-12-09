@@ -34,8 +34,7 @@ export default function Sitemap() {
       links: [
         { path: "/", label: isArabic ? "الرئيسية" : "Home" },
         { path: "/about", label: isArabic ? "عن المنصة" : "About Platform" },
-        { path: "/story", label: isArabic ? "القصة الكاملة" : "Full Story" },
-        { path: "/overview", label: isArabic ? "نظرة عامة" : "Overview" },
+        { path: "/sitemap", label: isArabic ? "خريطة الموقع" : "Site Map" },
       ]
     },
     {
@@ -43,9 +42,10 @@ export default function Sitemap() {
       icon: BarChart3,
       color: "from-[oklch(0.55_0.12_180)] to-[oklch(0.70_0.12_70)]",
       links: [
-        { path: "/executive-dashboard", label: isArabic ? "لوحة المانحين" : "Executive Dashboard" },
-        { path: "/cby-dashboard", label: isArabic ? "لوحة البنك المركزي" : "CBY Dashboard" },
-        { path: "/compass", label: isArabic ? "لوحة البوصلة" : "Compass Dashboard" },
+        { path: "/dashboards-hub", label: isArabic ? "مركز لوحات المعلومات" : "Dashboards Hub" },
+        { path: "/banking-system-dashboard", label: isArabic ? "لوحة النظام المصرفي" : "Banking System Dashboard" },
+        { path: "/aid-flows-dashboard", label: isArabic ? "لوحة تدفقات المساعدات" : "Aid Flows Dashboard" },
+        { path: "/timeline-explorer", label: isArabic ? "مستكشف الجدول الزمني" : "Timeline Explorer" },
       ]
     },
     {
@@ -53,13 +53,11 @@ export default function Sitemap() {
       icon: Database,
       color: "from-[oklch(0.70_0.12_70)] to-[oklch(0.35_0.15_15)]",
       links: [
-        { path: "/key-statistics", label: isArabic ? "الإحصاءات الرئيسية" : "Key Statistics" },
-        { path: "/transformation", label: isArabic ? "التحول المالي" : "Financial Transformation" },
-        { path: "/power-map", label: isArabic ? "خريطة القوى" : "Power Map" },
-        { path: "/advanced-viz", label: isArabic ? "رسوم بيانية متقدمة" : "Advanced Visualizations" },
-        { path: "/charts", label: isArabic ? "الرسوم البيانية" : "Charts" },
-        { path: "/indicators", label: isArabic ? "المؤشرات الإحصائية" : "Statistical Indicators" },
-        { path: "/calculators", label: isArabic ? "الحاسبات المالية" : "Financial Calculators" },
+        { path: "/what-if-simulator", label: isArabic ? "محاكي السيناريوهات" : "What-If Simulator" },
+        { path: "/year-explorer", label: isArabic ? "مستكشف السنوات" : "Year Explorer" },
+        { path: "/banks-database", label: isArabic ? "قاعدة بيانات البنوك" : "Banks Database" },
+        { path: "/economic-indicators", label: isArabic ? "المؤشرات الاقتصادية" : "Economic Indicators" },
+        { path: "/timeline", label: isArabic ? "الجدول الزمني" : "Timeline" },
       ]
     },
     {
@@ -80,10 +78,12 @@ export default function Sitemap() {
       color: "from-[oklch(0.55_0.12_180)] to-[oklch(0.35_0.15_15)]",
       links: [
         { path: "/stakeholders", label: isArabic ? "مركز أصحاب المصلحة" : "Stakeholder Hub" },
+        { path: "/stakeholders/world-bank", label: isArabic ? "البنك الدولي" : "World Bank" },
+        { path: "/stakeholders/imf", label: isArabic ? "صندوق النقد الدولي" : "IMF" },
         { path: "/stakeholders/saudi-arabia", label: isArabic ? "المملكة العربية السعودية" : "Saudi Arabia" },
+        { path: "/stakeholders/uae", label: isArabic ? "الإمارات العربية المتحدة" : "UAE" },
         { path: "/stakeholders/hayel-saeed-anam", label: isArabic ? "حايل سعيد أنعم" : "Hayel Saeed Anam" },
-        { path: "/world-bank", label: isArabic ? "رحلة البنك الدولي" : "World Bank Journey" },
-        { path: "/financial-flows", label: isArabic ? "شبكة التدفقات المالية" : "Financial Flows Network" },
+        { path: "/stakeholders/un-agencies", label: isArabic ? "وكالات الأمم المتحدة" : "UN Agencies" },
       ]
     },
     {
@@ -91,52 +91,25 @@ export default function Sitemap() {
       icon: Building2,
       color: "from-[oklch(0.70_0.12_70)] to-[oklch(0.55_0.12_180)]",
       links: [
-        { path: "/banks", label: isArabic ? "البنوك التجارية" : "Commercial Banks" },
+        { path: "/dual-central-bank", label: isArabic ? "البنك المركزي المزدوج" : "Dual Central Bank" },
+        { path: "/cby-aden", label: isArabic ? "البنك المركزي - عدن" : "CBY Aden" },
+        { path: "/cby-sanaa", label: isArabic ? "البنك المركزي - صنعاء" : "CBY Sana'a" },
+        { path: "/commercial-banks", label: isArabic ? "البنوك التجارية" : "Commercial Banks" },
         { path: "/microfinance", label: isArabic ? "التمويل الأصغر" : "Microfinance" },
-        { path: "/cby-aden", label: isArabic ? "البنك المركزي - عدن" : "CBY - Aden" },
-        { path: "/cby-sanaa", label: isArabic ? "البنك المركزي - صنعاء" : "CBY - Sana'a" },
-      ]
-    },
-    {
-      title: isArabic ? "السياق والتاريخ" : "Context & History",
-      icon: Calendar,
-      color: "from-[oklch(0.35_0.15_15)] to-[oklch(0.55_0.12_180)]",
-      links: [
-        { path: "/timeline", label: isArabic ? "الخط الزمني" : "Timeline" },
-        { path: "/events", label: isArabic ? "الأحداث الرئيسية" : "Key Events" },
-        { path: "/cities", label: isArabic ? "المدن الرئيسية" : "Main Cities" },
-      ]
-    },
-    {
-      title: isArabic ? "التقارير والأبحاث" : "Reports & Research",
-      icon: FileText,
-      color: "from-[oklch(0.55_0.12_180)] to-[oklch(0.70_0.12_70)]",
-      links: [
-        { path: "/reports", label: isArabic ? "التقارير الدولية" : "International Reports" },
-        { path: "/literature", label: isArabic ? "المكتبة البحثية" : "Research Library" },
-        { path: "/research", label: isArabic ? "الأبحاث" : "Research" },
-      ]
-    },
-    {
-      title: isArabic ? "السياسات والتوقعات" : "Policy & Forecasting",
-      icon: Target,
-      color: "from-[oklch(0.70_0.12_70)] to-[oklch(0.35_0.15_15)]",
-      links: [
-        { path: "/policy", label: isArabic ? "التوصيات السياسية" : "Policy Recommendations" },
-        { path: "/forecasting", label: isArabic ? "التوقعات" : "Forecasting" },
-        { path: "/sanctions", label: isArabic ? "العقوبات" : "Sanctions Tracker" },
       ]
     },
     {
       title: isArabic ? "الموارد والأدوات" : "Resources & Tools",
       icon: Settings,
-      color: "from-[oklch(0.35_0.15_15)] to-[oklch(0.70_0.12_70)]",
+      color: "from-[oklch(0.35_0.15_15)] to-[oklch(0.55_0.12_180)]",
       links: [
+        { path: "/remittances", label: isArabic ? "التحويلات المالية" : "Remittances" },
+        { path: "/humanitarian-aid", label: isArabic ? "المساعدات الإنسانية" : "Humanitarian Aid" },
         { path: "/news", label: isArabic ? "الأخبار" : "News Aggregator" },
-        { path: "/files", label: isArabic ? "إدارة الملفات" : "File Manager" },
-        { path: "/analytics", label: isArabic ? "التحليلات" : "Analytics Dashboard" },
+        { path: "/files", label: isArabic ? "إدارة الملفات" : "File Storage" },
       ]
     },
+
     {
       title: isArabic ? "عن كوزواي" : "About CauseWay",
       icon: Globe,
@@ -237,7 +210,7 @@ export default function Sitemap() {
               </Card>
               
               <Card className="p-6 text-center">
-                <div className="text-5xl font-bold text-[oklch(0.70_0.12_70)] mb-2">1200+</div>
+                <div className="text-5xl font-bold text-[oklch(0.70_0.12_70)] mb-2">1700+</div>
                 <div className="text-sm text-muted-foreground">
                   {isArabic ? "نقطة بيانات" : "Data Points"}
                 </div>
