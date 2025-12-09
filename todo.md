@@ -1345,3 +1345,78 @@ All parallel research complete. Database expansion ready. Homepage fixed. Expert
 - [ ] Deploy updated site
 - [ ] Verify all data integration
 - [ ] Test all new pages and features
+
+
+---
+
+# COMPREHENSIVE PLATFORM TRANSFORMATION - USER REQUEST
+
+## Phase 1: Complete Site Audit & Inventory
+- [x] Map ALL pages created across all versions
+- [x] Identify duplicate pages and consolidate
+- [x] Catalog all research data and literature
+- [ ] Inventory all banks data (17 researched + find more)
+- [ ] List all events, especially 2024-2025
+- [ ] Check which pages are missing from navigation
+- [x] Document current site structure
+
+## Phase 2: Revolutionary Design with Authentic Yemen Photos
+- [x] Search and download authentic Yemen photos (markets, Sana'a old city, Aden port, people, landscapes)
+- [x] Replace ALL AI-generated images with real Yemen photos
+- [x] Design entirely unique landing page layout (not standard template)
+- [x] Create dynamic, interactive hero section
+- [ ] Design unique navigation system
+- [ ] Implement world-class typography and spacing
+- [ ] Create memorable visual identity
+
+## Phase 3: Fix Arabic Rendering & Add 2024-2025 Data
+- [ ] Fix Arabic text rendering in ALL charts
+- [ ] Add ALL 2024 events (Red Sea attacks, banking crisis, exchange rate collapse)
+- [ ] Add ALL 2025 events (OFAC sanctions, latest developments)
+- [ ] Update ALL stakeholder pages with 2024-2025 data
+- [ ] Ensure proper RTL support everywhere
+- [ ] Verify Arabic fonts load correctly
+
+## Phase 4: Consolidate Duplicates & Reorganize
+- [ ] Identify and merge duplicate pages
+- [ ] Reorganize literature section (remove duplicates)
+- [ ] Restructure research papers section
+- [ ] Combine similar stakeholder pages if needed
+- [ ] Clean up navigation menu
+- [ ] Remove dead links
+
+## Phase 5: Complete Data & Downloads
+- [ ] Add ALL 17 banks detailed data
+- [ ] Research and add more Yemeni banks
+- [ ] Make ALL literature downloadable (PDFs)
+- [ ] Create downloadable datasets (CSV, Excel)
+- [ ] Add ALL research papers with download links
+- [ ] Ensure file storage system works
+- [ ] Create comprehensive datasets page
+
+## Phase 6: User Experience & Explanations
+- [ ] Add tooltips/info boxes for technical terms
+- [ ] Create "What is this?" explanations for each section
+- [ ] Add help icons throughout
+- [ ] Create user guides for different audiences (researchers, citizens, policymakers)
+- [ ] Add sitemap page
+- [ ] Create footer sitemap
+- [ ] Add breadcrumbs to all pages
+
+## Phase 7: Interactive Tools & Dynamics
+- [ ] Create interactive timeline (2010-2025)
+- [ ] Build scenario simulator
+- [ ] Add data visualization tools
+- [ ] Create comparison tools
+- [ ] Add search functionality
+- [ ] Implement filters and sorting
+- [ ] Create dynamic dashboards
+
+## Phase 8: Quality Assurance
+- [ ] Test EVERY page in browser
+- [ ] Verify ALL data accuracy
+- [ ] Check ALL downloads work
+- [ ] Test Arabic rendering everywhere
+- [ ] Verify responsive design
+- [ ] Check ALL links
+- [ ] Final comprehensive review
