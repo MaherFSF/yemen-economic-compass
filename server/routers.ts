@@ -6,6 +6,7 @@ import { storagePut } from "./storage";
 import * as db from "./db";
 import { z } from "zod";
 import { TRPCError } from "@trpc/server";
+import { yearlyDataRouter } from "./routes/yearly-data";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -154,6 +155,9 @@ export const appRouter = router({
       return await db.getAllCausations();
     }),
   }),
+
+  // Year-by-year data router
+  yearlyData: yearlyDataRouter,
 });
 
 export type AppRouter = typeof appRouter;

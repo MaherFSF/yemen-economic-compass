@@ -1,4 +1,4 @@
-import { bigint, int, mysqlEnum, mysqlTable, text, timestamp, varchar } from "drizzle-orm/mysql-core";
+import { bigint, decimal, int, json, mysqlEnum, mysqlTable, text, timestamp, varchar } from "drizzle-orm/mysql-core";
 
 /**
  * Core user table backing auth flow.
@@ -282,3 +282,509 @@ export const stakeholders = mysqlTable("stakeholders", {
 
 export type Stakeholder = typeof stakeholders.$inferSelect;
 export type InsertStakeholder = typeof stakeholders.$inferInsert;
+
+// ============================================================================
+// YEAR-BY-YEAR DATA TABLES
+// ============================================================================
+
+/**
+ * Yearly Macroeconomic Indicators
+ * Stores comprehensive annual data for Yemen's economy (2010-2025)
+ */
+export const yearlyMacroIndicators = mysqlTable("yearly_macro_indicators", {
+  id: int("id").autoincrement().primaryKey(),
+  year: int("year").notNull().unique(),
+  
+  // GDP Metrics
+  gdpCurrentUsd: bigint("gdpCurrentUsd", { mode: "number" }), // GDP in millions USD
+  gdpGrowthRate: varchar("gdpGrowthRate", { length: 20 }), // Stored as string to preserve precision
+  gdpPerCapita: bigint("gdpPerCapita", { mode: "number" }), // GDP per capita in USD cents
+  
+  // Inflation & Currency
+  inflationRate: varchar("inflationRate", { length: 20 }),
+  exchangeRateOfficial: varchar("exchangeRateOfficial", { length: 20 }),
+  exchangeRateParallel: varchar("exchangeRateParallel", { length: 20 }),
+  
+  // Trade
+  exports: bigint("exports", { mode: "number" }), // Million USD
+  imports: bigint("imports", { mode: "number" }),
+  tradeBalance: bigint("tradeBalance", { mode: "number" }),
+  
+  // Reserves & Debt
+  foreignReserves: bigint("foreignReserves", { mode: "number" }),
+  externalDebt: bigint("externalDebt", { mode: "number" }),
+  
+  // Population & Humanitarian
+  population: bigint("population", { mode: "number" }),
+  idps: int("idps"),
+  refugees: int("refugees"),
+  foodInsecure: int("foodInsecure"),
+  
+  // Metadata
+  dataQuality: mysqlEnum("dataQuality", ["high", "medium", "low"]),
+  notes: text("notes"),
+  sources: text("sources"), // JSON array
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type YearlyMacroIndicator = typeof yearlyMacroIndicators.$inferSelect;
+export type InsertYearlyMacroIndicator = typeof yearlyMacroIndicators.$inferInsert;
+
+/**
+ * Yearly Bank Data
+ * Stores annual financial metrics for each bank
+ */
+export const yearlyBankData = mysqlTable("yearly_bank_data", {
+  id: int("id").autoincrement().primaryKey(),
+  year: int("year").notNull(),
+  bankId: varchar("bankId", { length: 100 }).notNull(),
+  bankName: varchar("bankName", { length: 255 }).notNull(),
+  bankType: mysqlEnum("bankType", ["commercial", "islamic", "microfinance", "central"]),
+  
+  // Financial Metrics (stored in millions YER or USD)
+  totalAssets: bigint("totalAssets", { mode: "number" }),
+  totalDeposits: bigint("totalDeposits", { mode: "number" }),
+  totalLoans: bigint("totalLoans", { mode: "number" }),
+  nplAmount: bigint("nplAmount", { mode: "number" }),
+  nplRatio: varchar("nplRatio", { length: 20 }),
+  nplProvision: bigint("nplProvision", { mode: "number" }),
+  
+  // Capital & Liquidity
+  capitalAdequacyRatio: varchar("capitalAdequacyRatio", { length: 20 }),
+  liquidityRatio: varchar("liquidityRatio", { length: 20 }),
+  
+  // Profitability
+  netIncome: bigint("netIncome", { mode: "number" }),
+  returnOnAssets: varchar("returnOnAssets", { length: 20 }),
+  returnOnEquity: varchar("returnOnEquity", { length: 20 }),
+  
+  // Operations
+  branches: int("branches"),
+  employees: int("employees"),
+  customers: int("customers"),
+  
+  // Microfinance-specific
+  activeBorrowers: int("activeBorrowers"),
+  grossLoanPortfolio: bigint("grossLoanPortfolio", { mode: "number" }),
+  
+  // Metadata
+  auditFirm: varchar("auditFirm", { length: 255 }),
+  auditDate: varchar("auditDate", { length: 10 }),
+  dataQuality: mysqlEnum("dataQuality", ["high", "medium", "low"]),
+  notes: text("notes"),
+  sources: text("sources"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type YearlyBankData = typeof yearlyBankData.$inferSelect;
+export type InsertYearlyBankData = typeof yearlyBankData.$inferInsert;
+
+/**
+ * Yearly Aid Data
+ * Stores annual humanitarian aid by donor
+ */
+export const yearlyAidData = mysqlTable("yearly_aid_data", {
+  id: int("id").autoincrement().primaryKey(),
+  year: int("year").notNull(),
+  donorId: varchar("donorId", { length: 100 }).notNull(),
+  donorName: varchar("donorName", { length: 255 }).notNull(),
+  donorType: mysqlEnum("donorType", ["un_agency", "bilateral", "multilateral", "ngo"]),
+  
+  // Funding (in USD)
+  totalFunding: bigint("totalFunding", { mode: "number" }),
+  fundingRequested: bigint("fundingRequested", { mode: "number" }),
+  fundingGap: bigint("fundingGap", { mode: "number" }),
+  fundingPercentage: varchar("fundingPercentage", { length: 20 }),
+  
+  // Beneficiaries
+  totalBeneficiaries: int("totalBeneficiaries"),
+  childrenBeneficiaries: int("childrenBeneficiaries"),
+  womenBeneficiaries: int("womenBeneficiaries"),
+  
+  // Sector Allocation (USD)
+  foodSecurity: bigint("foodSecurity", { mode: "number" }),
+  health: bigint("health", { mode: "number" }),
+  wash: bigint("wash", { mode: "number" }),
+  education: bigint("education", { mode: "number" }),
+  protection: bigint("protection", { mode: "number" }),
+  shelter: bigint("shelter", { mode: "number" }),
+  nutrition: bigint("nutrition", { mode: "number" }),
+  logistics: bigint("logistics", { mode: "number" }),
+  other: bigint("other", { mode: "number" }),
+  
+  // Operations
+  projects: int("projects"),
+  partners: int("partners"),
+  governoratesCovered: int("governoratesCovered"),
+  
+  // Metadata
+  dataQuality: mysqlEnum("dataQuality", ["high", "medium", "low"]),
+  notes: text("notes"),
+  sources: text("sources"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type YearlyAidData = typeof yearlyAidData.$inferSelect;
+export type InsertYearlyAidData = typeof yearlyAidData.$inferInsert;
+
+/**
+ * Yearly Conflict Data
+ * Stores annual conflict casualties and displacement
+ */
+export const yearlyConflictData = mysqlTable("yearly_conflict_data", {
+  id: int("id").autoincrement().primaryKey(),
+  year: int("year").notNull().unique(),
+  
+  // Casualties
+  totalFatalities: int("totalFatalities"),
+  civilianFatalities: int("civilianFatalities"),
+  combatantFatalities: int("combatantFatalities"),
+  totalInjuries: int("totalInjuries"),
+  childDeaths: int("childDeaths"),
+  
+  // Displacement
+  newIdps: int("newIdps"),
+  totalIdps: int("totalIdps"),
+  returnees: int("returnees"),
+  
+  // Infrastructure Damage
+  healthFacilitiesDamaged: int("healthFacilitiesDamaged"),
+  schoolsDamaged: int("schoolsDamaged"),
+  waterSystemsDamaged: int("waterSystemsDamaged"),
+  
+  // Metadata
+  dataQuality: mysqlEnum("dataQuality", ["high", "medium", "low"]),
+  notes: text("notes"),
+  sources: text("sources"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type YearlyConflictData = typeof yearlyConflictData.$inferSelect;
+export type InsertYearlyConflictData = typeof yearlyConflictData.$inferInsert;
+
+/**
+ * Yearly Remittance Data
+ * Stores annual remittance and money exchange sector data
+ */
+export const yearlyRemittanceData = mysqlTable("yearly_remittance_data", {
+  id: int("id").autoincrement().primaryKey(),
+  year: int("year").notNull().unique(),
+  
+  // Remittances
+  totalRemittances: bigint("totalRemittances", { mode: "number" }), // USD millions
+  remittanceOperations: int("remittanceOperations"),
+  
+  // Money Exchange Sector
+  moneyExchangers: int("moneyExchangers"),
+  licensedCompanies: int("licensedCompanies"),
+  
+  // Metadata
+  dataQuality: mysqlEnum("dataQuality", ["high", "medium", "low"]),
+  notes: text("notes"),
+  sources: text("sources"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type YearlyRemittanceData = typeof yearlyRemittanceData.$inferSelect;
+export type InsertYearlyRemittanceData = typeof yearlyRemittanceData.$inferInsert;
+
+
+// ============================================================================
+// TRANSPARENCY & ACCOUNTABILITY FRAMEWORK
+// ============================================================================
+
+/**
+ * Source Confidence Scores
+ * Tracks confidence level for every data source across 5 dimensions
+ */
+export const sourceConfidenceScores = mysqlTable("source_confidence_scores", {
+  id: int("id").autoincrement().primaryKey(),
+  sourceId: varchar("sourceId", { length: 100 }).notNull(),
+  sourceName: varchar("sourceName", { length: 255 }).notNull(),
+  sourceType: mysqlEnum("sourceType", [
+    "multilateral",
+    "government",
+    "de_facto_authority",
+    "think_tank",
+    "ngo",
+    "media",
+    "academic",
+    "commercial",
+  ]).notNull(),
+  
+  // Confidence dimensions (0-100 scale)
+  timelinessScore: int("timelinessScore").notNull(),
+  transparencyScore: int("transparencyScore").notNull(),
+  methodologyScore: int("methodologyScore").notNull(),
+  independenceScore: int("independenceScore").notNull(),
+  consistencyScore: int("consistencyScore").notNull(),
+  
+  // Overall confidence
+  overallConfidence: decimal("overallConfidence", { precision: 5, scale: 2 }).notNull(),
+  confidenceLevel: mysqlEnum("confidenceLevel", ["low", "medium", "high", "very_high"]).notNull(),
+  
+  // Metadata
+  lastReviewed: timestamp("lastReviewed").defaultNow().notNull(),
+  reviewedBy: varchar("reviewedBy", { length: 255 }),
+  notes: text("notes"),
+  
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type SourceConfidenceScore = typeof sourceConfidenceScores.$inferSelect;
+export type InsertSourceConfidenceScore = typeof sourceConfidenceScores.$inferInsert;
+
+/**
+ * Source Bias Profiles
+ * Documents structural biases and incentives for each source
+ */
+export const sourceBiasProfiles = mysqlTable("source_bias_profiles", {
+  id: int("id").autoincrement().primaryKey(),
+  sourceId: varchar("sourceId", { length: 100 }).notNull(),
+  sourceName: varchar("sourceName", { length: 255 }).notNull(),
+  
+  // Bias classification
+  primaryBias: varchar("primaryBias", { length: 100 }).notNull(),
+  biasDescription: text("biasDescription").notNull(),
+  
+  // Structural incentives
+  fundingSource: text("fundingSource"),
+  politicalAffiliation: varchar("politicalAffiliation", { length: 255 }),
+  economicInterests: text("economicInterests"),
+  
+  // Narrative tendencies
+  narrativeTendency: text("narrativeTendency").notNull(),
+  typicalFraming: text("typicalFraming"),
+  blindSpots: text("blindSpots"),
+  
+  // Strengths despite bias
+  strengths: text("strengths").notNull(),
+  bestUsedFor: text("bestUsedFor"),
+  
+  // Examples
+  exampleBias: json("exampleBias"),
+  
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type SourceBiasProfile = typeof sourceBiasProfiles.$inferSelect;
+export type InsertSourceBiasProfile = typeof sourceBiasProfiles.$inferInsert;
+
+/**
+ * Data Conflicts
+ * Tracks when two credible sources disagree on the same indicator
+ */
+export const dataConflicts = mysqlTable("data_conflicts", {
+  id: int("id").autoincrement().primaryKey(),
+  indicatorId: varchar("indicatorId", { length: 100 }).notNull(),
+  indicatorName: varchar("indicatorName", { length: 255 }).notNull(),
+  year: int("year").notNull(),
+  
+  // Conflicting values
+  primaryValue: decimal("primaryValue", { precision: 20, scale: 2 }).notNull(),
+  primarySource: varchar("primarySource", { length: 255 }).notNull(),
+  primarySourceId: varchar("primarySourceId", { length: 100 }).notNull(),
+  
+  alternativeValue: decimal("alternativeValue", { precision: 20, scale: 2 }).notNull(),
+  alternativeSource: varchar("alternativeSource", { length: 255 }).notNull(),
+  alternativeSourceId: varchar("alternativeSourceId", { length: 100 }).notNull(),
+  
+  // Conflict analysis
+  discrepancyPercent: decimal("discrepancyPercent", { precision: 10, scale: 2 }).notNull(),
+  conflictSeverity: mysqlEnum("conflictSeverity", ["minor", "moderate", "major", "critical"]).notNull(),
+  
+  // Explanation
+  methodologicalDifference: text("methodologicalDifference"),
+  coverageDifference: text("coverageDifference"),
+  timingDifference: text("timingDifference"),
+  
+  // Resolution
+  resolutionMethod: text("resolutionMethod").notNull(),
+  primarySeriesRationale: text("primarySeriesRationale").notNull(),
+  alternativeSeriesAvailable: int("alternativeSeriesAvailable").notNull().default(1),
+  
+  // Additional sources
+  additionalSources: json("additionalSources"),
+  
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type DataConflict = typeof dataConflicts.$inferSelect;
+export type InsertDataConflict = typeof dataConflicts.$inferInsert;
+
+/**
+ * Data Revision Log
+ * Tracks every change to every indicator with full transparency
+ */
+export const dataRevisionLog = mysqlTable("data_revision_log", {
+  id: int("id").autoincrement().primaryKey(),
+  
+  // What changed
+  entityType: mysqlEnum("entityType", ["indicator", "event", "actor", "narrative", "source"]).notNull(),
+  entityId: varchar("entityId", { length: 100 }).notNull(),
+  entityName: varchar("entityName", { length: 255 }).notNull(),
+  year: int("year"),
+  
+  // Change details
+  changeType: mysqlEnum("changeType", [
+    "created",
+    "updated_value",
+    "updated_source",
+    "updated_methodology",
+    "updated_narrative",
+    "corrected_error",
+    "added_alternative_series",
+    "deleted",
+  ]).notNull(),
+  
+  // Before/After
+  previousValue: text("previousValue"),
+  newValue: text("newValue"),
+  
+  // Why changed
+  changeReason: text("changeReason").notNull(),
+  triggerEvent: varchar("triggerEvent", { length: 255 }),
+  sourceUpdate: varchar("sourceUpdate", { length: 255 }),
+  
+  // Who changed
+  changedBy: varchar("changedBy", { length: 255 }).notNull(),
+  reviewedBy: varchar("reviewedBy", { length: 255 }),
+  
+  // References
+  supportingDocuments: json("supportingDocuments"),
+  relatedRevisions: json("relatedRevisions"),
+  
+  // Metadata
+  changeTimestamp: timestamp("changeTimestamp").defaultNow().notNull(),
+  publiclyVisible: int("publiclyVisible").notNull().default(1),
+  
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type DataRevision = typeof dataRevisionLog.$inferSelect;
+export type InsertDataRevision = typeof dataRevisionLog.$inferInsert;
+
+/**
+ * Actor Actions
+ * Timeline of every major action by key actors
+ */
+export const actorActions = mysqlTable("actor_actions", {
+  id: int("id").autoincrement().primaryKey(),
+  
+  // Actor info
+  actorId: varchar("actorId", { length: 100 }).notNull(),
+  actorName: varchar("actorName", { length: 255 }).notNull(),
+  actorType: mysqlEnum("actorType", [
+    "central_bank",
+    "government",
+    "de_facto_authority",
+    "armed_group",
+    "foreign_government",
+    "multilateral",
+    "ngo",
+    "bank",
+    "mfi",
+    "commercial",
+  ]).notNull(),
+  
+  // Action details
+  actionDate: timestamp("actionDate").notNull(),
+  actionType: varchar("actionType", { length: 100 }).notNull(),
+  actionTitle: varchar("actionTitle", { length: 255 }).notNull(),
+  actionDescription: text("actionDescription").notNull(),
+  
+  // Impact classification
+  impactDirection: mysqlEnum("impactDirection", [
+    "stabilizing",
+    "destabilizing",
+    "redistributive",
+    "extractive",
+    "neutral",
+    "mixed",
+  ]).notNull(),
+  
+  timeHorizon: mysqlEnum("timeHorizon", [
+    "immediate",
+    "short_term",
+    "medium_term",
+    "long_term",
+    "structural",
+  ]).notNull(),
+  
+  // Affected indicators
+  affectedIndicators: json("affectedIndicators").notNull(),
+  
+  // Linked events
+  linkedEventIds: json("linkedEventIds"),
+  
+  // References
+  sources: json("sources").notNull(),
+  
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type ActorAction = typeof actorActions.$inferSelect;
+export type InsertActorAction = typeof actorActions.$inferInsert;
+
+/**
+ * Actor Impact Profiles
+ * Net impact dashboard for each actor across multiple dimensions
+ */
+export const actorImpactProfiles = mysqlTable("actor_impact_profiles", {
+  id: int("id").autoincrement().primaryKey(),
+  
+  // Actor info
+  actorId: varchar("actorId", { length: 100 }).notNull().unique(),
+  actorName: varchar("actorName", { length: 255 }).notNull(),
+  
+  // Time period
+  startYear: int("startYear").notNull(),
+  endYear: int("endYear").notNull(),
+  
+  // Macro-stability impact
+  macroStabilityScore: decimal("macroStabilityScore", { precision: 5, scale: 2 }),
+  volatilityChange: decimal("volatilityChange", { precision: 10, scale: 2 }),
+  macroStabilityEvidence: json("macroStabilityEvidence").notNull(),
+  
+  // Distributional impact
+  distributionalScore: decimal("distributionalScore", { precision: 5, scale: 2 }),
+  poorHouseholdsImpact: text("poorHouseholdsImpact"),
+  richHouseholdsImpact: text("richHouseholdsImpact"),
+  distributionalEvidence: json("distributionalEvidence").notNull(),
+  
+  // Institutional impact
+  institutionalScore: decimal("institutionalScore", { precision: 5, scale: 2 }),
+  institutionalStrengthening: text("institutionalStrengthening"),
+  institutionalWeakening: text("institutionalWeakening"),
+  institutionalEvidence: json("institutionalEvidence").notNull(),
+  
+  // Overall assessment
+  overallAssessment: text("overallAssessment").notNull(),
+  keyFindings: json("keyFindings").notNull(),
+  
+  // Confidence
+  assessmentConfidence: mysqlEnum("assessmentConfidence", ["low", "medium", "high"]).notNull(),
+  
+  // References
+  dataSeriesUsed: json("dataSeriesUsed").notNull(),
+  reportsUsed: json("reportsUsed").notNull(),
+  
+  // Metadata
+  lastUpdated: timestamp("lastUpdated").defaultNow().notNull(),
+  analystNotes: text("analystNotes"),
+  
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type ActorImpactProfile = typeof actorImpactProfiles.$inferSelect;
+export type InsertActorImpactProfile = typeof actorImpactProfiles.$inferInsert;

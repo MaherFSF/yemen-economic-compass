@@ -759,3 +759,352 @@ All parallel research complete. Database expansion ready. Homepage fixed. Expert
 - [x] Include program descriptions and impact metrics
 - [x] Add timeline of UNICEF operations in Yemen
 - [x] Test and verify all content accuracy
+
+
+## COMPREHENSIVE YEAR-BY-YEAR DEEP RESEARCH STRATEGY (2015-2025)
+
+### Methodology
+- One dedicated session per year
+- Each session updates EVERY corner of the site for that year
+- Wide parallel research across all sectors
+- Track banking, microfinance, money exchanges with in-depth narratives
+- Collect full literature, research, reports from expert agencies, think tanks, World Bank, IMF
+- Update dashboards with year-specific indicators
+- Push to GitHub after each year session
+- Log everything into relevant dashboard locations
+
+### Year 2015 Deep Research
+- [ ] Wide research: Banking sector 2015 (CBY operations, commercial banks, Islamic banks, microfinance)
+- [ ] Wide research: Humanitarian crisis onset 2015 (UN agencies, NGOs, donors)
+- [ ] Wide research: Economic indicators 2015 (GDP, inflation, currency, trade)
+- [ ] Wide research: Conflict events 2015 (military operations, territorial control)
+- [ ] Wide research: WFP operations 2015 (beneficiaries, funding, programs)
+- [ ] Wide research: UNICEF operations 2015 (programs, funding, impact)
+- [ ] Wide research: UAE aid 2015 (projects, funding, sectors)
+- [ ] Wide research: Saudi aid 2015 (projects, funding, sectors)
+- [ ] Wide research: All other stakeholders 2015
+- [ ] Update all dashboards with 2015 data
+- [ ] Create 2015 timeline events
+- [ ] Push to GitHub
+
+### Year 2016 Deep Research
+- [ ] Wide research: CBY split 2016 (Aden vs Sana'a)
+- [ ] Wide research: Banking sector 2016
+- [ ] Wide research: Humanitarian operations 2016
+- [ ] Wide research: Economic indicators 2016
+- [ ] Wide research: All stakeholders 2016
+- [ ] Update all dashboards with 2016 data
+- [ ] Create 2016 timeline events
+- [ ] Push to GitHub
+
+### Year 2017 Deep Research
+- [ ] Wide research: Banking sector 2017
+- [ ] Wide research: Humanitarian operations 2017
+- [ ] Wide research: Economic indicators 2017
+- [ ] Wide research: All stakeholders 2017
+- [ ] Update all dashboards with 2017 data
+- [ ] Create 2017 timeline events
+- [ ] Push to GitHub
+
+### Year 2018 Deep Research
+- [ ] Wide research: Banking sector 2018
+- [ ] Wide research: Humanitarian operations 2018
+- [ ] Wide research: Economic indicators 2018
+- [ ] Wide research: All stakeholders 2018
+- [ ] Update all dashboards with 2018 data
+- [ ] Create 2018 timeline events
+- [ ] Push to GitHub
+
+### Year 2019 Deep Research
+- [ ] Wide research: Currency ban 2019
+- [ ] Wide research: Banking sector 2019
+- [ ] Wide research: Humanitarian operations 2019
+- [ ] Wide research: Economic indicators 2019
+- [ ] Wide research: All stakeholders 2019
+- [ ] Update all dashboards with 2019 data
+- [ ] Create 2019 timeline events
+- [ ] Push to GitHub
+
+### Year 2020 Deep Research
+- [ ] Wide research: COVID-19 impact 2020
+- [ ] Wide research: Banking sector 2020
+- [ ] Wide research: Humanitarian operations 2020
+- [ ] Wide research: Economic indicators 2020
+- [ ] Wide research: All stakeholders 2020
+- [ ] Update all dashboards with 2020 data
+- [ ] Create 2020 timeline events
+- [ ] Push to GitHub
+
+### Year 2021 Deep Research
+- [ ] Wide research: Banking sector 2021
+- [ ] Wide research: Humanitarian operations 2021
+- [ ] Wide research: Economic indicators 2021
+- [ ] Wide research: All stakeholders 2021
+- [ ] Update all dashboards with 2021 data
+- [ ] Create 2021 timeline events
+- [ ] Push to GitHub
+
+### Year 2022 Deep Research
+- [ ] Wide research: Banking sector 2022
+- [ ] Wide research: Humanitarian operations 2022
+- [ ] Wide research: Economic indicators 2022
+- [ ] Wide research: All stakeholders 2022
+- [ ] Update all dashboards with 2022 data
+- [ ] Create 2022 timeline events
+- [ ] Push to GitHub
+
+### Year 2023 Deep Research
+- [ ] Wide research: Banking sector 2023
+- [ ] Wide research: Humanitarian operations 2023
+- [ ] Wide research: Economic indicators 2023
+- [ ] Wide research: All stakeholders 2023
+- [ ] Update all dashboards with 2023 data
+- [ ] Create 2023 timeline events
+- [ ] Push to GitHub
+
+### Year 2024 Deep Research
+- [ ] Wide research: Banking sector 2024
+- [ ] Wide research: Humanitarian operations 2024
+- [ ] Wide research: Economic indicators 2024
+- [ ] Wide research: All stakeholders 2024
+- [ ] Update all dashboards with 2024 data
+- [ ] Create 2024 timeline events
+- [ ] Push to GitHub
+
+### Year 2025 Deep Research
+- [ ] Wide research: Banking sector 2025
+- [ ] Wide research: Humanitarian operations 2025
+- [ ] Wide research: Economic indicators 2025
+- [ ] Wide research: All stakeholders 2025
+- [ ] Update all dashboards with 2025 data
+- [ ] Create 2025 timeline events
+- [ ] Push to GitHub
+
+## STAKEHOLDER COMPARISON TOOL
+
+- [ ] Design interactive comparison dashboard
+- [ ] Add WFP to comparison tool
+- [ ] Add UNICEF to comparison tool
+- [ ] Add WHO to comparison tool
+- [ ] Add UAE to comparison tool
+- [ ] Add Saudi Arabia to comparison tool
+- [ ] Add World Bank to comparison tool
+- [ ] Add all other stakeholders
+- [ ] Create funding comparison charts
+- [ ] Create beneficiaries comparison charts
+- [ ] Create programs comparison charts
+- [ ] Add year-by-year comparison view
+- [ ] Test comparison tool
+- [ ] Push to GitHub
+
+## CHART.JS VISUALIZATIONS
+
+### WFP Page Enhancements
+- [ ] Add funding trends chart (2015-2025)
+- [ ] Add beneficiaries over time chart
+- [ ] Add program distribution by governorate map
+- [ ] Add food distribution trends chart
+- [ ] Add cash transfers trends chart
+
+### UNICEF Page Enhancements
+- [ ] Add funding trends chart (2015-2025)
+- [ ] Add beneficiaries over time chart
+- [ ] Add program distribution by sector chart
+- [ ] Add health indicators trends chart
+- [ ] Add education indicators trends chart
+
+### UAE Page Enhancements
+- [ ] Add funding trends chart (2015-2025)
+- [ ] Add projects by sector chart
+- [ ] Add geographic distribution map
+- [ ] Add beneficiaries trends chart
+
+## REMAINING UN AGENCY PAGES
+
+- [ ] Build WHO page with wide research
+- [ ] Build UNHCR page with wide research
+- [ ] Build UNFPA page with wide research
+- [ ] Build IOM page with wide research
+- [ ] Build UNDP page with wide research
+- [ ] Build FAO page with wide research
+- [ ] Add all agencies to comparison tool
+
+
+## COMPREHENSIVE 2015 INTEGRATION ACROSS ENTIRE PLATFORM
+
+### Phase 1: Gather 2015 Bank/MFI/Money Exchanger Data
+- [ ] Wide research: All 15 commercial banks 2015 audit reports and operations
+- [ ] Wide research: All Islamic banks 2015 operations
+- [ ] Wide research: All MFIs 2015 operations (Al-Amal, Kuraimi, Azal, etc.)
+- [ ] Wide research: Money exchange companies 2015 operations
+- [ ] Wide research: Commercial companies 2015 operations
+
+### Phase 2: Update All Bank Pages with 2015 Data
+- [ ] Update CBY Aden page with 2015 data
+- [ ] Update CBY Sana'a page with 2015 data
+- [ ] Update CAC Bank page with 2015 data
+- [ ] Update Yemen Kuwait Bank page with 2015 data
+- [ ] Update National Bank of Yemen page with 2015 data
+- [ ] Update Yemen Commercial Bank page with 2015 data
+- [ ] Update International Bank of Yemen page with 2015 data
+- [ ] Update Tadhamon International Islamic Bank page with 2015 data
+- [ ] Update Yemen Islamic Bank page with 2015 data
+- [ ] Update Saba Islamic Bank page with 2015 data
+- [ ] Update Al Kuraimi Islamic Microfinance Bank page with 2015 data
+- [ ] Update Cooperative & Agricultural Credit Bank page with 2015 data
+- [ ] Update Yemen Bank for Reconstruction and Development page with 2015 data
+- [ ] Update All other banks with 2015 data
+
+### Phase 3: Update MFI and Money Exchanger Pages
+- [ ] Update Al-Amal Microfinance Bank page with 2015 data
+- [ ] Update Kuraimi Islamic Microfinance page with 2015 data
+- [ ] Update Azal Islamic Microfinance page with 2015 data
+- [ ] Create/update money exchange companies overview page with 2015 data
+- [ ] Log all 551 money exchangers and 38 licensed companies
+
+### Phase 4: Update All Donor/Stakeholder Pages with 2015 Data
+- [ ] Update WFP page with detailed 2015 operations (8.9M beneficiaries, $359.7M funding)
+- [ ] Update UNICEF page with detailed 2015 operations ($137M funding, 10K child deaths)
+- [ ] Update UAE page with detailed 2015 aid ($132M, 31% of total aid)
+- [ ] Update Saudi Arabia page with detailed 2015 aid ($322M) and military operations
+- [ ] Update WHO page with 2015 operations ($36.8M funding, 5,604 deaths reported)
+- [ ] Update UNHCR page with 2015 operations (2.5M IDPs, 169K refugees)
+- [ ] Update UNDP page with 2015 operations (YNDCRTF $25.22M)
+- [ ] Update FAO page with 2015 operations (14.4M food insecure, $14.1M funding)
+- [ ] Update World Bank page with 2015 suspension (March 11, 2015)
+- [ ] Update IMF page with 2015 suspension (March 26, 2015, $552.9M ECF suspended)
+
+### Phase 5: Update All Dashboards with 2015 Indicators
+- [ ] Update Banking System Dashboard with 2015 data (YER 1.78T frozen assets, 23.3% NPL)
+- [ ] Update Aid Flows Dashboard with 2015 data ($1.76B total aid)
+- [ ] Update Timeline Explorer with 2015 events (conflict onset March 26, CBY crisis, etc.)
+- [ ] Update Economic Indicators Dashboard with 2015 data (-36.1% GDP, 22% inflation, 215 YER/USD)
+- [ ] Update all charts with 2015 data points
+
+### Phase 6: Update Sitemap and Navigation
+- [ ] Update sitemap page with all current pages
+- [ ] Update Header navigation menus (English + Arabic)
+- [ ] Update Footer links
+- [ ] Verify all links work correctly
+
+### Phase 7: Browser Testing
+- [ ] Test all bank pages show 2015 data correctly
+- [ ] Test all stakeholder pages show 2015 data correctly
+- [ ] Test all dashboards reflect 2015 indicators
+- [ ] Test navigation menus (desktop + mobile)
+- [ ] Test bilingual functionality
+
+### Phase 8: Deploy and Push
+- [ ] Save checkpoint
+- [ ] Push all changes to GitHub
+- [ ] Verify deployment
+- [ ] Update README with 2015 integration details
+
+
+## 🔬 TRANSPARENCY & ACCOUNTABILITY FRAMEWORK - REVOLUTIONARY
+
+### Source Confidence Scoring System
+- [ ] Design confidence scoring dimensions (timeliness, transparency, methodology, independence, consistency)
+- [ ] Create database schema for source confidence scores
+- [ ] Build ConfidenceScore component with color bar visualization
+- [ ] Implement scoring algorithm for each source type
+- [ ] Add confidence scores to all indicators and time series
+- [ ] Display confidence bars next to every chart and number
+
+### Bias Profile System
+- [ ] Create database schema for source bias profiles
+- [ ] Research and document bias profiles for all major sources:
+  * World Bank (multilateral lender bias)
+  * IMF (fiscal orthodoxy bias)
+  * Sana'a Center (advocacy think tank)
+  * Government sources (official narrative)
+  * De-facto authorities (alternative narrative)
+  * UN agencies (humanitarian focus)
+  * Media sources (sensationalism risk)
+- [ ] Build BiasProfile component showing source incentives
+- [ ] Integrate bias warnings into all data displays
+- [ ] Never dismiss sources, always contextualize
+
+### Data Conflict Detection & Resolution
+- [ ] Build conflict detection algorithm for indicator disagreements
+- [ ] Create DataConflictPanel component
+- [ ] Show all conflicting values with sources
+- [ ] Explain methodological differences
+- [ ] Display primary vs alternative series resolution
+- [ ] Add "show alternative series" toggle
+- [ ] Update all calculations when series toggled
+
+### Dataset & Narrative Revision Log
+- [ ] Create database schema for revision history
+- [ ] Track every indicator change with timestamp, reason, source
+- [ ] Build RevisionLog component per indicator
+- [ ] Create year-level change log tabs
+- [ ] Show "last updated" timestamps everywhere
+- [ ] Make platform feel like living research project
+
+### Actor Impact Ledger (Accountability Module)
+- [ ] Create database schema for actor actions and impacts
+- [ ] Build timeline of actions for each major actor:
+  * CBY Aden, CBY Sana'a
+  * Houthis, IRG, STC
+  * Saudi Arabia, UAE, US
+  * World Bank, IMF
+  * UN agencies (WFP, UNICEF, WHO, etc.)
+  * Major banks and MFIs
+  * Commercial conglomerates
+- [ ] Link actions to events in database
+- [ ] Calculate "before vs after" impact metrics
+- [ ] Classify impact direction (stabilizing/destabilizing/redistributive/extractive)
+- [ ] Determine time horizon (short-term shock vs long-term structural)
+- [ ] Build net impact dashboard:
+  * Macro-stability impact
+  * Distributional impact (poor vs rich)
+  * Institutional impact
+- [ ] Always back with references and data series
+- [ ] Create ActorImpactLedger component
+- [ ] Integrate into all stakeholder pages
+
+### Integration Across Platform
+- [ ] Update all charts with confidence scores
+- [ ] Add bias profiles to all source citations
+- [ ] Enable conflict detection on all indicators
+- [ ] Show revision logs on all data pages
+- [ ] Display actor impact ledgers on stakeholder pages
+- [ ] Test entire transparency framework
+- [ ] Deploy and document
+
+## COMPREHENSIVE 2015 INTEGRATION
+
+### Phase 1: Database Architecture ✅ COMPLETE
+- [x] Create year-by-year database schema (5 tables)
+- [x] Seed 2015 data (13 records: macro, banks, donors, conflict, remittances)
+- [x] Create tRPC API procedures for fetching yearly data
+- [x] Build Year Selector component
+
+### Phase 2: Integrate 2015 Data Across Platform
+- [ ] Update WFP page with 2015 specific data
+- [ ] Update UNICEF page with 2015 specific data
+- [ ] Update UAE page with 2015 specific data
+- [ ] Update all bank pages with 2015 audit reports
+- [ ] Update all MFI pages with 2015 operations
+- [ ] Update money exchangers with 2015 data
+- [ ] Update Banking System Dashboard with 2015 indicators
+- [ ] Update Aid Flows Dashboard with 2015 donor data
+- [ ] Update Timeline Explorer with 2015 events
+- [ ] Update all economic indicator charts with 2015 data points
+
+### Phase 3: Add Transparency Features to 2015 Data
+- [ ] Add confidence scores to all 2015 indicators
+- [ ] Add bias profiles to all 2015 sources
+- [ ] Detect and resolve conflicts in 2015 data
+- [ ] Create revision log for 2015 data
+- [ ] Build actor impact ledger for 2015 actions
+
+### Phase 4: Test and Deploy 2015 Integration
+- [ ] Browser test all pages with 2015 data
+- [ ] Verify all dashboards show 2015 correctly
+- [ ] Test Year Selector component
+- [ ] Test confidence scores display
+- [ ] Test bias profiles display
+- [ ] Save checkpoint
+- [ ] Push to GitHub
