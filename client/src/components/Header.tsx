@@ -61,6 +61,10 @@ export default function Header() {
       allDonors: 'جميع المانحين',
       bilateralDonors: 'المانحون الثنائيون',
       // Data & Analysis submenu
+      dashboardsHub: 'مركز لوحات المعلومات',
+      bankingSystemDashboard: 'لوحة النظام المصرفي',
+      aidFlowsDashboard: 'لوحة تدفقات المساعدات',
+      timelineExplorer: 'مستكشف الجدول الزمني',
       compass: 'لوحة البوصلة',
       whatIfSimulator: 'محاكي ماذا لو',
       yearExplorer: 'مستكشف السنوات',
@@ -132,6 +136,10 @@ export default function Header() {
       allDonors: 'All Donors',
       bilateralDonors: 'Bilateral Donors',
       // Data & Analysis submenu
+      dashboardsHub: 'Dashboards Hub',
+      bankingSystemDashboard: 'Banking System Dashboard',
+      aidFlowsDashboard: 'Aid Flows Dashboard',
+      timelineExplorer: 'Timeline Explorer',
       compass: 'Compass Dashboard',
       whatIfSimulator: 'What-If Simulator',
       yearExplorer: 'Year Explorer',
@@ -252,10 +260,18 @@ export default function Header() {
               </DropdownMenuTrigger>
               <DropdownMenuContent align={isArabic ? "end" : "start"} className="w-56">
                 <DropdownMenuLabel className="text-xs text-muted-foreground uppercase">
+                  {isArabic ? 'لوحات المعلومات المتقدمة' : 'Advanced Dashboards'}
+                </DropdownMenuLabel>
+                <Link href="/dashboards-hub"><DropdownMenuItem className="cursor-pointer font-bold text-blue-600">{t.dashboardsHub}</DropdownMenuItem></Link>
+                <Link href="/banking-system-dashboard"><DropdownMenuItem className="cursor-pointer font-semibold text-primary">{t.bankingSystemDashboard}</DropdownMenuItem></Link>
+                <Link href="/aid-flows-dashboard"><DropdownMenuItem className="cursor-pointer font-semibold text-primary">{t.aidFlowsDashboard}</DropdownMenuItem></Link>
+                <Link href="/timeline-explorer"><DropdownMenuItem className="cursor-pointer font-semibold text-primary">{t.timelineExplorer}</DropdownMenuItem></Link>
+                <DropdownMenuSeparator />
+                <DropdownMenuLabel className="text-xs text-muted-foreground uppercase">
                   {isArabic ? 'أدوات تفاعلية' : 'Interactive Tools'}
                 </DropdownMenuLabel>
-                <Link href="/what-if-simulator"><DropdownMenuItem className="cursor-pointer font-semibold text-primary">{t.whatIfSimulator}</DropdownMenuItem></Link>
-                <Link href="/year-explorer"><DropdownMenuItem className="cursor-pointer font-semibold text-primary">{t.yearExplorer}</DropdownMenuItem></Link>
+                <Link href="/what-if-simulator"><DropdownMenuItem className="cursor-pointer">{t.whatIfSimulator}</DropdownMenuItem></Link>
+                <Link href="/year-explorer"><DropdownMenuItem className="cursor-pointer">{t.yearExplorer}</DropdownMenuItem></Link>
                 <DropdownMenuSeparator />
                 <Link href="/compass"><DropdownMenuItem className="cursor-pointer">{t.compass}</DropdownMenuItem></Link>
                 <Link href="/key-stats"><DropdownMenuItem className="cursor-pointer">{t.keyStats}</DropdownMenuItem></Link>

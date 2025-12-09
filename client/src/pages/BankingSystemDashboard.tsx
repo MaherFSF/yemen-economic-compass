@@ -1,6 +1,8 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import BankingSystemChart from '@/components/charts/BankingSystemChart';
-import { Building2, TrendingDown, TrendingUp, AlertTriangle } from 'lucide-react';
+import { Building2, TrendingDown, TrendingUp, AlertTriangle, Calendar, HandHeart, ArrowRight } from 'lucide-react';
+import { Link } from 'wouter';
+import { Button } from '@/components/ui/button';
 
 export default function BankingSystemDashboard() {
   const { language } = useLanguage();
@@ -19,6 +21,31 @@ export default function BankingSystemDashboard() {
               ? 'تحليل شامل للنظام المصرفي الموازي في اليمن (2010-2025)'
               : 'Comprehensive analysis of Yemen\'s parallel banking system (2010-2025)'}
           </p>
+          
+          {/* Cross-linking to other dashboards */}
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link href="/aid-flows-dashboard">
+              <Button variant="secondary" size="sm" className="bg-white/20 hover:bg-white/30 text-white border-white/30">
+                <HandHeart className={`h-4 w-4 ${isArabic ? 'ml-2' : 'mr-2'}`} />
+                {isArabic ? 'لوحة تدفقات المساعدات' : 'Aid Flows'}
+                <ArrowRight className={`h-3 w-3 ${isArabic ? 'mr-2' : 'ml-2'}`} />
+              </Button>
+            </Link>
+            <Link href="/timeline-explorer">
+              <Button variant="secondary" size="sm" className="bg-white/20 hover:bg-white/30 text-white border-white/30">
+                <Calendar className={`h-4 w-4 ${isArabic ? 'ml-2' : 'mr-2'}`} />
+                {isArabic ? 'مستكشف الجدول الزمني' : 'Timeline Explorer'}
+                <ArrowRight className={`h-3 w-3 ${isArabic ? 'mr-2' : 'ml-2'}`} />
+              </Button>
+            </Link>
+            <Link href="/dashboards-hub">
+              <Button variant="secondary" size="sm" className="bg-white/20 hover:bg-white/30 text-white border-white/30">
+                <TrendingUp className={`h-4 w-4 ${isArabic ? 'ml-2' : 'mr-2'}`} />
+                {isArabic ? 'جميع لوحات المعلومات' : 'All Dashboards'}
+                <ArrowRight className={`h-3 w-3 ${isArabic ? 'mr-2' : 'ml-2'}`} />
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
 

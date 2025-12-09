@@ -36,12 +36,35 @@ The **Yemen Economic Compass** is a world-class economic intelligence platform p
 - Major events timeline with context
 - Historical narratives and key facts
 
+**3. Banking System Dashboard**
+- Dual-axis chart showing parallel banking evolution (Aden vs Sana'a)
+- 96 data points tracking assets and operational banks (2010-2025)
+- Event annotations (CBY split 2016, currency ban 2019)
+- Comprehensive analysis of both banking systems
+- Interactive zoom/pan and CSV/PNG export
+
+**4. Aid Flows Dashboard**
+- Stacked area chart tracking $67.3B in aid (2010-2025)
+- 7 major donors: UN Agencies ($30.2B), Saudi Arabia ($12.2B), USA ($11.7B)
+- 112 data points with donor breakdown
+- Funding gap analysis and projections
+- Donor profiles with detailed program information
+
+**5. Interactive Timeline Explorer**
+- 318 searchable events from database
+- Color-coded categories (war, economic, policy, humanitarian, political)
+- Advanced search and filter functionality
+- Year navigation (2010-2025)
+- Event detail modals with full descriptions and sources
+
 ### 📊 Comprehensive Database
 
 - **16 banks** documented (CAC Bank, Tadhamon, Yemen Kuwait Bank, etc.)
 - **91 stakeholders** profiled (World Bank, IMF, UN agencies, regional actors)
 - **13 economic indicators** tracked (GDP, inflation, exchange rates, reserves)
-- **12 major timeline events** (Arab Spring, CBY split, COVID-19, etc.)
+- **318 timeline events** (2010-2025) with full-text search and filtering
+- **526+ data points** across advanced dashboards
+- **$67.3B in aid flows** tracked from 7 major donors
 
 ### 🌐 Bilingual Excellence
 
@@ -60,8 +83,11 @@ The **Yemen Economic Compass** is a world-class economic intelligence platform p
 
 ### 🔍 Advanced Features
 
+- **Advanced Dashboards Hub**: Centralized access to three interactive dashboards
+- **Cross-Dashboard Linking**: Navigate seamlessly between related visualizations
+- **Interactive Charts**: Chart.js with zoom, pan, and event annotations
 - **Global Search**: Command palette (⌘K/Ctrl+K) with intelligent relevance scoring
-- **Data Export**: CSV, JSON, and Print formats
+- **Data Export**: CSV, JSON, PNG, and Print formats
 - **File Storage**: S3 integration with drag-and-drop upload
 - **User Authentication**: Manus OAuth integration
 
@@ -73,6 +99,7 @@ The **Yemen Economic Compass** is a world-class economic intelligence platform p
 - **React 19** - Modern UI framework
 - **TypeScript 5.3** - Type-safe development
 - **Tailwind CSS 4** - Utility-first styling
+- **Chart.js** - Interactive data visualizations
 - **Vite** - Lightning-fast build tool
 - **Wouter** - Lightweight routing
 - **shadcn/ui** - High-quality UI components
@@ -187,6 +214,12 @@ yemen-economic-compass/
 - `/what-if-simulator` - Interactive scenario modeling
 - `/year-explorer` - Historical data navigation
 - `/banks-database` - Comprehensive bank profiles
+
+### Advanced Dashboards
+- `/dashboards-hub` - Centralized dashboard access portal
+- `/banking-system-dashboard` - Parallel banking system analysis
+- `/aid-flows-dashboard` - Humanitarian aid tracking ($67.3B)
+- `/timeline-explorer` - Interactive event exploration (318 events)
 
 ### Stakeholders
 - `/stakeholders/world-bank` - World Bank profile
@@ -359,19 +392,27 @@ Contributions are welcome! This platform is built as a public good for Yemen eco
 - ✅ Bilingual system
 - ✅ Modern design system
 
-### Phase 2: Content Expansion 🚧 (In Progress)
+### Phase 2: Advanced Dashboards ✅ (Complete)
+- ✅ Banking System Dashboard with dual-axis charts
+- ✅ Aid Flows Dashboard tracking $67.3B
+- ✅ Interactive Timeline Explorer (318 events)
+- ✅ Dashboards Hub with cross-linking
+- ✅ Chart.js integration with zoom/pan
+- ✅ Advanced search and filtering
+
+### Phase 3: Content Expansion 🚧 (In Progress)
 - 🚧 Literature Library (1,000+ reports)
 - 🚧 Sanctions Tracker (UN database)
 - 🚧 World Bank comprehensive page
 - 🚧 IMF comprehensive page
 - 🚧 Economic Glossary (500+ terms)
 
-### Phase 3: Advanced Features 📋 (Planned)
-- 📋 Advanced visualizations (network diagrams, flow charts)
-- 📋 Interactive timeline (scrollytelling)
+### Phase 4: Advanced Features 📋 (Planned)
+- 📋 Network diagrams (financial flows, stakeholder relationships)
 - 📋 Stakeholder Intelligence Hub
 - 📋 Policy Recommendations Dashboard
 - 📋 Scenario Forecasting Engine (2025-2030)
+- 📋 Real-time data integration
 
 ### Phase 4: Platform Enhancement 🔮 (Future)
 - 🔮 API for developers
@@ -419,14 +460,17 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## 📊 Platform Statistics
 
-- **47+ comprehensive pages**
-- **1,200+ data points** across all sectors
+- **50+ comprehensive pages** (including 4 advanced dashboards)
+- **1,700+ data points** across all sectors
 - **16 years** of historical coverage (2010-2025)
-- **2 languages** (Arabic, English)
-- **16 banks** documented
-- **91 stakeholders** profiled
-- **13 economic indicators** tracked
-- **12 major events** in timeline
+- **2 languages** (Arabic, English) with full bilingual parity
+- **16 banks** documented with detailed profiles
+- **91 stakeholders** profiled (international orgs, donors, local actors)
+- **13 economic indicators** tracked in real-time
+- **318 timeline events** with full-text search
+- **3 advanced interactive dashboards** (Banking, Aid Flows, Timeline)
+- **$67.3B in aid flows** tracked from 7 major donors
+- **526+ data points** in advanced visualizations
 
 ---
 

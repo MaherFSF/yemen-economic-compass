@@ -60,6 +60,7 @@ import Investment from "./pages/Investment";
 import ClimateFinance from "./pages/ClimateFinance";
 import Sitemap from "./pages/Sitemap";
 import BanksDatabase from "./pages/BanksDatabase";
+import DashboardsHub from "./pages/DashboardsHub";
 import BankingSystemDashboard from "./pages/BankingSystemDashboard";
 import AidFlowsDashboard from "./pages/AidFlowsDashboard";
 import TimelineExplorerPage from "./pages/TimelineExplorerPage";
@@ -153,6 +154,7 @@ function Router() {
       <Route path={"/climate-finance"} component={ClimateFinance} />
       <Route path={"/sitemap"} component={Sitemap} />
           <Route path="/banks-database" component={BanksDatabase} />
+          <Route path="/dashboards-hub" component={DashboardsHub} />
           <Route path="/banking-system-dashboard" component={BankingSystemDashboard} />
           <Route path="/aid-flows-dashboard" component={AidFlowsDashboard} />
           <Route path="/timeline-explorer" component={TimelineExplorerPage} />
