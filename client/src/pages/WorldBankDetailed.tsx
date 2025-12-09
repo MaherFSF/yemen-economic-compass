@@ -190,6 +190,15 @@ export default function WorldBankDetailed() {
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white py-16">
         <div className="container mx-auto px-4">
+          {/* World Bank Logo */}
+          <div className="mb-8 text-center">
+            <img 
+              src="/logos/world-bank.svg" 
+              alt="World Bank Logo" 
+              className="h-20 w-auto mx-auto filter brightness-0 invert opacity-90"
+            />
+          </div>
+          
           <div className="flex items-start gap-6">
             <div className="bg-white/10 backdrop-blur-sm p-4 rounded-2xl">
               <Building2 className="w-16 h-16" />

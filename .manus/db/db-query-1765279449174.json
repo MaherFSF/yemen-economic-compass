@@ -1,0 +1,9 @@
+{
+  "query": "INSERT INTO yearly_macro_indicators (year, gdpCurrentUsd, gdpGrowthRate, inflationRate, exchangeRateOfficial, exchangeRateParallel, population, foodInsecure) VALUES (2016, 27600, '-9.38', '21.30', '250', '315', 31200, 14400000);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute INSERT INTO yearly_macro_indicators (year, gdpCurrentUsd, gdpGrowthRate, inflationRate, exchangeRateOfficial, exchangeRateParallel, population, foodInsecure) VALUES (2016, 27600, '-9.38', '21.30', '250', '315', 31200, 14400000);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 885
+}

@@ -147,10 +147,10 @@ importers:
         version: 17.2.3
       drizzle-orm:
         specifier: ^0.44.5
-        version: 0.44.7(mysql2@3.15.3)(pg@8.16.3)
+        version: 0.44.7(mysql2@3.15.3)(pg@8.16.3)(postgres@3.4.7)
       drizzle-zod:
         specifier: ^0.8.3
-        version: 0.8.3(drizzle-orm@0.44.7(mysql2@3.15.3)(pg@8.16.3))(zod@4.1.12)
+        version: 0.8.3(drizzle-orm@0.44.7(mysql2@3.15.3)(pg@8.16.3)(postgres@3.4.7))(zod@4.1.12)
       echarts:
         specifier: ^6.0.0
         version: 6.0.0
@@ -190,6 +190,9 @@ importers:
       pg:
         specifier: ^8.16.3
         version: 8.16.3
+      postgres:
+        specifier: ^3.4.7
+        version: 3.4.7
       react:
         specifier: ^19.1.1
         version: 19.2.0
@@ -3894,6 +3897,10 @@ packages:
     resolution: {integrity: sha512-9ZhXKM/rw350N1ovuWHbGxnGh/SNJ4cnxHiM0rxE4VN41wsg8P8zWn9hv/buK00RP4WvlOyr/RBDiptyxVbkZQ==}
     engines: {node: '>=0.10.0'}
 
+  postgres@3.4.7:
+    resolution: {integrity: sha512-Jtc2612XINuBjIl/QTWsV5UvE8UHuNblcO3vVADSrKsrc6RqGX6lOW1cEo3CM2v0XG4Nat8nI+YM7/f26VxXLw==}
+    engines: {node: '>=12'}
+
   prettier@3.6.2:
     resolution: {integrity: sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==}
     engines: {node: '>=14'}
@@ -7455,14 +7462,15 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  drizzle-orm@0.44.7(mysql2@3.15.3)(pg@8.16.3):
+  drizzle-orm@0.44.7(mysql2@3.15.3)(pg@8.16.3)(postgres@3.4.7):
     optionalDependencies:
       mysql2: 3.15.3
       pg: 8.16.3
+      postgres: 3.4.7
 
-  drizzle-zod@0.8.3(drizzle-orm@0.44.7(mysql2@3.15.3)(pg@8.16.3))(zod@4.1.12):
+  drizzle-zod@0.8.3(drizzle-orm@0.44.7(mysql2@3.15.3)(pg@8.16.3)(postgres@3.4.7))(zod@4.1.12):
     dependencies:
-      drizzle-orm: 0.44.7(mysql2@3.15.3)(pg@8.16.3)
+      drizzle-orm: 0.44.7(mysql2@3.15.3)(pg@8.16.3)(postgres@3.4.7)
       zod: 4.1.12
 
   dunder-proto@1.0.1:
@@ -8699,6 +8707,8 @@ snapshots:
   postgres-interval@1.2.0:
     dependencies:
       xtend: 4.0.2
+
+  postgres@3.4.7: {}
 
   prettier@3.6.2: {}
 

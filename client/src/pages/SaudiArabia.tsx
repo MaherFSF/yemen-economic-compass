@@ -145,6 +145,15 @@ export default function SaudiArabia() {
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-green-900 via-green-800 to-emerald-900 text-white py-16">
         <div className="container mx-auto px-4">
+          {/* Saudi Arabia Emblem */}
+          <div className="mb-8 text-center">
+            <img 
+              src="/logos/saudi-arabia.svg" 
+              alt="Saudi Arabia Emblem" 
+              className="h-24 w-auto mx-auto filter brightness-0 invert opacity-90"
+            />
+          </div>
+          
           <div className="flex items-start gap-6">
             <div className="bg-white/10 backdrop-blur-sm p-4 rounded-2xl">
               <Building2 className="w-16 h-16" />

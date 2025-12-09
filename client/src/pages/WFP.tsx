@@ -12,6 +12,15 @@ export default function WFP() {
       <section className="relative py-20 bg-gradient-to-r from-blue-600 to-sky-600 text-white">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
+            {/* WFP Logo */}
+            <div className="mb-8">
+              <img 
+                src="/logos/wfp.svg" 
+                alt="WFP Logo" 
+                className="h-24 w-auto mx-auto filter brightness-0 invert opacity-90"
+              />
+            </div>
+            
             <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6">
               <Globe className="h-5 w-5 text-blue-200" />
               <span className="text-sm font-semibold">

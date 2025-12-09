@@ -1221,3 +1221,47 @@ All parallel research complete. Database expansion ready. Homepage fixed. Expert
 - [ ] Create before/after comparison
 - [ ] Push to GitHub
 - [ ] Deliver to user with screenshots
+
+
+---
+
+# COMPREHENSIVE NEXT STEPS - December 9, 2025
+
+## Phase 1: Logo Integration
+- [x] Integrate World Bank logo into /world-bank page
+- [x] Integrate IMF logo into /imf page
+- [x] Integrate WFP logo into /wfp page
+- [x] Integrate UNICEF logo into /unicef page
+- [x] Integrate Saudi Arabia emblem into /saudi-arabia page
+
+## Phase 2: Transparency Data 2016-2025
+- [ ] Research and compile 2016 Yemen data (GDP, inflation, aid, events)
+- [ ] Research and compile 2017 Yemen data
+- [ ] Research and compile 2018 Yemen data
+- [ ] Research and compile 2019 Yemen data
+- [ ] Research and compile 2020 Yemen data (COVID impact)
+- [ ] Research and compile 2021 Yemen data
+- [ ] Research and compile 2022 Yemen data
+- [ ] Research and compile 2023 Yemen data
+- [ ] Research and compile 2024 Yemen data
+- [ ] Research and compile 2025 Yemen data (current)
+- [ ] Create seed scripts for all years 2016-2025
+- [ ] Execute seed scripts to populate database
+- [ ] Verify data in database tables
+
+## Phase 3: Homepage Redesign
+- [x] Design new hero section with interactive data visualization
+- [x] Add featured insights section
+- [x] Add quick stats dashboard
+- [x] Add recent events timeline
+- [x] Add stakeholder spotlight section
+- [x] Add call-to-action sections
+- [x] Ensure mobile responsiveness
+- [x] Test all interactive elements
+
+## Phase 4: Testing & Delivery
+- [x] Test logo integration on all 5 pages
+- [x] Test transparency data display
+- [x] Test homepage interactions
+- [ ] Save final checkpoint
+- [ ] Deliver to user
