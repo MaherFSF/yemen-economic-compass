@@ -1108,3 +1108,116 @@ All parallel research complete. Database expansion ready. Homepage fixed. Expert
 - [ ] Test bias profiles display
 - [ ] Save checkpoint
 - [ ] Push to GitHub
+
+
+---
+
+# COMPREHENSIVE SITE TRANSFORMATION - USER REQUEST (Dec 9, 2025)
+
+## Phase 1: Wide Research & Asset Collection
+- [ ] Research and collect official logos for all entities (World Bank, IMF, WFP, UNICEF, WHO, FAO, UNDP, UNHCR, IOM, UN OCHA, Saudi Arabia, UAE, USA, UK, EU, etc.)
+- [ ] Research 2016 comprehensive data (events, indicators, aid, conflicts)
+- [ ] Find professional images for each section/page
+- [ ] Research official color themes for each entity
+
+## Phase 2: Site Audit & Sitemap
+- [ ] Audit ALL pages built since start of session
+- [ ] Create comprehensive list of all routes in App.tsx
+- [ ] Document all stakeholder pages
+- [ ] Document all dashboard pages
+- [ ] Document all data visualization pages
+- [ ] Document all resource pages
+- [ ] Create accurate sitemap structure
+
+## Phase 3: Logo & Image Integration
+- [ ] Download all entity logos
+- [ ] Organize logos in public folder with proper naming
+- [ ] Add logos to stakeholder pages (World Bank, IMF, Saudi, UAE, WFP, UNICEF, WHO, FAO, UNDP, UNHCR, IOM, UN OCHA)
+- [ ] Add logos to government pages (Aden, Sanaa)
+- [ ] Add country flags where appropriate
+- [ ] Add professional images to all pages
+
+## Phase 4: Charts Language Fix
+- [ ] Convert all charts in ComprehensiveCharts.tsx to English
+- [ ] Convert all charts in AnalyticsDashboard to English
+- [ ] Convert all charts in BankingSystemDashboard to English
+- [ ] Convert all charts in AidFlowsDashboard to English
+- [ ] Convert all charts in TimelineExplorerPage to English
+- [ ] Verify all chart labels are readable in English
+
+## Phase 5: Color Themes & Branding
+- [ ] World Bank: Blue theme (#0071BC)
+- [ ] IMF: Navy blue theme (#002D72)
+- [ ] WFP: Blue theme (#0A6EB4)
+- [ ] UNICEF: Cyan theme (#00AEEF)
+- [ ] WHO: Blue theme (#0093D5)
+- [ ] FAO: Blue/green theme
+- [ ] UNDP: Blue theme (#0468B1)
+- [ ] Saudi Arabia: Green theme (#165E3F)
+- [ ] UAE: Red/green/black theme
+- [ ] UN OCHA: Blue theme (#007CE0)
+- [ ] Apply consistent color themes to all pages
+
+## Phase 6: 2016 Data Completion
+- [ ] Research 2016 major events
+- [ ] Research 2016 economic indicators (GDP, inflation, exchange rate)
+- [ ] Research 2016 humanitarian data (food insecurity, IDPs)
+- [ ] Research 2016 aid flows
+- [ ] Research 2016 conflict data
+- [ ] Create 2016 seed data script
+- [ ] Execute 2016 seed script
+- [ ] Integrate 2016 data into transparency framework
+
+## Phase 7: Homepage Redesign
+- [ ] Design completely new hero section
+- [ ] Add interactive data visualization
+- [ ] Add featured insights section
+- [ ] Add latest updates section
+- [ ] Add stakeholder spotlight section
+- [ ] Add professional images
+- [ ] Add clear navigation to all sections
+- [ ] Make homepage informative and engaging
+- [ ] Ensure professional design
+
+## Phase 8: Navigation Menu Fix
+- [x] Update Header.tsx navigation menus
+- [x] Ensure "أصحاب المصلحة" menu includes ALL stakeholder pages
+- [x] Ensure "البيانات والتحليل" menu includes ALL data pages
+- [x] Ensure "الموارد" menu includes ALL resource pages
+- [x] Ensure "الصفحات" menu includes ALL other pages
+- [ ] Match navigation structure to sitemap exactly
+- [ ] Test all menu items link correctly
+
+## Phase 9: Sitemap Page Update
+- [x] Update Sitemap.tsx to reflect ALL pages
+- [x] Organize by categories (Home, Stakeholders, Data & Analysis, Resources, Pages)
+- [x] Include page descriptions
+- [x] Include page counts
+- [ ] Ensure all links work
+- [ ] Make sitemap visually appealing
+
+## Phase 10: Consistency & Polish
+- [ ] Ensure consistent header/footer across all pages
+- [ ] Ensure consistent color themes
+- [ ] Ensure consistent typography
+- [ ] Ensure consistent spacing
+- [ ] Ensure all images load properly
+- [ ] Ensure all logos display correctly
+- [ ] Ensure bilingual support works everywhere
+
+## Phase 11: Browser Testing
+- [ ] Test homepage redesign
+- [ ] Test all stakeholder pages with logos
+- [ ] Test all charts in English
+- [ ] Test navigation menus
+- [ ] Test sitemap page
+- [ ] Test all links work
+- [ ] Test responsive design
+- [ ] Test on mobile
+
+## Phase 12: Final Delivery
+- [ ] Save comprehensive checkpoint
+- [ ] Document all changes
+- [ ] Create before/after comparison
+- [ ] Push to GitHub
+- [ ] Deliver to user with screenshots

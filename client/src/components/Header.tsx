@@ -96,6 +96,12 @@ export default function Header() {
       indicators: 'المؤشرات الإحصائية',
       charts: 'الرسوم البيانية',
       stakeholdersPage: 'مركز أصحاب المصلحة',
+      youthEconomy: 'اقتصاد الشباب',
+      investment: 'الاستثمار',
+      climateFinance: 'تمويل المناخ',
+      sitemap: 'خريطة الموقع',
+      documents: 'مكتبة الوثائق',
+      comprehensiveCharts: 'الرسوم البيانية الشاملة',
     },
     en: {
       home: 'Home',
@@ -171,6 +177,12 @@ export default function Header() {
       indicators: 'Statistical Indicators',
       charts: 'Charts',
       stakeholdersPage: 'Stakeholder Hub',
+      youthEconomy: 'Youth Economy',
+      investment: 'Investment',
+      climateFinance: 'Climate Finance',
+      sitemap: 'Sitemap',
+      documents: 'Document Library',
+      comprehensiveCharts: 'Comprehensive Charts',
     }
   };
 
@@ -301,6 +313,7 @@ export default function Header() {
                 <Link href="/research"><DropdownMenuItem className="cursor-pointer">{t.research}</DropdownMenuItem></Link>
                 <Link href="/news"><DropdownMenuItem className="cursor-pointer">{t.news}</DropdownMenuItem></Link>
                 <Link href="/files"><DropdownMenuItem className="cursor-pointer">{t.files}</DropdownMenuItem></Link>
+                <Link href="/documents"><DropdownMenuItem className="cursor-pointer">{t.documents}</DropdownMenuItem></Link>
               </DropdownMenuContent>
             </DropdownMenu>
 
@@ -345,6 +358,20 @@ export default function Header() {
                 <Link href="/policy"><DropdownMenuItem className="cursor-pointer">{t.policy}</DropdownMenuItem></Link>
                 <Link href="/indicators"><DropdownMenuItem className="cursor-pointer">{t.indicators}</DropdownMenuItem></Link>
                 <Link href="/charts"><DropdownMenuItem className="cursor-pointer">{t.charts}</DropdownMenuItem></Link>
+                <Link href="/comprehensive-charts"><DropdownMenuItem className="cursor-pointer">{t.comprehensiveCharts}</DropdownMenuItem></Link>
+                <DropdownMenuSeparator />
+                <DropdownMenuLabel className="text-xs text-muted-foreground uppercase">
+                  {isArabic ? 'قطاعات' : 'Sectors'}
+                </DropdownMenuLabel>
+                <Link href="/youth-economy"><DropdownMenuItem className="cursor-pointer">{t.youthEconomy}</DropdownMenuItem></Link>
+                <Link href="/investment"><DropdownMenuItem className="cursor-pointer">{t.investment}</DropdownMenuItem></Link>
+                <Link href="/climate-finance"><DropdownMenuItem className="cursor-pointer">{t.climateFinance}</DropdownMenuItem></Link>
+                <DropdownMenuSeparator />
+                <DropdownMenuLabel className="text-xs text-muted-foreground uppercase">
+                  {isArabic ? 'أخرى' : 'Other'}
+                </DropdownMenuLabel>
+                <Link href="/documents"><DropdownMenuItem className="cursor-pointer">{t.documents}</DropdownMenuItem></Link>
+                <Link href="/sitemap"><DropdownMenuItem className="cursor-pointer">{t.sitemap}</DropdownMenuItem></Link>
               </DropdownMenuContent>
             </DropdownMenu>
 
