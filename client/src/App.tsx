@@ -58,7 +58,8 @@ import WhatIfSimulator from "./pages/WhatIfSimulator";
 import YouthEconomy from "./pages/YouthEconomy";
 import Investment from "./pages/Investment";
 import ClimateFinance from "./pages/ClimateFinance";
-import Sitemap from "./pages/Sitemap";
+import SiteMap from "./pages/SiteMap";
+import HomeNew from "./pages/HomeNew";
 import BanksDatabase from "./pages/BanksDatabase";
 import BankingSector from "./pages/BankingSector";
 import BankDetail from "./pages/BankDetail";
@@ -83,12 +84,14 @@ import GovernmentSanaa from "./pages/GovernmentSanaa";
 import Donors from "./pages/Donors";
 import BilateralDonors from "./pages/BilateralDonors";
 import DocumentLibrary from "./pages/DocumentLibrary";
+import AboutPlatform from "./pages/AboutPlatform";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
+      <Route path={"/"} component={HomeNew} />
+      <Route path={"/home-old"} component={Home} />
       <Route path={"/overview"} component={Overview} />
       <Route path={"/charts"} component={Charts} />
       <Route path={"/story"} component={StoryPage} />
@@ -98,6 +101,8 @@ function Router() {
       <Route path="/analytics" component={AnalyticsDashboard} />
       <Route path={"/dashboard"} component={Timeline} />
       <Route path={"/about"} component={About} />
+      <Route path={"/about-platform"} component={AboutPlatform} />
+      <Route path={"/about-causeway"} component={AboutCauseWay} />
       <Route path={"/economic-crisis"} component={EconomicCrisis} />
       <Route path={"/currency-war"} component={CurrencyWar} />
       <Route path={"/events"} component={EventsTimeline} />
@@ -157,7 +162,7 @@ function Router() {
       <Route path={"/youth-economy"} component={YouthEconomy} />
       <Route path={"/investment"} component={Investment} />
       <Route path={"/climate-finance"} component={ClimateFinance} />
-      <Route path={"/sitemap"} component={Sitemap} />
+      <Route path={"/sitemap"} component={SiteMap} />
           <Route path="/banks-database" component={BanksDatabase} />
           <Route path="/dashboards-hub" component={DashboardsHub} />
           <Route path="/banking-system-dashboard" component={BankingSystemDashboard} />

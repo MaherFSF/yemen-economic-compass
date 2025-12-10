@@ -93,6 +93,14 @@
   --sidebar-accent-foreground: oklch(0.25 0.02 35);
   --sidebar-border: oklch(0.90 0.005 40);
   --sidebar-ring: oklch(0.55 0.15 35);
+  
+  /* CauseWay Observatory Theme Colors */
+  --observatory-teal: oklch(0.55 0.12 190); /* Teal for observatory theme */
+  --observatory-dark-teal: oklch(0.35 0.10 190); /* Dark teal */
+  --observatory-green: oklch(0.60 0.12 150); /* Green accent */
+  --observatory-dark-green: oklch(0.40 0.10 150); /* Dark green */
+  --observatory-light-teal: oklch(0.85 0.05 190); /* Light teal background */
+  --observatory-gold: oklch(0.65 0.15 70); /* Gold accent */
 }
 
 .dark {
@@ -234,5 +242,32 @@
       padding-right: 2rem;
       max-width: 1280px; /* Standard content width */
     }
+  }
+  
+  /* Observatory-specific utilities */
+  .observatory-gradient {
+    background: linear-gradient(135deg, var(--observatory-teal) 0%, var(--observatory-green) 100%);
+  }
+
+  .observatory-gradient-dark {
+    background: linear-gradient(135deg, var(--observatory-dark-teal) 0%, var(--observatory-dark-green) 100%);
+  }
+
+  .observatory-text-gradient {
+    background: linear-gradient(135deg, var(--observatory-teal) 0%, var(--observatory-green) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-effect {
+    background: oklch(1 0 0 / 80%);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+  }
+
+  .dark .glass-effect {
+    background: var(--card) / 80%;
+    backdrop-filter: blur(12px);
   }
 }

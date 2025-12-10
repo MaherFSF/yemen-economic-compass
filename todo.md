@@ -129,3 +129,52 @@
 **Last Updated**: December 9, 2025  
 **Status**: ✅ Massive parallel research complete, ready for checkpoint and publication  
 **Next Action**: Create final checkpoint and push to GitHub
+
+
+---
+
+## 🎨 NEW DESIGN REQUIREMENTS (Dec 10, 2025)
+
+### CauseWay Observatory Branding:
+- [x] Implement CauseWay Financial & Economic Observatory design theme
+- [x] Choose best logo from uploaded options (IMG_9942.png recommended)
+- [x] Apply teal/green observatory color scheme
+- [ ] Ensure consistent branding across all pages
+
+### Amazing Interactive Site Map (PRIORITY):
+- [x] Create comprehensive visual site map on homepage
+- [x] Design unique observatory-style layout (inspired by Economic Compass example)
+- [x] Implement category-based organization with color coding
+- [x] Add statistics counters (total pages, datasets, documents)
+- [x] Create interactive category cards with icons
+- [x] Include all sections: Main Pages, International Organizations, Governments & Donors, Advanced Dashboards, Interactive Tools, Charts & Indicators, Banking Sector, Timeline & Events, Economic Analysis, Sectors, Resources & Research, Stakeholder Hub
+
+### Data Visualizations Enhancement:
+- [ ] Integrate all uploaded chart images into relevant pages
+- [ ] Create interactive version of Banking System Dashboard (a53bbccb-fa33-4996-907e-cffa53899216.jpeg)
+- [ ] Implement GDP Growth and Real Income chart (IMG_9192.png)
+- [ ] Implement Exchange Rate Divergence chart (IMG_9194(5).png)
+- [ ] Implement Hierarchical Financial Power structure (IMG_9190(5).png)
+- [ ] Implement Two Economies comparison (IMG_9211.png)
+- [ ] Implement CBY split diagram (IMG_9212(5).png)
+- [ ] Implement Financial Circulation structure (IMG_9213(5).png)
+- [ ] Implement Decade of Decline infographic (IMG_9210.png)
+- [ ] Implement Financial Flows Network (IMG_9191(6).png)
+- [ ] Implement Aid Composition chart (IMG_9199(6).png)
+- [ ] Add methodology and data sources for each visualization
+
+### Page Structure Expansion:
+- [ ] Ensure all pages from site map reference are created
+- [ ] Add missing pages: What-if Simulator, Year Explorer, Financial Calculators
+- [ ] Create comprehensive Banking Sector section
+- [ ] Build Economic Analysis section with Currency War, Ongoing War, Policies
+- [ ] Implement Sectors section (Youth Economy, Investment)
+- [ ] Add File Manager functionality
+
+### Technical Improvements:
+- [x] Update App.tsx with all new routes
+- [ ] Implement proper navigation structure
+- [ ] Add breadcrumbs for deep navigation
+- [ ] Ensure mobile responsiveness for site map
+- [ ] Add smooth scrolling and animations
+- [ ] Optimize all uploaded images
