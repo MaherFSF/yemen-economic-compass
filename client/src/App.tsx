@@ -27,6 +27,7 @@ import CBYSanaaTracker from "./pages/CBYSanaaTracker";
 import CommercialBanksHub from "./pages/CommercialBanksHub";
 import FinancialLiterature from "./pages/FinancialLiterature";
 import FinancialCalculators from "./pages/FinancialCalculators";
+import FinancialCalculatorsEnhanced from "./pages/FinancialCalculatorsEnhanced";
 import DataVisualization from "./pages/DataVisualization";
 import ComprehensiveCharts from "./pages/ComprehensiveCharts";
 import StakeholderHub from "./pages/StakeholderHub";
@@ -54,7 +55,9 @@ import IMFPage from "./pages/stakeholders/IMFPage";
 import SaudiArabiaPageNew from "./pages/stakeholders/SaudiArabiaPage";
 import BankingDashboard from "./pages/BankingDashboard";
 import YearExplorer from "./pages/YearExplorer";
+import YearExplorerEnhanced from "./pages/YearExplorerEnhanced";
 import WhatIfSimulator from "./pages/WhatIfSimulator";
+import WhatIfSimulatorEnhanced from "./pages/WhatIfSimulatorEnhanced";
 import YouthEconomy from "./pages/YouthEconomy";
 import Investment from "./pages/Investment";
 import ClimateFinance from "./pages/ClimateFinance";
@@ -114,8 +117,8 @@ function Router() {
       <Route path="/banks" component={CommercialBanksHub} />
       <Route path="/banking" component={BankingSector} />
       <Route path="/banking/:id" component={BankDetail} />
-      <Route path={"/literature"} component={ResearchLibrary} />
-      <Route path={"/calculators"} component={FinancialCalculators} />
+      <Route path={"/literature"} component={FinancialLiterature} />
+      <Route path={"/financial-calculators"} component={FinancialCalculatorsEnhanced} />
       <Route path={"/data-viz"} component={DataVisualization} />
       <Route path={"/comprehensive-charts"} component={ComprehensiveCharts} />
        <Route path="/stakeholders" component={StakeholderHub} />
@@ -168,8 +171,10 @@ function Router() {
           <Route path="/banking-system-dashboard" component={BankingSystemDashboard} />
           <Route path="/aid-flows-dashboard" component={AidFlowsDashboard} />
           <Route path="/timeline-explorer" component={TimelineExplorerPage} />
-          <Route path="/year-explorer" component={YearExplorer} />
-          <Route path="/what-if-simulator" component={WhatIfSimulator} />
+          <Route path="/year-explorer" component={YearExplorerEnhanced} />
+      <Route path="/tools/year-explorer" component={YearExplorerEnhanced} />
+          <Route path="/what-if-simulator" component={WhatIfSimulatorEnhanced} />
+      <Route path="/tools/simulator" component={WhatIfSimulatorEnhanced} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
