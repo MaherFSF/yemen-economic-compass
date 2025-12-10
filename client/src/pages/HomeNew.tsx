@@ -1,386 +1,328 @@
-import { 
+import {
   Building2, Globe, TrendingUp, BarChart3, Calculator, 
-  Landmark, Calendar, FileText, Users, Database, Map as MapIcon,
-  BookOpen, Telescope, LineChart, DollarSign, Briefcase,
-  ArrowRight, ExternalLink
+  Landmark, Calendar, FileText, Users, Database,
+  BookOpen, Telescope, LineChart, ArrowRight, Search,
+  ChevronRight
 } from "lucide-react";
 import { Link } from "wouter";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-
-interface SiteMapCategory {
-  title: string;
-  icon: React.ReactNode;
-  color: string;
-  bgColor: string;
-  pages: { name: string; path: string; }[];
-  count: number;
-}
+import { APP_LOGO } from "@/const";
 
 export default function HomeNew() {
-  const categories: SiteMapCategory[] = [
-    {
-      title: "Main Pages",
-      icon: <MapIcon className="w-5 h-5" />,
-      color: "text-[var(--observatory-teal)]",
-      bgColor: "bg-[var(--observatory-light-teal)]",
-      count: 3,
-      pages: [
-        { name: "Home", path: "/" },
-        { name: "About Platform", path: "/about-platform" },
-        { name: "About CauseWay", path: "/about-causeway" },
-      ]
-    },
-    {
-      title: "International Organizations",
-      icon: <Globe className="w-5 h-5" />,
-      color: "text-blue-600",
-      bgColor: "bg-blue-50",
-      count: 13,
-      pages: [
-        { name: "IMF", path: "/stakeholders/imf" },
-        { name: "World Bank", path: "/stakeholders/world-bank" },
-        { name: "UN OCHA", path: "/stakeholders/ocha" },
-        { name: "UNHCR", path: "/stakeholders/unhcr" },
-        { name: "UNICEF", path: "/stakeholders/unicef" },
-        { name: "IOM", path: "/stakeholders/iom" },
-        { name: "UNDP", path: "/stakeholders/undp" },
-        { name: "WFP", path: "/stakeholders/wfp" },
-        { name: "FAO", path: "/stakeholders/fao" },
-        { name: "WHO", path: "/stakeholders/who" },
-      ]
-    },
-    {
-      title: "Governments & Donors",
-      icon: <Building2 className="w-5 h-5" />,
-      color: "text-emerald-600",
-      bgColor: "bg-emerald-50",
-      count: 9,
-      pages: [
-        { name: "Saudi Arabia", path: "/stakeholders/saudi-arabia" },
-        { name: "UAE", path: "/stakeholders/uae" },
-        { name: "Aden Government", path: "/governments/aden" },
-        { name: "Sana'a Government", path: "/governments/sanaa" },
-        { name: "All Donors", path: "/donors" },
-        { name: "Bilateral Donors", path: "/donors/bilateral" },
-      ]
-    },
-    {
-      title: "Advanced Dashboards",
-      icon: <BarChart3 className="w-5 h-5" />,
-      color: "text-violet-600",
-      bgColor: "bg-violet-50",
-      count: 11,
-      pages: [
-        { name: "Dashboard Hub", path: "/dashboards" },
-        { name: "Banking System Dashboard", path: "/dashboards/banking" },
-        { name: "Aid Flows Dashboard", path: "/dashboards/aid-flows" },
-        { name: "Compare Dashboard", path: "/dashboards/compare" },
-        { name: "Timeline Explorer", path: "/timeline" },
-        { name: "Executive Dashboard", path: "/dashboards/executive" },
-        { name: "Key Statistics", path: "/statistics" },
-        { name: "Financial Transformation", path: "/transformation" },
-        { name: "Power Map", path: "/power-map" },
-      ]
-    },
-    {
-      title: "Interactive Tools",
-      icon: <Calculator className="w-5 h-5" />,
-      color: "text-orange-600",
-      bgColor: "bg-orange-50",
-      count: 7,
-      pages: [
-        { name: "What-If Simulator", path: "/tools/simulator" },
-        { name: "Year Explorer", path: "/tools/year-explorer" },
-        { name: "Banks Database", path: "/banks" },
-        { name: "Financial Calculators", path: "/tools/calculators" },
-        { name: "Data Visualization", path: "/visualizations" },
-        { name: "Advanced Visualizations", path: "/visualizations/advanced" },
-        { name: "Financial Flows Network", path: "/network" },
-      ]
-    },
-    {
-      title: "Charts & Indicators",
-      icon: <LineChart className="w-5 h-5" />,
-      color: "text-pink-600",
-      bgColor: "bg-pink-50",
-      count: 6,
-      pages: [
-        { name: "Charts", path: "/charts" },
-        { name: "Comparative Charts", path: "/charts/comparative" },
-        { name: "Statistical Indicators", path: "/indicators" },
-        { name: "Analytics", path: "/analytics" },
-        { name: "Forecasting", path: "/forecasting" },
-      ]
-    },
-    {
-      title: "Banking Sector",
-      icon: <Landmark className="w-5 h-5" />,
-      color: "text-indigo-600",
-      bgColor: "bg-indigo-50",
-      count: 7,
-      pages: [
-        { name: "Central Banks", path: "/banking/central-banks" },
-        { name: "CBY Aden", path: "/banking/cby-aden" },
-        { name: "CBY Sana'a", path: "/banking/cby-sanaa" },
-        { name: "Commercial Banks", path: "/banking/commercial" },
-        { name: "Microfinance", path: "/banking/microfinance" },
-        { name: "Kayan Platform", path: "/banking/kayan" },
-      ]
-    },
-    {
-      title: "Timeline & Events",
-      icon: <Calendar className="w-5 h-5" />,
-      color: "text-amber-600",
-      bgColor: "bg-amber-50",
-      count: 3,
-      pages: [
-        { name: "Timeline", path: "/timeline" },
-        { name: "Events", path: "/events" },
-        { name: "Story", path: "/story" },
-      ]
-    },
-    {
-      title: "Economic Analysis",
-      icon: <TrendingUp className="w-5 h-5" />,
-      color: "text-green-600",
-      bgColor: "bg-green-50",
-      count: 6,
-      pages: [
-        { name: "Overview", path: "/analysis" },
-        { name: "Currency War", path: "/analysis/currency-war" },
-        { name: "Ongoing War", path: "/analysis/war-impact" },
-        { name: "Policies & Recommendations", path: "/analysis/policies" },
-        { name: "Sanctions", path: "/analysis/sanctions" },
-        { name: "Main Cities", path: "/analysis/cities" },
-      ]
-    },
-    {
-      title: "Sectors",
-      icon: <Briefcase className="w-5 h-5" />,
-      color: "text-cyan-600",
-      bgColor: "bg-cyan-50",
-      count: 3,
-      pages: [
-        { name: "Youth Economy", path: "/sectors/youth" },
-        { name: "Investment", path: "/sectors/investment" },
-        { name: "Other Sectors", path: "/sectors" },
-      ]
-    },
-    {
-      title: "Resources & Research",
-      icon: <BookOpen className="w-5 h-5" />,
-      color: "text-purple-600",
-      bgColor: "bg-purple-50",
-      count: 7,
-      pages: [
-        { name: "Research Library", path: "/research" },
-        { name: "Financial Literature", path: "/research/literature" },
-        { name: "International Reports", path: "/research/reports" },
-        { name: "Yemen Directory", path: "/directory" },
-        { name: "News", path: "/news" },
-        { name: "File Manager", path: "/files" },
-      ]
-    },
-    {
-      title: "Stakeholder Hub",
-      icon: <Users className="w-5 h-5" />,
-      color: "text-teal-600",
-      bgColor: "bg-teal-50",
-      count: 1,
-      pages: [
-        { name: "Stakeholder Hub", path: "/stakeholders" },
-      ]
-    },
-  ];
-
-  const totalPages = categories.reduce((sum, cat) => sum + cat.count, 0);
-  const totalDatasets = 67;
-  const totalDocuments = 4416;
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-[var(--observatory-light-teal)]/30 to-background">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="observatory-gradient-dark text-white py-20 relative">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white rounded-full blur-3xl"></div>
-          </div>
-          
-          <div className="container relative z-10">
-            <div className="flex flex-col items-center justify-center mb-8">
-              <div className="flex items-center gap-4 mb-6">
-                <Telescope className="w-16 h-16" />
-                <img 
-                  src="/IMG_9942.png" 
-                  alt="CauseWay Financial & Economic Observatory" 
-                  className="h-24 object-contain drop-shadow-2xl"
-                />
-              </div>
-              
-              <h1 className="text-6xl md:text-7xl font-bold text-center mb-4">
-                Yemen Financial &<br />Economic Observatory
-              </h1>
-              
-              <p className="text-xl md:text-2xl text-center text-white/90 max-w-3xl mb-8">
-                Comprehensive analysis of Yemen's parallel financial system (2010-2025)
-              </p>
-
-              {/* Statistics */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl">
-                <div className="glass-effect text-center p-8 rounded-2xl border-white/20 backdrop-blur-xl">
-                  <div className="text-5xl font-bold mb-2">{totalPages}</div>
-                  <div className="text-sm text-white/80 uppercase tracking-wider">Total Pages</div>
+    <div className="min-h-screen bg-gradient-to-br from-[var(--observatory-dark)] via-[var(--observatory-medium)] to-[var(--observatory-dark)]">
+      {/* Header */}
+      <header className="border-b border-white/10 bg-black/20 backdrop-blur-md sticky top-0 z-50">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/">
+              <a className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                <img src={APP_LOGO} alt="CauseWay Observatory" className="h-12 w-12 rounded-lg" />
+                <div className="flex items-center gap-2">
+                  <Telescope className="w-6 h-6 text-white" />
+                  <span className="text-xl font-bold text-white">CauseWay Financial & Economic Observatory</span>
                 </div>
-                <div className="glass-effect text-center p-8 rounded-2xl border-white/20 backdrop-blur-xl">
-                  <div className="text-5xl font-bold mb-2">{totalDatasets}</div>
-                  <div className="text-sm text-white/80 uppercase tracking-wider">Datasets</div>
-                </div>
-                <div className="glass-effect text-center p-8 rounded-2xl border-white/20 backdrop-blur-xl">
-                  <div className="text-5xl font-bold mb-2">{totalDocuments.toLocaleString()}</div>
-                  <div className="text-sm text-white/80 uppercase tracking-wider">Documents</div>
-                </div>
-              </div>
+              </a>
+            </Link>
+            <div className="flex items-center gap-4">
+              <Button variant="ghost" className="text-white hover:bg-white/10">
+                <Search className="w-4 h-4 mr-2" />
+                Search
+              </Button>
+              <Link href="/about-causeway">
+                <Button variant="outline" className="border-white/20 text-white hover:bg-white/10">
+                  About
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
-      </div>
+      </header>
 
-      {/* Site Map Section */}
-      <div className="container py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 observatory-text-gradient">
-            Complete Site Map
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Navigate through all sections of the platform to explore comprehensive data, analysis, and insights
-          </p>
+      {/* Hero Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <Badge className="mb-6 bg-[var(--observatory-teal)]/20 text-[var(--observatory-teal)] border-[var(--observatory-teal)]/30 px-4 py-2">
+              Yemen Financial Research Platform
+            </Badge>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              Understanding Yemen's
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--observatory-teal)] to-[var(--observatory-light-teal)]">
+                Parallel Financial System
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Comprehensive analysis and data on Yemen's economic landscape from 2010 to 2025.
+              Explore interactive tools, dashboards, and research from CauseWay Foundation.
+            </p>
+            <div className="flex items-center justify-center gap-4">
+              <Link href="/dashboards">
+                <Button size="lg" className="bg-[var(--observatory-teal)] hover:bg-[var(--observatory-medium)] text-white">
+                  <BarChart3 className="w-5 h-5 mr-2" />
+                  Explore Dashboards
+                </Button>
+              </Link>
+              <Link href="/tools/simulator">
+                <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10">
+                  <Calculator className="w-5 h-5 mr-2" />
+                  Try Simulator
+                </Button>
+              </Link>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {categories.map((category, idx) => (
-            <Card 
-              key={idx}
-              className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden border-2 hover:border-primary/50"
-            >
-              {/* Category Header */}
-              <div className={`${category.bgColor} p-5 border-b-2 border-border/50`}>
-                <div className="flex items-center justify-between mb-3">
-                  <div className={`flex items-center gap-2 ${category.color}`}>
-                    {category.icon}
-                    <h3 className="text-lg font-bold">{category.title}</h3>
+      {/* Stats Section */}
+      <section className="py-12 border-y border-white/10 bg-black/20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-white mb-2">15+</div>
+              <div className="text-gray-400">Years of Data</div>
+              <div className="text-sm text-gray-500 mt-1">2010-2025</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-white mb-2">50+</div>
+              <div className="text-gray-400">Analysis Pages</div>
+              <div className="text-sm text-gray-500 mt-1">Interactive tools & dashboards</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-white mb-2">20+</div>
+              <div className="text-gray-400">Stakeholders</div>
+              <div className="text-sm text-gray-500 mt-1">UN agencies, donors, governments</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-white mb-2">100+</div>
+              <div className="text-gray-400">Data Sources</div>
+              <div className="text-sm text-gray-500 mt-1">International & local</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Tools */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Featured Analysis Tools</h2>
+              <p className="text-gray-400">Interactive tools for exploring Yemen's economic data</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* What-If Simulator */}
+              <Link href="/what-if-simulator">
+                <Card className="group bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 hover:border-[var(--observatory-teal)]/50 transition-all cursor-pointer p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 rounded-lg bg-orange-500/20">
+                      <Calculator className="w-6 h-6 text-orange-400" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">What-If Simulator</h3>
                   </div>
-                  <Badge variant="secondary" className="bg-white border border-border text-xs">
-                    {category.count}
-                  </Badge>
-                </div>
-              </div>
+                  <p className="text-gray-400 mb-4">
+                    Model alternative economic scenarios by neutralizing historical events or adjusting key indicators.
+                  </p>
+                  <div className="flex items-center text-[var(--observatory-teal)] group-hover:gap-2 transition-all">
+                    <span className="text-sm font-medium">Explore tool</span>
+                    <ChevronRight className="w-4 h-4" />
+                  </div>
+                </Card>
+              </Link>
 
-              {/* Pages List */}
-              <div className="p-5 bg-card">
-                <ul className="space-y-2.5">
-                  {category.pages.slice(0, 5).map((page, pageIdx) => (
-                    <li key={pageIdx}>
-                      <Link href={page.path}>
-                        <a className="flex items-center gap-2 text-sm hover:text-primary transition-colors group/link py-1">
-                          <ArrowRight className="w-3 h-3 opacity-0 group-hover/link:opacity-100 transition-opacity" />
-                          <span className="group-hover/link:translate-x-1 transition-transform">
-                            {page.name}
-                          </span>
-                        </a>
-                      </Link>
-                    </li>
-                  ))}
-                  {category.pages.length > 5 && (
-                    <li className="pt-2">
-                      <Link href="/sitemap">
-                        <a className="text-xs text-muted-foreground hover:text-primary flex items-center gap-1">
-                          <span>+{category.pages.length - 5} more</span>
-                          <ExternalLink className="w-3 h-3" />
-                        </a>
-                      </Link>
-                    </li>
-                  )}
-                </ul>
+              {/* Year Explorer */}
+              <Link href="/year-explorer">
+                <Card className="group bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 hover:border-[var(--observatory-teal)]/50 transition-all cursor-pointer p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 rounded-lg bg-blue-500/20">
+                      <Calendar className="w-6 h-6 text-blue-400" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">Year Explorer</h3>
+                  </div>
+                  <p className="text-gray-400 mb-4">
+                    Navigate through Yemen's economic history year by year from 2010 to 2025.
+                  </p>
+                  <div className="flex items-center text-[var(--observatory-teal)] group-hover:gap-2 transition-all">
+                    <span className="text-sm font-medium">Explore timeline</span>
+                    <ChevronRight className="w-4 h-4" />
+                  </div>
+                </Card>
+              </Link>
+
+              {/* Banking Dashboard */}
+              <Link href="/banking-dashboard">
+                <Card className="group bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 hover:border-[var(--observatory-teal)]/50 transition-all cursor-pointer p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 rounded-lg bg-emerald-500/20">
+                      <Landmark className="w-6 h-6 text-emerald-400" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">Banking System</h3>
+                  </div>
+                  <p className="text-gray-400 mb-4">
+                    Track the parallel central banks and commercial banking sector dynamics.
+                  </p>
+                  <div className="flex items-center text-[var(--observatory-teal)] group-hover:gap-2 transition-all">
+                    <span className="text-sm font-medium">View dashboard</span>
+                    <ChevronRight className="w-4 h-4" />
+                  </div>
+                </Card>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Research Areas */}
+      <section className="py-20 bg-black/20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Key Research Areas</h2>
+              <p className="text-gray-400">Explore comprehensive analysis across multiple dimensions</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* Stakeholders */}
+              <Link href="/stakeholders">
+                <Card className="group bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 hover:border-[var(--observatory-teal)]/50 transition-all cursor-pointer p-6 text-center">
+                  <div className="inline-flex p-4 rounded-full bg-blue-500/20 mb-4">
+                    <Globe className="w-8 h-8 text-blue-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Stakeholders</h3>
+                  <p className="text-sm text-gray-400 mb-3">UN agencies, donors & governments</p>
+                  <Badge variant="secondary" className="bg-blue-500/20 text-blue-300">20+ profiles</Badge>
+                </Card>
+              </Link>
+
+              {/* Dashboards */}
+              <Link href="/dashboards">
+                <Card className="group bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 hover:border-[var(--observatory-teal)]/50 transition-all cursor-pointer p-6 text-center">
+                  <div className="inline-flex p-4 rounded-full bg-violet-500/20 mb-4">
+                    <BarChart3 className="w-8 h-8 text-violet-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Dashboards</h3>
+                  <p className="text-sm text-gray-400 mb-3">Interactive data visualizations</p>
+                  <Badge variant="secondary" className="bg-violet-500/20 text-violet-300">10+ dashboards</Badge>
+                </Card>
+              </Link>
+
+              {/* Economic Analysis */}
+              <Link href="/comprehensive-charts">
+                <Card className="group bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 hover:border-[var(--observatory-teal)]/50 transition-all cursor-pointer p-6 text-center">
+                  <div className="inline-flex p-4 rounded-full bg-emerald-500/20 mb-4">
+                    <LineChart className="w-8 h-8 text-emerald-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Economic Indicators</h3>
+                  <p className="text-sm text-gray-400 mb-3">GDP, inflation, exchange rates</p>
+                  <Badge variant="secondary" className="bg-emerald-500/20 text-emerald-300">50+ indicators</Badge>
+                </Card>
+              </Link>
+
+              {/* Research Library */}
+              <Link href="/literature">
+                <Card className="group bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 hover:border-[var(--observatory-teal)]/50 transition-all cursor-pointer p-6 text-center">
+                  <div className="inline-flex p-4 rounded-full bg-amber-500/20 mb-4">
+                    <BookOpen className="w-8 h-8 text-amber-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Research Library</h3>
+                  <p className="text-sm text-gray-400 mb-3">Reports & publications</p>
+                  <Badge variant="secondary" className="bg-amber-500/20 text-amber-300">100+ documents</Badge>
+                </Card>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About CauseWay */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <Card className="bg-white/5 backdrop-blur-sm border-white/10 p-8 md:p-12">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="p-4 rounded-full bg-[var(--observatory-teal)]/20">
+                    <Telescope className="w-12 h-12 text-[var(--observatory-teal)]" />
+                  </div>
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-white mb-4">About CauseWay Observatory</h2>
+                  <p className="text-gray-300 mb-4 leading-relaxed">
+                    The CauseWay Financial & Economic Observatory is a comprehensive research platform dedicated to analyzing Yemen's parallel financial system. 
+                    Our mission is to provide transparent, data-driven insights into the economic dynamics that have shaped Yemen from 2010 to 2025.
+                  </p>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    Through interactive tools, detailed dashboards, and rigorous analysis, we track the evolution of Yemen's banking sector, 
+                    international aid flows, stakeholder contributions, and economic indicators to support informed decision-making and accountability.
+                  </p>
+                  <Link href="/about-causeway">
+                    <Button className="bg-[var(--observatory-teal)] hover:bg-[var(--observatory-medium)] text-white">
+                      Learn More About CauseWay
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </Card>
-          ))}
+          </div>
         </div>
+      </section>
 
-        {/* CTA Section */}
-        <div className="mt-16 text-center">
-          <div className="glass-effect inline-block p-10 rounded-3xl max-w-4xl border-2 border-border/50">
-            <h3 className="text-2xl font-bold mb-4">Explore the Full Platform</h3>
-            <p className="text-muted-foreground mb-6 max-w-2xl">
-              Access comprehensive data, interactive dashboards, and in-depth analysis of Yemen's parallel financial system from 2010 to 2025
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/sitemap">
-                <Button size="lg" className="observatory-gradient text-white hover:opacity-90">
-                  <MapIcon className="w-4 h-4 mr-2" />
-                  View Full Site Map
-                </Button>
-              </Link>
-              <Link href="/dashboards/banking">
-                <Button size="lg" variant="outline">
-                  <BarChart3 className="w-4 h-4 mr-2" />
-                  Banking Dashboard
-                </Button>
-              </Link>
-              <Link href="/timeline">
-                <Button size="lg" variant="outline">
-                  <Calendar className="w-4 h-4 mr-2" />
-                  Timeline Explorer
-                </Button>
-              </Link>
+      {/* Footer */}
+      <footer className="border-t border-white/10 bg-black/20 py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+              <div>
+                <h3 className="text-white font-semibold mb-4">Platform</h3>
+                <ul className="space-y-2">
+                  <li><Link href="/about-platform"><a className="text-gray-400 hover:text-white transition-colors">About Platform</a></Link></li>
+                  <li><Link href="/about-causeway"><a className="text-gray-400 hover:text-white transition-colors">About CauseWay</a></Link></li>
+                  <li><Link href="/site-map"><a className="text-gray-400 hover:text-white transition-colors">Site Map</a></Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-white font-semibold mb-4">Analysis</h3>
+                <ul className="space-y-2">
+                  <li><Link href="/dashboards"><a className="text-gray-400 hover:text-white transition-colors">Dashboards</a></Link></li>
+                  <li><Link href="/what-if-simulator"><a className="text-gray-400 hover:text-white transition-colors">What-If Simulator</a></Link></li>
+                  <li><Link href="/year-explorer"><a className="text-gray-400 hover:text-white transition-colors">Year Explorer</a></Link></li>
+                  <li><Link href="/financial-calculators"><a className="text-gray-400 hover:text-white transition-colors">Calculators</a></Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-white font-semibold mb-4">Data</h3>
+                <ul className="space-y-2">
+                  <li><Link href="/banking-dashboard"><a className="text-gray-400 hover:text-white transition-colors">Banking System</a></Link></li>
+                  <li><Link href="/comprehensive-charts"><a className="text-gray-400 hover:text-white transition-colors">Economic Indicators</a></Link></li>
+                  <li><Link href="/stakeholders"><a className="text-gray-400 hover:text-white transition-colors">Stakeholders</a></Link></li>
+                  <li><Link href="/timeline"><a className="text-gray-400 hover:text-white transition-colors">Timeline</a></Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-white font-semibold mb-4">Resources</h3>
+                <ul className="space-y-2">
+                  <li><Link href="/literature"><a className="text-gray-400 hover:text-white transition-colors">Research Library</a></Link></li>
+                  <li><Link href="/news"><a className="text-gray-400 hover:text-white transition-colors">News</a></Link></li>
+                  <li><Link href="/file-manager"><a className="text-gray-400 hover:text-white transition-colors">File Manager</a></Link></li>
+                </ul>
+              </div>
+            </div>
+            <div className="pt-8 border-t border-white/10 text-center">
+              <p className="text-gray-400">
+                © 2025 CauseWay Foundation. All rights reserved.
+              </p>
+              <p className="text-gray-500 text-sm mt-2">
+                Yemen Financial & Economic Observatory | Research by Maher F.S. Farea
+              </p>
             </div>
           </div>
         </div>
-
-        {/* About CauseWay */}
-        <div className="mt-16 grid md:grid-cols-2 gap-8">
-          <Card className="p-8 hover:shadow-xl transition-shadow">
-            <div className="flex items-start gap-4 mb-4">
-              <div className="p-3 rounded-lg bg-[var(--observatory-light-teal)]">
-                <Telescope className="w-8 h-8 text-[var(--observatory-teal)]" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">About the Observatory</h3>
-                <p className="text-muted-foreground">
-                  The Yemen Financial & Economic Observatory provides comprehensive analysis and data visualization of Yemen's parallel financial system, tracking economic indicators, banking sector evolution, and humanitarian aid flows.
-                </p>
-              </div>
-            </div>
-            <Link href="/about-platform">
-              <Button variant="link" className="p-0 h-auto text-primary">
-                Learn more about the platform <ArrowRight className="w-4 h-4 ml-1" />
-              </Button>
-            </Link>
-          </Card>
-
-          <Card className="p-8 hover:shadow-xl transition-shadow">
-            <div className="flex items-start gap-4 mb-4">
-              <div className="p-3 rounded-lg bg-[var(--observatory-light-teal)]">
-                <Building2 className="w-8 h-8 text-[var(--observatory-teal)]" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">About CauseWay</h3>
-                <p className="text-muted-foreground">
-                  CauseWay Financial & Economic Consultancies provides expert analysis, research, and strategic advisory services for conflict-affected economies, with specialized focus on Yemen's financial landscape.
-                </p>
-              </div>
-            </div>
-            <Link href="/about-causeway">
-              <Button variant="link" className="p-0 h-auto text-primary">
-                Learn more about CauseWay <ArrowRight className="w-4 h-4 ml-1" />
-              </Button>
-            </Link>
-          </Card>
-        </div>
-      </div>
+      </footer>
     </div>
   );
 }
