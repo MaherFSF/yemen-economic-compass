@@ -1,0 +1,238 @@
+{
+  "results": [
+    {
+      "input": "2010 (pre-crisis baseline)",
+      "output": {
+        "year": "2010",
+        "major_events_summary": "The year 2010 served as a pre-crisis baseline for Yemen, characterized by robust economic growth and simmering political and humanitarian challenges. Economically, the country experienced a strong real GDP growth of 7.7%, primarily driven by the coming online of the Yemen LNG project and high oil prices, despite a high inflation rate of 11.2%. Politically, the year began with the formal end of the Sixth Sa'ada War against the Houthis in February, though the government continued to face a growing threat from Al-Qaeda in the Arabian Peninsula (AQAP) and underlying political instability. The humanitarian situation remained precarious, with 7.5 million people (32.1% of the population) classified as food insecure, and up to 300,000 internally displaced persons (IDPs) from the northern conflict requiring aid.",
+        "gdp_data": "$30.9B, 7.7% growth (IMF 2010)",
+        "exchange_rate": "225 YER/USD (IMF 2010)",
+        "inflation_rate": "11.2% (IMF 2010)",
+        "humanitarian_data": "7.5M food insecure, up to 300,000 IDPs, $121.4M funding (OCHA FTS 2010)",
+        "key_actors": "Government of Yemen (Ali Abdullah Saleh), Houthis, Al-Qaeda in the Arabian Peninsula (AQAP), Saudi Arabia, United Nations (OCHA, WFP, UNHCR), International Monetary Fund (IMF), World Bank",
+        "major_reports": "Republic of Yemen: Request for a Three-Year Arrangement Under the Extended Credit Facility—Staff Report (IMF, September 2010) URL: https://www.imf.org/external/pubs/ft/scr/2010/cr10300.pdf; Yemen Humanitarian Response Plan 2010 (UN OCHA) URL: https://fts.unocha.org/plans/314/summary; Inflation Dynamics in Yemen: An Empirical Analysis (IMF Working Paper, June 2010) URL: https://www.imf.org/external/pubs/ft/wp/2010/wp10144.pdf; Yemen Food Security Country Brief (FAO, June-August 2010) URL: https://openknowledge.fao.org/handle/20.500.14283/AM572E",
+        "causations": "End of 6th Sa'ada War (Feb 2010) → Temporary reduction in internal conflict (pre-2011 stability)\nHigh oil prices and LNG production coming online → Real GDP growth of 7.7% (IMF 2010)\nGlobal food and fuel price volatility → Inflation rate of 11.2% (IMF 2010)\nHigh population growth and limited resources → 7.5M people food insecure (WFP 2010)",
+        "sources": "IMF Staff Report 2010, UN OCHA FTS, WFP, IRIN, FAO, FRED St. Louis"
+      },
+      "error": ""
+    },
+    {
+      "input": "2011 (Arab Spring & protests)",
+      "output": {
+        "year": "2011",
+        "major_events_summary": "The year 2011 was defined by the Yemeni Revolution, a wave of Arab Spring protests that led to widespread political turmoil and a severe economic contraction. The protests and associated conflict, including attacks on critical infrastructure like oil pipelines, caused a sharp decline in real GDP by 12.7% and fueled an inflation rate of 19.54%. The political crisis culminated in the signing of the Gulf Cooperation Council (GCC) Initiative in November, which established a framework for a political transition. Concurrently, the humanitarian situation deteriorated significantly, with 10.6 million people becoming food-insecure and tens of thousands displaced by fighting, particularly in the Abyan Governorate.",
+        "gdp_data": "$32.73B, -12.7% growth (World Bank/IMF 2011)",
+        "exchange_rate": "218.00 YER/USD (US Treasury 2011)",
+        "inflation_rate": "19.54% (Macrotrends/IMF 2011)",
+        "humanitarian_data": "10.6M food insecure, Tens of thousands IDPs, $292.3M total requirements (OCHA 2011)",
+        "key_actors": "Government of Yemen (Ali Abdullah Saleh), Houthis, Gulf Cooperation Council (GCC), United Nations (UN), World Bank, International Monetary Fund (IMF), Saudi Arabia, UAE",
+        "major_reports": "Agreement on the Implementation Mechanism for the Transition in Yemen Pursuant to the GCC Initiative (GCC/UN 2011); Yemen Humanitarian Response Plan 2011 (UN OCHA 2011); Yemen Humanitarian Response Plan 2011 : mid-year review (UN OCHA 2011); Impacts of the triple global crisis on growth and poverty: The case of Yemen (Breisinger et al. 2011)",
+        "causations": "Yemeni Revolution (Arab Spring) → Real GDP Contraction (-12.7%)\nAttacks on oil pipelines and electricity plants → Oil production drop and fuel shortages\nPolitical turmoil and supply chain disruption → Food price increase (+46%)\nPolitical instability and conflict in Abyan → Internal Displacement (Tens of thousands)",
+        "sources": "World Bank, IMF, Macrotrends, US Treasury, UN OCHA, ConstitutionNet, Sana'a Center, ReliefWeb, UN News, CS Monitor, Washington Post"
+      },
+      "error": ""
+    },
+    {
+      "input": "2012 (Hadi transition)",
+      "output": {
+        "year": "2012",
+        "major_events_summary": "The year 2012 marked the formal political transition in Yemen, with the unopposed election of Abdrabbuh Mansur Hadi as President in February, ending the 33-year rule of Ali Abdullah Saleh under the GCC Initiative. Economically, the country began a fragile recovery from the 2011 crisis, with real GDP growth estimated at 1.4%, though political and security upheaval continued to decelerate progress. The government faced a significant fiscal challenge, with the deficit reaching 9.4% of GDP, partly due to large petroleum subsidies. The humanitarian situation remained dire, with approximately 10 million people food insecure and 385,000 internally displaced persons, necessitating a UN Humanitarian Response Plan that was 55.7% funded.",
+        "gdp_data": "~$35.40B, 1.4% growth (World Bank 2012)",
+        "exchange_rate": "~214 YER/USD average (Market/CBY 2012)",
+        "inflation_rate": "9.89% (Macrotrends 2012)",
+        "humanitarian_data": "~10M food insecure, 385,000 IDPs, $326.4M funding received out of $585.6M required (UN OCHA/IDMC 2012)",
+        "key_actors": "Abdrabbuh Mansur Hadi (President), Ali Abdullah Saleh (Former President), Gulf Cooperation Council (GCC), United Nations (UN), World Bank, International Monetary Fund (IMF), Al-Qaeda in the Arabian Peninsula (AQAP), various military/tribal factions",
+        "major_reports": "Yemen Economic Monitoring Note, Fall 2012 (World Bank); Yemen Humanitarian Response Plan 2012 (UN OCHA); Global Internal Displacement Report 2013 (IDMC)",
+        "causations": "GCC Initiative and Presidential Election → Formal end of Saleh's 33-year rule (Political Transition)\nContinued security upheaval and conflict (e.g., Abyan) → Deceleration of economic growth to 1.4% (World Bank 2012)\nPost-revolution political instability and fiscal expansion → High inflation (9.89% - 20.4%) and large fiscal deficit (9.4% of GDP)",
+        "sources": "World Bank, International Monetary Fund (IMF), UN Office for the Coordination of Humanitarian Affairs (OCHA), Internal Displacement Monitoring Centre (IDMC), Macrotrends, PoundSterlingLive, FRED"
+      },
+      "error": ""
+    },
+    {
+      "input": "2013 (National Dialogue)",
+      "output": {},
+      "error": ""
+    },
+    {
+      "input": "2014 (Houthi takeover)",
+      "output": {
+        "year": "2014",
+        "major_events_summary": "The year 2014 was defined by a rapid deterioration of Yemen's political and security environment, culminating in the Houthi takeover of the capital, Sanaa, in September, which effectively marked the beginning of the current civil war. Economically, the country faced severe challenges, including a substantial decline in oil revenue due to the sabotage of oil facilities and the government's controversial elimination of fuel subsidies under pressure from the IMF. This instability resulted in a real GDP contraction of -3.9% and contributed to a humanitarian crisis that saw 10.5 million people food insecure and over 334,000 internally displaced persons by the end of the year.",
+        "gdp_data": "$42.44B, -3.9% growth (World Bank 2014)",
+        "exchange_rate": "215.0 YER/USD average (Central Bank of Yemen 2014)",
+        "inflation_rate": "8.1% (IMF/World Bank 2014)",
+        "humanitarian_data": "10.5M food insecure, 334K IDPs, $357.9M funding (UN OCHA 2014)",
+        "key_actors": "Houthis, Internationally Recognized Government (Hadi), United Nations, IMF, World Bank, Saudi Arabia, Al-Qaeda",
+        "major_reports": "Republic of Yemen: 2014 Article IV Consultation and Request for a Three-Year Arrangement (IMF) [https://www.imf.org/external/pubs/ft/scr/2014/cr14276.pdf]; Yemen Humanitarian Response Plan 2014 (UN OCHA); Yemen Strategic Response Plan 2014 (UN OCHA)",
+        "causations": "Sabotage of oil facilities → Decline in oil revenue and fiscal deterioration (IMF 2014)\nHouthi takeover of Sanaa (Sep 2014) → Escalation of political instability and start of civil war (UN/Crisis Group 2014)\nPolitical instability and oil revenue decline → Real GDP contraction of -3.9% (World Bank 2014)\nIMF/World Bank pressure → Government elimination of fuel subsidies (IMF 2014)",
+        "sources": "IMF, World Bank, UN OCHA, Trading Economics, Index Mundi, Exchange Rates UK, Crisis Group"
+      },
+      "error": ""
+    },
+    {
+      "input": "2015 (Operation Decisive Storm begins)",
+      "output": {
+        "year": "2015",
+        "major_events_summary": "The year 2015 was defined by the escalation of the Yemeni Civil War, marked by the launch of the Saudi-led \"Operation Decisive Storm\" in March, which transitioned into \"Operation Restoring Hope\" in April. This military intervention led to a severe economic contraction, with the GDP plummeting by nearly 28%, and triggered a massive humanitarian crisis. The internationally recognized government of President Hadi was forced to operate from Aden, while the Houthis maintained control over the capital, Sanaa, leading to a de facto political and economic split. The conflict and subsequent blockade severely disrupted trade, oil production, and state finances, pushing millions into acute food insecurity and displacing over two million people.",
+        "gdp_data": "$42.44B, -27.99% growth (Macrotrends 2015)",
+        "exchange_rate": "215.07 YER/USD average (Exchange-Rates.org 2015)",
+        "inflation_rate": "12.00% (IndexMundi/IMF 2015)",
+        "humanitarian_data": "10.6M food insecure, 2.5M IDPs, $874.2M funding (UN OCHA 2015)",
+        "key_actors": "Saudi Arabia, UAE, Houthis, Internationally Recognized Government (IRG), UN OCHA, World Bank, IMF, IOM",
+        "major_reports": "Yemen Humanitarian Response Plan 2015 Revision (UN OCHA, June 2015); IMF 2015 Annual Report (IMF); Yemen Economic Monitor (World Bank, 2015); Yemen Strategic Response Plan 2015 (UN OCHA)",
+        "causations": "Operation Decisive Storm (March 2015) → GDP collapse (-27.99% growth)\nSaudi-led coalition blockade and conflict → Humanitarian crisis (10.6M food insecure, 2.5M IDPs)\nCollapse of oil production and government revenue → Fiscal crisis and currency depreciation (215.07 YER/USD average)",
+        "sources": "Macrotrends, IndexMundi, Exchange-Rates.org, UN OCHA, World Bank, IMF, Wikipedia, Britannica, Council on Foreign Relations, IOM"
+      },
+      "error": ""
+    },
+    {
+      "input": "2016 (CBY split & banking crisis)",
+      "output": {
+        "year": "2016",
+        "major_events_summary": "The year 2016 was defined by the catastrophic **split of the Central Bank of Yemen (CBY)** in September, when the internationally recognized government relocated its headquarters from Sana'a to Aden, effectively fragmenting the country's financial system. This move immediately triggered a severe liquidity crisis and the cessation of civil servant salary payments in Houthi-controlled areas, deepening the economic war. The conflict and financial collapse led to a **real GDP contraction of -9.38%** and an annual inflation rate of 21.30%. The humanitarian crisis intensified, with **14.4 million people facing food insecurity**, underscoring the direct link between the political conflict and the economic and humanitarian catastrophe.",
+        "gdp_data": "$31.32B, -9.38% growth (World Bank 2016)",
+        "exchange_rate": "250 YER/USD official rate (CBY Aden, May 2016)",
+        "inflation_rate": "21.30% (IMF 2016)",
+        "humanitarian_data": "14.4M food insecure, 2.2M IDPs, $1.6B funding requested (UN OCHA 2016)",
+        "key_actors": "Government of Yemen (Hadi), Houthis (Ansar Allah), Saudi Arabia, UAE, UN OCHA, World Bank, IMF, Central Bank of Yemen (Sana'a), Central Bank of Yemen (Aden)",
+        "major_reports": "Yemen's Economic Outlook- Spring 2016 (World Bank); Yemen's Economic Outlook- Fall 2016 (World Bank); Revised 2016 Yemen Humanitarian Response Plan (UN OCHA); Republic of Yemen: Selected Issues (IMF); Yemen: Exchange Rate Policy in the Face of Dwindling Oil Exports (IMF)",
+        "causations": "CBY relocation to Aden (Sep 2016) → Banking crisis and liquidity shortage (quantified impact: 14.1M people in need of assistance)\nCBY relocation to Aden (Sep 2016) → Cessation of civil servant salary payments in Sana'a (quantified impact: millions of unpaid salaries)\nConflict escalation and CBY split → Real GDP contraction (quantified impact: -9.38% growth)\nCessation of CBY foreign exchange support → YER depreciation (quantified impact: Official rate adjusted to 250 YER/USD)\nConflict and economic collapse → Increased food insecurity (quantified impact: 14.4M food insecure)",
+        "sources": "World Bank, IMF, UN OCHA, CEIC Data, Macrotrends, Al Jazeera, Sana'a Center for Strategic Studies, ReliefWeb"
+      },
+      "error": ""
+    },
+    {
+      "input": "2017 (Blockade & cholera outbreak)",
+      "output": {
+        "year": "2017",
+        "major_events_summary": "The year 2017 was defined by a severe escalation of the humanitarian crisis, primarily driven by the Saudi-led coalition's total blockade in November and the world's largest recorded cholera outbreak, which surpassed one million suspected cases. Economically, the country saw a continued contraction of real GDP by an estimated 5.9%, coupled with a sharp rise in inflation to 24.5%. The ongoing conflict and the split of the Central Bank of Yemen led to a significant divergence between the official (250 YER/USD) and parallel exchange rates, further crippling the economy and exacerbating food insecurity for 17 million people. The blockade severely restricted the flow of essential goods, pushing the country closer to famine.",
+        "gdp_data": "$26.84B, -5.9% growth (World Bank 2018)",
+        "exchange_rate": "250 YER/USD average (CBY 2017)",
+        "inflation_rate": "24.5% (OpenDataForAfrica/IMF 2017)",
+        "humanitarian_data": "17M food insecure, 2.01M IDPs, $2.36B funding (UN OCHA/IOM 2017)",
+        "key_actors": "Saudi Arabia, UAE, Houthis, Government of Yemen, UN OCHA, World Bank, IMF, WFP, WHO, UNICEF, IOM",
+        "major_reports": "Yemen's Economic Outlook - April 2017 (World Bank); Yemen's Economic Outlook - October 2018 (World Bank); Yemen Humanitarian Fund - Annual Report 2017 (UN OCHA); Yemen: 2017 Humanitarian Needs Overview (UN OCHA)",
+        "causations": "Saudi-led Coalition Blockade (Nov 2017) → Exacerbated humanitarian crisis and food insecurity (17M people)\nConflict and Collapse of Public Services → World's largest recorded cholera outbreak (1M+ suspected cases)\nConflict and Central Bank Split → Real GDP contraction (-5.9%)\nCentral Bank Split and War Financing → Parallel market currency depreciation (250 → 360 YER/USD)",
+        "sources": "World Bank, IMF, UN OCHA FTS, IOM TFPM, OpenDataForAfrica, The Global Economy, ReliefWeb, CNN"
+      },
+      "error": ""
+    },
+    {
+      "input": "2018 (Hodeidah battle & Saudi deposits)",
+      "output": {
+        "year": "2018",
+        "major_events_summary": "The year 2018 was defined by a severe humanitarian crisis and significant economic and political events. The Saudi-led coalition deposited **$2 billion** into the Central Bank of Yemen (CBY) in March, which temporarily stabilized the Yemeni Rial and curbed hyperinflation. However, the conflict escalated dramatically with the start of the **Battle of Hodeidah** in June, threatening the country's main port and humanitarian lifeline. The year concluded with the **Stockholm Agreement** in December, which established a ceasefire in Hodeidah and provided a fragile political breakthrough. The overall economic situation remained dire, with a small positive GDP growth of **0.8%** following years of contraction, and inflation remaining high at **33.65%**.",
+        "gdp_data": "$21.61B, 0.8% growth (World Bank 2018)",
+        "exchange_rate": "~250.37 YER/USD average (Exchange-Rates.org 2018)",
+        "inflation_rate": "33.65% (Statista 2018)",
+        "humanitarian_data": "15.9M severely food insecure, 2M IDPs, $1.25B funding (IPC Dec 2018, UNHCR Mar 2018, UN OCHA FTS 2018)",
+        "key_actors": "Saudi Arabia, UAE, Houthis, Internationally Recognized Government of Yemen (IRG), Central Bank of Yemen (CBY), UN OCHA, World Food Programme (WFP), World Bank, IMF, UN Special Envoy Martin Griffiths",
+        "major_reports": "Yemen Economic Outlook - Spring 2018 (World Bank); Yemen Economic Outlook - October 2018 (World Bank); Yemen: Humanitarian Response Plan - 2018 In Review (UN OCHA); Yemen: 2018 Humanitarian Needs Overview (UN OCHA)",
+        "causations": "Saudi $2B deposit in CBY (March 2018) → Temporary stabilization of the Yemeni Rial (YER) and curb on hyperinflation (quantified impact: YER/USD rate stabilized around 250 after deposit)\nBattle of Hodeidah (June 2018) → Increased humanitarian crisis and threat to food imports (quantified impact: 15.9M severely food insecure)\nConflict and economic collapse → 33.65% annual inflation rate (quantified impact: 33.65% annual inflation)",
+        "sources": "World Bank, Exchange-Rates.org, Statista, UN OCHA FTS, IPC, UNHCR, Saudi Ministry of Finance, Al Jazeera, ACAPS"
+      },
+      "error": ""
+    },
+    {
+      "input": "2019 (Currency ban & Riyadh Agreement)",
+      "output": {},
+      "error": ""
+    },
+    {
+      "input": "2020 (COVID-19 pandemic)",
+      "output": {
+        "year": "2020",
+        "major_events_summary": "The year 2020 was marked by a severe economic contraction, with preliminary estimates suggesting an 8.5% shrinkage in GDP, primarily driven by the compounding effects of the ongoing conflict, economic fragmentation, and the global COVID-19 pandemic. The conflict continued with a major Houthi offensive on Marib, while the economic divide deepened with a significant divergence between the nominal official exchange rate of 250 YER/USD and the parallel market rate, which averaged around 772 YER/USD in Aden. The humanitarian crisis intensified, with 16.2 million people facing food insecurity and the total stock of internally displaced persons (IDPs) reaching 4 million since 2015, all while the $3.38 billion humanitarian appeal was only 58.9% funded. Fiscal policy remained constrained, with the Internationally Recognized Government relying on money printing to cover expenditures due to underperforming public revenue and slow oil production recovery.",
+        "gdp_data": "$18.8B, -8.5% growth (World Bank 2021)",
+        "exchange_rate": "250 YER/USD nominal official rate (IMF/CBY 2020)",
+        "inflation_rate": "21.7% (EU Factsheet/IMF 2020)",
+        "humanitarian_data": "16.2M food insecure, 4M IDPs, $1.99B funding (UN OCHA/IOM/PMC 2020)",
+        "key_actors": "Internationally Recognized Government (IRG), Houthis (Ansar Allah), Saudi Arabia, United Arab Emirates (UAE), United Nations (UN), UN OCHA, IOM, World Bank (WB), International Monetary Fund (IMF)",
+        "major_reports": "REPUBLIC OF YEMEN (World Bank, 18-mpo-am21-yemen-yem-0927-kcm.pdf); Yemen Humanitarian Response Plan 2020 (UN OCHA); IOM Yemen | Rapid Displacement Tracking 2020, Annual Report 2020 (IOM); World Report 2020: Yemen (Human Rights Watch)",
+        "causations": "COVID-19 pandemic → Non-oil economic activity slowdown (World Bank)\nConflict/Dual Taxation/COVID-19 → GDP shrinkage of -8.5% (World Bank)\nConflict/Economic Fragmentation → Currency depreciation (World Bank)\nConflict/Economic Fragmentation/COVID-19 → 16.2M food insecure (PMC)",
+        "sources": "World Bank, IMF, Statista, ReliefWeb, UN OCHA, IOM, Human Rights Watch, PMC, EU Factsheet"
+      },
+      "error": ""
+    },
+    {
+      "input": "2021 (Marib offensive & fuel crisis)",
+      "output": {
+        "year": "2021",
+        "major_events_summary": "The year 2021 was marked by a severe economic and humanitarian crisis, driven by the Houthi offensive on the strategic, oil-rich Marib governorate and a crippling fuel crisis. Macroeconomic fragmentation intensified, leading to the Yemeni Rial's collapse in the IRG-controlled south, with the parallel market rate exceeding 1,700 YER/USD by December, fueling an estimated 45% inflation rate. The humanitarian situation remained the world's worst, with 20.7 million people in need of aid and the IDP population reaching 4.3 million, while the UN's $3.85 billion response plan remained significantly underfunded.",
+        "gdp_data": "$17.35 Billion, -1.5% growth (IMF 2021 estimate) [1]",
+        "exchange_rate": "Dual market: ~250 YER/USD (Sana'a controlled areas) and >1,700 YER/USD (Aden parallel market, Dec 2021) (FEWS NET 2021) [2] [13]",
+        "inflation_rate": "45% (World Bank 2021 estimate) [3]",
+        "humanitarian_data": "20.7M people in need, 4.3M IDPs, $2.42B funded out of $3.85B required (UN OCHA 2021) [4] [5] [6]",
+        "key_actors": "Internationally Recognized Government (IRG), Houthis (Ansar Allah), Saudi Arabia, UAE, UN OCHA, UNHCR, WFP, World Bank, IMF",
+        "major_reports": "Yemen's Economic Update — October 2021 (World Bank); Yemen's Economic Update — April 2021 (World Bank); Yemen Humanitarian Needs Overview 2021 (UN OCHA); United Nations Yemen Common Country Analysis (CCA) - November 2021 (UN); The Graveyard of Hubris – Yemen Annual Review 2021 (Sana'a Center)",
+        "causations": "Houthi offensive on Marib (Feb 2021) → Displacement of thousands and threat to 25% of Yemen's GDP (oil/gas revenue) [11] [12]\nIRG Central Bank policies / fragmentation → YER depreciation in Aden → Parallel market exchange rate exceeding 1,700 YER/USD [2] [13]\nCurrency depreciation and fuel crisis → Annual inflation accelerating to 45% (World Bank estimate) [3]\nFuel crisis/blockade → Increased cost of Minimum/Survivable Food Basket (52% in South, 19% in North) [3]",
+        "sources": "IMF DataMapper, FEWS NET, World Bank, UN OCHA, UNHCR, UN OCHA FTS, Sana'a Center, ACAPS"
+      },
+      "error": ""
+    },
+    {
+      "input": "2022 (UN Truce & oil exports)",
+      "output": {
+        "year": "2022",
+        "major_events_summary": "The year 2022 was defined by a significant political and security shift, beginning with the formation of the Presidential Leadership Council (PLC) in April, which consolidated the internationally recognized government's leadership. Concurrently, a UN-brokered truce, also starting in April, led to a substantial de-escalation of conflict, contributing to a modest 1.5% GDP growth. However, this positive economic momentum was severely undermined in the latter half of the year when Houthi attacks on oil ports halted oil exports, crippling the PLC's primary source of revenue. The humanitarian crisis remained dire, with over 19 million people requiring food assistance, while the dual central bank system continued to drive extreme fragmentation in the currency market.",
+        "gdp_data": "1.5% growth (World Bank 2022)",
+        "exchange_rate": "~560 YER/USD (Sana'a) and ~1,200 YER/USD (Aden Parallel Market) average (FEWS/ACAPS 2022)",
+        "inflation_rate": "20.4% (IMF 2022)",
+        "humanitarian_data": "19M food insecure, 4.5M IDPs, $2.22B funded of $4.27B required (UN OCHA 2022)",
+        "key_actors": "Presidential Leadership Council (PLC), Houthis (Ansar Allah), Saudi Arabia, UAE, United Nations (UN), World Bank, IMF, UN OCHA",
+        "major_reports": "Yemen Country Economic Memorandum 2022 (World Bank); Yemen Economic Monitor, Spring 2022 - Clearing Skies Over Yemen (World Bank); Yemen Humanitarian Response Plan (YHRP) 2022 (UN OCHA); Yemen Humanitarian Needs Overview (HNO) 2022 (UN OCHA)",
+        "causations": "UN-brokered Truce (April 2022) → Modest GDP Growth (1.5%)\nHouthi Attacks on Oil Ports (Late 2022) → Halt of Oil Exports (IRG revenue loss, $7.5B estimate)\nFiscal Fragmentation (Dual Central Banks) → Widely Divergent Exchange Rates (Sana'a vs. Aden, 560 vs. 1200 YER/USD)",
+        "sources": "World Bank, IMF, UN OCHA, FEWS, ACAPS, Wikipedia"
+      },
+      "error": ""
+    },
+    {
+      "input": "2023 (Banking crisis & Saudi-Houthi talks)",
+      "output": {
+        "year": "2023",
+        "major_events_summary": "The year 2023 was defined by a fragile de-escalation driven by Saudi-Houthi talks, yet the economic and humanitarian crises deepened due to severe fiscal fragmentation. The Houthi-imposed blockade on oil exports caused a significant decline in the Internationally Recognized Government's (IRG) revenues, exacerbating the banking crisis and leading to a stark divergence in inflation and exchange rates between IRG and Houthi-controlled areas. Real GDP contracted by an estimated 2.0%, while 21.6 million people remained in need of humanitarian assistance, underscoring the severe impact of the protracted conflict and economic warfare on the civilian population.",
+        "gdp_data": "$19.412B, -2.0% growth (IMF 2023)",
+        "exchange_rate": "1250 YER/USD average (parallel market, CBY-Sana'a 2023); 700-1338 YER/USD range (IRG-controlled areas, World Bank 2023)",
+        "inflation_rate": "0.86% (Statista/IMF 2023); 7.0% in Aden, -11.8% in Sana'a (World Bank 2023)",
+        "humanitarian_data": "21.6M people in need, 4.5M IDPs, $4.34B funding requirement (UN OCHA 2023)",
+        "key_actors": "Internationally Recognized Government (IRG), Houthis, Saudi Arabia, United Arab Emirates (UAE), United Nations (UN), UN OCHA, World Bank, International Monetary Fund (IMF), IOM",
+        "major_reports": "Yemen Economic Monitor, Fall 2023 (World Bank) [URL: https://openknowledge.worldbank.org/entities/publication/53f95f22-679b-47d0-b186-7400850c705d]; Yemen Humanitarian Response Plan 2023 (UN OCHA) [URL: https://fts.unocha.org/plans/1116/summary]; IMF Staff Concludes Staff Visit to Yemen (IMF) [URL: https://www.imf.org/en/news/articles/2024/05/02/pr-24133-yemen-imf-staff-concludes-staff-visit]",
+        "causations": "Houthi-imposed blockade on oil exports → IRG fiscal revenue decline by over 30% (World Bank 2023)\nSaudi-Houthi talks and UN mediation efforts → Sustained, though fragile, de-escalation (Crisis Group 2023)\nCurrency depreciation in IRG-controlled areas → Elevated inflation at 7.0% in Aden (World Bank 2023)\nProtracted conflict and economic fragmentation → 21.6M people needing humanitarian assistance (OCHA 2023)",
+        "sources": "IMF DataMapper, World Bank, UN OCHA, IOM, Sana'a Center for Strategic Studies, Crisis Group, Statista, Central Bank of Yemen (CBY)"
+      },
+      "error": ""
+    },
+    {
+      "input": "2024 (Red Sea attacks)",
+      "output": {
+        "year": "2024",
+        "major_events_summary": "The year 2024 was defined by the significant escalation of the **Red Sea crisis**, where the Houthi movement's attacks on international shipping lanes led to retaliatory military strikes by a US-led coalition, effectively freezing the fragile peace process. Economically, the country continued to suffer from a fragmented fiscal system and a sustained blockade on oil exports, resulting in a projected **GDP contraction of 1.0%** and an estimated **inflation rate of 27%**. The humanitarian crisis remained catastrophic, with **18.2 million people** requiring assistance and the Humanitarian Response Plan facing a massive **$2.7 billion funding gap**, further exacerbating acute food insecurity for over 17 million people.",
+        "gdp_data": "$19.10 Billion, -1.0% growth (World Bank 2024) [2]",
+        "exchange_rate": "1,842.15 YER/USD average (CBY June 2024) [5]",
+        "inflation_rate": "27% (IMF 2024) [6]",
+        "humanitarian_data": "18.2M people in need, 17.6M food insecure, 4.5M IDPs, $2.7B funding requirement (UN OCHA 2024) [5]",
+        "key_actors": "Houthis, Government of Yemen (internationally recognized), Saudi Arabia, United Arab Emirates (UAE), United States (US), United Kingdom (UK), UN OCHA, World Bank, International Monetary Fund (IMF), World Food Programme (WFP)",
+        "major_reports": "Yemen Economic Monitor (World Bank); Yemen Humanitarian Needs Overview 2024 (UN OCHA); Yemen Humanitarian Response Plan 2024 (UN OCHA); World Report 2024: Yemen (Human Rights Watch)",
+        "causations": "Houthi Red Sea attacks (starting late 2023) → Disruption of global shipping and trade routes (quantified impact: Suez Canal traffic down 50% in early 2024) [3] [4]\nHouthi Red Sea attacks → US/UK military strikes on Houthi targets in Yemen (Operation Prosperity Guardian) [1]\nHouthi Red Sea attacks & US/UK strikes → Freezing of Omani-facilitated peace talks between Houthis and Saudi Arabia [1] [7]\nHouthi Red Sea attacks & oil export blockade → Projected GDP contraction of 1.0% in 2024 (World Bank) [2]\nOil export blockade & fiscal fragmentation → Continued pressure on the Yemeni Rial and high inflation (estimated 27% in 2024) [2] [6]\nSevere funding cuts for humanitarian aid → Deepening acute food insecurity in Government-controlled areas (quantified impact: 17.6M people facing acute food insecurity) [5]",
+        "sources": "World Bank, UN OCHA, IMF, Central Bank of Yemen (CBY), CSIS, Atlas Institute, Security Council Report, Human Rights Watch"
+      },
+      "error": ""
+    },
+    {
+      "input": "2025 (current situation)",
+      "output": {
+        "year": "2025",
+        "major_events_summary": "Yemen's economy remained under severe strain in 2025, marked by a projected real GDP contraction of 0.5% and inflation that surged above 35% by mid-year due to the rial's 30% weakening. The political landscape remained stalled, with the peace process failing to advance and the continued impact of Houthi attacks on oil facilities halting exports. The humanitarian crisis deepened, with 19.5 million people in need and the YHNRP 2025 only 24% funded by November, forcing the IRG to adopt FX stabilization measures in August to ease currency pressures.",
+        "gdp_data": "$17.35B (nominal, IMF 2025 est.), -0.5% growth (IMF 2025)",
+        "exchange_rate": "2,575.00 YER/USD average (CBY parallel market April 2025)",
+        "inflation_rate": "20.4% (IMF WEO 2025 est.)",
+        "humanitarian_data": "19.5M people in need, ~4.95M acutely food insecure (IPC Phase 3+), ~4.8M IDPs, $2.48B funding required (UN OCHA/IPC/JDC 2025)",
+        "key_actors": "Internationally Recognized Government (IRG), Houthis, Saudi Arabia, IMF, World Bank, UN OCHA, IOM DTM",
+        "major_reports": "Yemen: Concluding Statement of the 2025 IMF Article IV Mission (https://www.imf.org/en/news/articles/2025/10/09/imf-cs-yemen-2025-imf-article-iv-mission); Yemen Economic Monitor, Spring 2025 (World Bank); Yemen Economic Monitor, November 2025 (https://openknowledge.worldbank.org/entities/publication/fd2c610d-9809-4225-98a8-fc188aab051b); Yemen Humanitarian Needs and Response Plan (YHNRP) 2025 (UN OCHA)",
+        "causations": "Houthis' attacks on oil facilities → Halted oil exports → GDP contraction -0.5% (IMF 2025)\nWeakening of the Yemeni rial by 30% → Inflation rising above 35% by July 2025 (IMF 2025)\nFX stabilization measures adopted by IRG → Yemeni rial appreciated and stabilized (IMF 2025)\nSevere funding cuts → Acute food insecurity for ~4.95M people (UN OCHA/IPC 2025)",
+        "sources": "IMF, World Bank, UN OCHA, IOM DTM, IPC, Central Bank of Yemen (CBY), Trading Economics, Statista, Joint Data Center (JDC)"
+      },
+      "error": ""
+    }
+  ]
+}

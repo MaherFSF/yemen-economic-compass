@@ -1,0 +1,174 @@
+{
+  "results": [
+    {
+      "input": "2016",
+      "output": {
+        "year": "2016",
+        "gdp": "27.60",
+        "gdp_growth": "-9.38",
+        "inflation": "21.30",
+        "exchange_aden": "250",
+        "exchange_sanaa": "315",
+        "people_in_need": "21.2",
+        "food_insecure": "14.4",
+        "aid_required": "1.63",
+        "aid_received": "1.03",
+        "major_events": "President Hadi moves the Central Bank of Yemen from Sanaa to Aden, effectively splitting the country's financial system; UN revises the 2016 Humanitarian Response Plan, appealing for $1.63 billion to reach 12.6 million people; Peace talks in Kuwait collapse in August, leading to a major escalation of fighting and the collapse of a UN-brokered ceasefire."
+      },
+      "error": ""
+    },
+    {
+      "input": "2017",
+      "output": {
+        "year": "2017",
+        "gdp": "26.84",
+        "gdp_growth": "-5.07",
+        "inflation": "24.70",
+        "exchange_aden": "250",
+        "exchange_sanaa": "321",
+        "people_in_need": "18.8",
+        "food_insecure": "17.1",
+        "aid_required": "2.34",
+        "aid_received": "2.36",
+        "major_events": "Second major cholera outbreak (April 2017); Assassination of Ali Abdullah Saleh (December 2017); Saudi-led coalition imposes total blockade (November 2017)"
+      },
+      "error": ""
+    },
+    {
+      "input": "2018",
+      "output": {
+        "year": "2018",
+        "gdp": "21.61",
+        "gdp_growth": "0.80",
+        "inflation": "15.90",
+        "exchange_aden": "493",
+        "exchange_sanaa": "250",
+        "people_in_need": "22.2",
+        "food_insecure": "17.8",
+        "aid_required": "3.11",
+        "aid_received": "2.50",
+        "major_events": "Battle of Aden (Jan 28-31); Dahyan school bus airstrike (Aug 9); Stockholm Agreement (Dec)"
+      },
+      "error": ""
+    },
+    {
+      "input": "2019",
+      "output": {
+        "year": "2019",
+        "gdp": "21.88",
+        "gdp_growth": "-2.20",
+        "inflation": "10.50",
+        "exchange_aden": "550",
+        "exchange_sanaa": "580",
+        "people_in_need": "24.0",
+        "food_insecure": "14.3",
+        "aid_required": "4.19",
+        "aid_received": "3.64",
+        "major_events": "Southern Transitional Council (STC) forces seize Aden from the internationally recognized government (IRG);Riyadh Agreement signed between the IRG and the STC;Houthi forces claim responsibility for the major drone and missile attack on Saudi Aramco oil facilities"
+      },
+      "error": ""
+    },
+    {
+      "input": "2020",
+      "output": {
+        "year": "2020",
+        "gdp": "9.42",
+        "gdp_growth": "-8.50",
+        "inflation": "21.67",
+        "exchange_aden": "782",
+        "exchange_sanaa": "604",
+        "people_in_need": "24.3",
+        "food_insecure": "16.2",
+        "aid_required": "3.38",
+        "aid_received": "1.99",
+        "major_events": "Saudi-led coalition declared a unilateral ceasefire in April; First confirmed COVID-19 case in Yemen on April 10; Houthi forces launched a major offensive on Marib"
+      },
+      "error": ""
+    },
+    {
+      "input": "2021",
+      "output": {
+        "year": "2021",
+        "gdp": "19.91",
+        "gdp_growth": "-2.00",
+        "inflation": "20.40",
+        "exchange_aden": "1000",
+        "exchange_sanaa": "600",
+        "people_in_need": "20.7",
+        "food_insecure": "16.2",
+        "aid_required": "3.85",
+        "aid_received": "2.42",
+        "major_events": "Houthi offensive on Marib; Major currency depreciation in Aden; UN warns of famine and declares 16.2M food insecure"
+      },
+      "error": ""
+    },
+    {
+      "input": "2022",
+      "output": {
+        "year": "2022",
+        "gdp": "23.50",
+        "gdp_growth": "1.50",
+        "inflation": "29.51",
+        "exchange_aden": "1200",
+        "exchange_sanaa": "560",
+        "people_in_need": "23.4",
+        "food_insecure": "17.4",
+        "aid_required": "4.27",
+        "aid_received": "2.22",
+        "major_events": "UN-brokered nationwide truce (April-October); Formation of the Presidential Leadership Council (PLC) in Aden; Houthi attacks on oil facilities and blockade of oil exports"
+      },
+      "error": ""
+    },
+    {
+      "input": "2023",
+      "output": {
+        "year": "2023",
+        "gdp": "16.90",
+        "gdp_growth": "-2.00",
+        "inflation": "0.86",
+        "exchange_aden": "1250",
+        "exchange_sanaa": "560",
+        "people_in_need": "21.6",
+        "food_insecure": "17.0",
+        "aid_required": "4.34",
+        "aid_received": "1.78",
+        "major_events": "Saudi-Iran agreement to restore relations (March); Houthi attacks on commercial vessels in the Red Sea begin (October); Truce between warring parties expires without renewal (January)"
+      },
+      "error": ""
+    },
+    {
+      "input": "2024",
+      "output": {
+        "year": "2024",
+        "gdp": "19.10",
+        "gdp_growth": "-1.00",
+        "inflation": "33.92",
+        "exchange_aden": "2053",
+        "exchange_sanaa": "560",
+        "people_in_need": "18.2",
+        "food_insecure": "17.6",
+        "aid_required": "2.71",
+        "aid_received": "2.77",
+        "major_events": "Escalation of Houthi attacks in the Red Sea and US/UK retaliatory strikes; Record depreciation of the Yemeni Rial in Aden to over 2,000 YER/USD; Houthi-Aden Central Bank conflict over bank relocation and new currency issuance"
+      },
+      "error": ""
+    },
+    {
+      "input": "2025",
+      "output": {
+        "year": "2025",
+        "gdp": "17.35",
+        "gdp_growth": "-1.50",
+        "inflation": "20.40",
+        "exchange_aden": "2628",
+        "exchange_sanaa": "534",
+        "people_in_need": "19.5",
+        "food_insecure": "18.1",
+        "aid_required": "2.34",
+        "aid_received": "0.73",
+        "major_events": "US Treasury imposed largest sanctions against Houthis (Sep 2025); GoY launched broad financial and monetary reforms (mid-2025); US forces expanded strikes against Houthis (Mar-May 2025)"
+      },
+      "error": ""
+    }
+  ]
+}

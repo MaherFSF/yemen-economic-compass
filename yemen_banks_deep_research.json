@@ -1,0 +1,344 @@
+{
+  "results": [
+    {
+      "input": "CAC Bank (Credit Agricole Yemen) - Yemen's largest commercial bank",
+      "output": {
+        "bank_name_en": "Cooperative and Agricultural Credit Bank (CAC Bank)",
+        "bank_name_ar": "بنك التسليف التعاوني والزراعي",
+        "founding_year": "1982",
+        "ownership": "State-owned (Republic of Yemen)",
+        "bank_type": "Commercial",
+        "sanctions_status": "No sanctions found on international lists (OFAC, EU, UN) specifically against CAC Bank. However, the bank was pressured to formally relocate its headquarters to Aden in 2024/2025 to avoid potential sanctions, following the designation of other major Yemeni banks.",
+        "operational_status_2025": "Split operations (Aden/Sana'a)",
+        "branches_2014": "46",
+        "branches_2025": "Unknown",
+        "assets_usd_millions": "$2.24B (2014) / $1.67B (2015)",
+        "crisis_impact": "The bank was severely impacted by the war, with total assets dropping from YER 482 billion in 2014 to YER 359 billion in 2015. The 2016 CBY split created a dual regulatory environment, complicating its operations and forcing a formal relocation of its headquarters to Aden in 2024/2025 to avoid international sanctions, despite maintaining a significant operational presence in Sana'a.",
+        "compelling_narrative": "CAC Bank, Yemen's largest commercial bank and a state-owned institution, has played a pivotal role in the country's economic history, particularly in financing the agricultural sector. Its journey through the crisis is a microcosm of the Yemeni financial sector's struggle, with its assets plummeting by 25% in the first year of the war. Despite the conflict and the 2016 CBY split, the bank has demonstrated remarkable resilience, maintaining a wide branch network and adapting to the dual-authority environment. Its recent formal relocation of its headquarters to Aden, under pressure from the internationally recognized government and the threat of US sanctions, highlights its critical, yet precarious, position at the heart of Yemen's fractured economy.",
+        "top_sources": "CAC Bank Annual Report 2016, World Bank Yemen Financial Sector Diagnostics 2024, Sana'a Center for Strategic Studies",
+        "data_confidence": "Medium - High confidence in pre-2016 data (profile, 2014 assets, 2014 branches) from World Bank and bank reports. Low confidence in current (2025) branches and assets due to lack of recent, verifiable financial statements and the operational split."
+      },
+      "error": ""
+    },
+    {
+      "input": "Yemen Kuwait Bank - Major commercial bank with Kuwaiti ownership",
+      "output": {
+        "bank_name_en": "Yemen Kuwait Bank for Trade and Investment Y.S.C.",
+        "bank_name_ar": "بنك اليمن والكويت للتجارة والاستثمار",
+        "founding_year": "1977",
+        "ownership": "Private Yemeni-owned (originally a Yemeni-Kuwaiti joint venture)",
+        "bank_type": "Commercial",
+        "sanctions_status": "Sanctioned by the U.S. Department of the Treasury's Office of Foreign Assets Control (OFAC) on January 17, 2025, for providing financial support to Ansarallah (the Houthis), including aiding in money laundering and facilitating Iranian oil sales. OFAC issued General License 32 to authorize a wind-down of transactions.",
+        "operational_status_2025": "Partially operational",
+        "branches_2014": "Unknown",
+        "branches_2025": "27",
+        "assets_usd_millions": "Data not available",
+        "crisis_impact": "The 2011 revolution contributed to general instability, but the major impact came from the 2015 war and the 2016 CBY split. YKB chose to remain headquartered in Sana'a, aligning its operations with the Houthi-controlled Central Bank of Yemen (CBY-Sana'a). This decision led to the CBY-Aden revoking its license and culminated in the U.S. Treasury's OFAC sanctions in January 2025, severely restricting its access to the international financial system.",
+        "compelling_narrative": "Yemen Kuwait Bank (YKB) is a symbol of the deep fragmentation within Yemen's financial sector, having transformed from the country's first private bank in 1977 into a key financial entity operating under Houthi control in Sana'a. While many banks struggled or split operations, YKB experienced an \"unprecedented revival\" in Houthi-controlled areas post-2014, becoming one of the few major banks to remain headquartered in the capital. This alignment led to its designation by the U.S. Treasury in January 2025 for allegedly facilitating illicit financial activities for the Houthis, including money laundering and supporting Iranian oil sales. Despite the sanctions, YKB continues to operate a significant network of 27 branches and over 140 ATMs, making it a critical, albeit controversial, conduit for financial services in northern Yemen.",
+        "top_sources": "U.S. Department of the Treasury Press Release (Jan 17, 2025), Yemen Kuwait Bank LinkedIn Profile, Sana'a Center for Strategic Studies",
+        "data_confidence": "Medium: Profile and sanctions data are high-confidence (official U.S. Treasury and bank sources). Financial data (assets, pre-war branches) is low-confidence, relying on fragmented reports and general sector data."
+      },
+      "error": ""
+    },
+    {
+      "input": "Tadhamon International Islamic Bank - Leading Islamic bank",
+      "output": {
+        "bank_name_en": "Tadhamon International Islamic Bank",
+        "bank_name_ar": "بنك التضامن الإسلامي الدولي",
+        "founding_year": "1996",
+        "ownership": "Private, Yemeni Joint Stock Company (part of Hayel Saeed Anam Group)",
+        "bank_type": "Islamic",
+        "sanctions_status": "No direct OFAC, EU, or UN sanctions found on the bank itself. However, the bank was subject to a Houthi seizure of assets in 2021 and was one of the banks ordered by the CBY-Aden to relocate from Sana'a in 2025 due to regulatory disputes.",
+        "operational_status_2025": "Split operations (Aden/Sana'a)",
+        "branches_2014": "24",
+        "branches_2025": "37",
+        "assets_usd_millions": "$2,314M (2022)",
+        "crisis_impact": "The bank's operations were severely impacted by the 2015 war and the 2016 CBY split, which created a liquidity crisis and a fractured regulatory environment. The most dramatic impact was the 2021 seizure of its assets and deposits by the Houthi authorities in Sana'a, leading to a major operational crisis. In 2025, the bank was forced to formally notify the CBY-Aden of its intention to relocate its headquarters, solidifying a difficult operational split between the two warring capitals.",
+        "compelling_narrative": "Tadhamon Bank, the largest private Islamic bank in Yemen, has demonstrated remarkable resilience by maintaining its asset base and expanding its branch network to 37 locations despite the ongoing conflict. Its unique challenge came in 2021 when the Houthi authorities in Sana'a seized its assets and deposits, forcing the bank to operate under immense political pressure. This crisis culminated in 2025 when the bank, along with others, was ordered by the CBY-Aden to relocate its headquarters, formalizing a difficult operational split between the country's two financial centers. The bank's survival through this political and economic turmoil highlights its critical role in Yemen's fractured financial landscape.",
+        "top_sources": "Tadhamon Bank Official Website, Sana'a Center for Strategic Studies, World Bank Yemen Economic Monitor",
+        "data_confidence": "Medium - High confidence in bank profile and crisis impact from multiple credible sources (bank website, Sana'a Center, World Bank). Financial data is based on the most recent publicly available figures (2022) and is subject to the volatility and unreliability of the Yemeni rial exchange rate. Branch numbers are based on the bank's own claims and secondary sources."
+      },
+      "error": ""
+    },
+    {
+      "input": "Yemen Commercial Bank - State-owned commercial bank",
+      "output": {
+        "bank_name_en": "Yemen Commercial Bank (YCB)",
+        "bank_name_ar": "البنك التجاري اليمني",
+        "founding_year": "1993",
+        "ownership": "Private (Yemeni closed joint-stock company)",
+        "bank_type": "Commercial",
+        "sanctions_status": "No sanctions found. While other Yemeni banks have been sanctioned by the US Treasury (OFAC) in 2025 for supporting the Houthis, Yemen Commercial Bank (YCB) itself has not been designated as of December 2025.",
+        "operational_status_2025": "Partially operational",
+        "branches_2014": "Unknown",
+        "branches_2025": "12",
+        "assets_usd_millions": "Data not available",
+        "crisis_impact": "The 2015 war and the 2016 CBY split severely impacted YCB, forcing it to navigate a fractured monetary system with two rival central banks. Like all commercial banks, YCB faced a massive liquidity crisis, a sharp decline in deposits, and the challenge of maintaining operations across warring territories. Its head office is now listed in Aden, but it maintains a significant branch network in Sana'a, indicating a necessary, though unconfirmed, form of split or dual operation to serve customers across the divided country.",
+        "compelling_narrative": "Yemen Commercial Bank (YCB) holds the unique distinction of being the first private commercial bank established after the 1990 unification of Yemen, founded by a consortium of Yemeni businessmen in 1993. This private status is a crucial differentiator, as the user's initial prompt incorrectly identified it as \"State-owned.\" Despite the devastating civil war and the 2016 split of the Central Bank of Yemen, YCB has demonstrated remarkable resilience, maintaining its operations and expanding its digital services. Its survival and continued focus on modern banking solutions, such as its 70-ATM network and \"Tejari\" digital services, highlight its pivotal role in sustaining financial inclusion amidst one of the world's worst humanitarian crises.",
+        "top_sources": "Yemen Commercial Bank official website, Sana'a Center for Strategic Studies, World Bank Financial Sector Diagnostics",
+        "data_confidence": "Low: Specific financial data (assets, capital) and pre-war branch numbers for YCB are not publicly available from credible international sources or the bank's website. The ownership status was clarified, but the current operational status is inferred from the branch listing."
+      },
+      "error": ""
+    },
+    {
+      "input": "National Bank of Yemen - Major state bank",
+      "output": {
+        "bank_name_en": "National Bank of Yemen",
+        "bank_name_ar": "البنك الأهلي اليمني",
+        "founding_year": "1969",
+        "ownership": "State-owned by the Government of the Republic of Yemen",
+        "bank_type": "Commercial",
+        "sanctions_status": "No sanctions found. The bank is the state-owned commercial bank operating under the internationally recognized government in Aden, which is generally aligned with US/EU policy. Recent US sanctions have targeted other banks (e.g., International Bank of Yemen) for supporting the Houthis, but NBY has not been designated.",
+        "operational_status_2025": "Partially operational",
+        "branches_2014": "46",
+        "branches_2025": "27",
+        "assets_usd_millions": "$2,825M (2023)",
+        "crisis_impact": "The 2011 revolution and 2015 war severely impacted NBY's financial activities and led to a significant reduction in its branch network. The 2016 CBY split was a defining moment, with NBY firmly aligning its head office and operations under the CBY-Aden, effectively making it the state's commercial banking arm in the south. This alignment has protected it from recent US sanctions targeting banks operating under Houthi control, but has also isolated its operations from the northern regions.",
+        "compelling_narrative": "As the primary state-owned commercial bank, the National Bank of Yemen (NBY) has been a central figure in Yemen's economic war, operating under the internationally recognized government's authority in Aden. Its survival and continued operation, despite the collapse of the unified financial system, underscore its critical role in maintaining a semblance of formal banking in the south. The NBY's network, though reduced from its pre-war size, remains a vital channel for government salaries and international transactions, making it a key instrument in the ongoing financial struggle for legitimacy and control. Its ability to secure international recognition and avoid sanctions, unlike some Sana'a-based counterparts, highlights its strategic importance to the Aden government.",
+        "top_sources": "National Bank of Yemen (NBY) 2023 Financial Data, World Bank Yemen Economic Monitor, Sana'a Center for Strategic Studies",
+        "data_confidence": "Medium: Financial data is from 2023, and branch counts (2014: 46, 2025: 27) are estimates based on cross-referencing a World Bank report and a Wikipedia/2021 FS snippet, not a definitive 2025 figure from the bank itself."
+      },
+      "error": ""
+    },
+    {
+      "input": "Cooperative and Agricultural Credit Bank (CACB) - Agricultural finance focus",
+      "output": {
+        "bank_name_en": "Cooperative and Agricultural Credit Bank (CAC Bank)",
+        "bank_name_ar": "البنك التعاوني الزراعي",
+        "founding_year": "1982",
+        "ownership": "State-owned (Government of Yemen)",
+        "bank_type": "Commercial",
+        "sanctions_status": "No sanctions found. The bank is not listed on the OFAC, EU, or UN sanctions lists.",
+        "operational_status_2025": "Split operations (Aden/Sana'a)",
+        "branches_2014": "46",
+        "branches_2025": "Unknown",
+        "assets_usd_millions": "$1.22B (2021)",
+        "crisis_impact": "The 2011 revolution and 2015 war led to severe operational challenges and a liquidity crisis. The 2016 CBY split was the most significant blow, as the Sana'a-based CBY branch stopped servicing government debt, which constituted a majority of CAC Bank's assets. This caused a sharp drop in interest income and liquidity, forcing the bank to officially move its headquarters to Aden and split its operations, though it has since managed to increase its total assets by 38% between 2016 and 2021 by focusing on liquid assets.",
+        "compelling_narrative": "CAC Bank, once a cornerstone of Yemen's financial system with a focus on agricultural development, became a casualty of the country's political fragmentation. As a state-owned bank, its high exposure to government securities (65% of assets in 2014) meant the 2016 CBY split and subsequent suspension of interest payments by the Sana'a-based CBY branch severely impacted its liquidity and profitability. The bank was forced to split its operations, with the official headquarters relocating to Aden, while a large portion of its network remained in the North. This division transformed the bank from a national institution into a symbol of the country's economic and political schism, yet it continues to operate in both regions, adapting to the dual-economy reality.",
+        "top_sources": "World Bank Yemen Financial Sector Diagnostics (2024), CAC Bank Official Website, OpenSanctions Database",
+        "data_confidence": "Medium: Core profile data (name, founding year, ownership) is confirmed by multiple sources. Financial data is sourced from a World Bank report citing 2021 figures, but a precise, recent USD conversion is challenging due to the dual exchange rate system. The current number of operating branches is unknown, but the pre-war number is confirmed. Sanctions status is confirmed as clear."
+      },
+      "error": ""
+    },
+    {
+      "input": "Saba Islamic Bank - Islamic banking services",
+      "output": {
+        "bank_name_en": "Saba Islamic Bank",
+        "bank_name_ar": "بنك سبأ الإسلامي",
+        "founding_year": "1997",
+        "ownership": "Private joint-stock company with a wide shareholder base, including the Islamic Corporation for the Development of the Private Sector (ICD) as a key shareholder.",
+        "bank_type": "Islamic",
+        "sanctions_status": "No direct sanctions found on Saba Islamic Bank. However, in March 2025, the bank officially relocated its headquarters from Sana'a to Aden to avoid being subjected to US sanctions imposed on the Houthi-controlled financial system.",
+        "operational_status_2025": "Split operations (Aden/Sana'a)",
+        "branches_2014": "17",
+        "branches_2025": "14",
+        "assets_usd_millions": "Data not available",
+        "crisis_impact": "The bank's operations were severely fragmented by the 2015 war and the 2016 CBY split, forcing it to navigate two separate regulatory environments. The most significant impact came in March 2025, when SIB officially relocated its headquarters from Sana'a to Aden to preemptively avoid US sanctions targeting the Houthi-controlled financial system. This move, which followed the arrest of some of its executives by Houthi security forces, highlights the extreme operational risks and political pressure faced by the bank.",
+        "compelling_narrative": "Saba Islamic Bank (SIB) was a pioneer in Yemen's Islamic finance sector, rapidly expanding its network to 17 branches across the country before the war. Its most compelling story is its recent strategic move in March 2025, when it officially notified the Central Bank of Yemen in Aden of its decision to relocate its headquarters from Sana'a. This move, taken alongside other major banks, was a direct response to the threat of US sanctions following the designation of the Houthis as a Foreign Terrorist Organization, underscoring the bank's desperate effort to maintain access to the international financial system. This relocation represents a watershed moment, challenging the Houthi-controlled financial authority and solidifying the bank's alignment with the internationally recognized government.",
+        "top_sources": "CBY Aden Clarification Announcement (March 2025), ICD Project Page (Saba Islamic Bank), Sana'a Center for Strategic Studies (Revitalizing Yemen's Banking Sector)",
+        "data_confidence": "Medium: Founding year and operational status are confirmed by primary sources (CBY-Aden, bank's own history). Financial data (assets, ratios) is unavailable, and branch counts are based on pre-war academic/partner reports and recent partner data, which may not reflect current operational capacity."
+      },
+      "error": ""
+    },
+    {
+      "input": "Yemen Islamic Bank - Sharia-compliant banking",
+      "output": {
+        "bank_name_en": "Tadhamon International Islamic Bank",
+        "bank_name_ar": "بنك التضامن الدولي الإسلامي",
+        "founding_year": "1996",
+        "ownership": "Private Yemeni Joint Stock Company, with strong ties to the Hayel Saeed Anam Group (HSA).",
+        "bank_type": "Islamic",
+        "sanctions_status": "No sanctions found. The bank's website states it uses sanctions screening against OFAC, UN, EU, and UK lists. There are no public records of TIIB or its leadership being designated by major international bodies.",
+        "operational_status_2025": "Split operations (Aden/Sana'a)",
+        "branches_2014": "40",
+        "branches_2025": "40",
+        "assets_usd_millions": "$2,160M (2020)",
+        "crisis_impact": "The 2011 revolution and 2015 war severely impacted TIIB's operating environment, leading to a political split in the Central Bank of Yemen (CBY) in 2016. TIIB, headquartered in Sana'a, faced immense pressure from the CBY-Aden to relocate, a directive it eventually complied with in 2024, leading to a de facto split in its regulatory oversight. Despite the turmoil, the bank's financial statements noted the continuing economic crisis but maintained an unqualified opinion, highlighting its relative stability. The crisis forced the bank to operate under dual regulatory systems and navigate a volatile exchange rate environment, yet it managed to maintain its branch network and a strong deposit base.",
+        "compelling_narrative": "Tadhamon International Islamic Bank (TIIB) stands as a resilient giant in Yemen's fractured financial landscape, consistently ranking as one of the country's largest banks by assets and deposits, a position it has maintained even after the 2015 conflict. Unlike many peers, TIIB successfully navigated the CBY split and the subsequent economic war, managing to keep its extensive network of 40 branches and offices operational across both the Houthi-controlled North and the internationally-recognized government's South. Its unique strength lies in its deep ties to the powerful Hayel Saeed Anam Group, which provides a crucial, non-political anchor of stability and trust for its vast customer base, making it a vital conduit for remittances and humanitarian aid. The bank's survival and continued operation in a politically and economically divided country make its journey a remarkable case study in financial resilience under extreme duress.",
+        "top_sources": "Tadhamon Bank Official Website, Sana'a Center for Strategic Studies, TIIB Consolidated Financial Statements (2020)",
+        "data_confidence": "Medium - High confidence in bank profile and operational status based on the bank's official website and multiple credible third-party reports. Low confidence in the 2014 branch number, which is assumed to be the same as the current number due to lack of a specific pre-war figure. Financial data is based on the bank's 2020 audited financial statements."
+      },
+      "error": ""
+    },
+    {
+      "input": "International Bank of Yemen - Commercial banking",
+      "output": {
+        "bank_name_en": "International Bank of Yemen Y.S.C.",
+        "bank_name_ar": "بنك اليمن الدولي",
+        "founding_year": "1979",
+        "ownership": "Private, with significant ownership by influential Yemeni families and the Saudi-Yemeni Bin Mahfooz family. Currently under the de facto control of Houthi authorities in Sana'a.",
+        "bank_type": "Commercial",
+        "sanctions_status": "Sanctioned by the U.S. Department of the Treasury's Office of Foreign Assets Control (OFAC) on April 17, 2025, for providing financial support to the Iran-backed Houthi group (Ansarallah). The designation includes a general license for a wind-down period. No confirmed EU or UN sanctions found as of the research date.",
+        "operational_status_2025": "Partially operational",
+        "branches_2014": "Unknown",
+        "branches_2025": "Unknown",
+        "assets_usd_millions": "Data not available",
+        "crisis_impact": "The 2015 war and the 2016 CBY split severely impacted IBY, primarily due to its location in Sana'a, which placed it under the control of the Houthi authorities. This led to its alleged use for Houthi financial operations. The ultimate impact was the April 2025 designation by the US Treasury (OFAC) for providing financial support to the Houthis, which effectively cut the bank off from the international financial system and severely restricted its operations.",
+        "compelling_narrative": "The International Bank of Yemen (IBY) is a symbol of the deep entanglement between Yemen's private sector and its political conflict. Once a leading private commercial bank, its story has become a cautionary tale of institutional capture. Its headquarters in Sana'a placed it under the de facto control of the Houthi authorities, leading to its eventual designation by the US Treasury in April 2025 for providing financial support to the group. This sanctioning, which includes a wind-down period, effectively isolates one of Yemen's largest banks from the international financial system, highlighting the extreme risks faced by institutions operating in the Houthi-controlled north and underscoring the devastating impact of the economic war on Yemen's banking sector.",
+        "top_sources": "U.S. Department of the Treasury (OFAC) Press Release April 2025, Sana'a Center for Strategic Studies, MEED (Middle East Economic Digest)",
+        "data_confidence": "Low: Specific financial figures (assets, NPLs) and branch numbers are not publicly available due to the conflict and the bank's operational status. Core profile and sanctions data are confirmed from multiple credible sources."
+      },
+      "error": ""
+    },
+    {
+      "input": "United Bank Limited Yemen - Foreign bank branch",
+      "output": {
+        "bank_name_en": "United Bank Limited, Yemen Branch",
+        "bank_name_ar": "يونايتد بنك ليمتيد",
+        "founding_year": "1972",
+        "ownership": "Foreign branch of United Bank Limited (Pakistan)",
+        "bank_type": "Commercial",
+        "sanctions_status": "No sanctions found on United Bank Limited or its Yemen branch by OFAC, EU, UK, or UN as of December 2025.",
+        "operational_status_2025": "Partially operational",
+        "branches_2014": "2",
+        "branches_2025": "Unknown",
+        "assets_usd_millions": "Data not available",
+        "crisis_impact": "The ongoing civil war and subsequent political and economic instability created insurmountable challenges for the branch, leading to the inability to repatriate profits and the need for the parent company to make provisions for asset impairment. The 2016 CBY split further complicated operations and access to foreign exchange.",
+        "compelling_narrative": "United Bank Limited (UBL) is one of the few foreign banks that has maintained a presence in Yemen, having operated a branch in Sana\\'a since 1972 and a second in Aden since 2008. Despite the parent company acknowledging \"insurmountable challenges\" due to the civil war, the branch has continued its administrative existence, filing tax returns as recently as 2024. This enduring, albeit severely limited, presence highlights the bank\\'s long-term commitment to the Yemeni market, even as its operational capacity has been reduced to a fraction of its pre-war state. Its continued, minimal operation makes it a quiet, yet significant, case study in foreign banking resilience in a conflict zone.",
+        "top_sources": "UBL Annual Report 2024, World Bank Policy Note 3 (2017), UBL Annual Report 2021",
+        "data_confidence": "Medium: Profile and crisis impact are well-documented in parent company reports. Financial and current branch data is aggregated or unavailable."
+      },
+      "error": ""
+    },
+    {
+      "input": "Shamil Bank of Yemen and Bahrain - Islamic bank",
+      "output": {
+        "bank_name_en": "Shamil Bank of Yemen and Bahrain",
+        "bank_name_ar": "مصرف اليمن البحرين الشامل",
+        "founding_year": "2002",
+        "ownership": "Private/Mixed (Bahraini, Saudi, and Yemeni shareholders)",
+        "bank_type": "Islamic",
+        "sanctions_status": "No sanctions found on international lists (OFAC, EU, UN). However, it was suspended by the CBY-Aden in May 2024 for non-compliance with the order to relocate its headquarters from Sana'a.",
+        "operational_status_2025": "Split operations (Aden/Sana'a)",
+        "branches_2014": "16",
+        "branches_2025": "17",
+        "assets_usd_millions": "$359M (2023)",
+        "crisis_impact": "The bank has been significantly affected by the 2015 war and the 2016 CBY split, resulting in a de facto split in its regulatory environment and operational challenges. Its refusal to comply with the CBY-Aden's 2024 order to relocate its headquarters from Sana'a led to its suspension by the Aden authority, highlighting its precarious position in the ongoing monetary and political conflict. Despite this, it has maintained a relatively stable asset base and branch network.",
+        "compelling_narrative": "Shamil Bank of Yemen and Bahrain is a major Islamic financial institution, notably one of the few with significant foreign ownership (Bahraini and Saudi) that has continued to operate throughout Yemen's crisis. Its resilience is demonstrated by its maintenance of a relatively stable branch network across both northern and southern governorates, reflecting a complex operational strategy to serve a divided market. This dual presence, however, has placed it at the center of the monetary war, leading to its suspension by the Aden-based Central Bank in 2024 for refusing to relocate its headquarters from Sana'a, a decision that underscores the immense political pressure on Yemen's financial sector.",
+        "top_sources": "Shamil Bank of Yemen and Bahrain Official Website, NBY/Bankers Almanac Bank Rankings (2025), OpenSanctions.org",
+        "data_confidence": "Medium: High confidence in bank profile and sanctions status. Medium confidence in assets figure (2023 data from a third-party ranking) and branch numbers (current count is verifiable, 2014 is an estimate from a secondary source)."
+      },
+      "error": ""
+    },
+    {
+      "input": "Al-Kuraimi Islamic Microfinance Bank - Microfinance and Islamic banking",
+      "output": {
+        "bank_name_en": "Al-Kuraimi Islamic Microfinance Bank",
+        "bank_name_ar": "",
+        "founding_year": "2010",
+        "ownership": "Private, transformed from a family-run money exchange business (Al-Kuraimi Exchange Company, 1995)",
+        "bank_type": "Microfinance",
+        "sanctions_status": "No sanctions found on the bank itself. However, in 2024, the bank was among those that notified the Central Bank of Yemen (Aden) of its decision to relocate its headquarters from Sana'a to Aden to comply with CBY-Aden directives and avoid potential US sanctions on banks operating under Houthi control",
+        "operational_status_2025": "",
+        "branches_2014": "",
+        "branches_2025": "",
+        "assets_usd_millions": "",
+        "crisis_impact": "",
+        "compelling_narrative": "",
+        "top_sources": "Al-Kuraimi Islamic Microfinance Bank Official Website, Sana'a Center for Strategic Studies (2020), World Bank Document (2024)",
+        "data_confidence": ""
+      },
+      "error": ""
+    },
+    {
+      "input": "Yemen Bank for Reconstruction and Development - Development finance",
+      "output": {
+        "bank_name_en": "Yemen Bank for Reconstruction and Development",
+        "bank_name_ar": "البنك اليمني للإنشاء والتعمير",
+        "founding_year": "1962",
+        "ownership": "Mixed (Partly government-owned, public shareholding)",
+        "bank_type": "Commercial",
+        "sanctions_status": "No sanctions found. The bank's decision to relocate its headquarters from Sana'a to Aden in July 2025 was a proactive measure to avoid potential future international sanctions from bodies like OFAC, which have been imposed on other banks operating under Houthi control.",
+        "operational_status_2025": "Split operations (Aden/Sana'a)",
+        "branches_2014": "46",
+        "branches_2025": "Unknown",
+        "assets_usd_millions": "Data not available",
+        "crisis_impact": "The 2011 revolution and subsequent 2015 war severely impacted YBRD, leading to liquidity crises, a decline in asset quality, and operational challenges due to the conflict. The 2016 split of the Central Bank of Yemen (CBY) into rival branches in Sana'a and Aden forced YBRD, as a partly state-owned bank, into a precarious position, having to navigate two competing regulatory environments. The most significant recent impact is the CBY-Aden's directive to relocate, which YBRD complied with in July 2025 to avoid potential U.S. sanctions, effectively splitting its operational and regulatory allegiance and further complicating its ability to serve customers across the divided country.",
+        "compelling_narrative": "The Yemen Bank for Reconstruction and Development (YBRD) is a foundational institution, established in 1962 as the first commercial bank in the former North Yemen, earning it the moniker \"the first child of the revolution.\" Its journey through Yemen's protracted crisis is a microcosm of the country's financial sector split. As a partly state-owned entity, it historically attracted a large share of foreign currency deposits and played a critical role in the economy. The bank's recent decision in July 2025 to relocate its headquarters from Houthi-controlled Sana'a to Aden, the internationally recognized capital, highlights the impossible choice faced by financial institutions: comply with the Aden-based Central Bank's directives to avoid crippling international sanctions or risk being cut off from the global financial system. This strategic move, following eight other banks, underscores YBRD's struggle to maintain its operational viability and international compliance amidst a fractured monetary system.",
+        "top_sources": "Barran Press July 2025, World Bank Yemen Financial Sector Diagnostics 2024, OpenSanctions.org",
+        "data_confidence": "Low: Specific, recent financial data (assets, NPLs) for YBRD is not publicly available, and the current branch count is unknown. Data on pre-war branches and operational status is sourced from credible reports (World Bank, news), but is not verifiable through official, recent bank statements."
+      },
+      "error": ""
+    },
+    {
+      "input": "Arab Bank Yemen - Pan-Arab banking presence",
+      "output": {
+        "bank_name_en": "Arab Bank Plc - Yemen",
+        "bank_name_ar": "البنك العربي",
+        "founding_year": "1972",
+        "ownership": "Foreign branch of Arab Bank Group (Jordan), a publicly traded Pan-Arab company",
+        "bank_type": "Commercial",
+        "sanctions_status": "No sanctions found",
+        "operational_status_2025": "Split operations (Aden/Sana'a)",
+        "branches_2014": "10",
+        "branches_2025": "Unknown",
+        "assets_usd_millions": "$1,170M (2012)",
+        "crisis_impact": "The 2011 revolution caused a significant 33% drop in the Yemen branch's net profits in 2012. The 2015 war and the 2016 CBY split led to the functional suspension of its extensive branch network, with the Sana'a branch reportedly facing a severe liquidity crisis and an inability to pay staff due to funds held by the Houthi-controlled CBY. The bank's recent strategic re-opening in Aden in 2025 marks a formal alignment with the CBY-Aden and a cautious return to active operations in the south.",
+        "compelling_narrative": "As a branch of the venerable Pan-Arab Arab Bank Group, which pioneered modern banking in Yemen in 1972, the bank represents a critical link to the global financial system. Its journey through the crisis is a microcosm of the country's economic fragmentation. After the 2015 war, the bank was forced to suspend most operations, with its Sana'a presence reduced to a legal shell due to the liquidity crisis and the CBY split. However, its recent decision to fully resume operations in Aden in September 2025 signals a strategic commitment to the internationally recognized government's financial hub, making it one of the few foreign banks actively re-engaging with the southern economy.",
+        "top_sources": "Reuters (2013), Global Finance (2014), Al-Ayyam Info (2025), Al-Harf 28 (2025)",
+        "data_confidence": "Medium - High confidence in profile and crisis impact, but low confidence in 2025 branch count and recent financial data due to lack of public disclosure for the Yemen branch post-2012."
+      },
+      "error": ""
+    },
+    {
+      "input": "Al-Amal Microfinance Bank - Microfinance services",
+      "output": {
+        "bank_name_en": "Al-Amal Microfinance Bank",
+        "bank_name_ar": "بنك الأمل للتمويل الأصغر",
+        "founding_year": "2009",
+        "ownership": "Mixed (Non-profit). Shareholders include the Yemeni Government (represented by SFD - 45%), AGFUND (35%), and Yemeni/Saudi private sectors (20%).",
+        "bank_type": "Microfinance",
+        "sanctions_status": "No sanctions found on OFAC, EU, or UN sanctions lists. The bank's operational model, which includes humanitarian aid distribution, has kept it clear of the sanctions imposed on other Yemeni financial entities.",
+        "operational_status_2025": "Fully operational",
+        "branches_2014": "18",
+        "branches_2025": "18",
+        "assets_usd_millions": "$224M (2023)",
+        "crisis_impact": "The bank demonstrated remarkable resilience, maintaining its operational status and branch network throughout the 2015 war and the 2016 CBY split. Its non-profit structure and focus on social transfers allowed it to adapt, becoming a key partner for international organizations in distributing humanitarian aid, which mitigated the liquidity crisis and service disruptions that crippled commercial banks. The bank's continued operation in both Sana'a and Aden-controlled areas, despite the political split, underscores its commitment to financial inclusion across the divided country.",
+        "compelling_narrative": "Al-Amal Microfinance Bank (AMB) is a unique non-profit institution, established as the first microfinance bank in Yemen and the MENA region. While many financial institutions struggled or closed during the conflict, AMB maintained its operational footprint, expanding its branch network from 18 in 2014 to an estimated 18 in 2025, and significantly growing its total assets to $224 million by 2023. This resilience is largely attributed to its non-profit model, which allowed it to pivot from traditional micro-lending to humanitarian and social transfer services, making it a critical lifeline for the unbanked and marginalized populations in a war-torn economy. Its survival and growth demonstrate the vital role of microfinance in providing financial inclusion and stability in fragile contexts.",
+        "top_sources": "Al-Amal Microfinance Bank Official Website, SSRN Paper (2024), Devex Organization Profile",
+        "data_confidence": "Medium - High confidence for profile and operational status, based on the bank's official website and multiple external reports. Low confidence for precise financial data (assets, deposits, NPL) for the full 2010-2025 period, as only a single 2023 asset figure was found, and year-by-year data is not publicly available."
+      },
+      "error": ""
+    },
+    {
+      "input": "Alkuraimi Exchange - Money exchange and remittances",
+      "output": {
+        "bank_name_en": "Al-Kuraimi Islamic Microfinance Bank",
+        "bank_name_ar": "",
+        "founding_year": "2010",
+        "ownership": "Private, 100% owned by the Al-Kuraimi family.",
+        "bank_type": "Islamic Microfinance",
+        "sanctions_status": "No sanctions found on OFAC, EU, or UN lists. The bank was one of several ordered by the CBY-Sana'a to relocate its headquarters to Aden in 2024, which it resisted, leading to a temporary operational crisis.",
+        "operational_status_2025": "Fully operational",
+        "branches_2014": "Unknown",
+        "branches_2025": "233",
+        "assets_usd_millions": "",
+        "crisis_impact": "The bank was uniquely resilient, capitalizing on the conflict to expand its network and digital services as commercial banks struggled. It faced regulatory pressure from the CBY-Sana'a in 2020, which ordered it to close its headquarters, but it has maintained operations across the country. The 2016 CBY split created a challenging operating environment with dual exchange rates, which the bank navigated by focusing on its extensive money transfer network.",
+        "compelling_narrative": "",
+        "top_sources": "Al-Kuraimi Islamic Microfinance Bank Official Website, Sana'a Center for Strategic Studies (2024), World Bank Yemen Financial Sector Diagnostics (2024)",
+        "data_confidence": "Medium: Profile and branch data are from the bank's official website and recent reports. Financial data (total assets) is not directly available and is inferred from sector-wide figures. Sanctions status is based on a search of major lists."
+      },
+      "error": ""
+    },
+    {
+      "input": "Hadramout Islamic Bank - Regional Islamic bank",
+      "output": {
+        "bank_name_en": "Hadhramout Bank",
+        "bank_name_ar": "بنك حضرموت",
+        "founding_year": "2021",
+        "ownership": "Private, 100% private capital joint-stock company.",
+        "bank_type": "Islamic",
+        "sanctions_status": "No sanctions found. The bank was established after the major sanctions on older Yemeni banks began, and a search of OFAC, EU, and UN lists yielded no results for \"Hadhramout Bank.\"",
+        "operational_status_2025": "Fully operational",
+        "branches_2014": "0",
+        "branches_2025": "7+",
+        "assets_usd_millions": "Data not available",
+        "crisis_impact": "As a newly established bank (licensed 2021), Hadhramout Bank was not directly affected by the 2011 revolution or the initial 2015 war impacts. However, its entire operational model is a direct response to the 2016 CBY split, as it is licensed by the CBY-Aden and operates exclusively in the internationally recognized government's sphere of influence. This positioning allows it to avoid the operational and political constraints faced by older banks with split operations in Sana'a and Aden.",
+        "compelling_narrative": "Hadhramout Bank is a unique case, being the first commercial bank established with 100% private capital and licensed in 2021, well into Yemen's civil war. Its founding in Mukalla, Hadhramout, a region largely under the control of the internationally recognized government, symbolizes a rare act of economic confidence and decentralization during a period of profound national crisis. The bank's rapid expansion to key cities like Aden and its focus on modern, Sharia-compliant digital services demonstrate a strategic effort to bypass the operational paralysis and political divisions that plague older, split institutions. Its existence and growth are a testament to the resilience of the private sector in southern Yemen and its ambition to modernize the country's fragmented financial landscape.",
+        "top_sources": "Hadhramout Bank Official Website, ICSFS Newsroom, South24 News",
+        "data_confidence": "Medium: The bank is very new (licensed 2021), and its official website explicitly states that financial statements are not yet available. Profile and operational data (name, founding year, branches) are confirmed via the bank's official website and recent news, but financial data is entirely missing."
+      },
+      "error": ""
+    }
+  ]
+}
