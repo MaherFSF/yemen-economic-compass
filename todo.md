@@ -28,6 +28,9 @@
 - [ ] Check yearly data (2010-2025) displays correctly
 
 ### Phase 4: Arabic & English Perfection
+- [x] **CRITICAL: Fix Arabic language display - ensure all Arabic text renders correctly with proper RTL support**
+- [x] **CRITICAL: Synchronize navigation dropdown menus with sitemap structure - ensure consistency**
+- [x] **CRITICAL: Verify homepage content displays correctly in both English and Arabic**
 - [ ] Review all Arabic translations for accuracy
 - [ ] Ensure proper Arabic typography (Noto Naskh Arabic)
 - [ ] Fix any RTL layout issues
