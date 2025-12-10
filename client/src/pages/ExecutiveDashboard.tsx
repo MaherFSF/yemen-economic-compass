@@ -238,11 +238,11 @@ export default function ExecutiveDashboard() {
               </p>
             </div>
             <div className="flex gap-3">
-              <Button variant="outline" className="bg-slate-100 border-white/30 text-white hover:bg-slate-200">
+              <Button variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20">
                 <Download className="h-4 w-4 mr-2" />
                 {isArabic ? t.download.ar : t.download.en}
               </Button>
-              <Button variant="outline" className="bg-slate-100 border-white/30 text-white hover:bg-slate-200">
+              <Button variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20">
                 <FileText className="h-4 w-4 mr-2" />
                 {isArabic ? t.exportData.ar : t.exportData.en}
               </Button>
@@ -257,7 +257,7 @@ export default function ExecutiveDashboard() {
                 variant={selectedPeriod === period ? "secondary" : "outline"}
                 size="sm"
                 onClick={() => setSelectedPeriod(period)}
-                className={selectedPeriod === period ? "" : "bg-slate-100 border-white/30 text-white hover:bg-slate-200"}
+                className={selectedPeriod === period ? "" : "bg-white/10 border-white/30 text-white hover:bg-white/20"}
               >
                 {period}
               </Button>

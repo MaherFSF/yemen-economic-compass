@@ -25,21 +25,21 @@ export default function AidFlowsDashboard() {
           {/* Cross-linking to other dashboards */}
           <div className="mt-6 flex flex-wrap gap-3">
             <Link href="/banking-system-dashboard">
-              <Button variant="secondary" size="sm" className="bg-slate-200 hover:bg-white/30 text-white border-white/30">
+              <Button variant="secondary" size="sm" className="bg-white/20 hover:bg-white/30 text-white border-white/30">
                 <Building2 className={`h-4 w-4 ${isArabic ? 'ml-2' : 'mr-2'}`} />
                 {isArabic ? 'لوحة النظام المصرفي' : 'Banking System'}
                 <ArrowRight className={`h-3 w-3 ${isArabic ? 'mr-2' : 'ml-2'}`} />
               </Button>
             </Link>
             <Link href="/timeline-explorer">
-              <Button variant="secondary" size="sm" className="bg-slate-200 hover:bg-white/30 text-white border-white/30">
+              <Button variant="secondary" size="sm" className="bg-white/20 hover:bg-white/30 text-white border-white/30">
                 <Calendar className={`h-4 w-4 ${isArabic ? 'ml-2' : 'mr-2'}`} />
                 {isArabic ? 'مستكشف الجدول الزمني' : 'Timeline Explorer'}
                 <ArrowRight className={`h-3 w-3 ${isArabic ? 'mr-2' : 'ml-2'}`} />
               </Button>
             </Link>
             <Link href="/dashboards-hub">
-              <Button variant="secondary" size="sm" className="bg-slate-200 hover:bg-white/30 text-white border-white/30">
+              <Button variant="secondary" size="sm" className="bg-white/20 hover:bg-white/30 text-white border-white/30">
                 <TrendingUp className={`h-4 w-4 ${isArabic ? 'ml-2' : 'mr-2'}`} />
                 {isArabic ? 'جميع لوحات المعلومات' : 'All Dashboards'}
                 <ArrowRight className={`h-3 w-3 ${isArabic ? 'mr-2' : 'ml-2'}`} />

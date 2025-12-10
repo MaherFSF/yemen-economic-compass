@@ -397,7 +397,7 @@ export default function CommercialBanksHub() {
         <div className="container">
           <div className="flex justify-between items-start mb-6">
             <div>
-              <Badge className="mb-4 bg-slate-200 text-white border-white/30">
+              <Badge className="mb-4 bg-white/20 text-white border-white/30">
                 <Building2 className="w-3 h-3 mr-1" />
                 {language === "ar" ? "استخبارات القطاع المصرفي" : "Banking Sector Intelligence"}
               </Badge>
@@ -413,35 +413,35 @@ export default function CommercialBanksHub() {
             <Button
               variant="outline"
               onClick={() => setLanguage(language === "en" ? "ar" : "en")}
-              className="bg-slate-100 border-white/30 text-white hover:bg-slate-200"
+              className="bg-white/10 border-white/30 text-white hover:bg-white/20"
             >
               {language === "en" ? "العربية" : "English"}
             </Button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-8">
-            <Card className="bg-slate-100 border-slate-300 text-white">
+            <Card className="bg-white/10 border-white/20 text-white">
               <CardContent className="pt-6">
                 <Building2 className="w-8 h-8 mb-2" />
                 <div className="text-3xl font-bold">{banks.length}</div>
                 <div className="text-slate-200">{language === "ar" ? "بنك موثق" : "Banks Documented"}</div>
               </CardContent>
             </Card>
-            <Card className="bg-slate-100 border-slate-300 text-white">
+            <Card className="bg-white/10 border-white/20 text-white">
               <CardContent className="pt-6">
                 <CheckCircle className="w-8 h-8 mb-2" />
                 <div className="text-3xl font-bold">{banks.filter(b => b.status === "operational").length}</div>
                 <div className="text-slate-200">{language === "ar" ? "بنك عامل" : "Operational Banks"}</div>
               </CardContent>
             </Card>
-            <Card className="bg-slate-100 border-slate-300 text-white">
+            <Card className="bg-white/10 border-white/20 text-white">
               <CardContent className="pt-6">
                 <XCircle className="w-8 h-8 mb-2" />
                 <div className="text-3xl font-bold">{banks.filter(b => b.status === "suspended").length}</div>
                 <div className="text-slate-200">{language === "ar" ? "بنك معلق" : "Suspended Banks"}</div>
               </CardContent>
             </Card>
-            <Card className="bg-slate-100 border-slate-300 text-white">
+            <Card className="bg-white/10 border-white/20 text-white">
               <CardContent className="pt-6">
                 <MapPin className="w-8 h-8 mb-2" />
                 <div className="text-3xl font-bold">{banks.reduce((sum, b) => sum + b.branches, 0)}</div>

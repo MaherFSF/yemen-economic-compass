@@ -181,7 +181,7 @@ export default function FinancialCalculators() {
       {/* Header */}
       <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white py-16">
         <div className="container">
-          <Badge className="mb-4 bg-slate-200 text-white border-white/30">
+          <Badge className="mb-4 bg-white/20 text-white border-white/30">
             <Calculator className="w-3 h-3 mr-1" />
             {isArabic ? "أدوات تحليلية" : "Analytical Tools"}
           </Badge>

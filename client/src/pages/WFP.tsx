@@ -21,7 +21,7 @@ export default function WFP() {
               />
             </div>
             
-            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-100 backdrop-blur-md border border-slate-300 mb-6">
+            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6">
               <Globe className="h-5 w-5 text-blue-200" />
               <span className="text-sm font-semibold">
                 {isArabic ? 'أكبر عملية إنسانية في اليمن' : 'Largest Humanitarian Operation in Yemen'}
@@ -38,7 +38,7 @@ export default function WFP() {
                 : 'Life-saving operations in the face of the world\'s worst food crisis'}
             </p>
             
-            <p className="text-sm text-slate-800">
+            <p className="text-sm text-white/80">
               {isArabic ? 'التقرير الشامل 2020-2025' : 'Comprehensive Report 2020-2025'}
             </p>
           </div>
@@ -595,7 +595,7 @@ export default function WFP() {
                     </div>
                   </div>
 
-                  <div className="bg-white0 p-3 rounded-lg">
+                  <div className="bg-white/50 p-3 rounded-lg">
                     <div className="font-semibold text-purple-900 mb-2 text-xs">
                       {isArabic ? 'الأهداف الاستراتيجية' : 'Strategic Outcomes'}
                     </div>

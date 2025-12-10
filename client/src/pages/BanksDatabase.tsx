@@ -117,7 +117,7 @@ export default function BanksDatabase() {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="container relative z-10">
           <div className="max-w-3xl">
-            <Badge className="mb-4 bg-slate-200 text-white border-white/30">
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
               {isArabic ? "قاعدة بيانات شاملة" : "Comprehensive Database"}
             </Badge>
             <h1 className="text-5xl font-bold mb-4">

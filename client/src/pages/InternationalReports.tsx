@@ -216,7 +216,7 @@ export default function InternationalReports() {
         <div className="container">
           <div className="flex justify-between items-start mb-6">
             <div>
-              <Badge className="mb-4 bg-slate-200 text-white border-white/30">
+              <Badge className="mb-4 bg-white/20 text-white border-white/30">
                 <FileText className="w-3 h-3 mr-1" />
                 {language === "ar" ? "مكتبة التقارير" : "Reports Library"}
               </Badge>
@@ -232,26 +232,26 @@ export default function InternationalReports() {
             <Button
               variant="outline"
               onClick={() => setLanguage(language === "en" ? "ar" : "en")}
-              className="bg-slate-100 border-white/30 text-white hover:bg-slate-200"
+              className="bg-white/10 border-white/30 text-white hover:bg-white/20"
             >
               {language === "en" ? "العربية" : "English"}
             </Button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-            <Card className="bg-slate-100 border-slate-300 text-white">
+            <Card className="bg-white/10 border-white/20 text-white">
               <CardContent className="pt-6">
                 <div className="text-3xl font-bold">{reports.length}</div>
                 <div className="text-blue-100">{language === "ar" ? "تقرير متاح" : "Reports Available"}</div>
               </CardContent>
             </Card>
-            <Card className="bg-slate-100 border-slate-300 text-white">
+            <Card className="bg-white/10 border-white/20 text-white">
               <CardContent className="pt-6">
                 <div className="text-3xl font-bold">{organizations.length}</div>
                 <div className="text-blue-100">{language === "ar" ? "منظمة دولية" : "International Organizations"}</div>
               </CardContent>
             </Card>
-            <Card className="bg-slate-100 border-slate-300 text-white">
+            <Card className="bg-white/10 border-white/20 text-white">
               <CardContent className="pt-6">
                 <div className="text-3xl font-bold">2025</div>
                 <div className="text-blue-100">{language === "ar" ? "آخر تحديث" : "Latest Updates"}</div>

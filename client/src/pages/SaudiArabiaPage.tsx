@@ -31,14 +31,14 @@ export default function SaudiArabiaPage() {
       <div className="bg-gradient-to-r from-[#8B1538] to-[#D4AF37] text-white">
         <div className="container mx-auto px-4 py-12">
           <Link href="/stakeholder-hub">
-            <button className="mb-4 flex items-center gap-2 text-slate-800 hover:text-white transition-colors">
+            <button className="mb-4 flex items-center gap-2 text-white/80 hover:text-white transition-colors">
               <ArrowLeft className="h-4 w-4" />
               {isArabic ? 'العودة إلى مركز أصحاب المصلحة' : 'Back to Stakeholder Hub'}
             </button>
           </Link>
           
           <div className="flex items-start gap-4">
-            <div className="h-16 w-16 rounded-lg bg-slate-100 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
+            <div className="h-16 w-16 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
               <Shield className="h-8 w-8" />
             </div>
             <div className="flex-1">
@@ -52,13 +52,13 @@ export default function SaudiArabiaPage() {
                 }
               </p>
               <div className="flex flex-wrap gap-2 mt-3">
-                <Badge variant="secondary" className="bg-slate-200 text-white border-0">
+                <Badge variant="secondary" className="bg-white/20 text-white border-0">
                   {isArabic ? 'قائد عسكري' : 'Military Leader'}
                 </Badge>
-                <Badge variant="secondary" className="bg-slate-200 text-white border-0">
+                <Badge variant="secondary" className="bg-white/20 text-white border-0">
                   {isArabic ? 'مانح رئيسي' : 'Major Donor'}
                 </Badge>
-                <Badge variant="secondary" className="bg-slate-200 text-white border-0">
+                <Badge variant="secondary" className="bg-white/20 text-white border-0">
                   {isArabic ? 'شريك اقتصادي' : 'Economic Partner'}
                 </Badge>
               </div>

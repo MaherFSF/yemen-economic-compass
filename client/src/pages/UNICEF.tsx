@@ -21,7 +21,7 @@ export default function UNICEF() {
               />
             </div>
             
-            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-100 backdrop-blur-md border border-slate-300 mb-6">
+            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6">
               <Heart className="h-5 w-5 text-cyan-200" />
               <span className="text-sm font-semibold">
                 {isArabic ? 'من أجل كل طفل' : 'For Every Child'}
@@ -38,7 +38,7 @@ export default function UNICEF() {
                 : 'Protecting children\'s rights and delivering essential services in the world\'s worst humanitarian crisis'}
             </p>
             
-            <p className="text-sm text-slate-800">
+            <p className="text-sm text-white/80">
               {isArabic ? 'التقرير الشامل 2020-2025' : 'Comprehensive Report 2020-2025'}
             </p>
           </div>

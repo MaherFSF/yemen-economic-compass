@@ -214,17 +214,17 @@ export default function SiteMap() {
 
           {/* Statistics */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="glass-effect text-center p-6 rounded-xl border-slate-300">
+            <div className="glass-effect text-center p-6 rounded-xl border-white/20">
               <div className="text-4xl font-bold mb-2">{totalPages}</div>
-              <div className="text-sm text-slate-800">Total Pages</div>
+              <div className="text-sm text-white/80">Total Pages</div>
             </div>
-            <div className="glass-effect text-center p-6 rounded-xl border-slate-300">
+            <div className="glass-effect text-center p-6 rounded-xl border-white/20">
               <div className="text-4xl font-bold mb-2">{totalDatasets}</div>
-              <div className="text-sm text-slate-800">Datasets</div>
+              <div className="text-sm text-white/80">Datasets</div>
             </div>
-            <div className="glass-effect text-center p-6 rounded-xl border-slate-300">
+            <div className="glass-effect text-center p-6 rounded-xl border-white/20">
               <div className="text-4xl font-bold mb-2">{totalDocuments.toLocaleString()}</div>
-              <div className="text-sm text-slate-800">Documents</div>
+              <div className="text-sm text-white/80">Documents</div>
             </div>
           </div>
         </div>
@@ -245,7 +245,7 @@ export default function SiteMap() {
                     {category.icon}
                     <h2 className="text-xl font-bold">{category.title}</h2>
                   </div>
-                  <Badge variant="secondary" className="bg-slate-200 text-white border-0">
+                  <Badge variant="secondary" className="bg-white/20 text-white border-0">
                     {category.count} pages
                   </Badge>
                 </div>

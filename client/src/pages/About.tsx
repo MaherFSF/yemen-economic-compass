@@ -406,7 +406,7 @@ export default function About() {
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="p-4 bg-white0 rounded-lg border border-[#8B1538]/10">
+              <div className="p-4 bg-white/50 rounded-lg border border-[#8B1538]/10">
                 <div className="flex items-start gap-3">
                   <div className="h-8 w-8 rounded-lg bg-[#8B1538]/10 flex items-center justify-center flex-shrink-0 mt-1">
                     <Globe className="h-4 w-4 text-[#8B1538]" />
@@ -424,7 +424,7 @@ export default function About() {
                   </div>
                 </div>
               </div>
-              <div className="p-4 bg-white0 rounded-lg border border-[#D4AF37]/10">
+              <div className="p-4 bg-white/50 rounded-lg border border-[#D4AF37]/10">
                 <div className="flex items-start gap-3">
                   <div className="h-8 w-8 rounded-lg bg-[#D4AF37]/10 flex items-center justify-center flex-shrink-0 mt-1">
                     <Building2 className="h-4 w-4 text-[#D4AF37]" />
@@ -442,7 +442,7 @@ export default function About() {
                   </div>
                 </div>
               </div>
-              <div className="p-4 bg-white0 rounded-lg border border-[#8B1538]/10">
+              <div className="p-4 bg-white/50 rounded-lg border border-[#8B1538]/10">
                 <div className="flex items-start gap-3">
                   <div className="h-8 w-8 rounded-lg bg-[#8B1538]/10 flex items-center justify-center flex-shrink-0 mt-1">
                     <Lightbulb className="h-4 w-4 text-[#8B1538]" />
@@ -460,7 +460,7 @@ export default function About() {
                   </div>
                 </div>
               </div>
-              <div className="p-4 bg-white0 rounded-lg border border-[#D4AF37]/10">
+              <div className="p-4 bg-white/50 rounded-lg border border-[#D4AF37]/10">
                 <div className="flex items-start gap-3">
                   <div className="h-8 w-8 rounded-lg bg-[#D4AF37]/10 flex items-center justify-center flex-shrink-0 mt-1">
                     <BookOpen className="h-4 w-4 text-[#D4AF37]" />

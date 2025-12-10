@@ -33,7 +33,7 @@ export default function SiteMapComprehensive() {
       title: "Main Pages",
       titleAr: "الصفحات الرئيسية",
       icon: <MapIcon className="w-6 h-6" />,
-      color: "from-amber-600 to-[#D97706]",
+      color: "from-[#F59E0B] to-[#D97706]",
       pages: [
         { name: "Home", nameAr: "الرئيسية", path: "/", description: "Main landing page with platform overview" },
         { name: "About Platform", nameAr: "عن المنصة", path: "/about-platform", description: "Platform mission and methodology" },
@@ -94,7 +94,7 @@ export default function SiteMapComprehensive() {
       title: "Interactive Tools",
       titleAr: "الأدوات التفاعلية",
       icon: <Calculator className="w-6 h-6" />,
-      color: "from-amber-600 to-[#EF4444]",
+      color: "from-[#F59E0B] to-[#EF4444]",
       pages: [
         { name: "What-If Simulator", nameAr: "محاكي السيناريوهات", path: "/what-if-simulator", description: "Model alternative economic scenarios" },
         { name: "Year Explorer", nameAr: "مستكشف السنوات", path: "/year-explorer", description: "Year-by-year analysis (2010-2025)" },
@@ -134,7 +134,7 @@ export default function SiteMapComprehensive() {
       title: "Economic Analysis",
       titleAr: "التحليل الاقتصادي",
       icon: <TrendingUp className="w-6 h-6" />,
-      color: "from-amber-600 to-[#F97316]",
+      color: "from-[#F59E0B] to-[#F97316]",
       pages: [
         { name: "Overview", nameAr: "نظرة عامة", path: "/overview", description: "Economic overview" },
         { name: "Charts", nameAr: "الرسوم البيانية", path: "/charts", description: "Economic charts" },
@@ -215,7 +215,7 @@ export default function SiteMapComprehensive() {
       <div className="container mx-auto px-4 py-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-black mb-4 bg-gradient-to-r from-amber-600 via-[#06B6D4] to-[#10B981] bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-5xl font-black mb-4 bg-gradient-to-r from-[#F59E0B] via-[#06B6D4] to-[#10B981] bg-clip-text text-transparent">
             Complete Site Map
           </h1>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-muted-foreground">
@@ -247,13 +247,13 @@ export default function SiteMapComprehensive() {
 
         {/* Statistics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 max-w-4xl mx-auto">
-          <Card className="p-6 text-center bg-gradient-to-br from-amber-600/10 to-[#D97706]/10 border-blue-200/20">
-            <div className="text-4xl font-black text-blue-800 mb-2">{totalPages}</div>
+          <Card className="p-6 text-center bg-gradient-to-br from-[#F59E0B]/10 to-[#D97706]/10 border-[#F59E0B]/20">
+            <div className="text-4xl font-black text-[#F59E0B] mb-2">{totalPages}</div>
             <div className="text-sm text-muted-foreground">Total Pages</div>
             <div className="text-sm text-muted-foreground" dir="rtl">إجمالي الصفحات</div>
           </Card>
           <Card className="p-6 text-center bg-gradient-to-br from-[#06B6D4]/10 to-[#0891B2]/10 border-[#06B6D4]/20">
-            <div className="text-4xl font-black text-teal-600 mb-2">{categories.length}</div>
+            <div className="text-4xl font-black text-[#06B6D4] mb-2">{categories.length}</div>
             <div className="text-sm text-muted-foreground">Categories</div>
             <div className="text-sm text-muted-foreground" dir="rtl">الفئات</div>
           </Card>
@@ -263,7 +263,7 @@ export default function SiteMapComprehensive() {
             <div className="text-sm text-muted-foreground" dir="rtl">الأحداث</div>
           </Card>
           <Card className="p-6 text-center bg-gradient-to-br from-[#8B5CF6]/10 to-[#7C3AED]/10 border-[#8B5CF6]/20">
-            <div className="text-4xl font-black text-violet-600 mb-2">46</div>
+            <div className="text-4xl font-black text-[#8B5CF6] mb-2">46</div>
             <div className="text-sm text-muted-foreground">Stakeholders</div>
             <div className="text-sm text-muted-foreground" dir="rtl">أصحاب المصلحة</div>
           </Card>

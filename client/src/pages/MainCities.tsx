@@ -166,7 +166,7 @@ export default function MainCities() {
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white py-20">
         <div className="container mx-auto px-4">
-          <Badge variant="outline" className="mb-4 bg-slate-100 border-white/30 text-white">
+          <Badge variant="outline" className="mb-4 bg-white/10 border-white/30 text-white">
             {isArabic ? "التحليل الجغرافي" : "Geographic Analysis"}
           </Badge>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
