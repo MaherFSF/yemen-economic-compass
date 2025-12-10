@@ -258,7 +258,7 @@ export default function KeyStatistics() {
       <div className="bg-gradient-to-r from-burgundy via-teal-700 to-blue-900 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+            <Badge className="mb-4 bg-slate-200 text-white border-white/30">
               {isArabic ? "📊 البيانات الأساسية" : "📊 Core Data"}
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -270,15 +270,15 @@ export default function KeyStatistics() {
                 : "Critical Economic and Humanitarian Indicators for Yemen (2010-2025)"}
             </p>
             <div className="flex flex-wrap gap-4 justify-center text-sm">
-              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg backdrop-blur">
+              <div className="flex items-center gap-2 bg-slate-100 px-4 py-2 rounded-lg backdrop-blur">
                 <Calendar className="h-4 w-4" />
                 <span>{isArabic ? "15 سنة من البيانات" : "15 Years of Data"}</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg backdrop-blur">
+              <div className="flex items-center gap-2 bg-slate-100 px-4 py-2 rounded-lg backdrop-blur">
                 <DollarSign className="h-4 w-4" />
                 <span>{isArabic ? "12 مؤشر رئيسي" : "12 Key Indicators"}</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg backdrop-blur">
+              <div className="flex items-center gap-2 bg-slate-100 px-4 py-2 rounded-lg backdrop-blur">
                 <Users className="h-4 w-4" />
                 <span>{isArabic ? "مصادر متعددة" : "Multiple Sources"}</span>
               </div>

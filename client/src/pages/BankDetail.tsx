@@ -107,7 +107,7 @@ export default function BankDetail() {
       <div className={`py-12 ${isSanctioned ? 'bg-gradient-to-r from-red-600 to-red-800' : 'bg-gradient-to-r from-blue-600 to-blue-800'} text-white`}>
         <div className="container">
           <Link href="/banking">
-            <Button variant="ghost" className="text-white hover:bg-white/20 mb-4">
+            <Button variant="ghost" className="text-white hover:bg-slate-200 mb-4">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Banking Sector
             </Button>

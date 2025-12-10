@@ -15,7 +15,7 @@ export default function WorldBankJourney() {
       <section className="bg-gradient-to-r from-[#8B1538] to-[#D4AF37] text-white py-16">
         <div className="container">
           <div className="max-w-4xl">
-            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+            <Badge className="mb-4 bg-slate-200 text-white border-white/30">
               {isArabic ? "رحلة البنك الدولي في اليمن" : "World Bank Yemen Journey"}
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -31,7 +31,7 @@ export default function WorldBankJourney() {
                 <Download className="mr-2 h-5 w-5" />
                 {isArabic ? "تحميل التقرير" : "Download Report"}
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-slate-100">
                 <ExternalLink className="mr-2 h-5 w-5" />
                 {isArabic ? "زيارة موقع البنك الدولي" : "Visit World Bank Site"}
               </Button>
@@ -777,7 +777,7 @@ export default function WorldBankJourney() {
               <FileText className="mr-2 h-5 w-5" />
               {isArabic ? "تصفح المكتبة البحثية" : "Browse Research Library"}
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-slate-100">
               <BarChart3 className="mr-2 h-5 w-5" />
               {isArabic ? "عرض لوحة البيانات" : "View Data Dashboard"}
             </Button>

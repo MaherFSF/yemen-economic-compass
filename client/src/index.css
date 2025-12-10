@@ -43,109 +43,160 @@
 }
 
 :root {
-  /* Yemen Flag Colors - Official Palette */
-  /* Red (#CE1126) + White (#FFFFFF) + Black (#000000) + Green (#007A3D) */
-  --yemen-red: oklch(0.45 0.20 15); /* #CE1126 - Yemen flag red */
-  --yemen-green: oklch(0.45 0.15 150); /* #007A3D - Yemen flag green/star */
-  --yemen-black: oklch(0.15 0 0); /* #000000 - Yemen flag black */
-  --yemen-white: oklch(0.98 0 0); /* #FFFFFF - Yemen flag white */
-  --yemen-red-light: oklch(0.60 0.18 15); /* Lighter red for hover */
-  --yemen-green-light: oklch(0.55 0.12 150); /* Lighter green for accents */
+  /* NEW PROFESSIONAL COLOR SCHEME - Financial Platform Design */
+  /* Based on research: Bloomberg, Financial Times, The Economist */
   
-  /* Ink colors (neutrals) - Improved contrast for readability */
-  --ink-900: oklch(0.18 0.01 240); /* #1A2332 - darkest (improved from 0.15) */
-  --ink-700: oklch(0.38 0.01 240); /* #424E5E (improved from 0.35) */
-  --ink-500: oklch(0.52 0.01 240); /* #6B7A8F (improved from 0.50) */
-  --ink-300: oklch(0.77 0.01 240); /* #D1D8E3 (improved from 0.75) */
-  --paper: oklch(0.97 0 0); /* #F8F8F8 - softer background (improved from 0.98) */
+  /* Primary Colors - Trust & Authority */
+  --financial-blue-800: oklch(0.45 0.15 265); /* #1E40AF - Primary brand color */
+  --financial-blue-700: oklch(0.50 0.18 265); /* #1D4ED8 - Darker variant */
+  --financial-blue-600: oklch(0.55 0.20 265); /* #2563EB - Lighter variant */
   
-  /* Yemen flag colors as primary palette */
-  --primary: var(--yemen-red); /* Yemen red as primary */
-  --primary-foreground: var(--yemen-white);
-  --sidebar-primary: oklch(0.50 0.14 35);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
-  --chart-1: var(--yemen-red);
-  --chart-2: var(--yemen-green);
-  --chart-3: var(--yemen-black);
-  --chart-4: var(--yemen-red-light);
-  --chart-5: var(--yemen-green-light);
+  /* Secondary Colors - Data & Intelligence */
+  --data-teal-700: oklch(0.50 0.14 200); /* #0E7490 - Darker teal */
+  --data-teal-600: oklch(0.55 0.12 200); /* #0891B2 - Main teal */
+  --data-teal-500: oklch(0.60 0.10 200); /* #06B6D4 - Lighter teal */
+  
+  /* Accent Colors - Success & Growth */
+  --growth-emerald-700: oklch(0.50 0.17 165); /* #047857 - Darker green */
+  --growth-emerald-600: oklch(0.55 0.15 165); /* #059669 - Main green */
+  --growth-emerald-500: oklch(0.60 0.13 165); /* #10B981 - Lighter green */
+  
+  /* Attention Colors - Highlights & Warnings */
+  --attention-amber-700: oklch(0.57 0.17 50); /* #B45309 - Darker amber */
+  --attention-amber-600: oklch(0.62 0.15 55); /* #D97706 - Main amber */
+  --attention-amber-500: oklch(0.67 0.13 60); /* #F59E0B - Lighter amber */
+  
+  /* Neutral Colors - Professional Slate Palette */
+  --slate-950: oklch(0.10 0.02 250); /* #020617 - Darkest */
+  --slate-900: oklch(0.18 0.02 250); /* #0F172A - Very dark */
+  --slate-800: oklch(0.25 0.02 250); /* #1E293B - Dark */
+  --slate-700: oklch(0.35 0.02 250); /* #334155 - Medium dark */
+  --slate-600: oklch(0.42 0.02 250); /* #475569 - Medium */
+  --slate-500: oklch(0.50 0.02 250); /* #64748B - Medium light */
+  --slate-400: oklch(0.65 0.02 250); /* #94A3B8 - Light */
+  --slate-300: oklch(0.75 0.01 250); /* #CBD5E1 - Very light */
+  --slate-200: oklch(0.85 0.01 250); /* #E2E8F0 - Ultra light */
+  --slate-100: oklch(0.92 0.005 250); /* #F1F5F9 - Near white */
+  --slate-50: oklch(0.98 0.005 250); /* #F8FAFC - Almost white */
+  
+  /* Semantic Colors */
+  --success: var(--growth-emerald-700);
+  --success-foreground: oklch(1 0 0);
+  --warning: var(--attention-amber-700);
+  --warning-foreground: oklch(1 0 0);
+  --error: oklch(0.55 0.22 25); /* Red-600 #DC2626 */
+  --error-foreground: oklch(1 0 0);
+  --info: var(--financial-blue-700);
+  --info-foreground: oklch(1 0 0);
+  
+  /* Core Theme Variables */
   --radius: 0.5rem;
-  --background: var(--paper); /* Soft paper white */
-  --foreground: var(--ink-900); /* Dark ink for text */
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.25 0.02 35);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.25 0.02 35);
-  --secondary: oklch(0.92 0.01 40);
-  --secondary-foreground: oklch(0.25 0.02 35);
-  --muted: oklch(0.96 0.005 40);
-  --muted-foreground: oklch(0.50 0.01 35);
-  --accent: var(--yemen-green); /* Yemen green as accent */
-  --accent-foreground: var(--yemen-white);
-  --destructive: oklch(0.60 0.22 25);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.90 0.005 40);
-  --input: oklch(0.90 0.005 40);
-  --ring: oklch(0.55 0.15 35);
-  --sidebar: oklch(0.99 0 0);
-  --sidebar-foreground: oklch(0.25 0.02 35);
-  --sidebar-accent: oklch(0.96 0.005 40);
-  --sidebar-accent-foreground: oklch(0.25 0.02 35);
-  --sidebar-border: oklch(0.90 0.005 40);
-  --sidebar-ring: oklch(0.55 0.15 35);
   
-  /* CauseWay Observatory Theme Colors */
-  --observatory-teal: oklch(0.55 0.12 190); /* Teal for observatory theme */
-  --observatory-dark-teal: oklch(0.35 0.10 190); /* Dark teal */
-  --observatory-green: oklch(0.60 0.12 150); /* Green accent */
-  --observatory-dark-green: oklch(0.40 0.10 150); /* Dark green */
-  --observatory-light-teal: oklch(0.85 0.05 190); /* Light teal background */
-  --observatory-gold: oklch(0.65 0.15 70); /* Gold accent */
+  /* Light Mode (Default) */
+  --background: var(--slate-50); /* Soft white background */
+  --foreground: var(--slate-900); /* Dark text */
+  
+  --card: oklch(1 0 0); /* Pure white cards */
+  --card-foreground: var(--slate-900);
+  
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--slate-900);
+  
+  --primary: var(--financial-blue-800); /* Trust blue */
+  --primary-foreground: oklch(1 0 0);
+  
+  --secondary: var(--data-teal-700); /* Data teal */
+  --secondary-foreground: oklch(1 0 0);
+  
+  --muted: var(--slate-100); /* Subtle background */
+  --muted-foreground: var(--slate-600); /* Muted text */
+  
+  --accent: var(--growth-emerald-700); /* Growth green */
+  --accent-foreground: oklch(1 0 0);
+  
+  --destructive: var(--error);
+  --destructive-foreground: var(--error-foreground);
+  
+  --border: var(--slate-200); /* Subtle borders */
+  --input: var(--slate-200);
+  --ring: var(--financial-blue-800); /* Focus ring */
+  
+  /* Chart Colors - 6-color data visualization palette */
+  --chart-1: var(--financial-blue-600); /* Primary data */
+  --chart-2: var(--data-teal-600); /* Secondary data */
+  --chart-3: var(--growth-emerald-600); /* Positive metrics */
+  --chart-4: var(--attention-amber-600); /* Warnings/highlights */
+  --chart-5: oklch(0.50 0.20 290); /* Violet-600 #7C3AED - Alternative */
+  --chart-6: oklch(0.55 0.22 10); /* Rose-600 #E11D48 - Negative metrics */
+  
+  /* Sidebar (for dashboard layouts) */
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: var(--slate-900);
+  --sidebar-primary: var(--financial-blue-800);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: var(--slate-100);
+  --sidebar-accent-foreground: var(--slate-900);
+  --sidebar-border: var(--slate-200);
+  --sidebar-ring: var(--financial-blue-800);
 }
 
 .dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  /* Dark Mode - Optional */
+  --background: var(--slate-950);
+  --foreground: var(--slate-50);
+  
+  --card: var(--slate-900);
+  --card-foreground: var(--slate-50);
+  
+  --popover: var(--slate-900);
+  --popover-foreground: var(--slate-50);
+  
+  --primary: var(--financial-blue-600); /* Lighter blue for dark mode */
+  --primary-foreground: var(--slate-950);
+  
+  --secondary: var(--data-teal-500); /* Lighter teal for dark mode */
+  --secondary-foreground: var(--slate-950);
+  
+  --muted: var(--slate-800);
+  --muted-foreground: var(--slate-400);
+  
+  --accent: var(--growth-emerald-500); /* Lighter green for dark mode */
+  --accent-foreground: var(--slate-950);
+  
+  --destructive: oklch(0.60 0.22 25); /* Lighter red for dark mode */
+  --destructive-foreground: var(--slate-50);
+  
+  --border: var(--slate-800);
+  --input: var(--slate-800);
+  --ring: var(--financial-blue-600);
+  
+  --chart-1: var(--financial-blue-500);
+  --chart-2: var(--data-teal-500);
+  --chart-3: var(--growth-emerald-500);
+  --chart-4: var(--attention-amber-500);
+  --chart-5: oklch(0.60 0.20 290); /* Lighter violet */
+  --chart-6: oklch(0.65 0.22 10); /* Lighter rose */
+  
+  --sidebar: var(--slate-900);
+  --sidebar-foreground: var(--slate-50);
+  --sidebar-primary: var(--financial-blue-600);
+  --sidebar-primary-foreground: var(--slate-950);
+  --sidebar-accent: var(--slate-800);
+  --sidebar-accent-foreground: var(--slate-50);
+  --sidebar-border: var(--slate-800);
+  --sidebar-ring: var(--financial-blue-600);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+  
   body {
     @apply bg-background text-foreground;
-    /* Typography: IBM Plex Sans Arabic (UI), Noto Naskh Arabic (longform) for Arabic */
-    /* Inter (UI), Source Serif Pro (headings) for English */
+    /* Typography: Professional financial platform fonts */
+    /* IBM Plex Sans Arabic (UI), Noto Naskh Arabic (longform) for Arabic */
+    /* Inter (UI), Source Serif 4 (headings) for English */
     font-family: 'IBM Plex Sans Arabic', 'Inter', 'Tajawal', 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-feature-settings: 'kern' 1, 'liga' 1;
     -webkit-font-smoothing: antialiased;
@@ -157,24 +208,8 @@
     font-size: 16px;
   }
   
-  /* Yemen flag border: ultra-thin top border (red-white-black, 2px each) on homepage */
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6px;
-    background: linear-gradient(to bottom, 
-      #CE1126 0%, #CE1126 33.33%,  /* Red */
-      #FFFFFF 33.33%, #FFFFFF 66.66%,  /* White */
-      #000000 66.66%, #000000 100%  /* Black */
-    );
-    z-index: 9999;
-    pointer-events: none;
-  }
   h1, h2, h3, h4, h5, h6 {
-    /* Headings: Noto Naskh Arabic (AR), Source Serif 4 (EN) */
+    /* Headings: Professional serif for authority */
     font-family: 'Noto Naskh Arabic', 'Source Serif 4', 'Cairo', 'Tajawal', 'Georgia', serif;
     font-weight: 700;
     font-feature-settings: 'kern' 1, 'liga' 1;
@@ -203,6 +238,7 @@
   :root[lang="en"] h6 {
     font-family: 'Source Serif 4', 'Inter', 'Georgia', serif;
   }
+  
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
   [type="button"]:not(:disabled),
@@ -239,16 +275,6 @@
 @layer components {
   /**
    * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
    */
   .container {
     width: 100%;
@@ -278,30 +304,48 @@
     }
   }
   
-  /* Observatory-specific utilities */
-  .observatory-gradient {
-    background: linear-gradient(135deg, var(--observatory-teal) 0%, var(--observatory-green) 100%);
+  /* Professional gradient utilities */
+  .financial-gradient {
+    background: linear-gradient(135deg, var(--financial-blue-800) 0%, var(--data-teal-600) 100%);
   }
 
-  .observatory-gradient-dark {
-    background: linear-gradient(135deg, var(--observatory-dark-teal) 0%, var(--observatory-dark-green) 100%);
+  .financial-gradient-soft {
+    background: linear-gradient(135deg, var(--financial-blue-600) 0%, var(--data-teal-500) 100%);
   }
 
-  .observatory-text-gradient {
-    background: linear-gradient(135deg, var(--observatory-teal) 0%, var(--observatory-green) 100%);
+  .success-gradient {
+    background: linear-gradient(135deg, var(--growth-emerald-700) 0%, var(--growth-emerald-500) 100%);
+  }
+
+  .warning-gradient {
+    background: linear-gradient(135deg, var(--attention-amber-700) 0%, var(--attention-amber-500) 100%);
+  }
+
+  .financial-text-gradient {
+    background: linear-gradient(135deg, var(--financial-blue-800) 0%, var(--data-teal-600) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .glass-effect {
-    background: oklch(1 0 0 / 80%);
+    background: oklch(1 0 0 / 85%);
     backdrop-filter: blur(12px);
     border: 1px solid var(--border);
   }
 
   .dark .glass-effect {
-    background: var(--card) / 80%;
+    background: var(--card) / 85%;
     backdrop-filter: blur(12px);
+  }
+  
+  /* Professional card hover effect */
+  .card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px -8px oklch(0.18 0.02 250 / 0.12);
   }
 }

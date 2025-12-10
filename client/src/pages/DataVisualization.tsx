@@ -122,7 +122,7 @@ export default function DataVisualization() {
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white py-16">
         <div className="container">
-          <Badge className="mb-4 bg-white/20 text-white border-white/30">
+          <Badge className="mb-4 bg-slate-200 text-white border-white/30">
             <BarChart3 className="w-3 h-3 mr-1" />
             {isArabic ? "التصورات البيانية التفاعلية" : "Interactive Data Visualizations"}
           </Badge>

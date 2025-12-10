@@ -318,7 +318,7 @@ export default function YearExplorer() {
             variant="outline"
             size="sm"
             onClick={() => setLanguage(language === "ar" ? "en" : "ar")}
-            className="bg-white/10 hover:bg-white/20 border-white/30"
+            className="bg-slate-100 hover:bg-slate-200 border-white/30"
           >
             {language === "ar" ? "English" : "العربية"}
           </Button>

@@ -336,7 +336,7 @@ export default function EventsTimeline() {
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
         <div className="container mx-auto px-4">
-          <Badge variant="outline" className="mb-4 bg-white/10 border-white/30 text-white">
+          <Badge variant="outline" className="mb-4 bg-slate-100 border-white/30 text-white">
             {isArabic ? "الخط الزمني التفاعلي" : "Interactive Timeline"}
           </Badge>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">

@@ -858,7 +858,7 @@ export default function FinancialLiterature() {
       {/* Header */}
       <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-16">
         <div className="container">
-          <Badge className="mb-4 bg-white/20 text-white border-white/30">
+          <Badge className="mb-4 bg-slate-200 text-white border-white/30">
             <BookOpen className="w-3 h-3 mr-1" />
             {isArabic ? "مكتبة الأدبيات المالية" : "Financial Literature Library"}
           </Badge>

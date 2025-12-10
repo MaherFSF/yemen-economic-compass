@@ -319,7 +319,7 @@ export default function MicrofinanceObservatory() {
         <div className="container">
           <div className="flex justify-between items-start mb-6">
             <div>
-              <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              <Badge className="mb-4 bg-slate-200 text-white border-white/30">
                 <TrendingUp className="w-3 h-3 mr-1" />
                 {language === "ar" ? "قطاع التمويل الأصغر" : "Microfinance Sector"}
               </Badge>
@@ -335,7 +335,7 @@ export default function MicrofinanceObservatory() {
             <Button
               variant="outline"
               onClick={() => setLanguage(language === "en" ? "ar" : "en")}
-              className="bg-white/10 border-white/30 text-white hover:bg-white/20"
+              className="bg-slate-100 border-white/30 text-white hover:bg-slate-200"
             >
               {language === "en" ? "العربية" : "English"}
             </Button>
@@ -343,28 +343,28 @@ export default function MicrofinanceObservatory() {
 
           {/* Key Metrics */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-8">
-            <Card className="bg-white/10 border-white/20 text-white">
+            <Card className="bg-slate-100 border-slate-300 text-white">
               <CardContent className="pt-6">
                 <Building2 className="w-8 h-8 mb-2" />
                 <div className="text-3xl font-bold">{sfdData.totalInstitutions}</div>
                 <div className="text-emerald-100">{language === "ar" ? "مؤسسة" : "Institutions"}</div>
               </CardContent>
             </Card>
-            <Card className="bg-white/10 border-white/20 text-white">
+            <Card className="bg-slate-100 border-slate-300 text-white">
               <CardContent className="pt-6">
                 <MapPin className="w-8 h-8 mb-2" />
                 <div className="text-3xl font-bold">{sfdData.totalBranches}</div>
                 <div className="text-emerald-100">{language === "ar" ? "فرع" : "Branches"}</div>
               </CardContent>
             </Card>
-            <Card className="bg-white/10 border-white/20 text-white">
+            <Card className="bg-slate-100 border-slate-300 text-white">
               <CardContent className="pt-6">
                 <Users className="w-8 h-8 mb-2" />
                 <div className="text-3xl font-bold">{formatCurrency(sfdData.totalClients.active)}</div>
                 <div className="text-emerald-100">{language === "ar" ? "عميل نشط" : "Active Clients"}</div>
               </CardContent>
             </Card>
-            <Card className="bg-white/10 border-white/20 text-white">
+            <Card className="bg-slate-100 border-slate-300 text-white">
               <CardContent className="pt-6">
                 <DollarSign className="w-8 h-8 mb-2" />
                 <div className="text-3xl font-bold">{formatCurrency(sfdData.totalPortfolio.amount / 1000000)}M</div>

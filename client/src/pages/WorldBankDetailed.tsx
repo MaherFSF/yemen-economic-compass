@@ -200,7 +200,7 @@ export default function WorldBankDetailed() {
           </div>
           
           <div className="flex items-start gap-6">
-            <div className="bg-white/10 backdrop-blur-sm p-4 rounded-2xl">
+            <div className="bg-slate-100 backdrop-blur-sm p-4 rounded-2xl">
               <Building2 className="w-16 h-16" />
             </div>
             <div className="flex-1">
@@ -214,15 +214,15 @@ export default function WorldBankDetailed() {
                 }
               </p>
               <div className="flex flex-wrap gap-3">
-                <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
+                <Badge variant="secondary" className="bg-slate-200 text-white border-white/30">
                   <DollarSign className="w-4 h-4 mr-2" />
                   {isArabic ? "$1.7 مليار محفظة نشطة" : "$1.7B Active Portfolio"}
                 </Badge>
-                <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
+                <Badge variant="secondary" className="bg-slate-200 text-white border-white/30">
                   <Users className="w-4 h-4 mr-2" />
                   {isArabic ? "25+ مليون مستفيد" : "25M+ Beneficiaries"}
                 </Badge>
-                <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
+                <Badge variant="secondary" className="bg-slate-200 text-white border-white/30">
                   <FileText className="w-4 h-4 mr-2" />
                   {isArabic ? "27 مشروع نشط" : "27 Active Projects"}
                 </Badge>

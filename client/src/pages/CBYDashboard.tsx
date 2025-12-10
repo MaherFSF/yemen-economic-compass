@@ -239,13 +239,13 @@ export default function CBYDashboard() {
             <div className="flex gap-3">
               <Button
                 variant="outline"
-                className="bg-white/10 border-white/30 text-white hover:bg-white/20"
+                className="bg-slate-100 border-white/30 text-white hover:bg-slate-200"
                 onClick={() => setLastUpdated(new Date().toLocaleString())}
               >
                 <RefreshCw className="h-4 w-4 mr-2" />
                 {isArabic ? t.refresh.ar : t.refresh.en}
               </Button>
-              <Button variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20">
+              <Button variant="outline" className="bg-slate-100 border-white/30 text-white hover:bg-slate-200">
                 <Download className="h-4 w-4 mr-2" />
                 {isArabic ? t.export.ar : t.export.en}
               </Button>

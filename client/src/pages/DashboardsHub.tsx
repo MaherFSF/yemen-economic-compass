@@ -120,7 +120,7 @@ export default function DashboardsHub() {
       <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600 text-white">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/20 rounded-full backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-slate-200 rounded-full backdrop-blur-sm">
               <BarChart3 className="h-5 w-5" />
               <span className="text-sm font-semibold">
                 {isArabic ? 'مركز لوحات المعلومات المتقدمة' : 'Advanced Dashboards Hub'}
@@ -141,25 +141,25 @@ export default function DashboardsHub() {
 
             {/* Quick Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+              <div className="bg-slate-100 backdrop-blur-sm rounded-lg p-4">
                 <div className="text-3xl font-bold mb-1">3</div>
                 <div className="text-sm text-blue-100">
                   {isArabic ? 'لوحات معلومات' : 'Dashboards'}
                 </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+              <div className="bg-slate-100 backdrop-blur-sm rounded-lg p-4">
                 <div className="text-3xl font-bold mb-1">526</div>
                 <div className="text-sm text-blue-100">
                   {isArabic ? 'نقاط البيانات' : 'Data Points'}
                 </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+              <div className="bg-slate-100 backdrop-blur-sm rounded-lg p-4">
                 <div className="text-3xl font-bold mb-1">318</div>
                 <div className="text-sm text-blue-100">
                   {isArabic ? 'الأحداث' : 'Events'}
                 </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+              <div className="bg-slate-100 backdrop-blur-sm rounded-lg p-4">
                 <div className="text-3xl font-bold mb-1">16</div>
                 <div className="text-sm text-blue-100">
                   {isArabic ? 'سنة' : 'Years'}

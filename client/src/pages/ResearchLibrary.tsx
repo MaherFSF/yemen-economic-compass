@@ -119,7 +119,7 @@ export default function ResearchLibrary() {
       <section className="py-16 bg-gradient-to-br from-[#8B1538] via-[#0D9488] to-[#475569] text-white">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 px-4 py-2 bg-white/10 backdrop-blur-md border-white/20">
+            <Badge className="mb-4 px-4 py-2 bg-slate-100 backdrop-blur-md border-slate-300">
               <BookOpen className="h-4 w-4 mr-2" />
               {isArabic ? "مكتبة الأبحاث الشاملة" : "Comprehensive Research Library"}
             </Badge>
@@ -135,32 +135,32 @@ export default function ResearchLibrary() {
 
             {/* Statistics Cards */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <Card className="bg-white/10 backdrop-blur-md border-white/20">
+              <Card className="bg-slate-100 backdrop-blur-md border-slate-300">
                 <CardContent className="p-6 text-center">
                   <FileText className="h-8 w-8 text-[#D4AF37] mx-auto mb-2" />
                   <div className="text-3xl font-bold">{statistics.totalPublications.toLocaleString()}</div>
-                  <div className="text-sm text-white/80">{isArabic ? "منشور" : "Publications"}</div>
+                  <div className="text-sm text-slate-800">{isArabic ? "منشور" : "Publications"}</div>
                 </CardContent>
               </Card>
-              <Card className="bg-white/10 backdrop-blur-md border-white/20">
+              <Card className="bg-slate-100 backdrop-blur-md border-slate-300">
                 <CardContent className="p-6 text-center">
                   <Building2 className="h-8 w-8 text-[#D4AF37] mx-auto mb-2" />
                   <div className="text-3xl font-bold">{statistics.organizations}</div>
-                  <div className="text-sm text-white/80">{isArabic ? "مؤسسة" : "Organizations"}</div>
+                  <div className="text-sm text-slate-800">{isArabic ? "مؤسسة" : "Organizations"}</div>
                 </CardContent>
               </Card>
-              <Card className="bg-white/10 backdrop-blur-md border-white/20">
+              <Card className="bg-slate-100 backdrop-blur-md border-slate-300">
                 <CardContent className="p-6 text-center">
                   <Calendar className="h-8 w-8 text-[#D4AF37] mx-auto mb-2" />
                   <div className="text-3xl font-bold">{statistics.yearsCovered}</div>
-                  <div className="text-sm text-white/80">{isArabic ? "عام" : "Years"}</div>
+                  <div className="text-sm text-slate-800">{isArabic ? "عام" : "Years"}</div>
                 </CardContent>
               </Card>
-              <Card className="bg-white/10 backdrop-blur-md border-white/20">
+              <Card className="bg-slate-100 backdrop-blur-md border-slate-300">
                 <CardContent className="p-6 text-center">
                   <Globe className="h-8 w-8 text-[#D4AF37] mx-auto mb-2" />
                   <div className="text-3xl font-bold">{filteredPublications.length}</div>
-                  <div className="text-sm text-white/80">{isArabic ? "نتيجة" : "Results"}</div>
+                  <div className="text-sm text-slate-800">{isArabic ? "نتيجة" : "Results"}</div>
                 </CardContent>
               </Card>
             </div>

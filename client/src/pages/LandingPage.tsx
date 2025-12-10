@@ -125,15 +125,15 @@ export default function LandingPage() {
 
           {/* 3 Key Numbers */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="bg-slate-100 backdrop-blur-sm rounded-lg p-6 border border-slate-300">
               <div className="text-4xl font-bold text-[#D4AF37]">{t.hero.stat1.value}</div>
               <div className="text-sm mt-2 text-white/90">{t.hero.stat1.label}</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="bg-slate-100 backdrop-blur-sm rounded-lg p-6 border border-slate-300">
               <div className="text-4xl font-bold text-[#D4AF37]">{t.hero.stat2.value}</div>
               <div className="text-sm mt-2 text-white/90">{t.hero.stat2.label}</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="bg-slate-100 backdrop-blur-sm rounded-lg p-6 border border-slate-300">
               <div className="text-4xl font-bold text-[#D4AF37]">{t.hero.stat3.value}</div>
               <div className="text-sm mt-2 text-white/90">{t.hero.stat3.label}</div>
             </div>

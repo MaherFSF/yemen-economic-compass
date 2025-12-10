@@ -5,12 +5,12 @@ import {
   ArrowRight,
   BarChart3,
   Database,
+  FileText,
   Globe,
   LineChart,
   Search,
   TrendingUp,
   Users,
-  Zap,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
@@ -49,35 +49,25 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0F1A2E] via-[#1A2942] to-[#0F1A2E] text-white overflow-hidden">
-      {/* Animated background pattern */}
-      <div 
-        className="fixed inset-0 opacity-20 pointer-events-none"
-        style={{
-          backgroundImage: 'url(/hero-bg-pattern.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      />
-
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50">
       {/* Navigation */}
-      <nav className="relative z-50 border-b border-white/10 backdrop-blur-xl bg-white/5">
+      <nav className="sticky top-0 z-50 border-b border-slate-200 glass-effect">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
               <img src={APP_LOGO} alt="Logo" className="h-10 w-10" />
               <div className="flex flex-col">
-                <span className="text-lg font-bold">Yemen Economic Compass</span>
-                <span className="text-xs text-white/60">Financial Data Platform</span>
+                <span className="text-lg font-bold text-slate-900">Yemen Economic Compass</span>
+                <span className="text-xs text-slate-600">Financial Data Platform</span>
               </div>
             </Link>
             
             <div className="hidden md:flex items-center gap-8">
-              <Link href="/timeline" className="text-sm hover:text-[#F59E0B] transition-colors">Timeline</Link>
-              <Link href="/banking" className="text-sm hover:text-[#F59E0B] transition-colors">Banking</Link>
-              <Link href="/research" className="text-sm hover:text-[#F59E0B] transition-colors">Research</Link>
-              <Link href="/stakeholders" className="text-sm hover:text-[#F59E0B] transition-colors">Stakeholders</Link>
-              <Button size="sm" className="bg-[#F59E0B] hover:bg-[#D97706] text-[#0A1428]">
+              <Link href="/timeline" className="text-sm text-slate-700 hover:text-blue-800 transition-colors font-medium">Timeline</Link>
+              <Link href="/banking" className="text-sm text-slate-700 hover:text-blue-800 transition-colors font-medium">Banking</Link>
+              <Link href="/research" className="text-sm text-slate-700 hover:text-blue-800 transition-colors font-medium">Research</Link>
+              <Link href="/stakeholders" className="text-sm text-slate-700 hover:text-blue-800 transition-colors font-medium">Stakeholders</Link>
+              <Button size="sm" className="financial-gradient text-white hover:opacity-90 transition-opacity">
                 Get Started
               </Button>
             </div>
@@ -86,262 +76,297 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative z-10 pt-20 pb-32">
+      <section className="relative z-10 pt-16 pb-24">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Headline */}
             <div className={`space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <div className="inline-block px-4 py-2 rounded-full bg-[#F59E0B]/10 border border-[#F59E0B]/20 text-[#F59E0B] text-sm font-medium">
-                <Zap className="inline w-4 h-4 mr-2" />
+              <div className="inline-block px-4 py-2 rounded-full bg-blue-100 border border-blue-200 text-blue-800 text-sm font-semibold">
+                <TrendingUp className="inline w-4 h-4 mr-2" />
                 Comprehensive Economic Intelligence
               </div>
               
-              <h1 className="text-5xl lg:text-7xl font-black leading-tight">
-                Navigate Yemen's
-                <span className="block bg-gradient-to-r from-[#F59E0B] via-[#06B6D4] to-[#10B981] bg-clip-text text-transparent">
-                  Economic Landscape
-                </span>
+              <h1 className="text-5xl lg:text-6xl font-black leading-tight text-slate-900">
+                Navigate Yemen's{" "}
+                <span className="financial-text-gradient">Economic Landscape</span>
               </h1>
               
-              <p className="text-xl text-white/85 leading-[1.7]">
-                The most comprehensive platform for analyzing financial and economic transformations in Yemen. 
-                Access 16 years of verified data, 318 timeline events, and insights from 46 stakeholder organizations.
+              <p className="text-lg text-slate-700 leading-relaxed max-w-xl">
+                The most comprehensive platform for analyzing financial and economic transformation in Yemen. Access 16 years of data, 364 events, 4,416 publications, and 46 stakeholder profiles.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-[#F59E0B] hover:bg-[#D97706] text-[#0A1428] text-lg px-8 py-6 group">
-                  Explore Platform
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <Button size="lg" variant="outline" className="border-white/20 hover:bg-white/10 text-lg px-8 py-6">
-                  View Research
-                </Button>
-              </div>
-
-              {/* Trust Signals */}
-              <div className="flex items-center gap-6 pt-4">
-                <div className="flex items-center gap-2 text-sm text-white/75">
-                  <Users className="w-4 h-4 text-[#06B6D4]" />
-                  <span>46 Organizations</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm text-white/75">
-                  <Database className="w-4 h-4 text-[#10B981]" />
-                  <span>1,287+ Data Points</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm text-white/75">
-                  <BarChart3 className="w-4 h-4 text-[#F59E0B]" />
-                  <span>16 Years Coverage</span>
-                </div>
+              <div className="flex flex-wrap gap-4">
+                <Link href="/dashboards-hub">
+                  <Button size="lg" className="financial-gradient text-white hover:opacity-90 transition-opacity">
+                    Explore Dashboards
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </Link>
+                <Link href="/research">
+                  <Button size="lg" variant="outline" className="border-slate-300 text-slate-900 hover:bg-slate-100">
+                    Browse Research
+                  </Button>
+                </Link>
               </div>
             </div>
 
-            {/* Right: Animated Dashboard Preview */}
-            <div className={`relative transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-              <div className="relative">
-                {/* Glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#F59E0B]/20 via-[#06B6D4]/20 to-[#10B981]/20 blur-3xl" />
+            {/* Right: Live Dashboard Preview */}
+            <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+              <Card className="p-6 glass-effect shadow-xl border-slate-200">
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="text-lg font-bold text-slate-900">Live Dashboard</h3>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
+                    <span className="text-sm text-slate-600">Real-time</span>
+                  </div>
+                </div>
                 
-                {/* Dashboard Card */}
-                <Card className="relative bg-white/5 backdrop-blur-xl border-white/10 p-8 space-y-6">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-semibold">Live Dashboard</h3>
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-[#10B981] rounded-full animate-pulse" />
-                      <span className="text-sm text-white/60">Real-time</span>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="p-4 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200">
+                    <div className="text-3xl font-black text-blue-800">
+                      <AnimatedCounter end={14} />
                     </div>
+                    <div className="text-sm text-blue-700 font-medium mt-1">Banks Tracked</div>
                   </div>
-
-                  {/* Stats Grid */}
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-[#F59E0B]/10 border border-[#F59E0B]/20 rounded-lg p-4">
-                      <div className="text-3xl font-bold text-[#F59E0B]">
-                        <AnimatedCounter end={318} />
-                      </div>
-                      <div className="text-sm text-white/60 mt-1">Timeline Events</div>
+                  
+                  <div className="p-4 rounded-xl bg-gradient-to-br from-teal-50 to-teal-100 border border-teal-200">
+                    <div className="text-3xl font-black text-teal-800">
+                      <AnimatedCounter end={318} />
                     </div>
-                    <div className="bg-[#06B6D4]/10 border border-[#06B6D4]/20 rounded-lg p-4">
-                      <div className="text-3xl font-bold text-[#06B6D4]">
-                        <AnimatedCounter end={14} />
-                      </div>
-                      <div className="text-sm text-white/60 mt-1">Banks Tracked</div>
-                    </div>
-                    <div className="bg-[#10B981]/10 border border-[#10B981]/20 rounded-lg p-4">
-                      <div className="text-3xl font-bold text-[#10B981]">
-                        <AnimatedCounter end={4416} />
-                      </div>
-                      <div className="text-sm text-white/60 mt-1">Publications</div>
-                    </div>
-                    <div className="bg-purple-500/10 border border-purple-500/20 rounded-lg p-4">
-                      <div className="text-3xl font-bold text-purple-400">
-                        <AnimatedCounter end={46} />
-                      </div>
-                      <div className="text-sm text-white/60 mt-1">Stakeholders</div>
-                    </div>
+                    <div className="text-sm text-teal-700 font-medium mt-1">Timeline Events</div>
                   </div>
-
-                  {/* Mini Chart Visualization */}
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-white/60">Exchange Rate Trend</span>
-                      <span className="text-[#10B981] flex items-center gap-1">
-                        <TrendingUp className="w-4 h-4" />
-                        +32.8%
-                      </span>
+                  
+                  <div className="p-4 rounded-xl bg-gradient-to-br from-violet-50 to-violet-100 border border-violet-200">
+                    <div className="text-3xl font-black text-violet-800">
+                      <AnimatedCounter end={46} />
                     </div>
-                    <div className="h-24 flex items-end gap-2">
-                      {[40, 55, 45, 70, 60, 85, 75, 95].map((height, i) => (
-                        <div
-                          key={i}
-                          className="flex-1 bg-gradient-to-t from-[#F59E0B] to-[#06B6D4] rounded-t transition-all duration-500 hover:opacity-80"
-                          style={{
-                            height: `${height}%`,
-                            animationDelay: `${i * 100}ms`,
-                          }}
-                        />
-                      ))}
-                    </div>
+                    <div className="text-sm text-violet-700 font-medium mt-1">Stakeholders</div>
                   </div>
-                </Card>
-              </div>
+                  
+                  <div className="p-4 rounded-xl bg-gradient-to-br from-emerald-50 to-emerald-100 border border-emerald-200">
+                    <div className="text-3xl font-black text-emerald-800">
+                      <AnimatedCounter end={4416} />
+                    </div>
+                    <div className="text-sm text-emerald-700 font-medium mt-1">Publications</div>
+                  </div>
+                </div>
+                
+                <div className="mt-6 pt-6 border-t border-slate-200">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-slate-600">Coverage Period</span>
+                    <span className="font-bold text-slate-900">2010-2025 (16 years)</span>
+                  </div>
+                </div>
+              </Card>
             </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="relative z-10 py-20 bg-gradient-to-b from-transparent to-[#0F1E3A]/50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-black mb-4">
-              Powerful Tools for
-              <span className="block bg-gradient-to-r from-[#F59E0B] to-[#06B6D4] bg-clip-text text-transparent">
-                Economic Analysis
-              </span>
+            <h2 className="text-4xl font-black text-slate-900 mb-4">
+              Powerful Tools for Economic Analysis
             </h2>
-            <p className="text-xl text-white/60 max-w-2xl mx-auto">
-              Everything you need to understand Yemen's complex economic landscape in one integrated platform
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Access comprehensive data, interactive visualizations, and advanced analytics to understand Yemen's economic transformation.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                icon: <LineChart className="w-8 h-8" />,
-                title: "Timeline Explorer",
-                description: "Navigate through 318 major events from 2010-2025 with detailed context and impact analysis",
-                color: "#F59E0B",
-                link: "/timeline"
-              },
-              {
-                icon: <BarChart3 className="w-8 h-8" />,
-                title: "Banking Dashboard",
-                description: "Track 14 banks with real-time status, financial data, and operational insights",
-                color: "#06B6D4",
-                link: "/banking"
-              },
-              {
-                icon: <Search className="w-8 h-8" />,
-                title: "Research Library",
-                description: "Access 4,416 publications from 30 institutions with advanced search capabilities",
-                color: "#10B981",
-                link: "/research"
-              },
-              {
-                icon: <Globe className="w-8 h-8" />,
-                title: "Stakeholder Hub",
-                description: "Comprehensive profiles of 46 organizations including World Bank, IMF, and UN agencies",
-                color: "#A855F7",
-                link: "/stakeholders"
-              },
-              {
-                icon: <TrendingUp className="w-8 h-8" />,
-                title: "What-If Simulator",
-                description: "Model alternative scenarios by neutralizing events and adjusting economic indicators",
-                color: "#EC4899",
-                link: "/what-if"
-              },
-              {
-                icon: <Database className="w-8 h-8" />,
-                title: "Year Explorer",
-                description: "Deep-dive into any year from 2010-2025 with comprehensive economic data and analysis",
-                color: "#F59E0B",
-                link: "/year-explorer"
-              },
-            ].map((feature, i) => (
-              <Link key={i} href={feature.link}>
-                <Card 
-                  className="group relative bg-white/5 backdrop-blur-xl border-white/10 p-6 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 cursor-pointer h-full"
-                  style={{
-                    animationDelay: `${i * 100}ms`,
-                  }}
-                >
-                  {/* Glow on hover */}
-                  <div 
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl -z-10"
-                    style={{ background: `${feature.color}20` }}
-                  />
-                  
-                  <div 
-                    className="w-14 h-14 rounded-lg flex items-center justify-center mb-4"
-                    style={{ background: `${feature.color}20`, color: feature.color }}
-                  >
-                    {feature.icon}
-                  </div>
-                  
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-[#F59E0B] transition-colors">
-                    {feature.title}
-                  </h3>
-                  
-                  <p className="text-white/60 leading-relaxed">
-                    {feature.description}
-                  </p>
-                  
-                  <div className="mt-4 flex items-center gap-2 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: feature.color }}>
-                    Explore <ArrowRight className="w-4 h-4" />
-                  </div>
-                </Card>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Feature 1 */}
+            <Card className="p-8 card-hover border-slate-200 bg-gradient-to-br from-white to-blue-50/30">
+              <div className="w-14 h-14 rounded-xl financial-gradient flex items-center justify-center mb-6">
+                <LineChart className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Timeline Explorer</h3>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Navigate through 364 critical events from 2010-2025 with causal relationships and economic impacts.
+              </p>
+              <Link href="/timeline" className="text-blue-800 font-semibold hover:text-blue-900 inline-flex items-center">
+                Explore Timeline
+                <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
-            ))}
+            </Card>
+
+            {/* Feature 2 */}
+            <Card className="p-8 card-hover border-slate-200 bg-gradient-to-br from-white to-teal-50/30">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-teal-600 to-teal-700 flex items-center justify-center mb-6">
+                <BarChart3 className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Banking Dashboard</h3>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Track 14 banks with financial data, branch information, and real-time status updates.
+              </p>
+              <Link href="/banking-dashboard" className="text-teal-700 font-semibold hover:text-teal-800 inline-flex items-center">
+                View Dashboard
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </Card>
+
+            {/* Feature 3 */}
+            <Card className="p-8 card-hover border-slate-200 bg-gradient-to-br from-white to-emerald-50/30">
+              <div className="w-14 h-14 rounded-xl success-gradient flex items-center justify-center mb-6">
+                <FileText className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Research Library</h3>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Access 4,416 publications from 30 institutions covering 16 years of economic research.
+              </p>
+              <Link href="/research" className="text-emerald-700 font-semibold hover:text-emerald-800 inline-flex items-center">
+                Browse Library
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </Card>
+
+            {/* Feature 4 */}
+            <Card className="p-8 card-hover border-slate-200 bg-gradient-to-br from-white to-violet-50/30">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-violet-600 to-violet-700 flex items-center justify-center mb-6">
+                <Users className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Stakeholder Hub</h3>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Explore profiles of 46 key stakeholders including international organizations, governments, and donors.
+              </p>
+              <Link href="/stakeholders" className="text-violet-700 font-semibold hover:text-violet-800 inline-flex items-center">
+                View Stakeholders
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </Card>
+
+            {/* Feature 5 */}
+            <Card className="p-8 card-hover border-slate-200 bg-gradient-to-br from-white to-amber-50/30">
+              <div className="w-14 h-14 rounded-xl warning-gradient flex items-center justify-center mb-6">
+                <Search className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">What-If Simulator</h3>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Model economic scenarios and forecast impacts with interactive simulation tools.
+              </p>
+              <Link href="/what-if-simulator" className="text-amber-700 font-semibold hover:text-amber-800 inline-flex items-center">
+                Try Simulator
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </Card>
+
+            {/* Feature 6 */}
+            <Card className="p-8 card-hover border-slate-200 bg-gradient-to-br from-white to-rose-50/30">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-rose-600 to-rose-700 flex items-center justify-center mb-6">
+                <Database className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Data Visualization</h3>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Interactive charts and graphs powered by comprehensive economic datasets.
+              </p>
+              <Link href="/data-viz" className="text-rose-700 font-semibold hover:text-rose-800 inline-flex items-center">
+                Explore Data
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 financial-gradient-soft">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-5xl font-black text-white mb-2">
+                <AnimatedCounter end={16} suffix="+" />
+              </div>
+              <div className="text-blue-100 font-medium">Years of Data</div>
+            </div>
+            <div>
+              <div className="text-5xl font-black text-white mb-2">
+                <AnimatedCounter end={364} />
+              </div>
+              <div className="text-blue-100 font-medium">Timeline Events</div>
+            </div>
+            <div>
+              <div className="text-5xl font-black text-white mb-2">
+                <AnimatedCounter end={4416} />
+              </div>
+              <div className="text-blue-100 font-medium">Publications</div>
+            </div>
+            <div>
+              <div className="text-5xl font-black text-white mb-2">
+                <AnimatedCounter end={46} />
+              </div>
+              <div className="text-blue-100 font-medium">Stakeholders</div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="relative z-10 py-20">
-        <div className="container mx-auto px-6">
-          <Card className="relative bg-gradient-to-r from-[#F59E0B]/10 via-[#06B6D4]/10 to-[#10B981]/10 backdrop-blur-xl border-white/10 p-12 text-center overflow-hidden">
-            {/* Animated gradient background */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#F59E0B]/5 via-[#06B6D4]/5 to-[#10B981]/5 animate-pulse" />
-            
-            <div className="relative z-10">
-              <h2 className="text-4xl lg:text-5xl font-black mb-4">
-                Ready to Explore?
-              </h2>
-              <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-                Start navigating Yemen's economic data with our comprehensive platform
-              </p>
-              <Button size="lg" className="bg-[#F59E0B] hover:bg-[#D97706] text-[#0A1428] text-lg px-12 py-6">
+      <section className="py-20 bg-slate-900 text-white">
+        <div className="container mx-auto px-6 text-center">
+          <Globe className="w-16 h-16 mx-auto mb-6 text-blue-400" />
+          <h2 className="text-4xl font-black mb-4">
+            Ready to Explore Yemen's Economic Data?
+          </h2>
+          <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
+            Join researchers, policymakers, and analysts using the Yemen Economic Compass for comprehensive economic intelligence.
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link href="/dashboards-hub">
+              <Button size="lg" className="financial-gradient text-white hover:opacity-90">
                 Get Started Now
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-            </div>
-          </Card>
+            </Link>
+            <Link href="/sitemap">
+              <Button size="lg" variant="outline" className="border-slate-600 text-white hover:bg-slate-800">
+                View Site Map
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="relative z-10 border-t border-white/10 py-12">
+      <footer className="bg-slate-950 text-slate-400 py-12">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-3">
-              <img src={APP_LOGO} alt="Logo" className="h-8 w-8" />
-              <span className="text-sm text-white/60">© 2025 Yemen Economic Compass. All rights reserved.</span>
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+              <h4 className="text-white font-bold mb-4">Platform</h4>
+              <ul className="space-y-2">
+                <li><Link href="/about-platform" className="hover:text-white transition-colors">About</Link></li>
+                <li><Link href="/sitemap" className="hover:text-white transition-colors">Site Map</Link></li>
+                <li><Link href="/about-causeway" className="hover:text-white transition-colors">CauseWay Foundation</Link></li>
+              </ul>
             </div>
-            <div className="flex items-center gap-6 text-sm text-white/60">
-              <Link href="/about-platform" className="hover:text-white transition-colors">About</Link>
-              <Link href="/sitemap" className="hover:text-white transition-colors">Site Map</Link>
-              <Link href="/research" className="hover:text-white transition-colors">Research</Link>
-              <Link href="/about-causeway" className="hover:text-white transition-colors">Contact</Link>
+            <div>
+              <h4 className="text-white font-bold mb-4">Data & Analysis</h4>
+              <ul className="space-y-2">
+                <li><Link href="/timeline" className="hover:text-white transition-colors">Timeline</Link></li>
+                <li><Link href="/banking-dashboard" className="hover:text-white transition-colors">Banking</Link></li>
+                <li><Link href="/research" className="hover:text-white transition-colors">Research</Link></li>
+              </ul>
             </div>
+            <div>
+              <h4 className="text-white font-bold mb-4">Tools</h4>
+              <ul className="space-y-2">
+                <li><Link href="/what-if-simulator" className="hover:text-white transition-colors">Simulator</Link></li>
+                <li><Link href="/data-viz" className="hover:text-white transition-colors">Visualizations</Link></li>
+                <li><Link href="/dashboards-hub" className="hover:text-white transition-colors">Dashboards</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-white font-bold mb-4">Resources</h4>
+              <ul className="space-y-2">
+                <li><Link href="/stakeholders" className="hover:text-white transition-colors">Stakeholders</Link></li>
+                <li><Link href="/documents" className="hover:text-white transition-colors">Documents</Link></li>
+                <li><Link href="/news" className="hover:text-white transition-colors">News</Link></li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-slate-800 pt-8 text-center text-sm">
+            <p>© 2025 CauseWay Foundation. All rights reserved.</p>
+            <p className="mt-2">Yemen Economic Compass - Financial Data Platform</p>
           </div>
         </div>
       </footer>

@@ -311,7 +311,7 @@ export default function CBYSanaaTracker() {
         <div className="container">
           <div className="flex justify-between items-start mb-6">
             <div>
-              <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              <Badge className="mb-4 bg-slate-200 text-white border-white/30">
                 <AlertTriangle className="w-3 h-3 mr-1" />
                 {language === "ar" ? "البنك المركزي - صنعاء (الحوثي)" : "Central Bank - Sana'a (Houthi)"}
               </Badge>
@@ -327,35 +327,35 @@ export default function CBYSanaaTracker() {
             <Button
               variant="outline"
               onClick={() => setLanguage(language === "en" ? "ar" : "en")}
-              className="bg-white/10 border-white/30 text-white hover:bg-white/20"
+              className="bg-slate-100 border-white/30 text-white hover:bg-slate-200"
             >
               {language === "en" ? "العربية" : "English"}
             </Button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-8">
-            <Card className="bg-white/10 border-white/20 text-white">
+            <Card className="bg-slate-100 border-slate-300 text-white">
               <CardContent className="pt-6">
                 <FileText className="w-8 h-8 mb-2" />
                 <div className="text-3xl font-bold">{decisions.length}</div>
                 <div className="text-red-100">{language === "ar" ? "قرار موثق" : "Documented Decisions"}</div>
               </CardContent>
             </Card>
-            <Card className="bg-white/10 border-white/20 text-white">
+            <Card className="bg-slate-100 border-slate-300 text-white">
               <CardContent className="pt-6">
                 <TrendingDown className="w-8 h-8 mb-2" />
                 <div className="text-3xl font-bold">{decisions.filter(d => d.impact === "high").length}</div>
                 <div className="text-red-100">{language === "ar" ? "قرار عالي التأثير" : "High Impact Decisions"}</div>
               </CardContent>
             </Card>
-            <Card className="bg-white/10 border-white/20 text-white">
+            <Card className="bg-slate-100 border-slate-300 text-white">
               <CardContent className="pt-6">
                 <AlertTriangle className="w-8 h-8 mb-2" />
                 <div className="text-3xl font-bold">{decisions.filter(d => d.type === "taxation").length}</div>
                 <div className="text-red-100">{language === "ar" ? "قرار ضريبي" : "Taxation Decisions"}</div>
               </CardContent>
             </Card>
-            <Card className="bg-white/10 border-white/20 text-white">
+            <Card className="bg-slate-100 border-slate-300 text-white">
               <CardContent className="pt-6">
                 <Shield className="w-8 h-8 mb-2" />
                 <div className="text-3xl font-bold">{decisions.filter(d => d.legitimacy === "unrecognized").length}</div>
