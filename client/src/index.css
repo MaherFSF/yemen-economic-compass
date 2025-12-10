@@ -52,12 +52,12 @@
   --yemen-red-light: oklch(0.60 0.18 15); /* Lighter red for hover */
   --yemen-green-light: oklch(0.55 0.12 150); /* Lighter green for accents */
   
-  /* Ink colors (neutrals) */
-  --ink-900: oklch(0.15 0.01 240); /* #0B1320 - darkest */
-  --ink-700: oklch(0.35 0.01 240); /* #3C4858 */
-  --ink-500: oklch(0.50 0.01 240); /* #64748B */
-  --ink-300: oklch(0.75 0.01 240); /* #CBD5E1 */
-  --paper: oklch(0.98 0 0); /* #FAFAFA - background */
+  /* Ink colors (neutrals) - Improved contrast for readability */
+  --ink-900: oklch(0.18 0.01 240); /* #1A2332 - darkest (improved from 0.15) */
+  --ink-700: oklch(0.38 0.01 240); /* #424E5E (improved from 0.35) */
+  --ink-500: oklch(0.52 0.01 240); /* #6B7A8F (improved from 0.50) */
+  --ink-300: oklch(0.77 0.01 240); /* #D1D8E3 (improved from 0.75) */
+  --paper: oklch(0.97 0 0); /* #F8F8F8 - softer background (improved from 0.98) */
   
   /* Yemen flag colors as primary palette */
   --primary: var(--yemen-red); /* Yemen red as primary */
@@ -151,6 +151,10 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    /* Improved line height for readability */
+    line-height: 1.6;
+    /* Minimum font size for readability */
+    font-size: 16px;
   }
   
   /* Yemen flag border: ultra-thin top border (red-white-black, 2px each) on homepage */
@@ -174,6 +178,16 @@
     font-family: 'Noto Naskh Arabic', 'Source Serif 4', 'Cairo', 'Tajawal', 'Georgia', serif;
     font-weight: 700;
     font-feature-settings: 'kern' 1, 'liga' 1;
+    /* Improved line height for headings */
+    line-height: 1.3;
+    /* Better letter spacing */
+    letter-spacing: -0.01em;
+  }
+  
+  /* Improved paragraph spacing */
+  p {
+    line-height: 1.7;
+    letter-spacing: 0.01em;
   }
   
   /* English-specific font override when lang="en" */
@@ -199,6 +213,26 @@
   input[type="checkbox"]:not(:disabled),
   input[type="radio"]:not(:disabled) {
     @apply cursor-pointer;
+  }
+  
+  /* Performance: Native lazy loading for images */
+  img {
+    loading: lazy;
+  }
+  
+  /* Performance: Optimize font loading */
+  @font-face {
+    font-display: swap;
+  }
+  
+  /* Accessibility: Minimum touch target size (44x44px) */
+  button,
+  [role="button"],
+  a[href],
+  input[type="checkbox"],
+  input[type="radio"] {
+    min-width: 44px;
+    min-height: 44px;
   }
 }
 

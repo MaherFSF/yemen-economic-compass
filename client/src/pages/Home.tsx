@@ -49,7 +49,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0A1428] via-[#0F1E3A] to-[#0A1428] text-white overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-[#0F1A2E] via-[#1A2942] to-[#0F1A2E] text-white overflow-hidden">
       {/* Animated background pattern */}
       <div 
         className="fixed inset-0 opacity-20 pointer-events-none"
@@ -103,7 +103,7 @@ export default function Home() {
                 </span>
               </h1>
               
-              <p className="text-xl text-white/70 leading-relaxed">
+              <p className="text-xl text-white/85 leading-[1.7]">
                 The most comprehensive platform for analyzing financial and economic transformations in Yemen. 
                 Access 16 years of verified data, 318 timeline events, and insights from 46 stakeholder organizations.
               </p>
@@ -120,15 +120,15 @@ export default function Home() {
 
               {/* Trust Signals */}
               <div className="flex items-center gap-6 pt-4">
-                <div className="flex items-center gap-2 text-sm text-white/60">
+                <div className="flex items-center gap-2 text-sm text-white/75">
                   <Users className="w-4 h-4 text-[#06B6D4]" />
                   <span>46 Organizations</span>
                 </div>
-                <div className="flex items-center gap-2 text-sm text-white/60">
+                <div className="flex items-center gap-2 text-sm text-white/75">
                   <Database className="w-4 h-4 text-[#10B981]" />
                   <span>1,287+ Data Points</span>
                 </div>
-                <div className="flex items-center gap-2 text-sm text-white/60">
+                <div className="flex items-center gap-2 text-sm text-white/75">
                   <BarChart3 className="w-4 h-4 text-[#F59E0B]" />
                   <span>16 Years Coverage</span>
                 </div>
@@ -337,9 +337,10 @@ export default function Home() {
               <span className="text-sm text-white/60">© 2025 Yemen Economic Compass. All rights reserved.</span>
             </div>
             <div className="flex items-center gap-6 text-sm text-white/60">
-              <Link href="/about" className="hover:text-white transition-colors">About</Link>
-              <Link href="/methodology" className="hover:text-white transition-colors">Methodology</Link>
-              <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
+              <Link href="/about-platform" className="hover:text-white transition-colors">About</Link>
+              <Link href="/sitemap" className="hover:text-white transition-colors">Site Map</Link>
+              <Link href="/research" className="hover:text-white transition-colors">Research</Link>
+              <Link href="/about-causeway" className="hover:text-white transition-colors">Contact</Link>
             </div>
           </div>
         </div>

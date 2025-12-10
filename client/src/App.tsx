@@ -62,6 +62,7 @@ import YouthEconomy from "./pages/YouthEconomy";
 import Investment from "./pages/Investment";
 import ClimateFinance from "./pages/ClimateFinance";
 import SiteMap from "./pages/SiteMap";
+import SiteMapComprehensive from "./pages/SiteMapComprehensive";
 import HomeNew from "./pages/HomeNew";
 import BanksDatabase from "./pages/BanksDatabase";
 import BankingSector from "./pages/BankingSector";
@@ -165,7 +166,8 @@ function Router() {
       <Route path={"/youth-economy"} component={YouthEconomy} />
       <Route path={"/investment"} component={Investment} />
       <Route path={"/climate-finance"} component={ClimateFinance} />
-      <Route path={"/sitemap"} component={SiteMap} />
+      <Route path={"/sitemap"} component={SiteMapComprehensive} />
+      <Route path={"/sitemap-old"} component={SiteMap} />
           <Route path="/banks-database" component={BanksDatabase} />
           <Route path="/dashboards-hub" component={DashboardsHub} />
           <Route path="/banking-system-dashboard" component={BankingSystemDashboard} />
