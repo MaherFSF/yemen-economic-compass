@@ -1,0 +1,15 @@
+{
+  "query": "SELECT \n  (SELECT COUNT(*) FROM events) as events,\n  (SELECT COUNT(*) FROM actors) as actors,\n  (SELECT COUNT(*) FROM banks) as banks",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SELECT \n  (SELECT COUNT(*) FROM events) as events,\n  (SELECT COUNT(*) FROM actors) as actors,\n  (SELECT COUNT(*) FROM banks) as banks",
+  "rows": [
+    {
+      "events": "364",
+      "actors": "229",
+      "banks": "14"
+    }
+  ],
+  "messages": [],
+  "stdout": "events\tactors\tbanks\n364\t229\t14\n",
+  "stderr": "",
+  "execution_time_ms": 52
+}

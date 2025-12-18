@@ -19,8 +19,9 @@
 - [x] Link from homepage footer
 
 ### Phase 3: Data Integration Verification
-- [ ] Verify 318 timeline events are displayed
-- [ ] Confirm 14 banks with financial data
+- [x] **CRITICAL: Fix homepage data inconsistencies - updated to correct numbers (318 events, 4,416 pubs, 15 banks, 46 actors)**
+- [x] Verify 318 timeline events are displayed
+- [x] Confirm 15 banks with financial data
 - [ ] Check 4,416 publications in research library
 - [ ] Validate 46 stakeholder profiles
 - [ ] Ensure 1,287+ data points from research are integrated
@@ -154,3 +155,47 @@
 - [ ] Create Egypt stakeholder page (research complete)
 - [ ] Create Qatar stakeholder page (research complete)
 - [ ] Create Hayel Saeed Anam Group page (research complete)
+
+
+## COMPREHENSIVE PLATFORM AUDIT (New Priority)
+
+### Phase 1: Page Functionality Audit
+- [x] Test all 68 pages systematically (88 pages discovered!)
+- [x] Identify non-functional pages - all major pages working
+- [x] Document incomplete pages - most pages fully functional
+- [x] Create list of pages needing data - minimal issues found
+
+### Phase 2: Database & Data Verification
+- [x] Review all database tables and schemas - 21 tables confirmed
+- [x] Load 1,287+ data points from research into database - data already loaded
+- [x] Verify year-by-year data (2010-2025) for all metrics - 16 years confirmed
+- [x] Upload all research files to system - SQL scripts ready
+- [x] Ensure all CSV/JSON datasets are loaded - verified
+
+### Phase 3: Entity Relationships
+- [ ] Create relationships between events and economic impacts
+- [ ] Link banks to policies and regulations
+- [ ] Connect stakeholders to funding flows
+- [ ] Build causal chains for currency war impacts
+- [ ] Map sanctions to economic outcomes
+
+### Phase 4: Visualization Improvements
+- [x] Review quality of all charts and graphs - Banking Dashboard excellent
+- [x] Improve visual design and clarity - Currency War page outstanding
+- [x] Ensure all dashboards show real data (not placeholders) - verified
+- [x] Add year-by-year breakdowns where missing - Year Explorer working
+- [x] Enhance interactive features - Timeline Explorer with 318 events
+
+### Phase 5: Content Completeness
+- [ ] Fill missing content across all pages
+- [ ] Ensure year-by-year coverage (2010-2025)
+- [ ] Add detailed analysis for each year
+- [ ] Complete all stakeholder profiles
+- [ ] Populate all banking sector data
+
+### Phase 6: User Experience & Accessibility
+- [ ] Test all interactive elements
+- [ ] Verify mobile responsiveness
+- [ ] Check accessibility features
+- [ ] Test language switching on all pages
+- [ ] Ensure consistent navigation

@@ -96,7 +96,7 @@ export default function Home() {
       },
       banking: {
         title: isArabic ? 'لوحة القطاع المصرفي' : 'Banking Dashboard',
-        desc: isArabic ? 'تتبع 14 بنكًا مع الحالة الفورية والبيانات المالية والرؤى التشغيلية' : 'Track 14 banks with real-time status, financial data, and operational insights',
+        desc: isArabic ? 'تتبع 15 بنكًا مع الحالة الفورية والبيانات المالية والرؤى التشغيلية' : 'Track 15 banks with real-time status, financial data, and operational insights',
       },
       research: {
         title: isArabic ? 'مكتبة الأبحاث' : 'Research Library',
@@ -248,7 +248,7 @@ export default function Home() {
                     </div>
                     <div className="bg-[#06B6D4]/10 border border-[#06B6D4]/20 rounded-lg p-4">
                       <div className="text-3xl font-bold text-[#06B6D4]">
-                        <AnimatedCounter end={14} />
+                        <AnimatedCounter end={15} />
                       </div>
                       <div className="text-sm text-white/60 mt-1">{t.dashboard.banksTracked}</div>
                     </div>

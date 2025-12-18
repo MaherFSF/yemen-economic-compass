@@ -1,0 +1,46 @@
+{
+  "query": "SELECT 'events' as tbl, COUNT(*) as cnt FROM events\nUNION ALL SELECT 'actors', COUNT(*) FROM actors\nUNION ALL SELECT 'banks', COUNT(*) FROM banks\nUNION ALL SELECT 'indicators', COUNT(*) FROM indicators\nUNION ALL SELECT 'causations', COUNT(*) FROM causations\nUNION ALL SELECT 'yearly_macro_indicators', COUNT(*) FROM yearly_macro_indicators\nUNION ALL SELECT 'stakeholders', COUNT(*) FROM stakeholders\nUNION ALL SELECT 'yearly_bank_data', COUNT(*) FROM yearly_bank_data\nUNION ALL SELECT 'yearly_aid_data', COUNT(*) FROM yearly_aid_data",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SELECT 'events' as tbl, COUNT(*) as cnt FROM events\nUNION ALL SELECT 'actors', COUNT(*) FROM actors\nUNION ALL SELECT 'banks', COUNT(*) FROM banks\nUNION ALL SELECT 'indicators', COUNT(*) FROM indicators\nUNION ALL SELECT 'causations', COUNT(*) FROM causations\nUNION ALL SELECT 'yearly_macro_indicators', COUNT(*) FROM yearly_macro_indicators\nUNION ALL SELECT 'stakeholders', COUNT(*) FROM stakeholders\nUNION ALL SELECT 'yearly_bank_data', COUNT(*) FROM yearly_bank_data\nUNION ALL SELECT 'yearly_aid_data', COUNT(*) FROM yearly_aid_data",
+  "rows": [
+    {
+      "tbl": "causations",
+      "cnt": "27"
+    },
+    {
+      "tbl": "banks",
+      "cnt": "14"
+    },
+    {
+      "tbl": "indicators",
+      "cnt": "396"
+    },
+    {
+      "tbl": "actors",
+      "cnt": "229"
+    },
+    {
+      "tbl": "yearly_macro_indicators",
+      "cnt": "2"
+    },
+    {
+      "tbl": "stakeholders",
+      "cnt": "8"
+    },
+    {
+      "tbl": "yearly_bank_data",
+      "cnt": "3"
+    },
+    {
+      "tbl": "events",
+      "cnt": "364"
+    },
+    {
+      "tbl": "yearly_aid_data",
+      "cnt": "7"
+    }
+  ],
+  "messages": [],
+  "stdout": "tbl\tcnt\ncausations\t27\nbanks\t14\nindicators\t396\nactors\t229\nyearly_macro_indicators\t2\nstakeholders\t8\nyearly_bank_data\t3\nevents\t364\nyearly_aid_data\t7\n",
+  "stderr": "",
+  "execution_time_ms": 64
+}

@@ -1,0 +1,73 @@
+{
+  "query": "SHOW TABLES",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SHOW TABLES",
+  "rows": [
+    {
+      "Tables_in_aRa7NpwnZPS2MpUNRxeYVf": "__drizzle_migrations"
+    },
+    {
+      "Tables_in_aRa7NpwnZPS2MpUNRxeYVf": "actor_actions"
+    },
+    {
+      "Tables_in_aRa7NpwnZPS2MpUNRxeYVf": "actor_impact_profiles"
+    },
+    {
+      "Tables_in_aRa7NpwnZPS2MpUNRxeYVf": "actors"
+    },
+    {
+      "Tables_in_aRa7NpwnZPS2MpUNRxeYVf": "banks"
+    },
+    {
+      "Tables_in_aRa7NpwnZPS2MpUNRxeYVf": "causations"
+    },
+    {
+      "Tables_in_aRa7NpwnZPS2MpUNRxeYVf": "data_conflicts"
+    },
+    {
+      "Tables_in_aRa7NpwnZPS2MpUNRxeYVf": "data_revision_log"
+    },
+    {
+      "Tables_in_aRa7NpwnZPS2MpUNRxeYVf": "events"
+    },
+    {
+      "Tables_in_aRa7NpwnZPS2MpUNRxeYVf": "files"
+    },
+    {
+      "Tables_in_aRa7NpwnZPS2MpUNRxeYVf": "indicators"
+    },
+    {
+      "Tables_in_aRa7NpwnZPS2MpUNRxeYVf": "recommendations"
+    },
+    {
+      "Tables_in_aRa7NpwnZPS2MpUNRxeYVf": "source_bias_profiles"
+    },
+    {
+      "Tables_in_aRa7NpwnZPS2MpUNRxeYVf": "source_confidence_scores"
+    },
+    {
+      "Tables_in_aRa7NpwnZPS2MpUNRxeYVf": "stakeholders"
+    },
+    {
+      "Tables_in_aRa7NpwnZPS2MpUNRxeYVf": "users"
+    },
+    {
+      "Tables_in_aRa7NpwnZPS2MpUNRxeYVf": "yearly_aid_data"
+    },
+    {
+      "Tables_in_aRa7NpwnZPS2MpUNRxeYVf": "yearly_bank_data"
+    },
+    {
+      "Tables_in_aRa7NpwnZPS2MpUNRxeYVf": "yearly_conflict_data"
+    },
+    {
+      "Tables_in_aRa7NpwnZPS2MpUNRxeYVf": "yearly_macro_indicators"
+    },
+    {
+      "Tables_in_aRa7NpwnZPS2MpUNRxeYVf": "yearly_remittance_data"
+    }
+  ],
+  "messages": [],
+  "stdout": "Tables_in_aRa7NpwnZPS2MpUNRxeYVf\n__drizzle_migrations\nactor_actions\nactor_impact_profiles\nactors\nbanks\ncausations\ndata_conflicts\ndata_revision_log\nevents\nfiles\nindicators\nrecommendations\nsource_bias_profiles\nsource_confidence_scores\nstakeholders\nusers\nyearly_aid_data\nyearly_bank_data\nyearly_conflict_data\nyearly_macro_indicators\nyearly_remittance_data\n",
+  "stderr": "",
+  "execution_time_ms": 56
+}

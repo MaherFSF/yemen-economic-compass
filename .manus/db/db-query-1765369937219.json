@@ -1,0 +1,38 @@
+{
+  "query": "SELECT \n  'events' as table_name, COUNT(*) as count FROM events\nUNION ALL SELECT 'actors', COUNT(*) FROM actors\nUNION ALL SELECT 'banks', COUNT(*) FROM banks\nUNION ALL SELECT 'indicators', COUNT(*) FROM indicators\nUNION ALL SELECT 'causations', COUNT(*) FROM causations\nUNION ALL SELECT 'yearly_macro_indicators', COUNT(*) FROM yearly_macro_indicators\nUNION ALL SELECT 'stakeholders', COUNT(*) FROM stakeholders",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4DB9hJWqLzCzJpD.bf0eabdb799d --database aRa7NpwnZPS2MpUNRxeYVf --execute SELECT \n  'events' as table_name, COUNT(*) as count FROM events\nUNION ALL SELECT 'actors', COUNT(*) FROM actors\nUNION ALL SELECT 'banks', COUNT(*) FROM banks\nUNION ALL SELECT 'indicators', COUNT(*) FROM indicators\nUNION ALL SELECT 'causations', COUNT(*) FROM causations\nUNION ALL SELECT 'yearly_macro_indicators', COUNT(*) FROM yearly_macro_indicators\nUNION ALL SELECT 'stakeholders', COUNT(*) FROM stakeholders",
+  "rows": [
+    {
+      "table_name": "banks",
+      "count": "14"
+    },
+    {
+      "table_name": "indicators",
+      "count": "396"
+    },
+    {
+      "table_name": "causations",
+      "count": "27"
+    },
+    {
+      "table_name": "actors",
+      "count": "229"
+    },
+    {
+      "table_name": "events",
+      "count": "364"
+    },
+    {
+      "table_name": "yearly_macro_indicators",
+      "count": "2"
+    },
+    {
+      "table_name": "stakeholders",
+      "count": "8"
+    }
+  ],
+  "messages": [],
+  "stdout": "table_name\tcount\nbanks\t14\nindicators\t396\ncausations\t27\nactors\t229\nevents\t364\nyearly_macro_indicators\t2\nstakeholders\t8\n",
+  "stderr": "",
+  "execution_time_ms": 161
+}
