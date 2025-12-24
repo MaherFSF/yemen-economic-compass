@@ -1,578 +1,505 @@
 import { Button } from "@/components/ui/button";
-import { useLanguage } from "@/contexts/LanguageContext";
-import {
-  Activity,
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { 
+  TrendingUp, 
+  TrendingDown, 
+  Users, 
+  Building2, 
+  Globe, 
+  FileSearch,
   AlertTriangle,
-  ArrowUpRight,
-  BarChart2,
-  Bell,
-  BookOpen,
-  Building2,
-  ChevronRight,
-  Clock,
-  DollarSign,
-  FileText,
-  Globe2,
-  Layers,
-  LineChart,
-  MapPin,
-  Newspaper,
-  PieChart,
-  Search,
-  Shield,
-  Sparkles,
-  Target,
-  TrendingDown,
-  TrendingUp,
-  Users2,
-  Wallet,
-  Zap,
+  ArrowRight,
+  ExternalLink,
+  Info
 } from "lucide-react";
-import { useEffect, useState } from "react";
+import { APP_TITLE } from "@/const";
 import { Link } from "wouter";
-import { getLatestFuelPrice, getFuelComparison } from "@/data/feeds/fuel_prices";
-import UserFeedback from "@/components/UserFeedback";
 
-// ============================================
-// REVOLUTIONARY NEW DESIGN - YEMEN ECONOMIC OBSERVATORY
-// Completely unique design system
-// ============================================
+/**
+ * Revolutionary Homepage - Evidence Engine for Yemen's Economy
+ * 
+ * Design Principles:
+ * 1. Visual Storytelling - Every section tells a story with data
+ * 2. Audience-First - Four distinct entry points for different users
+ * 3. Evidence-Driven - All claims backed by visible sources
+ * 4. Action-Oriented - Clear paths to insights and tools
+ * 5. Bilingual - Arabic-first with English support
+ */
 
 export default function Home() {
-  const { language } = useLanguage();
-  const isArabic = language === 'ar';
-  const [mounted, setMounted] = useState(false);
-  const [activeMetric, setActiveMetric] = useState(0);
+  // Mock data - Replace with real API calls
+  const economicPulse = {
+    score: 42,
+    status: "Critical",
+    lastUpdated: "2025-01-15"
+  };
 
-  useEffect(() => {
-    setMounted(true);
-    const interval = setInterval(() => {
-      setActiveMetric(prev => (prev + 1) % 4);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
-  // Get fuel prices
-  const adenFuel = getLatestFuelPrice('aden');
-  const sanaaFuel = getLatestFuelPrice('sanaa');
-  const fuelComparison = getFuelComparison();
-
-  // Live metrics data
-  const liveMetrics = [
-    { 
-      label: isArabic ? 'سعر الصرف - عدن' : 'Exchange Rate - Aden',
-      value: '2,450',
-      unit: 'YER/USD',
-      change: '+12.3%',
-      trend: 'up',
-      color: 'from-red-500 to-orange-500'
+  const keyMetrics = [
+    {
+      label: "Exchange Rate Gap",
+      labelAr: "فجوة سعر الصرف",
+      value: "52%",
+      change: "+8.3%",
+      trend: "up",
+      source: "CBY, Jan 2025",
+      confidence: "A"
     },
-    { 
-      label: isArabic ? 'سعر الصرف - صنعاء' : 'Exchange Rate - Sana\'a',
-      value: '560',
-      unit: 'YER/USD',
-      change: '+2.1%',
-      trend: 'up',
-      color: 'from-emerald-500 to-teal-500'
+    {
+      label: "Food Insecurity",
+      labelAr: "انعدام الأمن الغذائي",
+      value: "17M",
+      change: "+2.1M",
+      trend: "up",
+      source: "WFP, Dec 2024",
+      confidence: "A"
     },
-    { 
-      label: isArabic ? 'انعدام الأمن الغذائي' : 'Food Insecurity',
-      value: '17.4M',
-      unit: isArabic ? 'شخص' : 'people',
-      change: '+8.2%',
-      trend: 'up',
-      color: 'from-amber-500 to-yellow-500'
+    {
+      label: "Aid Funding Gap",
+      labelAr: "فجوة التمويل",
+      value: "$1.2B",
+      change: "+15%",
+      trend: "up",
+      source: "FTS, Jan 2025",
+      confidence: "B"
     },
-    { 
-      label: isArabic ? 'المساعدات الإنسانية' : 'Humanitarian Aid',
-      value: '$2.4B',
-      unit: '2024',
-      change: '-15%',
-      trend: 'down',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    { 
-      label: isArabic ? 'البنزين - عدن' : 'Petrol - Aden',
-      value: adenFuel.petrol.toLocaleString(),
-      unit: isArabic ? 'ريال/لتر' : 'YER/L',
-      change: `+${fuelComparison.petrol.gap}%`,
-      trend: 'up',
-      color: 'from-orange-500 to-red-500'
-    },
-    { 
-      label: isArabic ? 'الديزل - عدن' : 'Diesel - Aden',
-      value: adenFuel.diesel.toLocaleString(),
-      unit: isArabic ? 'ريال/لتر' : 'YER/L',
-      change: `+${fuelComparison.diesel.gap}%`,
-      trend: 'up',
-      color: 'from-yellow-500 to-orange-500'
-    },
+    {
+      label: "Inflation Rate",
+      labelAr: "معدل التضخم",
+      value: "43%",
+      change: "+5.2%",
+      trend: "up",
+      source: "World Bank, Q4 2024",
+      confidence: "B"
+    }
   ];
 
-  // Quick access sections
-  const quickAccess = [
+  const audiences = [
     {
-      icon: LineChart,
-      title: isArabic ? 'لوحة التحكم' : 'Dashboard',
-      desc: isArabic ? 'مؤشرات اقتصادية حية' : 'Live economic indicators',
-      href: '/compass',
-      color: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
-      hoverColor: 'hover:bg-emerald-500/20'
+      id: "citizens",
+      title: "For Citizens",
+      titleAr: "للمواطنين",
+      description: "Understand cost of living",
+      descriptionAr: "فهم تكلفة المعيشة",
+      icon: "/citizen-icon.png",
+      color: "var(--yemen-red)",
+      links: [
+        { label: "Cost Calculator", labelAr: "حاسبة التكلفة", href: "/citizens/calculator" },
+        { label: "Exchange Rates", labelAr: "أسعار الصرف", href: "/citizens/exchange" },
+        { label: "Why Prices Changed", labelAr: "لماذا تغيرت الأسعار", href: "/citizens/prices" }
+      ]
     },
     {
-      icon: Clock,
-      title: isArabic ? 'الجدول الزمني' : 'Timeline',
-      desc: isArabic ? '318 حدث (2010-2025)' : '318 events (2010-2025)',
-      href: '/timeline',
-      color: 'bg-blue-500/10 text-blue-400 border-blue-500/20',
-      hoverColor: 'hover:bg-blue-500/20'
+      id: "policymakers",
+      title: "For Policymakers",
+      titleAr: "لصانعي السياسات",
+      description: "Scenarios & policy options",
+      descriptionAr: "سيناريوهات وخيارات",
+      icon: "/policymaker-icon.png",
+      color: "#3b82f6",
+      links: [
+        { label: "FX Dashboard", labelAr: "لوحة الصرف", href: "/policymakers/fx" },
+        { label: "Policy Tracker", labelAr: "متتبع السياسات", href: "/policymakers/tracker" },
+        { label: "Scenario Simulator", labelAr: "محاكي السيناريوهات", href: "/policymakers/simulator" }
+      ]
     },
     {
-      icon: Building2,
-      title: isArabic ? 'البنوك' : 'Banks',
-      desc: isArabic ? '15 بنك تجاري وإسلامي' : '15 commercial & Islamic banks',
-      href: '/banking',
-      color: 'bg-amber-500/10 text-amber-400 border-amber-500/20',
-      hoverColor: 'hover:bg-amber-500/20'
+      id: "donors",
+      title: "For Donors",
+      titleAr: "للمانحين",
+      description: "Track results & impact",
+      descriptionAr: "تتبع النتائج",
+      icon: "/donor-icon.png",
+      color: "var(--observatory-teal)",
+      links: [
+        { label: "Funding Pipeline", labelAr: "خط التمويل", href: "/donors/pipeline" },
+        { label: "Results Tracker", labelAr: "متتبع النتائج", href: "/donors/results" },
+        { label: "Market Functionality", labelAr: "وظائف السوق", href: "/donors/market" }
+      ]
     },
     {
-      icon: BookOpen,
-      title: isArabic ? 'الأبحاث' : 'Research',
-      desc: isArabic ? '4,416 منشور' : '4,416 publications',
-      href: '/research',
-      color: 'bg-purple-500/10 text-purple-400 border-purple-500/20',
-      hoverColor: 'hover:bg-purple-500/20'
-    },
-    {
-      icon: Users2,
-      title: isArabic ? 'أصحاب المصلحة' : 'Stakeholders',
-      desc: isArabic ? '46 منظمة دولية' : '46 international orgs',
-      href: '/stakeholders',
-      color: 'bg-rose-500/10 text-rose-400 border-rose-500/20',
-      hoverColor: 'hover:bg-rose-500/20'
-    },
-    {
-      icon: Target,
-      title: isArabic ? 'المحاكي' : 'Simulator',
-      desc: isArabic ? 'سيناريوهات ماذا لو' : 'What-if scenarios',
-      href: '/what-if',
-      color: 'bg-cyan-500/10 text-cyan-400 border-cyan-500/20',
-      hoverColor: 'hover:bg-cyan-500/20'
-    },
+      id: "journalists",
+      title: "For Journalists",
+      titleAr: "للصحفيين",
+      description: "Evidence packs & sources",
+      descriptionAr: "حزم الأدلة",
+      icon: "/journalist-icon.png",
+      color: "#8b5cf6",
+      links: [
+        { label: "Evidence Builder", labelAr: "بناء الأدلة", href: "/journalists/evidence" },
+        { label: "Claim Checker", labelAr: "مدقق المزاعم", href: "/journalists/checker" },
+        { label: "Source Library", labelAr: "مكتبة المصادر", href: "/journalists/library" }
+      ]
+    }
   ];
 
-  // Key insights
-  const insights = [
+  const recentUpdates = [
     {
-      icon: TrendingDown,
-      stat: '58%',
-      label: isArabic ? 'انكماش الناتج المحلي منذ 2014' : 'GDP contraction since 2014',
-      severity: 'critical'
+      date: "2025-01-15",
+      title: "Exchange rate depreciation accelerates in Aden",
+      titleAr: "تسارع انخفاض سعر الصرف في عدن",
+      type: "alert",
+      confidence: "A"
     },
     {
-      icon: DollarSign,
-      stat: '338%',
-      label: isArabic ? 'فجوة سعر الصرف بين المنطقتين' : 'Exchange rate gap between zones',
-      severity: 'high'
+      date: "2025-01-14",
+      title: "New CBY circular on foreign exchange controls",
+      titleAr: "تعميم جديد من البنك المركزي حول ضوابط الصرف",
+      type: "policy",
+      confidence: "A"
     },
     {
-      icon: AlertTriangle,
-      stat: '80%',
-      label: isArabic ? 'السكان تحت خط الفقر' : 'Population below poverty line',
-      severity: 'critical'
-    },
-    {
-      icon: Shield,
-      stat: '21.6M',
-      label: isArabic ? 'يحتاجون مساعدات إنسانية' : 'Need humanitarian assistance',
-      severity: 'high'
-    },
+      date: "2025-01-13",
+      title: "Food prices rise 12% month-on-month in Sana'a",
+      titleAr: "ارتفاع أسعار المواد الغذائية 12% في صنعاء",
+      type: "data",
+      confidence: "B"
+    }
   ];
 
   return (
-    <div className={`min-h-screen bg-[#0a0f1a] text-white ${isArabic ? 'rtl' : 'ltr'}`}>
-      {/* Unique geometric background */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-full">
-          {/* Animated gradient orbs */}
-          <div className="absolute top-20 left-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-20 right-10 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-3xl" />
+    <div className="min-h-screen">
+      {/* Crisis Alert Banner */}
+      <div className="bg-destructive/10 border-b border-destructive/20 pulse-alert">
+        <div className="container py-3">
+          <div className="flex items-center gap-3 text-sm">
+            <AlertTriangle className="h-5 w-5 text-destructive flex-shrink-0" />
+            <div className="flex-1">
+              <span className="font-semibold text-destructive">Currency Alert:</span>
+              <span className="ml-2 text-foreground">
+                Exchange rate gap between Aden and Sana'a widens to 52% — 
+                <Link href="/alerts/currency" className="ml-1 underline hover:no-underline">
+                  View analysis →
+                </Link>
+              </span>
+            </div>
+            <Badge className="confidence-a">Confidence: A</Badge>
+          </div>
         </div>
-        {/* Grid pattern */}
-        <div 
-          className="absolute inset-0 opacity-[0.02]"
-          style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-            backgroundSize: '50px 50px'
-          }}
-        />
       </div>
 
-      {/* Main Content */}
-      <main className="relative z-10">
-        {/* Hero Section - Completely New Layout */}
-        <section className="min-h-screen flex items-center">
-          <div className="container mx-auto px-6 py-20">
-            <div className="grid lg:grid-cols-12 gap-8 items-center">
-              
-              {/* Left Column - Main Content */}
-              <div className={`lg:col-span-7 space-y-8 ${mounted ? 'animate-fadeIn' : 'opacity-0'}`}>
-                {/* Status Badge */}
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                  </span>
-                  <span className="text-emerald-400 text-sm font-medium">
-                    {isArabic ? 'بيانات محدثة • ديسمبر 2025' : 'Live Data • December 2025'}
-                  </span>
-                </div>
-
-                {/* Main Headline */}
-                <div className="space-y-4">
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight">
-                    <span className="text-white/90">
-                      {isArabic ? 'مرصد' : 'Yemen'}
-                    </span>
-                    <br />
-                    <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
-                      {isArabic ? 'الاقتصاد اليمني' : 'Economic'}
-                    </span>
-                    <br />
-                    <span className="text-white/90">
-                      {isArabic ? 'الشامل' : 'Observatory'}
-                    </span>
-                  </h1>
-                  
-                  <p className="text-xl text-white/60 max-w-xl leading-relaxed">
-                    {isArabic 
-                      ? 'منصة الذكاء الاقتصادي الأكثر شمولاً لليمن. تتبع 16 عاماً من البيانات، 318 حدثاً، و46 منظمة دولية.'
-                      : 'The most comprehensive economic intelligence platform for Yemen. Track 16 years of data, 318 events, and 46 international organizations.'}
-                  </p>
-                </div>
-
-                {/* CTA Buttons */}
-                <div className="flex flex-wrap gap-4">
-                  <Link href="/compass">
-                    <Button 
-                      size="lg" 
-                      className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-semibold px-8 py-6 text-lg rounded-xl shadow-lg shadow-emerald-500/25 transition-all hover:shadow-xl hover:shadow-emerald-500/30"
-                    >
-                      {isArabic ? 'استكشف البيانات' : 'Explore Data'}
-                      <ChevronRight className={`w-5 h-5 ${isArabic ? 'mr-2 rotate-180' : 'ml-2'}`} />
-                    </Button>
-                  </Link>
-                  <Link href="/timeline">
-                    <Button 
-                      size="lg" 
-                      variant="outline"
-                      className="border-white/20 hover:bg-white/5 text-white font-semibold px-8 py-6 text-lg rounded-xl"
-                    >
-                      {isArabic ? 'الجدول الزمني' : 'View Timeline'}
-                    </Button>
-                  </Link>
-                </div>
-
-                {/* Quick Stats */}
-                <div className="grid grid-cols-4 gap-4 pt-8 border-t border-white/10">
-                  {[
-                    { value: '16', label: isArabic ? 'سنة' : 'Years' },
-                    { value: '318', label: isArabic ? 'حدث' : 'Events' },
-                    { value: '4.4K', label: isArabic ? 'منشور' : 'Pubs' },
-                    { value: '46', label: isArabic ? 'منظمة' : 'Orgs' },
-                  ].map((stat, i) => (
-                    <div key={i} className="text-center">
-                      <div className="text-2xl md:text-3xl font-bold text-white">{stat.value}</div>
-                      <div className="text-xs text-white/50 uppercase tracking-wider">{stat.label}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Right Column - Live Metrics Dashboard */}
-              <div className={`lg:col-span-5 ${mounted ? 'animate-slideIn' : 'opacity-0'}`}>
-                <div className="relative">
-                  {/* Glow effect */}
-                  <div className="absolute -inset-4 bg-gradient-to-r from-emerald-500/20 via-transparent to-amber-500/20 rounded-3xl blur-2xl" />
-                  
-                  {/* Dashboard Card */}
-                  <div className="relative bg-[#111827]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 space-y-6">
-                    {/* Header */}
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="p-2 bg-emerald-500/10 rounded-lg">
-                          <Activity className="w-5 h-5 text-emerald-400" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-white">
-                            {isArabic ? 'المؤشرات الحية' : 'Live Indicators'}
-                          </h3>
-                          <p className="text-xs text-white/50">
-                            {isArabic ? 'تحديث فوري' : 'Real-time updates'}
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-1 text-xs text-emerald-400">
-                        <span className="relative flex h-2 w-2">
-                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                          <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                        </span>
-                        {isArabic ? 'مباشر' : 'LIVE'}
-                      </div>
-                    </div>
-
-                    {/* Metrics Grid */}
-                    <div className="grid grid-cols-2 gap-4">
-                      {liveMetrics.map((metric, i) => (
-                        <div 
-                          key={i}
-                          className={`p-4 rounded-xl bg-white/5 border transition-all duration-500 ${
-                            activeMetric === i 
-                              ? 'border-white/20 scale-[1.02] shadow-lg' 
-                              : 'border-transparent'
-                          }`}
-                        >
-                          <div className="text-xs text-white/50 mb-2">{metric.label}</div>
-                          <div className="flex items-baseline gap-2">
-                            <span className={`text-2xl font-bold bg-gradient-to-r ${metric.color} bg-clip-text text-transparent`}>
-                              {metric.value}
-                            </span>
-                            <span className="text-xs text-white/40">{metric.unit}</span>
-                          </div>
-                          <div className={`flex items-center gap-1 mt-2 text-xs ${
-                            metric.trend === 'up' ? 'text-red-400' : 'text-emerald-400'
-                          }`}>
-                            {metric.trend === 'up' ? <TrendingUp className="w-3 h-3" /> : <TrendingDown className="w-3 h-3" />}
-                            {metric.change}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Mini Chart Placeholder */}
-                    <div className="h-24 bg-gradient-to-r from-emerald-500/10 via-transparent to-amber-500/10 rounded-lg flex items-end justify-between px-4 pb-2">
-                      {[40, 65, 45, 80, 55, 90, 70, 85, 60, 95, 75, 88].map((h, i) => (
-                        <div 
-                          key={i} 
-                          className="w-2 bg-gradient-to-t from-emerald-500 to-teal-400 rounded-t opacity-60"
-                          style={{ height: `${h}%` }}
-                        />
-                      ))}
-                    </div>
-
-                    {/* Footer Link */}
-                    <Link href="/compass">
-                      <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors cursor-pointer group">
-                        <span className="text-sm text-white/70">
-                          {isArabic ? 'عرض جميع المؤشرات' : 'View all indicators'}
-                        </span>
-                        <ArrowUpRight className={`w-4 h-4 text-white/50 group-hover:text-emerald-400 transition-colors ${isArabic ? 'rotate-[270deg]' : ''}`} />
-                      </div>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Key Insights Section */}
-        <section className="py-20 border-t border-white/5">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                {isArabic ? 'أبرز المؤشرات الاقتصادية' : 'Key Economic Insights'}
+      {/* Hero Section */}
+      <section className="relative overflow-hidden">
+        {/* Background with Yemen map */}
+        <div 
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: "url(/hero-bg.png)",
+            backgroundSize: "cover",
+            backgroundPosition: "center"
+          }}
+        />
+        
+        <div className="container relative py-20 md:py-32">
+          <div className="max-w-4xl mx-auto text-center space-y-8 fade-in">
+            {/* Title */}
+            <div className="space-y-4">
+              <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+                <span className="gradient-text">
+                  Yemen Economic Crisis Observatory
+                </span>
+              </h1>
+              <h2 className="text-3xl md:text-4xl font-bold" lang="ar">
+                مرصد الأزمة الاقتصادية في اليمن
               </h2>
-              <p className="text-white/50 max-w-2xl mx-auto">
-                {isArabic 
-                  ? 'نظرة سريعة على الوضع الاقتصادي الحالي في اليمن'
-                  : 'A quick overview of Yemen\'s current economic situation'}
-              </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {insights.map((insight, i) => (
-                <div 
-                  key={i}
-                  className={`relative p-6 rounded-2xl border transition-all hover:scale-[1.02] ${
-                    insight.severity === 'critical' 
-                      ? 'bg-red-500/5 border-red-500/20 hover:border-red-500/40' 
-                      : 'bg-amber-500/5 border-amber-500/20 hover:border-amber-500/40'
-                  }`}
-                >
-                  <insight.icon className={`w-8 h-8 mb-4 ${
-                    insight.severity === 'critical' ? 'text-red-400' : 'text-amber-400'
-                  }`} />
-                  <div className={`text-4xl font-black mb-2 ${
-                    insight.severity === 'critical' ? 'text-red-400' : 'text-amber-400'
-                  }`}>
-                    {insight.stat}
-                  </div>
-                  <div className="text-sm text-white/60">{insight.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Quick Access Grid */}
-        <section className="py-20">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                {isArabic ? 'استكشف المنصة' : 'Explore the Platform'}
-              </h2>
-              <p className="text-white/50 max-w-2xl mx-auto">
-                {isArabic 
-                  ? 'أدوات تحليلية متقدمة لفهم المشهد الاقتصادي اليمني'
-                  : 'Advanced analytical tools to understand Yemen\'s economic landscape'}
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {quickAccess.map((item, i) => (
-                <Link key={i} href={item.href}>
-                  <div className={`group p-6 rounded-2xl border ${item.color} ${item.hoverColor} transition-all cursor-pointer hover:scale-[1.02]`}>
-                    <div className="flex items-start justify-between mb-4">
-                      <div className={`p-3 rounded-xl ${item.color}`}>
-                        <item.icon className="w-6 h-6" />
-                      </div>
-                      <ArrowUpRight className={`w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity ${isArabic ? 'rotate-[270deg]' : ''}`} />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
-                    <p className="text-sm text-white/50">{item.desc}</p>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Alert System Promo */}
-        <section className="py-20 border-t border-white/5">
-          <div className="container mx-auto px-6">
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-500/10 via-[#111827] to-amber-500/10 border border-white/10 p-8 md:p-12">
-              {/* Background decoration */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl" />
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl" />
-              
-              <div className="relative grid md:grid-cols-2 gap-8 items-center">
-                <div className="space-y-6">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20">
-                    <Bell className="w-4 h-4 text-amber-400" />
-                    <span className="text-amber-400 text-sm font-medium">
-                      {isArabic ? 'نظام التنبيهات' : 'Alert System'}
-                    </span>
-                  </div>
-                  
-                  <h2 className="text-3xl md:text-4xl font-bold text-white">
-                    {isArabic ? 'ابق على اطلاع بالتطورات الاقتصادية' : 'Stay Updated on Economic Developments'}
-                  </h2>
-                  
-                  <p className="text-white/60">
-                    {isArabic 
-                      ? 'احصل على تنبيهات فورية عند حدوث تغييرات في أسعار الصرف أو صدور قرارات اقتصادية جديدة'
-                      : 'Get instant alerts when exchange rates change or new economic decisions are announced'}
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-4">
-                    <div className="flex items-center gap-2 text-sm text-white/70">
-                      <Zap className="w-4 h-4 text-emerald-400" />
-                      {isArabic ? 'تنبيهات فورية' : 'Instant alerts'}
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-white/70">
-                      <Globe2 className="w-4 h-4 text-blue-400" />
-                      {isArabic ? 'تغطية شاملة' : 'Full coverage'}
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-white/70">
-                      <Sparkles className="w-4 h-4 text-amber-400" />
-                      {isArabic ? 'تحليل ذكي' : 'Smart analysis'}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex justify-center">
-                  <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-amber-500 rounded-2xl blur-xl opacity-30" />
-                    <div className="relative bg-[#1a2332] border border-white/10 rounded-2xl p-6 space-y-4 w-full max-w-sm">
-                      {/* Sample alerts */}
-                      {[
-                        { icon: DollarSign, text: isArabic ? 'تغير سعر الصرف في عدن' : 'Aden exchange rate changed', time: '2m', color: 'text-red-400' },
-                        { icon: FileText, text: isArabic ? 'قرار جديد من البنك المركزي' : 'New CBY decision', time: '15m', color: 'text-blue-400' },
-                        { icon: Newspaper, text: isArabic ? 'تقرير البنك الدولي الجديد' : 'New World Bank report', time: '1h', color: 'text-emerald-400' },
-                      ].map((alert, i) => (
-                        <div key={i} className="flex items-center gap-3 p-3 bg-white/5 rounded-lg">
-                          <alert.icon className={`w-5 h-5 ${alert.color}`} />
-                          <div className="flex-1">
-                            <div className="text-sm text-white">{alert.text}</div>
-                          </div>
-                          <div className="text-xs text-white/40">{alert.time}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Footer CTA */}
-        <section className="py-20 border-t border-white/5">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              {isArabic ? 'ابدأ استكشاف البيانات الاقتصادية' : 'Start Exploring Economic Data'}
-            </h2>
-            <p className="text-white/50 max-w-2xl mx-auto mb-8">
-              {isArabic 
-                ? 'انضم إلى الباحثين وصانعي السياسات الذين يستخدمون المرصد الاقتصادي اليمني'
-                : 'Join researchers and policymakers using the Yemen Economic Observatory'}
+            {/* Subtitle */}
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+              The Evidence Engine for Yemen's Economy — Making economic reality{" "}
+              <span className="font-semibold text-foreground">understandable</span>,{" "}
+              <span className="font-semibold text-foreground">verifiable</span>, and{" "}
+              <span className="font-semibold text-foreground">actionable</span>
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/compass">
-                <Button 
-                  size="lg" 
-                  className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-semibold px-8 py-6 text-lg rounded-xl"
-                >
-                  {isArabic ? 'استكشف الآن' : 'Explore Now'}
-                  <ChevronRight className={`w-5 h-5 ${isArabic ? 'mr-2 rotate-180' : 'ml-2'}`} />
+
+            {/* Economic Pulse */}
+            <div className="flex flex-col items-center gap-4 pt-8">
+              <div className="text-sm text-muted-foreground uppercase tracking-wider">
+                Economic Pulse
+              </div>
+              <div className="relative w-32 h-32">
+                <svg className="w-full h-full -rotate-90">
+                  <circle
+                    cx="64"
+                    cy="64"
+                    r="56"
+                    stroke="currentColor"
+                    strokeWidth="8"
+                    fill="none"
+                    className="text-muted"
+                  />
+                  <circle
+                    cx="64"
+                    cy="64"
+                    r="56"
+                    stroke="currentColor"
+                    strokeWidth="8"
+                    fill="none"
+                    strokeDasharray={`${economicPulse.score * 3.52} 352`}
+                    className="text-destructive transition-all duration-1000"
+                  />
+                </svg>
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  <div className="text-4xl font-bold">{economicPulse.score}</div>
+                  <div className="text-xs text-muted-foreground">/ 100</div>
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="text-lg font-semibold text-destructive">
+                  {economicPulse.status}
+                </div>
+                <div className="text-xs text-muted-foreground">
+                  Last updated: {economicPulse.lastUpdated}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Metrics */}
+      <section className="py-16 bg-muted/30">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {keyMetrics.map((metric, index) => (
+              <div key={index} className="data-card fade-in">
+                <div className="metric">
+                  <div className="flex items-start justify-between">
+                    <div className="metric-label">{metric.label}</div>
+                    <Badge className={`confidence-${metric.confidence.toLowerCase()}`}>
+                      {metric.confidence}
+                    </Badge>
+                  </div>
+                  <div className="metric-label" lang="ar">{metric.labelAr}</div>
+                  <div className="metric-value">{metric.value}</div>
+                  <div className="flex items-center justify-between">
+                    <div className={`metric-change ${metric.trend === "up" ? "negative" : "positive"} flex items-center gap-1`}>
+                      {metric.trend === "up" ? (
+                        <TrendingUp className="h-4 w-4" />
+                      ) : (
+                        <TrendingDown className="h-4 w-4" />
+                      )}
+                      {metric.change}
+                    </div>
+                    <button className="source-btn">
+                      <Info className="h-3 w-3" />
+                      {metric.source}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Audience Entry Points */}
+      <section className="py-20">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Who Are You?
+            </h2>
+            <h3 className="text-3xl md:text-4xl font-bold mb-4" lang="ar">
+              من أنت؟
+            </h3>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Choose your path to access tailored insights, tools, and evidence packs
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {audiences.map((audience, index) => (
+              <Card 
+                key={audience.id}
+                className={`${audience.id}-card p-8 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] cursor-pointer fade-in`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex items-start gap-6">
+                  <div 
+                    className="w-20 h-20 rounded-2xl flex items-center justify-center flex-shrink-0"
+                    style={{ backgroundColor: `${audience.color}20` }}
+                  >
+                    <img 
+                      src={audience.icon} 
+                      alt={audience.title}
+                      className="w-12 h-12"
+                    />
+                  </div>
+                  <div className="flex-1 space-y-4">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-1">{audience.title}</h3>
+                      <h4 className="text-xl font-bold mb-2" lang="ar">{audience.titleAr}</h4>
+                      <p className="text-muted-foreground">{audience.description}</p>
+                      <p className="text-muted-foreground" lang="ar">{audience.descriptionAr}</p>
+                    </div>
+                    <div className="space-y-2">
+                      {audience.links.map((link, linkIndex) => (
+                        <Link 
+                          key={linkIndex}
+                          href={link.href}
+                          className="flex items-center justify-between p-3 rounded-lg hover:bg-muted/50 transition-colors group"
+                        >
+                          <div>
+                            <div className="font-medium group-hover:text-primary transition-colors">
+                              {link.label}
+                            </div>
+                            <div className="text-sm text-muted-foreground" lang="ar">
+                              {link.labelAr}
+                            </div>
+                          </div>
+                          <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What Changed Today */}
+      <section className="py-16 bg-muted/30">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center justify-between mb-8">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-2">
+                  What Changed Today
+                </h2>
+                <h3 className="text-2xl md:text-3xl font-bold" lang="ar">
+                  ما الذي تغير اليوم
+                </h3>
+              </div>
+              <Link href="/updates">
+                <Button variant="outline">
+                  View All
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Link href="/sitemap">
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="border-white/20 hover:bg-white/5 text-white font-semibold px-8 py-6 text-lg rounded-xl"
-                >
-                  {isArabic ? 'خريطة الموقع' : 'Site Map'}
+            </div>
+
+            <div className="space-y-4">
+              {recentUpdates.map((update, index) => (
+                <div key={index} className="timeline-item">
+                  <Card className="p-6">
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Badge variant="outline" className="text-xs">
+                            {update.date}
+                          </Badge>
+                          <Badge 
+                            variant={update.type === "alert" ? "destructive" : "secondary"}
+                            className="text-xs"
+                          >
+                            {update.type}
+                          </Badge>
+                          <Badge className={`confidence-${update.confidence.toLowerCase()}`}>
+                            {update.confidence}
+                          </Badge>
+                        </div>
+                        <h4 className="text-lg font-semibold mb-1">
+                          {update.title}
+                        </h4>
+                        <p className="text-muted-foreground" lang="ar">
+                          {update.titleAr}
+                        </p>
+                      </div>
+                      <Button variant="ghost" size="icon">
+                        <ExternalLink className="h-4 w-4" />
+                      </Button>
+                    </div>
+                  </Card>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Signals */}
+      <section className="py-20">
+        <div className="container">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Built on Evidence, Not Guesswork
+              </h2>
+              <h3 className="text-2xl md:text-3xl font-bold mb-4" lang="ar">
+                مبني على الأدلة، وليس التخمين
+              </h3>
+              <p className="text-xl text-muted-foreground">
+                Every number has a source. Every claim can be verified. Every analysis shows its confidence level.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-primary mb-2">4,416</div>
+                <div className="text-sm text-muted-foreground">Documents</div>
+                <div className="text-xs text-muted-foreground" lang="ar">وثيقة</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-primary mb-2">318</div>
+                <div className="text-sm text-muted-foreground">Events Tracked</div>
+                <div className="text-xs text-muted-foreground" lang="ar">حدث متتبع</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-primary mb-2">16</div>
+                <div className="text-sm text-muted-foreground">Years Coverage</div>
+                <div className="text-xs text-muted-foreground" lang="ar">سنة تغطية</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-primary mb-2">30+</div>
+                <div className="text-sm text-muted-foreground">Data Sources</div>
+                <div className="text-xs text-muted-foreground" lang="ar">مصدر بيانات</div>
+              </div>
+            </div>
+
+            <div className="pt-8">
+              <Link href="/methodology">
+                <Button size="lg" variant="outline">
+                  <FileSearch className="mr-2 h-5 w-5" />
+                  View Our Methodology
                 </Button>
               </Link>
             </div>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
 
-      {/* User Feedback Button */}
-      <UserFeedback variant="button" currentPage="/" />
-
-      {/* Custom Animations */}
-      <style>{`
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes slideIn {
-          from { opacity: 0; transform: translateX(${isArabic ? '-40px' : '40px'}); }
-          to { opacity: 1; transform: translateX(0); }
-        }
-        .animate-fadeIn {
-          animation: fadeIn 0.8s ease-out forwards;
-        }
-        .animate-slideIn {
-          animation: slideIn 0.8s ease-out 0.3s forwards;
-        }
-      `}</style>
+      {/* CTA Section */}
+      <section className="py-20 bg-primary/5">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center space-y-6">
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Start Exploring Yemen's Economic Reality
+            </h2>
+            <h3 className="text-2xl md:text-3xl font-bold" lang="ar">
+              ابدأ استكشاف الواقع الاقتصادي لليمن
+            </h3>
+            <p className="text-xl text-muted-foreground">
+              Access comprehensive data, verified sources, and actionable insights
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
+              <Link href="/data">
+                <Button size="lg">
+                  Explore Data
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <Link href="/about">
+                <Button size="lg" variant="outline">
+                  Learn More
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

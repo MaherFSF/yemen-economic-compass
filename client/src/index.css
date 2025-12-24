@@ -237,6 +237,170 @@
 }
 
 @layer components {
+  /* Revolutionary Evidence Engine Design System */
+  
+  /* Glassmorphism effects */
+  .glass {
+    background-color: hsl(var(--background) / 0.4);
+    backdrop-filter: blur(24px);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  .glass-card {
+    background-color: hsl(var(--background) / 0.4);
+    backdrop-filter: blur(24px);
+    border: 1px solid hsl(var(--border) / 0.5);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, var(--primary), var(--accent), var(--observatory-teal));
+  }
+
+  /* Audience-specific styles */
+  .citizen-card {
+    @apply border-l-4;
+    border-left-color: var(--yemen-red);
+  }
+
+  .policymaker-card {
+    @apply border-l-4 border-l-blue-500;
+  }
+
+  .donor-card {
+    @apply border-l-4;
+    border-left-color: var(--observatory-teal);
+  }
+
+  .journalist-card {
+    @apply border-l-4 border-l-purple-500;
+  }
+
+  /* Confidence rating badges */
+  .confidence-a {
+    @apply bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 border border-emerald-500/50 rounded-full px-2 py-0.5 text-xs font-semibold;
+  }
+
+  .confidence-b {
+    @apply bg-blue-500/20 text-blue-700 dark:text-blue-400 border border-blue-500/50 rounded-full px-2 py-0.5 text-xs font-semibold;
+  }
+
+  .confidence-c {
+    @apply bg-amber-500/20 text-amber-700 dark:text-amber-400 border border-amber-500/50 rounded-full px-2 py-0.5 text-xs font-semibold;
+  }
+
+  .confidence-d {
+    @apply bg-red-500/20 text-red-700 dark:text-red-400 border border-red-500/50 rounded-full px-2 py-0.5 text-xs font-semibold;
+  }
+
+  /* Source citation button */
+  .source-btn {
+    @apply inline-flex items-center gap-1 text-xs hover:underline transition-colors cursor-pointer;
+    color: var(--observatory-teal);
+  }
+
+  .source-btn:hover {
+    color: var(--observatory-dark-teal);
+  }
+
+  /* Data card with hover effect */
+  .data-card {
+    background-color: hsl(var(--background) / 0.4);
+    backdrop-filter: blur(24px);
+    border: 1px solid hsl(var(--border) / 0.5);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .data-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.3);
+    border-color: var(--observatory-teal);
+  }
+
+  /* Metric display */
+  .metric {
+    @apply flex flex-col gap-2;
+  }
+
+  .metric-value {
+    @apply text-4xl md:text-5xl font-bold;
+  }
+
+  .metric-label {
+    @apply text-sm text-muted-foreground uppercase tracking-wider;
+  }
+
+  .metric-change {
+    @apply text-sm font-semibold;
+  }
+
+  .metric-change.positive {
+    @apply text-emerald-600 dark:text-emerald-400;
+  }
+
+  .metric-change.negative {
+    @apply text-red-600 dark:text-red-400;
+  }
+
+  /* Timeline styles */
+  .timeline-item {
+    @apply relative pl-8 pb-8 border-l-2 border-border;
+  }
+
+  .timeline-item::before {
+    content: '';
+    @apply absolute left-[-9px] top-0 w-4 h-4 rounded-full border-4 border-background;
+    background-color: var(--observatory-teal);
+  }
+
+  /* Pulse animation for alerts */
+  .pulse-alert {
+    animation: pulse-alert 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse-alert {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  /* Scroll animations */
+  .fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Stagger animation delays */
+  .fade-in:nth-child(1) { animation-delay: 0.1s; }
+  .fade-in:nth-child(2) { animation-delay: 0.2s; }
+  .fade-in:nth-child(3) { animation-delay: 0.3s; }
+  .fade-in:nth-child(4) { animation-delay: 0.4s; }
+  .fade-in:nth-child(5) { animation-delay: 0.5s; }
+  .fade-in:nth-child(6) { animation-delay: 0.6s; }
+
+  /* Original components below */
   /**
    * Custom container utility that centers content and adds responsive padding.
    *

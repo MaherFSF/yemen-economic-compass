@@ -9,6 +9,7 @@ import { SearchProvider } from "./contexts/SearchContext";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import CitizensCalculator from "./pages/citizens/Calculator";
 import Overview from "./pages/Overview";
 import Charts from "./pages/Charts";
 import StoryPage from "./pages/StoryPage";
@@ -95,6 +96,7 @@ function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path="/citizens/calculator" component={CitizensCalculator} />
       <Route path={"/home-old"} component={HomeNew} />
       <Route path={"/overview"} component={Overview} />
       <Route path={"/charts"} component={Charts} />

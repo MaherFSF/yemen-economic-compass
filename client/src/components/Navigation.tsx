@@ -29,6 +29,53 @@ export default function Navigation() {
   const navStructure = {
     home: { href: "/", label: { ar: "الرئيسية", en: "Home" }, icon: Home },
     
+    audiences: {
+      label: { ar: "الجمهور", en: "Audiences" },
+      icon: Users,
+      items: [
+        {
+          label: { ar: "للمواطنين", en: "For Citizens" },
+          icon: "👥",
+          items: [
+            { href: "/citizens/calculator", label: { ar: "حاسبة تكلفة المعيشة", en: "Cost Calculator" } },
+            { href: "/citizens/exchange", label: { ar: "متتبع سعر الصرف", en: "Exchange Tracker" } },
+            { href: "/citizens/prices", label: { ar: "لماذا تغيرت الأسعار", en: "Why Prices Changed" } },
+            { href: "/citizens/purchasing-power", label: { ar: "القوة الشرائية", en: "Purchasing Power" } },
+          ]
+        },
+        {
+          label: { ar: "لصانعي السياسات", en: "For Policymakers" },
+          icon: "🏛️",
+          items: [
+            { href: "/policymakers/fx", label: { ar: "لوحة سوق الصرف", en: "FX Dashboard" } },
+            { href: "/policymakers/tracker", label: { ar: "متتبع الإجراءات", en: "Policy Tracker" } },
+            { href: "/policymakers/simulator", label: { ar: "محاكي السيناريوهات", en: "Scenario Simulator" } },
+            { href: "/policymakers/alerts", label: { ar: "تنبيهات الإنذار المبكر", en: "Early Warnings" } },
+          ]
+        },
+        {
+          label: { ar: "للمانحين", en: "For Donors" },
+          icon: "🌍",
+          items: [
+            { href: "/donors/pipeline", label: { ar: "خط التمويل", en: "Funding Pipeline" } },
+            { href: "/donors/results", label: { ar: "متتبع النتائج", en: "Results Tracker" } },
+            { href: "/donors/market", label: { ar: "وظائف السوق", en: "Market Functionality" } },
+            { href: "/donors/cash-map", label: { ar: "خريطة البرامج النقدية", en: "Cash Map" } },
+          ]
+        },
+        {
+          label: { ar: "للصحفيين", en: "For Journalists" },
+          icon: "🔍",
+          items: [
+            { href: "/journalists/evidence", label: { ar: "بناء حزم الأدلة", en: "Evidence Builder" } },
+            { href: "/journalists/checker", label: { ar: "مدقق المزاعم", en: "Claim Checker" } },
+            { href: "/journalists/library", label: { ar: "مكتبة المصادر", en: "Source Library" } },
+            { href: "/journalists/timeline", label: { ar: "بناء الجداول الزمنية", en: "Timeline Builder" } },
+          ]
+        },
+      ]
+    },
+    
     stakeholders: {
       label: { ar: "أصحاب المصلحة", en: "Stakeholders" },
       icon: Users,
@@ -141,6 +188,35 @@ export default function Navigation() {
               {navStructure.home.label[language]}
             </Button>
           </Link>
+
+          {/* Audiences Dropdown */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="sm" className="gap-1">
+                <Users className="h-4 w-4" />
+                {navStructure.audiences.label[language]}
+                <ChevronDown className="h-3 w-3" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start" className="w-64">
+              {navStructure.audiences.items.map((section, idx) => (
+                <div key={idx}>
+                  {idx > 0 && <DropdownMenuSeparator />}
+                  <DropdownMenuLabel className="flex items-center gap-2">
+                    <span>{section.icon}</span>
+                    {section.label[language]}
+                  </DropdownMenuLabel>
+                  {section.items.map((item) => (
+                    <DropdownMenuItem key={item.href} asChild>
+                      <Link href={item.href} className="cursor-pointer">
+                        {item.label[language]}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </div>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
 
           {/* Stakeholders Dropdown */}
           <DropdownMenu>
