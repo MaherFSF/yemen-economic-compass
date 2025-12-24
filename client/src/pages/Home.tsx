@@ -30,6 +30,8 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
+import { getLatestFuelPrice, getFuelComparison } from "@/data/feeds/fuel_prices";
+import UserFeedback from "@/components/UserFeedback";
 
 // ============================================
 // REVOLUTIONARY NEW DESIGN - YEMEN ECONOMIC OBSERVATORY
@@ -49,6 +51,11 @@ export default function Home() {
     }, 3000);
     return () => clearInterval(interval);
   }, []);
+
+  // Get fuel prices
+  const adenFuel = getLatestFuelPrice('aden');
+  const sanaaFuel = getLatestFuelPrice('sanaa');
+  const fuelComparison = getFuelComparison();
 
   // Live metrics data
   const liveMetrics = [
@@ -83,6 +90,22 @@ export default function Home() {
       change: '-15%',
       trend: 'down',
       color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      label: isArabic ? 'البنزين - عدن' : 'Petrol - Aden',
+      value: adenFuel.petrol.toLocaleString(),
+      unit: isArabic ? 'ريال/لتر' : 'YER/L',
+      change: `+${fuelComparison.petrol.gap}%`,
+      trend: 'up',
+      color: 'from-orange-500 to-red-500'
+    },
+    { 
+      label: isArabic ? 'الديزل - عدن' : 'Diesel - Aden',
+      value: adenFuel.diesel.toLocaleString(),
+      unit: isArabic ? 'ريال/لتر' : 'YER/L',
+      change: `+${fuelComparison.diesel.gap}%`,
+      trend: 'up',
+      color: 'from-yellow-500 to-orange-500'
     },
   ];
 
@@ -529,6 +552,9 @@ export default function Home() {
           </div>
         </section>
       </main>
+
+      {/* User Feedback Button */}
+      <UserFeedback variant="button" currentPage="/" />
 
       {/* Custom Animations */}
       <style>{`
